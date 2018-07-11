@@ -12,7 +12,8 @@
     "license": "ISC",
     "dependencies": {
         "discord-anvil": "^1.1.22",
-        "discord.js": "^11.3.2"
+        "discord.js": "^11.3.2",
+        "typescript": "^2.9.2"
     },
     "devDependencies": {
         "@types/node": "^10.5.2"
