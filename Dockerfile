@@ -1,4 +1,4 @@
-FROM node:10.6.0-alpine
+FROM resin/raspberry-pi-node:8.0.0
 WORKDIR /app
 ADD . /app
 RUN npm install
