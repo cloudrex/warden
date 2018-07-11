@@ -1,0 +1,20 @@
+{
+    "name": "warden_anvil",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "npm run build && node dist/app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "discord-anvil": "^1.1.22",
+        "discord.js": "^11.3.2"
+    },
+    "devDependencies": {
+        "@types/node": "^10.5.2"
+    }
+}

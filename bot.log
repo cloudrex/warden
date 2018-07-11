@@ -1,0 +1,48 @@
+[2018-07-11 02:16:10] <INFO> [JsonAdapter] Data source does not exist, creating default
+[2018-07-11 02:16:10] <VERB> [Bot.setup] Loaded 4 behaviours
+[2018-07-11 02:16:10] <SUCS> [Bot.setup] Enabled 3 behaviours
+[2018-07-11 02:16:10] <VERB> [CommandLoader.loadAll] Loading multiple commands
+[2018-07-11 02:16:13] <SUCS> [CommandLoader.loadAll] Loaded a total of 27 command(s)
+[2018-07-11 02:16:13] <VERB> [CommandLoader.loadPrimitives] Attempting to load 6 primitive commands
+[2018-07-11 02:16:13] <SUCS> [CommandLoader.loadPrimitives] Successfully loaded 6/6 primitive commands
+[2018-07-11 02:16:13] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-11 02:16:13] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-11 02:16:13] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-11 02:16:13] <VERB> [Bot.connect] Starting
+[2018-07-11 02:16:15] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-11 02:16:15] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-11 02:16:15] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-11 02:16:15] <INFO> [Bot.setupEvents] Logged in as Knight#8221
+[2018-07-11 02:16:15] <SUCS> [Bot.setupEvents] Ready | Took 4s
+[2018-07-11 02:17:05] <VERB> [Bot.setup] Loaded 4 behaviours
+[2018-07-11 02:17:05] <SUCS> [Bot.setup] Enabled 3 behaviours
+[2018-07-11 02:17:05] <VERB> [CommandLoader.loadAll] Loading multiple commands
+[2018-07-11 02:17:05] <SUCS> [CommandLoader.loadAll] Loaded a total of 27 command(s)
+[2018-07-11 02:17:05] <VERB> [CommandLoader.loadPrimitives] Attempting to load 6 primitive commands
+[2018-07-11 02:17:05] <SUCS> [CommandLoader.loadPrimitives] Successfully loaded 6/6 primitive commands
+[2018-07-11 02:17:05] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-11 02:17:05] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-11 02:17:05] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-11 02:17:05] <VERB> [Bot.connect] Starting
+[2018-07-11 02:17:06] <WARN> [Temp.create] Temp folder already exists for the bot: 434432910947385354. This may be due to an improper bot shutdown.
+[2018-07-11 02:17:06] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-11 02:17:06] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-11 02:17:06] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-11 02:17:06] <INFO> [Bot.setupEvents] Logged in as Knight#8221
+[2018-07-11 02:17:06] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-11 02:17:22] <VERB> [Bot.setup] Loaded 4 behaviours
+[2018-07-11 02:17:22] <SUCS> [Bot.setup] Enabled 3 behaviours
+[2018-07-11 02:17:22] <VERB> [CommandLoader.loadAll] Loading multiple commands
+[2018-07-11 02:17:23] <SUCS> [CommandLoader.loadAll] Loaded a total of 27 command(s)
+[2018-07-11 02:17:23] <VERB> [CommandLoader.loadPrimitives] Attempting to load 6 primitive commands
+[2018-07-11 02:17:23] <SUCS> [CommandLoader.loadPrimitives] Successfully loaded 6/6 primitive commands
+[2018-07-11 02:17:23] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-11 02:17:23] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-11 02:17:23] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-11 02:17:23] <VERB> [Bot.connect] Starting
+[2018-07-11 02:17:23] <WARN> [Temp.create] Temp folder already exists for the bot: 434432910947385354. This may be due to an improper bot shutdown.
+[2018-07-11 02:17:23] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-11 02:17:23] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-11 02:17:23] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-11 02:17:23] <INFO> [Bot.setupEvents] Logged in as Knight#8221
+[2018-07-11 02:17:23] <SUCS> [Bot.setupEvents] Ready | Took 1s
