@@ -1,4 +1,4 @@
-FROM resin/raspberry-pi-node:8.0.0
+FROM resin/raspberry-pi-node:onbuild
 WORKDIR /app
 ADD . /app
 RUN npm install
