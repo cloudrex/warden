@@ -1,23 +1,22 @@
-import {CommandOptions} from "discord-anvil/dist";
-import Permission from "discord-anvil/dist/core/permission";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Nick extends Command {
+    readonly meta = {
         name: "nick",
-        desc: "Manage nicknames",
-        aliases: ["nickname"],
+        description: "Manage nicknames"
+    };
 
-        args: {
-            name: "!string"
-        }
-    },
+    readonly aliases = ["nickname"];
 
-    restrict: {
+    readonly args = {
+        name: "!string"
+    };
+
+    readonly restrict = {
         selfPerms: [Permission.ManageNicknames]
-    },
+    };
 
-    executed: async (context: CommandContext): Promise<void> => {
+    async executed(context: CommandContext): Promise<void> {
         await context.message.member.setNickname(context.arguments[0]);
     }
 };

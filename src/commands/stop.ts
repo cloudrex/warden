@@ -1,20 +1,20 @@
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Stop extends Command {
+    readonly meta = {
         name: "stop",
-        desc: "Disconnect the bot",
-        aliases: ["disconnect"]
-    },
+        description: "Disconnect the bot"
+    };
 
-    restrict: {
+    readonly aliases = ["disconnect", "quit"];
+
+    readonly restrict = {
         specific: [
             "@285578743324606482" // Owner
         ]
-    },
+    };
 
-    executed: async (context: CommandContext): Promise<void> => {
+    public async executed (context: CommandContext): Promise<void> {
         await context.ok("Disconnecting.");
         await context.bot.disconnect();
         process.exit(0);

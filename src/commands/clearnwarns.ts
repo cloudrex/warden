@@ -1,19 +1,18 @@
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class ClearWarns extends Command {
+    readonly meta = {
         name: "clearwarns",
-        desc: "Clear all warnings from an user"
-    },
+        description: "Clear all warnings from an user"
+    };
 
-    restrict: {
+    readonly restrict = {
         specific: [
             "@285578743324606482" // Owner
         ]
-    },
+    };
 
-    executed: (context: CommandContext): void => {
+    executed(context: CommandContext): void {
         // TODO
     }
 };

@@ -1,21 +1,21 @@
 import {exec} from "child_process";
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Update extends Command {
+    readonly meta = {
         name: "update",
-        desc: "Pull changes from the git repository",
-        aliases: ["pull"]
-    },
+        description: "Pull changes from the git repository"
+    };
 
-    restrict: {
+    readonly aliases = ["pull"];
+
+    readonly restrict = {
         specific: [
             "@285578743324606482" // Owner
         ]
-    },
+    };
 
-    executed: (context: CommandContext): Promise<void> => {
+    public executed(context: CommandContext): Promise<void> {
         return new Promise((resolve) => {
             exec("git pull", async (error: any, stdOut: string | Buffer) => {
                 if (error) {

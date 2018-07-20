@@ -1,25 +1,23 @@
 import {Message, RichEmbed} from "discord.js";
 import {ConsumerAPIv2} from "../warden-api";
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
-import Utils from "discord-anvil/dist/core/utils";
+import { Command, CommandContext, Utils } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Snipe extends Command {
+    readonly meta = {
         name: "snipe",
-        desc: "View the last deleted message in this channel"
-    },
+        description: "View the last deleted message in this channel"
+    };
 
-    restrict: {
+    readonly restrict = {
         specific: [
             "@285578743324606482", // Owner
             "&458130451572457483", // Trial mods
             "&458130847510429720", // Mods
             "&458812900661002260"  // Assistants
         ]
-    },
+    };
 
-    executed: async (context: CommandContext, api: ConsumerAPIv2): Promise<void> => {
+    public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         const lastDeletedChannelMessage: Message | null = api.getLastDeletedMessage(context.message.channel.id);
 
         if (lastDeletedChannelMessage) {

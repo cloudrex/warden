@@ -1,9 +1,6 @@
 import {StoredWarning} from "./commands/warnings";
-import DataProvider from "discord-anvil/dist/data-providers/data-provider";
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
-import Bot from "discord-anvil/dist/core/bot";
-import Log from "discord-anvil/dist/core/log";
-import JsonProvider from "discord-anvil/dist/data-providers/json-provider";
+import { DataProvider, Bot, Log, JsonProvider } from "discord-anvil";
 
 const badWords = [
     "asshole",

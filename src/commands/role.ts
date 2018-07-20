@@ -1,23 +1,22 @@
 import {GuildMember, Role} from "discord.js";
-import {CommandOptions} from "discord-anvil/dist";
-import Permission from "discord-anvil/dist/core/permission";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class RoleCommand extends Command {
+    readonly meta = {
         name: "role",
+        description: "Manage member roles"
+    };
 
-        args: {
-            role: "!string",
-            member: "!:member"
-        }
-    },
+    readonly args = {
+        role: "!string",
+        member: "!:member"
+    };
 
-    restrict: {
+    readonly restrict = {
         issuerPerms: [Permission.ManageRoles, Permission.ManageGuild]
-    },
+    };
 
-    executed: async (context: CommandContext): Promise<void> => {
+    public async executed(context: CommandContext): Promise<void> {
         if (!context.arguments[1]) {
             await context.fail("No member found");
 

@@ -1,7 +1,6 @@
 import {GuildMember, User} from "discord.js";
-import {BehaviourOptions} from "discord-anvil/dist/behaviours/behaviour";
-import Bot from "discord-anvil/dist/core/bot";
-import Utils from "discord-anvil/dist/core/utils";
+import { Utils, Bot } from "discord-anvil";
+import { BehaviourOptions } from "discord-anvil/behaviours/behaviour";
 
 const messages: any = {
     welcome: [

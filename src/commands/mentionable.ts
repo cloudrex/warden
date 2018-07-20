@@ -1,28 +1,26 @@
 import {Role} from "discord.js";
-import {CommandOptions} from "discord-anvil/dist";
-import Permission from "discord-anvil/dist/core/permission";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Mentionable extends Command {
+    readonly meta = {
         name: "mentionable",
-        desc: "Toggle a role mentionable",
+        description: "Toggle a role mentionable"
+    };
 
-        args: {
-            role: "!string"
-        }
-    },
+    readonly args = {
+        role: "!string"
+    };
 
-    restrict: {
+    readonly restrict = {
         specific: [
             "@285578743324606482" // Owner
         ],
 
         selfPerms: [Permission.ManageRoles]
-    },
+    };
 
     // TODO: Add support by id
-    executed: async (context: CommandContext): Promise<void> => {
+    async executed(context: CommandContext): Promise<void> {
         const role: Role | undefined = context.message.guild.roles.find("name", context.arguments[0]);
 
         if (!role) {

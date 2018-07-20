@@ -1,25 +1,23 @@
 import {GuildMember} from "discord.js";
-import Permission from "discord-anvil/dist/core/permission";
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Softban extends Command {
+    readonly meta = {
         name: "softban",
-        desc: "Softban a user",
+        description: "Softban a user"
+    };
 
-        args: {
-            user: "!:member",
-            reason: "!string"
-        },
-    },
+    readonly args = {
+        user: "!:member",
+        reason: "!string"
+    };
 
-    restrict: {
+    readonly restrict = {
         issuerPerms: [Permission.BanMembers],
         selfPerms: [Permission.BanMembers]
-    },
+    };
 
-    executed: (context: CommandContext, api: any): Promise<void> => {
+    public executed(context: CommandContext, api: any): Promise<void> {
         return new Promise(async (resolve) => {
             const member: GuildMember = context.arguments[0];
 

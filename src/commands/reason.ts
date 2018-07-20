@@ -1,20 +1,17 @@
-import {CommandOptions} from "discord-anvil/dist";
-import ChatEnvironment from "discord-anvil/dist/core/chat-environment";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, ChatEnvironment, CommandContext } from "discord-anvil";
 
-
-export default <CommandOptions>{
-    meta: {
+export default abstract class Reason extends Command {
+    readonly meta = {
         name: "reason",
-        desc: "Manage moderation reasons",
+        description: "Manage moderation reasons"
+    };
 
-        args: {
-            caseNum: "!number",
-            reason: "!string"
-        }
-    },
+    readonly args = {
+        caseNum: "!number",
+        reason: "!string"
+    };
 
-    restrict: {
+    readonly restrict = {
         env: ChatEnvironment.Guild,
 
         specific: [
@@ -23,9 +20,9 @@ export default <CommandOptions>{
             "&458130847510429720", // Mods
             "&458812900661002260"  // Assistants
         ]
-    },
+    };
 
-    executed: (context: CommandContext): void => {
+    public executed(context: CommandContext): void {
         // TODO
     }
 };

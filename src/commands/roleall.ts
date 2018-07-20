@@ -1,17 +1,16 @@
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class RoleAll extends Command {
+    readonly meta = {
         name: "roleall",
-        desc: "Add a role to all members",
+        description: "Add a role to all members"
+    };
 
-        args: {
-            role: "!string"
-        }
-    },
+    readonly args = {
+        role: "!string"
+    };
 
-    executed: (context: CommandContext): void => {
+    public executed(context: CommandContext): void {
         // TODO
     }
 };

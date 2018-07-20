@@ -1,19 +1,17 @@
 import {GuildMember, RichEmbed} from "discord.js";
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
-import Utils from "discord-anvil/dist/core/utils";
+import { Command, CommandContext, Utils } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Whois extends Command {
+    readonly meta = {
         name: "whois",
-        desc: "View information about a user",
+        description: "View information about a user",
+    };
 
-        args: {
-            user: ":member"
-        }
-    },
+    readonly args = {
+        user: ":member"
+    };
 
-    executed: async (context: CommandContext): Promise<void> => {
+    public async executed(context: CommandContext): Promise<void> {
         const member: GuildMember = context.arguments.length > 0 ? context.arguments[0] : context.message.member;
 
         if (!member) {

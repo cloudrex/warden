@@ -1,9 +1,7 @@
 import {Collection, GuildMember, Message, Snowflake} from "discord.js";
 import WardenApi, {ConsumerAPIv2} from "../warden-api";
-import {BehaviourOptions} from "discord-anvil/dist/behaviours/behaviour";
-import Bot from "discord-anvil/dist/core/bot";
-import Log from "discord-anvil/dist/core/log";
-import CommandParser from "discord-anvil/dist/commands/command-parser";
+import { BehaviourOptions } from "discord-anvil";
+import { Bot, CommandParser, Log } from "discord-anvil";
 
 function mute(member: GuildMember): void {
     member.addRole(member.guild.roles.find("name", "Muted"));

@@ -1,19 +1,23 @@
-import CommandContext from "discord-anvil/dist/commands/command-context";
-import {CommandOptions} from "discord-anvil/dist";
+import { CommandContext } from "discord-anvil";
 
-
-export default <CommandOptions>{
-    meta: {
+export default abstract class {
+    readonly meta = {
         name: "purge",
-        desc: "Delete messages in bulk",
+        description: "Delete messages in bulk"
+    };
 
-        args: {
-            amount: "!number"
-        }
-    },
+    readonly args = {
+        amount: "!number"
+    };
+
+    readonly restrict = {
+        specific: [
+            "@285578743324606482" // Owner
+        ]
+    };
 
     // TODO: Return type, should be void
-    executed: async (context: CommandContext): Promise<any> => {
+    async executed(context: CommandContext): Promise<any> {
         return new Promise((resolve) => {
             if (context.arguments[0] < 1) {
                 context.fail("Amount must be 1 or higher.");
@@ -31,11 +35,5 @@ export default <CommandOptions>{
                 resolve();
             });
         });
-    },
-
-    restrict: {
-        specific: [
-            "@285578743324606482" // Owner
-        ]
     }
 };

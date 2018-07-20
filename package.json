@@ -11,7 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "discord-anvil": "^1.1.22",
+        "discord-anvil": "git://gitlab.com/cloudrex/anvil.git",
         "discord.js": "^11.3.2",
         "typescript": "^2.9.2"
     },

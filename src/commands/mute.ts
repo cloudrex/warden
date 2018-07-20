@@ -1,22 +1,19 @@
 import {ConsumerAPIv2} from "../warden-api";
-import {CommandOptions} from "discord-anvil/dist";
-import Permission from "discord-anvil/dist/core/permission";
-import ChatEnvironment from "discord-anvil/dist/core/chat-environment";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, Permission, ChatEnvironment, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Mute extends Command {
+    readonly meta = {
         name: "mute",
-        desc: "Mute a user",
+        description: "Mute a user"
+    };
 
-        args: {
-            user: "!:member",
-            reason: "!string",
-            evidence: "string"
-        }
-    },
+    readonly args = {
+        user: "!:member",
+        reason: "!string",
+        evidence: "string"
+    };
 
-    restrict: {
+    readonly restrict = {
         selfPerms: [Permission.ManageRoles],
         issuerPerms: [Permission.ManageRoles],
         env: ChatEnvironment.Guild,
@@ -27,9 +24,9 @@ export default <CommandOptions>{
             "&458130847510429720", // Mods
             "&458812900661002260"  // Assistants
         ]
-    },
+    };
 
-    executed: async (context: CommandContext, api: ConsumerAPIv2): Promise<void> => {
+    async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         const target = context.arguments[0];
         const modLog = context.message.guild.channels.get("458794765308395521");
 
@@ -52,14 +49,5 @@ export default <CommandOptions>{
             reason: context.arguments[1],
             color: "GOLD"
         });
-
-        /* api.mute({
-            moderator: context.sender,
-            reason: context.arguments[1],
-            user: target,
-            channel: modLog,
-            evidence: context.arguments.length === 3 ? context.arguments[2] : null,
-            message: context.message
-        }); */
     }
 };

@@ -46,3 +46,61 @@
 [2018-07-11 02:17:23] <SUCS> [Bot.setupAuthStore] Auth store setup completed
 [2018-07-11 02:17:23] <INFO> [Bot.setupEvents] Logged in as Knight#8221
 [2018-07-11 02:17:23] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-20 04:25:57] <INFO> [JsonAdapter] Data source does not exist, creating default
+[2018-07-20 04:25:57] <VERB> [Bot.setup] Loaded 4 behaviours
+[2018-07-20 04:25:57] <SUCS> [Bot.setup] Enabled 3 behaviours
+[2018-07-20 04:25:57] <VERB> [CommandLoader.loadAll] Loading multiple commands
+[2018-07-20 04:25:57] <SUCS> [CommandLoader.loadAll] Loaded a total of 27 command(s)
+[2018-07-20 04:25:57] <VERB> [CommandLoader.loadPrimitives] Attempting to load 6 primitive commands
+[2018-07-20 04:25:57] <SUCS> [CommandLoader.loadPrimitives] Successfully loaded 6/6 primitive commands
+[2018-07-20 04:25:57] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-20 04:25:57] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-20 04:25:57] <VERB> [Bot.connect] Starting
+[2018-07-20 04:25:57] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-20 04:25:58] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-20 04:25:58] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-20 04:25:58] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-20 04:25:58] <INFO> [Bot.setupEvents] Logged in as Knight#8221
+[2018-07-20 04:25:58] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-20 04:27:46] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-20 04:27:46] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-20 04:28:09] <VERB> [Bot.setup] Loaded 4 behaviours
+[2018-07-20 04:28:09] <SUCS> [Bot.setup] Enabled 3 behaviours
+[2018-07-20 04:28:09] <VERB> [CommandLoader.loadAll] Loading multiple commands
+[2018-07-20 04:28:09] <SUCS> [CommandLoader.loadAll] Loaded a total of 27 command(s)
+[2018-07-20 04:28:09] <VERB> [CommandLoader.loadPrimitives] Attempting to load 6 primitive commands
+[2018-07-20 04:28:09] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-20 04:28:09] <SUCS> [CommandLoader.loadPrimitives] Successfully loaded 6/6 primitive commands
+[2018-07-20 04:28:09] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-20 04:28:09] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-20 04:28:09] <VERB> [Bot.connect] Starting
+[2018-07-20 04:28:26] <VERB> [Bot.setup] Loaded 4 behaviours
+[2018-07-20 04:28:26] <SUCS> [Bot.setup] Enabled 3 behaviours
+[2018-07-20 04:28:26] <VERB> [CommandLoader.loadAll] Loading multiple commands
+[2018-07-20 04:28:27] <VERB> [CommandLoader.loadPrimitives] Attempting to load 6 primitive commands
+[2018-07-20 04:28:27] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-20 04:28:27] <SUCS> [CommandLoader.loadAll] Loaded a total of 27 command(s)
+[2018-07-20 04:28:27] <SUCS> [CommandLoader.loadPrimitives] Successfully loaded 6/6 primitive commands
+[2018-07-20 04:28:27] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-20 04:28:27] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-20 04:28:27] <VERB> [Bot.connect] Starting
+[2018-07-20 04:29:18] <VERB> [Bot.setup] Loaded 4 behaviours
+[2018-07-20 04:29:18] <SUCS> [Bot.setup] Enabled 3 behaviours
+[2018-07-20 04:29:18] <VERB> [CommandLoader.loadAll] Loading multiple commands
+[2018-07-20 04:29:19] <SUCS> [CommandLoader.loadAll] Loaded a total of 27 command(s)
+[2018-07-20 04:29:19] <VERB> [CommandLoader.loadPrimitives] Attempting to load 6 primitive commands
+[2018-07-20 04:29:19] <SUCS> [CommandLoader.loadPrimitives] Successfully loaded 6/6 primitive commands
+[2018-07-20 04:29:19] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-20 04:29:19] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-20 04:29:19] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-20 04:29:19] <VERB> [Bot.connect] Starting
+[2018-07-20 04:29:43] <VERB> [Bot.setup] Loaded 4 behaviours
+[2018-07-20 04:29:43] <SUCS> [Bot.setup] Enabled 3 behaviours
+[2018-07-20 04:29:43] <VERB> [CommandLoader.loadAll] Loading multiple commands
+[2018-07-20 04:29:44] <VERB> [CommandLoader.loadPrimitives] Attempting to load 6 primitive commands
+[2018-07-20 04:29:44] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-20 04:29:44] <SUCS> [CommandLoader.loadAll] Loaded a total of 27 command(s)
+[2018-07-20 04:29:44] <SUCS> [CommandLoader.loadPrimitives] Successfully loaded 6/6 primitive commands
+[2018-07-20 04:29:44] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-20 04:29:44] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-20 04:29:44] <VERB> [Bot.connect] Starting

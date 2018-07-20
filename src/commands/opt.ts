@@ -1,20 +1,19 @@
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, CommandContext } from "discord-anvil";
 
-
-export default <CommandOptions>{
-    meta: {
+export default abstract class Opt extends Command {
+    readonly meta = {
         name: "opt",
-        desc: "Configure the bot",
-        aliases: ["config", "cfg"],
+        description: "Configure the bot"
+    };
 
-        args: {
-            property: "!string",
-            value: "!string"
-        }
-    },
+    readonly args = {
+        property: "!string",
+        value: "!string"
+    };
 
-    executed: (context: CommandContext): void => {
+    readonly aliases = ["config", "cfg"];
+
+    public executed(context: CommandContext): void {
         // TODO
     }
 };

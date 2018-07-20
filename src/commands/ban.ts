@@ -1,27 +1,25 @@
 import {GuildMember} from "discord.js";
 import {ConsumerAPIv2} from "../warden-api";
-import {CommandOptions} from "discord-anvil/dist";
-import Permission from "discord-anvil/dist/core/permission";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Ban extends Command {
+    readonly meta = {
         name: "ban",
-        desc: "Ban a user",
+        description: "Ban a member"
+    };
 
-        args: {
-            user: "!:member",
-            reason: "!string",
-            evidence: "string"
-        },
-    },
+    readonly args = {
+        user: "!:member",
+        reason: "!string",
+        evidence: "string"
+    };
 
-    restrict: {
+    readonly restrict = {
         issuerPerms: [Permission.BanMembers],
         selfPerms: [Permission.BanMembers]
-    },
+    };
 
-    executed: (context: CommandContext, api: ConsumerAPIv2): Promise<void> => {
+    executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         return new Promise((resolve) => {
             const member: GuildMember = context.arguments[0];
 

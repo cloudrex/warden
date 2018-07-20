@@ -1,25 +1,23 @@
 import {GuildMember} from "discord.js";
-import Permission from "discord-anvil/dist/core/permission";
-import CommandContext from "discord-anvil/dist/commands/command-context";
-import {CommandOptions} from "discord-anvil/dist";
+import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Unban extends Command {
+    readonly meta = {
         name: "unban",
-        desc: "Unban a user",
+        description: "Unban a user"
+    };
 
-        args: {
-            user: "!:user",
-            reason: "!string"
-        },
-    },
+    readonly args = {
+        user: "!:user",
+        reason: "!string"
+    };
 
-    restrict: {
+    readonly restrict = {
         issuerPerms: [Permission.BanMembers],
         selfPerms: [Permission.BanMembers]
-    },
+    };
 
-    executed: async (context: CommandContext): Promise<void> => {
+    public async executed(context: CommandContext): Promise<void> {
         const member: GuildMember = context.arguments[0];
 
         if (member.id === context.sender.id) {

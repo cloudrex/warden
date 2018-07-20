@@ -1,6 +1,5 @@
 import WardenApi from "../warden-api";
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, CommandContext } from "discord-anvil";
 
 const channels = {
     media: "382054707029475348",
@@ -44,17 +43,17 @@ const tips = [
     "We host events randomly! Stay tuned and keep an eye under the Events category for special event channels"
 ];
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Tip extends Command {
+    readonly meta = {
         name: "tip",
-        desc: "View a random tip"
-    },
+        description: "View a random tip"
+    };
 
-    restrict: {
+    readonly restrict = {
         cooldown: 5
-    },
+    };
 
-    executed: (context: CommandContext): void => {
+    public executed(context: CommandContext): void {
         let tipIndex = lastTipIndex;
 
         while (tipIndex === lastTipIndex) {

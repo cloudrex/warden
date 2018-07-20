@@ -1,22 +1,19 @@
 import {ConsumerAPIv2} from "../warden-api";
-import {CommandOptions} from "discord-anvil/dist";
-import ChatEnvironment from "discord-anvil/dist/core/chat-environment";
-import CommandContext from "discord-anvil/dist/commands/command-context";
-import Utils from "discord-anvil/dist/core/utils";
+import { Command, ChatEnvironment, CommandContext, Utils } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Warn extends Command {
+    readonly meta = {
         name: "warn",
-        desc: "Warn an user",
+        description: "Warn an user"
+    };
 
-        args: {
-            user: "!:user",
-            reason: "!string",
-            evidence: "string"
-        }
-    },
+    readonly args = {
+        user: "!:user",
+        reason: "!string",
+        evidence: "string"
+    };
 
-    restrict: {
+    readonly restrict = {
         env: ChatEnvironment.Guild,
 
         specific: [
@@ -25,10 +22,10 @@ export default <CommandOptions>{
             "&458130847510429720", // Mods
             "&458812900661002260"  // Assistants
         ]
-    },
+    };
 
     // TODO: Throws unknown message
-    executed: async (context: CommandContext, api: ConsumerAPIv2): Promise<void> => { // TODO: api type not working for some reason
+    async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> { // TODO: api type not working for some reason
         const target = context.message.guild.member(Utils.resolveId(context.arguments[0].id));
 
         if (!target) {

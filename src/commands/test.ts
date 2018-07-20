@@ -1,21 +1,20 @@
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Test extends Command {
+    readonly meta = {
         name: "test",
-        desc: "Test stuff"
-    },
+        description: "Test stuff"
+    };
 
-    restrict: {
+    readonly restrict = {
         specific: [
             "@285578743324606482"
         ],
 
         cooldown: 5
-    },
+    };
 
-    executed: async (context: CommandContext, api: any): Promise<void> => {
+    public async executed (context: CommandContext, api: any): Promise<void> {
         /* const setup = SetupHelper.fromContext(context, "Setup Test");
 
         if (setup) {

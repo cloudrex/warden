@@ -1,20 +1,18 @@
-import {CommandOptions} from "discord-anvil/dist";
-import Permission from "discord-anvil/dist/core/permission";
-import CommandContext from "discord-anvil/dist/commands/command-context";
-import Utils from "discord-anvil/dist/core/utils";
+import { Command, Permission, CommandContext, Utils } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Info extends Command {
+    readonly meta = {
         name: "info",
-        desc: "View information about the server",
-        aliases: ["uptime"]
-    },
+        description: "View information about the server"
+    };
 
-    restrict: {
+    readonly aliases = ["uptime"];
+
+    readonly restrict = {
         issuerPerms: [Permission.ManageGuild]
-    },
+    };
 
-    executed: (context: CommandContext): void => {
+    executed(context: CommandContext): void {
         context.sections({
             Uptime: Utils.timeAgoFromNow(context.bot.client.uptime),
             Members: context.message.guild.memberCount

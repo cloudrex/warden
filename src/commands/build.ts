@@ -1,22 +1,21 @@
 import {exec} from "child_process";
-import {CommandOptions} from "discord-anvil/dist";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import { Command, CommandContext } from "discord-anvil";
 
-export default <CommandOptions>{
-    meta: {
+export default abstract class Build extends Command {
+    readonly meta = {
         name: "build",
-        desc: "Build the bot"
-    },
+        description: "Build the project"
+    };
 
-    restrict: {
+    readonly restrict = {
         specific: [
             "@285578743324606482" // Owner
         ],
 
         cooldown: 5
-    },
+    };
 
-    executed: (context: CommandContext): Promise<void> => {
+    executed(context: CommandContext): Promise<void> {
         return new Promise(async (resolve) => {
             await context.ok("Building the project. This may take a while.");
 

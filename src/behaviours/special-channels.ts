@@ -1,6 +1,6 @@
 import {Message} from "discord.js";
-import {BehaviourOptions} from "discord-anvil/dist/behaviours/behaviour";
-import Bot from "discord-anvil/dist/core/bot";
+import { BehaviourOptions } from "discord-anvil/behaviours/behaviour";
+import { Bot } from "discord-anvil";
 
 export default <BehaviourOptions>{
     name: "Special Channels",
