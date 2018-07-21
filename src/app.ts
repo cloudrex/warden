@@ -1,7 +1,7 @@
 import WardenApi, {ConsumerAPIv2} from "./warden-api";
 import {TextChannel} from "discord.js";
 import path from "path";
-import { Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider } from "discord-anvil";
+import {Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider} from "discord-anvil";
 
 const baseDir = "./src";
 
@@ -22,7 +22,7 @@ const settings = new Settings({
 async function start() {
     const userMentionRegex = /(^[0-9]{17,18}$|^<@!?[0-9]{17,18}>$)/;
 
-    const bot = new Bot({
+    const bot: Bot<any> = new Bot<any>({
         argumentTypes: {
             user: userMentionRegex,
             role: /(^[0-9]{18}$|^<&[0-9]{18}>$)/,

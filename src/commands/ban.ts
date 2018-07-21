@@ -1,6 +1,6 @@
 import {GuildMember} from "discord.js";
 import {ConsumerAPIv2} from "../warden-api";
-import { Command, Permission, CommandContext } from "discord-anvil";
+import {Command, Permission, CommandContext} from "discord-anvil";
 
 export default abstract class Ban extends Command {
     readonly meta = {

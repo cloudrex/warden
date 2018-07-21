@@ -93,7 +93,7 @@ export interface ConsumerAPIRoles {
 }
 
 export interface ConsumerAPIv2Options {
-    readonly bot: Bot;
+    readonly bot: Bot<any>;
     readonly guild: Snowflake;
     readonly roles: ConsumerAPIRoles;
     readonly channels: ConsumerAPIChannels;
@@ -103,7 +103,7 @@ export class ConsumerAPIv2 {
     readonly unresolvedChannels: ConsumerAPIChannels;
     readonly roles: ConsumerAPIRoles;
 
-    private readonly bot: Bot;
+    private readonly bot: Bot<any>;
     private readonly guild: Snowflake;
 
     // TODO: Type
