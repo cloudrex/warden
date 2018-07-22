@@ -1,5 +1,6 @@
 import { Role } from "discord.js";
 import { Command, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Roles extends Command {
     readonly meta = {
@@ -11,14 +12,11 @@ export default class Roles extends Command {
         page: "number"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482", // Owner
-            "&458130451572457483", // Trial mods
-            "&458130847510429720", // Mods
-            "&458812900661002260"  // Assistants
-        ]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = SpecificGroups.staff;
+    }
 
     public executed(context: CommandContext): void {
         context.ok(context.message.guild.roles.array()

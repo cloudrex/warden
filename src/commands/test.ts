@@ -1,4 +1,5 @@
 import { Command, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Test extends Command {
     readonly meta = {
@@ -6,13 +7,11 @@ export default class Test extends Command {
         description: "Test stuff"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482"
-        ],
+    constructor() {
+        super();
 
-        cooldown: 5
-    };
+        this.restrict.specific = SpecificGroups.owner;
+    }
 
     public async executed (context: CommandContext, api: any): Promise<void> {
         /* const setup = SetupHelper.fromContext(context, "Setup Test");

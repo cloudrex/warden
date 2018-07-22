@@ -14,10 +14,12 @@ export default class Ban extends Command {
         evidence: "string"
     };
 
-    readonly restrict = {
-        issuerPerms: [Permission.BanMembers],
-        selfPerms: [Permission.BanMembers]
-    };
+    constructor() {
+        super();
+
+        this.restrict.issuerPermissions = [Permission.BanMembers];
+        this.restrict.selfPermissions = [Permission.BanMembers];
+    }
 
     public executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         return new Promise((resolve) => {

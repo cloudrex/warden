@@ -8,9 +8,11 @@ export default class Info extends Command {
 
     readonly aliases = ["uptime"];
 
-    readonly restrict = {
-        issuerPerms: [Permission.ManageGuild]
-    };
+    constructor() {
+        super();
+
+        this.restrict.issuerPermissions = [Permission.ManageGuild];
+    }
 
     public executed(context: CommandContext): void {
         context.sections({

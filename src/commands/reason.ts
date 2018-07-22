@@ -1,4 +1,5 @@
 import { Command, ChatEnvironment, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Reason extends Command {
     readonly meta = {
@@ -11,16 +12,12 @@ export default class Reason extends Command {
         reason: "!string"
     };
 
-    readonly restrict = {
-        env: ChatEnvironment.Guild,
+    constructor() {
+        super();
 
-        specific: [
-            "@285578743324606482", // Owner
-            "&458130451572457483", // Trial mods
-            "&458130847510429720", // Mods
-            "&458812900661002260"  // Assistants
-        ]
-    };
+        this.restrict.environment = ChatEnvironment.Guild;
+        this.restrict.specific = SpecificGroups.staff;
+    }
 
     public executed(context: CommandContext): void {
         // TODO

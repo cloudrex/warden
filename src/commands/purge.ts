@@ -10,11 +10,11 @@ export default class Purge extends Command {
         amount: "!number"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482" // Owner
-        ]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = ["@285578743324606482"]; // Owner
+    }
 
     // TODO: Return type, should be void
     public async executed(context: CommandContext): Promise<any> {

@@ -1,5 +1,6 @@
 import {ConsumerAPIv2} from "../warden-api";
 import { Command, Permission, ChatEnvironment, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Mute extends Command {
     readonly meta = {
@@ -13,18 +14,15 @@ export default class Mute extends Command {
         evidence: "string"
     };
 
-    readonly restrict = {
-        selfPerms: [Permission.ManageRoles],
-        issuerPerms: [Permission.ManageRoles],
-        env: ChatEnvironment.Guild,
 
-        specific: [
-            "@285578743324606482", // Owner
-            "&458130451572457483", // Trial mods
-            "&458130847510429720", // Mods
-            "&458812900661002260"  // Assistants
-        ]
-    };
+    constructor() {
+        super();
+
+        this.restrict.selfPermissions = [Permission.ManageRoles];
+        this.restrict.issuerPermissions = [Permission.ManageRoles];
+        this.restrict.environment = ChatEnvironment.Guild;
+        this.restrict.specific = SpecificGroups.staff;
+    }
 
     public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         const target = context.arguments[0];

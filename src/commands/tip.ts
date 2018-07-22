@@ -49,9 +49,11 @@ export default class Tip extends Command {
         description: "View a random tip"
     };
 
-    readonly restrict = {
-        cooldown: 5
-    };
+    constructor() {
+        super();
+
+        this.restrict.cooldown = 5;
+    }
 
     public executed(context: CommandContext): void {
         let tipIndex = lastTipIndex;

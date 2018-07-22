@@ -6,11 +6,11 @@ export default class ClearWarns extends Command {
         description: "Clear all warnings from an user"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482" // Owner
-        ]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = ["@285578743324606482"]; // Owner
+    }
 
     public executed(context: CommandContext): void {
         // TODO

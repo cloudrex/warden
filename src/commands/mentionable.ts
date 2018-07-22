@@ -11,13 +11,12 @@ export default class Mentionable extends Command {
         role: "!string"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482" // Owner
-        ],
+    constructor() {
+        super();
 
-        selfPerms: [Permission.ManageRoles]
-    };
+        this.restrict.specific = ["@285578743324606482"]; // Owner
+        this.restrict.selfPermissions = [Permission.ManageRoles];
+    }
 
     // TODO: Add support by id
     public async executed(context: CommandContext): Promise<void> {

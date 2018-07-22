@@ -1,5 +1,6 @@
 import {GuildMember, RichEmbed} from "discord.js";
 import { Command, CommandContext, Utils } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Whois extends Command {
     readonly meta = {
@@ -10,6 +11,12 @@ export default class Whois extends Command {
     readonly args = {
         user: ":member"
     };
+
+    constructor() {
+        super();
+
+        this.restrict.specific = SpecificGroups.staff;
+    }
 
     public async executed(context: CommandContext): Promise<void> {
         const member: GuildMember = context.arguments.length > 0 ? context.arguments[0] : context.message.member;

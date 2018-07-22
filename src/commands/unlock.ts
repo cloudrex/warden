@@ -1,5 +1,6 @@
 import {Role} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Unlock extends Command {
     readonly meta = {
@@ -7,13 +8,12 @@ export default class Unlock extends Command {
         description: "Unlock the guild from lockdown"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482" // Owner
-        ],
+    constructor() {
+        super();
 
-        selfPerms: [Permission.ManageRoles]
-    };
+        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.selfPermissions = [Permission.ManageRoles];
+    }
 
     public async executed(context: CommandContext): Promise<void> {
         const everyone: Role = context.message.guild.roles.find("name", "@everyone");

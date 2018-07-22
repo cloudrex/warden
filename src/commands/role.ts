@@ -12,9 +12,11 @@ export default class RoleCommand extends Command {
         member: "!:member"
     };
 
-    readonly restrict = {
-        issuerPerms: [Permission.ManageRoles, Permission.ManageGuild]
-    };
+    constructor() {
+        super();
+
+        this.restrict.issuerPermissions = [Permission.ManageRoles, Permission.ManageGuild];
+    }
 
     public async executed(context: CommandContext): Promise<void> {
         if (!context.arguments[1]) {

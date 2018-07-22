@@ -16,10 +16,12 @@ export default class Emoji extends Command {
         url: "!string"
     };
 
-    readonly restrict = {
-        specific: SpecificGroups.staff,
-        selfPerms: [Permission.ManageEmojis]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = SpecificGroups.staff;
+        this.restrict.selfPermissions = [Permission.ManageEmojis];
+    }
 
     public executed(context: CommandContext): Promise<void> {
         return new Promise((resolve) => {

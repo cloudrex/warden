@@ -1,5 +1,6 @@
 import {exec} from "child_process";
 import { Command, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Update extends Command {
     readonly meta = {
@@ -9,11 +10,11 @@ export default class Update extends Command {
 
     readonly aliases = ["pull"];
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482" // Owner
-        ]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = SpecificGroups.owner;
+    }
 
     public executed(context: CommandContext): Promise<void> {
         return new Promise((resolve) => {

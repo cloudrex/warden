@@ -1,4 +1,5 @@
 import { Command, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Stop extends Command {
     readonly meta = {
@@ -8,11 +9,11 @@ export default class Stop extends Command {
 
     readonly aliases = ["disconnect", "quit"];
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482" // Owner
-        ]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = SpecificGroups.owner;
+    }
 
     public async executed (context: CommandContext): Promise<void> {
         await context.ok("Disconnecting.");

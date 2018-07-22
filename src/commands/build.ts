@@ -7,13 +7,12 @@ export default class Build extends Command {
         description: "Build the project"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482" // Owner
-        ],
+    constructor() {
+        super();
 
-        cooldown: 5
-    };
+        this.restrict.specific = ["@285578743324606482"]; // Owner
+        this.restrict.cooldown = 5;
+    }
 
     public executed(context: CommandContext): Promise<void> {
         return new Promise(async (resolve) => {

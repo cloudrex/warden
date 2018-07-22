@@ -1,6 +1,7 @@
 import {Message, RichEmbed} from "discord.js";
 import {ConsumerAPIv2} from "../warden-api";
 import { Command, CommandContext, Utils } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Snipe extends Command {
     readonly meta = {
@@ -8,14 +9,11 @@ export default class Snipe extends Command {
         description: "View the last deleted message in this channel"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482", // Owner
-            "&458130451572457483", // Trial mods
-            "&458130847510429720", // Mods
-            "&458812900661002260"  // Assistants
-        ]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = SpecificGroups.staff;
+    }
 
     public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         const lastDeletedChannelMessage: Message | null = api.getLastDeletedMessage(context.message.channel.id);

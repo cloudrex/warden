@@ -1,5 +1,6 @@
 import {GuildMember} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Softban extends Command {
     readonly meta = {
@@ -12,10 +13,12 @@ export default class Softban extends Command {
         reason: "!string"
     };
 
-    readonly restrict = {
-        issuerPerms: [Permission.BanMembers],
-        selfPerms: [Permission.BanMembers]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.selfPermissions = [Permission.BanMembers];
+    }
 
     public executed(context: CommandContext, api: any): Promise<void> {
         return new Promise(async (resolve) => {

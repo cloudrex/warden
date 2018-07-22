@@ -1,5 +1,6 @@
 import {GuildMember} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Unban extends Command {
     readonly meta = {
@@ -12,10 +13,12 @@ export default class Unban extends Command {
         reason: "!string"
     };
 
-    readonly restrict = {
-        issuerPerms: [Permission.BanMembers],
-        selfPerms: [Permission.BanMembers]
-    };
+    constructor() {
+        super();
+
+        this.restrict.selfPermissions = [Permission.BanMembers];
+        this.restrict.specific = SpecificGroups.owner;
+    }
 
     public async executed(context: CommandContext): Promise<void> {
         const member: GuildMember = context.arguments[0];

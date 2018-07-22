@@ -12,9 +12,11 @@ export default class Nick extends Command {
         name: "!string"
     };
 
-    readonly restrict = {
-        selfPerms: [Permission.ManageNicknames]
-    };
+    constructor() {
+        super();
+
+        this.restrict.selfPermissions = [Permission.ManageNicknames];
+    }
 
     public async executed(context: CommandContext): Promise<void> {
         await context.message.member.setNickname(context.arguments[0]);

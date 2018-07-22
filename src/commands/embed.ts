@@ -8,11 +8,11 @@ export default class Embed extends Command {
         description: "Create an embed"
     };
 
-    readonly restrict = {
-        specific: [
-            "@285578743324606482" // Owner
-        ]
-    };
+    constructor() {
+        super();
+
+        this.restrict.specific = ["@285578743324606482"]; // Owner
+    }
 
     public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         const setup: SetupHelper | null = SetupHelper.fromContext({

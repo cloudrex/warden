@@ -1,5 +1,6 @@
 import {GuildMember, Snowflake} from "discord.js";
 import { Command, ChatEnvironment, CommandContext, DataProvider, Log, JsonProvider, Utils } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export interface StoredWarning {
     readonly reason: string;
@@ -17,16 +18,12 @@ export default class Warnings extends Command {
         member: "!:member"
     };
 
-    readonly restrict = {
-        env: ChatEnvironment.Guild,
+    constructor() {
+        super();
 
-        specific: [
-            "@285578743324606482", // Owner
-            "&458130451572457483", // Trial mods
-            "&458130847510429720", // Mods
-            "&458812900661002260"  // Assistants
-        ]
-    };
+        this.restrict.environment = ChatEnvironment.Guild;
+        this.restrict.specific = SpecificGroups.staff;
+    }
 
     public executed(context: CommandContext): void {
         const member: GuildMember = context.arguments[0];
