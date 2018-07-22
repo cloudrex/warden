@@ -1,6 +1,6 @@
 import { Command, ChatEnvironment, CommandContext } from "discord-anvil";
 
-export default abstract class Reason extends Command {
+export default class Reason extends Command {
     readonly meta = {
         name: "reason",
         description: "Manage moderation reasons"

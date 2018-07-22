@@ -5,7 +5,7 @@ const request = require("request").defaults({
     encoding: null
 });
 
-export default abstract class Emoji extends Command {
+export default class Emoji extends Command {
     readonly meta = {
         name: "emoji",
         description: "Add an emoji to the guild"  
@@ -21,7 +21,7 @@ export default abstract class Emoji extends Command {
         selfPerms: [Permission.ManageEmojis]
     };
 
-    executed(context: CommandContext): Promise<void> {
+    public executed(context: CommandContext): Promise<void> {
         return new Promise((resolve) => {
             request.get(context.arguments[1], async (error: Error, response: any, body: any) => {
                 await context.message.guild.createEmoji(body, context.arguments[0], undefined, `Requested by ${context.sender.tag} (${context.sender.id})`);

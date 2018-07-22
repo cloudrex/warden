@@ -1,7 +1,7 @@
 import {GuildMember, Role} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default abstract class RoleCommand extends Command {
+export default class RoleCommand extends Command {
     readonly meta = {
         name: "role",
         description: "Manage member roles"

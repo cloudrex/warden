@@ -1,6 +1,6 @@
 import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default abstract class Nick extends Command {
+export default class Nick extends Command {
     readonly meta = {
         name: "nick",
         description: "Manage nicknames"
@@ -16,7 +16,7 @@ export default abstract class Nick extends Command {
         selfPerms: [Permission.ManageNicknames]
     };
 
-    async executed(context: CommandContext): Promise<void> {
+    public async executed(context: CommandContext): Promise<void> {
         await context.message.member.setNickname(context.arguments[0]);
     }
 };

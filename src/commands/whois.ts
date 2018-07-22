@@ -1,7 +1,7 @@
 import {GuildMember, RichEmbed} from "discord.js";
 import { Command, CommandContext, Utils } from "discord-anvil";
 
-export default abstract class Whois extends Command {
+export default class Whois extends Command {
     readonly meta = {
         name: "whois",
         description: "View information about a user",

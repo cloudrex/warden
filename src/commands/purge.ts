@@ -1,6 +1,6 @@
-import { CommandContext } from "discord-anvil";
+import { CommandContext, Command } from "discord-anvil";
 
-export default abstract class {
+export default class Purge extends Command {
     readonly meta = {
         name: "purge",
         description: "Delete messages in bulk"
@@ -17,7 +17,7 @@ export default abstract class {
     };
 
     // TODO: Return type, should be void
-    async executed(context: CommandContext): Promise<any> {
+    public async executed(context: CommandContext): Promise<any> {
         return new Promise((resolve) => {
             if (context.arguments[0] < 1) {
                 context.fail("Amount must be 1 or higher.");

@@ -1,6 +1,6 @@
 import { Command, CommandContext } from "discord-anvil";
 
-export default abstract class Opt extends Command {
+export default class Opt extends Command {
     readonly meta = {
         name: "opt",
         description: "Configure the bot"

@@ -1,7 +1,7 @@
 import {Role} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default abstract class Mentionable extends Command {
+export default class Mentionable extends Command {
     readonly meta = {
         name: "mentionable",
         description: "Toggle a role mentionable"
@@ -20,7 +20,7 @@ export default abstract class Mentionable extends Command {
     };
 
     // TODO: Add support by id
-    async executed(context: CommandContext): Promise<void> {
+    public async executed(context: CommandContext): Promise<void> {
         const role: Role | undefined = context.message.guild.roles.find("name", context.arguments[0]);
 
         if (!role) {

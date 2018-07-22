@@ -1,7 +1,7 @@
 import {GuildMember} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default abstract class Unban extends Command {
+export default class Unban extends Command {
     readonly meta = {
         name: "unban",
         description: "Unban a user"

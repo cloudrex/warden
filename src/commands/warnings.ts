@@ -7,7 +7,7 @@ export interface StoredWarning {
     readonly time: number;
 }
 
-export default abstract class Warnings extends Command {
+export default class Warnings extends Command {
     readonly meta = {
         name: "warnings",
         description: "View the warnings of a member",

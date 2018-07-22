@@ -1,7 +1,7 @@
 import {Role} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default abstract class Lockdown extends Command {
+export default class Lockdown extends Command {
     readonly meta = {
         name: "lockdown",
         description: "Lockdown the guild"
@@ -15,7 +15,7 @@ export default abstract class Lockdown extends Command {
         selfPerms: [Permission.ManageRoles]
     };
 
-    async executed(context: CommandContext): Promise<void> {
+    public async executed(context: CommandContext): Promise<void> {
         const everyone: Role = context.message.guild.roles.find("name", "@everyone");
 
         await everyone.setPermissions([

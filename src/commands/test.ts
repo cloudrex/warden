@@ -1,6 +1,6 @@
 import { Command, CommandContext } from "discord-anvil";
 
-export default abstract class Test extends Command {
+export default class Test extends Command {
     readonly meta = {
         name: "test",
         description: "Test stuff"

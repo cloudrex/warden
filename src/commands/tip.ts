@@ -43,7 +43,7 @@ const tips = [
     "We host events randomly! Stay tuned and keep an eye under the Events category for special event channels"
 ];
 
-export default abstract class Tip extends Command {
+export default class Tip extends Command {
     readonly meta = {
         name: "tip",
         description: "View a random tip"

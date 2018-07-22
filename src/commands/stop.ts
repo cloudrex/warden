@@ -1,6 +1,6 @@
 import { Command, CommandContext } from "discord-anvil";
 
-export default abstract class Stop extends Command {
+export default class Stop extends Command {
     readonly meta = {
         name: "stop",
         description: "Disconnect the bot"

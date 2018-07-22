@@ -2,7 +2,7 @@ import {Message, RichEmbed} from "discord.js";
 import {ConsumerAPIv2} from "../warden-api";
 import { Command, CommandContext, Utils } from "discord-anvil";
 
-export default abstract class Snipe extends Command {
+export default class Snipe extends Command {
     readonly meta = {
         name: "snipe",
         description: "View the last deleted message in this channel"

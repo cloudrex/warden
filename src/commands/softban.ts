@@ -1,7 +1,7 @@
 import {GuildMember} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default abstract class Softban extends Command {
+export default class Softban extends Command {
     readonly meta = {
         name: "softban",
         description: "Softban a user"

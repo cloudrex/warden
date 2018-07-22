@@ -1,7 +1,7 @@
 import {exec} from "child_process";
 import { Command, CommandContext } from "discord-anvil";
 
-export default abstract class Build extends Command {
+export default class Build extends Command {
     readonly meta = {
         name: "build",
         description: "Build the project"
@@ -15,7 +15,7 @@ export default abstract class Build extends Command {
         cooldown: 5
     };
 
-    executed(context: CommandContext): Promise<void> {
+    public executed(context: CommandContext): Promise<void> {
         return new Promise(async (resolve) => {
             await context.ok("Building the project. This may take a while.");
 

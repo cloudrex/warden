@@ -1,7 +1,7 @@
 import {ConsumerAPIv2} from "../warden-api";
 import { Command, Permission, ChatEnvironment, CommandContext } from "discord-anvil";
 
-export default abstract class Mute extends Command {
+export default class Mute extends Command {
     readonly meta = {
         name: "mute",
         description: "Mute a user"
@@ -26,7 +26,7 @@ export default abstract class Mute extends Command {
         ]
     };
 
-    async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
+    public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         const target = context.arguments[0];
         const modLog = context.message.guild.channels.get("458794765308395521");
 

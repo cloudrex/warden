@@ -1,7 +1,7 @@
 import {Role} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
 
-export default abstract class Unlock extends Command {
+export default class Unlock extends Command {
     readonly meta = {
         name: "unlock",
         description: "Unlock the guild from lockdown"

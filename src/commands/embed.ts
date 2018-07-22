@@ -2,7 +2,7 @@ import {ConsumerAPIv2} from "../warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
 import { Command, CommandContext, SetupHelper, SetupHelperResult } from "discord-anvil";
 
-export default abstract class Embed extends Command {
+export default class Embed extends Command {
     readonly meta = {
         name: "embed",
         description: "Create an embed"
@@ -14,7 +14,7 @@ export default abstract class Embed extends Command {
         ]
     };
 
-    async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
+    public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
         const setup: SetupHelper | null = SetupHelper.fromContext({
             context: context,
             title: "Create Embed"

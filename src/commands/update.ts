@@ -1,7 +1,7 @@
 import {exec} from "child_process";
 import { Command, CommandContext } from "discord-anvil";
 
-export default abstract class Update extends Command {
+export default class Update extends Command {
     readonly meta = {
         name: "update",
         description: "Pull changes from the git repository"

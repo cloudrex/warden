@@ -250,3 +250,196 @@
 [2018-07-21 01:11:35] <DBUG> Time to live: 10600
 [2018-07-21 01:20:11] <VERB> [Bot.disconnect] Saving auth store
 [2018-07-21 01:20:11] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 21:55:27] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 21:55:27] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 21:55:27] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 21:55:27] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 21:55:27] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 21:55:27] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 21:55:27] <VERB> [Bot.connect] Starting
+[2018-07-22 21:56:04] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 21:56:04] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 21:56:04] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 21:56:04] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 21:56:04] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 21:56:04] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 21:56:04] <VERB> [Bot.connect] Starting
+[2018-07-22 21:56:05] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 21:56:05] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 21:56:05] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 21:56:05] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 21:56:05] <INFO> [Bot.setupEvents] Logged in as Knight#8221
+[2018-07-22 21:56:05] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-22 21:56:33] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 21:56:33] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 21:56:33] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 21:56:33] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 21:56:33] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 21:56:33] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 21:56:33] <VERB> [Bot.connect] Starting
+[2018-07-22 21:56:34] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 21:56:34] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 21:56:34] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 21:56:34] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 21:56:34] <INFO> [Bot.setupEvents] Logged in as Knight#8221
+[2018-07-22 21:56:34] <SUCS> [Bot.setupEvents] Ready | Took 495ms
+[2018-07-22 21:56:41] <DBUG> Time to live: 10600
+[2018-07-22 22:02:25] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:02:25] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:02:25] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:02:25] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:02:25] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:02:25] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:02:25] <VERB> [Bot.connect] Starting
+[2018-07-22 22:02:26] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:02:26] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:02:26] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:02:26] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:02:26] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-22 22:02:26] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guilds
+[2018-07-22 22:11:20] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:11:20] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 22:12:01] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:12:01] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:12:01] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:12:01] <VERB> [Bot.setup] Loading 27 commands
+[2018-07-22 22:12:03] <SUCS> [Bot.setup] Loaded 27 commands
+[2018-07-22 22:12:03] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:12:03] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:12:03] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:12:03] <VERB> [Bot.connect] Starting
+[2018-07-22 22:12:04] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:12:04] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:12:04] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:12:04] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:12:04] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-22 22:12:04] <SUCS> [Bot.setupEvents] Ready | Took 3s
+[2018-07-22 22:15:20] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:15:20] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 22:15:43] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:15:43] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:15:43] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:15:43] <VERB> [Bot.setup] Loading 27 command(s)
+[2018-07-22 22:15:44] <SUCS> [Bot.setup] Loaded 27 command(s)
+[2018-07-22 22:15:44] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:15:44] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:15:44] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:15:44] <VERB> [Bot.connect] Starting
+[2018-07-22 22:15:45] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:15:45] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:15:45] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:15:45] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:15:45] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-22 22:15:45] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-22 22:15:51] <DANG> There was an error while executing the help command: Cannot read property 'name' of undefined
+[2018-07-22 22:20:30] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:20:30] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 22:20:52] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:20:52] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:20:52] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:20:52] <VERB> [Bot.setup] Loading 27 command(s)
+[2018-07-22 22:20:52] <SUCS> [Bot.setup] Loaded 27 command(s)
+[2018-07-22 22:20:52] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:20:52] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:20:52] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:20:52] <VERB> [Bot.connect] Starting
+[2018-07-22 22:20:52] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:20:52] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:20:52] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:20:52] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:20:52] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-22 22:20:52] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-22 22:21:02] <DANG> There was an error while executing the 'help' command: Cannot read property 'name' of undefined
+[2018-07-22 22:23:05] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:23:05] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 22:23:24] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:23:24] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:23:24] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:23:24] <VERB> [Bot.setup] Loading 27 command(s)
+[2018-07-22 22:23:24] <SUCS> [Bot.setup] Loaded 27 command(s)
+[2018-07-22 22:23:24] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:23:24] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:23:24] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:23:24] <VERB> [Bot.connect] Starting
+[2018-07-22 22:23:24] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:23:24] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:23:24] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:23:24] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:23:24] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-22 22:23:24] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-22 22:23:31] <DANG> There was an error while executing the 'help' command: Cannot read property 'name' of undefined
+[2018-07-22 22:28:35] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:28:35] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 22:28:59] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:28:59] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:28:59] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:28:59] <VERB> [Bot.setup] Loading 27 command(s)
+[2018-07-22 22:28:59] <SUCS> [Bot.setup] Loaded 27 command(s)
+[2018-07-22 22:28:59] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:28:59] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:28:59] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:28:59] <VERB> [Bot.connect] Starting
+[2018-07-22 22:29:00] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:29:00] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:29:00] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:29:00] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:29:00] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-22 22:29:00] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-22 22:29:01] <DANG> There was an error while executing the 'help' command: command is not a function
+[2018-07-22 22:30:01] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:30:01] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 22:30:14] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:30:14] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:30:14] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:30:14] <VERB> [Bot.setup] Loading 27 command(s)
+[2018-07-22 22:30:14] <SUCS> [Bot.setup] Loaded 27 command(s)
+[2018-07-22 22:30:14] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:30:14] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:30:14] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:30:14] <VERB> [Bot.connect] Starting
+[2018-07-22 22:30:15] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:30:15] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:30:15] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:30:15] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:30:15] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-22 22:30:15] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-22 22:30:19] <DANG> There was an error while executing the 'help' command: Cannot read property 'name' of undefined
+[2018-07-22 22:31:21] <DANG> There was an error while executing the 'setauth' command: command.executed is not a function
+[2018-07-22 22:39:43] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:39:43] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 22:39:50] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:39:50] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:39:50] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:39:50] <VERB> [Bot.setup] Loading 27 command(s)
+[2018-07-22 22:39:51] <SUCS> [Bot.setup] Loaded 27 command(s)
+[2018-07-22 22:39:51] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:39:51] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:39:51] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:39:51] <VERB> [Bot.connect] Starting
+[2018-07-22 22:39:51] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:39:51] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:39:51] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:39:51] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:39:51] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-22 22:39:51] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-22 22:40:32] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:40:32] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-22 22:40:50] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-22 22:40:50] <VERB> [Bot.setup] Loading 6 internal fragments
+[2018-07-22 22:40:50] <SUCS> [Bot.setup] Enabled 6/6 internal fragments
+[2018-07-22 22:40:50] <VERB> [Bot.setup] Loading 27 command(s)
+[2018-07-22 22:40:51] <SUCS> [Bot.setup] Loaded 27 command(s)
+[2018-07-22 22:40:51] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-22 22:40:51] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-22 22:40:51] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-22 22:40:51] <VERB> [Bot.connect] Starting
+[2018-07-22 22:40:51] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-22 22:40:51] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-22 22:40:51] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-22 22:40:51] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-22 22:40:51] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-22 22:40:51] <SUCS> [Bot.setupEvents] Ready | Took 1s
+[2018-07-22 22:42:17] <DANG> There was an error while executing the 'help' command: Cannot read property 'name' of undefined
+[2018-07-22 22:42:32] <DANG> There was an error while executing the 'help' command: Cannot read property 'name' of undefined
+[2018-07-22 22:42:38] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-22 22:42:38] <VERB> [Bot.disconnect] Saving JsonProvider

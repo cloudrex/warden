@@ -1,6 +1,6 @@
 import { Command, CommandContext } from "discord-anvil";
 
-export default abstract class ClearWarns extends Command {
+export default class ClearWarns extends Command {
     readonly meta = {
         name: "clearwarns",
         description: "Clear all warnings from an user"
@@ -12,7 +12,7 @@ export default abstract class ClearWarns extends Command {
         ]
     };
 
-    executed(context: CommandContext): void {
+    public executed(context: CommandContext): void {
         // TODO
     }
 };
