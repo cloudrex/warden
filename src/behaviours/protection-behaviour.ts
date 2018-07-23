@@ -11,7 +11,7 @@ export default class Protection extends Behaviour {
     public enabled(bot: Bot, api: ConsumerAPIv2): void {
         bot.client.on("message", async (message: Message) => {
             if (message.author.id !== bot.owner) {
-                if (message.content.length > 300 && message.content.split(" ").length < 5 && message.deletable) {
+                if (message.content.length > 300 && message.content.split(" ").length < 15 && message.deletable) {
                     await message.reply("Your message is too large.");
                     await message.delete();
                 }
