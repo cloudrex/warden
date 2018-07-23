@@ -19,7 +19,13 @@ export default class Purge extends Command {
     // TODO: Return type, should be void
     public async executed(context: CommandContext): Promise<any> {
         return new Promise((resolve) => {
-            if (context.arguments[0] < 1) {
+            if (context.arguments[0] > 20) {
+                context.fail("Amount must be lower than 20.");
+                resolve();
+
+                return;
+            }
+            else if (context.arguments[0] < 1) {
                 context.fail("Amount must be 1 or higher.");
                 resolve();
 
