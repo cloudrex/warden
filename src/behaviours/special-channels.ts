@@ -1,12 +1,15 @@
 import {Message} from "discord.js";
-import {BehaviourOptions} from "discord-anvil";
+import {Behaviour} from "discord-anvil";
 import {Bot} from "discord-anvil";
+import { ConsumerAPIv2 } from "../warden-api";
 
-export default <BehaviourOptions>{
-    name: "Special Channels",
-    description: "Functionality for special channels",
+export class SpecialChannels extends Behaviour {
+    readonly meta = {
+        name: "special channels",
+        description: "Functionality for special guild channels"
+    };
 
-    enabled: (bot: Bot<any>, api: any): void => {
+    public enabled(bot: Bot, api: ConsumerAPIv2): void {
         bot.client.on("message", async (message: Message) => {
             if (message.channel.id === api.unresolvedChannels.suggestions && !message.author.bot) {
                 await api.addSuggestion(message.content, message.member);
@@ -17,4 +20,4 @@ export default <BehaviourOptions>{
             }
         });
     }
-};
+}

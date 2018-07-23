@@ -1,15 +1,14 @@
 import {Collection, GuildMember, Message, Snowflake} from "discord.js";
 import WardenApi, {ConsumerAPIv2} from "../warden-api";
-import { BehaviourOptions, Bot, CommandParser, Log } from "discord-anvil";
+import { Bot, CommandParser, Log, Behaviour } from "discord-anvil";
 
-function mute(member: GuildMember): void {
-    member.addRole(member.guild.roles.find("name", "Muted"));
-}
+export default class Protection extends Behaviour {
+    readonly meta = {
+        name: "protection",
+        description: "Auto protection"
+    };
 
-export default <BehaviourOptions>{
-    name: "Protection",
-
-    enabled: (bot: Bot, api: ConsumerAPIv2): void => {
+    enabled(bot: Bot, api: ConsumerAPIv2): void {
         bot.client.on("message", async (message: Message) => {
             if (message.author.id !== bot.owner) {
                 if (message.member.roles.has(api.roles.muted) && message.deletable) {
@@ -37,7 +36,7 @@ export default <BehaviourOptions>{
 
                             // Mute the user
                             // TODO: Use/implement in Consumer API v2
-                            mute(message.member);
+                            Protection.mute(message.member);
 
                             const response: Message = <Message>(await message.reply("You have been automatically muted until further notice for mass pinging."));
 
@@ -96,4 +95,8 @@ export default <BehaviourOptions>{
             Log.warn("The autoDeleteCommands option is currently incompatible with the snipe command");
         }
     }
-};
+
+    private static mute(member: GuildMember): void {
+        member.addRole(member.guild.roles.find("name", "Muted"));
+    }
+}

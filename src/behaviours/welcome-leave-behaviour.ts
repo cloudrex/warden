@@ -1,5 +1,5 @@
 import {GuildMember, User} from "discord.js";
-import {Utils, Bot, BehaviourOptions} from "discord-anvil";
+import {Utils, Bot, Behaviour} from "discord-anvil";
 
 const messages: any = {
     welcome: [
@@ -67,35 +67,38 @@ const messages: any = {
     ]
 };
 
-function getRandomInt(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+export default class WelcomeLeave extends Behaviour {
+    readonly meta = {
+        name: "welcome & leave",
+        description: "Greet and wave goodbye to users who join and leave"
+    };
 
-function getMessage(category: string, user: User): string {
-    return messages[category][getRandomInt(0, messages[category].length)].replace(/\{user\}/g, `<@${user.id}>`);
-}
-
-const sendGeneral = (text: string, titleSuffix: string, member: GuildMember, color = "GREEN") => {
-    Utils.send({
-        title: `Member ${titleSuffix}`,
-        color: color,
-        footer: `${member.guild.memberCount} members`,
-        user: member.user,
-        channel: member.guild.channels.get("286352649610199052"), // General
-        message: text
-    });
-};
-
-export default <BehaviourOptions>{
-    name: "Welcome & Leave",
-
-    enabled: (bot: Bot) => {
+    public enabled(bot: Bot): void {
         bot.client.on("guildMemberAdd", (member: GuildMember) => {
-            sendGeneral(`${getMessage("welcome", member.user)}\n\n*Make sure to read the <#458708940809699368>!*`, "Joined", member);
+            WelcomeLeave.sendGeneral(`${WelcomeLeave.getMessage("welcome", member.user)}\n\n*Make sure to read the <#458708940809699368>!*`, "Joined", member);
         });
 
         bot.client.on("guildMemberRemove", (member: GuildMember) => {
-            sendGeneral(getMessage("goodbye", member.user), "Left", member);
+            WelcomeLeave.sendGeneral(WelcomeLeave.getMessage("goodbye", member.user), "Left", member);
         });
     }
-};
+
+    private static sendGeneral(text: string, titleSuffix: string, member: GuildMember, color = "GREEN"): void {
+        Utils.send({
+            title: `Member ${titleSuffix}`,
+            color: color,
+            footer: `${member.guild.memberCount} members`,
+            user: member.user,
+            channel: member.guild.channels.get("286352649610199052"), // General
+            message: text
+        });
+    }
+
+    private static getRandomInt(min: number, max: number): number {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    private static getMessage(category: string, user: User): string {
+        return messages[category][WelcomeLeave.getRandomInt(0, messages[category].length)].replace(/\{user\}/g, `<@${user.id}>`);
+    }
+}
