@@ -5,13 +5,17 @@ import { Bot, CommandParser, Log, Behaviour } from "discord-anvil";
 export default class Protection extends Behaviour {
     readonly meta = {
         name: "protection",
-        description: "Auto protection"
+        description: "Unattended protection and moderation"
     };
 
-    enabled(bot: Bot, api: ConsumerAPIv2): void {
+    public enabled(bot: Bot, api: ConsumerAPIv2): void {
         bot.client.on("message", async (message: Message) => {
             if (message.author.id !== bot.owner) {
-                if (message.member.roles.has(api.roles.muted) && message.deletable) {
+                if (message.content.length > 300 && message.content.split(" ").length < 5 && message.deletable) {
+                    await message.reply("Your message is too large.");
+                    await message.delete();
+                }
+                else if (message.member.roles.has(api.roles.muted) && message.deletable) {
                     await message.delete();
                 }
                 else if (/https?:\/\/discord\.gg\/[a-zA-Z0-9]+/gi.test(message.content) || /https?:\/\/discordapp\.com\/invite\/[a-zA-Z0-9]+/gi.test(message.content)) {

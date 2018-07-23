@@ -3,7 +3,7 @@ import {Behaviour} from "discord-anvil";
 import {Bot} from "discord-anvil";
 import { ConsumerAPIv2 } from "../warden-api";
 
-export class SpecialChannels extends Behaviour {
+export default class SpecialChannels extends Behaviour {
     readonly meta = {
         name: "special channels",
         description: "Functionality for special guild channels"

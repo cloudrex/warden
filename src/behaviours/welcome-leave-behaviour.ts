@@ -63,7 +63,12 @@ const messages: any = {
         "{user} is gone forever",
         "{user} was never here",
         "{user} is no more",
-        "The {user} was a lie"
+        "The {user} was a lie",
+        "{user} has commit die",
+        "{user} slipt and never got up",
+        "{user} was imaginary all along",
+        "{user} was abducted by Bigfoot",
+        "{user} suddenly melted into ice cream"
     ]
 };
 
