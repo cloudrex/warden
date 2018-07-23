@@ -11,7 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "discord-anvil": "^2.1.7",
+        "discord-anvil": "^2.2.0",
         "discord.js": "^11.3.2",
         "typescript": "^2.9.2"
     },
