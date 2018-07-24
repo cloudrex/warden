@@ -1,4 +1,4 @@
-import WardenApi, {ConsumerAPIv2} from "./warden-api";
+import WardenApi, {WardenAPI} from "./warden-api";
 import {TextChannel} from "discord.js";
 import path from "path";
 import {Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider} from "discord-anvil";
@@ -43,14 +43,17 @@ async function start() {
 
         await store.reload();
 
-        const api: ConsumerAPIv2 = new ConsumerAPIv2({
+        const api: WardenAPI = new WardenAPI({
             guild: "286352649610199052",
             bot: bot,
 
             channels: {
                 suggestions: "458337067299242004",
                 modLog: "458794765308395521",
-                review: "464911303291699210"
+                review: "464911303291699210",
+                votes: "471067993158451210",
+                decisions: "471068005959467011",
+                changes: "471068072141389824"
             },
 
             roles: {

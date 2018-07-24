@@ -1,5 +1,5 @@
 import {Message, RichEmbed} from "discord.js";
-import {ConsumerAPIv2} from "../warden-api";
+import {WardenAPI} from "../warden-api";
 import { Command, CommandContext, Utils } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
@@ -15,7 +15,7 @@ export default class Snipe extends Command {
         this.restrict.specific = SpecificGroups.staff;
     }
 
-    public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
+    public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
         const lastDeletedChannelMessage: Message | null = api.getLastDeletedMessage(context.message.channel.id);
 
         if (lastDeletedChannelMessage) {

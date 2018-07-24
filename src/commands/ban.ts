@@ -1,5 +1,5 @@
 import {GuildMember} from "discord.js";
-import {ConsumerAPIv2} from "../warden-api";
+import {WardenAPI} from "../warden-api";
 import {Command, Permission, CommandContext} from "discord-anvil";
 
 export default class Ban extends Command {
@@ -21,7 +21,7 @@ export default class Ban extends Command {
         this.restrict.selfPermissions = [Permission.BanMembers];
     }
 
-    public executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
+    public executed(context: CommandContext, api: WardenAPI): Promise<void> {
         return new Promise((resolve) => {
             const member: GuildMember = context.arguments[0];
 

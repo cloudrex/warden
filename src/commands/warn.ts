@@ -1,4 +1,4 @@
-import {ConsumerAPIv2} from "../warden-api";
+import {WardenAPI} from "../warden-api";
 import { Command, ChatEnvironment, CommandContext, Utils } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
@@ -22,7 +22,7 @@ export default class Warn extends Command {
     }
 
     // TODO: Throws unknown message
-    public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> { // TODO: api type not working for some reason
+    public async executed(context: CommandContext, api: WardenAPI): Promise<void> { // TODO: api type not working for some reason
         const target = context.message.guild.member(Utils.resolveId(context.arguments[0].id));
 
         if (!target) {

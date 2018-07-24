@@ -1,6 +1,8 @@
-import {Collection, GuildMember, Message, Snowflake} from "discord.js";
-import WardenApi, {ConsumerAPIv2} from "../warden-api";
+import {Collection, GuildMember, Message, Snowflake, DMChannel} from "discord.js";
+import WardenApi, {WardenAPI} from "../warden-api";
 import { Bot, CommandParser, Log, Behaviour } from "discord-anvil";
+
+const muteLeavers: Array<Snowflake> = [];
 
 export default class Protection extends Behaviour {
     readonly meta = {
@@ -8,7 +10,7 @@ export default class Protection extends Behaviour {
         description: "Unattended protection and moderation"
     };
 
-    public enabled(bot: Bot, api: ConsumerAPIv2): void {
+    public enabled(bot: Bot, api: WardenAPI): void {
         bot.client.on("message", async (message: Message) => {
             if (message.author.id !== bot.owner) {
                 if (message.content.length > 300 && message.content.split(" ").length < 15 && message.deletable) {
@@ -30,7 +32,7 @@ export default class Protection extends Behaviour {
                 else {
                     const mentions: Collection<Snowflake, GuildMember> = message.mentions.members;
 
-                    if (mentions) {
+                    if (mentions && mentions.size > 0) {
                         const mentionedUsers: Array<GuildMember> = mentions.array();
 
                         if (mentionedUsers.length > 4 || mentionedUsers.length > 4 || mentionedUsers.length > 4) {
@@ -53,7 +55,7 @@ export default class Protection extends Behaviour {
 
                 // TODO: What about if it has been taken action against?
                 // TODO: Something around posting suspected violations giving uncaught missing permissions error
-                const suspectedViolation: string = ConsumerAPIv2.isMessageSuspicious(message);
+                const suspectedViolation: string = WardenAPI.isMessageSuspicious(message);
 
                 if (suspectedViolation !== "None") {
                     await api.flagMessage(message, suspectedViolation);
@@ -93,6 +95,23 @@ export default class Protection extends Behaviour {
             setTimeout(() => {
                 delete WardenApi.deletedMessages[message.channel.id];
             }, 1800000);
+        });
+
+        // Prevent members from role avoiding
+        bot.client.on("guildMemberRemove", (member: GuildMember) => {
+            if (member.roles.has(api.roles.muted)) {
+                muteLeavers.push(member.id);
+            }
+        });
+
+        bot.client.on("guildMemberAdd", async (member: GuildMember) => {
+            if (muteLeavers.includes(member.id)) {
+                const dm: DMChannel = await member.createDM();
+
+                dm.send("Attempting to avoid moderation by rejoining may result in a permanent ban.");
+            }
+
+            member.addRole(api.roles.muted, "Attempting to avoid moderation by rejoining");
         });
 
         if (bot.autoDeleteCommands) {

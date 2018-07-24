@@ -1,4 +1,4 @@
-import {ConsumerAPIv2} from "../warden-api";
+import {WardenAPI} from "../warden-api";
 import { Command, Permission, ChatEnvironment, CommandContext } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
@@ -24,7 +24,7 @@ export default class Mute extends Command {
         this.restrict.specific = SpecificGroups.staff;
     }
 
-    public async executed(context: CommandContext, api: ConsumerAPIv2): Promise<void> {
+    public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
         const target = context.arguments[0];
         const modLog = context.message.guild.channels.get("458794765308395521");
 

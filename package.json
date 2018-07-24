@@ -11,8 +11,11 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@types/knex": "^0.14.17",
         "discord-anvil": "^2.2.4",
         "discord.js": "^11.3.2",
+        "knex": "^0.15.2",
+        "sqlite3": "^4.0.2",
         "typescript": "^2.9.2"
     },
     "devDependencies": {

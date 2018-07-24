@@ -80,26 +80,32 @@ export interface ConsumerAPIChannels {
     readonly modLog: Snowflake;
     readonly suggestions: Snowflake;
     readonly review: Snowflake;
+    readonly votes: Snowflake;
+    readonly decisions: Snowflake;
+    readonly changes: Snowflake;
 }
 
 export interface ConsumerAPIResolvedChannels {
     readonly modLog: TextChannel;
     readonly suggestions: TextChannel;
     readonly review: TextChannel;
+    readonly votes: TextChannel;
+    readonly decisions: TextChannel;
+    readonly changes: TextChannel;
 }
 
 export interface ConsumerAPIRoles {
     readonly muted: Snowflake;
 }
 
-export interface ConsumerAPIv2Options {
+export interface WardenAPIOptions {
     readonly bot: Bot<any>;
     readonly guild: Snowflake;
     readonly roles: ConsumerAPIRoles;
     readonly channels: ConsumerAPIChannels;
 }
 
-export class ConsumerAPIv2 {
+export class WardenAPI {
     readonly unresolvedChannels: ConsumerAPIChannels;
     readonly roles: ConsumerAPIRoles;
 
@@ -110,7 +116,7 @@ export class ConsumerAPIv2 {
     private deletedMessages: any;
     private channels?: ConsumerAPIResolvedChannels;
 
-    constructor(options: ConsumerAPIv2Options) {
+    constructor(options: WardenAPIOptions) {
         this.bot = options.bot;
         this.guild = options.guild;
         this.roles = options.roles;
@@ -118,54 +124,54 @@ export class ConsumerAPIv2 {
         this.deletedMessages = [];
     }
 
-    setup(): void {
+    public setup(): void {
         this.channels = {
             modLog: this.getChannel(this.unresolvedChannels.modLog),
             suggestions: this.getChannel(this.unresolvedChannels.suggestions),
-            review: this.getChannel(this.unresolvedChannels.review)
+            review: this.getChannel(this.unresolvedChannels.review),
+            votes: this.getChannel(this.unresolvedChannels.votes),
+            decisions: this.getChannel(this.unresolvedChannels.decisions),
+            changes: this.getChannel(this.unresolvedChannels.changes)
         };
     }
 
-    getGuild(): Guild {
+    public getGuild(): Guild {
         const guild: Guild | undefined = this.bot.client.guilds.get(this.guild);
 
         if (!guild) {
-            // TODO: Rethrowing to avoid IDE error
-            Log.throw("[ConsumerAPIv2.getGuild] Expecting guild");
-
-            throw new Error("[ConsumerAPIv2.getGuild] Expecting guild");
+            throw new Error("[WardenAPI.getGuild] Expecting guild");
         }
 
         return guild;
     }
 
-    getChannel(id: Snowflake): TextChannel {
+    public getChannel(id: Snowflake): TextChannel {
         const channel = this.getGuild().channels.get(id);
 
         if (!channel) {
-            Log.throw("[ConsumerAPIv2.getChannel] Expecting channel");
+            Log.throw("[WardenAPI.getChannel] Expecting channel");
         }
         else if (!(channel instanceof TextChannel)) {
-            Log.throw("[ConsumerAPIv2.getChannel] Expecting channel type to be 'TextChannel'");
+            Log.throw("[WardenAPI.getChannel] Expecting channel type to be 'TextChannel'");
         }
 
         return <TextChannel>channel;
     }
 
-    getCase(): number {
+    public getCase(): number {
         // TODO
 
         return 0;
     }
 
-    async saveWarning(options: WarnOptionsv2): Promise<void> {
+    public async saveWarning(options: WarnOptionsv2): Promise<void> {
         if (!this.bot.dataStore) {
-            Log.error("[ConsumerAPIv2.addWarning] Expecting a data provider");
+            Log.error("[WardenAPI.addWarning] Expecting a data provider");
 
             return;
         }
         else if (!(this.bot.dataStore instanceof JsonProvider)) {
-            Log.error("[ConsumerAPIv2.addWarning] Expecting data provider to be of type 'JsonProvider'");
+            Log.error("[WardenAPI.addWarning] Expecting data provider to be of type 'JsonProvider'");
 
             return;
         }
@@ -182,20 +188,20 @@ export class ConsumerAPIv2 {
         await jsonStore.save();
     }
 
-    async warn(options: WarnOptionsv2): Promise<boolean> {
+    public async warn(options: WarnOptionsv2): Promise<boolean> {
         if (!this.channels) {
-            Log.error("[ConsumerAPI.warn] Expecting channels");
+            Log.error("[WardenAPI.warn] Expecting channels");
 
             return false;
         }
 
         if (!(this.channels.modLog instanceof TextChannel)) {
-            Log.error("[ConsumerAPI.warn] Expecting ModLog channel to be of type 'TextChannel'");
+            Log.error("[WardenAPI.warn] Expecting ModLog channel to be of type 'TextChannel'");
 
             return false;
         }
 
-        const caseNum: number = WardenApi.getCase();
+        const caseNum: number = WardenApiOld.getCase();
 
         this.channels.modLog.send(new RichEmbed()
             .setTitle(`Warn | Case #${caseNum}`)
@@ -220,9 +226,9 @@ export class ConsumerAPIv2 {
         return true;
     }
 
-    async addSuggestion(suggestion: string, author: GuildMember): Promise<boolean> {
+    public async addSuggestion(suggestion: string, author: GuildMember): Promise<boolean> {
         if (!this.channels) {
-            Log.throw("[ConsumerAPIv2.addSuggestion] Consumer API is not setup");
+            Log.throw("[WardenAPI.addSuggestion] Consumer API is not setup");
 
             return false;
         }
@@ -240,9 +246,9 @@ export class ConsumerAPIv2 {
         return false;
     }
 
-    async reportCase(options: CaseOptions): Promise<void> {
+    public async reportCase(options: CaseOptions): Promise<void> {
         if (!this.channels) {
-            Log.throw("[ConsumerAPIv2.reportCase] Consumer API is not setup");
+            Log.throw("[WardenAPI.reportCase] Consumer API is not setup");
 
             return;
         }
@@ -266,7 +272,7 @@ export class ConsumerAPIv2 {
     }
 
     // TODO: Using ConsumerAPI
-    static isMessageSuspicious(message: Message): string {
+    public static isMessageSuspicious(message: Message): string {
         if (message.content.length > 500) {
             return SuspectedViolation.Long;
         }
@@ -276,10 +282,10 @@ export class ConsumerAPIv2 {
         else if (!message.author.bot && message.content.split("`").length < 6 && message.content.split("\n").length > 2) {
             return SuspectedViolation.MultipleNewLines;
         }
-        else if (WardenApi.countBadWords(message.content) > 2) {
+        else if (WardenApiOld.countBadWords(message.content) > 2) {
             return SuspectedViolation.ExcessiveProfanity;
         }
-        else if (WardenApi.containsRacialSlurs(message.content)) {
+        else if (WardenApiOld.containsRacialSlurs(message.content)) {
             return SuspectedViolation.RacialSlurs;
         }
 
@@ -288,14 +294,14 @@ export class ConsumerAPIv2 {
         return SuspectedViolation.None;
     }
 
-    async flagMessage(message: Message, suspectedViolation: string): Promise<void> {
+    public async flagMessage(message: Message, suspectedViolation: string): Promise<void> {
         if (!this.channels) {
-            Log.error("[ConsumerAPI.flagMessage] Expecting channels");
+            Log.error("[WardenAPI.flagMessage] Expecting channels");
 
             return;
         }
         else if (!this.channels.review) {
-            Log.error("[ConsumerAPI.flagMessage] Review channel does not exist, failed to flag message");
+            Log.error("[WardenAPI.flagMessage] Review channel does not exist, failed to flag message");
 
             return;
         }
@@ -311,23 +317,23 @@ export class ConsumerAPIv2 {
         return;
     }
 
-    getLastDeletedMessage(channelId: Snowflake): Message | null {
-        if (WardenApi.deletedMessages[channelId]) {
-            return WardenApi.deletedMessages[channelId];
+    public getLastDeletedMessage(channelId: Snowflake): Message | null {
+        if (WardenApiOld.deletedMessages[channelId]) {
+            return WardenApiOld.deletedMessages[channelId];
         }
 
         return null;
     }
 }
 
-export default abstract class WardenApi {
+export default abstract class WardenApiOld {
     static deletedMessages: any = [];
     static store: JsonProvider;
     static caseCounter: number;
     static modLogChannel: TextChannel;
 
-    static async reportCase(options: CaseOptions): Promise<void> {
-        const caseNum = WardenApi.getCase();
+    public static async reportCase(options: CaseOptions): Promise<void> {
+        const caseNum = WardenApiOld.getCase();
 
         const embed = new RichEmbed()
             .setColor(options.color)
@@ -342,17 +348,17 @@ export default abstract class WardenApi {
             embed.setThumbnail(options.evidence);
         }
 
-        WardenApi.modLogChannel.send(embed);
+        WardenApiOld.modLogChannel.send(embed);
     }
 
-    static async warn(options: WarnOptions): Promise<boolean> {
+    public static async warn(options: WarnOptions): Promise<boolean> {
         if (!(options.channel instanceof TextChannel)) {
             Log.error("[ConsumerAPI.warn] Expecting channel to be of type 'TextChannel'");
 
             return false;
         }
 
-        const caseNum: number = WardenApi.getCase();
+        const caseNum: number = WardenApiOld.getCase();
 
         options.channel.send(new RichEmbed()
             .setTitle(`Warn | Case #${caseNum}`)
@@ -372,12 +378,12 @@ export default abstract class WardenApi {
             await options.message.delete();
         }
 
-        WardenApi.addWarning(options);
+        WardenApiOld.addWarning(options);
 
         return true;
     }
 
-    static async addWarning(options: WarnOptions): Promise<void> {
+    public static async addWarning(options: WarnOptions): Promise<void> {
         if (!options.dataProvider) {
             Log.error("[ConsumerAPI.addWarning] Expecting a data provider");
 
@@ -401,10 +407,10 @@ export default abstract class WardenApi {
         await jsonStore.save();
     }
 
-    static async mute(options: MuteOptions): Promise<void> {
+    public static async mute(options: MuteOptions): Promise<void> {
         await options.user.addRole(options.user.guild.roles.find("name", "Muted"));
 
-        const caseNum: number = WardenApi.getCase();
+        const caseNum: number = WardenApiOld.getCase();
 
         options.channel.send(new RichEmbed()
             .setTitle(`Mute | Case #${caseNum}`)
@@ -421,19 +427,19 @@ export default abstract class WardenApi {
             .setTitle(`Case #${caseNum}`));
     }
 
-    static getCase(): number {
-        WardenApi.caseCounter++;
+    public static getCase(): number {
+        WardenApiOld.caseCounter++;
 
-        WardenApi.store.set("case_counter", WardenApi.caseCounter);
+        WardenApiOld.store.set("case_counter", WardenApiOld.caseCounter);
 
-        return WardenApi.caseCounter - 1;
+        return WardenApiOld.caseCounter - 1;
     }
 
-    static getRandomInt(min: number, max: number): number {
+    public static getRandomInt(min: number, max: number): number {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    static countBadWords(message: string): number {
+    public static countBadWords(message: string): number {
         let count = 0;
 
         for (let i = 0; i < badWords.length; i++) {
@@ -447,7 +453,7 @@ export default abstract class WardenApi {
         return count;
     }
 
-    static containsRacialSlurs(message: string): boolean {
+    public static containsRacialSlurs(message: string): boolean {
         for (let i = 0; i < racialSlurs.length; i++) {
             if (message.toLowerCase().includes(racialSlurs[i])) {
                 return true;
