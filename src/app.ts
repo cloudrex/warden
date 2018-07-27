@@ -2,6 +2,7 @@ import WardenApi, {WardenAPI} from "./warden-api";
 import {TextChannel} from "discord.js";
 import path from "path";
 import {Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider} from "discord-anvil";
+import Database from "./database/database";
 
 const baseDir = "./src";
 
@@ -22,7 +23,7 @@ const settings = new Settings({
 async function start() {
     const userMentionRegex = /(^[0-9]{17,18}$|^<@!?[0-9]{17,18}>$)/;
 
-    const bot: Bot<any> = new Bot<any>({
+    const bot: Bot = new Bot({
         argumentTypes: {
             user: userMentionRegex,
             role: /(^[0-9]{18}$|^<&[0-9]{18}>$)/,
@@ -33,9 +34,7 @@ async function start() {
         settings: settings,
         authStore: new JsonAuthStore(path.resolve(path.join(baseDir, "auth/schema.json")), path.resolve(path.join(baseDir, "auth/store.json"))),
         dataStore: new JsonProvider(path.resolve(path.join(__dirname, "data.json"))),
-        autoDeleteCommands: false,
-        owner: "285578743324606482",
-        updateOnMessageEdit: true
+        owner: "285578743324606482"
     });
 
     if (bot.dataStore) {
@@ -45,6 +44,7 @@ async function start() {
 
         const api: WardenAPI = new WardenAPI({
             guild: "286352649610199052",
+            databasePath: "warden.db",
             bot: bot,
 
             channels: {
@@ -80,11 +80,11 @@ async function start() {
                 WardenApi.modLogChannel = modLogChannel;
             }
             else {
-                Log.error("[Consumer.start] The ModLog channel was not found");
+                Log.error("[:Consumer.start] The ModLog channel was not found");
             }
         }
         else {
-            Log.error("[Consumer.start] The Gaming Corner guild was not found");
+            Log.error("[:Consumer.start] The Gaming Corner guild was not found");
         }
     }
 }

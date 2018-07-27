@@ -1,6 +1,7 @@
 import {StoredWarning} from "./commands/warnings";
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
 import { DataProvider, Bot, Log, JsonProvider } from "discord-anvil";
+import Database from "./database/database";
 
 const badWords = [
     "asshole",
@@ -99,17 +100,19 @@ export interface ConsumerAPIRoles {
 }
 
 export interface WardenAPIOptions {
-    readonly bot: Bot<any>;
+    readonly bot: Bot;
+    readonly databasePath: string;
     readonly guild: Snowflake;
     readonly roles: ConsumerAPIRoles;
     readonly channels: ConsumerAPIChannels;
 }
 
 export class WardenAPI {
-    readonly unresolvedChannels: ConsumerAPIChannels;
-    readonly roles: ConsumerAPIRoles;
+    public readonly unresolvedChannels: ConsumerAPIChannels;
+    public readonly roles: ConsumerAPIRoles;
+    public readonly db: Database;
 
-    private readonly bot: Bot<any>;
+    private readonly bot: Bot;
     private readonly guild: Snowflake;
 
     // TODO: Type
@@ -117,6 +120,7 @@ export class WardenAPI {
     private channels?: ConsumerAPIResolvedChannels;
 
     constructor(options: WardenAPIOptions) {
+        this.db = new Database(options.databasePath);
         this.bot = options.bot;
         this.guild = options.guild;
         this.roles = options.roles;

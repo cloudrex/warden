@@ -12,6 +12,17 @@ export default class Protection extends Behaviour {
 
     public enabled(bot: Bot, api: WardenAPI): void {
         bot.client.on("message", async (message: Message) => {
+            // Log the message into the database
+            api.db.messages.insert({
+                author: message.author.id,
+                authorTag: message.author.tag,
+                channel: message.channel.id,
+                deleted: false,
+                id: message.id,
+                text: message.content,
+                time: message.createdTimestamp
+            });
+
             if (message.author.id !== bot.owner) {
                 if (message.content.length > 300 && message.content.split(" ").length < 15 && message.deletable) {
                     await message.reply("Your message is too large.");
@@ -109,12 +120,11 @@ export default class Protection extends Behaviour {
                 const dm: DMChannel = await member.createDM();
 
                 dm.send("Attempting to avoid moderation by rejoining may result in a permanent ban.");
+                member.addRole(api.roles.muted, "Attempting to avoid moderation by rejoining");
             }
-
-            member.addRole(api.roles.muted, "Attempting to avoid moderation by rejoining");
         });
 
-        if (bot.autoDeleteCommands) {
+        if (bot.options.autoDeleteCommands) {
             Log.warn("The autoDeleteCommands option is currently incompatible with the snipe command");
         }
     }
