@@ -1,4 +1,5 @@
 import { Command, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class ClearWarns extends Command {
     readonly meta = {
@@ -9,7 +10,7 @@ export default class ClearWarns extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = ["@285578743324606482"]; // Owner
+        this.restrict.specific = SpecificGroups.owner;
     }
 
     public executed(context: CommandContext): void {

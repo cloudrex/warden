@@ -1,6 +1,14 @@
 import {WardenAPI} from "../warden-api";
-import { Command, ChatEnvironment, CommandContext, Utils } from "discord-anvil";
+import { Command, ChatEnvironment, CommandContext, Utils, CommandArgument } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import { GuildMember } from "discord.js";
+
+interface WarnArgs {
+    readonly member: GuildMember;
+    readonly reason: string;
+    readonly evidence?: string;
+}
 
 export default class Warn extends Command {
     readonly meta = {
@@ -8,11 +16,25 @@ export default class Warn extends Command {
         description: "Warn an user"
     };
 
-    readonly args = {
-        user: "!:user",
-        reason: "!string",
-        evidence: "string"
-    };
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "member",
+            description: "The member to warn",
+            type: "member",
+            required: true
+        },
+        {
+            name: "reason",
+            description: "The reason for this moderation action",
+            type: PrimitiveArgumentType.String,
+            required: true
+        },
+        {
+            name: "evidence",
+            description: "The evidence of the reason",
+            type: PrimitiveArgumentType.String
+        }
+    ];
 
     constructor() {
         super();
@@ -22,20 +44,13 @@ export default class Warn extends Command {
     }
 
     // TODO: Throws unknown message
-    public async executed(context: CommandContext, api: WardenAPI): Promise<void> { // TODO: api type not working for some reason
-        const target = context.message.guild.member(Utils.resolveId(context.arguments[0].id));
-
-        if (!target) {
-            context.fail("Guild member not found");
-
-            return;
-        }
-        else if (context.sender.id === target.user.id) {
+    public async executed(context: CommandContext, args: WarnArgs, api: WardenAPI): Promise<void> { // TODO: api type not working for some reason
+        if (context.sender.id === args.member.id) {
             context.fail("You can't warn yourself");
 
             return;
         }
-        else if (target.user.bot) {
+        else if (args.member.user.bot) {
             context.fail("You can't warn a bot");
 
             return;
@@ -43,9 +58,9 @@ export default class Warn extends Command {
 
         await api.warn({
             moderator: context.sender,
-            reason: context.arguments[1],
-            user: target,
-            evidence: context.arguments.length === 3 ? context.arguments[2] : undefined,
+            reason: args.reason,
+            user: args.member,
+            evidence: args.evidence,
             message: context.message
         });
     }

@@ -1,6 +1,13 @@
 import {GuildMember} from "discord.js";
 import {WardenAPI} from "../warden-api";
-import {Command, Permission, CommandContext} from "discord-anvil";
+import {Command, Permission, CommandContext, CommandArgument} from "discord-anvil";
+import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+
+export interface BanArgs {
+    readonly member: GuildMember;
+    readonly reason: string;
+    readonly evidence?: string;
+}
 
 export default class Ban extends Command {
     readonly meta = {
@@ -8,11 +15,25 @@ export default class Ban extends Command {
         description: "Ban a member"
     };
 
-    readonly args = {
-        user: "!:member",
-        reason: "!string",
-        evidence: "string"
-    };
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "member",
+            description: "The member to ban",
+            type: "member",
+            required: true
+        },
+        {
+            name: "reason",
+            description: "The reason for this moderation action",
+            type: PrimitiveArgumentType.String,
+            required: true
+        },
+        {
+            name: "evidence",
+            description: "Evidence for the reason",
+            type: PrimitiveArgumentType.String
+        }
+    ];
 
     constructor() {
         super();
@@ -21,33 +42,31 @@ export default class Ban extends Command {
         this.restrict.selfPermissions = [Permission.BanMembers];
     }
 
-    public executed(context: CommandContext, api: WardenAPI): Promise<void> {
+    public executed(context: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
         return new Promise((resolve) => {
-            const member: GuildMember = context.arguments[0];
-
-            if (member.id === context.sender.id) {
+            if (args.member.id === context.sender.id) {
                 context.fail("You can't ban yourself.");
 
                 return;
             }
-            else if (!member.bannable) {
+            else if (!args.member.bannable) {
                 context.fail("Unable to ban that person.");
 
                 return;
             }
 
-            member.ban({
+            args.member.ban({
                 days: 1,
-                reason: context.arguments[1]
+                reason: args.reason
             }).then(async () => {
                 // TODO: Does it actually await this?
                 await api.reportCase({
                     moderator: context.sender,
                     color: "RED",
-                    reason: context.arguments[1],
-                    evidence: context.arguments.length === 3 ? context.arguments[2] : undefined,
+                    reason: args.reason,
+                    evidence: args.evidence,
                     title: "Ban",
-                    member: member
+                    member: args.member
                 });
 
                 resolve();

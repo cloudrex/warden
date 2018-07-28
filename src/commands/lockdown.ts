@@ -1,5 +1,6 @@
 import {Role} from "discord.js";
 import { Command, Permission, CommandContext } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Lockdown extends Command {
     readonly meta = {
@@ -10,7 +11,7 @@ export default class Lockdown extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = ["@285578743324606482"]; // Owner
+        this.restrict.specific = SpecificGroups.owner;
         this.restrict.selfPermissions = [Permission.ManageRoles];
     }
 

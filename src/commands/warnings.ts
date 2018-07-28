@@ -1,5 +1,5 @@
 import {GuildMember, Snowflake} from "discord.js";
-import { Command, ChatEnvironment, CommandContext, DataProvider, Log, JsonProvider, Utils } from "discord-anvil";
+import { Command, ChatEnvironment, CommandContext, DataProvider, Log, JsonProvider, Utils, CommandArgument } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export interface StoredWarning {
@@ -8,15 +8,24 @@ export interface StoredWarning {
     readonly time: number;
 }
 
+interface WarningsArgs {
+    readonly member: GuildMember;
+}
+
 export default class Warnings extends Command {
     readonly meta = {
         name: "warnings",
         description: "View the warnings of a member",
     };
 
-    readonly args = {
-        member: "!:member"
-    };
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "member",
+            type: "member",
+            description: "The member to inspect",
+            required: true
+        }
+    ];
 
     constructor() {
         super();
@@ -25,9 +34,7 @@ export default class Warnings extends Command {
         this.restrict.specific = SpecificGroups.staff;
     }
 
-    public executed(context: CommandContext): void {
-        const member: GuildMember = context.arguments[0];
-
+    public executed(context: CommandContext, args: WarningsArgs): void {
         let dataProvider: DataProvider | undefined = context.bot.dataStore;
 
         if (!dataProvider) {
@@ -43,7 +50,7 @@ export default class Warnings extends Command {
             return;
         }
 
-        const warnings: Array<StoredWarning> = dataProvider.get(`warnings.u${member.id}`);
+        const warnings: Array<StoredWarning> = dataProvider.get(`warnings.u${args.member.id}`);
 
         if (!warnings) {
             context.ok("This user has no warnings.");

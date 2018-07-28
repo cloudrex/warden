@@ -1,5 +1,10 @@
 import {Role} from "discord.js";
-import { Command, Permission, CommandContext } from "discord-anvil";
+import { Command, Permission, CommandContext, CommandArgument, ChatEnvironment } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
+
+export interface MentionableArgs {
+    readonly role: Role;
+}
 
 export default class Mentionable extends Command {
     readonly meta = {
@@ -7,34 +12,32 @@ export default class Mentionable extends Command {
         description: "Toggle a role mentionable"
     };
 
-    readonly args = {
-        role: "!string"
-    };
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "role",
+            description: "The role to toggle mentionable",
+            type: "role",
+            required: true
+        }
+    ];
 
     constructor() {
         super();
 
-        this.restrict.specific = ["@285578743324606482"]; // Owner
+        this.restrict.environment = ChatEnvironment.Guild;
+        this.restrict.specific = SpecificGroups.owner;
         this.restrict.selfPermissions = [Permission.ManageRoles];
     }
 
     // TODO: Add support by id
-    public async executed(context: CommandContext): Promise<void> {
-        const role: Role | undefined = context.message.guild.roles.find("name", context.arguments[0]);
+    public async executed(context: CommandContext, args: MentionableArgs): Promise<void> {
+        await args.role.setMentionable(!args.role.mentionable);
 
-        if (!role) {
-            await context.fail("Role not found.");
-
-            return;
-        }
-
-        await role.setMentionable(!role.mentionable);
-
-        if (role.mentionable) {
-            await context.ok(`Role <@${role.id}> is now mentionable.`);
+        if (args.role.mentionable) {
+            await context.ok(`Role <@${args.role.id}> is now mentionable.`);
         }
         else {
-            await context.ok(`Role <@${role.id}> is no longer mentionable.`);
+            await context.ok(`Role <@${args.role.id}> is no longer mentionable.`);
         }
     }
 };

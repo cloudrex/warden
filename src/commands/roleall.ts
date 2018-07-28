@@ -1,4 +1,4 @@
-import { Command, CommandContext, Permission } from "discord-anvil";
+import { Command, CommandContext, Permission, ChatEnvironment } from "discord-anvil";
 import { GuildMember } from "discord.js";
 
 export default class RoleAll extends Command {
@@ -14,6 +14,7 @@ export default class RoleAll extends Command {
     constructor() {
         super();
 
+        this.restrict.environment = ChatEnvironment.Guild;
         this.restrict.issuerPermissions = [Permission.ManageGuild];
         this.restrict.selfPermissions = [Permission.ManageRoles];
         this.restrict.cooldown = 60;

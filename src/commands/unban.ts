@@ -1,6 +1,12 @@
-import {GuildMember} from "discord.js";
-import { Command, Permission, CommandContext } from "discord-anvil";
+import {GuildMember, Snowflake} from "discord.js";
+import { Command, Permission, CommandContext, CommandArgument, ChatEnvironment } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+
+interface UnbanArgs {
+    readonly user: Snowflake;
+    readonly reason: string;
+}
 
 export default class Unban extends Command {
     readonly meta = {
@@ -8,27 +14,37 @@ export default class Unban extends Command {
         description: "Unban a user"
     };
 
-    readonly args = {
-        user: "!:user",
-        reason: "!string"
-    };
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "user",
+            type: "snowflake",
+            description: "The ID (Snowflake) of the user to unban",
+            required: true
+        },
+        {
+            name: "reason",
+            description: "The reason for this moderation action",
+            type: PrimitiveArgumentType.String,
+            required: true
+        }
+    ];
 
     constructor() {
         super();
 
+        this.restrict.environment = ChatEnvironment.Guild;
         this.restrict.selfPermissions = [Permission.BanMembers];
         this.restrict.specific = SpecificGroups.owner;
     }
 
-    public async executed(context: CommandContext): Promise<void> {
-        const member: GuildMember = context.arguments[0];
-
-        if (member.id === context.sender.id) {
+    // TODO: Untested
+    public async executed(context: CommandContext, args: UnbanArgs): Promise<void> {
+        if (args.user === context.sender.id) {
             context.fail("You can't unban yourself.");
 
             return;
         }
 
-        await context.message.guild.unban(context.arguments[0].id);
+        await context.message.guild.unban(args.user);
     }
 };

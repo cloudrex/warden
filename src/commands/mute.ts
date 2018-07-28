@@ -1,6 +1,14 @@
 import {WardenAPI} from "../warden-api";
-import { Command, Permission, ChatEnvironment, CommandContext } from "discord-anvil";
+import { Command, Permission, ChatEnvironment, CommandContext, CommandArgument } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import { GuildMember } from "discord.js";
+import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+
+export interface MuteArgs {
+    readonly member: GuildMember;
+    readonly reason: string;
+    readonly evidence?: string;
+}
 
 export default class Mute extends Command {
     readonly meta = {
@@ -8,12 +16,25 @@ export default class Mute extends Command {
         description: "Mute a user"
     };
 
-    readonly args = {
-        user: "!:member",
-        reason: "!string",
-        evidence: "string"
-    };
-
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "member",
+            description: "The member to mute",
+            type: "member",
+            required: true
+        },
+        {
+            name: "reason",
+            description: "The reason for this moderation action",
+            type: PrimitiveArgumentType.String,
+            required: true
+        },
+        {
+            name: "evidence",
+            description: "The evidence of the reason",
+            type: PrimitiveArgumentType.String
+        }
+    ];
 
     constructor() {
         super();
@@ -24,27 +45,14 @@ export default class Mute extends Command {
         this.restrict.specific = SpecificGroups.staff;
     }
 
-    public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
-        const target = context.arguments[0];
-        const modLog = context.message.guild.channels.get("458794765308395521");
-
-        if (!target) {
-            context.fail("Guild member not found");
-
-            return;
-        }
-        else if (!modLog) {
-            context.fail("ModLog channel not found");
-
-            return;
-        }
-
+    // TODO: Where is it adding the muted role?
+    public async executed(context: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {
         await api.reportCase({
-            member: target,
+            member: args.member,
             title: "Mute",
-            evidence: context.arguments.length === 3 ? context.arguments[2] : undefined,
+            evidence: args.evidence,
             moderator: context.message.author,
-            reason: context.arguments[1],
+            reason: args.reason,
             color: "GOLD"
         });
     }

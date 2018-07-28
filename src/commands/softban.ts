@@ -1,6 +1,14 @@
 import {GuildMember} from "discord.js";
-import { Command, Permission, CommandContext } from "discord-anvil";
+import { Command, Permission, CommandContext, CommandArgument } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import { WardenAPI } from "../warden-api";
+
+interface SoftbanArgs {
+    readonly member: GuildMember;
+    readonly reason: string;
+    readonly evidence?: string;
+}
 
 export default class Softban extends Command {
     readonly meta = {
@@ -8,10 +16,25 @@ export default class Softban extends Command {
         description: "Softban a user"
     };
 
-    readonly args = {
-        user: "!:member",
-        reason: "!string"
-    };
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "member",
+            type: "member",
+            description: "The member to softban",
+            required: true
+        },
+        {
+            name: "reason",
+            description: "The reason for this moderation action",
+            type: PrimitiveArgumentType.String,
+            required: true
+        },
+        {
+            name: "evidence",
+            description: "The evidence of the reason",
+            type: PrimitiveArgumentType.String
+        }
+    ];
 
     constructor() {
         super();
@@ -20,33 +43,31 @@ export default class Softban extends Command {
         this.restrict.selfPermissions = [Permission.BanMembers];
     }
 
-    public executed(context: CommandContext, api: any): Promise<void> {
+    public executed(context: CommandContext, args: SoftbanArgs, api: WardenAPI): Promise<void> {
         return new Promise(async (resolve) => {
-            const member: GuildMember = context.arguments[0];
-
-            if (member.id === context.sender.id) {
+            if (args.member.id === context.sender.id) {
                 context.fail("You can't ban yourself.");
 
                 return;
             }
-            else if (!member.bannable) {
+            else if (!args.member.bannable) {
                 context.fail("Unable to ban that person.");
 
                 return;
             }
 
-            member.ban({
+            args.member.ban({
                 days: 1,
-                reason: context.arguments[1]
+                reason: args.reason
             }).then(async () => {
                 // TODO: Does it actually await this?
                 await api.reportCase({
                     moderator: context.sender,
                     color: "RED",
-                    reason: context.arguments[1],
-                    evidence: context.arguments.length === 3 ? context.arguments[2] : undefined,
+                    reason: args.reason,
+                    evidence: args.evidence,
                     title: "Ban",
-                    member: member
+                    member: args.member
                 });
 
                 resolve();
@@ -55,7 +76,7 @@ export default class Softban extends Command {
                 await context.fail(`Operation failed. (${error.message})`);
             });
 
-            await context.message.guild.unban(member.id, "Softban");
+            await context.message.guild.unban(args.member.id, "Softban");
             resolve();
         });
     }

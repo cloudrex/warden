@@ -1,6 +1,7 @@
 import {WardenAPI} from "../warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
 import { Command, CommandContext, SetupHelper, SetupHelperResult } from "discord-anvil";
+import SpecificGroups from "../specific-groups";
 
 export default class Embed extends Command {
     readonly meta = {
@@ -11,7 +12,7 @@ export default class Embed extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = ["@285578743324606482"]; // Owner
+        this.restrict.specific = SpecificGroups.owner;
     }
 
     public async executed(context: CommandContext, api: WardenAPI): Promise<void> {

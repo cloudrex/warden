@@ -1,4 +1,10 @@
-import { CommandContext, Command } from "discord-anvil";
+import { CommandContext, Command, CommandArgument, ChatEnvironment } from "discord-anvil";
+import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import SpecificGroups from "../specific-groups";
+
+export interface PurgeArgs {
+    readonly amount: number;
+}
 
 export default class Purge extends Command {
     readonly meta = {
@@ -6,34 +12,34 @@ export default class Purge extends Command {
         description: "Delete messages in bulk"
     };
 
-    readonly args = {
-        amount: "!number"
-    };
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "amount",
+            type: PrimitiveArgumentType.NonZeroWholeNumber,
+            description: "The amount of messages to purge",
+            required: true
+        }
+    ];
 
     constructor() {
         super();
 
-        this.restrict.specific = ["@285578743324606482"]; // Owner
+        this.restrict.environment = ChatEnvironment.Guild;
+        this.restrict.specific = SpecificGroups.owner;
     }
 
     // TODO: Return type, should be void
-    public async executed(context: CommandContext): Promise<any> {
+    public async executed(context: CommandContext, args: PurgeArgs): Promise<any> {
         return new Promise((resolve) => {
-            if (context.arguments[0] > 20) {
+            if (args.amount > 20) {
                 context.fail("Amount must be lower than 20.");
-                resolve();
-
-                return;
-            }
-            else if (context.arguments[0] < 1) {
-                context.fail("Amount must be 1 or higher.");
                 resolve();
 
                 return;
             }
 
             // TODO: Fix incompatibility with autoDeleteCommand? Something's wrong
-            context.message.channel.bulkDelete(context.arguments[0]).then(() => {
+            context.message.channel.bulkDelete(args.amount).then(() => {
                 resolve();
             }).catch((error: Error) => {
                 context.fail(`Operation failed. (${error.message})`, false);

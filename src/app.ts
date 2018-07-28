@@ -1,7 +1,7 @@
 import WardenApi, {WardenAPI} from "./warden-api";
 import {TextChannel} from "discord.js";
 import path from "path";
-import {Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider} from "discord-anvil";
+import {Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider, UserDefinedArgType} from "discord-anvil";
 import Database from "./database/database";
 
 const baseDir = "./src";
@@ -24,12 +24,27 @@ async function start() {
     const userMentionRegex = /(^[0-9]{17,18}$|^<@!?[0-9]{17,18}>$)/;
 
     const bot: Bot = new Bot({
-        argumentTypes: {
-            user: userMentionRegex,
-            role: /(^[0-9]{18}$|^<&[0-9]{18}>$)/,
-            channel: /(^[0-9]{18}$|^<#[0-9]{18}>$)/,
-            member: userMentionRegex
-        },
+        argumentTypes: <Array<UserDefinedArgType>>[
+            {
+                name: "user",
+                check: userMentionRegex,
+            },
+            // TODO: Should check if it exists in guild
+            {
+                name: "role",
+                check: /(^[0-9]{18}$|^<&[0-9]{18}>$)/
+            },
+            // TODO: Should check if it exists in guild
+            {
+                name: "channel",
+                check: /(^[0-9]{18}$|^<#[0-9]{18}>$)/
+            },
+            // TODO: Should check if it exists in guild
+            {
+                name: "member",
+                check: userMentionRegex
+            }
+        ],
 
         settings: settings,
         authStore: new JsonAuthStore(path.resolve(path.join(baseDir, "auth/schema.json")), path.resolve(path.join(baseDir, "auth/store.json"))),

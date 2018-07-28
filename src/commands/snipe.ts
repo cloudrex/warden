@@ -1,6 +1,6 @@
 import {Message, RichEmbed} from "discord.js";
 import {WardenAPI} from "../warden-api";
-import { Command, CommandContext, Utils } from "discord-anvil";
+import { Command, CommandContext, Utils, ChatEnvironment } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export default class Snipe extends Command {
@@ -12,6 +12,7 @@ export default class Snipe extends Command {
     constructor() {
         super();
 
+        this.restrict.environment = ChatEnvironment.Guild;
         this.restrict.specific = SpecificGroups.staff;
     }
 
