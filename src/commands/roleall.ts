@@ -1,4 +1,5 @@
-import { Command, CommandContext } from "discord-anvil";
+import { Command, CommandContext, Permission } from "discord-anvil";
+import { GuildMember } from "discord.js";
 
 export default class RoleAll extends Command {
     readonly meta = {
@@ -10,7 +11,23 @@ export default class RoleAll extends Command {
         role: "!string"
     };
 
+    constructor() {
+        super();
+
+        this.restrict.issuerPermissions = [Permission.ManageGuild];
+        this.restrict.selfPermissions = [Permission.ManageRoles];
+        this.restrict.cooldown = 60;
+    }
+
     public executed(context: CommandContext): void {
+        // const role: Role = context.arguments[0];
+
         // TODO
+
+        /* const members: Array<GuildMember> = context.message.guild.members.array();
+
+        for (let i: number = 0; i < members.length; i++) {
+            members[i].addRole()
+        } */
     }
 };

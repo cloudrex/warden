@@ -40,24 +40,24 @@ export default class Stats extends Command {
             today: await api.db.getMultiple<DatabaseMessage>(api.db.getConnection()("messages")
                 .where("time", ">", Date.now() - 86400000)),
 
-            yesturday: await api.db.getMultiple<DatabaseMessage>(api.db.getConnection()("messages")
+            yesterday: await api.db.getMultiple<DatabaseMessage>(api.db.getConnection()("messages")
                 .where("time", "<", Date.now() - 86400000)
                 .andWhere("time", ">", Date.now() - 172800000))
         };
 
-        // Always before yesturday
+        // Always before yesterday
         const days = [
             getDay(1),
             getDay(2),
         ];
 
         const messagesData: any = {
-            labels: ["Today", "Yesturday", ...days],
+            labels: ["Today", "Yesterday", ...days],
 
             datasets: [
                 {
                     label: "Messages",
-                    data: [extra.today.length, extra.yesturday.length],
+                    data: [extra.today.length, extra.yesterday.length],
 
                     backgroundColor: [
                         "rgba(255, 99, 132, 0.2)",
