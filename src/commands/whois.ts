@@ -41,13 +41,13 @@ export default class Whois extends Command {
             .setFooter(`Requested by ${context.sender.username}`, context.sender.avatarURL)
             .setThumbnail(args.member.user.avatarURL)
             .addField("User", `<@${args.member.user.id}>`)
-            .addField("Tag", args.member.user.tag)
-            .addField("Nickname", args.member.nickname ? args.member.nickname : "*None*")
+            .addField("Tag", args.member.user.tag || "*Unknown*")
+            .addField("Nickname", args.member.nickname ||  "*None*")
             .addField("Type", args.member.user.bot ? ":robot: Bot" : ":raising_hand: Human")
             .addField("Joined Server", Utils.timeAgo(args.member.joinedTimestamp))
             .addField("Account Created", Utils.timeAgo(args.member.user.createdTimestamp))
             .addField("Last Message", args.member.lastMessage ? args.member.lastMessage.content : "*None*")
-            .addField(`Roles [${roles.length - 1}]`, finalRoles)
+            .addField(roles.length - 1 > 0 ? `Roles [${roles.length - 1}]` : "Roles", finalRoles || "*None*")
             .addField("User ID", args.member.id));
     }
 };

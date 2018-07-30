@@ -1,8 +1,8 @@
 import WardenApi, {WardenAPI} from "./warden-api";
-import {TextChannel} from "discord.js";
+import {TextChannel, Message, GuildMember, Snowflake} from "discord.js";
 import path from "path";
-import {Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider, UserDefinedArgType} from "discord-anvil";
-import Database from "./database/database";
+import {Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider, UserDefinedArgType, ArgumentTypeChecker, Utils} from "discord-anvil";
+import { CommandArgumentResolver } from "discord-anvil/dist/commands/command";
 
 const baseDir = "./src";
 
@@ -42,7 +42,20 @@ async function start() {
             // TODO: Should check if it exists in guild
             {
                 name: "member",
-                check: userMentionRegex
+
+                check: (argument: any, message: Message): boolean => {
+                    return message.guild.members.has(Utils.resolveId(argument));
+                }
+            }
+        ],
+
+        argumentResolvers: <Array<CommandArgumentResolver>>[
+            {
+                name: "member",
+
+                resolve: (argument: string, message: Message): GuildMember => {
+                    return message.guild.member(Utils.resolveId(argument));
+                }
             }
         ],
 

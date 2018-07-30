@@ -1696,3 +1696,441 @@
 [2018-07-28 20:38:05] <DANG> There was an error while executing the 'purge' command: The messages must be an Array, Collection, or number.
 [2018-07-28 20:49:20] <VERB> [Bot.disconnect] Saving auth store
 [2018-07-28 20:49:20] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:06:56] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:06:56] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:06:56] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:06:56] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:06:56] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:06:56] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:06:56] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:07:02] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:07:02] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:07:02] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:07:02] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:07:02] <VERB> [Bot.connect] Starting
+[2018-07-30 03:08:35] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:08:35] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:08:35] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:08:35] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:08:35] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:08:35] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:08:35] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:08:36] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:08:36] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:08:36] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:08:36] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:08:36] <VERB> [Bot.connect] Starting
+[2018-07-30 03:08:37] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:08:37] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:08:37] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:08:37] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:08:37] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:08:37] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:09:21] <DBUG> valid args for command: help
+[2018-07-30 03:09:21] <DBUG> I received the following
+[2018-07-30 03:10:09] <DBUG> valid args for command: whois
+[2018-07-30 03:10:09] <DBUG> I received the following
+[2018-07-30 03:10:09] <DANG> There was an error while executing the 'whois' command: Cannot read property 'roles' of undefined
+[2018-07-30 03:10:55] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:10:55] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:11:01] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:11:01] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:11:01] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:11:01] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:11:01] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:11:01] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:11:01] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:11:03] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:11:03] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:11:03] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:11:03] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:11:03] <VERB> [Bot.connect] Starting
+[2018-07-30 03:11:03] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:11:03] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:11:03] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:11:03] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:11:03] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:11:03] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:11:12] <DBUG> valid args for command: whois
+[2018-07-30 03:11:12] <DBUG> I received the following
+[2018-07-30 03:11:12] <DANG> There was an error while executing the 'whois' command: Cannot read property 'roles' of undefined
+[2018-07-30 03:17:19] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:17:19] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:17:48] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:17:48] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:17:48] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:17:48] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:17:48] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:17:48] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:17:48] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:17:49] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:17:49] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:17:49] <VERB> [Bot.connect] Starting
+[2018-07-30 03:17:49] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:17:49] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:17:49] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:17:49] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:17:49] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:17:49] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:17:49] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:17:49] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:18:01] <WARN> [Bot.handleCommandMessage] Invalid arguments (arg validation failed) for command: whois
+[2018-07-30 03:18:11] <DBUG> valid args for command: whois
+[2018-07-30 03:18:11] <DBUG> I received the following
+[2018-07-30 03:18:11] <DANG> There was an error while executing the 'whois' command: Cannot read property 'array' of undefined
+[2018-07-30 03:18:31] <DBUG> valid args for command: stats
+[2018-07-30 03:18:31] <DBUG> I received the following
+[2018-07-30 03:18:31] <DANG> There was an error while executing the 'stats' command: Cannot read property 'getMultiple' of undefined
+[2018-07-30 03:23:03] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:23:03] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:23:10] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:23:10] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:23:10] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:23:10] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:23:10] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:23:10] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:23:10] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:23:11] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:23:11] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:23:11] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:23:11] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:23:11] <VERB> [Bot.connect] Starting
+[2018-07-30 03:23:12] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:23:12] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:23:12] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:23:12] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:23:12] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:23:12] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:23:16] <WARN> [Bot.handleCommandMessage] Invalid arguments (arg validation failed) for command: whois
+[2018-07-30 03:23:23] <DBUG> valid args for command: whois
+[2018-07-30 03:23:23] <DBUG> I received the following
+[2018-07-30 03:23:33] <WARN> [Bot.handleCommandMessage] Invalid arguments (arg validation failed) for command: whois
+[2018-07-30 03:25:48] <DBUG> valid args for command: whois
+[2018-07-30 03:25:48] <DBUG> I received the following
+[2018-07-30 03:25:49] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:27:27] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:27:27] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:27:33] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:27:33] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:27:33] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:27:33] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:27:33] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:27:33] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:27:33] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:27:34] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:27:34] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:27:34] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:27:34] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:27:34] <VERB> [Bot.connect] Starting
+[2018-07-30 03:27:35] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:27:35] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:27:35] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:27:35] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:27:35] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:27:35] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:27:35] <DBUG> valid args for command: whois
+[2018-07-30 03:27:35] <DBUG> I received the following
+[2018-07-30 03:27:48] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:27:48] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:27:54] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:27:54] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:27:54] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:27:54] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:27:54] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:27:54] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:27:54] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:27:55] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:27:55] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:27:55] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:27:55] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:27:55] <VERB> [Bot.connect] Starting
+[2018-07-30 03:27:57] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:27:57] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:27:57] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:27:57] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:27:57] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:27:57] <SUCS> [Bot.setupEvents] Ready | Took 3s
+[2018-07-30 03:28:25] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:28:25] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:28:31] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:28:31] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:28:31] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:28:31] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:28:31] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:28:31] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:28:31] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:28:32] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:28:32] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:28:32] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:28:32] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:28:32] <VERB> [Bot.connect] Starting
+[2018-07-30 03:28:33] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:28:33] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:28:33] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:28:33] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:28:33] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:28:33] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:28:37] <DBUG> valid args for command: whois
+[2018-07-30 03:28:37] <DBUG> I received the following
+[2018-07-30 03:28:49] <DBUG> valid args for command: whois
+[2018-07-30 03:28:49] <DBUG> I received the following
+[2018-07-30 03:28:49] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:28:53] <DBUG> valid args for command: whois
+[2018-07-30 03:28:53] <DBUG> I received the following
+[2018-07-30 03:28:53] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:29:05] <DBUG> valid args for command: whois
+[2018-07-30 03:29:05] <DBUG> I received the following
+[2018-07-30 03:29:05] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:29:30] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:29:30] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:29:36] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:29:36] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:29:36] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:29:36] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:29:36] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:29:36] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:29:36] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:29:38] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:29:38] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:29:38] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:29:38] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:29:38] <VERB> [Bot.connect] Starting
+[2018-07-30 03:29:38] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:29:38] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:29:38] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:29:38] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:29:38] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:29:38] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:29:44] <DBUG> valid args for command: whois
+[2018-07-30 03:29:44] <DBUG> I received the following
+[2018-07-30 03:29:53] <DBUG> valid args for command: whois
+[2018-07-30 03:29:53] <DBUG> I received the following
+[2018-07-30 03:29:53] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:30:30] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:30:30] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:30:37] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:30:37] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:30:37] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:30:37] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:30:37] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:30:37] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:30:37] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:30:38] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:30:38] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:30:38] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:30:38] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:30:38] <VERB> [Bot.connect] Starting
+[2018-07-30 03:30:38] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:30:38] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:30:38] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:30:38] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:30:38] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:30:38] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:30:39] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:30:39] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:30:45] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:30:45] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:30:45] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:30:45] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:30:45] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:30:45] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:30:45] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:30:46] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:30:46] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:30:46] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:30:46] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:30:46] <VERB> [Bot.connect] Starting
+[2018-07-30 03:30:47] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:30:47] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:30:47] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:30:47] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:30:47] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:30:47] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:30:50] <WARN> [Bot.handleCommandMessage] Invalid arguments (arg validation failed) for command: whois
+[2018-07-30 03:30:59] <DBUG> valid args for command: whois
+[2018-07-30 03:30:59] <DBUG> I received the following
+[2018-07-30 03:30:59] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:32:24] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:32:24] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:32:30] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:32:30] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:32:30] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:32:30] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:32:30] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:32:30] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:32:30] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:32:31] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:32:31] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:32:31] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:32:31] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:32:31] <VERB> [Bot.connect] Starting
+[2018-07-30 03:32:32] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:32:32] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:32:32] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:32:32] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:32:32] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:32:32] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:32:38] <DBUG> valid args for command: whois
+[2018-07-30 03:32:38] <DBUG> I received the following
+[2018-07-30 03:32:38] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:33:03] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:33:03] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:33:10] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:33:10] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:33:10] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:33:10] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:33:10] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:33:10] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:33:10] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:33:11] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:33:11] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:33:11] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:33:11] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:33:11] <VERB> [Bot.connect] Starting
+[2018-07-30 03:33:11] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:33:11] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:33:11] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:33:11] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:33:11] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:33:11] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:33:16] <WARN> [Bot.handleCommandMessage] Invalid arguments (arg validation failed) for command: whois
+[2018-07-30 03:33:18] <DBUG> valid args for command: whois
+[2018-07-30 03:33:18] <DBUG> I received the following
+[2018-07-30 03:33:18] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:33:35] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:33:35] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:33:42] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:33:42] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:33:42] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:33:42] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:33:42] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:33:42] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:33:42] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:33:43] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:33:43] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:33:43] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:33:43] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:33:43] <VERB> [Bot.connect] Starting
+[2018-07-30 03:33:43] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:33:43] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:33:43] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:33:43] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:33:43] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:33:43] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:33:45] <DBUG> valid args for command: whois
+[2018-07-30 03:33:45] <DBUG> I received the following
+[2018-07-30 03:33:50] <DBUG> valid args for command: whois
+[2018-07-30 03:33:50] <DBUG> I received the following
+[2018-07-30 03:33:55] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:33:55] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:34:01] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:34:01] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:34:01] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:34:01] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:34:01] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:34:01] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:34:01] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:34:02] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:34:02] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:34:02] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:34:02] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:34:02] <VERB> [Bot.connect] Starting
+[2018-07-30 03:34:03] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:34:03] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:34:03] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:34:03] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:34:03] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:34:03] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:34:06] <DBUG> valid args for command: whois
+[2018-07-30 03:34:06] <DBUG> I received the following
+[2018-07-30 03:34:06] <DANG> There was an error while executing the 'whois' command: RichEmbed field values may not be empty.
+[2018-07-30 03:34:29] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:34:29] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:34:43] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:34:43] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:34:43] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:34:43] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:34:43] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:34:43] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:34:43] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:34:45] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:34:45] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:34:45] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:34:45] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:34:45] <VERB> [Bot.connect] Starting
+[2018-07-30 03:34:45] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:34:45] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:34:45] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:34:45] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:34:45] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:34:45] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:34:47] <DBUG> valid args for command: whois
+[2018-07-30 03:34:47] <DBUG> I received the following
+[2018-07-30 03:35:52] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:35:52] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:35:58] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:35:58] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:35:58] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:35:58] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:35:58] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:35:58] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:35:58] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:35:59] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:35:59] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:35:59] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:35:59] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:35:59] <VERB> [Bot.connect] Starting
+[2018-07-30 03:36:00] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:36:00] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:36:00] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:36:00] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:36:00] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:36:00] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:36:01] <DBUG> valid args for command: whois
+[2018-07-30 03:36:01] <DBUG> I received the following
+[2018-07-30 03:36:12] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:36:12] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:36:18] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:36:18] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:36:18] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:36:18] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:36:18] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:36:18] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:36:18] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:36:20] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:36:20] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:36:20] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:36:20] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:36:20] <VERB> [Bot.connect] Starting
+[2018-07-30 03:36:20] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:36:20] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:36:20] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:36:20] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:36:20] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:36:20] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:36:21] <DBUG> valid args for command: whois
+[2018-07-30 03:36:21] <DBUG> I received the following
+[2018-07-30 03:36:39] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:36:39] <VERB> [Bot.disconnect] Saving JsonProvider
+[2018-07-30 03:36:50] <SUCS> [:Database] Database setup completed
+[2018-07-30 03:36:50] <VERB> [Bot.setup] Attempting to load internal fragments
+[2018-07-30 03:36:50] <VERB> [Bot.setup] Loading 5 internal fragments
+[2018-07-30 03:36:50] <SUCS> [Bot.setup] Enabled 5/5 internal fragments
+[2018-07-30 03:36:50] <VERB> [Bot.setup] Loading 4 behaviour(s)
+[2018-07-30 03:36:50] <SUCS> [Bot.setup] Loaded 4 behaviour(s)
+[2018-07-30 03:36:50] <VERB> [Bot.setup] Loading 28 command(s)
+[2018-07-30 03:36:51] <SUCS> [Bot.setup] Loaded 28 command(s)
+[2018-07-30 03:36:51] <VERB> [Bot.setupEvents] Setting up Discord events
+[2018-07-30 03:36:51] <SUCS> [Bot.setupEvents] Discord events setup completed
+[2018-07-30 03:36:51] <SUCS> [Bot.setup] Bot setup completed
+[2018-07-30 03:36:51] <VERB> [Bot.connect] Starting
+[2018-07-30 03:36:52] <DANG> There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354')
+[2018-07-30 03:36:52] <SUCS> [ConsoleInterface.setup] Console interface setup completed
+[2018-07-30 03:36:52] <VERB> [ConsoleInterface] Setting up console interface
+[2018-07-30 03:36:52] <SUCS> [Bot.setupAuthStore] Auth store setup completed
+[2018-07-30 03:36:52] <INFO> [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s)
+[2018-07-30 03:36:52] <SUCS> [Bot.setupEvents] Ready | Took 2s
+[2018-07-30 03:36:55] <DBUG> valid args for command: whois
+[2018-07-30 03:36:55] <DBUG> I received the following
+[2018-07-30 03:38:34] <VERB> [Bot.disconnect] Saving auth store
+[2018-07-30 03:38:34] <VERB> [Bot.disconnect] Saving JsonProvider
