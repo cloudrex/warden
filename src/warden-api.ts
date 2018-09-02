@@ -1,9 +1,10 @@
 import {StoredWarning} from "./commands/warnings";
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
-import { DataProvider, Bot, Log, JsonProvider } from "discord-anvil";
+import {Bot, DataProvider, JsonProvider, Log} from "discord-anvil";
 import Database from "./database/database";
+import Patterns from "discord-anvil/dist/core/patterns";
 
-const badWords = [
+const badWords: Array<string> = [
     "asshole",
     "fuck",
     "bitch",
@@ -18,7 +19,7 @@ const badWords = [
     "cock"
 ];
 
-const racialSlurs = [
+const racialSlurs: Array<string> = [
     "nigg",
     "zipperhead",
     "bobo",
@@ -206,18 +207,32 @@ export class WardenAPI {
         }
 
         const caseNum: number = WardenApiOld.getCase();
+        const autoWarn: boolean = options.moderator.id === this.bot.client.user.id;
 
-        this.channels.modLog.send(new RichEmbed()
+        const caseEmbed = new RichEmbed()
             .setTitle(`Warn | Case #${caseNum}`)
             .addField("Member", `<@${options.user.id}> (${options.user.user.username})`)
             .addField("Reason", options.reason)
             .addField("Moderator", `<@${options.moderator.id}> (${options.moderator.username})`)
             .setThumbnail(options.evidence ? options.evidence : "")
-            .setFooter(`Warned by ${options.moderator.username}`, options.moderator.avatarURL)
-            .setColor("GOLD"));
+            .setFooter(autoWarn ? "Automatically warned" : `Warned by ${options.moderator.username}`, options.moderator.avatarURL)
+            .setColor("GOLD");
+
+        // If the evidence is not an image, add it to a field
+        if (options.evidence && (Patterns.url.test(options.evidence) && !Patterns.invite.test(options.evidence))) {
+            caseEmbed.setThumbnail("");
+            caseEmbed.addField("Evidence", options.evidence);
+        }
+        else {
+            console.log(options.evidence);
+        }
+
+        this.channels.modLog.send(caseEmbed);
+
+        const warnDM: string = autoWarn ? `You were automatically warned for **${options.reason}**` : `You were warned by <@${options.moderator.id}> (${options.moderator.username}) for **${options.reason}**`;
 
         (await options.user.createDM()).send(new RichEmbed()
-            .setDescription(`You were warned by <@${options.moderator.id}> (${options.moderator.username}) for **${options.reason}**`)
+            .setDescription(warnDM)
             .setColor("GOLD")
             .setTitle(`Case #${caseNum}`));
 
@@ -331,10 +346,10 @@ export class WardenAPI {
 }
 
 export default abstract class WardenApiOld {
-    static deletedMessages: any = [];
-    static store: JsonProvider;
-    static caseCounter: number;
-    static modLogChannel: TextChannel;
+    public static deletedMessages: any = [];
+    public static store: JsonProvider;
+    public static caseCounter: number;
+    public static modLogChannel: TextChannel;
 
     public static async reportCase(options: CaseOptions): Promise<void> {
         const caseNum = WardenApiOld.getCase();

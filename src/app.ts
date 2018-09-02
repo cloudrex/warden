@@ -1,8 +1,18 @@
 import WardenApi, {WardenAPI} from "./warden-api";
-import {TextChannel, Message, GuildMember, Snowflake} from "discord.js";
+import {GuildMember, Message, TextChannel} from "discord.js";
 import path from "path";
-import {Log, LogLevel, Settings, Bot, JsonAuthStore, JsonProvider, UserDefinedArgType, ArgumentTypeChecker, Utils} from "discord-anvil";
-import { CommandArgumentResolver } from "discord-anvil/dist/commands/command";
+import {
+    ArgumentTypeChecker,
+    Bot,
+    JsonAuthStore,
+    JsonProvider,
+    Log,
+    LogLevel,
+    Settings,
+    UserDefinedArgType,
+    Utils
+} from "discord-anvil";
+import {CommandArgumentResolver} from "discord-anvil/dist/commands/command";
 
 const baseDir = "./src";
 
@@ -16,7 +26,7 @@ const settings = new Settings({
 
     paths: {
         commands: path.resolve(path.join(__dirname, "./commands")),
-        behaviours: path.resolve(path.join(__dirname, "./behaviours"))
+        services: path.resolve(path.join(__dirname, "./services"))
     }
 });
 
