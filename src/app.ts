@@ -76,7 +76,7 @@ async function start() {
     });
 
     if (bot.dataStore) {
-        const store: JsonProvider = <JsonProvider>bot.dataStore;
+        const store: JsonProvider = bot.dataStore as JsonProvider;
 
         await store.reload();
 
@@ -85,6 +85,7 @@ async function start() {
             databasePath: "warden.db",
             bot: bot,
 
+            // Gaming corner
             channels: {
                 suggestions: "458337067299242004",
                 modLog: "458794765308395521",

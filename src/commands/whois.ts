@@ -1,5 +1,5 @@
 import {GuildMember, RichEmbed} from "discord.js";
-import { Command, CommandContext, Utils, CommandArgument } from "discord-anvil";
+import {Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 interface WhoisArgs {
@@ -42,7 +42,7 @@ export default class Whois extends Command {
             .setThumbnail(args.member.user.avatarURL)
             .addField("User", `<@${args.member.user.id}>`)
             .addField("Tag", args.member.user.tag || "*Unknown*")
-            .addField("Nickname", args.member.nickname ||  "*None*")
+            .addField("Nickname", args.member.nickname || "*None*")
             .addField("Type", args.member.user.bot ? ":robot: Bot" : ":raising_hand: Human")
             .addField("Joined Server", Utils.timeAgo(args.member.joinedTimestamp))
             .addField("Account Created", Utils.timeAgo(args.member.user.createdTimestamp))

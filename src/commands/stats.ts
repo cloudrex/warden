@@ -1,9 +1,9 @@
-import { Command, CommandContext } from "discord-anvil";
+import {Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
-import { Attachment } from "discord.js";
+import {Attachment} from "discord.js";
 import Charts from "../charts";
-import { DatabaseMessage } from "../database/database-entities";
-import { WardenAPI } from "../warden-api";
+import {DatabaseMessage} from "../database/database-entities";
+import {WardenAPI} from "../warden-api";
 
 function getBeforeDate(amount: number): Date {
     const today: Date = new Date();
@@ -35,7 +35,9 @@ export default class Stats extends Command {
     }
 
     // TODO: Add missing extra days data
-    public async executed (context: CommandContext, api: WardenAPI): Promise<void> {
+    public async executed(context: CommandContext): Promise<void> {
+        const api: WardenAPI = context.bot.getAPI();
+
         const extra = {
             today: await api.db.getMultiple<DatabaseMessage>(api.db.getConnection()("messages")
                 .where("time", ">", Date.now() - 86400000)),
@@ -68,12 +70,12 @@ export default class Stats extends Command {
                         "rgba(255,99,132,1)",
                         "rgba(54, 162, 235, 1)"
                     ],
-                    
+
                     borderWidth: 1
                 }
             ]
         };
 
-        context.message.channel.send(new Attachment(await Charts.createMessages(messagesData), "stats.png"));
+        await context.message.channel.send(new Attachment(await Charts.createMessages(messagesData), "stats.png"));
     }
 };
