@@ -1,7 +1,12 @@
-import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake} from "discord.js";
+import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel} from "discord.js";
 import WardenApi, {WardenAPI} from "../warden-api";
-import {Service, Bot, CommandParser, Log} from "discord-anvil";
+import {Bot, CommandParser, Log, Service} from "discord-anvil";
 import Patterns from "discord-anvil/dist/core/patterns";
+import Utils from "discord-anvil/dist/core/utils";
+
+const conflictingBots: Array<Snowflake> = [
+    "155149108183695360" // Dyno#3861
+];
 
 const muteLeavers: Array<Snowflake> = [];
 
@@ -177,7 +182,84 @@ export default class Protection extends Service {
                     Log.warn("[Protection:guildMemberAdd] Owner member was not found in the guild");
                 }
 
+                if (member.roles.has(api.roles.muted)) {
+                    Log.warn("[Protection:guildMemberAdd] Looks like someone got there before me! Another bot provides moderation dodging protection, which may cause problems. You can identify the bot by checking audit logs.");
+
+                    return;
+                }
+
                 await member.addRole(api.roles.muted, "Possible attempt to avoid moderation by rejoining");
+            }
+        });
+
+        bot.client.on("guildMemberUpdate", async (old: GuildMember, current: GuildMember) => {
+            // Conflicting Bots
+            if (current.user.id === bot.client.user.id) {
+                if (Utils.hasModerationPowers(current) && !Utils.hasModerationPowers(old)) {
+                    const conflictsFound: Array<GuildMember> = [];
+
+                    for (let i = 0; i < conflictingBots.length; i++) {
+                        if (current.guild.members.has(conflictingBots[i]) && Utils.hasModerationPowers(current.guild.member(conflictingBots[i]))) {
+                            conflictsFound.push(current.guild.member(conflictingBots[i]));
+                        }
+                    }
+
+                    if (conflictsFound.length > 0) {
+                        const channel: TextChannel | null = Utils.findDefaultChannel(current.guild);
+
+                        if (channel) {
+                            let description = ":white_check_mark: I've been granted moderation powers but there's a problem -- I've detected conflicting bot(s) which may present problems.\n";
+
+                            for (let i = 0; i < conflictsFound.length; i++) {
+                                description += `\n:warning: <@${conflictsFound[i].id}> (${conflictsFound[i].user.tag})`;
+                            }
+
+                            channel.send(new RichEmbed()
+                                .setColor("GREEN")
+                                .setDescription(description)
+                                .setFooter("This message won't be shown again"));
+                        }
+                        else {
+                            Log.warn("[Protection:guildMemberUpdate] Could not find a default/general channel");
+
+                            // TODO: Last resort: DM guild owner
+                        }
+                    }
+                }
+            }
+
+            // Anti-Hoisting
+            const antiHoisting = true;
+
+            if (!antiHoisting) {
+                return;
+            }
+
+            if (!api.getGuild().me.hasPermission("MANAGE_NICKNAMES")) {
+                Log.warn("[Protection:guildMemberUpdate] Cannot perform anti-hoisting protection without MANAGE_NICKNAMES permission");
+
+                return;
+            }
+
+            let name: string = current.nickname || current.user.username;
+            let newName: Array<string> | string = [];
+
+            for (let i = 0; i < name.length; i++) {
+                if (/[a-z]/i.test(name[i])) {
+                    newName.push(name[i]);
+                }
+            }
+
+            newName = newName.join("");
+
+            if (name !== newName) {
+                if (newName.trim() === "") {
+                    newName = "Unhoisted";
+                }
+
+                await current.setNickname(newName, "Anti hoisting").catch((error: Error) => {
+                    Log.error(`[Protection:guildMemberUpdate] Unable to perform anti-hoisting on member ${current.user.tag}: ${error.message}`);
+                });
             }
         });
 
