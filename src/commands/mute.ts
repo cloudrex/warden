@@ -1,8 +1,8 @@
 import {WardenAPI} from "../warden-api";
-import { Command, Permission, ChatEnvironment, CommandContext, CommandArgument } from "discord-anvil";
+import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
-import { GuildMember } from "discord.js";
-import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import {GuildMember} from "discord.js";
+import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 
 export interface MuteArgs {
     readonly member: GuildMember;
