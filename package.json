@@ -13,7 +13,7 @@
         "@types/knex": "^0.14.18",
         "chart.js": "^2.7.2",
         "chartjs-node": "^1.7.1",
-        "discord-anvil": "^2.6.9",
+        "discord-anvil": "^2.7.1",
         "discord.js": "^11.3.2",
         "knex": "^0.15.2",
         "sqlite3": "^4.0.2",

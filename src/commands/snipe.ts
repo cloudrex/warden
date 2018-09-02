@@ -16,8 +16,8 @@ export default class Snipe extends Command {
         this.restrict.specific = SpecificGroups.staff;
     }
 
-    public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
-        const lastDeletedChannelMessage: Message | null = api.getLastDeletedMessage(context.message.channel.id);
+    public async executed(context: CommandContext, args: Array<string>, api: WardenAPI): Promise<void> {
+        const lastDeletedChannelMessage: Message | null = api.deletedMessages.get(context.message.channel.id) || null;
 
         if (lastDeletedChannelMessage) {
             const embed = lastDeletedChannelMessage.content.length === 0 && lastDeletedChannelMessage.embeds.length > 0;

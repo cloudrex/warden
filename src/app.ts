@@ -20,8 +20,8 @@ Log.level = LogLevel.Debug;
 
 const settings = new Settings({
     general: {
-        token: process.env.AC_TOKEN ? process.env.AC_TOKEN : "",
-        prefixes: process.env.AC_PREFIX ? process.env.AC_PREFIX.split(",") : ["!"]
+        token: process.env.token ? process.env.token : "",
+        prefixes: process.env.prefix ? process.env.prefix.split(",") : ["!"]
     },
 
     paths: {

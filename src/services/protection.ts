@@ -145,7 +145,7 @@ export default class Protection extends Service {
                 return;
             }
 
-            WardenApi.deletedMessages[message.channel.id] = message;
+            this.api.deletedMessages.set(message.channel.id, message);
 
             // Delete the saved message after 30 minutes
             setTimeout(() => {

@@ -111,12 +111,12 @@ export class WardenAPI {
     public readonly unresolvedChannels: ConsumerAPIChannels;
     public readonly roles: ConsumerAPIRoles;
     public readonly db: Database;
+    public readonly deletedMessages: Map<Snowflake, Message>;
 
     private readonly bot: Bot;
     private readonly guild: Snowflake;
 
     // TODO: Type
-    private deletedMessages: any;
     private channels?: ConsumerAPIResolvedChannels;
 
     constructor(options: WardenAPIOptions) {
@@ -125,7 +125,7 @@ export class WardenAPI {
         this.guild = options.guild;
         this.roles = options.roles;
         this.unresolvedChannels = options.channels;
-        this.deletedMessages = [];
+        this.deletedMessages = new Map<Snowflake, Message>();
     }
 
     public setup(): void {
@@ -341,14 +341,6 @@ export class WardenAPI {
             .addField("Message ID", message.id));
 
         return;
-    }
-
-    public getLastDeletedMessage(channelId: Snowflake): Message | null {
-        if (WardenApiOld.deletedMessages[channelId]) {
-            return WardenApiOld.deletedMessages[channelId];
-        }
-
-        return null;
     }
 }
 
