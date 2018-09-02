@@ -25,7 +25,6 @@ const racialSlurs: Array<string> = [
     "bobo",
     "amigo",
     "blaxican",
-    "brownie",
     "faggot",
     "nibba"
 ];
@@ -167,6 +166,14 @@ export class WardenAPI {
         // TODO
 
         return 0;
+    }
+
+    public getOwner(): GuildMember | null {
+        if (!this.bot.owner) {
+            return null;
+        }
+
+        return this.getGuild().member(this.bot.owner) || null;
     }
 
     public async saveWarning(options: WarnOptionsv2): Promise<void> {

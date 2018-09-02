@@ -1,5 +1,5 @@
 import WardenApi, {WardenAPI} from "./warden-api";
-import {GuildMember, Message, TextChannel} from "discord.js";
+import {Guild, GuildMember, Message, TextChannel} from "discord.js";
 import path from "path";
 import {
     ArgumentTypeChecker,
@@ -14,7 +14,7 @@ import {
 } from "discord-anvil";
 import {CommandArgumentResolver} from "discord-anvil/dist/commands/command";
 
-const baseDir = "./src";
+const baseDir: string = "./src";
 
 Log.level = LogLevel.Debug;
 
@@ -109,10 +109,10 @@ async function start() {
 
         WardenApi.caseCounter = storedCounter ? storedCounter : 0;
 
-        const gamingCorner = bot.client.guilds.get("286352649610199052");
+        const gamingCorner: Guild | null = bot.client.guilds.get("286352649610199052") || null;
 
-        if (gamingCorner) {
-            const modLogChannel: TextChannel = <TextChannel>gamingCorner.channels.get("458794765308395521");
+        if (gamingCorner !== null) {
+            const modLogChannel: TextChannel = gamingCorner.channels.get("458794765308395521") as TextChannel;
 
             if (modLogChannel) {
                 WardenApi.modLogChannel = modLogChannel;
