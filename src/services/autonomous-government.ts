@@ -6,7 +6,7 @@ export default class AutonomousGovernment extends Service {
         description: "Handle the autonomous government system of the server"
     };
 
-    public enabled(bot: Bot): void {
-
+    public start(): void {
+        // TODO
     }
 }

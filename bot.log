@@ -3483,3 +3483,64 @@
 [2018-09-02 03:14:44] [Protection:guildMemberUpdate] Cannot perform anti-hoisting protection without MANAGE_NICKNAMES permission 
 [2018-09-02 03:20:08] [Bot.disconnect] Saving auth store 
 [2018-09-02 03:20:08] [Bot.disconnect] Saving JsonProvider 
+[2018-09-02 03:23:23] [:Database] Database setup completed 
+[2018-09-02 03:23:23] [Bot.setup] Attempting to load internal fragments 
+[2018-09-02 03:23:23] [Bot.setup] Loading 5 internal fragments 
+[2018-09-02 03:23:23] [Bot.setup] Enabled 5/5 internal fragments 
+[2018-09-02 03:23:23] [Bot.setup] Loading 4 service(s) 
+[2018-09-02 03:23:23] [Bot.setup] Loaded 4 service(s) 
+[2018-09-02 03:23:23] [Bot.setup] Loading 28 command(s) 
+[2018-09-02 03:23:23] [Bot.setupEvents] Setting up Discord events 
+[2018-09-02 03:23:23] [Bot.setup] Loaded 28 command(s) 
+[2018-09-02 03:23:23] [Bot.setupEvents] Discord events setup completed 
+[2018-09-02 03:23:23] [Bot.connect] Starting 
+[2018-09-02 03:23:23] [Bot.setup] Bot setup completed 
+[2018-09-02 03:23:24] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-02 03:23:24] [ConsoleInterface] Setting up console interface 
+[2018-09-02 03:23:24] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-02 03:23:24] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-02 03:23:24] [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s) 
+[2018-09-02 03:23:24] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-02 03:34:16] [Protection:guildMemberUpdate] Cannot perform anti-hoisting protection without MANAGE_NICKNAMES permission 
+[2018-09-02 04:50:56] [Bot.disconnect] Saving auth store 
+[2018-09-02 04:50:56] [Bot.disconnect] Saving JsonProvider 
+[2018-09-02 04:55:02] [:Database] Database setup completed 
+[2018-09-02 04:55:02] [Bot.setup] Attempting to load internal fragments 
+[2018-09-02 04:55:02] [Bot.setup] Loading 5 internal fragments 
+[2018-09-02 04:55:02] [Bot.setup] Enabled 5/5 internal fragments 
+[2018-09-02 04:55:02] [Bot.setup] Loading 4 service(s) 
+[2018-09-02 04:55:02] [Bot.setup] Loaded 4 service(s) 
+[2018-09-02 04:55:02] [Bot.setup] Loading 28 command(s) 
+[2018-09-02 04:55:03] [Bot.setup] Loaded 28 command(s) 
+[2018-09-02 04:55:03] [Bot.setupEvents] Setting up Discord events 
+[2018-09-02 04:55:03] [Bot.setupEvents] Discord events setup completed 
+[2018-09-02 04:55:03] [Bot.setup] Bot setup completed 
+[2018-09-02 04:55:03] [Bot.connect] Starting 
+[2018-09-02 04:55:04] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-02 04:55:04] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-02 04:55:04] [ConsoleInterface] Setting up console interface 
+[2018-09-02 04:55:04] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-02 04:55:04] [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s) 
+[2018-09-02 04:55:04] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-02 04:55:45] [Protection:guildMemberUpdate] Unable to perform anti-hoisting on member 🌌Atlas#2473: Missing Permissions 
+[2018-09-02 04:55:52] [Protection:guildMemberUpdate] Unable to perform anti-hoisting on member 🌌Atlas#2473: Missing Permissions 
+[2018-09-02 18:22:43] [:Database] Database setup completed 
+[2018-09-02 18:22:43] [Bot.setup] Attempting to load internal fragments 
+[2018-09-02 18:22:43] [Bot.setup] Enabled 5/5 internal fragments 
+[2018-09-02 18:22:43] [Bot.setup] Loading 5 internal fragments 
+[2018-09-02 18:22:43] [Bot.setup] Loading 4 service(s) 
+[2018-09-02 18:22:43] [Bot.setup] Loaded 4 service(s) 
+[2018-09-02 18:22:43] [Bot.setup] Loading 28 command(s) 
+[2018-09-02 18:22:46] [Bot.setup] Loaded 28 command(s) 
+[2018-09-02 18:22:46] [Bot.setupEvents] Setting up Discord events 
+[2018-09-02 18:22:46] [Bot.setupEvents] Discord events setup completed 
+[2018-09-02 18:22:46] [Bot.setup] Bot setup completed 
+[2018-09-02 18:22:46] [Bot.connect] Starting 
+[2018-09-02 18:22:46] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-02 18:22:46] [ConsoleInterface] Setting up console interface 
+[2018-09-02 18:22:46] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-02 18:22:46] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-02 18:22:46] [Bot.setupEvents] Logged in as Knight#8221 | 1 guild(s) 
+[2018-09-02 18:22:46] [Bot.setupEvents] Ready | Took 3s 
+[2018-09-02 18:31:50] [Bot.disconnect] Saving auth store 
+[2018-09-02 18:31:50] [Bot.disconnect] Saving JsonProvider 

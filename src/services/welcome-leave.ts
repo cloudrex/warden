@@ -14,14 +14,14 @@ export default class WelcomeLeave extends Service {
         description: "Greet and wave goodbye to users who join and leave"
     };
 
-    public async enabled(bot: Bot): Promise<void> {
+    public async start(): Promise<void> {
         messages = await Utils.readJson("./src/data/welcome-leave-messages.json");
 
-        bot.client.on("guildMemberAdd", (member: GuildMember) => {
+        this.bot.client.on("guildMemberAdd", (member: GuildMember) => {
             WelcomeLeave.sendGeneral(`${WelcomeLeave.getMessage("welcome", member.user)}\n\n*Make sure to read the <#458708940809699368>!*`, "Joined", member);
         });
 
-        bot.client.on("guildMemberRemove", (member: GuildMember) => {
+        this.bot.client.on("guildMemberRemove", (member: GuildMember) => {
             WelcomeLeave.sendGeneral(WelcomeLeave.getMessage("goodbye", member.user), "Left", member);
         });
     }

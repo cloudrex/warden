@@ -16,10 +16,10 @@ export default class Protection extends Service {
         description: "Unattended protection and moderation"
     };
 
-    public enabled(bot: Bot, api: WardenAPI): void {
-        bot.client.on("message", async (message: Message) => {
+    public start(): void {
+        this.bot.client.on("message", async (message: Message) => {
             // Log the message into the database
-            api.db.messages.insert({
+            this.api.db.messages.insert({
                 author: message.author.id,
                 authorTag: message.author.tag,
                 channel: message.channel.id,
@@ -35,7 +35,7 @@ export default class Protection extends Service {
                 if (matches !== null) {
                     for (let i = 0; i < matches.length; i++) {
                         try {
-                            const invite: Invite = await bot.client.fetchInvite(matches[i]);
+                            const invite: Invite = await this.bot.client.fetchInvite(matches[i]);
 
                             if (invite) {
                                 if (invite.guild.id !== message.guild.id) {
@@ -47,15 +47,15 @@ export default class Protection extends Service {
 
                                     message.reply("Invites to different guilds are not allowed.");
 
-                                    let evidence: string = message.content;
+                                    let evidence: string = `*${message.content}*`;
 
                                     if (evidence.length > 200) {
-                                        evidence = evidence.substring(0, 200) + " (Trimmed)";
+                                        evidence = evidence.substring(0, 200) + " ...";
                                     }
 
-                                    await api.warn({
+                                    await this.api.warn({
                                         message: message,
-                                        moderator: bot.client.user,
+                                        moderator: this.bot.client.user,
                                         reason: "Posted an invite link to a different server",
                                         user: message.member,
                                         evidence: evidence
@@ -75,7 +75,7 @@ export default class Protection extends Service {
             }
 
             // Ignore owner and self
-            if (message.author.id === bot.owner || message.author.id === bot.client.user.id) {
+            if (message.author.id === this.bot.owner || message.author.id === this.bot.client.user.id) {
                 return;
             }
 
@@ -83,7 +83,7 @@ export default class Protection extends Service {
                 await message.reply("Your message is too large.");
                 await message.delete();
             }
-            else if (message.member.roles.has(api.roles.muted) && message.deletable) {
+            else if (message.member.roles.has(this.api.roles.muted) && message.deletable) {
                 await message.delete();
             }
             else {
@@ -101,7 +101,7 @@ export default class Protection extends Service {
                         // TODO: Use/implement in Consumer API v2
                         Protection.mute(message.member);
 
-                        const response: Message = <Message>(await message.reply("You have been automatically muted until further notice for mass pinging."));
+                        const response: Message = await message.reply("You have been automatically muted until further notice for mass pinging.") as Message;
 
                         if (response) {
                             response.delete(8000);
@@ -115,7 +115,7 @@ export default class Protection extends Service {
             const suspectedViolation: string = WardenAPI.isMessageSuspicious(message);
 
             if (suspectedViolation !== "None") {
-                await api.flagMessage(message, suspectedViolation);
+                await this.api.flagMessage(message, suspectedViolation);
             }
 
             if (message && message.mentions && message.mentions.members) {
@@ -127,10 +127,10 @@ export default class Protection extends Service {
                             response.delete(8000);
                         }
 
-                        await api.warn({
+                        await this.api.warn({
                             user: message.member,
                             reason: "Pinging a 'Dont Ping' member",
-                            moderator: bot.client.user,
+                            moderator: this.bot.client.user,
                             message: message
                         });
                     }
@@ -139,9 +139,9 @@ export default class Protection extends Service {
         });
 
         // Save deleted messages for snipe command
-        bot.client.on("messageDelete", (message: Message) => {
+        this.bot.client.on("messageDelete", (message: Message) => {
             // TODO: Temporary hotfix
-            if (CommandParser.getCommandBase(message.content, bot.settings.general.prefixes) === "snipe") {
+            if (CommandParser.getCommandBase(message.content, this.bot.settings.general.prefixes) === "snipe") {
                 return;
             }
 
@@ -154,13 +154,13 @@ export default class Protection extends Service {
         });
 
         // Prevent members from role avoiding
-        bot.client.on("guildMemberRemove", (member: GuildMember) => {
-            if (member.roles.has(api.roles.muted)) {
+        this.bot.client.on("guildMemberRemove", (member: GuildMember) => {
+            if (member.roles.has(this.api.roles.muted)) {
                 muteLeavers.push(member.id);
             }
         });
 
-        bot.client.on("guildMemberAdd", async (member: GuildMember) => {
+        this.bot.client.on("guildMemberAdd", async (member: GuildMember) => {
             if (muteLeavers.includes(member.id)) {
                 const dm: DMChannel = await member.createDM();
 
@@ -169,7 +169,7 @@ export default class Protection extends Service {
                     .setDescription(":zap: Beep Boop! Attempting to avoid moderation by rejoining may result in a permanent ban. You may ignore this message if this is not the case.")
                     .setFooter("Generated by Warden's autonomous protection system"));
 
-                const owner: GuildMember | null = api.getOwner();
+                const owner: GuildMember | null = this.api.getOwner();
 
                 if (owner) {
                     const ownerDM: DMChannel = await owner.createDM();
@@ -182,19 +182,19 @@ export default class Protection extends Service {
                     Log.warn("[Protection:guildMemberAdd] Owner member was not found in the guild");
                 }
 
-                if (member.roles.has(api.roles.muted)) {
+                if (member.roles.has(this.api.roles.muted)) {
                     Log.warn("[Protection:guildMemberAdd] Looks like someone got there before me! Another bot provides moderation dodging protection, which may cause problems. You can identify the bot by checking audit logs.");
 
                     return;
                 }
 
-                await member.addRole(api.roles.muted, "Possible attempt to avoid moderation by rejoining");
+                await member.addRole(this.api.roles.muted, "Possible attempt to avoid moderation by rejoining");
             }
         });
 
-        bot.client.on("guildMemberUpdate", async (old: GuildMember, current: GuildMember) => {
+        this.bot.client.on("guildMemberUpdate", async (old: GuildMember, current: GuildMember) => {
             // Conflicting Bots
-            if (current.user.id === bot.client.user.id) {
+            if (current.user.id === this.bot.client.user.id) {
                 if (Utils.hasModerationPowers(current) && !Utils.hasModerationPowers(old)) {
                     const conflictsFound: Array<GuildMember> = [];
 
@@ -235,7 +235,7 @@ export default class Protection extends Service {
                 return;
             }
 
-            if (!api.getGuild().me.hasPermission("MANAGE_NICKNAMES")) {
+            if (!this.api.getGuild().me.hasPermission("MANAGE_NICKNAMES")) {
                 Log.warn("[Protection:guildMemberUpdate] Cannot perform anti-hoisting protection without MANAGE_NICKNAMES permission");
 
                 return;
@@ -263,7 +263,7 @@ export default class Protection extends Service {
             }
         });
 
-        if (bot.options.autoDeleteCommands) {
+        if (this.bot.options.autoDeleteCommands) {
             Log.warn("The autoDeleteCommands option is currently incompatible with the snipe command");
         }
     }

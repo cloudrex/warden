@@ -1,6 +1,5 @@
 import {Message} from "discord.js";
 import {Bot, Service} from "discord-anvil";
-import {WardenAPI} from "../warden-api";
 
 export default class SpecialChannels extends Service {
     readonly meta = {
@@ -8,10 +7,10 @@ export default class SpecialChannels extends Service {
         description: "Functionality for special guild channels"
     };
 
-    public enabled(bot: Bot, api: WardenAPI): void {
-        bot.client.on("message", async (message: Message) => {
-            if (message.channel.id === api.unresolvedChannels.suggestions && !message.author.bot) {
-                await api.addSuggestion(message.content, message.member);
+    public start(): void {
+        this.bot.client.on("message", async (message: Message) => {
+            if (message.channel.id === this.api.unresolvedChannels.suggestions && !message.author.bot) {
+                await this.api.addSuggestion(message.content, message.member);
 
                 if (message.deletable) {
                     await message.delete();
