@@ -32,12 +32,12 @@ const tips = [
     `If you ever have questions about development, feel free to post them in <#${channels.development}>`,
     "Did you know? This server started as a private developer/friends-only community!",
     "Did you know? This server has been around for over a year now!",
-    "Did you know? If we catch you playing a game, we add the role if we have it!",
+    "Did you know? If we catch you playing a game, we'll add you the role if we have it!",
     "Did you know? Staff applications open as the server grows, so stay tuned!",
     `Do you love anime? So do we! Make sure to checkout the <#${channels.animeRecommend}> channel for good quality anime to watch`,
     `Do you have a favorite anime? You can talk to Atlas to add it to the <#${channels.animeRecommend}> channel!`,
-    "Do you have any questions about the server? Feel free to ask an online Assistant, or Atlas himself!",
-    "Have something to spare? Talk to Atlas to make a giveaway!",
+    "Do you have any questions about the server? Feel free to ask an online Assistant, or {atlas} himself!",
+    "Have something to spare? Talk to {atlas} to make a giveaway!",
     "We're planning to start hosting DJ events soon!",
     `You can post memes in the <#${channels.media}> channel!`,
     "We host events randomly! Stay tuned and keep an eye under the Events category for special event channels"
@@ -62,7 +62,7 @@ export default class Tip extends Command {
             tipIndex = WardenApi.getRandomInt(0, tips.length);
         }
 
-        context.ok(tips[tipIndex], `Tip #${tipIndex + 1}`);
+        context.ok(tips[tipIndex].replace("{atlas}", "<@285578743324606482>"), `Tip #${tipIndex + 1}`);
         lastTipIndex = tipIndex;
     }
 };
