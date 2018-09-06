@@ -7,12 +7,7 @@ interface SelfArgs {
     readonly value: string;
 }
 
-enum SelfProperty {
-    Username = "username",
-    Avatar = "avatar",
-    Status = "status",
-    State = "state"
-}
+type SelfProperty = "username" | "avatar" | "status" | "state";
 
 export default class Self extends Command {
     readonly meta = {
@@ -45,7 +40,7 @@ export default class Self extends Command {
         let failed: boolean = false;
 
         switch (args.property) {
-            case SelfProperty.Username: {
+            case "username": {
                 await context.bot.client.user.setUsername(args.value).catch(async (error: Error) => {
                     failed = true;
                     await context.fail(`I was unable to change my username. (${error.message})`);
@@ -54,7 +49,7 @@ export default class Self extends Command {
                 break;
             }
 
-            case SelfProperty.Avatar: {
+            case "avatar": {
                 await context.bot.client.user.setAvatar(args.value).catch(async (error: Error) => {
                     failed = true;
                     await context.fail(`I was unable to change my avatar. (${error.message})`);
@@ -63,7 +58,7 @@ export default class Self extends Command {
                 break;
             }
 
-            case SelfProperty.Status: {
+            case "status": {
                 await context.bot.client.user.setPresence({
                     game: {
                         name: args.value
