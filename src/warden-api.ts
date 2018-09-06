@@ -125,6 +125,9 @@ export class WardenAPI {
     // TODO: Type
     private channels?: ConsumerAPIResolvedChannels;
 
+    /**
+     * @param {WardenAPIOptions} options
+     */
     constructor(options: WardenAPIOptions) {
         this.db = new Database(options.databasePath);
         this.bot = options.bot;
@@ -151,6 +154,9 @@ export class WardenAPI {
         this.caseCounter = await this.getCaseCounter();
     }
 
+    /**
+     * @return {Guild}
+     */
     public getGuild(): Guild {
         const guild: Guild | undefined = this.bot.client.guilds.get(this.guild);
 
@@ -161,6 +167,10 @@ export class WardenAPI {
         return guild;
     }
 
+    /**
+     * @param {Snowflake} id
+     * @return {TextChannel}
+     */
     public getChannel(id: Snowflake): TextChannel {
         const channel = this.getGuild().channels.get(id);
 
