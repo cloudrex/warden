@@ -17,14 +17,18 @@ export default class WelcomeLeave extends Service {
     public async start(): Promise<void> {
         messages = await Utils.readJson("./src/data/welcome-leave-messages.json");
 
-        this.bot.client.on("guildMemberAdd", (member: GuildMember) => {
+        this.bot.client.on("guildMemberAdd", async (member: GuildMember) => {
+            await WelcomeLeave.sendMemberLog(member, true);
             WelcomeLeave.sendGeneral(`${WelcomeLeave.getMessage("welcome", member.user)}\n\n*Make sure to read the <#458708940809699368>!*`, "Joined", member);
         });
 
-        // No longer announce leaves
-        /* this.bot.client.on("guildMemberRemove", (member: GuildMember) => {
-            WelcomeLeave.sendGeneral(WelcomeLeave.getMessage("goodbye", member.user), "Left", member);
-        }); */
+
+        this.bot.client.on("guildMemberRemove", async (member: GuildMember) => {
+            await WelcomeLeave.sendMemberLog(member, false);
+
+            // No longer announce leaves
+            //WelcomeLeave.sendGeneral(WelcomeLeave.getMessage("goodbye", member.user), "Left", member);
+        });
     }
 
     private static sendGeneral(text: string, titleSuffix: string, member: GuildMember, color = "GREEN"): void {
@@ -35,6 +39,22 @@ export default class WelcomeLeave extends Service {
             user: member.user,
             channel: member.guild.channels.get("286352649610199052"), // General
             message: text
+        });
+    }
+
+    /**
+     * @todo Return type
+     * @param {GuildMember} member
+     * @param {boolean} joined Whether the member joined
+     */
+    private static async sendMemberLog(member: GuildMember, joined: boolean): Promise<any> {
+        return Utils.send({
+            title: `Member ${joined ? "Joined" : "Left"}`,
+            channel: member.guild.channels.get("463486605861191700"), // Member Log
+            footer: `${member.guild.memberCount} members`,
+            color: joined ? "GREEN" : "RED",
+            message: `<@${member.id}> (${member.user.tag}) ${joined ? "joined" : "left"}`,
+            user: member.user
         });
     }
 
