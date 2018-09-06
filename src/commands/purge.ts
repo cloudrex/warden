@@ -1,5 +1,5 @@
-import { CommandContext, Command, CommandArgument, ChatEnvironment } from "discord-anvil";
-import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import {ChatEnvironment, Command, CommandArgument, CommandContext} from "discord-anvil";
+import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import SpecificGroups from "../specific-groups";
 
 export interface PurgeArgs {
@@ -15,7 +15,7 @@ export default class Purge extends Command {
     readonly arguments: Array<CommandArgument> = [
         {
             name: "amount",
-            type: PrimitiveArgumentType.NonZeroWholeNumber,
+            type: PrimitiveArgumentType.NonZeroInteger,
             description: "The amount of messages to purge",
             required: true
         }

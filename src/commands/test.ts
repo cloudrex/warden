@@ -1,4 +1,4 @@
-import { Command, CommandContext } from "discord-anvil";
+import {Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export default class Test extends Command {
@@ -13,7 +13,7 @@ export default class Test extends Command {
         this.restrict.specific = SpecificGroups.owner;
     }
 
-    public async executed (context: CommandContext, api: any): Promise<void> {
+    public async executed(context: CommandContext, api: any): Promise<void> {
         /* const setup = SetupHelper.fromContext(context, "Setup Test");
 
         if (setup) {

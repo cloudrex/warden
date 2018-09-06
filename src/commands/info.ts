@@ -1,4 +1,4 @@
-import { Command, Permission, CommandContext, Utils } from "discord-anvil";
+import {Command, CommandContext, Permission, Utils} from "discord-anvil";
 
 export default class Info extends Command {
     readonly meta = {

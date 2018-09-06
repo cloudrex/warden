@@ -1,5 +1,5 @@
-import { Command, Permission, CommandContext, CommandArgument, ChatEnvironment } from "discord-anvil";
-import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
+import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 
 export interface NickArgs {
     readonly nickname: string;

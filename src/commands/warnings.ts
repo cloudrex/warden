@@ -1,5 +1,14 @@
 import {GuildMember, Snowflake} from "discord.js";
-import { Command, ChatEnvironment, CommandContext, DataProvider, Log, JsonProvider, Utils, CommandArgument } from "discord-anvil";
+import {
+    ChatEnvironment,
+    Command,
+    CommandArgument,
+    CommandContext,
+    DataProvider,
+    JsonProvider,
+    Log,
+    Utils
+} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export interface StoredWarning {

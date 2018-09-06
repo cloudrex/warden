@@ -1,5 +1,5 @@
-import { GuildMember, Role } from "discord.js";
-import { Command, Permission, CommandContext, CommandArgument, ChatEnvironment } from "discord-anvil";
+import {GuildMember, Role} from "discord.js";
+import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 
 export interface RoleArgs {
     readonly role: Role;

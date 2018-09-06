@@ -1,4 +1,4 @@
-import { Command, CommandContext } from "discord-anvil";
+import {Command, CommandContext} from "discord-anvil";
 
 export default class Opt extends Command {
     readonly meta = {

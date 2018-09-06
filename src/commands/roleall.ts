@@ -1,5 +1,4 @@
-import { Command, CommandContext, Permission, ChatEnvironment } from "discord-anvil";
-import { GuildMember } from "discord.js";
+import {ChatEnvironment, Command, CommandContext, Permission} from "discord-anvil";
 
 export default class RoleAll extends Command {
     readonly meta = {

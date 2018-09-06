@@ -12,7 +12,7 @@
     "dependencies": {
         "@types/knex": "^0.14.18",
         "@types/node": "^10.5.4",
-        "discord-anvil": "^2.8.0",
+        "discord-anvil": "^2.8.8",
         "discord.js": "^11.3.2",
         "knex": "^0.15.2",
         "sqlite3": "^4.0.2",

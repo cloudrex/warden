@@ -1,8 +1,8 @@
 import {GuildMember} from "discord.js";
-import { Command, Permission, CommandContext, CommandArgument } from "discord-anvil";
+import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
-import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
-import { WardenAPI } from "../warden-api";
+import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {WardenAPI} from "../warden-api";
 
 interface SoftbanArgs {
     readonly member: GuildMember;

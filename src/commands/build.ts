@@ -1,5 +1,5 @@
 import {exec} from "child_process";
-import { Command, CommandContext } from "discord-anvil";
+import {Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export default class Build extends Command {

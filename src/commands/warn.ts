@@ -1,8 +1,8 @@
 import {WardenAPI} from "../warden-api";
-import { Command, ChatEnvironment, CommandContext, Utils, CommandArgument } from "discord-anvil";
+import {ChatEnvironment, Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
-import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
-import { GuildMember } from "discord.js";
+import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {GuildMember} from "discord.js";
 
 interface WarnArgs {
     readonly member: GuildMember;
@@ -38,7 +38,7 @@ export default class Warn extends Command {
 
     constructor() {
         super();
-        
+
         this.restrict.environment = ChatEnvironment.Guild;
         this.restrict.specific = SpecificGroups.staff;
     }

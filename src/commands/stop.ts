@@ -1,4 +1,4 @@
-import { Command, CommandContext } from "discord-anvil";
+import {Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export default class Stop extends Command {
@@ -15,7 +15,7 @@ export default class Stop extends Command {
         this.restrict.specific = SpecificGroups.owner;
     }
 
-    public async executed (context: CommandContext): Promise<void> {
+    public async executed(context: CommandContext): Promise<void> {
         await context.ok("Disconnecting.");
         await context.bot.disconnect();
         process.exit(0);

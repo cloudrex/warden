@@ -1,5 +1,5 @@
 import {Role} from "discord.js";
-import { Command, Permission, CommandContext, CommandArgument, ChatEnvironment } from "discord-anvil";
+import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export interface MentionableArgs {

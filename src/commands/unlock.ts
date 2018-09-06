@@ -1,5 +1,5 @@
 import {Role} from "discord.js";
-import { Command, Permission, CommandContext } from "discord-anvil";
+import {Command, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export default class Unlock extends Command {

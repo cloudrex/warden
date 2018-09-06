@@ -1,6 +1,6 @@
 import SpecificGroups from "../specific-groups";
-import { Command, Permission, CommandContext } from "discord-anvil";
-import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import {Command, CommandContext, Permission} from "discord-anvil";
+import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 
 const request = require("request").defaults({
     encoding: null
@@ -14,7 +14,7 @@ export interface EmojiArgs {
 export default class Emoji extends Command {
     readonly meta = {
         name: "emoji",
-        description: "Add an emoji to the guild"  
+        description: "Add an emoji to the guild"
     };
 
     readonly arguments = [

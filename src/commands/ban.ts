@@ -1,7 +1,7 @@
 import {GuildMember} from "discord.js";
 import {WardenAPI} from "../warden-api";
-import {Command, Permission, CommandContext, CommandArgument} from "discord-anvil";
-import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
+import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 
 export interface BanArgs {
     readonly member: GuildMember;
@@ -43,14 +43,14 @@ export default class Ban extends Command {
     }
 
     public executed(context: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
-        return new Promise((resolve) => {
+        return new Promise<void>(async (resolve) => {
             if (args.member.id === context.sender.id) {
-                context.fail("You can't ban yourself.");
+                await context.fail("You can't ban yourself.");
 
                 return;
             }
             else if (!args.member.bannable) {
-                context.fail("Unable to ban that person.");
+                await context.fail("Unable to ban that person.");
 
                 return;
             }

@@ -4527,3 +4527,522 @@
 [2018-09-03 04:15:29] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Ew no 
 [2018-09-03 04:47:59] [Bot.disconnect] Saving auth store 
 [2018-09-03 04:47:59] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 16:44:05] [JsonAdapter] Data source does not exist, creating default 
+[2018-09-06 16:44:06] [:Database] Database setup completed 
+[2018-09-06 16:44:06] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 16:44:06] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 16:44:06] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 16:44:06] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 16:44:06] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 16:44:06] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 16:44:06] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 16:44:06] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 16:44:06] [Bot.setup] Bot setup completed 
+[2018-09-06 16:44:06] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 16:44:06] [Bot.connect] Starting 
+[2018-09-06 16:44:31] [:Database] Database setup completed 
+[2018-09-06 16:44:31] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 16:44:31] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 16:44:31] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 16:44:31] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 16:44:31] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 16:44:31] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 16:44:31] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 16:44:31] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 16:44:31] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 16:44:31] [Bot.setup] Bot setup completed 
+[2018-09-06 16:44:31] [Bot.connect] Starting 
+[2018-09-06 16:45:15] [:Database] Database setup completed 
+[2018-09-06 16:45:15] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 16:45:15] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 16:45:15] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 16:45:15] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 16:45:15] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 16:45:15] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 16:45:15] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 16:45:15] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 16:45:15] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 16:45:15] [Bot.setup] Bot setup completed 
+[2018-09-06 16:45:15] [Bot.connect] Starting 
+[2018-09-06 16:45:16] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 16:45:16] [ConsoleInterface] Setting up console interface 
+[2018-09-06 16:45:16] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 16:45:16] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 16:45:16] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 16:45:16] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-06 16:45:35] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .whois 484366498891169805 
+[2018-09-06 16:45:35] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 16:46:08] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 484366498891169805 "account probably an alt" 
+[2018-09-06 16:46:08] [Dyno#3861@✨Gaming Corner✨#🚪member-log] (!webchain.network! Emmanuel#2682) was banned 
+[2018-09-06 16:46:08] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-06 16:46:08] [Warden#9606@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 16:47:07] [Bot.disconnect] Saving auth store 
+[2018-09-06 16:47:07] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 16:47:14] [:Database] Database setup completed 
+[2018-09-06 16:47:14] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 16:47:14] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 16:47:14] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 16:47:14] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 16:47:14] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 16:47:14] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 16:47:14] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 16:47:14] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 16:47:14] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 16:47:14] [Bot.setup] Bot setup completed 
+[2018-09-06 16:47:14] [Bot.connect] Starting 
+[2018-09-06 16:47:15] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 16:47:15] [ConsoleInterface] Setting up console interface 
+[2018-09-06 16:47:15] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 16:47:15] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 16:47:15] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 16:47:15] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-06 16:50:12] [Bot.disconnect] Saving auth store 
+[2018-09-06 16:50:12] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 16:50:18] [:Database] Database setup completed 
+[2018-09-06 16:50:18] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 16:50:18] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 16:50:18] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 16:50:18] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 16:50:18] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 16:50:18] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 16:50:18] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 16:50:18] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 16:50:18] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 16:50:18] [Bot.setup] Bot setup completed 
+[2018-09-06 16:50:18] [Bot.connect] Starting 
+[2018-09-06 16:50:20] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 16:50:20] [ConsoleInterface] Setting up console interface 
+[2018-09-06 16:50:20] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 16:50:20] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 16:50:20] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 16:50:20] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-06 16:50:37] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 "testing testing" 
+[2018-09-06 16:50:38] [Warden#9606@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 16:52:00] [Bot.disconnect] Saving auth store 
+[2018-09-06 16:52:00] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 16:52:06] [:Database] Database setup completed 
+[2018-09-06 16:52:06] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 16:52:06] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 16:52:06] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 16:52:06] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 16:52:06] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 16:52:06] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 16:52:07] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 16:52:07] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 16:52:07] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 16:52:07] [Bot.setup] Bot setup completed 
+[2018-09-06 16:52:07] [Bot.connect] Starting 
+[2018-09-06 16:52:07] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 16:52:07] [ConsoleInterface] Setting up console interface 
+[2018-09-06 16:52:07] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 16:52:07] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 16:52:07] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 16:52:07] [Bot.setupEvents] Ready | Took 458ms 
+[2018-09-06 16:52:29] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 "testing testing" 
+[2018-09-06 16:52:29] arguments are,  [object Object]
+[2018-09-06 16:52:30] [Warden#9606@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 16:52:52] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 "testing" 
+[2018-09-06 16:52:52] arguments are,  [object Object]
+[2018-09-06 16:52:53] [Warden#9606@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 16:53:08] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 16:53:08] arguments are,  [object Object]
+[2018-09-06 16:53:08] [Warden#9606@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 16:53:26] [Bot.disconnect] Saving auth store 
+[2018-09-06 16:53:26] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 16:58:49] [:Database] Database setup completed 
+[2018-09-06 16:58:49] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 16:58:49] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 16:58:49] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 16:58:49] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 16:58:49] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 16:58:49] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 16:58:49] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 16:58:49] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 16:58:49] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 16:58:49] [Bot.setup] Bot setup completed 
+[2018-09-06 16:58:49] [Bot.connect] Starting 
+[2018-09-06 16:58:51] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 16:58:51] [ConsoleInterface] Setting up console interface 
+[2018-09-06 16:58:51] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 16:58:51] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 16:58:51] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 16:58:51] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-06 16:59:00] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 16:59:00] raw args,  201345371513946112,test
+[2018-09-06 16:59:00] resolved args,  [object Object]
+[2018-09-06 16:59:00] [Warden#9606@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 17:02:20] [Bot.disconnect] Saving auth store 
+[2018-09-06 17:02:20] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 17:03:03] [:Database] Database setup completed 
+[2018-09-06 17:03:03] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 17:03:03] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 17:03:03] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 17:03:03] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 17:03:03] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 17:03:03] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 17:03:04] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 17:03:04] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 17:03:04] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 17:03:04] [Bot.setup] Bot setup completed 
+[2018-09-06 17:03:04] [Bot.connect] Starting 
+[2018-09-06 17:03:04] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 17:03:04] [ConsoleInterface] Setting up console interface 
+[2018-09-06 17:03:04] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 17:03:04] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 17:03:04] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 17:03:04] [Bot.setupEvents] Ready | Took 469ms 
+[2018-09-06 17:04:30] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 17:04:30] raw args,  201345371513946112,test
+[2018-09-06 17:04:30] resolved args,  [object Object]
+[2018-09-06 17:04:30] [Warden#9606@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 17:05:02] [Bot.disconnect] Saving auth store 
+[2018-09-06 17:05:02] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 17:05:51] [:Database] Database setup completed 
+[2018-09-06 17:05:51] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 17:05:51] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 17:05:51] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 17:05:51] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 17:05:51] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 17:05:51] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 17:05:52] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 17:05:52] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 17:05:52] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 17:05:52] [Bot.setup] Bot setup completed 
+[2018-09-06 17:05:52] [Bot.connect] Starting 
+[2018-09-06 17:05:52] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 17:05:52] [ConsoleInterface] Setting up console interface 
+[2018-09-06 17:05:52] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 17:05:52] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 17:05:52] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 17:05:52] [Bot.setupEvents] Ready | Took 486ms 
+[2018-09-06 17:07:17] [Bot.disconnect] Saving auth store 
+[2018-09-06 17:07:17] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 17:07:22] [:Database] Database setup completed 
+[2018-09-06 17:07:22] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 17:07:22] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 17:07:22] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 17:07:22] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 17:07:22] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 17:07:22] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 17:07:22] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 17:07:22] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 17:07:22] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 17:07:22] [Bot.setup] Bot setup completed 
+[2018-09-06 17:07:22] [Bot.connect] Starting 
+[2018-09-06 17:07:22] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 17:07:22] [ConsoleInterface] Setting up console interface 
+[2018-09-06 17:07:22] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 17:07:22] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 17:07:22] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 17:07:22] [Bot.setupEvents] Ready | Took 473ms 
+[2018-09-06 17:07:39] [:Database] Database setup completed 
+[2018-09-06 17:07:39] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 17:07:39] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 17:07:39] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 17:07:39] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 17:07:39] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 17:07:39] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 17:07:40] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 17:07:40] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 17:07:40] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 17:07:40] [Bot.setup] Bot setup completed 
+[2018-09-06 17:07:40] [Bot.connect] Starting 
+[2018-09-06 17:07:40] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 17:07:40] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 17:07:40] [ConsoleInterface] Setting up console interface 
+[2018-09-06 17:07:40] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 17:07:40] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 17:07:40] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-06 17:07:55] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 17:07:55] raw args,  201345371513946112,test
+[2018-09-06 17:07:55] resolver wasn't found for 'someguy' => set to '201345371513946112' 
+[2018-09-06 17:07:55] resolver wasn't found for 'reason' => set to 'test' 
+[2018-09-06 17:07:55] resolved args,  [object Object]
+[2018-09-06 17:07:55] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 17:08:47] [Bot.disconnect] Saving auth store 
+[2018-09-06 17:08:47] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 17:09:33] [:Database] Database setup completed 
+[2018-09-06 17:09:33] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 17:09:33] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 17:09:33] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 17:09:33] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 17:09:33] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 17:09:33] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 17:09:33] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 17:09:33] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 17:09:33] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 17:09:33] [Bot.setup] Bot setup completed 
+[2018-09-06 17:09:33] [Bot.connect] Starting 
+[2018-09-06 17:09:33] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-06 17:09:33] [ConsoleInterface] Setting up console interface 
+[2018-09-06 17:09:33] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 17:09:33] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 17:09:33] [Bot.setupEvents] Logged in as Warden#9606 | 1 guild(s) 
+[2018-09-06 17:09:33] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-06 17:10:22] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 17:10:22] raw args,  201345371513946112,test
+[2018-09-06 17:10:22] resolved args,  [object Object]
+[2018-09-06 17:10:22] [Warden#9606@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 17:26:12] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I feel like today are going to join some new ppl 
+[2018-09-06 17:26:14] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I just feel it 
+[2018-09-06 17:26:19] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <:GWsetmyxPeepoEvil:405337570952740864> 
+[2018-09-06 17:30:19] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] “today are going to join some new people” 
+[2018-09-06 17:31:50] [GoldenVolcarona#2867@✨Gaming Corner✨#📦development] Also, you should probably think of a prefix for commands, or if you just have to ping it/say a word in a sentence for a command 
+[2018-09-06 17:49:16] [DepressedGiraffe#9265@✨Gaming Corner✨#🤖bots] dj ping 
+[2018-09-06 17:49:16] [DJ#3340@✨Gaming Corner✨#🤖bots]  
+[2018-09-06 17:49:18] [DepressedGiraffe#9265@✨Gaming Corner✨#🤖bots] hey dj 
+[2018-09-06 17:49:18] [DJ#3340@✨Gaming Corner✨#🤖bots] Yes daddy? 
+[2018-09-06 17:49:19] [DepressedGiraffe#9265@✨Gaming Corner✨#🤖bots] ping 
+[2018-09-06 17:49:19] [DJ#3340@✨Gaming Corner✨#🤖bots]  
+[2018-09-06 20:02:43] [:Database] Database setup completed 
+[2018-09-06 20:02:43] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 20:02:43] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 20:02:43] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 20:02:43] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 20:02:43] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 20:02:43] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 20:02:44] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 20:02:44] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 20:02:44] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 20:02:44] [Bot.setup] Bot setup completed 
+[2018-09-06 20:02:44] [Bot.connect] Starting 
+[2018-09-06 20:04:03] [:Database] Database setup completed 
+[2018-09-06 20:04:03] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 20:04:03] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 20:04:03] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 20:04:03] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 20:04:03] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 20:04:03] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 20:04:03] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 20:04:03] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 20:04:03] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 20:04:03] [Bot.setup] Bot setup completed 
+[2018-09-06 20:04:03] [Bot.connect] Starting 
+[2018-09-06 20:04:05] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-06 20:04:05] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 20:04:05] [ConsoleInterface] Setting up console interface 
+[2018-09-06 20:04:05] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 20:04:05] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-06 20:04:05] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-06 20:04:40] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 20:04:40] raw args,  201345371513946112,test
+[2018-09-06 20:04:40] resolved args,  [object Object]
+[2018-09-06 20:04:41] [Shield#8221@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 20:09:16] [Bot.disconnect] Saving auth store 
+[2018-09-06 20:09:16] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 20:10:59] [:Database] Database setup completed 
+[2018-09-06 20:10:59] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 20:10:59] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 20:10:59] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 20:10:59] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 20:10:59] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 20:10:59] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 20:10:59] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 20:10:59] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 20:10:59] [Bot.setup] Bot setup completed 
+[2018-09-06 20:10:59] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 20:10:59] [Bot.connect] Starting 
+[2018-09-06 20:10:59] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-06 20:10:59] [ConsoleInterface] Setting up console interface 
+[2018-09-06 20:10:59] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 20:10:59] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 20:10:59] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-06 20:10:59] [Bot.setupEvents] Ready | Took 487ms 
+[2018-09-06 20:11:11] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 20:11:11] raw args,  201345371513946112,test
+[2018-09-06 20:11:11] resolved args,  [object Object]
+[2018-09-06 20:11:11] [Shield#8221@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 20:11:17] [Bot.disconnect] Saving auth store 
+[2018-09-06 20:11:17] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 20:11:45] [:Database] Database setup completed 
+[2018-09-06 20:11:45] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 20:11:45] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 20:11:45] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 20:11:45] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 20:11:45] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 20:11:45] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 20:11:45] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 20:11:45] [Bot.setup] Bot setup completed 
+[2018-09-06 20:11:45] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 20:11:45] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 20:11:45] [Bot.connect] Starting 
+[2018-09-06 20:11:46] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-06 20:11:46] [ConsoleInterface] Setting up console interface 
+[2018-09-06 20:11:46] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 20:11:46] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 20:11:46] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-06 20:11:46] [Bot.setupEvents] Ready | Took 470ms 
+[2018-09-06 20:11:59] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 20:11:59] resolved args,  [object Object]
+[2018-09-06 20:11:59] raw args,  201345371513946112,test
+[2018-09-06 20:11:59] [Shield#8221@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 20:12:19] [🌌Atlas#2473@✨Gaming Corner✨#💬general] https://www.youtube.com/watch?v=BPWk3SjKRAs 
+[2018-09-06 20:12:27] [🌌Atlas#2473@✨Gaming Corner✨#💬general] meet ya at the top of the coconout tree 
+[2018-09-06 20:12:35] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ( ͡° ͜ʖ ͡°) 
+[2018-09-06 20:14:34] [🌌Atlas#2473@✨Gaming Corner✨#💬general] \e[3J 
+[2018-09-06 20:20:13] [Bot.disconnect] Saving auth store 
+[2018-09-06 20:20:13] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 20:20:18] [:Database] Database setup completed 
+[2018-09-06 20:20:18] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 20:20:18] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 20:20:18] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 20:20:18] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 20:20:18] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 20:20:18] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 20:20:18] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 20:20:18] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 20:20:18] [Bot.setup] Bot setup completed 
+[2018-09-06 20:20:18] [Bot.connect] Starting 
+[2018-09-06 20:20:18] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 20:20:18] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-06 20:20:18] [ConsoleInterface] Setting up console interface 
+[2018-09-06 20:20:18] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 20:20:18] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 20:20:18] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-06 20:20:18] [Bot.setupEvents] Ready | Took 469ms 
+[2018-09-06 20:20:41] raw args,  201345371513946112,test
+[2018-09-06 20:20:41] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test
+✅
+1 
+[2018-09-06 20:20:41] resolved args,  [object Object]
+[2018-09-06 20:20:41] [Shield#8221@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 20:21:04] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 20:21:04] raw args,  201345371513946112,test
+[2018-09-06 20:21:04] resolved args,  [object Object]
+[2018-09-06 20:21:04] [Shield#8221@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 20:22:25] [Bot.disconnect] Saving auth store 
+[2018-09-06 20:22:25] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 20:22:46] [:Database] Database setup completed 
+[2018-09-06 20:22:46] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 20:22:46] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 20:22:46] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 20:22:46] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 20:22:46] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 20:22:46] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 20:22:46] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 20:22:46] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 20:22:46] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 20:22:46] [Bot.setup] Bot setup completed 
+[2018-09-06 20:22:46] [Bot.connect] Starting 
+[2018-09-06 20:22:46] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-06 20:22:46] [ConsoleInterface] Setting up console interface 
+[2018-09-06 20:22:46] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 20:22:46] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 20:22:46] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-06 20:22:46] [Bot.setupEvents] Ready | Took 487ms 
+[2018-09-06 20:23:55] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test
+✅
+1 
+[2018-09-06 20:23:55] raw args,  201345371513946112,test
+[2018-09-06 20:23:55] resolver was found for member 
+[2018-09-06 20:23:55] resolver was found for reason 
+[2018-09-06 20:23:55] resolved args,  [object Object]
+[2018-09-06 20:23:55] [Shield#8221@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 20:26:56] [Bot.disconnect] Saving auth store 
+[2018-09-06 20:26:56] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 20:27:15] [:Database] Database setup completed 
+[2018-09-06 20:27:15] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 20:27:15] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 20:27:15] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 20:27:15] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 20:27:15] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 20:27:15] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 20:27:15] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 20:27:15] [Bot.setup] Bot setup completed 
+[2018-09-06 20:27:15] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 20:27:15] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 20:27:15] [Bot.connect] Starting 
+[2018-09-06 20:27:16] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-06 20:27:16] [ConsoleInterface] Setting up console interface 
+[2018-09-06 20:27:16] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 20:27:16] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 20:27:16] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-06 20:27:16] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-06 20:27:26] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 20:27:26] raw args,  201345371513946112,test
+[2018-09-06 20:27:26] resolver name is,  member
+[2018-09-06 20:27:26] schema type is,  member
+[2018-09-06 20:27:26] resolver was found for member 
+[2018-09-06 20:27:26] resolver name is,  member
+[2018-09-06 20:27:26] schema type is,  member
+[2018-09-06 20:27:26] resolver was found for reason 
+[2018-09-06 20:27:26] resolvers are all,  [object Object]
+[2018-09-06 20:27:26] schema is all,  [object Object],[object Object],[object Object]
+[2018-09-06 20:27:26] resolved args,  [object Object]
+[2018-09-06 20:27:26] [Shield#8221@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 20:33:35] [Bowser V2 ✔#5788@✨Gaming Corner✨#💬general] Tf 
+[2018-09-06 20:33:35] [Bot.disconnect] Saving auth store 
+[2018-09-06 20:33:35] [Bot.disconnect] Saving JsonProvider 
+[2018-09-06 20:34:18] [:Database] Database setup completed 
+[2018-09-06 20:34:18] [Bot.setup] Attempting to load internal fragments 
+[2018-09-06 20:34:18] [Bot.setup] Loading 6 internal fragments 
+[2018-09-06 20:34:18] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-06 20:34:18] [Bot.setup] Loading 4 service(s) 
+[2018-09-06 20:34:18] [Bot.setup] Loaded 4 service(s) 
+[2018-09-06 20:34:18] [Bot.setup] Loading 28 command(s) 
+[2018-09-06 20:34:18] [Bot.setup] Loaded 28 command(s) 
+[2018-09-06 20:34:18] [Bot.setupEvents] Discord events setup completed 
+[2018-09-06 20:34:18] [Bot.setupEvents] Setting up Discord events 
+[2018-09-06 20:34:18] [Bot.setup] Bot setup completed 
+[2018-09-06 20:34:18] [Bot.connect] Starting 
+[2018-09-06 20:34:19] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-06 20:34:19] [ConsoleInterface] Setting up console interface 
+[2018-09-06 20:34:19] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-06 20:34:19] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-06 20:34:19] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-06 20:34:19] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-06 20:34:31] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ~~chika chika bom boom~~ 
+[2018-09-06 20:35:00] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .help 
+[2018-09-06 20:35:00] raw args,  
+[2018-09-06 20:35:00] resolved args,  [object Object]
+[2018-09-06 20:35:34] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .usage help 
+[2018-09-06 20:35:34] raw args,  help
+[2018-09-06 20:35:34] resolver wasn't found for 'command' => set to 'help' 
+[2018-09-06 20:35:34] resolvers are all,  [object Object]
+[2018-09-06 20:35:34] schema is all,  [object Object]
+[2018-09-06 20:35:34] resolved args,  [object Object]
+[2018-09-06 20:35:34] [Shield#8221@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 20:35:38] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .usage 
+[2018-09-06 20:35:38] raw args,  
+[2018-09-06 20:35:38] [Shield#8221@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 20:35:41] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .usage usage 
+[2018-09-06 20:35:41] raw args,  usage
+[2018-09-06 20:35:41] resolver wasn't found for 'command' => set to 'usage' 
+[2018-09-06 20:35:41] resolvers are all,  [object Object]
+[2018-09-06 20:35:41] schema is all,  [object Object]
+[2018-09-06 20:35:41] resolved args,  [object Object]
+[2018-09-06 20:35:41] [Shield#8221@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 20:35:54] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .help 
+[2018-09-06 20:35:54] raw args,  
+[2018-09-06 20:35:54] resolved args,  [object Object]
+[2018-09-06 20:36:15] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .tip 
+[2018-09-06 20:36:15] raw args,  
+[2018-09-06 20:36:15] resolved args,  [object Object]
+[2018-09-06 20:36:15] [Shield#8221@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 20:36:17] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .tip 
+[2018-09-06 20:36:17] raw args,  
+[2018-09-06 20:36:17] [Shield#8221@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 20:36:19] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .tip 
+[2018-09-06 20:36:19] raw args,  
+[2018-09-06 20:36:20] [Shield#8221@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 20:36:21] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .tip 
+[2018-09-06 20:36:21] raw args,  
+[2018-09-06 20:36:21] resolved args,  [object Object]
+[2018-09-06 20:36:21] [Shield#8221@✨Gaming Corner✨#🚧mod-cmd]  
+[2018-09-06 20:36:25] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] <:thonk:432000810159702038> 
+[2018-09-06 20:36:27] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] <:thonkery:484571753285156864> 
+[2018-09-06 20:36:33] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] <:hyperthonk:447630615559536641> 
+[2018-09-06 20:36:37] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] <:GWfroggyKermitReee:398569982406950922> 
+[2018-09-06 20:37:10] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .ban 201345371513946112 test 
+[2018-09-06 20:37:10] raw args,  201345371513946112,test
+[2018-09-06 20:37:10] resolver name is,  member
+[2018-09-06 20:37:10] schema type is,  member
+[2018-09-06 20:37:10] resolver was found for member 
+[2018-09-06 20:37:10] resolver wasn't found for 'reason' => set to 'test' 
+[2018-09-06 20:37:10] resolvers are all,  [object Object]
+[2018-09-06 20:37:10] schema is all,  [object Object],[object Object],[object Object]
+[2018-09-06 20:37:10] resolved args,  [object Object]
+[2018-09-06 20:37:10] reason was,  test
+[2018-09-06 20:37:10] [Shield#8221@✨Gaming Corner✨#📘mod-log]  
+[2018-09-06 20:39:59] [Bot.disconnect] Saving auth store 
+[2018-09-06 20:39:59] [Bot.disconnect] Saving JsonProvider 

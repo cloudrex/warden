@@ -1,5 +1,5 @@
 import WardenApi from "../warden-api";
-import { Command, CommandContext } from "discord-anvil";
+import {Command, CommandContext} from "discord-anvil";
 
 const channels = {
     media: "382054707029475348",

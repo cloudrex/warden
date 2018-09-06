@@ -1,7 +1,7 @@
-import { Role } from "discord.js";
-import { Command, CommandContext, CommandArgument, ChatEnvironment } from "discord-anvil";
+import {Role} from "discord.js";
+import {ChatEnvironment, Command, CommandArgument, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
-import { PrimitiveArgumentType } from "discord-anvil/dist/commands/command";
+import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 
 interface RolesArgs {
     readonly page: number;
@@ -16,7 +16,7 @@ export default class Roles extends Command {
     readonly arguments: Array<CommandArgument> = [
         {
             name: "page",
-            type: PrimitiveArgumentType.WholeNumber,
+            type: PrimitiveArgumentType.UnsignedInteger,
             defaultValue: 0
         }
     ];

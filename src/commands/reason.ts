@@ -1,4 +1,4 @@
-import { Command, ChatEnvironment, CommandContext } from "discord-anvil";
+import {ChatEnvironment, Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export default class Reason extends Command {

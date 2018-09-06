@@ -1,6 +1,6 @@
 import {WardenAPI} from "../warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
-import { Command, CommandContext, SetupHelper, SetupHelperResult } from "discord-anvil";
+import {Command, CommandContext, SetupHelper, SetupHelperResult} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 
 export default class Embed extends Command {

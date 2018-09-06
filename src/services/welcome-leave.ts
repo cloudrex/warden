@@ -21,9 +21,10 @@ export default class WelcomeLeave extends Service {
             WelcomeLeave.sendGeneral(`${WelcomeLeave.getMessage("welcome", member.user)}\n\n*Make sure to read the <#458708940809699368>!*`, "Joined", member);
         });
 
-        this.bot.client.on("guildMemberRemove", (member: GuildMember) => {
+        // No longer announce leaves
+        /* this.bot.client.on("guildMemberRemove", (member: GuildMember) => {
             WelcomeLeave.sendGeneral(WelcomeLeave.getMessage("goodbye", member.user), "Left", member);
-        });
+        }); */
     }
 
     private static sendGeneral(text: string, titleSuffix: string, member: GuildMember, color = "GREEN"): void {
