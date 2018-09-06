@@ -1,4 +1,5 @@
-import { Snowflake } from "discord.js";
+import {Snowflake} from "discord.js";
+import {CaseType} from "../warden-api";
 
 export interface DatabaseMessage {
     readonly id: Snowflake;
@@ -8,4 +9,13 @@ export interface DatabaseMessage {
     readonly time: number;
     readonly channel: Snowflake;
     readonly deleted: boolean;
+}
+
+export interface DatabaseCase {
+    readonly id: number;
+    readonly messageId: Snowflake;
+    readonly channelId: Snowflake;
+    readonly reason: string;
+    readonly moderator: Snowflake;
+    readonly type: CaseType;
 }

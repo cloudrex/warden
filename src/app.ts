@@ -105,7 +105,7 @@ async function start() {
         });
 
         await (await bot.setup(api)).connect();
-        api.setup();
+        await api.setup();
 
         //////////////
         WardenApi.store = store;

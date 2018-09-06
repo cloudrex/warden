@@ -1,12 +1,12 @@
-import knex, { QueryBuilder } from "knex";
-import { KnexTable, Log } from "discord-anvil";
-import { DatabaseMessage } from "./database-entities";
+import knex, {QueryBuilder} from "knex";
+import {KnexTable, Log} from "discord-anvil";
+import {DatabaseMessage} from "./database-entities";
 
 export default class Database {
     public readonly path: string;
     public readonly messages: KnexTable<DatabaseMessage>;
 
-    private x: knex;
+    private readonly x: knex;
 
     constructor(path: string) {
         this.path = path;

@@ -399,9 +399,9 @@ detect-libc@^1.0.2:
   version "1.0.3"
   resolved "http://localhost:4873/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
 
-discord-anvil@^2.8.8:
-  version "2.8.8"
-  resolved "http://localhost:4873/discord-anvil/-/discord-anvil-2.8.8.tgz#5ea047c516f7658c4a6286f7904c66b97dc5f449"
+discord-anvil@^2.9.0:
+  version "2.9.0"
+  resolved "http://localhost:4873/discord-anvil/-/discord-anvil-2.9.0.tgz#a426c76e8dc64076affc77048f595ace516c063f"
   dependencies:
     "@types/chai" "^4.1.4"
     "@types/knex" "^0.14.17"

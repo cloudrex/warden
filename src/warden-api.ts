@@ -21,13 +21,17 @@ const badWords: Array<string> = [
 
 const racialSlurs: Array<string> = [
     "nigg",
-    "zipperhead",
-    "bobo",
-    "amigo",
     "blaxican",
     "faggot",
     "nibba"
 ];
+
+export enum CaseType {
+    Warn,
+    Mute,
+    Kick,
+    Ban
+}
 
 export interface WarnOptions {
     readonly user: GuildMember;
@@ -116,6 +120,8 @@ export class WardenAPI {
     private readonly bot: Bot;
     private readonly guild: Snowflake;
 
+    public caseCounter: number;
+
     // TODO: Type
     private channels?: ConsumerAPIResolvedChannels;
 
@@ -126,9 +132,13 @@ export class WardenAPI {
         this.roles = options.roles;
         this.unresolvedChannels = options.channels;
         this.deletedMessages = new Map<Snowflake, Message>();
+        this.caseCounter = 0;
     }
 
-    public setup(): void {
+    /**
+     * @return {Promise<void>}
+     */
+    public async setup(): Promise<void> {
         this.channels = {
             modLog: this.getChannel(this.unresolvedChannels.modLog),
             suggestions: this.getChannel(this.unresolvedChannels.suggestions),
@@ -137,6 +147,8 @@ export class WardenAPI {
             decisions: this.getChannel(this.unresolvedChannels.decisions),
             changes: this.getChannel(this.unresolvedChannels.changes)
         };
+
+        this.caseCounter = await this.getCaseCounter();
     }
 
     public getGuild(): Guild {
@@ -162,12 +174,26 @@ export class WardenAPI {
         return <TextChannel>channel;
     }
 
+    /**
+     * @return {number}
+     */
     public getCase(): number {
-        // TODO
+        this.caseCounter++;
 
-        return 0;
+        return this.caseCounter - 1;
     }
 
+    /**
+     * Returns the case number to start counting from based on the amount of cases in the database
+     * @return {Promise<number>}
+     */
+    public async getCaseCounter(): Promise<number> {
+        return ((await this.db.getConnection()("cases").count().then()) as any)[0]["count(*)"];
+    }
+
+    /**
+     * @return {GuildMember | null}
+     */
     public getOwner(): GuildMember | null {
         if (!this.bot.owner) {
             return null;
@@ -176,6 +202,10 @@ export class WardenAPI {
         return this.getGuild().member(this.bot.owner) || null;
     }
 
+    /**
+     * @param {WarnOptionsv2} options
+     * @return {Promise<void>}
+     */
     public async saveWarning(options: WarnOptionsv2): Promise<void> {
         if (!this.bot.dataStore) {
             Log.error("[WardenAPI.addWarning] Expecting a data provider");
@@ -198,8 +228,17 @@ export class WardenAPI {
         });
 
         await jsonStore.save();
+
+        // TODO: Problem with case counter and database (count counts already in, what if a case is deleted?)
+        /* await this.db.getConnection()("cases").insert({
+
+        } as DatabaseCase).then(); */
     }
 
+    /**
+     * @param {WarnOptionsv2} options
+     * @return {Promise<boolean>}
+     */
     public async warn(options: WarnOptionsv2): Promise<boolean> {
         if (!this.channels) {
             Log.error("[WardenAPI.warn] Expecting channels");
@@ -243,15 +282,16 @@ export class WardenAPI {
             .setColor("GOLD")
             .setTitle(`Case #${caseNum}`));
 
-        if (options.message.deletable) {
-            await options.message.delete();
-        }
-
         await this.saveWarning(options);
 
         return true;
     }
 
+    /**
+     * @param {string} suggestion
+     * @param {GuildMember} author
+     * @return {Promise<boolean>}
+     */
     public async addSuggestion(suggestion: string, author: GuildMember): Promise<boolean> {
         if (!this.channels) {
             Log.throw("[WardenAPI.addSuggestion] Consumer API is not setup");
@@ -272,6 +312,10 @@ export class WardenAPI {
         return false;
     }
 
+    /**
+     * @param {CaseOptions} options
+     * @return {Promise<void>}
+     */
     public async reportCase(options: CaseOptions): Promise<void> {
         if (!this.channels) {
             Log.throw("[WardenAPI.reportCase] Consumer API is not setup");
@@ -297,7 +341,11 @@ export class WardenAPI {
         this.channels.modLog.send(embed);
     }
 
-    // TODO: Using ConsumerAPI
+    /**
+     * @todo Using ConsumerAPI
+     * @param {Message} message
+     * @return {string}
+     */
     public static isMessageSuspicious(message: Message): string {
         if (message.content.length > 500) {
             return SuspectedViolation.Long;
@@ -320,6 +368,11 @@ export class WardenAPI {
         return SuspectedViolation.None;
     }
 
+    /**
+     * @param {Message} message
+     * @param {string} suspectedViolation
+     * @return {Promise<void>}
+     */
     public async flagMessage(message: Message, suspectedViolation: string): Promise<void> {
         if (!this.channels) {
             Log.error("[WardenAPI.flagMessage] Expecting channels");
