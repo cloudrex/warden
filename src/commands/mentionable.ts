@@ -1,12 +1,15 @@
 import {Role} from "discord.js";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 export interface MentionableArgs {
     readonly role: Role;
 }
 
 export default class Mentionable extends Command {
+    readonly type = CommandType.Utility;
+
     readonly meta = {
         name: "mentionable",
         description: "Toggle a role mentionable"

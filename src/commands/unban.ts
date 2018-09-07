@@ -2,6 +2,7 @@ import {Snowflake} from "discord.js";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandType} from "./help";
 
 interface UnbanArgs {
     readonly user: Snowflake;
@@ -9,6 +10,8 @@ interface UnbanArgs {
 }
 
 export default class Unban extends Command {
+    readonly type = CommandType.Moderation;
+
     readonly meta = {
         name: "unban",
         description: "Unban a user"

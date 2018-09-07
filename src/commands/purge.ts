@@ -1,12 +1,15 @@
 import {ChatEnvironment, Command, CommandArgument, CommandContext} from "discord-anvil";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 export interface PurgeArgs {
     readonly amount: number;
 }
 
 export default class Purge extends Command {
+    readonly type = CommandType.Utility;
+
     readonly meta = {
         name: "purge",
         description: "Delete messages in bulk"

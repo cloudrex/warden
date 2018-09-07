@@ -1,11 +1,14 @@
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandType} from "./help";
 
 export interface NickArgs {
     readonly nickname: string;
 }
 
 export default class Nick extends Command {
+    readonly type = CommandType.Moderation;
+
     readonly meta = {
         name: "nick",
         description: "Manage nicknames"

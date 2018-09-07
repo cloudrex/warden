@@ -2,8 +2,11 @@ import {Message, RichEmbed} from "discord.js";
 import {WardenAPI} from "../warden-api";
 import {ChatEnvironment, Command, CommandContext, Utils} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 export default class Snipe extends Command {
+    readonly type = CommandType.Utility;
+
     readonly meta = {
         name: "snipe",
         description: "View the last deleted message in this channel"

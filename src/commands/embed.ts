@@ -2,8 +2,11 @@ import {WardenAPI} from "../warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
 import {Command, CommandContext, SetupHelper, SetupHelperResult} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 export default class Embed extends Command {
+    readonly type = CommandType.Utility;
+
     readonly meta = {
         name: "embed",
         description: "Create an embed"

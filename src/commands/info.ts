@@ -1,6 +1,9 @@
 import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {CommandType} from "./help";
 
 export default class Info extends Command {
+    readonly type = CommandType.Informational;
+
     readonly meta = {
         name: "info",
         description: "View information about the server"

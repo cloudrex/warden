@@ -2,6 +2,7 @@ import {GuildMember} from "discord.js";
 import {WardenAPI} from "../warden-api";
 import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandType} from "./help";
 
 export interface BanArgs {
     readonly member: GuildMember;
@@ -10,6 +11,8 @@ export interface BanArgs {
 }
 
 export default class Ban extends Command {
+    readonly type = CommandType.Moderation;
+
     readonly meta = {
         name: "ban",
         description: "Ban a member"

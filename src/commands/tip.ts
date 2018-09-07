@@ -1,5 +1,6 @@
 import WardenApi from "../warden-api";
 import {Command, CommandContext} from "discord-anvil";
+import {CommandType} from "./help";
 
 const channels = {
     media: "382054707029475348",
@@ -44,6 +45,8 @@ const tips = [
 ];
 
 export default class Tip extends Command {
+    readonly type = CommandType.Informational;
+
     readonly meta = {
         name: "tip",
         description: "View a random tip"

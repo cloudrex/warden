@@ -1,8 +1,11 @@
 import {Role} from "discord.js";
 import {Command, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 export default class Lockdown extends Command {
+    readonly type = CommandType.Moderation;
+
     readonly meta = {
         name: "lockdown",
         description: "Lockdown the guild"

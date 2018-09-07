@@ -1,12 +1,15 @@
-import {GuildMember, RichEmbed} from "discord.js";
+import {GuildMember, Message, RichEmbed} from "discord.js";
 import {Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 interface WhoisArgs {
     readonly member: GuildMember;
 }
 
 export default class Whois extends Command {
+    readonly type = CommandType.Informational;
+
     readonly meta = {
         name: "whois",
         description: "View information about a user",
@@ -17,7 +20,8 @@ export default class Whois extends Command {
             name: "member",
             description: "The member to inspect",
             type: "member",
-            required: true
+            required: false,
+            defaultValue: (message: Message) => message.author.id
         }
     ];
 

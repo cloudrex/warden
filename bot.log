@@ -5621,3 +5621,43 @@
 [2018-09-06 21:42:47] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
 [2018-09-06 21:43:53] [Bot.disconnect] Saving auth store 
 [2018-09-06 21:43:53] [Bot.disconnect] Saving JsonProvider 
+[2018-09-07 03:15:35] [:Database] Database setup completed 
+[2018-09-07 03:15:35] [Bot.setup] Attempting to load internal fragments 
+[2018-09-07 03:15:35] [Bot.setup] Loading 6 internal fragments 
+[2018-09-07 03:15:35] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-07 03:15:35] [Bot.setup] Loading 4 service(s) 
+[2018-09-07 03:15:35] [Bot.setup] Loaded 4 service(s) 
+[2018-09-07 03:15:35] [Bot.setup] Loading 28 command(s) 
+[2018-09-07 03:15:35] [Bot.setup] Loaded 28 command(s) 
+[2018-09-07 03:15:35] [Bot.setupEvents] Setting up Discord events 
+[2018-09-07 03:15:35] [Bot.setupEvents] Discord events setup completed 
+[2018-09-07 03:15:35] [Bot.setup] Bot setup completed 
+[2018-09-07 03:15:35] [Bot.connect] Starting 
+[2018-09-07 03:15:35] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-07 03:15:35] [ConsoleInterface] Setting up console interface 
+[2018-09-07 03:15:35] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-07 03:15:35] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-07 03:15:35] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-07 03:15:35] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-07 03:15:37] [Bot.disconnect] Saving auth store 
+[2018-09-07 03:15:37] [Bot.disconnect] Saving JsonProvider 
+[2018-09-07 03:21:02] [:Database] Database setup completed 
+[2018-09-07 03:21:02] [Bot.setup] Attempting to load internal fragments 
+[2018-09-07 03:21:02] [Bot.setup] Loading 6 internal fragments 
+[2018-09-07 03:21:02] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-07 03:21:02] [Bot.setup] Loading 4 service(s) 
+[2018-09-07 03:21:02] [Bot.setup] Loaded 4 service(s) 
+[2018-09-07 03:21:02] [Bot.setup] Loading 28 command(s) 
+[2018-09-07 03:21:02] [Bot.setup] Loaded 28 command(s) 
+[2018-09-07 03:21:02] [Bot.setupEvents] Setting up Discord events 
+[2018-09-07 03:21:02] [Bot.setupEvents] Discord events setup completed 
+[2018-09-07 03:21:02] [Bot.setup] Bot setup completed 
+[2018-09-07 03:21:02] [Bot.connect] Starting 
+[2018-09-07 03:21:02] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-07 03:21:02] [ConsoleInterface] Setting up console interface 
+[2018-09-07 03:21:02] [ConsoleInterface.setup] Console interface setup completed 
+[2018-09-07 03:21:02] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-07 03:21:02] [Bot.setupEvents] Logged in as Shield#8221 | 1 guild(s) 
+[2018-09-07 03:21:02] [Bot.setupEvents] Ready | Took 484ms 
+[2018-09-07 03:21:05] [Bot.disconnect] Saving auth store 
+[2018-09-07 03:21:05] [Bot.disconnect] Saving JsonProvider 

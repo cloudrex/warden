@@ -76,7 +76,15 @@ async function start() {
 
         options: {
             logMessages: true
-        }
+        },
+
+        primitiveCommands: [
+            "usage",
+            "ping",
+            "auth",
+            "prefix",
+            "throw"
+        ]
     });
 
     if (bot.dataStore) {

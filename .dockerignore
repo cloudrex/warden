@@ -2,5 +2,6 @@ dist/
 tmp/
 node_modules/
 .idea/
-tasks/
 build/
+yarn.lock
+package-lock.json

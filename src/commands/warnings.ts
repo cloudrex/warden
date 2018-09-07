@@ -10,6 +10,7 @@ import {
     Utils
 } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 export interface StoredWarning {
     readonly reason: string;
@@ -22,6 +23,8 @@ interface WarningsArgs {
 }
 
 export default class Warnings extends Command {
+    readonly type = CommandType.Moderation;
+
     readonly meta = {
         name: "warnings",
         description: "View the warnings of a member",

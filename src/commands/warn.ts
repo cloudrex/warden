@@ -3,6 +3,7 @@ import {ChatEnvironment, Command, CommandArgument, CommandContext, Utils} from "
 import SpecificGroups from "../specific-groups";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {GuildMember} from "discord.js";
+import {CommandType} from "./help";
 
 interface WarnArgs {
     readonly member: GuildMember;
@@ -11,6 +12,8 @@ interface WarnArgs {
 }
 
 export default class Warn extends Command {
+    readonly type = CommandType.Moderation;
+
     readonly meta = {
         name: "warn",
         description: "Warn an user"

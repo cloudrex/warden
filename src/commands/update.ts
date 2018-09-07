@@ -1,8 +1,11 @@
 import {exec} from "child_process";
 import {Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 export default class Update extends Command {
+    readonly type = CommandType.Configuration;
+
     readonly meta = {
         name: "update",
         description: "Pull changes from the git repository"

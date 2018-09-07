@@ -1,6 +1,9 @@
 import {ChatEnvironment, Command, CommandContext, Permission} from "discord-anvil";
+import {CommandType} from "./help";
 
 export default class RoleAll extends Command {
+    readonly type = CommandType.Utility;
+
     readonly meta = {
         name: "roleall",
         description: "Add a role to all members"

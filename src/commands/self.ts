@@ -1,6 +1,7 @@
 import {Command, CommandContext} from "discord-anvil";
 import {CommandArgument, PrimitiveArgumentType} from "discord-anvil/dist";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 interface SelfArgs {
     readonly property: SelfProperty;
@@ -10,6 +11,8 @@ interface SelfArgs {
 type SelfProperty = "username" | "avatar" | "status" | "state";
 
 export default class Self extends Command {
+    readonly type = CommandType.Configuration;
+
     readonly meta = {
         name: "self",
         description: "Manage the bot's details"

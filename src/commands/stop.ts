@@ -1,7 +1,10 @@
 import {Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
+import {CommandType} from "./help";
 
 export default class Stop extends Command {
+    readonly type = CommandType.Configuration;
+
     readonly meta = {
         name: "stop",
         description: "Disconnect the bot"

@@ -3,6 +3,7 @@ import {Command, CommandArgument, CommandContext, Permission} from "discord-anvi
 import SpecificGroups from "../specific-groups";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {WardenAPI} from "../warden-api";
+import {CommandType} from "./help";
 
 interface SoftbanArgs {
     readonly member: GuildMember;
@@ -11,6 +12,8 @@ interface SoftbanArgs {
 }
 
 export default class Softban extends Command {
+    readonly type = CommandType.Moderation;
+
     readonly meta = {
         name: "softban",
         description: "Softban a user"

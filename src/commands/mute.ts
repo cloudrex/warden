@@ -3,6 +3,7 @@ import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} f
 import SpecificGroups from "../specific-groups";
 import {GuildMember} from "discord.js";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandType} from "./help";
 
 export interface MuteArgs {
     readonly member: GuildMember;
@@ -11,6 +12,8 @@ export interface MuteArgs {
 }
 
 export default class Mute extends Command {
+    readonly type = CommandType.Moderation;
+
     readonly meta = {
         name: "mute",
         description: "Mute a user"

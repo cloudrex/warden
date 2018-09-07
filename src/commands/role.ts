@@ -1,5 +1,6 @@
 import {GuildMember, Role} from "discord.js";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
+import {CommandType} from "./help";
 
 export interface RoleArgs {
     readonly role: Role;
@@ -7,6 +8,8 @@ export interface RoleArgs {
 }
 
 export default class RoleCommand extends Command {
+    readonly type = CommandType.Utility;
+
     readonly meta = {
         name: "role",
         description: "Manage member roles"
