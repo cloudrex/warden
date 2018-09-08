@@ -15,10 +15,12 @@
     "license": "MIT",
     "dependencies": {
         "@types/knex": "^0.14.18",
+        "@types/mongodb": "^3.1.4",
         "@types/node": "^10.9.4",
         "discord-anvil": "git+https://gitlab+deploy-token-14678:b9jbdgmJjyZESL5hUk5V@gitlab.com/cloudrex/anvil.git#dev-2.0",
         "discord.js": "^11.4.2",
         "knex": "^0.15.2",
+        "mongodb": "^3.1.4",
         "sqlite3": "^4.0.2",
         "typescript": "^2.9.2"
     }

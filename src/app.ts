@@ -1,4 +1,5 @@
 import WardenApi, {WardenAPI} from "./warden-api";
+import {default as setupMongoDatabase} from "./database/mongo-database";
 import {Guild, GuildMember, Message, TextChannel} from "discord.js";
 import path from "path";
 import {
@@ -75,7 +76,8 @@ async function start() {
         owner: "285578743324606482",
 
         options: {
-            logMessages: true
+            logMessages: true,
+            consoleInterface: false
         },
 
         primitiveCommands: [
@@ -138,6 +140,12 @@ async function start() {
             Log.error("[:Consumer.start] The Gaming Corner guild was not found");
         }
     }
+
+    setTimeout(() => {
+        Log.debug("Setting up mongodb database");
+        setupMongoDatabase();
+        Log.debug("Mongodb database setup completed");
+    }, 10000);
 }
 
 start();
