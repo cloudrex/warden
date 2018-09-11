@@ -3,6 +3,7 @@ import WardenApi, {WardenAPI} from "../warden-api";
 import {Bot, CommandParser, Log, Service} from "discord-anvil";
 import Patterns from "discord-anvil/dist/core/patterns";
 import Utils from "discord-anvil/dist/core/utils";
+import {ModerationActionType} from "../database/mongo-database";
 
 const conflictingBots: Array<Snowflake> = [
     "155149108183695360" // Dyno#3861
@@ -19,7 +20,7 @@ export default class Protection extends Service {
     public start(): void {
         this.bot.client.on("message", async (message: Message) => {
             // Log the message into the database
-            this.api.db.messages.insert({
+            /* this.api.db.messages.insert({
                 author: message.author.id,
                 authorTag: message.author.tag,
                 channel: message.channel.id,
@@ -27,7 +28,9 @@ export default class Protection extends Service {
                 id: message.id,
                 text: message.content,
                 time: message.createdTimestamp
-            });
+            }); */
+
+            const api: WardenAPI = this.api;
 
             if (Patterns.invite.test(message.content)) {
                 const matches = message.content.match(Patterns.invite);
@@ -53,11 +56,11 @@ export default class Protection extends Service {
                                         evidence = evidence.substring(0, 200) + " ...";
                                     }
 
-                                    await this.api.warn({
-                                        message: message,
-                                        moderator: this.bot.client.user,
+                                    await api.executeAction({
+                                        type: ModerationActionType.Warn,
+                                        moderator: message.guild.me,
                                         reason: "Posted an invite link to a different server",
-                                        user: message.member,
+                                        member: message.member,
                                         evidence: evidence
                                     });
 
