@@ -35,7 +35,8 @@ export default class Ban extends Command {
         {
             name: "evidence",
             description: "Evidence for the reason",
-            type: PrimitiveArgumentType.String
+            type: PrimitiveArgumentType.String,
+            required: false
         }
     ];
 
