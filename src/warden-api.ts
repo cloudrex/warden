@@ -1,7 +1,6 @@
 import {StoredWarning} from "./commands/warnings";
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
 import {Bot, DataProvider, JsonProvider, Log} from "discord-anvil";
-import Database from "./database/database";
 import Mongo, {ModerationAction, ModerationActionType} from "./database/mongo-database";
 
 const badWords: Array<string> = [
@@ -114,7 +113,6 @@ export interface WardenAPIOptions {
 export class WardenAPI {
     public readonly unresolvedChannels: ConsumerAPIChannels;
     public readonly roles: ConsumerAPIRoles;
-    public readonly db: Database;
     public readonly deletedMessages: Map<Snowflake, Message>;
 
     private readonly bot: Bot;
@@ -129,7 +127,6 @@ export class WardenAPI {
      * @param {WardenAPIOptions} options
      */
     constructor(options: WardenAPIOptions) {
-        this.db = new Database(options.databasePath);
         this.bot = options.bot;
         this.guild = options.guild;
         this.roles = options.roles;
@@ -151,7 +148,7 @@ export class WardenAPI {
             changes: this.getChannel(this.unresolvedChannels.changes)
         };
 
-        this.caseCounter = await this.getCaseCounter();
+        this.caseCounter = 0;// TODO await this.getCaseCounter();
     }
 
     /**
@@ -310,14 +307,6 @@ export class WardenAPI {
         this.caseCounter++;
 
         return this.caseCounter - 1;
-    }
-
-    /**
-     * Returns the case number to start counting from based on the amount of cases in the database
-     * @return {Promise<number>}
-     */
-    public async getCaseCounter(): Promise<number> {
-        return ((await this.db.getConnection()("cases").count().then()) as any)[0]["count(*)"];
     }
 
     /**

@@ -19,9 +19,7 @@
         "@types/node": "^10.9.4",
         "discord-anvil": "git+https://gitlab+deploy-token-14678:b9jbdgmJjyZESL5hUk5V@gitlab.com/cloudrex/anvil.git#master",
         "discord.js": "^11.4.2",
-        "knex": "^0.15.2",
         "mongodb": "^3.1.4",
-        "sqlite3": "^4.0.2",
         "typescript": "^2.9.2"
     }
 }

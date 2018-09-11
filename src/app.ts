@@ -1,5 +1,5 @@
 import WardenApi, {WardenAPI} from "./warden-api";
-import Mongo, {default as setupMongoDatabase} from "./database/mongo-database";
+import Mongo from "./database/mongo-database";
 import {Guild, GuildMember, Message, TextChannel} from "discord.js";
 import path from "path";
 import {
