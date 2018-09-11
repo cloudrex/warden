@@ -3,4 +3,4 @@ ENV TERM="xterm-256color"
 WORKDIR /app
 ADD . /app
 RUN npm install
-CMD ["npm", "start"]
+ENTRYPOINT ["npm", "start"]
