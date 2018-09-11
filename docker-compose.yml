@@ -27,5 +27,5 @@ services:
     depends_on:
       - mongo
     environment:
-      token: NDQ2NzM2MzA3MTcyMDE2MTM4.Dib6CQ.yYRlUXMNAlJirqA1mT3gpUAKlpo
-      prefix: .
+      token: "${token}"
+      prefix: "${prefix}"
