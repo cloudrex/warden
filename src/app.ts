@@ -1,5 +1,5 @@
 import WardenApi, {WardenAPI} from "./warden-api";
-import {default as setupMongoDatabase} from "./database/mongo-database";
+import Mongo, {default as setupMongoDatabase} from "./database/mongo-database";
 import {Guild, GuildMember, Message, TextChannel} from "discord.js";
 import path from "path";
 import {
@@ -141,9 +141,9 @@ async function start() {
         }
     }
 
-    setTimeout(() => {
+    setTimeout(async () => {
         Log.debug("Setting up mongodb database");
-        setupMongoDatabase();
+        await Mongo.connect();
         Log.debug("Mongodb database setup completed");
     }, 10000);
 }

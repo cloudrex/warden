@@ -3,6 +3,7 @@ import {WardenAPI} from "../warden-api";
 import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";
+import {ModerationActionType} from "../database/mongo-database";
 
 export interface BanArgs {
     readonly member: GuildMember;
@@ -58,24 +59,12 @@ export default class Ban extends Command {
                 return;
             }
 
-            args.member.ban({
-                days: 1,
-                reason: args.reason
-            }).then(async () => {
-                // TODO: Does it actually await this?
-                await api.reportCase({
-                    moderator: context.sender,
-                    color: "RED",
-                    reason: args.reason,
-                    evidence: args.evidence,
-                    title: "Ban",
-                    member: args.member
-                });
-
-                resolve();
-            }).catch(async (error: Error) => {
-                // TODO: Does it actually await this?
-                await context.fail(`Operation failed. (${error.message})`);
+            await api.executeAction({
+                type: ModerationActionType.Ban,
+                reason: args.reason,
+                member: args.member,
+                evidence: args.evidence,
+                moderator: context.message.member
             });
         });
     }

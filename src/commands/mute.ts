@@ -4,10 +4,12 @@ import SpecificGroups from "../specific-groups";
 import {GuildMember} from "discord.js";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";
+import {ModerationActionType} from "../database/mongo-database";
 
 export interface MuteArgs {
     readonly member: GuildMember;
     readonly reason: string;
+    readonly time?: number;
     readonly evidence?: string;
 }
 
@@ -33,9 +35,16 @@ export default class Mute extends Command {
             required: true
         },
         {
+            name: "time",
+            description: "The time to mute the user",
+            type: PrimitiveArgumentType.NonZeroInteger,
+            required: false,
+        },
+        {
             name: "evidence",
             description: "The evidence of the reason",
-            type: PrimitiveArgumentType.String
+            type: PrimitiveArgumentType.String,
+            required: false
         }
     ];
 
@@ -48,15 +57,14 @@ export default class Mute extends Command {
         this.restrict.specific = SpecificGroups.staff;
     }
 
-    // TODO: Where is it adding the muted role?
     public async executed(context: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {
-        await api.reportCase({
+        await api.executeAction({
             member: args.member,
-            title: "Mute",
+            type: ModerationActionType.Mute,
             evidence: args.evidence,
-            moderator: context.message.author,
+            moderator: context.message.member,
             reason: args.reason,
-            color: "GOLD"
+            end: args.time ? Date.now() + (args.time * 60000) : undefined
         });
     }
 };

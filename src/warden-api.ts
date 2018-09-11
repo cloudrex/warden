@@ -2,7 +2,7 @@ import {StoredWarning} from "./commands/warnings";
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
 import {Bot, DataProvider, JsonProvider, Log} from "discord-anvil";
 import Database from "./database/database";
-import Patterns from "discord-anvil/dist/core/patterns";
+import Mongo, {ModerationAction, ModerationActionType} from "./database/mongo-database";
 
 const badWords: Array<string> = [
     "asshole",
@@ -155,6 +155,125 @@ export class WardenAPI {
     }
 
     /**
+     * @param {ModerationAction} action
+     * @return {Promise<void>}
+     */
+    public async executeAction(action: ModerationAction): Promise<void> {
+        switch (action.type) {
+            case ModerationActionType.Warn: {
+                const caseNum: number = 0; // TODO
+                const autoWarn: boolean = action.moderator.id === this.bot.client.user.id;
+
+                const embed: RichEmbed = new RichEmbed()
+                    .setTitle(`Warn | Case #${caseNum}`)
+                    .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
+                    .addField("Reason", action.reason)
+                    .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.username})`)
+                    .setThumbnail(action.evidence ? action.evidence : "")
+                    .setFooter(autoWarn ? "Automatically warned" : `Warned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
+                    .setColor("GOLD");
+
+                if (this.channels) {
+                    await this.channels.modLog.send(embed);
+                }
+                else {
+                    Log.error("[WardenAPI.executeAction] Expecting channels");
+                }
+
+                const warnDM: string = autoWarn ? `You were automatically warned for **${action.reason}**` : `You were warned by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`;
+
+                await (await action.member.createDM()).send(new RichEmbed()
+                    .setDescription(warnDM)
+                    .setColor("GOLD")
+                    .setTitle(`Case #${caseNum}`));
+
+                break;
+            }
+
+            case ModerationActionType.Mute: {
+                await action.member.addRole(action.member.guild.roles.find("name", "Muted"), action.reason);
+
+                const caseNum: number = 0; // TODO
+
+                if (this.channels) {
+                    await this.channels.modLog.send(new RichEmbed()
+                        .setTitle(`Mute | Case #${caseNum}`)
+                        .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
+                        .addField("Reason", action.reason)
+                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.username})`)
+                        .setThumbnail(action.evidence ? action.evidence : "")
+                        .setFooter(`Muted by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
+                        .setColor("BLUE"));
+                }
+                else {
+                    Log.error("[WardenAPI.executeAction] Expecting channels");
+                }
+
+                (await action.member.createDM()).send(new RichEmbed()
+                    .setDescription(`You were muted by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
+                    .setColor("BLUE")
+                    .setTitle(`Case #${caseNum}`));
+
+                break;
+            }
+
+            case ModerationActionType.Ban: {
+                await action.member.ban({
+                    days: 1,
+                    reason: action.reason
+                });
+
+                const caseNum: number = 0; // TODO
+
+                if (this.channels) {
+                    await this.channels.modLog.send(new RichEmbed()
+                        .setTitle(`Ban | Case #${caseNum}`)
+                        .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
+                        .addField("Reason", action.reason)
+                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.username})`)
+                        .setThumbnail(action.evidence ? action.evidence : "")
+                        .setFooter(`Banned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
+                        .setColor("RED"));
+                }
+                else {
+                    Log.error("[WardenAPI.executeAction] Expecting channels");
+                }
+
+                await (await action.member.createDM()).send(new RichEmbed()
+                    .setDescription(`You were banned from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
+                    .setColor("RED")
+                    .setTitle(`Case #${caseNum}`));
+
+                break;
+            }
+
+            default: {
+                Log.error(`[WardenAPI.executeAction] Unexpected action type: '${action.type}'`);
+
+                return;
+            }
+        }
+
+        await WardenAPI.saveAction(action);
+    }
+
+    /**
+     * @param {ModerationAction} action
+     * @return {Promise<void>}
+     */
+    private static async saveAction(action: ModerationAction): Promise<void> {
+        await Mongo.collections.moderationActions.insertOne({
+            type: action.type,
+            reason: action.reason,
+            memberId: action.member.id,
+            moderatorId: action.moderator.id,
+            end: action.end,
+            time: Date.now(),
+            evidence: action.evidence
+        });
+    }
+
+    /**
      * @return {Guild}
      */
     public getGuild(): Guild {
@@ -210,91 +329,6 @@ export class WardenAPI {
         }
 
         return this.getGuild().member(this.bot.owner) || null;
-    }
-
-    /**
-     * @param {WarnOptionsv2} options
-     * @return {Promise<void>}
-     */
-    public async saveWarning(options: WarnOptionsv2): Promise<void> {
-        if (!this.bot.dataStore) {
-            Log.error("[WardenAPI.addWarning] Expecting a data provider");
-
-            return;
-        }
-        else if (!(this.bot.dataStore instanceof JsonProvider)) {
-            Log.error("[WardenAPI.addWarning] Expecting data provider to be of type 'JsonProvider'");
-
-            return;
-        }
-
-        const jsonStore: JsonProvider = this.bot.dataStore;
-
-        jsonStore.push(`warnings.u${options.user.id}`, <StoredWarning>{
-            reason: options.reason,
-            moderator: options.moderator.id,
-            evidence: options.evidence,
-            time: Date.now()
-        });
-
-        await jsonStore.save();
-
-        // TODO: Problem with case counter and database (count counts already in, what if a case is deleted?)
-        /* await this.db.getConnection()("cases").insert({
-
-        } as DatabaseCase).then(); */
-    }
-
-    /**
-     * @param {WarnOptionsv2} options
-     * @return {Promise<boolean>}
-     */
-    public async warn(options: WarnOptionsv2): Promise<boolean> {
-        if (!this.channels) {
-            Log.error("[WardenAPI.warn] Expecting channels");
-
-            return false;
-        }
-
-        if (!(this.channels.modLog instanceof TextChannel)) {
-            Log.error("[WardenAPI.warn] Expecting ModLog channel to be of type 'TextChannel'");
-
-            return false;
-        }
-
-        const caseNum: number = WardenApiOld.getCase();
-        const autoWarn: boolean = options.moderator.id === this.bot.client.user.id;
-
-        const caseEmbed = new RichEmbed()
-            .setTitle(`Warn | Case #${caseNum}`)
-            .addField("Member", `<@${options.user.id}> (${options.user.user.username})`)
-            .addField("Reason", options.reason)
-            .addField("Moderator", `<@${options.moderator.id}> (${options.moderator.username})`)
-            .setThumbnail(options.evidence ? options.evidence : "")
-            .setFooter(autoWarn ? "Automatically warned" : `Warned by ${options.moderator.username}`, options.moderator.avatarURL)
-            .setColor("GOLD");
-
-        // If the evidence is not an image, add it to a field
-        if (options.evidence && (Patterns.url.test(options.evidence) && !Patterns.invite.test(options.evidence))) {
-            caseEmbed.setThumbnail("");
-            caseEmbed.addField("Evidence", options.evidence);
-        }
-        else {
-            console.log(options.evidence);
-        }
-
-        this.channels.modLog.send(caseEmbed);
-
-        const warnDM: string = autoWarn ? `You were automatically warned for **${options.reason}**` : `You were warned by <@${options.moderator.id}> (${options.moderator.username}) for **${options.reason}**`;
-
-        (await options.user.createDM()).send(new RichEmbed()
-            .setDescription(warnDM)
-            .setColor("GOLD")
-            .setTitle(`Case #${caseNum}`));
-
-        await this.saveWarning(options);
-
-        return true;
     }
 
     /**

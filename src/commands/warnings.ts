@@ -1,4 +1,4 @@
-import {GuildMember, Snowflake} from "discord.js";
+import {GuildMember, RichEmbed, Snowflake} from "discord.js";
 import {
     ChatEnvironment,
     Command,
@@ -11,6 +11,7 @@ import {
 } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import Mongo, {DatabaseWarning} from "../database/mongo-database";
 
 export interface StoredWarning {
     readonly reason: string;
@@ -46,30 +47,22 @@ export default class Warnings extends Command {
         this.restrict.specific = SpecificGroups.staff;
     }
 
-    public executed(context: CommandContext, args: WarningsArgs): void {
-        let dataProvider: DataProvider | undefined = context.bot.dataStore;
+    private getDate(warning: DatabaseWarning): string {
+        const date: Date = new Date(warning.time);
 
-        if (!dataProvider) {
-            Log.error("[Warnings.executed] Expecting data provider");
-            context.fail("No data provider");
+        return `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
+    }
 
-            return;
-        }
-        else if (!(dataProvider instanceof JsonProvider)) {
-            Log.error("[Warnings.executed] Expecting data provider to be of type 'JsonProvider'");
-            context.fail("Invalid data provider type");
+    public async executed(context: CommandContext, args: WarningsArgs): Promise<void> {
+        const warnings: Array<DatabaseWarning> = await Mongo.collections.moderationActions.find({
+            memberId: args.member.id
+        }).toArray();
 
-            return;
-        }
+        const message: string = warnings.length > 0 ? warnings.map((warning: DatabaseWarning) => `${this.getDate(warning)} ${warning.reason}`).join("\n") : "*This user has no recorded warnings*";
 
-        const warnings: Array<StoredWarning> = dataProvider.get(`warnings.u${args.member.id}`);
-
-        if (!warnings) {
-            context.ok("This user has no warnings.");
-
-            return;
-        }
-
-        context.ok(warnings.map((warning: StoredWarning, index: number) => `**${index + 1}**. ${warning.reason} - ${Utils.timeAgo(warning.time)}`).join("\n"));
+        await context.message.channel.send(new RichEmbed()
+            .setDescription(message)
+            .setFooter(`${warnings.length} warnings on record`)
+            .setThumbnail(args.member.user.avatarURL));
     }
 };

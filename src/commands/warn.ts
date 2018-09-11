@@ -4,6 +4,7 @@ import SpecificGroups from "../specific-groups";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {GuildMember} from "discord.js";
 import {CommandType} from "./help";
+import {ModerationActionType} from "../database/mongo-database";
 
 interface WarnArgs {
     readonly member: GuildMember;
@@ -35,7 +36,8 @@ export default class Warn extends Command {
         {
             name: "evidence",
             description: "The evidence of the reason",
-            type: PrimitiveArgumentType.String
+            type: PrimitiveArgumentType.String,
+            required: false
         }
     ];
 
@@ -49,22 +51,22 @@ export default class Warn extends Command {
     // TODO: Throws unknown message
     public async executed(context: CommandContext, args: WarnArgs, api: WardenAPI): Promise<void> { // TODO: api type not working for some reason
         if (context.sender.id === args.member.id) {
-            context.fail("You can't warn yourself");
+            await context.fail("You can't warn yourself");
 
             return;
         }
         else if (args.member.user.bot) {
-            context.fail("You can't warn a bot");
+            await context.fail("You can't warn a bot");
 
             return;
         }
 
-        await api.warn({
-            moderator: context.sender,
+        await api.executeAction({
+            type: ModerationActionType.Warn,
+            moderator: context.message.member,
             reason: args.reason,
-            user: args.member,
-            evidence: args.evidence,
-            message: context.message
+            member: args.member,
+            evidence: args.evidence
         });
     }
 };

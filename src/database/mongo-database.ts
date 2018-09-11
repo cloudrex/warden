@@ -1,51 +1,77 @@
-import {MongoClient} from "mongodb";
+import {Collection, Db, MongoClient} from "mongodb";
 import Log from "discord-anvil/dist/core/log";
+import {GuildMember, Snowflake} from "discord.js";
 
 const url: string = "mongodb://mongoadm:mongopass@mongo:27017/admin";
 const dbName: string = "warden";
 
-export default function () {
+export type MongoCollections = {
+    readonly messages: Collection;
+    readonly moderationActions: Collection;
+};
 
-    // Use connect method to connect to the server
-    /* MongoClient.connect(url, async (error: Error, client: MongoClient) => {
-        if (error) {
-            Log.debug("There was an error while connecting");
-        }
-        else {
-            Log.debug("Connected to mongodb database");
-        }
+export enum ModerationActionType {
+    Warn,
+    Mute,
+    Unmute,
+    Kick,
+    Ban,
+    Unban
+}
 
-        const db = client.db(dbName);
+export type ModerationAction = {
+    readonly type: ModerationActionType;
+    readonly member: GuildMember;
+    readonly reason: string;
+    readonly moderator: GuildMember;
+    readonly evidence?: string;
+    readonly end?: number;
+};
 
-        //
+export type DatabaseWarning = {
+    readonly reason: string;
+    readonly memberId: Snowflake;
+    readonly moderatorId: Snowflake;
+    readonly type: ModerationActionType;
+    readonly time: number;
+    readonly evidence?: string;
+    readonly end?: number;
+};
 
-        await client.close();
-    }); */
+export default abstract class Mongo {
+    public static db: Db;
 
-    MongoClient.connect(url, {
-        useNewUrlParser: true
-    }, async (error: Error, client: MongoClient) => {
-        if (error) {
-            Log.debug("There was an error establishing connection to the MongoDB database.");
-            console.log(error.message);
-        }
-        else {
-            Log.debug("Successfully connected to the MongoDB database.");
-        }
+    public static collections: MongoCollections;
 
-        const db = client.db(dbName);
+    public static connect(): Promise<boolean> {
+        return new Promise((resolve) => {
+            MongoClient.connect(url, {
+                useNewUrlParser: true
+            }, async (error: Error, client: MongoClient) => {
+                if (error) {
+                    Log.debug("There was an error establishing connection to the MongoDB database.");
+                    console.log(error.message);
 
-        await db.collection("messages").insertOne({
-            name: "john doe",
-            age: 100,
-            fav: "boku dake"
+                    resolve(false);
+
+                    return;
+                }
+
+                Log.debug("Successfully connected to the MongoDB database.");
+
+                // Store Database
+                Mongo.db = client.db(dbName);
+
+                // Setup Collections
+                Mongo.collections = {
+                    messages: Mongo.db.collection("messages"),
+                    moderationActions: Mongo.db.collection("moderation-actions")
+                };
+
+                resolve(true);
+
+                return;
+            });
         });
-
-        // works as expected, left here
-        console.log(await db.collection("messages").findOne({
-            age: 100
-        }).then());
-
-        client.close();
-    });
+    }
 }
