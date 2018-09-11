@@ -38,6 +38,16 @@ export type DatabaseWarning = {
     readonly end?: number;
 };
 
+export type DatabaseMessage = {
+    readonly author: string;
+    readonly authorId: Snowflake;
+    readonly messageId: Snowflake;
+    readonly message: string;
+    readonly time: number;
+    readonly guildId: Snowflake;
+    readonly channelId: Snowflake;
+};
+
 export default abstract class Mongo {
     public static db: Db;
 

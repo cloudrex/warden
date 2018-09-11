@@ -3,7 +3,7 @@ import WardenApi, {WardenAPI} from "../warden-api";
 import {Bot, CommandParser, Log, Service} from "discord-anvil";
 import Patterns from "discord-anvil/dist/core/patterns";
 import Utils from "discord-anvil/dist/core/utils";
-import {ModerationActionType} from "../database/mongo-database";
+import Mongo, {DatabaseMessage, ModerationActionType} from "../database/mongo-database";
 
 const conflictingBots: Array<Snowflake> = [
     "155149108183695360" // Dyno#3861
@@ -20,15 +20,15 @@ export default class Protection extends Service {
     public start(): void {
         this.bot.client.on("message", async (message: Message) => {
             // Log the message into the database
-            /* this.api.db.messages.insert({
-                author: message.author.id,
-                authorTag: message.author.tag,
-                channel: message.channel.id,
-                deleted: false,
-                id: message.id,
-                text: message.content,
-                time: message.createdTimestamp
-            }); */
+            await Mongo.collections.messages.insertOne({
+                author: message.author.tag,
+                authorId: message.author.id,
+                channelId: message.channel.id,
+                message: message.content,
+                messageId: message.id,
+                time: message.createdTimestamp,
+                guildId: message.guild.id
+            });
 
             const api: WardenAPI = this.api;
 
