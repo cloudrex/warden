@@ -61,7 +61,7 @@ export interface WardenApiOptions {
     readonly channels: ConsumerApiChannels;
 }
 
-export class WardenAPI {
+export default class WardenAPI {
     public readonly unresolvedChannels: ConsumerApiChannels;
     public readonly roles: ConsumerAPIRoles;
     public readonly deletedMessages: Map<Snowflake, Message>;

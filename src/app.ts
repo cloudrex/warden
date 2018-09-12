@@ -1,4 +1,4 @@
-import WardenApi, {WardenAPI} from "./core/warden-api";
+import WardenApi from "./core/warden-api";
 import Mongo from "./database/mongo-database";
 import {Guild, GuildMember, Message, TextChannel} from "discord.js";
 import path from "path";
@@ -89,57 +89,28 @@ async function start() {
         ]
     });
 
-    if (bot.dataStore) {
-        const store: JsonProvider = bot.dataStore as JsonProvider;
+    const api: WardenApi = new WardenApi({
+        guild: "286352649610199052",
+        databasePath: "warden.db",
+        bot: bot,
 
-        await store.reload();
+        // Gaming corner
+        channels: {
+            suggestions: "458337067299242004",
+            modLog: "458794765308395521",
+            review: "464911303291699210",
+            votes: "471067993158451210",
+            decisions: "471068005959467011",
+            changes: "471068072141389824"
+        },
 
-        const api: WardenAPI = new WardenAPI({
-            guild: "286352649610199052",
-            databasePath: "warden.db",
-            bot: bot,
-
-            // Gaming corner
-            channels: {
-                suggestions: "458337067299242004",
-                modLog: "458794765308395521",
-                review: "464911303291699210",
-                votes: "471067993158451210",
-                decisions: "471068005959467011",
-                changes: "471068072141389824"
-            },
-
-            roles: {
-                muted: "463500384812531715"
-            }
-        });
-
-        await (await bot.setup(api)).connect();
-        await api.setup();
-
-        //////////////
-        WardenApi.store = store;
-
-        const storedCounter = store.get("case_counter");
-
-        WardenApi.caseCounter = storedCounter ? storedCounter : 0;
-
-        const gamingCorner: Guild | null = bot.client.guilds.get("286352649610199052") || null;
-
-        if (gamingCorner !== null) {
-            const modLogChannel: TextChannel = gamingCorner.channels.get("458794765308395521") as TextChannel;
-
-            if (modLogChannel) {
-                WardenApi.modLogChannel = modLogChannel;
-            }
-            else {
-                Log.error("[:Consumer.start] The ModLog channel was not found");
-            }
+        roles: {
+            muted: "463500384812531715"
         }
-        else {
-            Log.error("[:Consumer.start] The Gaming Corner guild was not found");
-        }
-    }
+    });
+
+    await (await bot.setup(api)).connect();
+    await api.setup();
 
     setTimeout(async () => {
         Log.debug("Setting up mongodb database");
