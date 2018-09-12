@@ -1,4 +1,3 @@
-import {StoredWarning} from "../commands/warnings";
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
 import {Bot, DataProvider, JsonProvider, Log} from "discord-anvil";
 import Mongo, {ModerationAction, ModerationActionType} from "../database/mongo-database";
@@ -32,7 +31,7 @@ export interface CaseOptions {
     readonly evidence?: string;
 }
 
-export interface ConsumerAPIChannels {
+export interface ConsumerApiChannels {
     readonly modLog: Snowflake;
     readonly suggestions: Snowflake;
     readonly review: Snowflake;
@@ -41,7 +40,7 @@ export interface ConsumerAPIChannels {
     readonly changes: Snowflake;
 }
 
-export interface ConsumerAPIResolvedChannels {
+export interface ConsumerApiResolvedChannels {
     readonly modLog: TextChannel;
     readonly suggestions: TextChannel;
     readonly review: TextChannel;
@@ -54,16 +53,16 @@ export interface ConsumerAPIRoles {
     readonly muted: Snowflake;
 }
 
-export interface WardenAPIOptions {
+export interface WardenApiOptions {
     readonly bot: Bot;
     readonly databasePath: string;
     readonly guild: Snowflake;
     readonly roles: ConsumerAPIRoles;
-    readonly channels: ConsumerAPIChannels;
+    readonly channels: ConsumerApiChannels;
 }
 
 export class WardenAPI {
-    public readonly unresolvedChannels: ConsumerAPIChannels;
+    public readonly unresolvedChannels: ConsumerApiChannels;
     public readonly roles: ConsumerAPIRoles;
     public readonly deletedMessages: Map<Snowflake, Message>;
 
@@ -73,12 +72,12 @@ export class WardenAPI {
     public caseCounter: number;
 
     // TODO: Type
-    private channels?: ConsumerAPIResolvedChannels;
+    private channels?: ConsumerApiResolvedChannels;
 
     /**
-     * @param {WardenAPIOptions} options
+     * @param {WardenApiOptions} options
      */
-    constructor(options: WardenAPIOptions) {
+    constructor(options: WardenApiOptions) {
         this.bot = options.bot;
         this.guild = options.guild;
         this.roles = options.roles;
@@ -381,10 +380,10 @@ export class WardenAPI {
         return;
     }
 
-    public static getRandomInt(min: number, max: number): number {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
+    /**
+     * @param {string} message The message to inspect
+     * @return {number} The number of bad words found
+     */
     public static countBadWords(message: string): number {
         let count = 0;
 
@@ -399,6 +398,10 @@ export class WardenAPI {
         return count;
     }
 
+    /**
+     * @param {string} message The message to inspect
+     * @return {boolean} Whether the message contains racial slurs
+     */
     public static containsRacialSlurs(message: string): boolean {
         for (let i = 0; i < RacialSlurs.length; i++) {
             if (message.toLowerCase().includes(RacialSlurs[i])) {
