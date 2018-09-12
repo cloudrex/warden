@@ -1,10 +1,10 @@
-import {WardenAPI} from "../core/warden-api";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {GuildMember} from "discord.js";
 import {CommandType} from "./help";
 import {ModerationActionType} from "../database/mongo-database";
+import WardenAPI from "../core/warden-api";
 
 interface WarnArgs {
     readonly member: GuildMember;

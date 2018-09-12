@@ -1,6 +1,5 @@
-import WardenApi from "./core/warden-api";
 import Mongo from "./database/mongo-database";
-import {Guild, GuildMember, Message, TextChannel} from "discord.js";
+import {GuildMember, Message} from "discord.js";
 import path from "path";
 import {
     ArgumentTypeChecker,
@@ -14,6 +13,7 @@ import {
     Utils
 } from "discord-anvil";
 import {CommandArgumentResolver} from "discord-anvil/dist/commands/command";
+import WardenAPI from "./core/warden-api";
 
 const baseDir: string = "./src";
 
@@ -21,8 +21,8 @@ Log.level = LogLevel.Debug;
 
 const settings = new Settings({
     general: {
-        token: process.env.token ? process.env.token : "",
-        prefixes: process.env.prefix ? process.env.prefix.split(",") : ["!"]
+        token: process.env.token || "",
+        prefixes: process.env.prefix ? process.env.prefix.split(",") : ["."]
     },
 
     paths: {
@@ -89,9 +89,8 @@ async function start() {
         ]
     });
 
-    const api: WardenApi = new WardenApi({
+    const api: WardenAPI = new WardenAPI({
         guild: "286352649610199052",
-        databasePath: "warden.db",
         bot: bot,
 
         // Gaming corner

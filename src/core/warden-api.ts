@@ -55,7 +55,6 @@ export interface ConsumerAPIRoles {
 
 export interface WardenApiOptions {
     readonly bot: Bot;
-    readonly databasePath: string;
     readonly guild: Snowflake;
     readonly roles: ConsumerAPIRoles;
     readonly channels: ConsumerApiChannels;

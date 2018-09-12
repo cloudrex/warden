@@ -1,6 +1,6 @@
-import WardenApi from "../core/warden-api";
 import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "./help";
+import Utils from "discord-anvil/dist/core/utils";
 
 const channels = {
     media: "382054707029475348",
@@ -62,7 +62,7 @@ export default class Tip extends Command {
         let tipIndex = lastTipIndex;
 
         while (tipIndex === lastTipIndex) {
-            tipIndex = WardenApi.getRandomInt(0, tips.length);
+            tipIndex = Utils.getRandomInt(0, tips.length);
         }
 
         context.ok(tips[tipIndex].replace("{atlas}", "<@285578743324606482>"), `Tip #${tipIndex + 1}`);

@@ -5738,3 +5738,32 @@
 [2018-09-12 21:34:35] Setting up mongodb database 
 [2018-09-12 21:34:35] There was an error establishing connection to the MongoDB database. 
 [2018-09-12 21:34:35] Mongodb database setup completed 
+[2018-09-12 22:00:16] [Bot.setup] Attempting to load internal fragments 
+[2018-09-12 22:00:16] [Bot.setup] Loading 6 internal fragments 
+[2018-09-12 22:00:16] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-12 22:00:16] [Bot.setup] Loading 4 service(s) 
+[2018-09-12 22:00:16] [Bot.setup] Loaded 4 service(s) 
+[2018-09-12 22:00:16] [Bot.setup] Loading 30 command(s) 
+[2018-09-12 22:00:16] [Bot.setupEvents] Setting up Discord events 
+[2018-09-12 22:00:16] [Bot.setup] Loaded 30 command(s) 
+[2018-09-12 22:00:16] [Bot.setupEvents] Discord events setup completed 
+[2018-09-12 22:00:16] [Bot.setup] Bot setup completed 
+[2018-09-12 22:00:16] [Bot.connect] Starting 
+[2018-09-12 22:00:35] [Bot.setup] Attempting to load internal fragments 
+[2018-09-12 22:00:35] [Bot.setup] Loading 6 internal fragments 
+[2018-09-12 22:00:35] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-12 22:00:35] [Bot.setup] Loading 4 service(s) 
+[2018-09-12 22:00:35] [Bot.setup] Loaded 4 service(s) 
+[2018-09-12 22:00:35] [Bot.setup] Loading 30 command(s) 
+[2018-09-12 22:00:35] [Bot.setupEvents] Setting up Discord events 
+[2018-09-12 22:00:35] [Bot.setup] Loaded 30 command(s) 
+[2018-09-12 22:00:35] [Bot.setupEvents] Discord events setup completed 
+[2018-09-12 22:00:35] [Bot.setup] Bot setup completed 
+[2018-09-12 22:00:35] [Bot.connect] Starting 
+[2018-09-12 22:00:35] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-12 22:00:35] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-12 22:00:35] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-12 22:00:35] [Bot.setupEvents] Ready | Took 454ms 
+[2018-09-12 22:00:45] Setting up mongodb database 
+[2018-09-12 22:00:45] There was an error establishing connection to the MongoDB database. 
+[2018-09-12 22:00:45] Mongodb database setup completed 

@@ -1,9 +1,11 @@
 import {Command, CommandContext} from "discord-anvil";
-import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import Permission from "discord-anvil/dist/core/permission";
 
 export default class ClearWarns extends Command {
     readonly type = CommandType.Moderation;
+
+    readonly aliases = ["clearwarnings"];
 
     readonly meta = {
         name: "clearwarns",
@@ -13,10 +15,11 @@ export default class ClearWarns extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.issuerPermissions = [Permission.ManageGuild];
     }
 
-    public executed(context: CommandContext): void {
+    public async executed(context: CommandContext): Promise<void> {
         // TODO
+        await context.fail("Action not yet implemented.");
     }
 };

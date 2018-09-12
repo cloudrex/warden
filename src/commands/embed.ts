@@ -1,4 +1,4 @@
-import {WardenAPI} from "../core/warden-api";
+import WardenAPI from "../core/warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
 import {Command, CommandContext, SetupHelper, SetupHelperResult} from "discord-anvil";
 import SpecificGroups from "../specific-groups";

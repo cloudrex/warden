@@ -31,6 +31,8 @@ export default class Warnings extends Command {
         description: "View the warnings of a member",
     };
 
+    readonly aliases = ["warns"];
+
     readonly arguments: Array<CommandArgument> = [
         {
             name: "member",

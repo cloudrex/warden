@@ -1,5 +1,5 @@
 import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel} from "discord.js";
-import WardenApi from "../core/warden-api";
+import WardenAPI from "../core/warden-api";
 import {Bot, CommandParser, Log, Service} from "discord-anvil";
 import Patterns from "discord-anvil/dist/core/patterns";
 import Utils from "discord-anvil/dist/core/utils";
@@ -30,7 +30,7 @@ export default class Protection extends Service {
                 guildId: message.guild.id
             });
 
-            const api: WardenApi = this.api;
+            const api: WardenAPI = this.api;
 
             if (Patterns.invite.test(message.content)) {
                 const matches = message.content.match(Patterns.invite);
@@ -115,7 +115,7 @@ export default class Protection extends Service {
 
             // TODO: What about if it has been taken action against?
             // TODO: Something around posting suspected violations giving uncaught missing permissions error
-            const suspectedViolation: string = WardenApi.isMessageSuspicious(message);
+            const suspectedViolation: string = WardenAPI.isMessageSuspicious(message);
 
             if (suspectedViolation !== "None") {
                 await this.api.flagMessage(message, suspectedViolation);
