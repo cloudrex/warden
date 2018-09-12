@@ -1,4 +1,4 @@
-import WardenApi, {WardenAPI} from "./warden-api";
+import WardenApi, {WardenAPI} from "./core/warden-api";
 import Mongo from "./database/mongo-database";
 import {Guild, GuildMember, Message, TextChannel} from "discord.js";
 import path from "path";

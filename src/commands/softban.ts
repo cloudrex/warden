@@ -2,7 +2,7 @@ import {GuildMember} from "discord.js";
 import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
-import {WardenAPI} from "../warden-api";
+import {WardenAPI} from "../core/warden-api";
 import {CommandType} from "./help";
 
 interface SoftbanArgs {

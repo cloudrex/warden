@@ -1,5 +1,5 @@
 import {Message, RichEmbed} from "discord.js";
-import {WardenAPI} from "../warden-api";
+import {WardenAPI} from "../core/warden-api";
 import {ChatEnvironment, Command, CommandContext, Utils} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";

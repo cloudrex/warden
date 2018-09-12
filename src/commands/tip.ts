@@ -1,4 +1,4 @@
-import WardenApi from "../warden-api";
+import WardenApi from "../core/warden-api";
 import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "./help";
 

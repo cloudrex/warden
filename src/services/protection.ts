@@ -1,5 +1,5 @@
 import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel} from "discord.js";
-import WardenApi, {WardenAPI} from "../warden-api";
+import WardenApi, {WardenAPI} from "../core/warden-api";
 import {Bot, CommandParser, Log, Service} from "discord-anvil";
 import Patterns from "discord-anvil/dist/core/patterns";
 import Utils from "discord-anvil/dist/core/utils";

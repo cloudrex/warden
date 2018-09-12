@@ -5691,3 +5691,50 @@
 [2018-09-08 01:39:07] [Bot.setupEvents] Ready | Took 1s 
 [2018-09-08 01:39:08] There was an error while connecting 
 [2018-09-08 01:39:08] Connected to mongodb database 
+[2018-09-12 21:32:33] [JsonAdapter] Data source does not exist, creating default 
+[2018-09-12 21:32:33] [Bot.setup] Attempting to load internal fragments 
+[2018-09-12 21:32:33] [Bot.setup] Loading 6 internal fragments 
+[2018-09-12 21:32:33] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-12 21:32:33] [Bot.setup] Loading 4 service(s) 
+[2018-09-12 21:32:33] [Bot.setup] Loaded 4 service(s) 
+[2018-09-12 21:32:33] [Bot.setup] Loading 30 command(s) 
+[2018-09-12 21:32:33] [Bot.setup] Loaded 30 command(s) 
+[2018-09-12 21:32:33] [Bot.setupEvents] Discord events setup completed 
+[2018-09-12 21:32:33] [Bot.setupEvents] Setting up Discord events 
+[2018-09-12 21:32:33] [Bot.setup] Bot setup completed 
+[2018-09-12 21:32:33] [Bot.connect] Starting 
+[2018-09-12 21:32:34] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-12 21:32:34] [Bot.setupAuthStore] Added a total of 1 new auth store entries 
+[2018-09-12 21:32:34] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-12 21:32:34] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-12 21:32:34] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-12 21:32:44] Setting up mongodb database 
+[2018-09-12 21:32:44] There was an error establishing connection to the MongoDB database. 
+[2018-09-12 21:32:44] Mongodb database setup completed 
+[2018-09-12 21:32:46] [draem#0001@✨Gaming Corner✨#👑chat] <@!285578743324606482> #draemforheadmod 
+[2018-09-12 21:33:00] [🌌Atlas#2473@Warden Official#testing] ?prefix 
+[2018-09-12 21:33:00] [Warden#9606@Warden Official#testing]  
+[2018-09-12 21:33:03] [🌌Atlas#2473@Warden Official#testing] .invite 
+[2018-09-12 21:33:03] raw args,  
+[2018-09-12 21:33:03] [Warden#9606@Warden Official#testing]  
+[2018-09-12 21:34:25] [Bot.setup] Attempting to load internal fragments 
+[2018-09-12 21:34:25] [Bot.setup] Loading 6 internal fragments 
+[2018-09-12 21:34:25] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-12 21:34:25] [Bot.setup] Loading 4 service(s) 
+[2018-09-12 21:34:25] [Bot.setup] Loaded 4 service(s) 
+[2018-09-12 21:34:25] [Bot.setup] Loading 30 command(s) 
+[2018-09-12 21:34:25] [Bot.setup] Loaded 30 command(s) 
+[2018-09-12 21:34:25] [Bot.setupEvents] Setting up Discord events 
+[2018-09-12 21:34:25] [Bot.setupEvents] Discord events setup completed 
+[2018-09-12 21:34:25] [Bot.setup] Bot setup completed 
+[2018-09-12 21:34:25] [Bot.connect] Starting 
+[2018-09-12 21:34:25] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-12 21:34:25] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-12 21:34:25] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-12 21:34:25] [Bot.setupEvents] Ready | Took 435ms 
+[2018-09-12 21:34:29] [🌌Atlas#2473@Warden Official#testing] .invite 
+[2018-09-12 21:34:29] raw args,  
+[2018-09-12 21:34:29] [Warden#9606@Warden Official#testing]  
+[2018-09-12 21:34:35] Setting up mongodb database 
+[2018-09-12 21:34:35] There was an error establishing connection to the MongoDB database. 
+[2018-09-12 21:34:35] Mongodb database setup completed 

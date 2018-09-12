@@ -1,4 +1,4 @@
-import {WardenAPI} from "../warden-api";
+import {WardenAPI} from "../core/warden-api";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";

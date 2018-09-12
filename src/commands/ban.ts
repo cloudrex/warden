@@ -1,5 +1,5 @@
 import {GuildMember} from "discord.js";
-import {WardenAPI} from "../warden-api";
+import {WardenAPI} from "../core/warden-api";
 import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";
