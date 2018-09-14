@@ -5767,3 +5767,927 @@
 [2018-09-12 22:00:45] Setting up mongodb database 
 [2018-09-12 22:00:45] There was an error establishing connection to the MongoDB database. 
 [2018-09-12 22:00:45] Mongodb database setup completed 
+[2018-09-13 00:36:04] [Bot.setup] Attempting to load internal fragments 
+[2018-09-13 00:36:04] [Bot.setup] Loading 6 internal fragments 
+[2018-09-13 00:36:05] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-13 00:36:05] [Bot.setup] Loading 4 service(s) 
+[2018-09-13 00:36:05] [Bot.setup] Loaded 4 service(s) 
+[2018-09-13 00:36:05] [Bot.setup] Loading 30 command(s) 
+[2018-09-13 00:36:05] [Bot.setup] Loaded 30 command(s) 
+[2018-09-13 00:36:05] [Bot.setupEvents] Setting up Discord events 
+[2018-09-13 00:36:05] [Bot.setupEvents] Discord events setup completed 
+[2018-09-13 00:36:05] [Bot.setup] Bot setup completed 
+[2018-09-13 00:36:05] [Bot.connect] Starting 
+[2018-09-13 00:36:05] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-13 00:36:05] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-13 00:36:05] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-13 00:36:05] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-13 00:36:15] Setting up mongodb database 
+[2018-09-13 00:36:15] There was an error establishing connection to the MongoDB database. 
+[2018-09-13 00:36:15] Mongodb database setup completed 
+[2018-09-13 00:36:21] [Waba#8929@✨Gaming Corner✨#💬general] <@446736307172016138> 
+[2018-09-13 00:36:32] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] <@434432910947385354> 
+[2018-09-13 00:36:40] [draem#0001@✨Gaming Corner✨#💬general] <@!285578743324606482> 
+[2018-09-13 00:36:40] [Waba#8929@✨Gaming Corner✨#💬general] which one is which 
+[2018-09-13 00:36:44] [draem#0001@✨Gaming Corner✨#💬general] who knows 
+[2018-09-13 00:36:48] [draem#0001@✨Gaming Corner✨#💬general] all three are exactly the same 
+[2018-09-13 00:36:51] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <@434432910947385354> is development version 
+[2018-09-13 00:36:52] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Shield is the bad one 
+[2018-09-13 00:36:58] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <@446736307172016138> is the master branch 
+[2018-09-13 00:37:16] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Then what is <@!285578743324606482> ? 
+[2018-09-13 00:37:21] [🌌Atlas#2473@✨Gaming Corner✨#💬general] skynet 
+[2018-09-13 00:37:22] [draem#0001@✨Gaming Corner✨#💬general] this should be a communist server 
+[2018-09-13 00:37:23] [draem#0001@✨Gaming Corner✨#💬general] you know 
+[2018-09-13 00:37:25] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] NO 
+[2018-09-13 00:37:25] [draem#0001@✨Gaming Corner✨#💬general] sharing is caring 
+[2018-09-13 00:37:27] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ikr 
+[2018-09-13 00:37:29] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] NOT ANOTHER ONE 
+[2018-09-13 00:37:32] [🌌Atlas#2473@✨Gaming Corner✨#💬general] #COMMUNISM 
+[2018-09-13 00:37:38] [draem#0001@✨Gaming Corner✨#💬general] #SHARINGISCARING 
+[2018-09-13 00:37:39] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] #KYS 
+[2018-09-13 00:37:48] [🌌Atlas#2473@✨Gaming Corner✨#💬general] -hitlet 
+[2018-09-13 00:37:55] [draem#0001@✨Gaming Corner✨#💬general] #YOU'REFORCEDINTOALEGALBINDINGCONTRACTTHATFORCESYOUTOCARE 
+[2018-09-13 00:38:02] [draem#0001@✨Gaming Corner✨#💬general] #HITLERWASAFACISTNOTACOMMUNIST 
+[2018-09-13 00:38:13] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Alright 
+[2018-09-13 00:38:18] [🌌Atlas#2473@✨Gaming Corner✨#💬general] #Hitler for pres 2019 
+[2018-09-13 00:38:19] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Enough capitalization 
+[2018-09-13 00:38:32] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] 2019 isn't a presidential election year 
+[2018-09-13 00:38:36] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ik 
+[2018-09-13 00:38:39] [draem#0001@✨Gaming Corner✨#💬general] #PUTINFORDICATOROFTHEUNITEDSTATES 
+[2018-09-13 00:38:42] [draem#0001@✨Gaming Corner✨#💬general] #OURAMERICA 
+[2018-09-13 00:38:49] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] And Kanye is pres in 2020 
+[2018-09-13 00:39:15] [🌌Atlas#2473@✨Gaming Corner✨#💬general] test 
+[2018-09-13 00:39:23] [draem#0001@✨Gaming Corner✨#💬general] #OURSERVER 
+[2018-09-13 00:39:27] [draem#0001@✨Gaming Corner✨#💬general] #communistsunite 
+[2018-09-13 00:39:34] [draem#0001@✨Gaming Corner✨#💬general] #CommunismCorner 
+[2018-09-13 00:39:43] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Make your own 
+[2018-09-13 00:39:48] [draem#0001@✨Gaming Corner✨#💬general] #Ourserver 
+[2018-09-13 00:39:58] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] #Makeyourownserver 
+[2018-09-13 00:40:21] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] #Americaisademocracynotcommunicity 
+[2018-09-13 00:40:23] [draem#0001@✨Gaming Corner✨#💬general] #stophashtaggingorIPBANfromOURSERVER 
+[2018-09-13 00:40:36] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] #Ucantbanlol 
+[2018-09-13 00:40:57] [draem#0001@✨Gaming Corner✨#💬general] #NOcapitalistPROPAGANDApleaseANDthankYOU 
+[2018-09-13 00:41:03] [Waba#8929@✨Gaming Corner✨#💬general] ok ples 
+[2018-09-13 00:41:05] [🌌Atlas#2473@✨Gaming Corner✨#💬general] PROPAGANDA from now on 
+[2018-09-13 00:41:06] [Waba#8929@✨Gaming Corner✨#💬general] spam stop 
+[2018-09-13 00:41:13] [🌌Atlas#2473@✨Gaming Corner✨#💬general] !spam stop 
+[2018-09-13 00:41:13] [🌌Atlas#2473@✨Gaming Corner✨#💬general] xd 
+[2018-09-13 00:41:17] [draem#0001@✨Gaming Corner✨#💬general] #propaganda 
+[2018-09-13 00:41:18] [Waba#8929@✨Gaming Corner✨#💬general] bad bot 
+[2018-09-13 00:41:20] [draem#0001@✨Gaming Corner✨#💬general] make it a channel 
+[2018-09-13 00:41:21] [Waba#8929@✨Gaming Corner✨#💬general] !stop spam 
+[2018-09-13 00:41:22] [🌌Atlas#2473@✨Gaming Corner✨#💬general] botterman 
+[2018-09-13 00:41:24] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I botterman 
+[2018-09-13 00:41:38] [draem#0001@✨Gaming Corner✨#💬general] #general => #communist-reign 
+[2018-09-13 00:41:44] [🌌Atlas#2473@✨Gaming Corner✨#💬general] communism rules 
+[2018-09-13 00:41:49] [draem#0001@✨Gaming Corner✨#💬general] yes 
+[2018-09-13 00:41:51] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I am the dictator 
+[2018-09-13 00:41:53] [draem#0001@✨Gaming Corner✨#💬general] yes 
+[2018-09-13 00:41:54] [draem#0001@✨Gaming Corner✨#💬general] i am 
+[2018-09-13 00:41:56] [draem#0001@✨Gaming Corner✨#💬general] co-dictator 
+[2018-09-13 00:42:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yes but im going to execute u 
+[2018-09-13 00:42:11] [🌌Atlas#2473@✨Gaming Corner✨#💬general] u have too much tower 
+[2018-09-13 00:42:19] [draem#0001@✨Gaming Corner✨#💬general] #OURpower 
+[2018-09-13 00:42:19] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 00:42:20] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] If one of the following words is said after this message I'll leave, hiding these words in other words still counts as the word:
+Communist
+Communism
+Commie
+Facist
+Propaganda
+Dictator 
+[2018-09-13 00:42:33] [🌌Atlas#2473@✨Gaming Corner✨#💬general] your message was deleted 
+[2018-09-13 00:42:34] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Hissssss 
+[2018-09-13 00:42:36] [🌌Atlas#2473@✨Gaming Corner✨#💬general] and theirfore invalid 
+[2018-09-13 00:42:37] [🌌Atlas#2473@✨Gaming Corner✨#💬general] mwahaha 
+[2018-09-13 00:42:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general] *evil laugh* 
+[2018-09-13 00:42:47] [🌌Atlas#2473@✨Gaming Corner✨#💬general] im so evul 
+[2018-09-13 00:43:01] [🌌Atlas#2473@✨Gaming Corner✨#💬general] eeeevvoooooll 
+[2018-09-13 00:43:06] [🌌Atlas#2473@✨Gaming Corner✨#💬general] evola 
+[2018-09-13 00:43:06] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 00:43:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general] evola 
+[2018-09-13 00:43:21] [draem#0001@✨Gaming Corner✨#💬general] cats
+om
+my
+mices
+unfortunatly are
+not
+icy
+so
+take my advice and join the ninth reich 
+[2018-09-13 00:43:25] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Also all of yesterday was you Atlas except a few messages 
+[2018-09-13 00:43:28] [🌌Atlas#2473@✨Gaming Corner✨#💬general] guys 
+[2018-09-13 00:43:29] [draem#0001@✨Gaming Corner✨#💬general] ok 
+[2018-09-13 00:43:30] [🌌Atlas#2473@✨Gaming Corner✨#💬general] did u read my poem 
+[2018-09-13 00:43:33] [🌌Atlas#2473@✨Gaming Corner✨#💬general] the poem that I wrote 
+[2018-09-13 00:43:38] [draem#0001@✨Gaming Corner✨#💬general] yes 
+[2018-09-13 00:43:41] [draem#0001@✨Gaming Corner✨#💬general] #OURpoem 
+[2018-09-13 00:43:44] [🌌Atlas#2473@✨Gaming Corner✨#💬general] no serously 
+[2018-09-13 00:43:45] [🌌Atlas#2473@✨Gaming Corner✨#💬general] did u 
+[2018-09-13 00:43:48] [draem#0001@✨Gaming Corner✨#💬general] a bit 
+[2018-09-13 00:43:52] [🌌Atlas#2473@✨Gaming Corner✨#💬general] it wasn't richard cory's 
+[2018-09-13 00:43:58] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I didn't write that 
+[2018-09-13 00:44:02] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Hmm... 
+[2018-09-13 00:44:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general] here 
+[2018-09-13 00:44:32] [🌌Atlas#2473@✨Gaming Corner✨#💬general] here 
+[2018-09-13 00:44:33] [draem#0001@✨Gaming Corner✨#💬general] #OURserver 
+[2018-09-13 00:44:35] [draem#0001@✨Gaming Corner✨#💬general] #OURheadmod 
+[2018-09-13 00:44:36] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ```
+My monster exists;
+Yet no one can see it.
+
+My monster is fancy;
+It wears sunglasses at day,
+And a hoodie at night.
+
+My monster is bright;
+It preys on the weak,
+And weakens the strong.
+
+My monster has friends,
+So more food it has.
+
+My monster must feed,
+Or it'll eat me inside.
+
+My monster is hate,
+Sorrow and lies.
+``` 
+[2018-09-13 00:44:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general] #original 
+[2018-09-13 00:44:42] [draem#0001@✨Gaming Corner✨#💬general] monster? 
+[2018-09-13 00:44:42] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ™ 
+[2018-09-13 00:44:44] [draem#0001@✨Gaming Corner✨#💬general] cookie monster? 
+[2018-09-13 00:44:44] [🌌Atlas#2473@✨Gaming Corner✨#💬general] :copy: 
+[2018-09-13 00:44:46] [draem#0001@✨Gaming Corner✨#💬general] ronthecokoie? 
+[2018-09-13 00:44:47] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yes 
+[2018-09-13 00:44:49] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] I realized something I can do 
+[2018-09-13 00:44:52] [🌌Atlas#2473@✨Gaming Corner✨#💬general] all links together 
+[2018-09-13 00:44:52] [🌌Atlas#2473@✨Gaming Corner✨#💬general] xd 
+[2018-09-13 00:44:55] [🌌Atlas#2473@✨Gaming Corner✨#💬general] read it 
+[2018-09-13 00:45:00] [draem#0001@✨Gaming Corner✨#💬general] im using my advanced English skills to make real world connections 
+[2018-09-13 00:45:01] [draem#0001@✨Gaming Corner✨#💬general] A+ 
+[2018-09-13 00:45:19] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I don't get A+ 
+[2018-09-13 00:45:21] [draem#0001@✨Gaming Corner✨#💬general]  
+[2018-09-13 00:45:21] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I get A* 
+[2018-09-13 00:45:22] [draem#0001@✨Gaming Corner✨#💬general] wee woo 
+[2018-09-13 00:45:22] [draem#0001@✨Gaming Corner✨#💬general] alert 
+[2018-09-13 00:45:26] [draem#0001@✨Gaming Corner✨#💬general] my post 
+[2018-09-13 00:45:26] [draem#0001@✨Gaming Corner✨#💬general] said 
+[2018-09-13 00:45:32] [draem#0001@✨Gaming Corner✨#💬general] "respond if you can competently code" 
+[2018-09-13 00:45:34] [draem#0001@✨Gaming Corner✨#💬general] and then a guy named 
+[2018-09-13 00:45:44] [draem#0001@✨Gaming Corner✨#💬general] "__**ii**Pilot**Bear**__" 
+[2018-09-13 00:45:45] [draem#0001@✨Gaming Corner✨#💬general] responds 
+[2018-09-13 00:45:47] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I must weewee 
+[2018-09-13 00:45:51] [🌌Atlas#2473@✨Gaming Corner✨#💬general] excuse me 
+[2018-09-13 00:45:58] [draem#0001@✨Gaming Corner✨#💬general] https://i.imgur.com/CEG149V.png 
+[2018-09-13 00:45:59] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] I has question 
+[2018-09-13 00:46:00] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lmao 
+[2018-09-13 00:46:02] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yes? 
+[2018-09-13 00:46:05] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Who wants to help me break things 
+[2018-09-13 00:46:38] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ask techrax 
+[2018-09-13 00:46:48] [draem#0001@✨Gaming Corner✨#💬general] ask #ourTechrax 
+[2018-09-13 00:47:08] [draem#0001@✨Gaming Corner✨#💬general] #OUR#general 
+[2018-09-13 00:47:25] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] @Techrax 
+[2018-09-13 00:47:48] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] WHO IS TECHRAX 
+[2018-09-13 00:48:05] [draem#0001@✨Gaming Corner✨#💬general] me 
+[2018-09-13 00:48:23] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Oh 
+[2018-09-13 00:48:24] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Uh 
+[2018-09-13 00:48:27] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Alright 
+[2018-09-13 00:48:37] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Lemme get what I need for yo to help me break things 
+[2018-09-13 00:48:53] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <:thonkeyes:484571491632021505> 
+[2018-09-13 00:49:13] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Katey you could also halp 😄 
+[2018-09-13 00:49:20] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Hmm 
+[2018-09-13 00:49:21] [Walu-Katey#0112@✨Gaming Corner✨#💬general] I dunno 
+[2018-09-13 00:49:25] [🌌Atlas#2473@✨Gaming Corner✨#💬general] Build-a-bot workshop 
+[2018-09-13 00:49:28] [Walu-Katey#0112@✨Gaming Corner✨#💬general] I mean I'm good at breaking stuff 
+[2018-09-13 00:49:30] [draem#0001@✨Gaming Corner✨#💬general] atlas 
+[2018-09-13 00:49:31] [draem#0001@✨Gaming Corner✨#💬general] remake your 
+[2018-09-13 00:49:33] [draem#0001@✨Gaming Corner✨#💬general] bot maker 
+[2018-09-13 00:49:34] [draem#0001@✨Gaming Corner✨#💬general] program 
+[2018-09-13 00:49:42] [🌌Atlas#2473@✨Gaming Corner✨#💬general] someday™ I'll complete it 
+[2018-09-13 00:49:45] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Also, <@!285578743324606482> , redo the channel topic, there is no media anymore 
+[2018-09-13 00:49:55] [Walu-Katey#0112@✨Gaming Corner✨#💬general] I don't have access otherwise I would have done it 
+[2018-09-13 00:49:55] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Tru 
+[2018-09-13 00:56:09] [Bot.setup] Attempting to load internal fragments 
+[2018-09-13 00:56:09] [Bot.setup] Loading 6 internal fragments 
+[2018-09-13 00:56:09] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-13 00:56:09] [Bot.setup] Loading 4 service(s) 
+[2018-09-13 00:56:09] [Bot.setup] Loaded 4 service(s) 
+[2018-09-13 00:56:09] [Bot.setup] Loaded 30 command(s) 
+[2018-09-13 00:56:09] [Bot.setup] Loading 30 command(s) 
+[2018-09-13 00:56:09] [Bot.setupEvents] Setting up Discord events 
+[2018-09-13 00:56:09] [Bot.setupEvents] Discord events setup completed 
+[2018-09-13 00:56:09] [Bot.setup] Bot setup completed 
+[2018-09-13 00:56:09] [Bot.connect] Starting 
+[2018-09-13 00:56:10] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-13 00:56:10] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-13 00:56:10] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-13 00:56:10] [Bot.setupEvents] Ready | Took 462ms 
+[2018-09-13 00:56:20] Setting up mongodb database 
+[2018-09-13 00:57:03] [Bot.setup] Attempting to load internal fragments 
+[2018-09-13 00:57:03] [Bot.setup] Loading 6 internal fragments 
+[2018-09-13 00:57:03] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-13 00:57:03] [Bot.setup] Loading 4 service(s) 
+[2018-09-13 00:57:03] [Bot.setup] Loaded 4 service(s) 
+[2018-09-13 00:57:03] [Bot.setup] Loading 30 command(s) 
+[2018-09-13 00:57:03] [Bot.setup] Loaded 30 command(s) 
+[2018-09-13 00:57:03] [Bot.setupEvents] Setting up Discord events 
+[2018-09-13 00:57:03] [Bot.setupEvents] Discord events setup completed 
+[2018-09-13 00:57:03] [Bot.setup] Bot setup completed 
+[2018-09-13 00:57:03] [Bot.connect] Starting 
+[2018-09-13 00:57:03] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-13 00:57:03] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-13 00:57:03] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-13 00:57:03] [Bot.setupEvents] Ready | Took 478ms 
+[2018-09-13 00:57:13] Setting up mongodb database 
+[2018-09-13 00:57:13] Successfully connected to the MongoDB database. 
+[2018-09-13 00:57:13] Mongodb database setup completed 
+[2018-09-13 00:57:20] [🌌Atlas#2473@✨Gaming Corner✨#💬general] test 
+[2018-09-13 00:58:20] [draem#0001@✨Gaming Corner✨#💬general] `!command `**`<`**`arg`**`:`**__`type`__**`>`** 
+[2018-09-13 01:01:16] [🌌Atlas#2473@✨Gaming Corner✨#💬general] *that's the price you pay* 
+[2018-09-13 01:17:58] [Bowser V2 ✔#5788@✨Gaming Corner✨#💬general] which looks better? 
+[2018-09-13 01:18:11] [draem#0001@✨Gaming Corner✨#💬general] number one 
+[2018-09-13 01:18:17] [draem#0001@✨Gaming Corner✨#💬general] i think the button has to be styled a bit and moved a bit 
+[2018-09-13 01:18:36] [Bowser V2 ✔#5788@✨Gaming Corner✨#💬general] the buttons not at the top. 
+[2018-09-13 01:18:40] [draem#0001@✨Gaming Corner✨#💬general] oh 
+[2018-09-13 01:18:41] [draem#0001@✨Gaming Corner✨#💬general] i c 
+[2018-09-13 01:18:51] [Bowser V2 ✔#5788@✨Gaming Corner✨#💬general] was talking about the server widgets 
+[2018-09-13 01:18:54] [draem#0001@✨Gaming Corner✨#💬general] yes 
+[2018-09-13 01:18:57] [draem#0001@✨Gaming Corner✨#💬general] number #1 
+[2018-09-13 01:19:13] [Bowser V2 ✔#5788@✨Gaming Corner✨#💬general] k thank u 
+[2018-09-13 01:19:24] [draem#0001@✨Gaming Corner✨#👑chat] https://cdn.discordapp.com/attachments/381870553235193857/488754879880495124/unknown.png <@!285578743324606482> 
+[2018-09-13 01:19:48] [🌌Atlas#2473@✨Gaming Corner✨#👑chat] <:hyperthonk:447630615559536641> 
+[2018-09-13 01:20:54] [draem#0001@✨Gaming Corner✨#👑chat] https://i.imgur.com/TubVZeV.png 
+[2018-09-13 01:21:01] [draem#0001@✨Gaming Corner✨#👑chat] nothing != eating ice cream or watching netflix 
+[2018-09-13 01:21:02] [draem#0001@✨Gaming Corner✨#👑chat] <@!378975221971025922> pls 
+[2018-09-13 01:22:09] [Walu-Katey#0112@✨Gaming Corner✨#👑chat] nope 
+[2018-09-13 01:22:12] [Walu-Katey#0112@✨Gaming Corner✨#👑chat] not netflix 
+[2018-09-13 01:22:39] [draem#0001@✨Gaming Corner✨#👑chat] ok 
+[2018-09-13 01:22:40] [draem#0001@✨Gaming Corner✨#👑chat] whatever 
+[2018-09-13 01:22:41] [draem#0001@✨Gaming Corner✨#👑chat] still 
+[2018-09-13 01:22:42] [draem#0001@✨Gaming Corner✨#👑chat] it isn't nothing 
+[2018-09-13 01:30:35] [Walu-Katey#0112@✨Gaming Corner✨#👑chat] h m m 
+[2018-09-13 01:32:56] [GoldenVolcarona#2867@✨Gaming Corner✨#👑chat] We all know what she watches :3 
+[2018-09-13 01:33:45] [Walu-Katey#0112@✨Gaming Corner✨#👑chat] 😏 
+[2018-09-13 01:33:56] [Bowser V2 ✔#5788@✨Gaming Corner✨#👑chat] <a:DONCE:468122827455725598> 
+[2018-09-13 01:38:05] [Bowser V2 ✔#5788@✨Gaming Corner✨#📦development] finished the rework of Jazzmynes site: https://jazzmyne.club 
+[2018-09-13 01:40:33] [GoldenVolcarona#2867@✨Gaming Corner✨#📦development] Noice 
+[2018-09-13 01:40:59] [GoldenVolcarona#2867@✨Gaming Corner✨#📦development] Can you jazz my knee? :3 
+[2018-09-13 01:44:00] [Waba#8929@✨Gaming Corner✨#📦development] <@359794248570109972> when I click `Start setup` I get a white screen 
+[2018-09-13 01:46:20] [🌌Atlas#2473@✨Gaming Corner✨#📦development] looks really good bowser 
+[2018-09-13 01:48:07] [Bowser V2 ✔#5788@✨Gaming Corner✨#📦development] hm <@221381001476046849> ill have a look 
+[2018-09-13 01:48:33] [Cryptic#3468@✨Gaming Corner✨#📦development] <@359794248570109972> 
+[2018-09-13 01:48:35] [Cryptic#3468@✨Gaming Corner✨#📦development]  
+[2018-09-13 01:48:41] [Cryptic#3468@✨Gaming Corner✨#📦development] need to fix 
+[2018-09-13 01:49:06] [Bowser V2 ✔#5788@✨Gaming Corner✨#📦development] lol 
+[2018-09-13 01:49:27] [Bowser V2 ✔#5788@✨Gaming Corner✨#📦development] there fixed 
+[2018-09-13 01:49:55] [Bowser V2 ✔#5788@✨Gaming Corner✨#📦development] not the setup page tho seems to have lost it. have to remake it 
+[2018-09-13 01:55:48] [Dyno#3861@✨Gaming Corner✨#🚪member-log] (Yuri Gagarin#5104) left 
+[2018-09-13 01:55:49] [Warden#9606@✨Gaming Corner✨#🚪member-log]  
+[2018-09-13 01:58:29] [Walu-Katey#0112@✨Gaming Corner✨#💬general] grr https://gyazo.com/75e82ee3654cda3bb89600e22ea6993e 
+[2018-09-13 01:58:45] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] AAAAAAAAAAAAAAAA 
+[2018-09-13 01:59:10] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Someone invite their friend 
+[2018-09-13 01:59:34] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] It's actually 366 humans 
+[2018-09-13 01:59:45] [Walu-Katey#0112@✨Gaming Corner✨#💬general] sh 
+[2018-09-13 01:59:58] [Walu-Katey#0112@✨Gaming Corner✨#💬general] tell nobody 
+[2018-09-13 01:59:58] [Walu-Katey#0112@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 02:00:20] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] @everyone Despite what the invite says we actually have 366 humans 
+[2018-09-13 02:00:30] [Walu-Katey#0112@✨Gaming Corner✨#💬general] shhhhh 
+[2018-09-13 02:00:43] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] What does that mean? 
+[2018-09-13 02:01:03] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] <@!285578743324606482> Can you notify the world that we only have 366 humans? 
+[2018-09-13 02:01:06] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <:blobshhh:451430691331375137> 
+[2018-09-13 02:01:12] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] No idea still 
+[2018-09-13 02:01:22] [Walu-Katey#0112@✨Gaming Corner✨#💬general] :blobshhh 
+[2018-09-13 02:01:28] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <:blobshhh:451430691331375137> 
+[2018-09-13 02:01:34] [Walu-Katey#0112@✨Gaming Corner✨#💬general] You dunno what that isssss???? 
+[2018-09-13 02:01:41] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Hmm... does it mean stay loud? 
+[2018-09-13 02:01:56] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <:facepalms:445833779425312769> 
+[2018-09-13 02:02:14] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] That means... I got it right! 
+[2018-09-13 02:02:28] [Walu-Katey#0112@✨Gaming Corner✨#💬general] I give up 
+[2018-09-13 02:02:58] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] That proably means... You'll stop trying to tell me it's right! 
+[2018-09-13 02:03:12] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] 🍨 
+[2018-09-13 02:03:25] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] 🍦 
+[2018-09-13 02:03:30] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Just...shut up lmao 
+[2018-09-13 02:03:56] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] <:GWmythicalGrandCat:371317556734197761> 
+[2018-09-13 02:05:43] [🌌Atlas#2473@Warden Official#testing] .purge 100 
+[2018-09-13 02:05:43] raw args,  100
+[2018-09-13 02:05:43] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:05:46] [🌌Atlas#2473@Warden Official#testing] .purge 20 
+[2018-09-13 02:05:46] raw args,  20
+[2018-09-13 02:06:10] [🌌Atlas#2473@Warden Official#testing] .ping 
+[2018-09-13 02:06:10] raw args,  
+[2018-09-13 02:06:10] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:06:10] [iiCookiiKimii#5531@✨Gaming Corner✨#💬general] Wow I didnt notice that gaming corner updated 
+[2018-09-13 02:06:14] [🌌Atlas#2473@Warden Official#testing] .whois 
+[2018-09-13 02:06:14] raw args,  
+[2018-09-13 02:06:14] There was an error while executing the 'whois' command: Cannot read property 'roles' of undefined 
+[2018-09-13 02:06:14] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:06:18] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] It did 
+[2018-09-13 02:06:23] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Because Atlas is Atlas 
+[2018-09-13 02:06:24] [🌌Atlas#2473@Warden Official#testing] .whois 446736307172016138 
+[2018-09-13 02:06:24] raw args,  446736307172016138
+[2018-09-13 02:06:24] There was an error while executing the 'whois' command: RichEmbed field values may not be empty. 
+[2018-09-13 02:06:24] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:06:28] [🌌Atlas#2473@Warden Official#testing] .info 
+[2018-09-13 02:06:28] raw args,  
+[2018-09-13 02:06:28] There was an error while executing the 'info' command: RichEmbed field values may not be empty. 
+[2018-09-13 02:06:28] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:06:30] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Aka Senor Gato 
+[2018-09-13 02:07:34] [🌌Atlas#2473@Warden Official#testing] .purge 20 
+[2018-09-13 02:07:34] raw args,  20
+[2018-09-13 02:07:38] [🌌Atlas#2473@Warden Official#testing] .help 
+[2018-09-13 02:07:38] raw args,  
+[2018-09-13 02:07:53] [🌌Atlas#2473@Warden Official#testing] .warnings <@285578743324606482> 
+[2018-09-13 02:07:53] raw args,  <@285578743324606482>
+[2018-09-13 02:07:53] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:08:00] [🌌Atlas#2473@Warden Official#testing] .warn <@285578743324606482> test 
+[2018-09-13 02:08:00] raw args,  <@285578743324606482>,test
+[2018-09-13 02:08:00] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:08:04] [🌌Atlas#2473@Warden Official#testing] .whois 
+[2018-09-13 02:08:04] raw args,  
+[2018-09-13 02:08:04] There was an error while executing the 'whois' command: Cannot read property 'roles' of undefined 
+[2018-09-13 02:08:04] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:08:31] [🌌Atlas#2473@Warden Official#testing] .throw 
+[2018-09-13 02:08:31] raw args,  
+[2018-09-13 02:08:31] There was an error while executing the 'throw' command: Intentionally thrown error 
+[2018-09-13 02:08:31] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:08:55] [🌌Atlas#2473@Warden Official#testing] .roles 
+[2018-09-13 02:08:55] raw args,  
+[2018-09-13 02:08:55] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:09:08] [🌌Atlas#2473@Warden Official#testing] .purge 20 
+[2018-09-13 02:09:08] raw args,  20
+[2018-09-13 02:09:17] [🌌Atlas#2473@Warden Official#testing] .ping 
+[2018-09-13 02:09:17] raw args,  
+[2018-09-13 02:09:17] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:09:22] [🌌Atlas#2473@Warden Official#testing] .warnings <@285578743324606482> 
+[2018-09-13 02:09:22] raw args,  <@285578743324606482>
+[2018-09-13 02:09:22] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:09:25] [🌌Atlas#2473@Warden Official#testing] .tip 
+[2018-09-13 02:09:25] raw args,  
+[2018-09-13 02:09:25] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:09:29] [🌌Atlas#2473@Warden Official#testing] .roles 
+[2018-09-13 02:09:29] raw args,  
+[2018-09-13 02:09:29] [Warden#9606@Warden Official#testing]  
+[2018-09-13 02:09:34] [🌌Atlas#2473@Warden Official#testing] .purge 20 
+[2018-09-13 02:09:34] raw args,  20
+[2018-09-13 02:09:54] [🌌Atlas#2473@✨Gaming Corner✨#💬general] im making something cool 
+[2018-09-13 02:09:57] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I'll show u 
+[2018-09-13 02:10:00] [🌌Atlas#2473@✨Gaming Corner✨#💬general] in about 30m it's done 
+[2018-09-13 02:10:08] [Walu-Katey#0112@✨Gaming Corner✨#💬general] cake? 
+[2018-09-13 02:10:10] [🌌Atlas#2473@✨Gaming Corner✨#💬general] maybe 
+[2018-09-13 02:10:15] [Walu-Katey#0112@✨Gaming Corner✨#💬general] *excited* 
+[2018-09-13 02:10:24] [🌌Atlas#2473@✨Gaming Corner✨#💬general] the cake is a lie 
+[2018-09-13 02:10:24] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] *Ice cream* cake? 
+[2018-09-13 02:10:24] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 02:10:39] [Walu-Katey#0112@✨Gaming Corner✨#💬general] ICE CREAM CAKE 
+[2018-09-13 02:10:40] [Walu-Katey#0112@✨Gaming Corner✨#💬general] YES 
+[2018-09-13 02:11:08] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] THE TRUE WINNER OF THE ICE CREAM AND CAKE SPLATFEST 
+[2018-09-13 02:11:30] [Walu-Katey#0112@✨Gaming Corner✨#💬general] SCREEEEEEEEEEEEEEEEEEE 
+[2018-09-13 02:12:56] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] I still chose team Ice Cream since Ice Cream Cake is Ice Cream shaped like Cake 
+[2018-09-13 02:13:12] [Evan Hansen#4680@✨Gaming Corner✨#💬general] Huh? 
+[2018-09-13 02:13:41] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Anyone who says any kind of cake is better than ice cream cake will perish at an early age 
+[2018-09-13 02:13:53] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Cake is bette- 
+[2018-09-13 02:14:08] [Evan Hansen#4680@✨Gaming Corner✨#💬general] Oh, I love ice cream cake! 
+[2018-09-13 02:14:28] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ARE YOU READY 
+[2018-09-13 02:14:30] [🌌Atlas#2473@✨Gaming Corner✨#💬general] her eit comes 
+[2018-09-13 02:14:34] [🌌Atlas#2473@✨Gaming Corner✨#💬general] just give me a sec 
+[2018-09-13 02:14:35] [Evan Hansen#4680@✨Gaming Corner✨#💬general] @-@katey, what have you done? 
+[2018-09-13 02:14:37] [🌌Atlas#2473@✨Gaming Corner✨#💬general] im proud of it 
+[2018-09-13 02:14:37] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 02:14:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general] hello evan 
+[2018-09-13 02:14:44] [🌌Atlas#2473@✨Gaming Corner✨#💬general] 👋 
+[2018-09-13 02:14:48] [Evan Hansen#4680@✨Gaming Corner✨#💬general] Hello^^ 
+[2018-09-13 02:14:54] [Walu-Katey#0112@✨Gaming Corner✨#💬general] What have I done? Hmmmmmm 
+[2018-09-13 02:15:19] [Evan Hansen#4680@✨Gaming Corner✨#💬general] What have you done?! 
+[2018-09-13 02:15:32] [Evan Hansen#4680@✨Gaming Corner✨#💬general] You said cake was better! 
+[2018-09-13 02:15:52] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] **Katey will die for her sins momentarily. Estimated time: 60 years** 
+[2018-09-13 02:16:06] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] **Time may be above actual time** 
+[2018-09-13 02:16:08] [Walu-Katey#0112@✨Gaming Corner✨#💬general] I was joking. Obviously. I'd never betray my Ice Cream. Ice Cream is bae <3 
+[2018-09-13 02:16:19] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Youalready said it 
+[2018-09-13 02:16:22] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Too late to change it 
+[2018-09-13 02:16:30] [Evan Hansen#4680@✨Gaming Corner✨#💬general] **I will die of laughter. Estimated time: 1 second** 
+[2018-09-13 02:16:32] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Well uh.... I don't think I'll live 60 years 
+[2018-09-13 02:16:37] [Cryptic#3468@✨Gaming Corner✨#💬general] Fight me 
+[2018-09-13 02:16:42] [Walu-Katey#0112@✨Gaming Corner✨#💬general] F off 
+[2018-09-13 02:16:45] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] How long do you think you will live? 
+[2018-09-13 02:16:46] [Cryptic#3468@✨Gaming Corner✨#💬general] No you 
+[2018-09-13 02:16:49] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Uhh 
+[2018-09-13 02:16:54] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Maybe 25 years... 
+[2018-09-13 02:16:59] [Cryptic#3468@✨Gaming Corner✨#💬general] I think I'll live another 4 years 
+[2018-09-13 02:17:00] [Cryptic#3468@✨Gaming Corner✨#💬general] Yes 
+[2018-09-13 02:17:02] [Evan Hansen#4680@✨Gaming Corner✨#💬general] WHAT?! 
+[2018-09-13 02:17:06] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Read the note below the estimation 
+[2018-09-13 02:17:18] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Welp 
+[2018-09-13 02:17:29] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] I gtg now 
+[2018-09-13 02:17:30] [Cryptic#3468@✨Gaming Corner✨#💬general] Katey 
+[2018-09-13 02:17:35] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] *Boof* 
+[2018-09-13 02:17:44] [Cryptic#3468@✨Gaming Corner✨#💬general] It's your fault 
+[2018-09-13 02:17:46] [Cryptic#3468@✨Gaming Corner✨#💬general] <:GWnanamiWOKE:402195487568035840> 
+[2018-09-13 02:17:49] [Walu-Katey#0112@✨Gaming Corner✨#💬general] See you Golden 👋 
+[2018-09-13 02:17:57] [Walu-Katey#0112@✨Gaming Corner✨#💬general] What 
+[2018-09-13 02:17:57] [Walu-Katey#0112@✨Gaming Corner✨#💬general] No 
+[2018-09-13 02:17:58] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Never 
+[2018-09-13 02:18:00] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] What circumstances have transpired in my vacancy? 
+[2018-09-13 02:18:01] [Cryptic#3468@✨Gaming Corner✨#💬general] Yes u 
+[2018-09-13 02:18:18] [Cryptic#3468@✨Gaming Corner✨#💬general] We all became candy makers 
+[2018-09-13 02:18:25] [Cryptic#3468@✨Gaming Corner✨#💬general] And r making hard candy as you speak 
+[2018-09-13 02:18:27] [Cryptic#3468@✨Gaming Corner✨#💬general] <:GWnanaPepoHype:392308469488680961> 
+[2018-09-13 02:18:30] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Well, dear Wyspos, as you can see, Cryptic is in his natural habitat being an idiot 
+[2018-09-13 02:18:38] [Cryptic#3468@✨Gaming Corner✨#💬general] No me 
+[2018-09-13 02:18:42] [Cryptic#3468@✨Gaming Corner✨#💬general] Fuck 
+[2018-09-13 02:18:55] [Cryptic#3468@✨Gaming Corner✨#💬general] I give up 
+[2018-09-13 02:19:02] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Affirmative? 
+[2018-09-13 02:19:30] [Walu-Katey#0112@✨Gaming Corner✨#💬general] I don't think I need to agree since yer see. Did I just rhyme... 
+[2018-09-13 02:19:48] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] I am emanating monumental perplexment. 
+[2018-09-13 02:20:30] [Walu-Katey#0112@✨Gaming Corner✨#💬general] The more you know pal... 
+[2018-09-13 02:20:44] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Unquestionably. 
+[2018-09-13 02:21:20] [Walu-Katey#0112@✨Gaming Corner✨#💬general] 👍 
+[2018-09-13 02:29:18] [Dyno#3861@✨Gaming Corner✨#🚪member-log] (-Ryan#5953) left 
+[2018-09-13 02:29:18] [Warden#9606@✨Gaming Corner✨#🚪member-log]  
+[2018-09-13 02:35:23] [🌌Atlas#2473@✨Gaming Corner✨#💬general] im going to show u 
+[2018-09-13 02:35:25] [🌌Atlas#2473@✨Gaming Corner✨#💬general] something cool i made 
+[2018-09-13 02:35:27] [🌌Atlas#2473@✨Gaming Corner✨#💬general] jsut hold on 
+[2018-09-13 02:35:29] [🌌Atlas#2473@✨Gaming Corner✨#💬general] im almost done 
+[2018-09-13 02:35:29] [🌌Atlas#2473@✨Gaming Corner✨#💬general] xd 
+[2018-09-13 02:40:18] [Waba#8929@✨Gaming Corner✨#💬general] <@!285578743324606482> mind inviting my bot here ? 
+[2018-09-13 02:40:22] [🌌Atlas#2473@✨Gaming Corner✨#💬general] hold on 
+[2018-09-13 02:40:30] [Waba#8929@✨Gaming Corner✨#💬general] ok 
+[2018-09-13 02:41:30] [Rose#6012@✨Gaming Corner✨#💬general] ^^ 
+[2018-09-13 02:41:34] [Rose#6012@✨Gaming Corner✨#💬general] Hello 
+[2018-09-13 02:42:04] [Waba#8929@✨Gaming Corner✨#💬general] hello 
+[2018-09-13 02:42:17] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 02:42:20] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ~1 hour of work 
+[2018-09-13 02:43:05] [Rose#6012@✨Gaming Corner✨#💬general] I remember when you started warden (added him to the server) 
+[2018-09-13 02:43:14] [🌌Atlas#2473@✨Gaming Corner✨#💬general] that's just the landing 
+[2018-09-13 02:43:20] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I'm adding way cooler stuff on the bottom 
+[2018-09-13 02:43:37] [Rose#6012@✨Gaming Corner✨#💬general] OwO 
+[2018-09-13 02:44:41] [Waba#8929@✨Gaming Corner✨#💬general] oh nicee 
+[2018-09-13 02:45:00] [🌌Atlas#2473@✨Gaming Corner✨#💬general] thanks 
+[2018-09-13 02:45:02] [🌌Atlas#2473@✨Gaming Corner✨#💬general] all 100% custom 
+[2018-09-13 02:45:04] [🌌Atlas#2473@✨Gaming Corner✨#💬general] css 
+[2018-09-13 02:50:32] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <@310391889675419650> 
+[2018-09-13 02:50:34] [🌌Atlas#2473@✨Gaming Corner✨#💬general] what do u think 
+[2018-09-13 02:50:44] [Rose#6012@✨Gaming Corner✨#💬general] Atlas 
+[2018-09-13 02:50:48] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yes 
+[2018-09-13 02:50:57] [Rose#6012@✨Gaming Corner✨#💬general] I need a good song 
+[2018-09-13 02:51:00] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <@221381001476046849> send link dm 
+[2018-09-13 02:51:05] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ok i have a recommendatio 
+[2018-09-13 02:51:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general] nI just found one 
+[2018-09-13 02:51:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 02:51:16] [🌌Atlas#2473@✨Gaming Corner✨#💬general] it's called 
+[2018-09-13 02:51:18] [🌌Atlas#2473@✨Gaming Corner✨#💬general] 8 letter 
+[2018-09-13 02:51:21] [🌌Atlas#2473@✨Gaming Corner✨#💬general] let's play it 
+[2018-09-13 02:51:24] [🌌Atlas#2473@✨Gaming Corner✨#💬general] joinne music 
+[2018-09-13 02:51:29] [Rose#6012@✨Gaming Corner✨#💬general] Im on xbox 
+[2018-09-13 02:51:31] [Rose#6012@✨Gaming Corner✨#💬general] Reee 
+[2018-09-13 02:51:33] [🌌Atlas#2473@✨Gaming Corner✨#💬general] oof 
+[2018-09-13 02:51:33] [Rose#6012@✨Gaming Corner✨#💬general] I cant 
+[2018-09-13 02:51:36] [🌌Atlas#2473@✨Gaming Corner✨#💬general] joinne 
+[2018-09-13 02:51:38] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I wana show u 
+[2018-09-13 02:51:42] [Cryptic#3468@✨Gaming Corner✨#💬general] Feel like gradient background could he better color or shade of blue 
+[2018-09-13 02:51:45] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yea 
+[2018-09-13 02:51:46] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ik 
+[2018-09-13 02:51:50] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I'm going to make it kinda rainbow 
+[2018-09-13 02:51:53] [🌌Atlas#2473@✨Gaming Corner✨#💬general] like alternating 
+[2018-09-13 02:51:56] [Cryptic#3468@✨Gaming Corner✨#💬general] Hmm 
+[2018-09-13 02:51:57] [🌌Atlas#2473@✨Gaming Corner✨#💬general] smooth fadee 
+[2018-09-13 02:52:05] [🌌Atlas#2473@✨Gaming Corner✨#💬general] cryptic 
+[2018-09-13 02:52:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general] let me show u a song 
+[2018-09-13 02:52:26] [🌌Atlas#2473@✨Gaming Corner✨#💬general] join 
+[2018-09-13 02:55:28] [Cryptic#3468@✨Gaming Corner✨#💬general] On mobile rn ree 
+[2018-09-13 02:55:33] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ok 
+[2018-09-13 02:55:35] [🌌Atlas#2473@✨Gaming Corner✨#💬general] btw 
+[2018-09-13 02:55:40] [🌌Atlas#2473@✨Gaming Corner✨#💬general] did u like what I did there with the gif 
+[2018-09-13 02:55:40] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 02:55:44] [🌌Atlas#2473@✨Gaming Corner✨#💬general] looks professional right 
+[2018-09-13 03:02:27] [Walu-Katey#0112@✨Gaming Corner✨#💬general] What about the Ice Cream Cake tho 
+[2018-09-13 03:03:21] [Rose#6012@✨Gaming Corner✨#💬general] Katey~ 
+[2018-09-13 03:03:24] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] <@!303673511858143234> I got songs 
+[2018-09-13 03:03:35] [Rose#6012@✨Gaming Corner✨#💬general] HM? 
+[2018-09-13 03:03:39] [Rose#6012@✨Gaming Corner✨#💬general] Bt 
+[2018-09-13 03:03:43] [Rose#6012@✨Gaming Corner✨#💬general] Bet* 
+[2018-09-13 03:03:53] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Sup Rose 
+[2018-09-13 03:04:00] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Want some of them? 
+[2018-09-13 03:04:07] [Rose#6012@✨Gaming Corner✨#💬general] Dm them 
+[2018-09-13 03:04:07] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <@!285578743324606482> I want Ice Cream Cake..... 
+[2018-09-13 03:04:14] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] ^^^^ 
+[2018-09-13 03:04:30] [Rose#6012@✨Gaming Corner✨#💬general] Katey the funny thing is 
+[2018-09-13 03:04:34] [Rose#6012@✨Gaming Corner✨#💬general] I have some 
+[2018-09-13 03:04:57] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Okay where do you live 
+[2018-09-13 03:05:00] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Postal Adress 
+[2018-09-13 03:05:04] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Imma mail myself over there 
+[2018-09-13 03:09:32] [Cryptic#3468@✨Gaming Corner✨#💬general] Ur my fault my brain hurts u 
+[2018-09-13 03:12:52] [Rose#6012@✨Gaming Corner✨#💬general] I mean ok 
+[2018-09-13 03:13:01] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Alright Rose 
+[2018-09-13 03:13:14] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Like my list? <:GWmythicalGhostHug:367722252567052298> 
+[2018-09-13 03:13:38] [Rose#6012@✨Gaming Corner✨#💬general] Make it more of a list 
+[2018-09-13 03:13:40] [Rose#6012@✨Gaming Corner✨#💬general] But meh 
+[2018-09-13 03:13:44] [Rose#6012@✨Gaming Corner✨#💬general] Most of it yes 
+[2018-09-13 03:14:24] [Rose#6012@✨Gaming Corner✨#💬general] Katey i live in north carolina 
+[2018-09-13 03:14:27] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] It is alist 
+[2018-09-13 03:14:31] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] *a list 
+[2018-09-13 03:14:45] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] And I worked hard on it 
+[2018-09-13 03:14:48] [Rose#6012@✨Gaming Corner✨#💬general] A
+LiSt
+Is
+Like
+This 
+[2018-09-13 03:14:48] [Warden#9606@✨Gaming Corner✨#🚩review]  
+[2018-09-13 03:14:56] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] I gave you 3 whole artists 
+[2018-09-13 03:15:00] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] I did that lol 
+[2018-09-13 03:15:03] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] On mobile 
+[2018-09-13 03:15:13] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] I also added comments 
+[2018-09-13 03:15:19] [Rose#6012@✨Gaming Corner✨#💬general] So did i 
+[2018-09-13 03:15:31] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Long comments 
+[2018-09-13 03:15:59] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Because I talk too much <:GWmythicalGrandCat:371317556734197761> 
+[2018-09-13 03:16:45] [GoldenVolcarona#2867@✨Gaming Corner✨#👑chat] Ooh Rose you’re suspicious 
+[2018-09-13 03:17:18] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] But yeah hope you like it 
+[2018-09-13 03:17:35] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Now I’ll crawl in a hole and rot away 
+[2018-09-13 03:21:27] [Rose#6012@✨Gaming Corner✨#💬general] <@378975221971025922>  i live in north carolina 
+[2018-09-13 03:22:02] [Walu-Katey#0112@✨Gaming Corner✨#💬general] hmm 
+[2018-09-13 03:22:03] [Walu-Katey#0112@✨Gaming Corner✨#💬general] okay 
+[2018-09-13 03:22:33] [Walu-Katey#0112@✨Gaming Corner✨#💬general] anyway 
+[2018-09-13 03:22:44] [Walu-Katey#0112@✨Gaming Corner✨#💬general] it's 5:22 AM... I should get to sleep 
+[2018-09-13 03:22:49] [Walu-Katey#0112@✨Gaming Corner✨#💬general] night peeps 
+[2018-09-13 03:23:42] [🌌Atlas#2473@✨Gaming Corner✨#💬general] night 
+[2018-09-13 03:26:23] [Cryptic#3468@✨Gaming Corner✨#💬general] Night loser boy 
+[2018-09-13 03:26:34] [Rose#6012@✨Gaming Corner✨#💬general] There's a hurricane 
+[2018-09-13 03:26:35] [🌌Atlas#2473@✨Gaming Corner✨#💬general] who 
+[2018-09-13 03:26:36] [Cryptic#3468@✨Gaming Corner✨#💬general] Sleep well 
+[2018-09-13 03:26:43] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I am the hurricane 
+[2018-09-13 03:26:49] [🌌Atlas#2473@✨Gaming Corner✨#💬general] a hurricane of cookies 
+[2018-09-13 03:26:55] [Rose#6012@✨Gaming Corner✨#💬general] No 
+[2018-09-13 03:26:55] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yummy 
+[2018-09-13 03:26:56] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 03:27:02] [Rose#6012@✨Gaming Corner✨#💬general] Like actually 
+[2018-09-13 03:27:03] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .snipe 
+[2018-09-13 03:27:03] raw args,  
+[2018-09-13 03:27:03] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-13 03:27:08] [Cryptic#3468@✨Gaming Corner✨#💬general] Yes he is rose 
+[2018-09-13 03:27:14] [Cryptic#3468@✨Gaming Corner✨#💬general] Don't crush is cookie dreams 
+[2018-09-13 03:27:24] [Cryptic#3468@✨Gaming Corner✨#💬general] Who deleted my message 
+[2018-09-13 03:27:25] [Rose#6012@✨Gaming Corner✨#💬general] No im being for real 
+[2018-09-13 03:27:29] [Rose#6012@✨Gaming Corner✨#💬general] Im scared 
+[2018-09-13 03:27:29] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lmao 
+[2018-09-13 03:27:37] [🌌Atlas#2473@✨Gaming Corner✨#💬general] Imma eat all ur cookies 
+[2018-09-13 03:27:40] [🌌Atlas#2473@✨Gaming Corner✨#💬general] mwahaha 
+[2018-09-13 03:27:42] [🌌Atlas#2473@✨Gaming Corner✨#💬general] *evil laugh* 
+[2018-09-13 03:27:48] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I'm Dr. Evil Cookie 
+[2018-09-13 03:28:03] [Rose#6012@✨Gaming Corner✨#💬general] Hurricane flurance 
+[2018-09-13 03:28:07] [LConeybear#6607@✨Gaming Corner✨#👑chat] You can't spell "caffeine" without "meth." 
+[2018-09-13 03:28:18] [Rose#6012@✨Gaming Corner✨#🎵music] Listen to Hentai Puffs [Extended Mix] by lunchbox997 #np on #SoundCloud
+https://soundcloud.com/thatlunchboxguy/hentai-puffs-extended-mix 
+[2018-09-13 03:28:19] [🌌Atlas#2473@✨Gaming Corner✨#💬general] Project C.O.O.K.I.E. 
+[2018-09-13 03:28:22] [LConeybear#6607@✨Gaming Corner✨#👑chat] Only true fans understand 😔 
+[2018-09-13 03:28:30] [🌌Atlas#2473@✨Gaming Corner✨#👑chat] <:thonk:432000810159702038> 
+[2018-09-13 03:28:31] [Rose#6012@✨Gaming Corner✨#💬general] Check kusic 
+[2018-09-13 03:28:36] [Rose#6012@✨Gaming Corner✨#💬general] Music* 
+[2018-09-13 03:29:00] [Cryptic#3468@✨Gaming Corner✨#💬general] Project L.O.L.I 
+[2018-09-13 03:29:29] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <:thonk:432000810159702038> 
+[2018-09-13 03:29:38] [Rose#6012@✨Gaming Corner✨#👑chat] Oof 
+[2018-09-13 03:30:17] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 03:30:25] [🌌Atlas#2473@✨Gaming Corner✨#💬general] joinne 
+[2018-09-13 03:30:26] [🌌Atlas#2473@✨Gaming Corner✨#💬general] owo 
+[2018-09-13 03:30:57] [Rose#6012@✨Gaming Corner✨#💬general] Lol 
+[2018-09-13 03:31:09] [Rose#6012@✨Gaming Corner✨#💬general] Maybe 
+[2018-09-13 03:33:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yo 
+[2018-09-13 03:33:43] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <@310391889675419650> 
+[2018-09-13 03:33:48] [🌌Atlas#2473@✨Gaming Corner✨#💬general] checkout this custom tooltips I made 
+[2018-09-13 03:33:51] [🌌Atlas#2473@✨Gaming Corner✨#💬general] 1 sec 
+[2018-09-13 03:34:42] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 03:35:01] [🌌Atlas#2473@✨Gaming Corner✨#💬general] it doesn't really show in gifs 
+[2018-09-13 03:35:02] [🌌Atlas#2473@✨Gaming Corner✨#💬general] sad 
+[2018-09-13 03:35:12] [🌌Atlas#2473@✨Gaming Corner✨#💬general] basically it kinda jums 
+[2018-09-13 03:35:16] [🌌Atlas#2473@✨Gaming Corner✨#💬general] like discord 
+[2018-09-13 03:35:19] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I made the animation 
+[2018-09-13 03:37:44] [Rose#6012@✨Gaming Corner✨#🍆the-dark-side]  
+[2018-09-13 03:38:58] [Cryptic#3468@✨Gaming Corner✨#💬general] Hmm maybe make a little arrow above it I think it's a little too close to the button 
+[2018-09-13 03:39:54] [🌌Atlas#2473@✨Gaming Corner✨#💬general] the arrow is hard 
+[2018-09-13 03:39:57] [🌌Atlas#2473@✨Gaming Corner✨#💬general] way too hard 
+[2018-09-13 03:40:01] [🌌Atlas#2473@✨Gaming Corner✨#💬general] and time consuming 
+[2018-09-13 03:40:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general] also those this look better 
+[2018-09-13 03:42:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 03:42:11] [🌌Atlas#2473@✨Gaming Corner✨#💬general] or the other one 
+[2018-09-13 03:42:35] [🌌Atlas#2473@✨Gaming Corner✨#💬general] \ 
+[2018-09-13 03:42:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 03:43:09] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 03:43:36] [Rose#6012@✨Gaming Corner✨#💬general] Should i get on pc? 
+[2018-09-13 03:43:36] [🌌Atlas#2473@✨Gaming Corner✨#💬general] what looks b eter 
+[2018-09-13 03:43:37] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 03:43:40] [🌌Atlas#2473@✨Gaming Corner✨#💬general] maybe 
+[2018-09-13 03:43:43] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I wana show u the song 
+[2018-09-13 03:43:49] [Rose#6012@✨Gaming Corner✨#💬general] Meh mk 
+[2018-09-13 03:44:02] [Rose#6012@✨Gaming Corner✨#💬general] But that means i cant stream my anime 
+[2018-09-13 03:44:04] [Rose#6012@✨Gaming Corner✨#💬general] Fuck 
+[2018-09-13 03:44:19] [Rose#6012@✨Gaming Corner✨#💬general] And its a heavy echhai 
+[2018-09-13 03:44:22] [Rose#6012@✨Gaming Corner✨#💬general] ;-; 
+[2018-09-13 03:44:29] [Rose#6012@✨Gaming Corner✨#💬general] I- fuck 
+[2018-09-13 03:44:33] [Rose#6012@✨Gaming Corner✨#💬general] One sec 
+[2018-09-13 03:47:11] [🌌Atlas#2473@✨Gaming Corner✨#💬general] D: 
+[2018-09-13 03:49:14] [Rose#6012@✨Gaming Corner✨#💬general] Mk 
+[2018-09-13 03:49:16] [Rose#6012@✨Gaming Corner✨#💬general] Im on 
+[2018-09-13 03:50:15] [Rose#6012@✨Gaming Corner✨#💬general] Atlas 
+[2018-09-13 03:50:30] [Rose#6012@✨Gaming Corner✨#💬general] Where did my symbols go... 
+[2018-09-13 03:50:35] [Rose#6012@✨Gaming Corner✨#💬general] °^° 
+[2018-09-13 03:50:43] [Rose#6012@✨Gaming Corner✨#💬general] God damn it warden 
+[2018-09-13 03:50:47] [Rose#6012@✨Gaming Corner✨#💬general] Ugh 
+[2018-09-13 03:51:38] [Rose#6012@✨Gaming Corner✨#💬general] Ree 
+[2018-09-13 03:53:58] [Rose#6012@✨Gaming Corner✨#💬general] ok did it change? 
+[2018-09-13 03:54:02] [Rose#6012@✨Gaming Corner✨#💬general] no... 
+[2018-09-13 03:54:48] [Rose#6012@✨Gaming Corner✨#💬general] <@!285578743324606482> can you change my name back with the yingyang symbols please, wardons a bitch 
+[2018-09-13 03:54:54] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-13 03:55:06] [Rose#6012@✨Gaming Corner✨#💬general] it took them away 
+[2018-09-13 03:55:07] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I'll do it later I gotta shut him down for that 
+[2018-09-13 03:55:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lmao 
+[2018-09-13 03:55:13] [🌌Atlas#2473@✨Gaming Corner✨#💬general] It's anti hoisting 
+[2018-09-13 03:55:19] [Rose#6012@✨Gaming Corner✨#💬general] yeah i know 
+[2018-09-13 03:56:00] [Rose#6012@✨Gaming Corner✨#💬general] but now i cant change my nickname at all 
+[2018-09-13 03:56:04] [Rose#6012@✨Gaming Corner✨#💬general] idk why 
+[2018-09-13 03:58:37] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] *sighs* 
+[2018-09-13 04:07:52] [GoldenVolcarona#2867@✨Gaming Corner✨#👑chat] I don’t want to be offensive to any women, but you can’t spell woman without man 😛 
+[2018-09-13 04:09:17] [Dyno#3861@✨Gaming Corner✨#🚪member-log] (Ankrad#0597) left 
+[2018-09-13 04:09:17] [Warden#9606@✨Gaming Corner✨#🚪member-log]  
+[2018-09-13 04:10:34] [🌌Atlas#2473@✨Gaming Corner✨#💬general] 99DAFF 
+[2018-09-13 04:10:46] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] tf 
+[2018-09-13 04:12:05] [🌌Atlas#2473@✨Gaming Corner✨#💬general] rose 
+[2018-09-13 04:12:12] [🌌Atlas#2473@✨Gaming Corner✨#💬general] want me to show u the song 
+[2018-09-13 04:12:21] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] sure 
+[2018-09-13 04:12:57] [🌌Atlas#2473@✨Gaming Corner✨#💬general] joinne 
+[2018-09-13 04:13:32] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] dm invite me 
+[2018-09-13 04:13:44] [🌌Atlas#2473@✨Gaming Corner✨#💬general] wat 
+[2018-09-13 04:13:46] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I mean vc 
+[2018-09-13 04:13:51] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] oh 
+[2018-09-13 04:14:26] [🌌Atlas#2473@✨Gaming Corner✨#🎵music] dj play 8 letters 
+[2018-09-13 04:14:26] [DJ#3340@✨Gaming Corner✨#🎵music]  
+[2018-09-13 04:14:27] [DJ#3340@✨Gaming Corner✨#🎵music]  
+[2018-09-13 04:20:55] [🌌Atlas#2473@✨Gaming Corner✨#🎵music] dj play 8 letters 
+[2018-09-13 04:20:55] [DJ#3340@✨Gaming Corner✨#🎵music]  
+[2018-09-13 04:20:56] [DJ#3340@✨Gaming Corner✨#🎵music]  
+[2018-09-13 04:20:59] [🌌Atlas#2473@✨Gaming Corner✨#💬general] does this look better 
+[2018-09-13 04:21:08] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 04:21:46] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] <@310391889675419650> 
+[2018-09-13 04:21:50] [🌌Atlas#2473@✨Gaming Corner✨#💬general] he's off 
+[2018-09-13 04:21:51] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] *cough* 
+[2018-09-13 04:21:51] [🌌Atlas#2473@✨Gaming Corner✨#💬general] u tell me 
+[2018-09-13 04:21:53] [🌌Atlas#2473@✨Gaming Corner✨#💬general] ur opinion 
+[2018-09-13 04:21:58] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] idk xD 
+[2018-09-13 04:22:03] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] ree 
+[2018-09-13 04:22:15] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] i mean i like it 
+[2018-09-13 04:23:38] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] although add some photos, or something below. like scrolling down would link to this server, or some photos of warden 
+[2018-09-13 04:24:36] [Nolan~Kun#6012@✨Gaming Corner✨#🎵music] dj p JRAFFE cal 
+[2018-09-13 04:24:36] [DJ#3340@✨Gaming Corner✨#🎵music]  
+[2018-09-13 04:24:37] [DJ#3340@✨Gaming Corner✨#🎵music]  
+[2018-09-13 04:25:37] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yea 
+[2018-09-13 04:29:19] [🌌Atlas#2473@✨Gaming Corner✨#💬general] tada 
+[2018-09-13 04:29:23] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 04:29:30] [🌌Atlas#2473@✨Gaming Corner✨#🎵music] dj play bad at love 
+[2018-09-13 04:29:31] [DJ#3340@✨Gaming Corner✨#🎵music]  
+[2018-09-13 04:29:32] [DJ#3340@✨Gaming Corner✨#🎵music]  
+[2018-09-13 04:31:31] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Deluxe twilight. 
+[2018-09-13 04:35:15] [Nolan~Kun#6012@✨Gaming Corner✨#💬general] looks good 
+[2018-09-13 04:35:50] [🌌Atlas#2473@✨Gaming Corner✨#💬general] thanks 
+[2018-09-13 04:37:35] [DJ#3340@✨Gaming Corner✨#🎵music] **Leaving due to inactivity.**
+Running me costs money so please consider becoming a patron! <https://www.patreon.com/DepressedGiraffe> 
+[2018-09-13 04:54:40] [🌌Atlas#2473@✨Gaming Corner✨#💬general]  
+[2018-09-13 04:54:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lmao fine I'll stop 
+[2018-09-13 04:54:57] [🌌Atlas#2473@✨Gaming Corner✨#💬general] holy crap it looks awful in that gif 
+[2018-09-13 04:55:01] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I swear it has alot more quality 
+[2018-09-14 01:17:22] [Bot.setup] Attempting to load internal fragments 
+[2018-09-14 01:17:22] [Bot.setup] Loading 6 internal fragments 
+[2018-09-14 01:17:22] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-14 01:17:22] [Bot.setup] Loading 4 service(s) 
+[2018-09-14 01:17:22] [Bot.setup] Loaded 4 service(s) 
+[2018-09-14 01:17:22] [Bot.setup] Loading 31 command(s) 
+[2018-09-14 01:17:23] [Bot.setup] Loaded 31 command(s) 
+[2018-09-14 01:17:23] [Bot.setupEvents] Setting up Discord events 
+[2018-09-14 01:17:23] [Bot.setupEvents] Discord events setup completed 
+[2018-09-14 01:17:23] [Bot.setup] Bot setup completed 
+[2018-09-14 01:17:23] [Bot.connect] Starting 
+[2018-09-14 01:17:46] [Bot.setup] Attempting to load internal fragments 
+[2018-09-14 01:17:46] [Bot.setup] Loading 6 internal fragments 
+[2018-09-14 01:17:46] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-14 01:17:46] [Bot.setup] Loading 4 service(s) 
+[2018-09-14 01:17:46] [Bot.setup] Loaded 4 service(s) 
+[2018-09-14 01:17:46] [Bot.setup] Loading 31 command(s) 
+[2018-09-14 01:17:46] [Bot.setup] Loaded 31 command(s) 
+[2018-09-14 01:17:46] [Bot.setupEvents] Setting up Discord events 
+[2018-09-14 01:17:46] [Bot.setupEvents] Discord events setup completed 
+[2018-09-14 01:17:46] [Bot.setup] Bot setup completed 
+[2018-09-14 01:17:46] [Bot.connect] Starting 
+[2018-09-14 01:17:47] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-14 01:17:47] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-14 01:17:47] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-14 01:17:47] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-14 01:17:51] [🌌Atlas#2473@Warden Official#testing] .backup 
+[2018-09-14 01:17:51] raw args,  
+[2018-09-14 01:17:51] There was an error while executing the 'backup' command: Cannot read property 'backups' of undefined 
+[2018-09-14 01:17:52] [Warden#9606@Warden Official#testing]  
+[2018-09-14 01:17:57] Setting up mongodb database 
+[2018-09-14 01:17:57] There was an error establishing connection to the MongoDB database. 
+[2018-09-14 01:17:57] Mongodb database setup completed 
+[2018-09-14 01:18:05] [KenMcMan#9240@✨Gaming Corner✨#💬general] Why would you fight on such a beautiful day. It messes up the feeling and the whole scenery in general. 
+[2018-09-14 01:20:23] [Bot.setup] Attempting to load internal fragments 
+[2018-09-14 01:20:23] [Bot.setup] Loading 6 internal fragments 
+[2018-09-14 01:20:23] [Bot.setup] Enabled 6/6 internal fragments 
+[2018-09-14 01:20:23] [Bot.setup] Loading 4 service(s) 
+[2018-09-14 01:20:23] [Bot.setup] Loaded 4 service(s) 
+[2018-09-14 01:20:23] [Bot.setup] Loading 31 command(s) 
+[2018-09-14 01:20:23] [Bot.setup] Loaded 31 command(s) 
+[2018-09-14 01:20:23] [Bot.setupEvents] Setting up Discord events 
+[2018-09-14 01:20:23] [Bot.setup] Bot setup completed 
+[2018-09-14 01:20:23] [Bot.setupEvents] Discord events setup completed 
+[2018-09-14 01:20:23] [Bot.connect] Starting 
+[2018-09-14 01:20:23] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-14 01:20:23] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-14 01:20:23] [Bot.setupEvents] Ready | Took 443ms 
+[2018-09-14 01:20:23] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-14 01:20:28] [🌌Atlas#2473@Warden Official#testing] .backup 
+[2018-09-14 01:20:28] raw args,  
+[2018-09-14 01:20:28] There was an error while executing the 'backup' command: Cannot read property 'backups' of undefined 
+[2018-09-14 01:20:28] [Warden#9606@Warden Official#testing]  
+[2018-09-14 01:20:33] [🌌Atlas#2473@Warden Official#testing] .backup 
+[2018-09-14 01:20:33] raw args,  
+[2018-09-14 01:20:33] There was an error while executing the 'backup' command: Cannot read property 'backups' of undefined 
+[2018-09-14 01:20:33] Setting up mongodb database 
+[2018-09-14 01:20:33] There was an error establishing connection to the MongoDB database. 
+[2018-09-14 01:20:33] Mongodb database setup completed 
+[2018-09-14 01:20:33] [Warden#9606@Warden Official#testing]  
+[2018-09-14 01:20:36] [🌌Atlas#2473@Warden Official#testing] .backup 
+[2018-09-14 01:20:36] raw args,  
+[2018-09-14 01:20:36] There was an error while executing the 'backup' command: Cannot read property 'backups' of undefined 
+[2018-09-14 01:20:36] [Warden#9606@Warden Official#testing]  
+[2018-09-14 01:27:00] [🌌Atlas#2473@✨Gaming Corner✨#💬general] https://cloudrex.github.io/warden-site/ 
+[2018-09-14 01:27:42] [Waba#8929@Warden Official#general]  
+[2018-09-14 01:27:50] [🌌Atlas#2473@Warden Official#general] wow dude you're fast 
+[2018-09-14 01:27:56] [Waba#8929@Warden Official#general] 😃 
+[2018-09-14 01:28:01] [Waba#8929@Warden Official#general] indeed I am lmao 
+[2018-09-14 01:28:22] [Waba#8929@Warden Official#general] do I get a prize ? lol 
+[2018-09-14 01:28:27] [🌌Atlas#2473@Warden Official#general] yes 
+[2018-09-14 01:28:28] [NolanRose#6012@✨Gaming Corner✨#💬general] Bitch beautiful day my ass 
+[2018-09-14 01:28:32] [🌌Atlas#2473@Warden Official#general] u get the first member prize 
+[2018-09-14 01:28:32] [🌌Atlas#2473@Warden Official#general] lol 
+[2018-09-14 01:28:44] [Walu-Katey#0112@✨Gaming Corner✨#💬general] I saw that 
+[2018-09-14 01:28:44] [Waba#8929@Warden Official#general] yayyyy 
+[2018-09-14 01:29:08] [NolanRose#6012@✨Gaming Corner✨#💬general] Fucking hurricane florence 
+[2018-09-14 01:29:41] [NolanRose#6012@✨Gaming Corner✨#💬general] I thought it was agugs for a sec(deffreant server) 
+[2018-09-14 01:29:56] [KenMcMan#9240@✨Gaming Corner✨#💬general] Ah man. Art got archived. I had art to post...Ah well. I'll just post it in media then. 
+[2018-09-14 01:29:59] [Walu-Katey#0112@✨Gaming Corner✨#💬general] You better curry up and run 
+[2018-09-14 01:30:39] [NolanRose#6012@✨Gaming Corner✨#💬general] He archived media 
+[2018-09-14 01:30:52] [KenMcMan#9240@✨Gaming Corner✨#💬general] Nevermind, that's archived as well...and so was creators <:angery:437370771195559936> 
+[2018-09-14 01:31:03] [NolanRose#6012@✨Gaming Corner✨#💬general] <@285578743324606482> 
+[2018-09-14 01:31:09] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <:thonkery:484571753285156864> 
+[2018-09-14 01:31:23] [KenMcMan#9240@✨Gaming Corner✨#💬general] Ping pong 
+[2018-09-14 01:31:58] [🌌Atlas#2473@✨Gaming Corner✨#💬general] pong ping 
+[2018-09-14 01:32:06] [NolanRose#6012@✨Gaming Corner✨#💬general] Ding dong 
+[2018-09-14 01:32:21] [Walu-Katey#0112@✨Gaming Corner✨#💬general] lo li 
+[2018-09-14 01:32:29] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <:pepehappy:469200838833864725> 
+[2018-09-14 01:32:46] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] li lo 
+[2018-09-14 01:32:50] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] And stitch 
+[2018-09-14 01:32:55] [Walu-Katey#0112@✨Gaming Corner✨#💬general] I was about to say that 
+[2018-09-14 01:33:00] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <:angery:437370771195559936> 
+[2018-09-14 01:33:10] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] <:thonkingcorrin:489955836366684173> 
+[2018-09-14 01:33:15] [NolanRose#6012@✨Gaming Corner✨#💬general]  
+[2018-09-14 01:33:36] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Rip Nolan 
+[2018-09-14 01:33:41] [Walu-Katey#0112@✨Gaming Corner✨#💬general] 2002-2018 
+[2018-09-14 01:34:01] [NolanRose#6012@✨Gaming Corner✨#💬general] If i die 
+[2018-09-14 01:34:12] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Can I get your Steam Password and Email? 
+[2018-09-14 01:34:15] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <:angery:437370771195559936> 
+[2018-09-14 01:34:34] [KenMcMan#9240@✨Gaming Corner✨#💬general] I guess I have no other place but to post my art work here 
+[2018-09-14 01:34:55] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Star from meh 
+[2018-09-14 01:34:57] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Looks gud 
+[2018-09-14 01:35:08] [NolanRose#6012@✨Gaming Corner✨#💬general] Make me into a music bot 
+[2018-09-14 01:35:16] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] <@!285578743324606482> Give us <#382054707029475348> and <#446526500280467467> back plz 
+[2018-09-14 01:35:54] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Hmh 
+[2018-09-14 01:36:00] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Media shall return 
+[2018-09-14 01:36:07] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] tyty 
+[2018-09-14 01:36:16] [KenMcMan#9240@✨Gaming Corner✨#💬general] I worked on that for hours. As soon as I got home, I started working on it. 
+[2018-09-14 01:36:30] [Walu-Katey#0112@✨Gaming Corner✨#💬general] You did great 
+[2018-09-14 01:36:44] [KenMcMan#9240@✨Gaming Corner✨#💬general] Thanks <:awoo:464194954412032030> 
+[2018-09-14 01:37:31] [Walu-Katey#0112@✨Gaming Corner✨#💬general] <:heh:445833936761913344> 
+[2018-09-14 01:39:27] [KenMcMan#9240@✨Gaming Corner✨#💬general] I went through a 20 FL oz water bottle with in 20 minutes yesterday and didn't notice I drank it so fast til it was almost gone. This was after I had already drank a 20 FL oz bottle before hand 
+[2018-09-14 01:40:30] [KenMcMan#9240@✨Gaming Corner✨#💬general] I just got this one and it's almost gone. I drink more water than I need half the time. 
+[2018-09-14 01:40:54] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Well water is always good 
+[2018-09-14 01:41:02] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] How are the denizens of this effulgent enclave operating this phenomenal day? 
+[2018-09-14 01:42:19] [KenMcMan#9240@✨Gaming Corner✨#💬general] Like a water vacuum pump with an endless water tank 
+[2018-09-14 01:42:31] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Stupendous? 
+[2018-09-14 01:42:48] [KenMcMan#9240@✨Gaming Corner✨#💬general] Stupendium 
+[2018-09-14 01:43:01] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Perplexment. 
+[2018-09-14 01:43:15] [KenMcMan#9240@✨Gaming Corner✨#💬general] Perplexium 
+[2018-09-14 01:43:31] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Ailurophile. 
+[2018-09-14 01:43:40] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Pedophile 
+[2018-09-14 01:43:58] [Walu-Katey#0112@✨Gaming Corner✨#💬general] ya'll saw nothing 
+[2018-09-14 01:44:16] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Uncertain. 
+[2018-09-14 01:44:31] [KenMcMan#9240@✨Gaming Corner✨#💬general] Uncertium 
+[2018-09-14 01:44:37] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Uranium 
+[2018-09-14 01:44:51] [KenMcMan#9240@✨Gaming Corner✨#💬general] ***BOOM*** 
+[2018-09-14 01:44:56] [Walu-Katey#0112@✨Gaming Corner✨#💬general] lol 
+[2018-09-14 01:45:13] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Efflorescence. 
+[2018-09-14 01:45:24] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Chatoyant. 
+[2018-09-14 01:45:31] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Emollient. 
+[2018-09-14 01:45:43] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Effervescent. 
+[2018-09-14 01:45:50] [KenMcMan#9240@✨Gaming Corner✨#💬general] Whomst've 
+[2018-09-14 01:46:17] [Walu-Katey#0112@✨Gaming Corner✨#💬general] avada kedavra 
+[2018-09-14 01:46:24] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] You consist of ephemeral visions. 
+[2018-09-14 01:46:54] [NolanRose#6012@✨Gaming Corner✨#💬general] <:GWnanamiRankoFlustered:410087226349846529> 
+[2018-09-14 01:47:05] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Wingardium leviosa! 
+[2018-09-14 01:47:09] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Halcyon. 
+[2018-09-14 01:47:19] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Stupefy! 
+[2018-09-14 01:47:26] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Expelliarmus! 
+[2018-09-14 01:47:29] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Salutations, acquainted one. 
+[2018-09-14 01:47:37] [KenMcMan#9240@✨Gaming Corner✨#💬general]  
+[2018-09-14 01:47:44] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Idontknowfurtherimus! 
+[2018-09-14 01:47:54] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Levicorpus. 
+[2018-09-14 01:47:59] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Dam 
+[2018-09-14 01:48:10] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Reducto. 
+[2018-09-14 01:48:15] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Impedimenta. 
+[2018-09-14 01:48:16] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Harry Potter Fan I see 
+[2018-09-14 01:48:22] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Indubitably. 
+[2018-09-14 01:48:41] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Crucio 
+[2018-09-14 01:48:53] [Walu-Katey#0112@✨Gaming Corner✨#💬general] Fair enough 
+[2018-09-14 01:49:14] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Aguamenti. 
+[2018-09-14 01:49:28] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Accio lucidity. 
+[2018-09-14 01:50:22] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] I attempted to reinstate my mental stability. It neglected to prosper. 
+[2018-09-14 01:50:37] [NolanRose#6012@✨Gaming Corner✨#💬general] <:GWupuCirCup:390299775599247367> 
+[2018-09-14 01:50:42] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] ***EXPECTO PATRONUM***. 
+[2018-09-14 02:29:21] [🌌Atlas#2473@✨Gaming Corner✨#📢announcements] Hey @everyone ! I'm happy to announce my new server for <@446736307172016138> (a moderation bot)!
+
+The server and bot are still in development, so don't actually expect much.
+
+If you'd like to join, here it is! Be among the first ones!
+Regarding the ping, I decided to ping everyone since the last ping I used was about **3 months** ago, so **don't expect any more pings anytime soon.**
+
+https://discordapp.com/invite/EKbRzwf 
+[2018-09-14 02:29:34] [Walu-Katey#0112@Warden Official#general]  
+[2018-09-14 02:29:37] [RickyPepino#9211@Warden Official#general]  
+[2018-09-14 02:29:42] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Triggered by ping I'm leaving 
+[2018-09-14 02:29:43] [RickyPepino#9211@Warden Official#general] OwO 
+[2018-09-14 02:29:45] [🌌Atlas#2473@Warden Official#general] welcome 
+[2018-09-14 02:29:54] [RickyPepino#9211@Warden Official#general] hello 😃 
+[2018-09-14 02:29:57] [🌌Atlas#2473@Warden Official#general] hey 
+[2018-09-14 02:29:57] [🌌Atlas#2473@Warden Official#general] lol 
+[2018-09-14 02:30:04] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-14 02:30:04] [RickyPepino#9211@Warden Official#general] new server? 
+[2018-09-14 02:30:07] [🌌Atlas#2473@Warden Official#general] yea 
+[2018-09-14 02:30:09] [🌌Atlas#2473@Warden Official#general] fresh 
+[2018-09-14 02:30:11] [🌌Atlas#2473@Warden Official#general] grown 
+[2018-09-14 02:30:24] [RickyPepino#9211@Warden Official#general] awesome, glad to see it 
+[2018-09-14 02:30:30] [RickyPepino#9211@Warden Official#general] whats happening to the old one? 
+[2018-09-14 02:30:58] [KenMcMan#9240@Warden Official#general]  
+[2018-09-14 02:31:17] [Walu-Katey#0112@Warden Official#general] woop 
+[2018-09-14 02:31:42] [Telk#7197@✨Gaming Corner✨#💬general] <@!285578743324606482> hewwwo 
+[2018-09-14 02:31:55] [GoldenVolcarona#2867@Warden Official#general]  
+[2018-09-14 02:31:59] [GoldenVolcarona#2867@Warden Official#general] BOO! 
+[2018-09-14 02:32:13] [KenMcMan#9240@Warden Official#general] AHHH! 
+[2018-09-14 02:32:32] [🌌Atlas#2473@✨Gaming Corner✨#💬general] hey telk 
+[2018-09-14 02:32:33] [🌌Atlas#2473@✨Gaming Corner✨#💬general] what's up 
+[2018-09-14 02:32:37] [GoldenVolcarona#2867@Warden Official#general] <@285578743324606482> Make default notification settings Only @mentions 
+[2018-09-14 02:32:38] [🌌Atlas#2473@Warden Official#general] hey everyone 
+[2018-09-14 02:32:39] [🌌Atlas#2473@Warden Official#general] welcome 
+[2018-09-14 02:32:43] [🌌Atlas#2473@Warden Official#general] Yea I think I did that already 
+[2018-09-14 02:32:44] [🌌Atlas#2473@Warden Official#general] isn't it? 
+[2018-09-14 02:32:47] [GoldenVolcarona#2867@Warden Official#general] Nope 
+[2018-09-14 02:33:04] [🌌Atlas#2473@Warden Official#general] there we go 
+[2018-09-14 02:33:07] [🌌Atlas#2473@Warden Official#general] 👍 
+[2018-09-14 02:33:07] [GoldenVolcarona#2867@Warden Official#general] You remembered to disable @everyone before that 
+[2018-09-14 02:33:10] [🌌Atlas#2473@Warden Official#general] lol 
+[2018-09-14 02:33:16] [GoldenVolcarona#2867@Warden Official#general] And /tts... maybe 
+[2018-09-14 02:33:16] [Telk#7197@✨Gaming Corner✨#💬general] im gud 
+[2018-09-14 02:33:19] [GoldenVolcarona#2867@Warden Official#general] Test 
+[2018-09-14 02:33:22] [Telk#7197@✨Gaming Corner✨#💬general] how is <@446736307172016138>? 
+[2018-09-14 02:33:40] [GoldenVolcarona#2867@Warden Official#general] Can't say 
+[2018-09-14 02:33:58] [🌌Atlas#2473@✨Gaming Corner✨#💬general] in development 
+[2018-09-14 02:34:04] [🌌Atlas#2473@Warden Official#general] <:GWfroggyBlobThonk:400751075776397322> 
+[2018-09-14 02:35:13] [GoldenVolcarona#2867@Warden Official#general] Why can I see the mod log 
+[2018-09-14 02:35:19] [🌌Atlas#2473@Warden Official#info] You can view our website design (under development) here: https://cloudrex.github.io/warden-site/ 
+[2018-09-14 02:35:25] [🌌Atlas#2473@Warden Official#general] it's public 
+[2018-09-14 02:35:29] [GoldenVolcarona#2867@Warden Official#general] Hmm 
+[2018-09-14 02:35:37] [GoldenVolcarona#2867@Warden Official#general] But the other one isn't 
+[2018-09-14 02:35:44] [🌌Atlas#2473@Warden Official#general] lol 
+[2018-09-14 02:35:47] [🌌Atlas#2473@Warden Official#general] ye 
+[2018-09-14 02:36:27] [GoldenVolcarona#2867@Warden Official#general] And rn the rules say to respect staff but you're the only staff member with ***highly*** differing tolerance levels. 
+[2018-09-14 02:36:57] [GoldenVolcarona#2867@Warden Official#general] Wait it says don't ask for staff I'm blind 😛 
+[2018-09-14 02:40:43] [Walu-Katey#0112@Warden Official#general] No Advertising? *Posts Invite for Gaming Corner* 
+[2018-09-14 02:41:46] [🌌Atlas#2473@Warden Official#general] that's advertising 
+[2018-09-14 02:42:18] [GoldenVolcarona#2867@Warden Official#general] But youown it 
+[2018-09-14 02:42:32] [GoldenVolcarona#2867@Warden Official#general] Owners are allowed to break their own rules 
+[2018-09-14 02:45:04] [🌌Atlas#2473@Warden Official#general] well 
+[2018-09-14 02:45:04] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Ma ma se, ma ma sa, ma ma ma coo sa. 
+[2018-09-14 02:45:05] [🌌Atlas#2473@Warden Official#general] maybe 
+[2018-09-14 02:45:57] [Chernobyl Survivor#7118@Warden Official#general]  
+[2018-09-14 02:46:02] [🌌Atlas#2473@Warden Official#general] heyo 
+[2018-09-14 02:46:07] [Chernobyl Survivor#7118@Warden Official#general] hiii :) 
+[2018-09-14 02:46:08] [🌌Atlas#2473@Warden Official#general] I like ur pfp 
+[2018-09-14 02:46:09] [🌌Atlas#2473@Warden Official#general] lol 
+[2018-09-14 02:46:12] [Chernobyl Survivor#7118@Warden Official#general] oh thanks haha 
+[2018-09-14 02:46:17] [🌌Atlas#2473@Warden Official#general] alot 
+[2018-09-14 02:46:17] [🌌Atlas#2473@Warden Official#general] xd 
+[2018-09-14 02:46:20] [Chernobyl Survivor#7118@Warden Official#general] you too, it gives me nostalgic vibes 
+[2018-09-14 02:46:27] [Chernobyl Survivor#7118@Warden Official#general] aw thanks :') 
+[2018-09-14 02:46:49] [🌌Atlas#2473@Warden Official#general] owo 
+[2018-09-14 02:48:29] [Chernobyl Survivor#7118@Warden Official#general] owo uwu 
+[2018-09-14 03:00:12] [🌌Atlas#2473@Warden Official#general] press F for my wisdom teeth 
+[2018-09-14 03:00:13] [🌌Atlas#2473@Warden Official#general] ™ 
+[2018-09-14 03:00:49] [Cryptic#3468@✨Gaming Corner✨#💬general]  
+[2018-09-14 03:00:52] [Cryptic#3468@✨Gaming Corner✨#💬general] <@285578743324606482> 
+[2018-09-14 03:01:00] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <:thonkeyes:484571491632021505> 
+[2018-09-14 03:01:03] [Cryptic#3468@✨Gaming Corner✨#💬general] Lol 

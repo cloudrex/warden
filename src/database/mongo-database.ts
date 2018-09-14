@@ -1,13 +1,14 @@
 import {Collection, Db, MongoClient} from "mongodb";
 import Log from "discord-anvil/dist/core/log";
-import {GuildMember, Snowflake} from "discord.js";
+import {ChannelResolvable, GuildMember, Snowflake} from "discord.js";
 
-const url: string = "mongodb://mongoadm:mongopass@mongo:27017/admin";
+const url: string = process.env.db_url || `mongodb://${process.env.db_host || "localhost"}:${process.env.db_port || 27017}/${process.env.db_name || ""}`;
 const dbName: string = "warden";
 
 export type MongoCollections = {
     readonly messages: Collection;
     readonly moderationActions: Collection;
+    readonly backups: Collection;
 };
 
 export enum ModerationActionType {
@@ -17,6 +18,11 @@ export enum ModerationActionType {
     Kick,
     Ban,
     Unban
+}
+
+export enum ChannelType {
+    Text,
+    Voice
 }
 
 export type ModerationAction = {
@@ -48,6 +54,19 @@ export type DatabaseMessage = {
     readonly channelId: Snowflake;
 };
 
+export type DatabaseChannel = {
+    readonly id: Snowflake;
+    readonly name: string;
+    readonly topic?: string;
+    readonly type: ChannelType;
+}
+
+export type DatabaseBackup = {
+    readonly time: number,
+    readonly guildId: Snowflake;
+    readonly channels: Array<DatabaseChannel>;
+};
+
 export default abstract class Mongo {
     public static db: Db;
 
@@ -75,7 +94,8 @@ export default abstract class Mongo {
                 // Setup Collections
                 Mongo.collections = {
                     messages: Mongo.db.collection("messages"),
-                    moderationActions: Mongo.db.collection("moderation-actions")
+                    moderationActions: Mongo.db.collection("moderation-actions"),
+                    backups: Mongo.db.collection("backups")
                 };
 
                 resolve(true);
