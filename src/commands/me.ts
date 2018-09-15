@@ -18,6 +18,7 @@ export default class Me extends Command {
         this.restrict.cooldown = 120;
     }
 
+    // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages
     public async executed(context: CommandContext): Promise<void> {
         const messages: Array<DatabaseMessage> = await Mongo.collections.messages.find({
             authorId: context.sender.id
@@ -45,7 +46,7 @@ export default class Me extends Command {
         }
 
         const embed: RichEmbed = new RichEmbed().setColor("GREEN")
-            .addField("Messages Logged", messages.length)
+            .addField("Messages Logged", messages.length > 100 ? "100+" : messages.length)
             .addField("Total Mentions", mentions === 0 ? "*None*" : (throttled ? "100+" : mentions))
             .addField("First Message Intercepted", messages[0].message.length > 50 ? messages[0].message.substr(0, 46) + " ..." : messages[0].message)
             .addField("Words Written", `${words} (${characters} characters)`);

@@ -19,16 +19,22 @@ export default class Protection extends Service {
 
     public start(): void {
         this.bot.client.on("message", async (message: Message) => {
+            let tracking: boolean | null = await WardenAPI.getUserConfig(message.author.id, "tracking") as boolean | null;
+
+            tracking = tracking === null ? true : tracking;
+
             // Log the message into the database
-            await Mongo.collections.messages.insertOne({
-                author: message.author.tag,
-                authorId: message.author.id,
-                channelId: message.channel.id,
-                message: message.content,
-                messageId: message.id,
-                time: message.createdTimestamp,
-                guildId: message.guild.id
-            });
+            if (tracking) {
+                await Mongo.collections.messages.insertOne({
+                    author: message.author.tag,
+                    authorId: message.author.id,
+                    channelId: message.channel.id,
+                    message: message.content,
+                    messageId: message.id,
+                    time: message.createdTimestamp,
+                    guildId: message.guild.id
+                });
+            }
 
             const api: WardenAPI = this.api;
 

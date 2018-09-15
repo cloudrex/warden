@@ -115,7 +115,7 @@ async function start() {
         Log.debug("Setting up mongodb database");
         await Mongo.connect();
         Log.debug("Mongodb database setup completed");
-    }, 10000);
+    }, 5000);
 }
 
 start();

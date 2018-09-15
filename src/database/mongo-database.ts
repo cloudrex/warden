@@ -1,6 +1,7 @@
 import {Collection, Db, MongoClient} from "mongodb";
 import Log from "discord-anvil/dist/core/log";
 import {ChannelResolvable, GuildMember, Snowflake} from "discord.js";
+import {UserConfigType} from "../core/warden-api";
 
 const url: string = process.env.db_url || `mongodb://${process.env.db_host || "localhost"}:${process.env.db_port || 27017}/${process.env.db_name || ""}`;
 const dbName: string = "warden";
@@ -9,6 +10,7 @@ export type MongoCollections = {
     readonly messages: Collection;
     readonly moderationActions: Collection;
     readonly backups: Collection;
+    readonly memberConfig: Collection;
 };
 
 export enum ModerationActionType {
@@ -67,6 +69,12 @@ export type DatabaseBackup = {
     readonly channels: Array<DatabaseChannel>;
 };
 
+export type DatabaseUserConfig = {
+    readonly userId: Snowflake;
+    readonly type: UserConfigType;
+    readonly value: string | boolean;
+};
+
 export default abstract class Mongo {
     public static db: Db;
 
@@ -95,7 +103,8 @@ export default abstract class Mongo {
                 Mongo.collections = {
                     messages: Mongo.db.collection("messages"),
                     moderationActions: Mongo.db.collection("moderation-actions"),
-                    backups: Mongo.db.collection("backups")
+                    backups: Mongo.db.collection("backups"),
+                    memberConfig: Mongo.db.collection("member-config")
                 };
 
                 resolve(true);
