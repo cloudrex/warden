@@ -7975,3 +7975,41 @@ https://discordapp.com/invite/EKbRzwf
 [2018-09-15 04:18:21] Mongodb database setup completed 
 [2018-09-15 04:18:23] [🌌Atlas#2473@Warden Official#testing] hmm 
 [2018-09-15 04:23:53] [Cryptic#3468@✨Gaming Corner✨#💬general] lol 
+[2018-09-15 17:24:39] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 17:24:39] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 17:24:39] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 17:24:39] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 17:24:39] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 17:24:39] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 17:24:40] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 17:24:40] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 17:24:40] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 17:24:40] [Bot.setup] Bot setup completed 
+[2018-09-15 17:24:40] [Bot.connect] Starting 
+[2018-09-15 17:25:14] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 17:25:14] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 17:25:14] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 17:25:14] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 17:25:14] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 17:25:14] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 17:25:14] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 17:25:14] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 17:25:14] [Bot.setup] Bot setup completed 
+[2018-09-15 17:25:14] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 17:25:14] [Bot.connect] Starting 
+[2018-09-15 17:25:15] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 17:25:15] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 17:25:15] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 17:25:15] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 17:25:19] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .backup 
+[2018-09-15 17:25:19] raw args,  
+[2018-09-15 17:25:19] There was an error while executing the 'backup' command: Cannot read property 'backups' of undefined 
+[2018-09-15 17:25:19] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-15 17:25:19] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-15 17:25:20] Setting up mongodb database 
+[2018-09-15 17:25:20] Successfully connected to the MongoDB database. 
+[2018-09-15 17:25:20] Mongodb database setup completed 
+[2018-09-15 17:25:24] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .backup 
+[2018-09-15 17:25:24] raw args,  
+[2018-09-15 17:25:24] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-15 17:25:24] [Warden#9606@✨Gaming Corner✨#💬general]  
