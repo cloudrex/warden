@@ -20,19 +20,23 @@ export default class Help extends Command {
     };
 
     public async executed(context: CommandContext): Promise<void> {
-        const commands: string = context.bot.commandStore.commands
+        let commands: string = context.bot.commandStore.commands
             .map((command: Command) => `${(command as any).type !== undefined ? `:${(command as any).type}:` : `:${CommandType.Unknown}:`} **${command.meta.name}**: ${command.meta.description}`)
             .join("\n");
+
+        if (commands.length > 2048) {
+            commands = commands.substring(0, 2044) + " ...";
+        }
 
         if (context.bot.options.dmHelp) {
             await (await context.sender.createDM()).send(new RichEmbed()
                 .setColor("GREEN")
                 .setDescription(commands)).catch(async (error: Error) => {
                 if (error.message === "Cannot send messages to this user") {
-                    await context.fail("You're not accepting direct messages.");
+                    await context.fail("You're not accepting direct messages");
                 }
                 else {
-                    await context.fail(`I was unable to send you my commands. (${error.message})`);
+                    await context.fail(`I was unable to send you my commands (${error.message})`);
                 }
             });
         }

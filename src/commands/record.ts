@@ -1,16 +1,33 @@
 import {Command, CommandContext, Permission, Utils} from "discord-anvil";
-import {RichEmbed} from "discord.js";
+import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "./help";
 import Mongo, {DatabaseMessage} from "../database/mongo-database";
 import Patterns from "discord-anvil/dist/core/patterns";
+import {CommandArgument} from "discord-anvil/dist";
 
-export default class Me extends Command {
+const max: number = 1000;
+
+type RecordArgs = {
+    readonly member: GuildMember;
+};
+
+export default class Record extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {
-        name: "me",
+        name: "record",
         description: "View your recorded information"
     };
+
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "member",
+            description: "The user to inspect",
+            type: "member",
+            required: false,
+            defaultValue: (message: Message) => message.member.id
+        }
+    ];
 
     constructor() {
         super();
@@ -19,10 +36,16 @@ export default class Me extends Command {
     }
 
     // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages
-    public async executed(context: CommandContext): Promise<void> {
+    public async executed(context: CommandContext, args: RecordArgs): Promise<void> {
         const messages: Array<DatabaseMessage> = await Mongo.collections.messages.find({
-            authorId: context.sender.id
-        }).limit(101).toArray();
+            authorId: args.member.id
+        }).limit(max + 1).toArray();
+
+        if (messages.length === 0) {
+            await context.fail(`No data on record for <@${args.member.id}>`);
+
+            return;
+        }
 
         let mentions: number = 0;
         let words: number = 0;
@@ -30,8 +53,8 @@ export default class Me extends Command {
         let throttled: boolean = false;
 
         for (let i = 0; i < messages.length; i++) {
-            // Limit loop to 100
-            if (i >= 100) {
+            // Limit loop to the specified max
+            if (i >= max) {
                 throttled = true;
 
                 break;
@@ -46,11 +69,11 @@ export default class Me extends Command {
         }
 
         const embed: RichEmbed = new RichEmbed().setColor("GREEN")
-            .addField("Messages Logged", messages.length > 100 ? "100+" : messages.length)
-            .addField("Total Mentions", mentions === 0 ? "*None*" : (throttled ? "100+" : mentions))
+            .addField("Messages Logged", messages.length > max ? `${max}+` : messages.length)
+            .addField("Total Mentions", mentions === 0 ? "*None*" : (throttled ? `${max}+` : mentions))
             .addField("First Message Intercepted", messages[0].message.length > 50 ? messages[0].message.substr(0, 46) + " ..." : messages[0].message)
             .addField("Words Written", `${words} (${characters} characters)`);
 
-        context.message.channel.send(embed);
+        await context.message.channel.send(embed);
     }
 };

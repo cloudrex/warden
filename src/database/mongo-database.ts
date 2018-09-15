@@ -89,6 +89,10 @@ export type DatabaseUserConfig = {
     readonly value: string | boolean;
 };
 
+export type DatabaseWhitelist = {
+
+};
+
 export default abstract class Mongo {
     public static db: Db;
 

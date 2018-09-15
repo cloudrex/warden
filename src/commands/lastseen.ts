@@ -1,0 +1,49 @@
+import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {CommandType} from "./help";
+import {Emoji, GuildMember, RichEmbed} from "discord.js";
+import Mongo, {DatabaseMessage} from "../database/mongo-database";
+import {CommandArgument} from "discord-anvil/dist";
+
+type LastSeenArgs = {
+    readonly member: GuildMember;
+};
+
+export default class LastSeen extends Command {
+    readonly type = CommandType.Informational;
+
+    readonly meta = {
+        name: "lastseen",
+        description: "Display the last time a user was seen"
+    };
+
+    readonly aliases = ["ls"];
+
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "member",
+            type: "member",
+            required: true
+        }
+    ];
+
+    public async executed(context: CommandContext, args: LastSeenArgs): Promise<void> {
+        if (args.member.id === context.bot.client.user.id) {
+            await context.ok("I was last seen **just now**");
+
+            return;
+        }
+
+        const result: DatabaseMessage | undefined = (await Mongo.collections.messages.find({
+            authorId: args.member.id
+        }).sort({
+            _id: -1
+        }).limit(1).toArray())[0];
+
+        if (result !== undefined) {
+            await context.ok(`<@${args.member.id}> was last seen **${Utils.timeAgo(result.time, false)}**`);
+        }
+        else {
+            await context.fail(`No recorded data for <@${args.member.id}>`);
+        }
+    }
+};
