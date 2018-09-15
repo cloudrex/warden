@@ -9,6 +9,8 @@ export interface SayArgs {
 const mentionPattern: RegExp = /<@!?[0-9]+>|@everyone|@here/gm;
 
 export default class Emulate extends Command {
+    readonly isEnabled: boolean = false;
+
     readonly type = CommandType.Utility;
 
     readonly meta = {

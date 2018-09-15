@@ -15,7 +15,7 @@ export default class Lockdown extends Command {
         super();
 
         this.restrict.specific = SpecificGroups.owner;
-        this.restrict.selfPermissions = [Permission.ManageRoles];
+        this.restrict.selfPermissions = [Permission.ManageRoles, Permission.Admin];
     }
 
     public async executed(context: CommandContext): Promise<void> {

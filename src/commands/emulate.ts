@@ -9,6 +9,8 @@ export interface EmulateArgs {
 }
 
 export default class Emulate extends Command {
+    readonly isEnabled: boolean = false;
+
     readonly type = CommandType.Utility;
 
     readonly meta = {
