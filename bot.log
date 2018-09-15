@@ -7076,3 +7076,558 @@ https://discordapp.com/invite/EKbRzwf
 [2018-09-15 02:37:57] Setting up mongodb database 
 [2018-09-15 02:37:57] Successfully connected to the MongoDB database. 
 [2018-09-15 02:37:57] Mongodb database setup completed 
+[2018-09-15 02:38:47] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 02:38:47] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 02:38:47] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 02:38:47] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 02:38:47] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 02:38:47] [Bot.setup] Loading 33 command(s) 
+[2018-09-15 02:38:47] [Bot.setup] Loaded 33 command(s) 
+[2018-09-15 02:38:47] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 02:38:47] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 02:38:47] [Bot.setup] Bot setup completed 
+[2018-09-15 02:38:47] [Bot.connect] Starting 
+[2018-09-15 02:38:47] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 02:38:47] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 02:38:47] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 02:38:47] [Bot.setupEvents] Ready | Took 434ms 
+[2018-09-15 02:38:52] Setting up mongodb database 
+[2018-09-15 02:38:52] Successfully connected to the MongoDB database. 
+[2018-09-15 02:38:52] Mongodb database setup completed 
+[2018-09-15 02:38:56] [Cryptic#3468@✨Gaming Corner✨#💬general] a mac is a pc 
+[2018-09-15 02:39:01] [Cryptic#3468@✨Gaming Corner✨#💬general] cause a mac is a personal computer 
+[2018-09-15 02:39:04] [Cryptic#3468@✨Gaming Corner✨#💬general] if a mac isnt a pc 
+[2018-09-15 02:39:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general] technically an apple mac *is* a pc 
+[2018-09-15 02:40:32] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Google never lies 
+[2018-09-15 02:40:53] [Cryptic#3468@✨Gaming Corner✨#💬general]  
+[2018-09-15 02:41:49] [Cryptic#3468@✨Gaming Corner✨#💬general]  
+[2018-09-15 02:47:33] [🌌Atlas#2473@✨Gaming Corner✨#💬general] fact wards™ 
+[2018-09-15 02:47:38] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <@310391889675419650> 
+[2018-09-15 02:47:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general] do .opt tracking 
+[2018-09-15 02:56:41] [Cryptic#3468@✨Gaming Corner✨#💬general] .opt tracking 
+[2018-09-15 02:56:41] raw args,  tracking
+[2018-09-15 02:56:41] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-15 02:57:10] [🌌Atlas#2473@✨Gaming Corner✨#💬general] do .opt tracking off 
+[2018-09-15 03:01:06] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:01:06] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:01:06] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:01:06] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:01:06] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:01:06] [Bot.setup] Loading 34 command(s) 
+[2018-09-15 03:01:06] [Bot.setup] Loaded 34 command(s) 
+[2018-09-15 03:01:06] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:01:06] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:01:06] [Bot.setup] Bot setup completed 
+[2018-09-15 03:01:06] [Bot.connect] Starting 
+[2018-09-15 03:01:07] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:01:07] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:01:07] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:01:07] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 03:06:43] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:06:43] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:06:43] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:06:43] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:06:43] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:06:43] [Bot.setup] Loading 34 command(s) 
+[2018-09-15 03:06:43] [Bot.setup] Loaded 34 command(s) 
+[2018-09-15 03:06:43] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:06:43] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:06:43] [Bot.setup] Bot setup completed 
+[2018-09-15 03:06:43] [Bot.connect] Starting 
+[2018-09-15 03:06:44] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:06:44] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:06:44] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:06:44] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 03:06:49] Setting up mongodb database 
+[2018-09-15 03:06:49] Successfully connected to the MongoDB database. 
+[2018-09-15 03:06:49] Mongodb database setup completed 
+[2018-09-15 03:06:55] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .emulate <@310391889675419650> ".opt tracking off" 
+[2018-09-15 03:06:55] raw args,  <@310391889675419650>,.opt tracking off
+[2018-09-15 03:06:55] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-15 03:06:56] [🌌Atlas#2473@✨Gaming Corner✨#💬general] thank you 
+[2018-09-15 03:10:54] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:10:54] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:10:54] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:10:54] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:10:54] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:10:54] [Bot.setup] Loading 34 command(s) 
+[2018-09-15 03:10:54] [Bot.setup] Loaded 34 command(s) 
+[2018-09-15 03:10:54] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:10:54] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:10:54] [Bot.setup] Bot setup completed 
+[2018-09-15 03:10:54] [Bot.connect] Starting 
+[2018-09-15 03:10:54] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:10:54] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:10:54] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:10:54] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 03:10:59] [🌌Atlas#2473@Warden Official#testing] .emulate <@285578743324606482> test 
+[2018-09-15 03:10:59] raw args,  <@285578743324606482>,test
+[2018-09-15 03:10:59] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:10:59] Setting up mongodb database 
+[2018-09-15 03:10:59] Successfully connected to the MongoDB database. 
+[2018-09-15 03:11:00] Mongodb database setup completed 
+[2018-09-15 03:12:42] [KenMcMan#9240@✨Gaming Corner✨#💬general] ***HMMMMMMM*** 
+[2018-09-15 03:13:40] [Cryptic#3468@✨Gaming Corner✨#💬general] lol 
+[2018-09-15 03:15:18] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .emulate <@!285578743324606482> ".emulate <@!285578743324606482> ".emulate <@!285578743324606482> ".emulate <@!285578743324606482>  ".echo "hello world" --silent""""" 
+[2018-09-15 03:15:18] raw args,  <@!285578743324606482>,.emulate <@!285578743324606482> 
+[2018-09-15 03:15:18] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-15 03:15:22] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-15 03:16:14] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .echo 
+[2018-09-15 03:17:25] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] <@!285578743324606482> <@310391889675419650> Please read channel description ty 
+[2018-09-15 03:18:14] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I did 
+[2018-09-15 03:18:32] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Now follow the description rules 
+[2018-09-15 03:18:39] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I am 
+[2018-09-15 03:18:43] [Cryptic#3468@✨Gaming Corner✨#💬general] only staff allowed 
+[2018-09-15 03:18:44] [🌌Atlas#2473@✨Gaming Corner✨#💬general] did YOU read it? 
+[2018-09-15 03:18:46] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] You weren’t 
+[2018-09-15 03:18:48] [Cryptic#3468@✨Gaming Corner✨#💬general] read it before you talk shit 
+[2018-09-15 03:18:49] [Cryptic#3468@✨Gaming Corner✨#💬general] retard 
+[2018-09-15 03:18:49] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-15 03:18:53] [🌌Atlas#2473@✨Gaming Corner✨#💬general] calm down 
+[2018-09-15 03:18:56] [🌌Atlas#2473@✨Gaming Corner✨#💬general] mr angry nose 
+[2018-09-15 03:18:57] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Cryptic isn’t staff 
+[2018-09-15 03:18:58] [Cryptic#3468@✨Gaming Corner✨#💬general] im mad boy 
+[2018-09-15 03:18:59] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Ha! 
+[2018-09-15 03:19:01] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I was kidding 
+[2018-09-15 03:19:04] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I edited it 
+[2018-09-15 03:19:05] [🌌Atlas#2473@✨Gaming Corner✨#💬general] xD 
+[2018-09-15 03:19:13] [🌌Atlas#2473@✨Gaming Corner✨#💬general] I just added staff only 
+[2018-09-15 03:19:13] [🌌Atlas#2473@✨Gaming Corner✨#💬general] haha 
+[2018-09-15 03:19:20] [🌌Atlas#2473@✨Gaming Corner✨#💬general] gotchu 
+[2018-09-15 03:19:32] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] In that case 
+[2018-09-15 03:19:33] [Cryptic#3468@✨Gaming Corner✨#💬general] it doesnt matter lol if he wants to he is server owner 
+[2018-09-15 03:19:36] [Cryptic#3468@✨Gaming Corner✨#💬general] he can do whatever 
+[2018-09-15 03:19:37] [Cryptic#3468@✨Gaming Corner✨#💬general] he is god 
+[2018-09-15 03:19:38] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] cf!cafe 
+[2018-09-15 03:19:42] [Cryptic#3468@✨Gaming Corner✨#💬general] you r a mere human 
+[2018-09-15 03:19:43] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Hmm 
+[2018-09-15 03:19:54] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] He is not god 
+[2018-09-15 03:19:58] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] He is titan 
+[2018-09-15 03:20:01] [Cryptic#3468@✨Gaming Corner✨#💬general] yes he is 
+[2018-09-15 03:20:02] [Cryptic#3468@✨Gaming Corner✨#💬general] no titan 
+[2018-09-15 03:20:13] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Atlas is a titan 
+[2018-09-15 03:20:26] [Cryptic#3468@✨Gaming Corner✨#💬general] no 
+[2018-09-15 03:20:32] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Sí 
+[2018-09-15 03:20:33] [Cryptic#3468@✨Gaming Corner✨#💬general] you're big octopus 
+[2018-09-15 03:20:46] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:20:46] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:20:46] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:20:46] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:20:46] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:20:47] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:20:46] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:20:47] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:20:47] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:20:47] [Bot.setup] Bot setup completed 
+[2018-09-15 03:20:47] [Bot.connect] Starting 
+[2018-09-15 03:20:48] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:20:48] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:20:48] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:20:48] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 03:20:53] Setting up mongodb database 
+[2018-09-15 03:20:53] Successfully connected to the MongoDB database. 
+[2018-09-15 03:20:53] Mongodb database setup completed 
+[2018-09-15 03:21:04] [Cryptic#3468@✨Gaming Corner✨#💬general] squid r cooler than octopus 
+[2018-09-15 03:21:11] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .say testing <@!285578743324606482> testing 
+[2018-09-15 03:21:11] raw args,  testing
+[2018-09-15 03:21:11] [Warden#9606@✨Gaming Corner✨#💬general] testing 
+[2018-09-15 03:21:13] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Wrong 
+[2018-09-15 03:21:14] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <:thonk:432000810159702038> 
+[2018-09-15 03:21:20] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .say "testing <@!285578743324606482> testing" 
+[2018-09-15 03:21:20] raw args,  testing <@!285578743324606482> testing
+[2018-09-15 03:21:20] [Warden#9606@✨Gaming Corner✨#💬general] testing <@!285578743324606482> testing 
+[2018-09-15 03:21:25] [Cryptic#3468@✨Gaming Corner✨#💬general] u know what the octopus says in hunter x hunter 
+[2018-09-15 03:21:28] [Cryptic#3468@✨Gaming Corner✨#💬general] he wants to be a squid 
+[2018-09-15 03:21:47] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] You know what the Inkling says in Splatoon 2 
+[2018-09-15 03:21:59] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] They want to be Octolings 
+[2018-09-15 03:22:05] [Cryptic#3468@✨Gaming Corner✨#💬general] no 
+[2018-09-15 03:22:11] [Cryptic#3468@✨Gaming Corner✨#💬general] splatoon is for kid 
+[2018-09-15 03:22:12] [Cryptic#3468@✨Gaming Corner✨#💬general] boy 
+[2018-09-15 03:22:27] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:22:27] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:22:27] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:22:27] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:22:27] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:22:27] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:22:27] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:22:27] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:22:27] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:22:27] [Bot.setup] Bot setup completed 
+[2018-09-15 03:22:27] [Bot.connect] Starting 
+[2018-09-15 03:22:28] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:22:28] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:22:28] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:22:28] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 03:22:33] Setting up mongodb database 
+[2018-09-15 03:22:33] Successfully connected to the MongoDB database. 
+[2018-09-15 03:22:33] Mongodb database setup completed 
+[2018-09-15 03:22:37] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Splatoon is good no matter your protected characteristics 
+[2018-09-15 03:22:39] [🌌Atlas#2473@✨Gaming Corner✨#💬general] all games are for all ages 
+[2018-09-15 03:22:39] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-15 03:22:55] [🌌Atlas#2473@✨Gaming Corner✨#💬general] except you know 
+[2018-09-15 03:22:56] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] What about games that teach you colors 
+[2018-09-15 03:23:11] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .say "testing <@!285578743324606482> testing" 
+[2018-09-15 03:23:11] raw args,  testing <@!285578743324606482> testing
+[2018-09-15 03:23:11] [Warden#9606@✨Gaming Corner✨#💬general] testing <@!285578743324606482> testing 
+[2018-09-15 03:23:15] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Or games with big boy words 
+[2018-09-15 03:23:27] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:23:27] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:23:27] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:23:27] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:23:27] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:23:27] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:23:28] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:23:28] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:23:28] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:23:28] [Bot.setup] Bot setup completed 
+[2018-09-15 03:23:28] [Bot.connect] Starting 
+[2018-09-15 03:23:28] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:23:28] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:23:28] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:23:28] [Bot.setupEvents] Ready | Took 448ms 
+[2018-09-15 03:23:31] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .say "testing <@!285578743324606482> testing" 
+[2018-09-15 03:23:31] raw args,  testing <@!285578743324606482> testing
+[2018-09-15 03:23:31] [Warden#9606@✨Gaming Corner✨#💬general] testing [Mention] testing 
+[2018-09-15 03:23:33] Setting up mongodb database 
+[2018-09-15 03:23:33] Successfully connected to the MongoDB database. 
+[2018-09-15 03:23:33] Mongodb database setup completed 
+[2018-09-15 03:23:33] [🌌Atlas#2473@✨Gaming Corner✨#💬general] there we go 
+[2018-09-15 03:23:53] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Hmm 
+[2018-09-15 03:24:02] [🌌Atlas#2473@✨Gaming Corner✨#💬general] to prevent it from pinging ppl 
+[2018-09-15 03:24:11] [Cryptic#3468@✨Gaming Corner✨#💬general] well porn games for 
+[2018-09-15 03:24:12] [Cryptic#3468@✨Gaming Corner✨#💬general] older kids 
+[2018-09-15 03:24:12] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .say “Hai how are you” 
+[2018-09-15 03:24:12] raw args,  “Hai
+[2018-09-15 03:24:13] [Warden#9606@✨Gaming Corner✨#💬general] “Hai 
+[2018-09-15 03:24:14] [Cryptic#3468@✨Gaming Corner✨#💬general] u know 
+[2018-09-15 03:24:20] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Hiss 
+[2018-09-15 03:24:24] [Cryptic#3468@✨Gaming Corner✨#💬general] .say "Heyo im cool bot" 
+[2018-09-15 03:24:24] raw args,  Heyo im cool bot
+[2018-09-15 03:24:24] [Warden#9606@✨Gaming Corner✨#💬general] Heyo im cool bot 
+[2018-09-15 03:24:46] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .say borkenphone 
+[2018-09-15 03:24:46] raw args,  borkenphone
+[2018-09-15 03:24:46] [Warden#9606@✨Gaming Corner✨#💬general] borkenphone 
+[2018-09-15 03:24:53] [🌌Atlas#2473@✨Gaming Corner✨#💬general] cryptic 
+[2018-09-15 03:24:53] [Cryptic#3468@✨Gaming Corner✨#💬general] .say big boy 
+[2018-09-15 03:24:53] raw args,  big
+[2018-09-15 03:24:53] [Warden#9606@✨Gaming Corner✨#💬general] big 
+[2018-09-15 03:24:56] [Cryptic#3468@✨Gaming Corner✨#💬general] damn 
+[2018-09-15 03:24:58] [🌌Atlas#2473@✨Gaming Corner✨#💬general] try to get it to ping me 
+[2018-09-15 03:25:03] [Cryptic#3468@✨Gaming Corner✨#💬general] .say <@!285578743324606482> 
+[2018-09-15 03:25:03] raw args,  <@!285578743324606482>
+[2018-09-15 03:25:03] [Warden#9606@✨Gaming Corner✨#💬general] [Mention] 
+[2018-09-15 03:25:12] [Cryptic#3468@✨Gaming Corner✨#💬general] .say "@Mr.Catto" 
+[2018-09-15 03:25:12] raw args,  @Mr.Catto
+[2018-09-15 03:25:13] [Warden#9606@✨Gaming Corner✨#💬general] @Mr.Catto 
+[2018-09-15 03:25:13] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .say @Atlas 
+[2018-09-15 03:25:13] raw args,  @Atlas
+[2018-09-15 03:25:13] [Warden#9606@✨Gaming Corner✨#💬general] @Atlas 
+[2018-09-15 03:25:26] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .say "Mr. Catto" 
+[2018-09-15 03:25:26] raw args,  Mr. Catto
+[2018-09-15 03:25:26] [Warden#9606@✨Gaming Corner✨#💬general] Mr. Catto 
+[2018-09-15 03:25:28] [Cryptic#3468@✨Gaming Corner✨#💬general] .say @285578743324606482 
+[2018-09-15 03:25:28] raw args,  @285578743324606482
+[2018-09-15 03:25:28] [Warden#9606@✨Gaming Corner✨#💬general] @285578743324606482 
+[2018-09-15 03:25:31] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .say <@!285578743324606482> 
+[2018-09-15 03:25:31] raw args,  <@!285578743324606482>
+[2018-09-15 03:25:32] [Warden#9606@✨Gaming Corner✨#💬general] [Mention] 
+[2018-09-15 03:25:32] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .say "@Mr. Catto" 
+[2018-09-15 03:25:32] raw args,  @Mr. Catto
+[2018-09-15 03:25:32] [Warden#9606@✨Gaming Corner✨#💬general] @Mr. Catto 
+[2018-09-15 03:25:33] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-15 03:25:36] [Cryptic#3468@✨Gaming Corner✨#💬general] .say "@285578743324606482" 
+[2018-09-15 03:25:36] raw args,  @285578743324606482
+[2018-09-15 03:25:36] [Warden#9606@✨Gaming Corner✨#💬general] @285578743324606482 
+[2018-09-15 03:25:43] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .say <@!285578743324606482>\#2473 
+[2018-09-15 03:25:43] raw args,  <@!285578743324606482>\#2473
+[2018-09-15 03:25:44] [Warden#9606@✨Gaming Corner✨#💬general] [Mention]\#2473 
+[2018-09-15 03:25:50] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .say @everyone 
+[2018-09-15 03:25:50] raw args,  @everyone
+[2018-09-15 03:25:50] [Warden#9606@✨Gaming Corner✨#💬general] @everyone 
+[2018-09-15 03:25:54] [🌌Atlas#2473@✨Gaming Corner✨#💬general] LOL 
+[2018-09-15 03:37:14] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:37:14] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:37:14] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:37:14] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:37:14] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:37:14] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:37:15] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:37:15] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:37:15] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:37:15] [Bot.setup] Bot setup completed 
+[2018-09-15 03:37:15] [Bot.connect] Starting 
+[2018-09-15 03:37:15] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:37:15] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:37:15] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:37:15] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 03:37:20] [🌌Atlas#2473@✨Gaming Corner✨#💬general] buddah created thonking 
+[2018-09-15 03:37:20] Setting up mongodb database 
+[2018-09-15 03:37:20] Successfully connected to the MongoDB database. 
+[2018-09-15 03:37:20] Mongodb database setup completed 
+[2018-09-15 03:37:29] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Did someone go into MS paint with large brush size and try to make a thinking emoji? 
+[2018-09-15 03:37:32] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .say hi 
+[2018-09-15 03:37:32] raw args,  hi
+[2018-09-15 03:37:32] [Warden#9606@✨Gaming Corner✨#💬general] hi 
+[2018-09-15 03:37:35] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-15 03:37:37] [🌌Atlas#2473@✨Gaming Corner✨#💬general] it's back 
+[2018-09-15 03:37:39] [🌌Atlas#2473@✨Gaming Corner✨#💬general] and better than ever 
+[2018-09-15 03:37:43] [🌌Atlas#2473@✨Gaming Corner✨#💬general] the new and improved thonkbot 
+[2018-09-15 03:37:50] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .say everybuddie 
+[2018-09-15 03:37:50] raw args,  everybuddie
+[2018-09-15 03:37:50] [Warden#9606@✨Gaming Corner✨#💬general] everybuddie 
+[2018-09-15 03:38:07] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .say @everybuddie 
+[2018-09-15 03:38:07] raw args,  @everybuddie
+[2018-09-15 03:38:07] [Warden#9606@✨Gaming Corner✨#💬general] @everybuddie 
+[2018-09-15 03:38:27] [GoldenVolcarona#2867@✨Gaming Corner✨#🚧mod-cmd] .say @everyone 
+[2018-09-15 03:38:27] raw args,  @everyone
+[2018-09-15 03:38:27] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Mention] 
+[2018-09-15 03:38:32] [🌌Atlas#2473@✨Gaming Corner✨#💬general] everybuddie shake ya booty 
+[2018-09-15 03:38:37] [Waba#8929@Warden Official#testing] What is that even suppose to do? 
+[2018-09-15 03:38:37] [GoldenVolcarona#2867@✨Gaming Corner✨#🚧mod-cmd] .say @here 
+[2018-09-15 03:38:37] raw args,  @here
+[2018-09-15 03:38:37] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Mention] 
+[2018-09-15 03:38:47] [🌌Atlas#2473@Warden Official#testing] emulate a message 
+[2018-09-15 03:38:49] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .say @here 
+[2018-09-15 03:38:49] raw args,  @here
+[2018-09-15 03:38:49] [Warden#9606@✨Gaming Corner✨#💬general] [Mention] 
+[2018-09-15 03:38:53] [🌌Atlas#2473@Warden Official#testing] same as if someone else said it 
+[2018-09-15 03:39:01] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] I knew it was fixed this time 
+[2018-09-15 03:39:12] [🌌Atlas#2473@Warden Official#testing] .emulate 221381001476046849 "test" 
+[2018-09-15 03:39:12] raw args,  221381001476046849,test
+[2018-09-15 03:39:12] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:39:12] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] So no trouble 
+[2018-09-15 03:39:26] [🌌Atlas#2473@Warden Official#testing] if you put a command as the message 
+[2018-09-15 03:39:34] [🌌Atlas#2473@Warden Official#testing] it will execute it as if u were who requested it 
+[2018-09-15 03:39:40] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] nice try 
+[2018-09-15 03:39:41] [Waba#8929@Warden Official#testing] Ohhhhh 
+[2018-09-15 03:39:43] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Next up: Allow “” quotes instead of the straight ones 
+[2018-09-15 03:40:02] [Waba#8929@Warden Official#testing] .emulate <@221381001476046849>.emulate <@221381001476046849> test 
+[2018-09-15 03:40:02] raw args,  <@221381001476046849>.emulate,<@221381001476046849>
+[2018-09-15 03:40:02] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:40:08] [🌌Atlas#2473@Warden Official#testing] nice try 
+[2018-09-15 03:40:12] [🌌Atlas#2473@Warden Official#testing] multidimensional emulation 
+[2018-09-15 03:40:15] [🌌Atlas#2473@Warden Official#testing] is intercepted 
+[2018-09-15 03:40:20] [Waba#8929@Warden Official#testing] Rip hahaha 
+[2018-09-15 03:40:26] [Bowser V2 ✔#5788@Warden Official#testing] .emulate  <@285578743324606482> eval 
+[2018-09-15 03:40:26] raw args,  <@285578743324606482>,eval
+[2018-09-15 03:40:26] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:40:32] [🌌Atlas#2473@Warden Official#testing] <:GWfroggyZoomeyes:400751131115913217> 
+[2018-09-15 03:40:34] [🌌Atlas#2473@Warden Official#testing] .stop 
+[2018-09-15 03:40:34] raw args,  
+[2018-09-15 03:40:34] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:40:34] [Bot.disconnect] Saving auth store 
+[2018-09-15 03:40:34] [Bot.disconnect] Saving JsonProvider 
+[2018-09-15 03:41:19] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:41:19] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:41:19] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:41:19] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:41:19] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:41:19] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:41:20] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:41:20] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:41:20] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:41:20] [Bot.setup] Bot setup completed 
+[2018-09-15 03:41:20] [Bot.connect] Starting 
+[2018-09-15 03:41:20] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:41:20] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:41:20] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:41:20] [Bot.setupEvents] Ready | Took 449ms 
+[2018-09-15 03:41:23] [🌌Atlas#2473@Warden Official#testing] .rep 359794248570109972 
+[2018-09-15 03:41:23] raw args,  359794248570109972
+[2018-09-15 03:41:25] Setting up mongodb database 
+[2018-09-15 03:41:25] Successfully connected to the MongoDB database. 
+[2018-09-15 03:41:25] Mongodb database setup completed 
+[2018-09-15 03:42:32] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:42:32] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:42:32] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:42:32] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:42:32] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:42:32] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:42:32] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:42:32] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:42:32] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:42:32] [Bot.setup] Bot setup completed 
+[2018-09-15 03:42:32] [Bot.connect] Starting 
+[2018-09-15 03:42:33] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:42:33] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:42:33] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:42:33] [Bot.setupEvents] Ready | Took 456ms 
+[2018-09-15 03:42:34] [GoldenVolcarona#2867@Warden Official#testing] .start 
+[2018-09-15 03:42:35] [🌌Atlas#2473@Warden Official#testing] let me show u something cool 
+[2018-09-15 03:42:38] Setting up mongodb database 
+[2018-09-15 03:42:38] Successfully connected to the MongoDB database. 
+[2018-09-15 03:42:38] Mongodb database setup completed 
+[2018-09-15 03:42:42] [🌌Atlas#2473@Warden Official#testing] .say "hi" & .say "hi" 
+[2018-09-15 03:42:42] raw args,  hi
+[2018-09-15 03:42:43] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:42:43] raw args,  hi
+[2018-09-15 03:42:43] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:42:45] [🌌Atlas#2473@Warden Official#testing] <:GWfroggyWeSmart:375369048038572035> 
+[2018-09-15 03:42:50] [🌌Atlas#2473@Warden Official#testing] command chaining 
+[2018-09-15 03:43:05] [GoldenVolcarona#2867@Warden Official#testing] .say ‘testing testing 122’ 
+[2018-09-15 03:43:05] raw args,  ‘testing
+[2018-09-15 03:43:05] [Warden#9606@Warden Official#testing] ‘testing 
+[2018-09-15 03:43:19] [GoldenVolcarona#2867@Warden Official#testing] ... 
+[2018-09-15 03:43:23] [Waba#8929@Warden Official#testing] That's ciol 
+[2018-09-15 03:43:24] [🌌Atlas#2473@Warden Official#testing] .say "test" & .say "hello" 
+[2018-09-15 03:43:24] raw args,  test
+[2018-09-15 03:43:24] [Warden#9606@Warden Official#testing] test 
+[2018-09-15 03:43:24] raw args,  hello
+[2018-09-15 03:43:24] [Warden#9606@Warden Official#testing] hello 
+[2018-09-15 03:43:29] [🌌Atlas#2473@Warden Official#testing] now check this out 
+[2018-09-15 03:43:32] [🌌Atlas#2473@Warden Official#testing] .sa "hello" 
+[2018-09-15 03:43:36] [GoldenVolcarona#2867@Warden Official#testing] ATLAS MY PHONE CANT DO STRINGS OF TEXT 
+[2018-09-15 03:43:38] [🌌Atlas#2473@Warden Official#testing] hm 
+[2018-09-15 03:43:45] [Waba#8929@Warden Official#testing] .say hi 
+[2018-09-15 03:43:45] raw args,  hi
+[2018-09-15 03:43:45] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:44:11] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:44:11] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:44:11] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:44:11] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:44:11] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:44:11] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:44:11] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:44:11] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:44:11] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:44:11] [Bot.setup] Bot setup completed 
+[2018-09-15 03:44:11] [Bot.connect] Starting 
+[2018-09-15 03:44:11] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:44:11] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:44:11] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:44:11] [Bot.setupEvents] Ready | Took 436ms 
+[2018-09-15 03:44:12] [🌌Atlas#2473@Warden Official#testing] waba 
+[2018-09-15 03:44:16] [🌌Atlas#2473@Warden Official#testing] mispell the comman 
+[2018-09-15 03:44:16] Setting up mongodb database 
+[2018-09-15 03:44:16] Successfully connected to the MongoDB database. 
+[2018-09-15 03:44:16] Mongodb database setup completed 
+[2018-09-15 03:44:18] [🌌Atlas#2473@Warden Official#testing] mispell the command 
+[2018-09-15 03:44:19] [🌌Atlas#2473@Warden Official#testing] then fix it 
+[2018-09-15 03:44:25] [🌌Atlas#2473@Warden Official#testing] .sa "hi" 
+[2018-09-15 03:44:27] [🌌Atlas#2473@Warden Official#testing] .say "hi" 
+[2018-09-15 03:44:27] raw args,  hi
+[2018-09-15 03:44:27] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:44:35] [GoldenVolcarona#2867@Warden Official#testing] .say hi 
+[2018-09-15 03:44:35] raw args,  hi
+[2018-09-15 03:44:35] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:44:42] [Waba#8929@Warden Official#testing] .sa hi 
+[2018-09-15 03:44:42] [GoldenVolcarona#2867@Warden Official#testing] .say bye 
+[2018-09-15 03:44:42] raw args,  bye
+[2018-09-15 03:44:42] [🌌Atlas#2473@Warden Official#testing] misspell it first 
+[2018-09-15 03:44:42] [Warden#9606@Warden Official#testing] bye 
+[2018-09-15 03:44:49] [🌌Atlas#2473@Warden Official#testing] now edit it 
+[2018-09-15 03:44:54] [Waba#8929@Warden Official#testing] .say hi 
+[2018-09-15 03:44:54] raw args,  hi
+[2018-09-15 03:44:54] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:44:56] [🌌Atlas#2473@Warden Official#testing] lol 
+[2018-09-15 03:45:07] [🌌Atlas#2473@Warden Official#testing] .sa "hi" & .sa "hi" & .sa "hi" 
+[2018-09-15 03:45:15] [🌌Atlas#2473@Warden Official#testing] .say "hi" & .say "hi" & .say "hi" 
+[2018-09-15 03:45:15] raw args,  hi
+[2018-09-15 03:45:15] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:45:15] raw args,  hi
+[2018-09-15 03:45:15] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:45:15] raw args,  hi
+[2018-09-15 03:45:15] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:45:17] [GoldenVolcarona#2867@Warden Official#testing] Ooh it works if you do spell it right 
+[2018-09-15 03:45:20] [🌌Atlas#2473@Warden Official#testing] yea 
+[2018-09-15 03:45:23] [GoldenVolcarona#2867@Warden Official#testing] .say hi 
+[2018-09-15 03:45:23] raw args,  hi
+[2018-09-15 03:45:23] [Warden#9606@Warden Official#testing] hi 
+[2018-09-15 03:45:30] [🌌Atlas#2473@Warden Official#testing] it's all handled by the framework 
+[2018-09-15 03:45:33] [GoldenVolcarona#2867@Warden Official#testing] .say Atlas 
+[2018-09-15 03:45:33] raw args,  Atlas
+[2018-09-15 03:45:33] [Warden#9606@Warden Official#testing] Atlas 
+[2018-09-15 03:45:34] [🌌Atlas#2473@Warden Official#testing] that's not the actual bot 
+[2018-09-15 03:45:42] [GoldenVolcarona#2867@Warden Official#testing] .say Hello 
+[2018-09-15 03:45:42] raw args,  Hello
+[2018-09-15 03:45:42] [Warden#9606@Warden Official#testing] Hello 
+[2018-09-15 03:45:46] [Waba#8929@Warden Official#testing] .emulate <@285578743324606482> eval 123 
+[2018-09-15 03:45:46] raw args,  <@285578743324606482>,eval
+[2018-09-15 03:45:46] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:45:46] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:45:48] [🌌Atlas#2473@Warden Official#testing] <@334084975613706250> 
+[2018-09-15 03:45:52] [🌌Atlas#2473@Warden Official#testing] I can see u from my console 
+[2018-09-15 03:45:57] [🌌Atlas#2473@Warden Official#testing] it logs commands 
+[2018-09-15 03:45:58] [GoldenVolcarona#2867@Warden Official#testing] Hmm 
+[2018-09-15 03:46:06] [🌌Atlas#2473@Warden Official#testing] .opt tracking off 
+[2018-09-15 03:46:06] raw args,  tracking,off
+[2018-09-15 03:46:06] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:46:06] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:46:08] [🌌Atlas#2473@Warden Official#testing] .stop 
+[2018-09-15 03:46:08] raw args,  
+[2018-09-15 03:46:09] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:46:09] [Bot.disconnect] Saving auth store 
+[2018-09-15 03:46:09] [Bot.disconnect] Saving JsonProvider 
+[2018-09-15 03:47:55] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:47:55] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:47:55] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:47:55] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:47:55] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:47:55] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:47:55] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:47:55] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:47:55] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:47:55] [Bot.setup] Bot setup completed 
+[2018-09-15 03:47:55] [Bot.connect] Starting 
+[2018-09-15 03:47:57] [GoldenVolcarona#2867@Warden Official#testing] .emu <@359794248570109972> I’m schtoopid 
+[2018-09-15 03:47:57] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:47:57] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:47:57] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:47:57] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-15 03:47:58] [🌌Atlas#2473@Warden Official#testing] .auth 
+[2018-09-15 03:47:58] raw args,  
+[2018-09-15 03:47:58] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:47:58] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:48:02] Setting up mongodb database 
+[2018-09-15 03:48:02] Successfully connected to the MongoDB database. 
+[2018-09-15 03:48:02] Mongodb database setup completed 
+[2018-09-15 03:48:03] [Waba#8929@Warden Official#testing] .auth 
+[2018-09-15 03:48:03] raw args,  
+[2018-09-15 03:48:03] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:48:03] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:48:08] [GoldenVolcarona#2867@Warden Official#testing] .auth 
+[2018-09-15 03:48:08] raw args,  
+[2018-09-15 03:48:08] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:48:08] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:48:11] [Waba#8929@Warden Official#testing] Ew 
+[2018-09-15 03:48:14] [🌌Atlas#2473@Warden Official#testing] .stop 
+[2018-09-15 03:48:14] raw args,  
+[2018-09-15 03:48:14] [Warden#9606@Warden Official#testing]  
+[2018-09-15 03:48:14] [Bot.disconnect] Saving auth store 
+[2018-09-15 03:48:14] [Bot.disconnect] Saving JsonProvider 
+[2018-09-15 03:55:39] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:55:39] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:55:39] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:55:39] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:55:39] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:55:39] [Bot.setup] Loading 35 command(s) 
+[2018-09-15 03:55:39] [Bot.setup] Loaded 35 command(s) 
+[2018-09-15 03:55:39] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:55:39] [Bot.setup] Bot setup completed 
+[2018-09-15 03:55:39] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:55:39] [Bot.connect] Starting 
+[2018-09-15 03:55:39] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:55:39] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:55:39] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:55:39] [Bot.setupEvents] Ready | Took 481ms 
+[2018-09-15 03:58:06] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 03:58:06] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 03:58:06] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 03:58:06] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 03:58:06] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 03:58:06] [Bot.setup] Loading 36 command(s) 
+[2018-09-15 03:58:06] [Bot.setup] Loaded 36 command(s) 
+[2018-09-15 03:58:06] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 03:58:06] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 03:58:06] [Bot.setup] Bot setup completed 
+[2018-09-15 03:58:06] [Bot.connect] Starting 
+[2018-09-15 03:58:06] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 03:58:06] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 03:58:06] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 03:58:06] [Bot.setupEvents] Ready | Took 418ms 
+[2018-09-15 03:58:11] Setting up mongodb database 
+[2018-09-15 03:58:11] Successfully connected to the MongoDB database. 
+[2018-09-15 03:58:11] Mongodb database setup completed 
+[2018-09-15 03:58:18] [🌌Atlas#2473@Warden Official#testing] .suspend 
+[2018-09-15 03:58:18] raw args,  
+[2018-09-15 03:58:18] [Warden#9606@Warden Official#testing]  

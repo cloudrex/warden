@@ -77,7 +77,8 @@ async function start() {
 
         options: {
             logMessages: true,
-            consoleInterface: false
+            consoleInterface: false,
+            updateOnMessageEdit: true
         },
 
         primitiveCommands: [
