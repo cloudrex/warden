@@ -1,6 +1,11 @@
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
 import {Bot, DataProvider, JsonProvider, Log} from "discord-anvil";
-import Mongo, {DatabaseUserConfig, ModerationAction, ModerationActionType} from "../database/mongo-database";
+import Mongo, {
+    DatabaseModerationAction,
+    DatabaseUserConfig,
+    ModerationAction,
+    ModerationActionType
+} from "../database/mongo-database";
 import {BadWords, RacialSlurs} from "./constants";
 
 export type UserConfigType = "tracking";
@@ -223,23 +228,28 @@ export default class WardenAPI {
             }
         }
 
-        await WardenAPI.saveAction(action);
+        await WardenAPI.saveModerationAction(action);
     }
 
     /**
      * @param {ModerationAction} action
      * @return {Promise<void>}
      */
-    private static async saveAction(action: ModerationAction): Promise<void> {
-        await Mongo.collections.moderationActions.insertOne({
+    private static async saveModerationAction(action: ModerationAction): Promise<void> {
+        await WardenAPI.saveDatabaseModerationAction({
             type: action.type,
             reason: action.reason,
             memberId: action.member.id,
+            guildId: action.member.guild.id,
             moderatorId: action.moderator.id,
             end: action.end,
             time: Date.now(),
             evidence: action.evidence
         });
+    }
+
+    private static async saveDatabaseModerationAction(action: DatabaseModerationAction): Promise<void> {
+        await Mongo.collections.moderationActions.insertOne(action);
     }
 
     /**

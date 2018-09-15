@@ -11,7 +11,7 @@ import {
 } from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
-import Mongo, {DatabaseWarning} from "../database/mongo-database";
+import Mongo, {DatabaseModerationAction} from "../database/mongo-database";
 
 export interface StoredWarning {
     readonly reason: string;
@@ -49,18 +49,18 @@ export default class Warnings extends Command {
         this.restrict.specific = SpecificGroups.staff;
     }
 
-    private getDate(warning: DatabaseWarning): string {
+    private getDate(warning: DatabaseModerationAction): string {
         const date: Date = new Date(warning.time);
 
         return `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
     }
 
     public async executed(context: CommandContext, args: WarningsArgs): Promise<void> {
-        const warnings: Array<DatabaseWarning> = await Mongo.collections.moderationActions.find({
+        const warnings: Array<DatabaseModerationAction> = await Mongo.collections.moderationActions.find({
             memberId: args.member.id
         }).toArray();
 
-        const message: string = warnings.length > 0 ? warnings.map((warning: DatabaseWarning) => `${this.getDate(warning)} ${warning.reason}`).join("\n") : "*This user has no recorded warnings*";
+        const message: string = warnings.length > 0 ? warnings.map((warning: DatabaseModerationAction) => `${this.getDate(warning)} ${warning.reason}`).join("\n") : "*This user has no recorded warnings*";
 
         await context.message.channel.send(new RichEmbed()
             .setDescription(message)

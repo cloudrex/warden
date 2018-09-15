@@ -8013,3 +8013,183 @@ https://discordapp.com/invite/EKbRzwf
 [2018-09-15 17:25:24] raw args,  
 [2018-09-15 17:25:24] [Warden#9606@✨Gaming Corner✨#💬general]  
 [2018-09-15 17:25:24] [Warden#9606@✨Gaming Corner✨#💬general]  
+[2018-09-15 17:32:53] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 17:32:53] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 17:32:53] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 17:32:53] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 17:32:53] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 17:32:53] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 17:32:53] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 17:32:53] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 17:32:53] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 17:32:53] [Bot.setup] Bot setup completed 
+[2018-09-15 17:32:53] [Bot.connect] Starting 
+[2018-09-15 17:32:53] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 17:32:53] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 17:32:53] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 17:32:53] [Bot.setupEvents] Ready | Took 455ms 
+[2018-09-15 17:32:56] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .ping 
+[2018-09-15 17:32:56] raw args,  
+[2018-09-15 17:32:56] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-15 17:32:56] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-15 17:32:58] Setting up mongodb database 
+[2018-09-15 17:32:58] Successfully connected to the MongoDB database. 
+[2018-09-15 17:32:58] Mongodb database setup completed 
+[2018-09-15 18:01:48] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 18:01:48] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 18:01:48] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 18:01:48] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 18:01:48] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 18:01:48] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 18:01:48] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 18:01:48] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 18:01:48] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 18:01:48] [Bot.setup] Bot setup completed 
+[2018-09-15 18:01:48] [Bot.connect] Starting 
+[2018-09-15 18:01:50] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 18:01:50] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 18:01:50] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 18:01:50] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-15 18:01:55] Setting up mongodb database 
+[2018-09-15 18:01:55] Successfully connected to the MongoDB database. 
+[2018-09-15 18:01:55] Mongodb database setup completed 
+[2018-09-15 18:02:03] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .warn 310391889675419650 test 
+[2018-09-15 18:02:03] raw args,  310391889675419650,test
+[2018-09-15 18:02:03] [Warden#9606@✨Gaming Corner✨#📘mod-log] [Embed] 
+[2018-09-15 18:02:03] [Warden#9606@✨Gaming Corner✨#📘mod-log] [Embed] 
+[2018-09-15 18:05:17] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 18:05:17] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 18:05:17] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 18:05:17] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 18:05:17] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 18:05:17] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 18:05:17] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 18:05:17] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 18:05:17] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 18:05:17] [Bot.setup] Bot setup completed 
+[2018-09-15 18:05:17] [Bot.connect] Starting 
+[2018-09-15 18:05:18] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 18:05:18] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 18:05:18] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 18:05:18] [Bot.setupEvents] Ready | Took 488ms 
+[2018-09-15 18:05:23] Setting up mongodb database 
+[2018-09-15 18:05:23] Successfully connected to the MongoDB database. 
+[2018-09-15 18:05:23] Mongodb database setup completed 
+[2018-09-15 18:05:25] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .warnings 310391889675419650 
+[2018-09-15 18:05:25] raw args,  310391889675419650
+[2018-09-15 18:05:25] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:05:25] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:05:30] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .clearwarns 310391889675419650 
+[2018-09-15 18:05:30] raw args,  310391889675419650
+[2018-09-15 18:05:30] [CommandManager.specificMet] Invalid restrict group or prefix: serverModerator 
+[2018-09-15 18:05:30] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:05:30] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:05:52] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .clearwarns 310391889675419650 
+[2018-09-15 18:05:52] raw args,  310391889675419650
+[2018-09-15 18:05:52] [CommandManager.specificMet] Invalid restrict group or prefix: serverModerator 
+[2018-09-15 18:05:52] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:05:52] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:06:03] [draem#0001@✨Gaming Corner✨#🚧mod-cmd] .help 
+[2018-09-15 18:06:03] raw args,  
+[2018-09-15 18:06:06] [draem#0001@✨Gaming Corner✨#🚧mod-cmd] finally 
+[2018-09-15 18:10:32] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 18:10:32] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 18:10:32] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 18:10:32] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 18:10:32] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 18:10:32] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 18:10:32] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 18:10:32] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 18:10:32] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 18:10:32] [Bot.setup] Bot setup completed 
+[2018-09-15 18:10:32] [Bot.connect] Starting 
+[2018-09-15 18:10:32] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 18:10:32] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 18:10:32] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 18:10:32] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 18:10:37] Setting up mongodb database 
+[2018-09-15 18:10:37] Successfully connected to the MongoDB database. 
+[2018-09-15 18:10:37] Mongodb database setup completed 
+[2018-09-15 18:10:55] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .clearwarns 310391889675419650 
+[2018-09-15 18:10:55] raw args,  310391889675419650
+[2018-09-15 18:10:55] [CommandManager.specificMet] Invalid restrict group or prefix: serverModerator 
+[2018-09-15 18:10:55] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:10:55] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:14:03] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 18:14:03] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 18:14:03] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 18:14:03] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 18:14:03] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 18:14:03] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 18:14:03] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 18:14:03] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 18:14:03] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 18:14:03] [Bot.connect] Starting 
+[2018-09-15 18:14:03] [Bot.setup] Bot setup completed 
+[2018-09-15 18:14:04] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 18:14:04] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 18:14:04] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 18:14:04] [Bot.setupEvents] Ready | Took 474ms 
+[2018-09-15 18:14:05] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .clearwarns 310391889675419650 
+[2018-09-15 18:14:05] raw args,  310391889675419650
+[2018-09-15 18:14:05] [CommandManager.specificMet] Invalid restrict group or prefix: serverModerator 
+[2018-09-15 18:14:05] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:14:05] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:14:09] Setting up mongodb database 
+[2018-09-15 18:14:09] Successfully connected to the MongoDB database. 
+[2018-09-15 18:14:09] Mongodb database setup completed 
+[2018-09-15 18:17:20] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 18:17:20] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 18:17:20] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 18:17:20] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 18:17:20] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 18:17:20] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 18:17:20] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 18:17:20] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 18:17:20] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 18:17:20] [Bot.setup] Bot setup completed 
+[2018-09-15 18:17:20] [Bot.connect] Starting 
+[2018-09-15 18:17:22] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 18:17:22] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 18:17:22] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 18:17:22] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-15 18:17:27] Setting up mongodb database 
+[2018-09-15 18:17:27] Successfully connected to the MongoDB database. 
+[2018-09-15 18:17:27] Mongodb database setup completed 
+[2018-09-15 18:17:30] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .clearwarns 310391889675419650 
+[2018-09-15 18:17:30] raw args,  310391889675419650
+[2018-09-15 18:17:30] NOT undefined 
+[2018-09-15 18:17:30] moderator 
+[2018-09-15 18:17:30] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:17:30] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:19:03] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 18:19:03] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 18:19:03] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 18:19:03] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 18:19:03] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 18:19:03] [Bot.setup] Loading 37 command(s) 
+[2018-09-15 18:19:03] [Bot.setup] Loaded 37 command(s) 
+[2018-09-15 18:19:03] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 18:19:03] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 18:19:03] [Bot.connect] Starting 
+[2018-09-15 18:19:03] [Bot.setup] Bot setup completed 
+[2018-09-15 18:19:05] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 18:19:05] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 18:19:05] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 18:19:05] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-15 18:19:09] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .clearwarns 310391889675419650 
+[2018-09-15 18:19:09] raw args,  310391889675419650
+[2018-09-15 18:19:09] There was an error while executing the 'clearwarns' command: Cannot read property 'moderationActions' of undefined 
+[2018-09-15 18:19:09] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:19:09] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:19:10] Setting up mongodb database 
+[2018-09-15 18:19:10] Successfully connected to the MongoDB database. 
+[2018-09-15 18:19:10] Mongodb database setup completed 
+[2018-09-15 18:19:16] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .clearwarns 310391889675419650 
+[2018-09-15 18:19:16] raw args,  310391889675419650
+[2018-09-15 18:19:16] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:19:16] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:19:24] [🌌Atlas#2473@✨Gaming Corner✨#🚧mod-cmd] .warns 310391889675419650 
+[2018-09-15 18:19:24] raw args,  310391889675419650
+[2018-09-15 18:19:24] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 
+[2018-09-15 18:19:24] [Warden#9606@✨Gaming Corner✨#🚧mod-cmd] [Embed] 

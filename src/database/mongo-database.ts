@@ -27,6 +27,19 @@ export enum ChannelType {
     Voice
 }
 
+/**
+ * await Mongo.collections.moderationActions.insertOne({
+            type: action.type,
+            reason: action.reason,
+            memberId: action.member.id,
+            guildId: action.member.guild.id,
+            moderatorId: action.moderator.id,
+            end: action.end,
+            time: Date.now(),
+            evidence: action.evidence
+        });
+ */
+
 export type ModerationAction = {
     readonly type: ModerationActionType;
     readonly member: GuildMember;
@@ -36,13 +49,14 @@ export type ModerationAction = {
     readonly end?: number;
 };
 
-export type DatabaseWarning = {
-    readonly reason: string;
-    readonly memberId: Snowflake;
-    readonly moderatorId: Snowflake;
+export type DatabaseModerationAction = {
     readonly type: ModerationActionType;
-    readonly time: number;
+    readonly memberId: Snowflake;
+    readonly reason: string;
+    readonly moderatorId: Snowflake;
+    readonly guildId: Snowflake;
     readonly evidence?: string;
+    readonly time: number;
     readonly end?: number;
 };
 
