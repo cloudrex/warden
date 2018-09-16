@@ -10023,3 +10023,85 @@ https://discordapp.com/invite/EKbRzwf
 [2018-09-16 02:40:59] Mongodb database setup completed 
 [2018-09-16 02:41:12] [🌌Atlas#2473@✨Gaming Corner✨#💬general] test 
 [2018-09-16 02:41:13] [🌌Atlas#2473@✨Gaming Corner✨#💬general] testt 
+[2018-09-16 02:42:49] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 02:42:49] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 02:42:49] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 02:42:49] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 02:42:49] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 02:42:49] [Bot.setup] Loading 38 command(s) 
+[2018-09-16 02:42:49] [Bot.setup] Loaded 38 command(s) 
+[2018-09-16 02:42:49] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 02:42:49] [Bot.setup] Bot setup completed 
+[2018-09-16 02:42:49] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 02:42:49] [Bot.connect] Starting 
+[2018-09-16 02:42:49] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 02:42:49] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 02:42:49] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 02:42:49] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-16 02:42:52] [🌌Atlas#2473@✨Gaming Corner✨#💬general] testtrue 
+[2018-09-16 02:42:54] Setting up mongodb database 
+[2018-09-16 02:42:54] Successfully connected to the MongoDB database. 
+[2018-09-16 02:42:54] Mongodb database setup completed 
+[2018-09-16 02:42:55] [🌌Atlas#2473@✨Gaming Corner✨#💬general] testtest [Edited] 
+[2018-09-16 02:42:57] [🌌Atlas#2473@✨Gaming Corner✨#💬general] testtesttt [Edited] 
+[2018-09-16 02:42:59] [🌌Atlas#2473@✨Gaming Corner✨#💬general] oktrue 
+[2018-09-16 02:43:02] [🌌Atlas#2473@✨Gaming Corner✨#💬general] testtrue 
+[2018-09-16 02:45:18] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 02:45:18] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 02:45:18] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 02:45:18] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 02:45:18] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 02:45:18] [Bot.setup] Loading 38 command(s) 
+[2018-09-16 02:45:18] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 02:45:18] [Bot.setup] Loaded 38 command(s) 
+[2018-09-16 02:45:18] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 02:45:18] [Bot.setup] Bot setup completed 
+[2018-09-16 02:45:18] [Bot.connect] Starting 
+[2018-09-16 02:45:18] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 02:45:18] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 02:45:18] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 02:45:18] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-16 02:45:23] Setting up mongodb database 
+[2018-09-16 02:45:23] Successfully connected to the MongoDB database. 
+[2018-09-16 02:45:23] Mongodb database setup completed 
+[2018-09-16 02:45:59] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 02:45:59] raw args,  
+[2018-09-16 02:45:59] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 02:45:59] [Warden#9606@Warden Official#testing] [Embed] [Edited] 
+[2018-09-16 02:46:00] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 02:46:00] raw args,  
+[2018-09-16 02:46:00] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 02:46:00] [Warden#9606@Warden Official#testing] [Embed] [Edited] 
+[2018-09-16 02:46:02] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 02:46:02] raw args,  
+[2018-09-16 02:46:02] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 02:46:02] [Warden#9606@Warden Official#testing] [Embed] [Edited] 
+[2018-09-16 02:46:03] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 02:46:03] raw args,  
+[2018-09-16 02:46:03] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 02:46:03] [Warden#9606@Warden Official#testing] [Embed] [Edited] 
+[2018-09-16 02:46:13] [🌌Atlas#2473@Warden Official#testing] [Mention] can u help me real quick 
+[2018-09-16 02:46:18] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 02:46:18] raw args,  
+[2018-09-16 02:46:18] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 02:46:18] [Warden#9606@Warden Official#testing] [Embed] [Edited] 
+[2018-09-16 02:47:03] [Walu-Katey#0112@Warden Official#testing] Yeah? 
+[2018-09-16 02:47:06] [🌌Atlas#2473@Warden Official#testing] say .rep 
+[2018-09-16 02:47:15] [Walu-Katey#0112@Warden Official#testing] :rep 
+[2018-09-16 02:47:17] [Walu-Katey#0112@Warden Official#testing] oops 
+[2018-09-16 02:47:19] [Walu-Katey#0112@Warden Official#testing] .rep 
+[2018-09-16 02:47:19] raw args,  
+[2018-09-16 02:47:19] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 02:47:19] [Warden#9606@Warden Official#testing] [Embed] [Edited] 
+[2018-09-16 02:47:21] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 02:47:21] raw args,  
+[2018-09-16 02:47:21] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 02:47:21] [Warden#9606@Warden Official#testing] [Embed] [Edited] 
+[2018-09-16 02:47:22] [🌌Atlas#2473@Warden Official#testing] ok thanks 
+[2018-09-16 02:47:24] [🌌Atlas#2473@Warden Official#testing] do it again 
+[2018-09-16 02:47:27] [Walu-Katey#0112@Warden Official#testing] .rep 
+[2018-09-16 02:47:27] raw args,  
+[2018-09-16 02:47:27] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 02:47:27] [Warden#9606@Warden Official#testing] [Embed] [Edited] 
+[2018-09-16 02:47:28] [🌌Atlas#2473@Warden Official#testing] there 
+[2018-09-16 02:47:37] [🌌Atlas#2473@Warden Official#testing] thanks 
