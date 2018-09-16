@@ -1,6 +1,7 @@
 import {ChatEnvironment, Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 export default class Reason extends Command {
     readonly type = CommandType.Moderation;
@@ -19,10 +20,11 @@ export default class Reason extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = SpecificGroups.staff;
+        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
     }
 
-    public executed(context: CommandContext): void {
+    public async executed(context: CommandContext): Promise<void> {
         // TODO
+        await context.fail("Not implemented yet");
     }
 };

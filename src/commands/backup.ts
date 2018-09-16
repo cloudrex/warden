@@ -2,6 +2,7 @@ import {Command, CommandContext, Permission, Utils} from "discord-anvil";
 import {Channel, GuildChannel, TextChannel} from "discord.js";
 import {CommandType} from "./help";
 import Mongo, {ChannelType, DatabaseChannel} from "../database/mongo-database";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 export default class Backup extends Command {
     readonly type = CommandType.Utility;
@@ -14,6 +15,7 @@ export default class Backup extends Command {
     constructor() {
         super();
 
+        this.restrict.specific = [CommandRestrictGroup.ServerOwner];
         this.restrict.cooldown = 3600;
     }
 

@@ -8941,3 +8941,374 @@ https://discordapp.com/invite/EKbRzwf
 [2018-09-15 21:54:20] raw args,  
 [2018-09-15 21:54:20] [Warden#9606@Warden Official#testing] [Embed] 
 [2018-09-15 21:54:20] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-15 23:52:36] [Bot.setup] Attempting to load internal fragments 
+[2018-09-15 23:52:36] [Bot.setup] Loading 6 internal fragments 
+[2018-09-15 23:52:36] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-15 23:52:36] [Bot.setup] Loading 4 service(s) 
+[2018-09-15 23:52:36] [Bot.setup] Loaded 4 service(s) 
+[2018-09-15 23:52:36] [Bot.setup] Loading 39 command(s) 
+[2018-09-15 23:52:36] [Bot.setup] Loaded 39 command(s) 
+[2018-09-15 23:52:36] [Bot.setupEvents] Setting up Discord events 
+[2018-09-15 23:52:36] [Bot.setupEvents] Discord events setup completed 
+[2018-09-15 23:52:36] [Bot.setup] Bot setup completed 
+[2018-09-15 23:52:36] [Bot.connect] Starting 
+[2018-09-15 23:52:37] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-15 23:52:37] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-15 23:52:37] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-15 23:52:37] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-15 23:52:38] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lmao 
+[2018-09-15 23:52:41] [🌌Atlas#2473@✨Gaming Corner✨#💬general] exactly 
+[2018-09-15 23:52:42] Setting up mongodb database 
+[2018-09-15 23:52:42] Successfully connected to the MongoDB database. 
+[2018-09-15 23:52:42] Mongodb database setup completed 
+[2018-09-15 23:52:42] [🌌Atlas#2473@✨Gaming Corner✨#💬general] XD 
+[2018-09-15 23:52:43] [Haxified#0004@✨Gaming Corner✨#💬general] and they are dirt cheap lul 
+[2018-09-15 23:52:46] [🌌Atlas#2473@✨Gaming Corner✨#💬general] Lmao 
+[2018-09-15 23:52:48] [🌌Atlas#2473@✨Gaming Corner✨#💬general] eww 
+[2018-09-15 23:52:53] [Haxified#0004@✨Gaming Corner✨#💬general] ? 
+[2018-09-15 23:53:02] [🌌Atlas#2473@✨Gaming Corner✨#💬general] who uses a condom more than once 
+[2018-09-15 23:53:03] [🌌Atlas#2473@✨Gaming Corner✨#💬general] xD 
+[2018-09-15 23:53:08] [Haxified#0004@✨Gaming Corner✨#💬general] exactly 
+[2018-09-15 23:53:09] [🌌Atlas#2473@✨Gaming Corner✨#💬general] wtf 
+[2018-09-15 23:53:21] [🌌Atlas#2473@Warden Official#testing] .auth 
+[2018-09-15 23:53:21] raw args,  
+[2018-09-15 23:53:21] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-15 23:53:21] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-15 23:53:24] [🌌Atlas#2473@Warden Official#testing] .help 
+[2018-09-15 23:53:24] raw args,  
+[2018-09-15 23:53:37] [🌌Atlas#2473@Warden Official#testing] .warns 285578743324606482 
+[2018-09-15 23:53:37] raw args,  285578743324606482
+[2018-09-15 23:53:37] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-15 23:53:37] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-15 23:53:42] [🌌Atlas#2473@Warden Official#testing] .warn 285578743324606482 test 
+[2018-09-15 23:53:42] raw args,  285578743324606482,test
+[2018-09-15 23:53:42] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-15 23:53:42] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:30:00] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 00:30:00] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 00:30:00] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 00:30:00] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 00:30:00] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 00:30:00] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 00:30:00] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 00:30:00] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 00:30:00] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 00:30:00] [Bot.setup] Bot setup completed 
+[2018-09-16 00:30:00] [Bot.connect] Starting 
+[2018-09-16 00:30:19] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 00:30:19] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 00:30:19] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 00:30:19] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 00:30:19] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 00:30:19] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 00:30:19] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 00:30:19] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 00:30:19] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 00:30:19] [Bot.connect] Starting 
+[2018-09-16 00:30:19] [Bot.setup] Bot setup completed 
+[2018-09-16 00:30:20] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 00:30:20] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 00:30:20] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 00:30:20] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-16 00:30:25] Setting up mongodb database 
+[2018-09-16 00:30:25] Successfully connected to the MongoDB database. 
+[2018-09-16 00:30:25] Mongodb database setup completed 
+[2018-09-16 00:30:59] [NolanRose#6012@✨Gaming Corner✨#💬general] I have squeezed a a thicc thigh 
+[2018-09-16 00:34:42] [🌌Atlas#2473@Warden Official#testing] .rep [Mention] 
+[2018-09-16 00:34:42] raw args,  <@285578743324606482>
+[2018-09-16 00:35:12] [LConeybear#6607@✨Gaming Corner✨#💬general] *Extremely well structured question from Stable.* 
+[2018-09-16 00:35:31] [LConeybear#6607@✨Gaming Corner✨#💬general] "great! how is u" 
+[2018-09-16 00:36:30] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 00:36:30] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 00:36:30] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 00:36:30] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 00:36:30] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 00:36:30] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 00:36:30] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 00:36:30] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 00:36:30] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 00:36:30] [Bot.setup] Bot setup completed 
+[2018-09-16 00:36:30] [Bot.connect] Starting 
+[2018-09-16 00:36:30] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 00:36:30] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 00:36:30] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 00:36:30] [Bot.setupEvents] Ready | Took 475ms 
+[2018-09-16 00:36:35] Setting up mongodb database 
+[2018-09-16 00:36:35] Successfully connected to the MongoDB database. 
+[2018-09-16 00:36:35] Mongodb database setup completed 
+[2018-09-16 00:36:48] [🌌Atlas#2473@Warden Official#testing] .rep [Mention] 
+[2018-09-16 00:36:48] raw args,  <@285578743324606482>
+[2018-09-16 00:36:50] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:36:50] raw args,  
+[2018-09-16 00:36:50] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:36:50] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:36:59] [🌌Atlas#2473@✨Gaming Corner✨#💬general] yes 
+[2018-09-16 00:37:00] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-16 00:37:02] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] Stupendous. 
+[2018-09-16 00:37:03] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:37:03] raw args,  
+[2018-09-16 00:37:03] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:37:03] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:37:19] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 00:37:19] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 00:37:19] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 00:37:19] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 00:37:19] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 00:37:19] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 00:37:19] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 00:37:19] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 00:37:19] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 00:37:19] [Bot.setup] Bot setup completed 
+[2018-09-16 00:37:19] [Bot.connect] Starting 
+[2018-09-16 00:37:19] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 00:37:19] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 00:37:19] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 00:37:19] [Bot.setupEvents] Ready | Took 412ms 
+[2018-09-16 00:37:20] [🌌Atlas#2473@✨Gaming Corner✨#💬general] my gramma is good 
+[2018-09-16 00:37:22] [🌌Atlas#2473@✨Gaming Corner✨#💬general] very oog 
+[2018-09-16 00:37:23] [🌌Atlas#2473@✨Gaming Corner✨#💬general] very oogd 
+[2018-09-16 00:37:24] Setting up mongodb database 
+[2018-09-16 00:37:24] Successfully connected to the MongoDB database. 
+[2018-09-16 00:37:24] Mongodb database setup completed 
+[2018-09-16 00:37:30] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:37:30] raw args,  
+[2018-09-16 00:37:30] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:37:30] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:38:01] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 00:38:01] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 00:38:01] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 00:38:01] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 00:38:01] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 00:38:01] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 00:38:01] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 00:38:01] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 00:38:01] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 00:38:01] [Bot.setup] Bot setup completed 
+[2018-09-16 00:38:01] [Bot.connect] Starting 
+[2018-09-16 00:38:02] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 00:38:02] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 00:38:02] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 00:38:02] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-16 00:38:03] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:38:03] raw args,  
+[2018-09-16 00:38:03] There was an error while executing the 'rep' command: Cannot read property 'reputation' of undefined 
+[2018-09-16 00:38:03] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:38:03] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:38:07] Setting up mongodb database 
+[2018-09-16 00:38:07] Successfully connected to the MongoDB database. 
+[2018-09-16 00:38:07] Mongodb database setup completed 
+[2018-09-16 00:38:08] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:38:08] raw args,  
+[2018-09-16 00:38:08] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:38:08] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:38:15] [Wyspos Q.#5863@✨Gaming Corner✨#💬general] The proximal direction my time interval has elected to take is veraciously incredible. 
+[2018-09-16 00:38:28] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <:thonkingcorrin:489955836366684173> 
+[2018-09-16 00:39:29] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 00:39:29] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 00:39:29] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 00:39:29] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 00:39:29] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 00:39:29] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 00:39:29] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 00:39:29] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 00:39:29] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 00:39:29] [Bot.setup] Bot setup completed 
+[2018-09-16 00:39:29] [Bot.connect] Starting 
+[2018-09-16 00:39:30] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 00:39:30] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 00:39:30] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 00:39:30] [Bot.setupEvents] Ready | Took 449ms 
+[2018-09-16 00:39:30] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:39:30] raw args,  
+[2018-09-16 00:39:30] There was an error while executing the 'rep' command: Cannot read property 'reputation' of undefined 
+[2018-09-16 00:39:31] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:39:31] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:39:35] Setting up mongodb database 
+[2018-09-16 00:39:35] Successfully connected to the MongoDB database. 
+[2018-09-16 00:39:35] Mongodb database setup completed 
+[2018-09-16 00:39:35] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:39:35] raw args,  
+[2018-09-16 00:39:36] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:39:36] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:40:20] [NolanRose#6012@✨Gaming Corner✨#🚧mod-cmd] Ha 
+[2018-09-16 00:41:38] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:41:38] raw args,  
+[2018-09-16 00:41:38] There was an error while executing the 'rep' command: Cannot read property 'amount' of null 
+[2018-09-16 00:41:39] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:41:39] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:33] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 00:42:33] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 00:42:33] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 00:42:33] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 00:42:33] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 00:42:33] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 00:42:33] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 00:42:33] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 00:42:33] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 00:42:33] [Bot.setup] Bot setup completed 
+[2018-09-16 00:42:33] [Bot.connect] Starting 
+[2018-09-16 00:42:34] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 00:42:34] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 00:42:34] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 00:42:34] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-16 00:42:35] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:42:35] raw args,  
+[2018-09-16 00:42:35] There was an error while executing the 'rep' command: Cannot read property 'reputation' of undefined 
+[2018-09-16 00:42:35] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:35] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:39] Setting up mongodb database 
+[2018-09-16 00:42:39] Mongodb database setup completed 
+[2018-09-16 00:42:39] Successfully connected to the MongoDB database. 
+[2018-09-16 00:42:40] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:42:40] raw args,  
+[2018-09-16 00:42:40] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:40] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:47] [🌌Atlas#2473@Warden Official#testing] .rep [Mention] 
+[2018-09-16 00:42:47] raw args,  <@285578743324606482>
+[2018-09-16 00:42:48] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:42:48] raw args,  
+[2018-09-16 00:42:49] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:49] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:51] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:42:51] raw args,  
+[2018-09-16 00:42:51] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:52] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:53] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:42:53] raw args,  
+[2018-09-16 00:42:53] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:53] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:56] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:42:56] raw args,  
+[2018-09-16 00:42:56] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:56] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:57] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:42:57] raw args,  
+[2018-09-16 00:42:57] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:42:58] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:43:18] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:43:18] raw args,  
+[2018-09-16 00:43:18] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:43:18] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:43:37] [NolanRose#6012@Warden Official#general] Ree 
+[2018-09-16 00:43:49] [NolanRose#6012@Warden Official#general] Aww i has no role 
+[2018-09-16 00:43:55] [NolanRose#6012@Warden Official#general] Oh wait wrong server 
+[2018-09-16 00:43:57] [NolanRose#6012@Warden Official#general] Ree 
+[2018-09-16 00:55:11] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 00:55:11] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 00:55:11] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 00:55:11] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 00:55:11] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 00:55:11] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 00:55:11] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 00:55:11] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 00:55:11] [Bot.setup] Bot setup completed 
+[2018-09-16 00:55:11] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 00:55:11] [Bot.connect] Starting 
+[2018-09-16 00:55:11] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 00:55:11] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 00:55:11] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 00:55:11] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-16 00:55:15] [🌌Atlas#2473@Warden Official#testing] .auth 
+[2018-09-16 00:55:15] raw args,  
+[2018-09-16 00:55:15] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:15] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:16] Setting up mongodb database 
+[2018-09-16 00:55:16] Successfully connected to the MongoDB database. 
+[2018-09-16 00:55:16] Mongodb database setup completed 
+[2018-09-16 00:55:18] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:55:18] raw args,  
+[2018-09-16 00:55:18] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:18] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:27] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:55:27] raw args,  
+[2018-09-16 00:55:27] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:27] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:29] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:55:29] raw args,  
+[2018-09-16 00:55:29] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:29] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:31] [🌌Atlas#2473@Warden Official#testing] .rep [Mention] 
+[2018-09-16 00:55:31] raw args,  <@285578743324606482>
+[2018-09-16 00:55:31] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:31] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:44] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:55:44] raw args,  
+[2018-09-16 00:55:44] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:44] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:47] [🌌Atlas#2473@Warden Official#testing] .rep 378975221971025922 
+[2018-09-16 00:55:47] raw args,  378975221971025922
+[2018-09-16 00:55:47] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:47] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:55:50] [🌌Atlas#2473@Warden Official#testing] .rep 378975221971025922 
+[2018-09-16 00:55:50] raw args,  378975221971025922
+[2018-09-16 00:56:01] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:56:01] raw args,  
+[2018-09-16 00:56:02] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:56:02] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:56:10] [🌌Atlas#2473@Warden Official#testing] .rep [Mention] 
+[2018-09-16 00:56:10] raw args,  <@285578743324606482>
+[2018-09-16 00:56:24] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 00:56:24] raw args,  
+[2018-09-16 00:56:24] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 00:56:24] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:01] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 01:01:01] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 01:01:01] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 01:01:01] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 01:01:01] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 01:01:01] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 01:01:01] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 01:01:01] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 01:01:01] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 01:01:01] [Bot.setup] Bot setup completed 
+[2018-09-16 01:01:01] [Bot.connect] Starting 
+[2018-09-16 01:01:02] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 01:01:02] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 01:01:02] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-16 01:01:02] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 01:01:07] Setting up mongodb database 
+[2018-09-16 01:01:07] Successfully connected to the MongoDB database. 
+[2018-09-16 01:01:07] Mongodb database setup completed 
+[2018-09-16 01:01:21] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 01:01:21] raw args,  
+[2018-09-16 01:01:21] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:21] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:22] [🌌Atlas#2473@Warden Official#testing] .help 
+[2018-09-16 01:01:22] raw args,  
+[2018-09-16 01:01:22] There was an error while executing the 'help' command: RichEmbed descriptions may not exceed 2048 characters. 
+[2018-09-16 01:01:23] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:23] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:50] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 01:01:50] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 01:01:50] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 01:01:50] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 01:01:50] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 01:01:50] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 01:01:50] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 01:01:50] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 01:01:50] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 01:01:50] [Bot.setup] Bot setup completed 
+[2018-09-16 01:01:50] [Bot.connect] Starting 
+[2018-09-16 01:01:51] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 01:01:51] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 01:01:51] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 01:01:51] [Bot.setupEvents] Ready | Took 459ms 
+[2018-09-16 01:01:51] [🌌Atlas#2473@Warden Official#testing] .help 
+[2018-09-16 01:01:51] [CommandContext.respond] Attempted to send a message with more than 2048 characters (Discord limit); The message was automatically trimmed 
+[2018-09-16 01:01:51] raw args,  
+[2018-09-16 01:01:52] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:52] There was an error while executing the 'help' command: RichEmbed descriptions may not exceed 2048 characters. 
+[2018-09-16 01:01:52] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:52] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:52] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:01:56] Setting up mongodb database 
+[2018-09-16 01:01:56] Successfully connected to the MongoDB database. 
+[2018-09-16 01:01:56] Mongodb database setup completed 
+[2018-09-16 01:02:07] [🌌Atlas#2473@Warden Official#testing] .help 
+[2018-09-16 01:02:07] raw args,  
+[2018-09-16 01:02:07] [CommandContext.respond] Attempted to send a message with more than 2048 characters (Discord limit); The message was automatically trimmed 
+[2018-09-16 01:02:07] There was an error while executing the 'help' command: RichEmbed descriptions may not exceed 2048 characters. 
+[2018-09-16 01:02:07] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:02:08] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:02:08] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:02:08] [Warden#9606@Warden Official#testing] [Embed] 

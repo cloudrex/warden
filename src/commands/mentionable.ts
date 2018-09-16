@@ -2,6 +2,7 @@ import {Role} from "discord.js";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 export interface MentionableArgs {
     readonly role: Role;
@@ -28,7 +29,7 @@ export default class Mentionable extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.specific = [CommandRestrictGroup.ServerOwner];
         this.restrict.selfPermissions = [Permission.ManageRoles];
     }
 

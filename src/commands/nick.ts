@@ -29,7 +29,8 @@ export default class Nick extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.selfPermissions = [Permission.ChangeNickname];
+        this.restrict.selfPermissions = [Permission.ManageNicknames];
+        this.restrict.issuerPermissions = [Permission.ChangeNickname];
     }
 
     public async executed(context: CommandContext, args: NickArgs): Promise<void> {

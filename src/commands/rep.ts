@@ -1,8 +1,9 @@
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import {GuildMember} from "discord.js";
+import Reputation from "../core/reputation";
 
 export type RepArgs = {
-    readonly member: GuildMember;
+    readonly member?: GuildMember;
 }
 
 export default class Rep extends Command {
@@ -16,7 +17,7 @@ export default class Rep extends Command {
             name: "member",
             description: "The target member",
             type: "member",
-            required: true
+            required: false
         }
     ];
 
@@ -28,6 +29,16 @@ export default class Rep extends Command {
     }
 
     public async executed(context: CommandContext, args: RepArgs): Promise<void> {
-        // TODO
+        if (args.member === undefined) {
+            const rep: number = await Reputation.getReputation(context.sender.id);
+
+            console.log(rep);
+
+            await context.ok(`You have **${rep > 0 ? `+${rep}` : rep}** reputation`);
+
+            return;
+        }
+
+        await Reputation.increaseReputation(args.member.id);
     }
 };

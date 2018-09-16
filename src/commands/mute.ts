@@ -2,7 +2,7 @@ import WardenAPI from "../core/warden-api";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {GuildMember} from "discord.js";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";
 import {ModerationActionType} from "../database/mongo-database";
 
@@ -52,9 +52,8 @@ export default class Mute extends Command {
         super();
 
         this.restrict.selfPermissions = [Permission.ManageRoles];
-        this.restrict.issuerPermissions = [Permission.ManageRoles];
+        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = SpecificGroups.staff;
     }
 
     public async executed(context: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {

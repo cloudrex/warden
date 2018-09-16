@@ -109,7 +109,7 @@ export default class WardenAPI {
     }
 
     public static async getUserConfig(userId: Snowflake, type: UserConfigType): Promise<string | boolean | null> {
-        const result: DatabaseUserConfig | null = await Mongo.collections.memberConfig.findOne({
+        const result: DatabaseUserConfig | null = await Mongo.collections.config.findOne({
             userId: userId,
             type: type
         });
@@ -118,7 +118,7 @@ export default class WardenAPI {
     }
 
     public static async setUserConfig(config: DatabaseUserConfig): Promise<void> {
-        await Mongo.collections.memberConfig.updateOne({
+        await Mongo.collections.config.updateOne({
             userId: config.userId,
             type: config.type
         }, {

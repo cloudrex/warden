@@ -1,6 +1,6 @@
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {GuildMember} from "discord.js";
 import {CommandType} from "./help";
 import {ModerationActionType} from "../database/mongo-database";
@@ -45,7 +45,7 @@ export default class Warn extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = SpecificGroups.staff;
+        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
     }
 
     // TODO: Throws unknown message
