@@ -9,8 +9,6 @@ export interface SayArgs {
 const mentionPattern: RegExp = /<@!?[0-9]+>|@everyone|@here/gm;
 
 export default class Emulate extends Command {
-    readonly isEnabled: boolean = false;
-
     readonly type = CommandType.Utility;
 
     readonly meta = {
@@ -43,6 +41,6 @@ export default class Emulate extends Command {
         }
 
         // TODO: Debugging
-        //await context.message.channel.send(filteredMessage);
+        await context.message.channel.send(`${context.sender.tag} <:announcement:490726045880811531> ` + filteredMessage);
     }
 };

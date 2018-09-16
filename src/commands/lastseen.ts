@@ -40,7 +40,7 @@ export default class LastSeen extends Command {
         }).limit(1).toArray())[0];
 
         if (result !== undefined) {
-            await context.ok(`<@${args.member.id}> was last seen **${Utils.timeAgo(result.time, false)}**`);
+            await context.ok(`<:binoculars:490726532784979980> <@${args.member.id}> was last seen **${Utils.timeAgo(result.time, false)}**`);
         }
         else {
             await context.fail(`No recorded data for <@${args.member.id}>`);

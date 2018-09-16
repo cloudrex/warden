@@ -34,7 +34,7 @@ export default class Rep extends Command {
 
             console.log(rep);
 
-            await context.ok(`You have **${rep > 0 ? `+${rep}` : rep}** reputation`);
+            await context.ok(`<:like:490724412920954880> You have **${rep > 0 ? `+${rep}` : rep}** reputation`);
 
             return;
         }
