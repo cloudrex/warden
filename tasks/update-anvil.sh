@@ -1,4 +1,3 @@
 #!/bin/sh
-npm update discord-anvil
-yarn
+bash tasks/clean-modules.sh
 yarn start

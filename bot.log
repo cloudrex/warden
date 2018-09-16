@@ -9312,3 +9312,100 @@ https://discordapp.com/invite/EKbRzwf
 [2018-09-16 01:02:08] [Warden#9606@Warden Official#testing] [Embed] 
 [2018-09-16 01:02:08] [Warden#9606@Warden Official#testing] [Embed] 
 [2018-09-16 01:02:08] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:13:18] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 01:13:18] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 01:13:18] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 01:13:18] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 01:13:18] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 01:13:18] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 01:13:18] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 01:13:18] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 01:13:18] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 01:13:18] [Bot.setup] Bot setup completed 
+[2018-09-16 01:13:18] [Bot.connect] Starting 
+[2018-09-16 01:13:19] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 01:13:19] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 01:13:19] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 01:13:19] [Bot.setupEvents] Ready | Took 487ms 
+[2018-09-16 01:13:24] Setting up mongodb database 
+[2018-09-16 01:13:24] Successfully connected to the MongoDB database. 
+[2018-09-16 01:13:24] Mongodb database setup completed 
+[2018-09-16 01:14:47] [Bot.setup] Attempting to load internal fragments 
+[2018-09-16 01:14:47] [Bot.setup] Loading 6 internal fragments 
+[2018-09-16 01:14:47] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-16 01:14:47] [Bot.setup] Loading 4 service(s) 
+[2018-09-16 01:14:47] [Bot.setup] Loaded 4 service(s) 
+[2018-09-16 01:14:47] [Bot.setup] Loading 39 command(s) 
+[2018-09-16 01:14:47] [Bot.setup] Loaded 39 command(s) 
+[2018-09-16 01:14:47] [Bot.setupEvents] Setting up Discord events 
+[2018-09-16 01:14:47] [Bot.setup] Bot setup completed 
+[2018-09-16 01:14:47] [Bot.setupEvents] Discord events setup completed 
+[2018-09-16 01:14:47] [Bot.connect] Starting 
+[2018-09-16 01:14:47] There was an error creating the temp folder for the bot: 446736307172016138 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u446736307172016138') 
+[2018-09-16 01:14:47] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-16 01:14:47] [Bot.setupEvents] Logged in as Warden#9606 | 2 guild(s) 
+[2018-09-16 01:14:47] [Bot.setupEvents] Ready | Took 498ms 
+[2018-09-16 01:14:50] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] SOMEONE ELSE USED IT 
+[2018-09-16 01:14:52] Setting up mongodb database 
+[2018-09-16 01:14:52] Successfully connected to the MongoDB database. 
+[2018-09-16 01:14:52] Mongodb database setup completed 
+[2018-09-16 01:14:56] [🌌Atlas#2473@✨Gaming Corner✨#💬general] wat 
+[2018-09-16 01:14:57] [🌌Atlas#2473@✨Gaming Corner✨#💬general] oh 
+[2018-09-16 01:14:58] [🌌Atlas#2473@✨Gaming Corner✨#💬general] lol 
+[2018-09-16 01:15:06] [🌌Atlas#2473@✨Gaming Corner✨#💬general] there 
+[2018-09-16 01:15:09] [🌌Atlas#2473@✨Gaming Corner✨#💬general] u happy now? 
+[2018-09-16 01:15:09] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .-. 
+[2018-09-16 01:15:13] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] r00d 
+[2018-09-16 01:15:16] [🌌Atlas#2473@✨Gaming Corner✨#💬general] xd 
+[2018-09-16 01:15:20] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <:thonkingcorrin:489955836366684173> 
+[2018-09-16 01:15:25] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Yay! 
+[2018-09-16 01:15:32] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] <:thonkingcorrin:489955836366684173> 
+[2018-09-16 01:15:39] [🌌Atlas#2473@✨Gaming Corner✨#💬general] <:thonkingcorrin:489955836366684173> 
+[2018-09-16 01:15:48] [🌌Atlas#2473@Warden Official#testing] .rep 
+[2018-09-16 01:15:48] raw args,  
+[2018-09-16 01:15:48] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:15:48] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:15:53] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .rep [Mention] 
+[2018-09-16 01:15:53] raw args,  <@!334084975613706250>
+[2018-09-16 01:15:53] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-16 01:15:53] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-16 01:15:57] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .rep [Mention] 
+[2018-09-16 01:15:57] raw args,  <@!334084975613706250>
+[2018-09-16 01:16:09] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] What’s me rep 
+[2018-09-16 01:16:13] [🌌Atlas#2473@✨Gaming Corner✨#💬general] do .rep 
+[2018-09-16 01:16:19] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .rep 
+[2018-09-16 01:16:19] raw args,  
+[2018-09-16 01:16:19] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-16 01:16:19] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-16 01:16:23] [🌌Atlas#2473@✨Gaming Corner✨#💬general] xd 
+[2018-09-16 01:16:24] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .-. 
+[2018-09-16 01:16:31] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .auth 
+[2018-09-16 01:16:31] raw args,  
+[2018-09-16 01:16:31] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-16 01:16:31] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-16 01:16:36] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .—-. 
+[2018-09-16 01:16:37] [🌌Atlas#2473@✨Gaming Corner✨#💬general] good job 
+[2018-09-16 01:16:39] [🌌Atlas#2473@✨Gaming Corner✨#💬general] you found a bug 
+[2018-09-16 01:16:40] [🌌Atlas#2473@✨Gaming Corner✨#💬general] xd 
+[2018-09-16 01:17:04] [🌌Atlas#2473@✨Gaming Corner✨#💬general] .help 
+[2018-09-16 01:17:04] raw args,  
+[2018-09-16 01:17:11] [GoldenVolcarona#2867@Warden Official#testing] .auth 
+[2018-09-16 01:17:11] raw args,  
+[2018-09-16 01:17:11] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:17:11] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:17:17] [GoldenVolcarona#2867@Warden Official#testing] .rep 
+[2018-09-16 01:17:17] raw args,  
+[2018-09-16 01:17:17] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:17:17] [Warden#9606@Warden Official#testing] [Embed] 
+[2018-09-16 01:17:28] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] .help 
+[2018-09-16 01:17:28] raw args,  
+[2018-09-16 01:17:28] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-16 01:17:28] [Warden#9606@✨Gaming Corner✨#💬general] [Embed] 
+[2018-09-16 01:17:36] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] ATLAS WHAT HAPPENED 
+[2018-09-16 01:17:38] [🌌Atlas#2473@✨Gaming Corner✨#💬general] something is really really wrong 
+[2018-09-16 01:17:40] [🌌Atlas#2473@✨Gaming Corner✨#💬general] idk I added new stuff 
+[2018-09-16 01:17:42] [🌌Atlas#2473@✨Gaming Corner✨#💬general] it broke 
+[2018-09-16 01:17:54] [🌌Atlas#2473@✨Gaming Corner✨#💬general] something weird is happening 
+[2018-09-16 01:18:03] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] Another thing I’ve broken 
+[2018-09-16 01:18:07] [🌌Atlas#2473@✨Gaming Corner✨#💬general] it's doing something it shouldn't be able to do under any circumstances 
+[2018-09-16 01:18:07] [GoldenVolcarona#2867@✨Gaming Corner✨#💬general] What’s next? 
