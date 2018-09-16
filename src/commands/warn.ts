@@ -1,5 +1,4 @@
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
-import SpecificGroups from "../specific-groups";
 import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {GuildMember} from "discord.js";
 import {CommandType} from "./help";

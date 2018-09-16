@@ -1,6 +1,6 @@
 import {Command, CommandContext} from "discord-anvil";
-import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 export default class Test extends Command {
     readonly type = CommandType.Utility;
@@ -13,13 +13,13 @@ export default class Test extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.staff;
+        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
     }
 
     public async executed(context: CommandContext): Promise<void> {
         // TODO: Check if the send message failed and display error, and check if embeds + files can be sent.
         if (context.message.channel.type === "text") {
-            await context.ok("I can send messages in this channel.");
+            await context.ok("I can send messages in this channel");
         }
     }
 };

@@ -1,7 +1,7 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
-import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 interface WhoisArgs {
     readonly member: GuildMember;
@@ -28,7 +28,7 @@ export default class Whois extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.staff;
+        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
     }
 
     public async executed(context: CommandContext, args: WhoisArgs): Promise<void> {

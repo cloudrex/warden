@@ -1,7 +1,6 @@
 import {Role} from "discord.js";
 import {ChatEnvironment, Command, CommandArgument, CommandContext} from "discord-anvil";
-import SpecificGroups from "../specific-groups";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";
 
 interface RolesArgs {
@@ -28,7 +27,7 @@ export default class Roles extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = SpecificGroups.staff;
+        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
     }
 
     public executed(context: CommandContext, args: RolesArgs): void {

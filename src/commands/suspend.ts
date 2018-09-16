@@ -1,6 +1,5 @@
 import {Command, CommandContext, Permission, Utils} from "discord-anvil";
 import {CommandType} from "./help";
-import {Emoji, RichEmbed} from "discord.js";
 
 export default class Suspend extends Command {
     readonly type = CommandType.Utility;

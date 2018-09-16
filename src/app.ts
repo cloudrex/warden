@@ -12,7 +12,7 @@ import {
     UserDefinedArgType,
     Utils
 } from "discord-anvil";
-import {CommandArgumentResolver} from "discord-anvil/dist/commands/command";
+import {CommandArgumentResolver, DefaultCommandRestrict} from "discord-anvil/dist/commands/command";
 import WardenAPI from "./core/warden-api";
 
 const baseDir: string = "./src";
@@ -73,7 +73,7 @@ async function start() {
         settings: settings,
         authStore: new JsonAuthStore(path.resolve(path.join(baseDir, "auth/schema.json")), path.resolve(path.join(baseDir, "auth/store.json"))),
         dataStore: new JsonProvider(path.resolve(path.join(__dirname, "data.json"))),
-        owner: "285578743324606482:",
+        owner: ":285578743324606482",
 
         options: {
             logMessages: true,
@@ -116,6 +116,8 @@ async function start() {
         Log.debug("Setting up mongodb database");
         await Mongo.connect();
         Log.debug("Mongodb database setup completed");
+
+        console.log(DefaultCommandRestrict);
     }, 5000);
 }
 

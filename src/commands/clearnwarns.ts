@@ -1,6 +1,5 @@
 import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "./help";
-import Permission from "discord-anvil/dist/core/permission";
 import {CommandArgument} from "discord-anvil/dist";
 import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 import Mongo from "../database/mongo-database";

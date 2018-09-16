@@ -1,5 +1,4 @@
 import {ChatEnvironment, Command, CommandContext} from "discord-anvil";
-import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
 import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 

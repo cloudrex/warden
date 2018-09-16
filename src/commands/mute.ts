@@ -1,6 +1,5 @@
 import WardenAPI from "../core/warden-api";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
-import SpecificGroups from "../specific-groups";
 import {GuildMember} from "discord.js";
 import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";

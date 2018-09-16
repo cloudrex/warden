@@ -1,6 +1,6 @@
 import {Command, CommandContext, Permission, Utils} from "discord-anvil";
 import {CommandType} from "./help";
-import {Emoji, GuildMember, RichEmbed} from "discord.js";
+import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../database/mongo-database";
 import {CommandArgument} from "discord-anvil/dist";
 

@@ -1,6 +1,5 @@
 import {ChatEnvironment, Command, CommandArgument, CommandContext} from "discord-anvil";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
-import SpecificGroups from "../specific-groups";
+import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";
 
 export interface PurgeArgs {

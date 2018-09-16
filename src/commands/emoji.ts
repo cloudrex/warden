@@ -1,6 +1,5 @@
-import SpecificGroups from "../specific-groups";
 import {Command, CommandContext, Permission} from "discord-anvil";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";
 
 const request = require("request").defaults({
@@ -38,7 +37,7 @@ export default class Emoji extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.staff;
+        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
         this.restrict.selfPermissions = [Permission.ManageEmojis];
     }
 
