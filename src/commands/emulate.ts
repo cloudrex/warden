@@ -36,7 +36,7 @@ export default class Emulate extends Command {
     constructor() {
         super();
 
-        this.restrict.ownerOnly = true;
+        //this.restrict.ownerOnly = true;
     }
 
     public async executed(context: CommandContext, args: EmulateArgs): Promise<void> {

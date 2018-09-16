@@ -1,7 +1,7 @@
 import {Snowflake} from "discord.js";
 import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "./help";
 
 interface UnbanArgs {
@@ -37,7 +37,7 @@ export default class Unban extends Command {
 
         this.restrict.environment = ChatEnvironment.Guild;
         this.restrict.selfPermissions = [Permission.BanMembers];
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.specific = [CommandRestrictGroup.BotOwner];
     }
 
     // TODO: Untested

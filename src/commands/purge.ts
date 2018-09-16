@@ -28,7 +28,7 @@ export default class Purge extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.specific = [CommandRestrictGroup.BotOwner];
     }
 
     // TODO: Return type, should be void

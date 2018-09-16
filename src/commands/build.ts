@@ -1,7 +1,7 @@
 import {exec} from "child_process";
 import {Command, CommandContext} from "discord-anvil";
-import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 export default class Build extends Command {
     readonly type = CommandType.Configuration;
@@ -14,7 +14,7 @@ export default class Build extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.specific = [CommandRestrictGroup.BotOwner];
         this.restrict.cooldown = 5;
     }
 

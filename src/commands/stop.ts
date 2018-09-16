@@ -1,6 +1,7 @@
 import {Command, CommandContext} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 export default class Stop extends Command {
     readonly type = CommandType.Configuration;
@@ -15,7 +16,7 @@ export default class Stop extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.specific = [CommandRestrictGroup.BotOwner];
     }
 
     public async executed(context: CommandContext): Promise<void> {

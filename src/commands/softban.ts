@@ -1,7 +1,7 @@
 import {GuildMember} from "discord.js";
 import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
 import WardenAPI from "../core/warden-api";
 import {CommandType} from "./help";
 
@@ -42,7 +42,7 @@ export default class Softban extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.specific = [CommandRestrictGroup.BotOwner];
         this.restrict.selfPermissions = [Permission.BanMembers];
     }
 

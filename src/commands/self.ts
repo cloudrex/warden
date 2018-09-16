@@ -2,6 +2,7 @@ import {Command, CommandContext} from "discord-anvil";
 import {CommandArgument, PrimitiveArgumentType} from "discord-anvil/dist";
 import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 interface SelfArgs {
     readonly property: SelfProperty;
@@ -36,7 +37,7 @@ export default class Self extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.specific = [CommandRestrictGroup.BotOwner];
     }
 
     public async executed(context: CommandContext, args: SelfArgs): Promise<void> {

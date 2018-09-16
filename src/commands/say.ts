@@ -32,7 +32,7 @@ export default class Emulate extends Command {
     constructor() {
         super();
 
-        this.restrict.ownerOnly = true;
+        //this.restrict.ownerOnly = true;
     }
 
     public async executed(context: CommandContext, args: SayArgs): Promise<void> {
@@ -42,6 +42,7 @@ export default class Emulate extends Command {
             filteredMessage = filteredMessage.replace(mentionPattern, "[Mention]");
         }
 
-        await context.message.channel.send(filteredMessage);
+        // TODO: Debugging
+        //await context.message.channel.send(filteredMessage);
     }
 };

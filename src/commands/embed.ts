@@ -3,6 +3,7 @@ import {RichEmbed, TextChannel} from "discord.js";
 import {Command, CommandContext, SetupHelper, SetupHelperResult} from "discord-anvil";
 import SpecificGroups from "../specific-groups";
 import {CommandType} from "./help";
+import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
 
 export default class Embed extends Command {
     readonly type = CommandType.Utility;
@@ -15,7 +16,7 @@ export default class Embed extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = SpecificGroups.owner;
+        this.restrict.specific = [CommandRestrictGroup.BotOwner];
     }
 
     public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
