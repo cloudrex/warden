@@ -12,6 +12,7 @@ export type MongoCollections = {
     readonly backups: Collection;
     readonly config: Collection;
     readonly reputation: Collection;
+    readonly storedMessages: Collection;
 };
 
 export enum ModerationActionType {
@@ -62,7 +63,7 @@ export type DatabaseModerationAction = {
 };
 
 export type DatabaseMessage = {
-    readonly author: string;
+    readonly authorTag: string;
     readonly authorId: Snowflake;
     readonly messageId: Snowflake;
     readonly message: string;
@@ -88,6 +89,15 @@ export type DatabaseUserConfig = {
     readonly userId: Snowflake;
     readonly type: UserConfigType;
     readonly value: string | boolean;
+};
+
+export type DatabaseStoredMessage = {
+    readonly ownerId: Snowflake;
+    readonly authorId: Snowflake;
+    readonly authorTag: string;
+    readonly message: string;
+    readonly time: number;
+    readonly name: string;
 };
 
 export type DatabaseWhitelist = {
@@ -130,7 +140,8 @@ export default abstract class Mongo {
                     moderationActions: Mongo.db.collection("moderation-actions"),
                     backups: Mongo.db.collection("backups"),
                     config: Mongo.db.collection("config"),
-                    reputation: Mongo.db.collection("reputation")
+                    reputation: Mongo.db.collection("reputation"),
+                    storedMessages: Mongo.db.collection("stored-messages")
                 };
 
                 resolve(true);

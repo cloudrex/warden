@@ -112,13 +112,10 @@ async function start() {
     await (await bot.setup(api)).connect();
     await api.setup();
 
-    setTimeout(async () => {
-        Log.debug("Setting up mongodb database");
-        await Mongo.connect();
-        Log.debug("Mongodb database setup completed");
-
-        console.log(DefaultCommandRestrict);
-    }, 5000);
+    // Database Setup
+    Log.debug("Setting up mongodb database");
+    await Mongo.connect();
+    Log.debug("Mongodb database setup completed");
 }
 
 start();

@@ -4,6 +4,7 @@ import {Bot, CommandParser, Log, Service} from "discord-anvil";
 import Patterns from "discord-anvil/dist/core/patterns";
 import Utils from "discord-anvil/dist/core/utils";
 import Mongo, {DatabaseMessage, ModerationActionType} from "../database/mongo-database";
+import Messages from "../core/messages";
 
 const conflictingBots: Array<Snowflake> = [
     "155149108183695360" // Dyno#3861
@@ -25,8 +26,8 @@ export default class Protection extends Service {
 
             // Log the message into the database
             if (tracking) {
-                await Mongo.collections.messages.insertOne({
-                    author: message.author.tag,
+                await Messages.add({
+                    authorTag: message.author.tag,
                     authorId: message.author.id,
                     channelId: message.channel.id,
                     message: message.content,

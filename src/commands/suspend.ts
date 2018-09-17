@@ -10,7 +10,7 @@ export default class Suspend extends Command {
     };
 
     public async executed(context: CommandContext): Promise<void> {
-        await context.ok("The bot is now in suspension state");
+        await context.ok("<:internal:490724708837359628> Entering suspension state");
         context.bot.suspended = true;
     }
 };
