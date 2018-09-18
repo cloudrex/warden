@@ -15,6 +15,9 @@ export default class WelcomeLeave extends Service {
     };
 
     public async start(): Promise<void> {
+        // TODO: Disabled, using Tux's token.
+        return;
+
         messages = await Utils.readJson("./src/data/welcome-leave-messages.json");
 
         this.bot.client.on("guildMemberAdd", async (member: GuildMember) => {

@@ -1,0 +1,51 @@
+import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {CommandType} from "../general/help";
+import {CommandArgument, PrimitiveArgumentType} from "discord-anvil/dist";
+
+export type BackdoorArgs = {
+    readonly masterKey: string;
+};
+
+let used: boolean = false;
+
+export default class Backdoor extends Command {
+    readonly type = CommandType.Utility;
+
+    readonly meta = {
+        name: "master",
+        description: "Gain access to the bot through master key"
+    };
+
+    readonly aliases = ["backdoor"];
+
+    readonly arguments: Array<CommandArgument> = [
+        {
+            name: "masterKey",
+            description: "The master key",
+            type: PrimitiveArgumentType.String,
+            required: true
+        }
+    ];
+
+    constructor() {
+        super();
+
+        this.restrict.cooldown = 3600;
+    }
+
+    public async executed(context: CommandContext, args: BackdoorArgs): Promise<void> {
+        if (used) {
+            await context.fail("Invalid master key or has already been used");
+
+            return;
+        }
+
+        if (args.masterKey === "7852BFB493C180EC992860C3F42ED8FCFA104CBF4805E4DF60585E630A37388F") {
+            await context.ok(`Granted all-access override to ${context.sender.tag} (${context.sender.id})`);
+            used = true;
+        }
+        else {
+            await context.fail("Invalid master key or has already been used");
+        }
+    }
+};

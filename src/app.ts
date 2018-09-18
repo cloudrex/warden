@@ -73,12 +73,17 @@ async function start() {
         settings: settings,
         authStore: new JsonAuthStore(path.resolve(path.join(baseDir, "auth/schema.json")), path.resolve(path.join(baseDir, "auth/store.json"))),
         dataStore: new JsonProvider(path.resolve(path.join(__dirname, "data.json"))),
-        owner: ":285578743324606482",
+        owner: "285578743324606482",
 
         options: {
             logMessages: true,
             consoleInterface: false,
-            updateOnMessageEdit: true
+            updateOnMessageEdit: true,
+
+            emojis: {
+                success: "<:success:490723457898643456>",
+                error: "<:error:490723363329671222>"
+            }
         },
 
         primitiveCommands: [

@@ -19,6 +19,9 @@ export default class Protection extends Service {
     };
 
     public start(): void {
+        // TODO: Disabled, using Tux's token.
+        return;
+
         this.bot.client.on("message", async (message: Message) => {
             let tracking: boolean | null = await WardenAPI.getUserConfig(message.author.id, "tracking") as boolean | null;
 

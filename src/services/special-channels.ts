@@ -8,6 +8,9 @@ export default class SpecialChannels extends Service {
     };
 
     public start(): void {
+        // TODO: Disabled, using Tux's token.
+        return;
+
         this.bot.client.on("message", async (message: Message) => {
             if (message.channel.id === this.api.unresolvedChannels.suggestions && !message.author.bot) {
                 await this.api.addSuggestion(message.content, message.member);
