@@ -1,6 +1,7 @@
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
+import {Argument, ChatEnvironment, Command, Permission} from "discord-anvil";
 import {GuildMember} from "discord.js";
 import Reputation from "../../core/reputation";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export type RepArgs = {
     readonly member?: GuildMember;
@@ -12,7 +13,7 @@ export default class Rep extends Command {
         description: "Give reputation to a user"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             description: "The target member",

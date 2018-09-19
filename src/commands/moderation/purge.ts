@@ -1,6 +1,7 @@
-import {ChatEnvironment, Command, CommandArgument, CommandContext} from "discord-anvil";
-import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {Argument, ChatEnvironment, Command} from "discord-anvil";
+import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export interface PurgeArgs {
     readonly amount: number;
@@ -14,10 +15,10 @@ export default class Purge extends Command {
         description: "Delete messages in bulk"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "amount",
-            type: PrimitiveArgumentType.NonZeroInteger,
+            type: PrimitiveArgType.NonZeroInteger,
             description: "The amount of messages to purge",
             required: true
         }
@@ -27,7 +28,7 @@ export default class Purge extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [CommandRestrictGroup.BotOwner];
+        this.restrict.specific = [RestrictGroup.BotOwner];
     }
 
     // TODO: Return type, should be void

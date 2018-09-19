@@ -1,8 +1,8 @@
 import {Command, CommandContext, Permission, Utils} from "discord-anvil";
-import {Channel, GuildChannel, Snowflake, TextChannel} from "discord.js";
+import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
-import Mongo, {ChannelType, DatabaseChannel, DatabaseStoredMessage} from "../../database/mongo-database";
-import {CommandArgument, CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {DatabaseStoredMessage} from "../../database/mongo-database";
+import {Argument, PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import StoredMessages from "../../core/stored-messages";
 
 type StoreArgs = {
@@ -20,15 +20,15 @@ export default class Store extends Command {
 
     readonly aliases = ["save"];
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "name",
             required: false,
-            type: PrimitiveArgumentType.String
+            type: PrimitiveArgType.String
         },
         {
             name: "messageId",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             description: "The Id of the message to save",
             required: false
         }

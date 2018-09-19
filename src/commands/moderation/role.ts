@@ -1,6 +1,7 @@
 import {GuildMember, Role} from "discord.js";
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
+import {Argument, ChatEnvironment, Command, Permission} from "discord-anvil";
 import {CommandType} from "../general/help";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export interface RoleArgs {
     readonly role: Role;
@@ -15,7 +16,7 @@ export default class RoleCommand extends Command {
         description: "Manage member roles"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "role",
             description: "The role to add or remove",

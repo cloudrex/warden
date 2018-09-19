@@ -1,8 +1,9 @@
 import {Message, RichEmbed} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {ChatEnvironment, Command, CommandContext, Utils} from "discord-anvil";
+import {ChatEnvironment, Command, Utils} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export default class Snipe extends Command {
     readonly type = CommandType.Utility;
@@ -16,7 +17,7 @@ export default class Snipe extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
     }
 
     public async executed(context: CommandContext, args: Array<string>, api: WardenAPI): Promise<void> {

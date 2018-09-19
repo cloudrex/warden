@@ -1,6 +1,7 @@
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {Argument, ChatEnvironment, Command, Permission} from "discord-anvil";
+import {PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export interface NickArgs {
     readonly nickname: string;
@@ -16,11 +17,11 @@ export default class Nick extends Command {
 
     readonly aliases = ["nickname"];
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "nickname",
             description: "The desired nickname",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         }
     ];

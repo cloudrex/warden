@@ -1,4 +1,4 @@
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
+import {ChatEnvironment, Command, CommandContext, Permission} from "discord-anvil";
 import {CommandType} from "./help";
 
 export default class Invite extends Command {

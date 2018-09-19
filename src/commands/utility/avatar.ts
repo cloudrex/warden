@@ -1,8 +1,8 @@
-import {exec} from "child_process";
-import {Command, CommandContext} from "discord-anvil";
+import {Command} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandArgument, CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {Argument} from "discord-anvil/dist/commands/command";
 import {GuildMember, RichEmbed} from "discord.js";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 type AvatarArgs = {
     readonly member: GuildMember;
@@ -18,7 +18,7 @@ export default class Avatar extends Command {
 
     readonly aliases = ["pfp"];
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             description: "The member to inspect",

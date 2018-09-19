@@ -2,7 +2,7 @@ import {GuildMember, RichEmbed, Snowflake} from "discord.js";
 import {
     ChatEnvironment,
     Command,
-    CommandArgument,
+    Argument,
     CommandContext,
     DataProvider,
     JsonProvider,
@@ -11,7 +11,7 @@ import {
 } from "discord-anvil";
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseModerationAction} from "../../database/mongo-database";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
 export interface StoredWarning {
     readonly reason: string;
@@ -33,7 +33,7 @@ export default class Warnings extends Command {
 
     readonly aliases = ["warns"];
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             type: "member",
@@ -46,7 +46,7 @@ export default class Warnings extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
     }
 
     private static getDate(warning: DatabaseModerationAction): string {

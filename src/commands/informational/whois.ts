@@ -1,7 +1,7 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
+import {Command, Argument, CommandContext, Utils} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
 interface WhoisArgs {
     readonly member: GuildMember;
@@ -15,7 +15,7 @@ export default class Whois extends Command {
         description: "View information about a user",
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             description: "The member to inspect",
@@ -28,7 +28,7 @@ export default class Whois extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
     }
 
     public async executed(context: CommandContext, args: WhoisArgs): Promise<void> {

@@ -1,11 +1,12 @@
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Utils} from "discord-anvil";
-import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {Argument, ChatEnvironment, Command, Utils} from "discord-anvil";
+import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/command";
 import {GuildMember} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 import WardenAPI from "../../core/warden-api";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
-interface WarnArgs {
+type WarnArgs = {
     readonly member: GuildMember;
     readonly reason: string;
     readonly evidence?: string;
@@ -19,7 +20,7 @@ export default class Warn extends Command {
         description: "Warn an user"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             description: "The member to warn",
@@ -29,13 +30,13 @@ export default class Warn extends Command {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "The evidence of the reason",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: false
         }
     ];
@@ -44,7 +45,7 @@ export default class Warn extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
     }
 
     // TODO: Throws unknown message

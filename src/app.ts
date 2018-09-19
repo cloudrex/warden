@@ -4,15 +4,15 @@ import path from "path";
 import {
     ArgumentTypeChecker,
     Bot,
+    CustomArgType,
     JsonAuthStore,
     JsonProvider,
     Log,
     LogLevel,
     Settings,
-    UserDefinedArgType,
     Utils
 } from "discord-anvil";
-import {CommandArgumentResolver, DefaultCommandRestrict} from "discord-anvil/dist/commands/command";
+import {ArgumentResolver} from "discord-anvil/dist/commands/command";
 import WardenAPI from "./core/warden-api";
 
 const baseDir: string = "./src";
@@ -35,7 +35,7 @@ async function start() {
     const userMentionRegex = /(^[0-9]{17,18}$|^<@!?[0-9]{17,18}>$)/;
 
     const bot: Bot = new Bot({
-        argumentTypes: <Array<UserDefinedArgType>>[
+        argumentTypes: <Array<CustomArgType>>[
             {
                 name: "user",
                 check: userMentionRegex,
@@ -60,7 +60,7 @@ async function start() {
             }
         ],
 
-        argumentResolvers: <Array<CommandArgumentResolver>>[
+        argumentResolvers: <Array<ArgumentResolver>>[
             {
                 name: "member",
 

@@ -1,7 +1,7 @@
 import {Role} from "discord.js";
 import {Command, CommandContext, Permission} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
 export default class Lockdown extends Command {
     readonly type = CommandType.Moderation;
@@ -14,7 +14,7 @@ export default class Lockdown extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
         this.restrict.selfPermissions = [Permission.ManageRoles, Permission.Admin];
     }
 

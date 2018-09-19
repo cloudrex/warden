@@ -1,6 +1,6 @@
 import {Role} from "discord.js";
-import {ChatEnvironment, Command, CommandArgument, CommandContext} from "discord-anvil";
-import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {ChatEnvironment, Command, Argument, CommandContext} from "discord-anvil";
+import {RestrictGroup, PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 
 interface RolesArgs {
@@ -15,10 +15,10 @@ export default class Roles extends Command {
         description: "Display the server's roles",
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "page",
-            type: PrimitiveArgumentType.UnsignedInteger,
+            type: PrimitiveArgType.UnsignedInteger,
             defaultValue: 0
         }
     ];
@@ -27,7 +27,7 @@ export default class Roles extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
     }
 
     public executed(context: CommandContext, args: RolesArgs): void {

@@ -1,7 +1,8 @@
 import {Role} from "discord.js";
-import {Command, CommandContext, Permission} from "discord-anvil";
+import {Command, Permission} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export default class Unlock extends Command {
     readonly type = CommandType.Moderation;
@@ -14,7 +15,7 @@ export default class Unlock extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = [CommandRestrictGroup.BotOwner];
+        this.restrict.specific = [RestrictGroup.BotOwner];
         this.restrict.selfPermissions = [Permission.ManageRoles];
     }
 

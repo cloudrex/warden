@@ -1,7 +1,7 @@
 import WardenAPI from "../../core/warden-api";
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
+import {ChatEnvironment, Command, Argument, CommandContext, Permission} from "discord-anvil";
 import {GuildMember} from "discord.js";
-import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {RestrictGroup, PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 
@@ -20,7 +20,7 @@ export default class Mute extends Command {
         description: "Mute a user"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             description: "The member to mute",
@@ -30,19 +30,19 @@ export default class Mute extends Command {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         },
         {
             name: "time",
             description: "The time to mute the user",
-            type: PrimitiveArgumentType.NonZeroInteger,
+            type: PrimitiveArgType.NonZeroInteger,
             required: false,
         },
         {
             name: "evidence",
             description: "The evidence of the reason",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: false
         }
     ];
@@ -51,7 +51,7 @@ export default class Mute extends Command {
         super();
 
         this.restrict.selfPermissions = [Permission.ManageRoles];
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
         this.restrict.environment = ChatEnvironment.Guild;
     }
 

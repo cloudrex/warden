@@ -1,8 +1,9 @@
 import {GuildMember} from "discord.js";
-import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
-import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {Argument, Command, Permission} from "discord-anvil";
+import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/command";
 import WardenAPI from "../../core/warden-api";
 import {CommandType} from "../general/help";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 interface SoftbanArgs {
     readonly member: GuildMember;
@@ -18,7 +19,7 @@ export default class Softban extends Command {
         description: "Softban a user"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             type: "member",
@@ -28,20 +29,20 @@ export default class Softban extends Command {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "The evidence of the reason",
-            type: PrimitiveArgumentType.String
+            type: PrimitiveArgType.String
         }
     ];
 
     constructor() {
         super();
 
-        this.restrict.specific = [CommandRestrictGroup.BotOwner];
+        this.restrict.specific = [RestrictGroup.BotOwner];
         this.restrict.selfPermissions = [Permission.BanMembers];
     }
 

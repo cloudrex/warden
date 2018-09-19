@@ -1,6 +1,6 @@
 import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "./help";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
 export default class Test extends Command {
     readonly type = CommandType.Utility;
@@ -13,7 +13,7 @@ export default class Test extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
     }
 
     public async executed(context: CommandContext): Promise<void> {

@@ -1,7 +1,7 @@
 import {Command, CommandContext} from "discord-anvil";
-import {CommandArgument, PrimitiveArgumentType} from "discord-anvil/dist";
+import {Argument, PrimitiveArgType} from "discord-anvil/dist";
 import {CommandType} from "../general/help";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
 interface SelfArgs {
     readonly property: SelfProperty;
@@ -18,17 +18,17 @@ export default class Self extends Command {
         description: "Manage the bot's details"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "property",
             description: "The property to change",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         },
         {
             name: "value",
             description: "The value to apply",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         }
     ];
@@ -36,7 +36,7 @@ export default class Self extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = [CommandRestrictGroup.BotOwner];
+        this.restrict.specific = [RestrictGroup.BotOwner];
     }
 
     public async executed(context: CommandContext, args: SelfArgs): Promise<void> {

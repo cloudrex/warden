@@ -1,7 +1,8 @@
 import {Snowflake} from "discord.js";
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
-import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {Argument, ChatEnvironment, Command, Permission} from "discord-anvil";
+import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 interface UnbanArgs {
     readonly user: Snowflake;
@@ -16,7 +17,7 @@ export default class Unban extends Command {
         description: "Unban a user"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "user",
             type: "snowflake",
@@ -26,7 +27,7 @@ export default class Unban extends Command {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         }
     ];
@@ -36,7 +37,7 @@ export default class Unban extends Command {
 
         this.restrict.environment = ChatEnvironment.Guild;
         this.restrict.selfPermissions = [Permission.BanMembers];
-        this.restrict.specific = [CommandRestrictGroup.BotOwner];
+        this.restrict.specific = [RestrictGroup.BotOwner];
     }
 
     // TODO: Untested

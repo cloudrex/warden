@@ -1,6 +1,6 @@
 import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "./help";
-import {CommandArgument, PrimitiveArgumentType} from "discord-anvil/dist";
+import {Argument, PrimitiveArgType} from "discord-anvil/dist";
 import WardenAPI from "../../core/warden-api";
 
 export type OptSubCommand = "tracking";
@@ -18,15 +18,15 @@ export default class Opt extends Command {
         description: "Configure the bot"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "subCommand",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         },
         {
             name: "value",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: false
         }
     ];

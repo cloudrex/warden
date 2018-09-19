@@ -1,6 +1,7 @@
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {Argument, ChatEnvironment, Command, Permission} from "discord-anvil";
+import {PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export interface SayArgs {
     readonly message: string;
@@ -18,11 +19,11 @@ export default class Emulate extends Command {
 
     readonly aliases = ["echo"];
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "message",
             description: "The message to send",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         }
     ];

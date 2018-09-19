@@ -1,7 +1,8 @@
 import {Role} from "discord.js";
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
+import {Argument, ChatEnvironment, Command, Permission} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export interface MentionableArgs {
     readonly role: Role;
@@ -15,7 +16,7 @@ export default class Mentionable extends Command {
         description: "Toggle a role mentionable"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "role",
             description: "The role to toggle mentionable",
@@ -28,7 +29,7 @@ export default class Mentionable extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [CommandRestrictGroup.ServerOwner];
+        this.restrict.specific = [RestrictGroup.ServerOwner];
         this.restrict.selfPermissions = [Permission.ManageRoles];
     }
 

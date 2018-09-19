@@ -1,5 +1,5 @@
 import {Command, CommandContext, Permission} from "discord-anvil";
-import {CommandRestrictGroup, PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {RestrictGroup, PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 
 const request = require("request").defaults({
@@ -23,13 +23,13 @@ export default class Emoji extends Command {
         {
             name: "name",
             description: "The name of the emoji to add",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         },
         {
             name: "url",
             description: "The URL to the emoji image",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         }
     ];
@@ -37,7 +37,7 @@ export default class Emoji extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
         this.restrict.selfPermissions = [Permission.ManageEmojis];
     }
 

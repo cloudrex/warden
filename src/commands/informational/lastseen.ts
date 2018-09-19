@@ -2,7 +2,7 @@ import {Command, CommandContext, Permission, Utils} from "discord-anvil";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
-import {CommandArgument} from "discord-anvil/dist";
+import {Argument} from "discord-anvil/dist";
 
 type LastSeenArgs = {
     readonly member: GuildMember;
@@ -18,7 +18,7 @@ export default class LastSeen extends Command {
 
     readonly aliases = ["ls"];
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             type: "member",

@@ -1,5 +1,6 @@
-import {ChatEnvironment, Command, CommandContext, Permission} from "discord-anvil";
+import {ChatEnvironment, Command, Permission} from "discord-anvil";
 import {CommandType} from "../general/help";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export default class RoleAll extends Command {
     readonly type = CommandType.Utility;

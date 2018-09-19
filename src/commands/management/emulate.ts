@@ -1,5 +1,5 @@
-import {ChatEnvironment, Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {ChatEnvironment, Command, Argument, CommandContext, Permission} from "discord-anvil";
+import {PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 
@@ -16,7 +16,7 @@ export default class Emulate extends Command {
         description: "Emulate a message"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             description: "The author of the emulated message",
@@ -26,7 +26,7 @@ export default class Emulate extends Command {
         {
             name: "message",
             description: "The emulated message",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         }
     ];

@@ -1,7 +1,7 @@
 import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandArgument} from "discord-anvil/dist";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {Argument} from "discord-anvil/dist";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
 import Mongo from "../../database/mongo-database";
 import {GuildMember} from "discord.js";
 import ChatEnvironment from "discord-anvil/dist/core/chat-environment";
@@ -20,7 +20,7 @@ export default class ClearWarns extends Command {
         description: "Clear all warnings from an user"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             description: "The target user",
@@ -33,7 +33,7 @@ export default class ClearWarns extends Command {
         super();
 
         this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
     }
 
     public async executed(context: CommandContext, args: ClearWarnsArgs): Promise<void> {

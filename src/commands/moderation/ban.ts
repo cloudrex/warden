@@ -1,7 +1,7 @@
 import {GuildMember} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, CommandArgument, CommandContext, Permission} from "discord-anvil";
-import {PrimitiveArgumentType} from "discord-anvil/dist/commands/command";
+import {Command, Argument, CommandContext, Permission} from "discord-anvil";
+import {PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 
@@ -19,7 +19,7 @@ export default class Ban extends Command {
         description: "Ban a member"
     };
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "member",
             description: "The member to ban",
@@ -29,13 +29,13 @@ export default class Ban extends Command {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "Evidence for the reason",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: false
         }
     ];

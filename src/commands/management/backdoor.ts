@@ -1,6 +1,6 @@
 import {Command, CommandContext, Permission, Utils} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandArgument, PrimitiveArgumentType} from "discord-anvil/dist";
+import {Argument, PrimitiveArgType} from "discord-anvil/dist";
 
 export type BackdoorArgs = {
     readonly masterKey: string;
@@ -18,11 +18,11 @@ export default class Backdoor extends Command {
 
     readonly aliases = ["backdoor"];
 
-    readonly arguments: Array<CommandArgument> = [
+    readonly arguments: Array<Argument> = [
         {
             name: "masterKey",
             description: "The master key",
-            type: PrimitiveArgumentType.String,
+            type: PrimitiveArgType.String,
             required: true
         }
     ];

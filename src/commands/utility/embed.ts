@@ -1,9 +1,10 @@
 import WardenAPI from "../../core/warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
-import {Command, CommandContext, SetupHelper, SetupHelperResult} from "discord-anvil";
+import {Command, SetupHelper, SetupHelperResult} from "discord-anvil";
 import {CommandType} from "../general/help";
-import {CommandRestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "discord-anvil/dist/commands/command";
 import Utils from "discord-anvil/dist/core/utils";
+import CommandContext from "discord-anvil/dist/commands/command-context";
 
 export default class Embed extends Command {
     readonly type = CommandType.Utility;
@@ -17,7 +18,7 @@ export default class Embed extends Command {
         super();
 
         this.restrict.cooldown = 5;
-        this.restrict.specific = [CommandRestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerModerator];
     }
 
     public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
