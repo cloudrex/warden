@@ -18933,3 +18933,47 @@ returns the proper value based on the if statement
 [2018-09-18 20:41:34] [Pokécord#4503 @ POKECORD PRiME® # pokecord_lounge🌍⏪] [Embed] [Edited] 
 [2018-09-18 20:41:34] [Dyno#0000 @ Вова Игры Chips | Книга переписок # dyno-news] [Embed] 
 [2018-09-18 20:41:35] [QH#6284 @ POKECORD PRiME® # pokecord_lounge🌍⏪] pcatch tauros 
+[2018-09-19 02:59:04] [Bot.setup] Attempting to load internal fragments 
+[2018-09-19 02:59:04] [Bot.setup] Loading 6 internal fragments 
+[2018-09-19 02:59:04] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-19 02:59:04] [Bot.setup] Loading 3 service(s) 
+[2018-09-19 02:59:04] [Bot.setup] Loaded 3 service(s) 
+[2018-09-19 02:59:04] [Bot.setup] Loading 40 command(s) 
+[2018-09-19 02:59:04] [Bot.setup] Loaded 40 command(s) 
+[2018-09-19 02:59:04] [Bot.setupEvents] Discord events setup completed 
+[2018-09-19 02:59:04] [Bot.setupEvents] Setting up Discord events 
+[2018-09-19 02:59:04] [Bot.setup] Bot setup completed 
+[2018-09-19 02:59:04] [Bot.connect] Starting 
+[2018-09-19 03:07:16] [Bot.setup] Attempting to load internal fragments 
+[2018-09-19 03:07:16] [Bot.setup] Loading 6 internal fragments 
+[2018-09-19 03:07:16] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-19 03:07:16] [Bot.setup] Loading 3 service(s) 
+[2018-09-19 03:07:16] [Bot.setup] Loaded 3 service(s) 
+[2018-09-19 03:07:16] [Bot.setup] Loading 40 command(s) 
+[2018-09-19 03:07:16] [Bot.setup] Loaded 40 command(s) 
+[2018-09-19 03:07:16] [Bot.setupEvents] Setting up Discord events 
+[2018-09-19 03:07:16] [Bot.setup] Bot setup completed 
+[2018-09-19 03:07:16] [Bot.setupEvents] Discord events setup completed 
+[2018-09-19 03:07:16] [Bot.connect] Starting 
+[2018-09-19 03:08:11] [Bot.setup] Attempting to load internal fragments 
+[2018-09-19 03:08:11] [Bot.setup] Loading 6 internal fragments 
+[2018-09-19 03:08:11] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-19 03:08:11] [Bot.setup] Loading 3 service(s) 
+[2018-09-19 03:08:11] [Bot.setup] Loaded 3 service(s) 
+[2018-09-19 03:08:11] [Bot.setup] Loading 40 command(s) 
+[2018-09-19 03:08:11] [Bot.setup] Loaded 40 command(s) 
+[2018-09-19 03:08:11] [Bot.setupEvents] Setting up Discord events 
+[2018-09-19 03:08:11] [Bot.setupEvents] Discord events setup completed 
+[2018-09-19 03:08:11] [Bot.setup] Bot setup completed 
+[2018-09-19 03:08:11] [Bot.connect] Starting 
+[2018-09-19 03:08:13] Setting up mongodb database 
+[2018-09-19 03:08:13] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u381949722157514752') 
+[2018-09-19 03:08:13] There was an error establishing connection to the MongoDB database. 
+[2018-09-19 03:08:13] Mongodb database setup completed 
+[2018-09-19 03:08:13] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-19 03:08:13] [Bot.setupEvents] Logged in as Warden#1062 | 32 guild(s) 
+[2018-09-19 03:08:13] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-19 03:08:13] [Dyno#0000 @ Вова Игры Chips | Книга переписок # dyno-news] [Embed] 
+[2018-09-19 03:08:17] [lukee#0420 @ Discord Bot List # testing-1] free sex 
+[2018-09-19 03:08:20] [acidic#9508 @ Discord Bots # general] [Mention] 
+[2018-09-19 03:08:24] [advaith#9121 @ Discord Bot List # development] when u console.log a buffer it looks like this 

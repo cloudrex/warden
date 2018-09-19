@@ -10,10 +10,20 @@ import {
     Log,
     LogLevel,
     Settings,
-    Utils
+    Utils,
+    on
 } from "discord-anvil";
 import {ArgumentResolver} from "discord-anvil/dist/commands/command";
 import WardenAPI from "./core/warden-api";
+
+export abstract class Warden {
+    @on("ready")
+    ready() {
+        console.log("I'm ready!");
+    }
+}
+
+Warden;
 
 const baseDir: string = "./src";
 
