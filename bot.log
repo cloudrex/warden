@@ -18977,3 +18977,43 @@ returns the proper value based on the if statement
 [2018-09-19 03:08:17] [lukee#0420 @ Discord Bot List # testing-1] free sex 
 [2018-09-19 03:08:20] [acidic#9508 @ Discord Bots # general] [Mention] 
 [2018-09-19 03:08:24] [advaith#9121 @ Discord Bot List # development] when u console.log a buffer it looks like this 
+[2018-09-20 21:27:48] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 21:27:48] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 21:27:48] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 21:27:48] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 21:27:48] [Bot.setup] Loaded 4 service(s) 
+[2018-09-20 21:27:48] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 21:27:50] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 21:27:50] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 21:27:50] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 21:27:50] [Bot.setup] Bot setup completed 
+[2018-09-20 21:27:50] [Bot.connect] Starting 
+[2018-09-20 21:27:51] Setting up mongodb database 
+[2018-09-20 21:27:51] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-20 21:27:51] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-20 21:27:51] [Bot.setupEvents] Logged in as Shield#8221 | 2 guild(s) 
+[2018-09-20 21:27:51] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-20 21:27:53] There was an error establishing connection to the MongoDB database. 
+[2018-09-20 21:27:53] Mongodb database setup completed 
+[2018-09-20 21:28:15] [🌌Atlas#2473 @ Warden Official # testing] .ping 
+[2018-09-20 21:28:15] raw args,  
+[2018-09-20 21:28:15] [Shield#8221 @ Warden Official # testing] [Embed] 
+[2018-09-20 21:28:15] [Shield#8221 @ Warden Official # testing] [Embed] [Edited] 
+[2018-09-20 21:29:35] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 21:29:35] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 21:29:35] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 21:29:35] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 21:29:35] [Bot.setup] Loaded 4 service(s) 
+[2018-09-20 21:29:35] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 21:29:36] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 21:29:36] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 21:29:36] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 21:29:36] [Bot.setup] Bot setup completed 
+[2018-09-20 21:29:36] [Bot.connect] Starting 
+[2018-09-20 21:29:36] Setting up mongodb database 
+[2018-09-20 21:29:36] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-20 21:29:36] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-20 21:29:36] [Bot.setupEvents] Logged in as Shield#8221 | 2 guild(s) 
+[2018-09-20 21:29:36] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-20 21:29:38] There was an error establishing connection to the MongoDB database. 
+[2018-09-20 21:29:38] Mongodb database setup completed 
