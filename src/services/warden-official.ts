@@ -1,6 +1,6 @@
 import {Message} from "discord.js";
 import {Bot, Service} from "discord-anvil";
-import {on} from "discord-anvil/dist";
+import {on, command} from "discord-anvil/dist";
 
 export default class WardenOfficial extends Service {
     readonly meta = {
@@ -8,9 +8,14 @@ export default class WardenOfficial extends Service {
         description: "Custom functionality for Warden's official server"
     };
 
+    @command("xtest")
+    public xtestCommand(): void {
+
+    }
+
     @on("message")
     public handleMessage(message: Message): void {
-        console.log("got message @ warden official")
+        console.log(`got message @ warden official => ${message.content}`)
     }
 
     public start(): void {

@@ -19017,3 +19017,49 @@ returns the proper value based on the if statement
 [2018-09-20 21:29:36] [Bot.setupEvents] Ready | Took 1s 
 [2018-09-20 21:29:38] There was an error establishing connection to the MongoDB database. 
 [2018-09-20 21:29:38] Mongodb database setup completed 
+[2018-09-20 21:30:06] [🌌Atlas#2473 @ Warden Official # testing] .ping 
+[2018-09-20 21:30:06] raw args,  
+[2018-09-20 21:30:06] [Shield#8221 @ Warden Official # testing] [Embed] 
+[2018-09-20 21:30:07] [Shield#8221 @ Warden Official # testing] [Embed] [Edited] 
+[2018-09-20 21:30:17] [🌌Atlas#2473 @ Warden Official # testing] hello there 
+[2018-09-20 21:30:56] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 21:30:56] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 21:30:56] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 21:30:56] [Bot.setup] Loaded 4 service(s) 
+[2018-09-20 21:30:56] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 21:30:56] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 21:30:56] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 21:30:56] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 21:30:56] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 21:30:56] [Bot.setup] Bot setup completed 
+[2018-09-20 21:30:56] [Bot.connect] Starting 
+[2018-09-20 21:30:57] Setting up mongodb database 
+[2018-09-20 21:30:57] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-20 21:30:57] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-20 21:30:57] [Bot.setupEvents] Logged in as Shield#8221 | 2 guild(s) 
+[2018-09-20 21:30:57] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-20 21:30:59] There was an error establishing connection to the MongoDB database. 
+[2018-09-20 21:30:59] Mongodb database setup completed 
+[2018-09-20 21:31:00] [🌌Atlas#2473 @ Warden Official # testing] testing 
+[2018-09-20 21:31:03] [🌌Atlas#2473 @ Warden Official # testing] hello world 
+[2018-09-20 21:43:31] [GoldenVolcarona#2867 @ ✨Gaming Corner✨ #MAGA # 💬general] Add eyebrows and a frown 
+[2018-09-20 21:43:35] [GoldenVolcarona#2867 @ ✨Gaming Corner✨ #MAGA # 💬general] New emoji 
+[2018-09-20 21:45:56] [GoldenVolcarona#2867 @ Warden Official # testing] Hmm 
+[2018-09-20 21:46:04] [GoldenVolcarona#2867 @ Warden Official # testing] I CAN HMM 
+[2018-09-20 21:46:14] [GoldenVolcarona#2867 @ Warden Official # testing] Yey 
+[2018-09-20 21:46:22] [GoldenVolcarona#2867 @ Warden Official # testing] Let’s see 
+[2018-09-20 21:46:29] [GoldenVolcarona#2867 @ Warden Official # testing] Cookie cookie cookie 
+[2018-09-20 21:46:38] [GoldenVolcarona#2867 @ Warden Official # testing] Asffjvguhftygathvc jhb bh 
+[2018-09-20 21:46:40] [🌌Atlas#2473 @ Warden Official # testing] AI is disabled 
+[2018-09-20 21:46:44] [GoldenVolcarona#2867 @ Warden Official # testing] Awh 
+[2018-09-20 21:46:51] [🌌Atlas#2473 @ Warden Official # testing] and this isn't the channel for that anyway lol 
+[2018-09-20 21:47:08] [GoldenVolcarona#2867 @ Warden Official # testing] Well 
+[2018-09-20 21:47:10] [GoldenVolcarona#2867 @ Warden Official # testing] To trst 
+[2018-09-20 21:47:12] [GoldenVolcarona#2867 @ Warden Official # testing] Test 
+[2018-09-20 21:47:16] [GoldenVolcarona#2867 @ Warden Official # testing] Not to train 
+[2018-09-20 21:47:42] [GoldenVolcarona#2867 @ Warden Official # testing] Oh wait 
+[2018-09-20 21:47:44] [GoldenVolcarona#2867 @ Warden Official # testing] Lol 
+[2018-09-20 21:47:52] [🌌Atlas#2473 @ Warden Official # testing] I deleted the test channel 
+[2018-09-20 21:47:53] [🌌Atlas#2473 @ Warden Official # testing] lol 
+[2018-09-20 21:47:57] [GoldenVolcarona#2867 @ Warden Official # testing] Stupid channel names are too close 
+[2018-09-20 21:48:08] [GoldenVolcarona#2867 @ Warden Official # testing] <#489544749670203412> <#492138339223339016> 
