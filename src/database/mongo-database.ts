@@ -10,7 +10,8 @@ export type MongoCollections = {
     readonly messages: Collection;
     readonly moderationActions: Collection;
     readonly backups: Collection;
-    readonly config: Collection;
+    readonly memberConfig: Collection;
+    readonly guildConfig: Collection;
     readonly reputation: Collection;
     readonly storedMessages: Collection;
 };
@@ -141,7 +142,8 @@ export default abstract class Mongo {
                     messages: Mongo.db.collection("messages"),
                     moderationActions: Mongo.db.collection("moderation-actions"),
                     backups: Mongo.db.collection("backups"),
-                    config: Mongo.db.collection("config"),
+                    memberConfig: Mongo.db.collection("member-config"),
+                    guildConfig: Mongo.db.collection("guild-config"),
                     reputation: Mongo.db.collection("reputation"),
                     storedMessages: Mongo.db.collection("stored-messages")
                 };
