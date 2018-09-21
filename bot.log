@@ -19063,3 +19063,195 @@ returns the proper value based on the if statement
 [2018-09-20 21:47:53] [🌌Atlas#2473 @ Warden Official # testing] lol 
 [2018-09-20 21:47:57] [GoldenVolcarona#2867 @ Warden Official # testing] Stupid channel names are too close 
 [2018-09-20 21:48:08] [GoldenVolcarona#2867 @ Warden Official # testing] <#489544749670203412> <#492138339223339016> 
+[2018-09-20 22:00:47] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 22:00:47] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 22:00:47] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 22:00:47] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 22:00:47] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-20 22:00:47] [Bot.setup] Loaded 3 service(s) 
+[2018-09-20 22:00:47] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 22:00:49] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 22:00:49] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 22:00:49] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 22:00:49] [Bot.setup] Bot setup completed 
+[2018-09-20 22:00:49] [Bot.connect] Starting 
+[2018-09-20 22:01:01] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 22:01:01] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 22:01:01] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 22:01:01] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 22:01:01] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-20 22:01:01] [Bot.setup] Loaded 3 service(s) 
+[2018-09-20 22:01:01] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 22:01:01] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 22:01:01] [Bot.setup] Bot setup completed 
+[2018-09-20 22:01:01] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 22:01:01] [Bot.connect] Starting 
+[2018-09-20 22:01:01] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 22:01:39] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 22:01:39] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 22:01:39] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 22:01:39] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 22:01:39] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-20 22:01:39] [Bot.setup] Loaded 3 service(s) 
+[2018-09-20 22:01:39] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 22:01:39] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 22:01:39] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 22:01:39] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 22:01:39] [Bot.setup] Bot setup completed 
+[2018-09-20 22:01:39] [Bot.connect] Starting 
+[2018-09-20 22:02:49] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 22:02:49] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 22:02:49] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 22:02:49] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 22:02:49] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-20 22:02:49] [Bot.setup] Loaded 3 service(s) 
+[2018-09-20 22:02:49] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 22:02:50] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 22:02:50] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 22:02:50] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 22:02:50] [Bot.setup] Bot setup completed 
+[2018-09-20 22:02:50] [Bot.connect] Starting 
+[2018-09-20 22:02:50] Setting up mongodb database 
+[2018-09-20 22:02:50] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'D:\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-20 22:02:50] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-20 22:02:50] [Bot.setupEvents] Logged in as Shield#8221 | 2 guild(s) 
+[2018-09-20 22:02:50] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-20 22:02:52] There was an error establishing connection to the MongoDB database. 
+[2018-09-20 22:02:52] Mongodb database setup completed 
+[2018-09-20 22:03:04] [🌌Atlas#2473 @ Warden Official # testing] .ping 
+[2018-09-20 22:03:04] raw args,  
+[2018-09-20 22:03:05] [Shield#8221 @ Warden Official # testing] [Embed] 
+[2018-09-20 22:03:05] [Shield#8221 @ Warden Official # testing] [Embed] [Edited] 
+[2018-09-20 23:39:03] [🌌Atlas#2473 @ Warden Official # general] I just added support for this in anvil:
+
+```ts
+@command("ping")
+function ping(message: Message) {
+    message.channel.send(`The ping is ${this.client.ping}ms`);
+}
+
+// or more advanced
+
+enum PingType {
+    API,
+    Message
+}
+
+type PingAdvArgs = {
+    readonly type: PingType;
+};
+
+@command({
+    name: "ping",
+    description: "View the bot's latency",
+    aliases: ["apiping", "ms"],
+
+    arguments: [
+        {
+            name: "typeOfPing",
+            description: "The type of ping, can either be api or message",
+            type: "ping_type",
+            required: true,
+            defaultValue: "api"
+        }
+    ],
+
+    restrict: {
+        cooldown: 5 // 5 seconds cooldown per user per use
+    }
+})
+function pingAdvanced(context: CommandContext, args: PingAdvArgs) {
+    // ...
+}
+``` 
+[2018-09-20 23:39:38] [🌌Atlas#2473 @ Warden Official # general] I just added support for this in anvil: (decorator commands)
+
+```ts
+@command("ping", "View the bot's latency")
+function ping(message: Message) {
+    message.channel.send(`The ping is ${this.client.ping}ms`);
+}
+
+// or more advanced
+
+enum PingType {
+    API,
+    Message
+}
+
+type PingAdvArgs = {
+    readonly type: PingType;
+};
+
+@command({
+    name: "ping",
+    description: "View the bot's latency",
+    aliases: ["apiping", "ms"],
+
+    arguments: [
+        {
+            name: "typeOfPing",
+            description: "The type of ping, can either be api or message",
+            type: "ping_type",
+            required: true,
+            defaultValue: "api"
+        }
+    ],
+
+    restrict: {
+        cooldown: 5 // 5 seconds cooldown per user per use
+    }
+})
+function pingAdvanced(context: CommandContext, args: PingAdvArgs) {
+    // ...
+}
+``` [Edited] 
+[2018-09-20 23:39:41] [draem#0001 @ Warden Official # general] intense 
+[2018-09-20 23:39:47] [draem#0001 @ Warden Official # general] how do you add the @xxxx in ts 
+[2018-09-20 23:40:10] [🌌Atlas#2473 @ Warden Official # general] like make your own? 
+[2018-09-20 23:40:15] [draem#0001 @ Warden Official # general] yes 
+[2018-09-20 23:40:22] [draem#0001 @ Warden Official # general] i didn't know js/ts had them 
+[2018-09-20 23:40:29] [🌌Atlas#2473 @ Warden Official # general] https://www.typescriptlang.org/docs/handbook/decorators.html 
+[2018-09-20 23:40:32] [🌌Atlas#2473 @ Warden Official # general] ts has them 
+[2018-09-20 23:41:58] [🌌Atlas#2473 @ Warden Official # general] ```ts
+// simple commands
+@command("ping", "View the bot's latency")
+function ping(message: Message) {
+    message.channel.send(`The ping is ${this.client.ping}ms`);
+}
+
+// or more advanced
+
+enum PingType {
+    API,
+    Message
+}
+
+type PingAdvArgs = {
+    readonly type: PingType;
+};
+
+@command({
+    name: "ping",
+    description: "View the bot's latency",
+    aliases: ["apiping", "ms"],
+
+    arguments: [
+        {
+            name: "typeOfPing",
+            description: "The type of ping, can either be api or message",
+            type: "ping_type",
+            required: true,
+            defaultValue: "api"
+        }
+    ],
+
+    restrict: {
+        cooldown: 5, // 5 seconds cooldown per user per use
+    groups: [RestrictGroup.ServerModerators] // only people with MANAGE_MESSAGES permission can use this command
+    }
+})
+function pingAdvanced(context: CommandContext, args: PingAdvArgs) {
+    // ...
+}
+``` [Edited] 

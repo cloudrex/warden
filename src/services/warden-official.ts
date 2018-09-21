@@ -10,7 +10,7 @@ export default class WardenOfficial extends Service {
 
     @command("xtest")
     public xtestCommand(): void {
-
+        console.log("xtest command executed!");
     }
 
     @on("message")
