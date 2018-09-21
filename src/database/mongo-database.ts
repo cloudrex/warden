@@ -21,7 +21,8 @@ export enum ModerationActionType {
     Unmute,
     Kick,
     Ban,
-    Unban
+    Unban,
+    Softban
 }
 
 export enum ChannelType {
@@ -52,6 +53,7 @@ export type ModerationAction = {
 };
 
 export type DatabaseModerationAction = {
+    readonly id: Snowflake;
     readonly type: ModerationActionType;
     readonly memberId: Snowflake;
     readonly reason: string;

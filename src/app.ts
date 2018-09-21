@@ -86,7 +86,7 @@ async function start() {
         owner: "285578743324606482",
 
         options: {
-            logMessages: true,
+            logMessages: false,
             consoleInterface: false,
             updateOnMessageEdit: true,
 

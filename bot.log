@@ -19255,3 +19255,278 @@ function pingAdvanced(context: CommandContext, args: PingAdvArgs) {
     // ...
 }
 ``` [Edited] 
+[2018-09-21 15:19:14] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:19:14] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:19:14] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:19:14] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:19:14] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:19:14] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:19:14] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:19:15] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:19:15] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:19:15] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:19:15] [Bot.setup] Bot setup completed 
+[2018-09-21 15:19:15] [Bot.connect] Starting 
+[2018-09-21 15:23:45] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:23:45] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:23:45] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:23:45] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:23:45] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:23:45] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:23:45] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:23:45] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:23:45] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:23:45] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:23:45] [Bot.setup] Bot setup completed 
+[2018-09-21 15:23:45] [Bot.connect] Starting 
+[2018-09-21 15:26:05] Setting up mongodb database 
+[2018-09-21 15:26:05] [Rexana#8430 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:05] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 15:26:05] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 15:26:05] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 15:26:05] [Bot.setupEvents] Ready | Took 140s 
+[2018-09-21 15:26:06] [iWeeti#8031 @ Discord Bot List # testing-1] you thought i was lying? 
+[2018-09-21 15:26:07] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 15:26:07] Mongodb database setup completed 
+[2018-09-21 15:26:08] [Hexadecimal™#0910 @ Discord Bots # general] its already as broken as it is 
+[2018-09-21 15:26:10] [Telk#7197 @ Discord Bot List # testing-1] no 
+[2018-09-21 15:26:13] [LewisTehMinerz#1337 @ Discord Bots # general] steam can't reconnect 
+[2018-09-21 15:26:16] [LewisTehMinerz#1337 @ Discord Bots # general] shard's fucked 
+[2018-09-21 15:26:17] [69420#9999 @ Discord Bot List # testing-1] tb>ping 
+[2018-09-21 15:26:19] [Telk#7197 @ Discord Bot List # testing-1] just consider dapi stuff memez 
+[2018-09-21 15:26:20] [Prism#2332 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:20] [69420#9999 @ Discord Bot List # testing-1] god damn it 
+[2018-09-21 15:26:24] [TomBot#6419 @ Discord Bot List # testing-1] :ping_pong: ... 
+[2018-09-21 15:26:24] [iWeeti#8031 @ Discord Bot List # testing-1] wanna teach js now or learn python? 
+[2018-09-21 15:26:26] [TomBot#6419 @ Discord Bot List # testing-1] :ping_pong: WS: 34ms, Message: 7020ms [Edited] 
+[2018-09-21 15:26:26] [Logger#6278 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:29] [69420#9999 @ Discord Bot List # testing-1] holy yikes 
+[2018-09-21 15:26:30] [robot-nate#7547 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:33] [🌌Atlas#2473 @ Warden Official # testing] .ping 
+[2018-09-21 15:26:33] raw args,  
+[2018-09-21 15:26:34] [LewisTehMinerz#1337 @ Discord Bots # testing-[\]] crypto help 
+[2018-09-21 15:26:37] [ExoBot#4178 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:38] [69420#9999 @ Discord Bot List # testing-1] tb>reload np 
+[2018-09-21 15:26:41] [W.Bot#6709 @ Discord Bot List # testing-1] [Embed] 
+[2018-09-21 15:26:42] [Blade#1677 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:43] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:43] [[TG/LW] Tina the Cyclops#5861 @ Discord Bots # general] hi!ping 
+[2018-09-21 15:26:44] [jmeel#6186 @ Discord Bots # general] status page reports nothing unusual :hahaa: 
+[2018-09-21 15:26:44] [robot-nate#7547 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:45] [69420#9999 @ Discord Bot List # testing-1] cmonnnnnnn baby 
+[2018-09-21 15:26:46] [Enra#0080 @ Discord Bots # general] Discord RPC is failing 
+[2018-09-21 15:26:47] [TomBot#6419 @ Discord Bot List # testing-1] Reloaded `np` command. 
+[2018-09-21 15:26:49] [Enra#0080 @ Discord Bots # general] jesus 
+[2018-09-21 15:26:49] [69420#9999 @ Discord Bot List # testing-1] yas 
+[2018-09-21 15:26:50] [🌌Atlas#2473 @ Warden Official # testing] ?prefix 
+[2018-09-21 15:26:55] [iWeeti#8031 @ Discord Bot List # testing-1] finally a bit faster 
+[2018-09-21 15:26:59] [iWeeti#8031 @ Discord Bot List # testing-1] -.ping 
+[2018-09-21 15:27:02] [LewisTehMinerz#1337 @ Discord Bots # general] the discord staff team has fallen 
+[2018-09-21 15:27:03] [Pokécord#4503 @ POKECORD PRiME® # pokecord_lounge🌍⏪] [Embed] 
+[2018-09-21 15:27:03] [HitomiBot#4825 @ Discord Bots # general] <:peepoping:489185248479805451> 
+[2018-09-21 15:27:05] [W.Bot#6709 @ Discord Bot List # testing-1] Pong 
+[2018-09-21 15:27:07] [Kanori#3439 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:09] [A Pimp Named Savage#7260 @ POKECORD PRiME® # pokecord_lounge🌍⏪] Errrr 
+[2018-09-21 15:27:10] [Hexadecimal™#0910 @ Discord Bots # general] wat 
+[2018-09-21 15:27:12] [StaffBot#1862 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:12] [iWeeti#8031 @ Discord Bot List # testing-1] actually not 
+[2018-09-21 15:27:13] [robot-nate#7547 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:15] [Rexana#8430 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:15] [Hexadecimal™#0910 @ Discord Bots # general] oh 
+[2018-09-21 15:27:17] [iWeeti#8031 @ Discord Bot List # testing-1] :7 
+[2018-09-21 15:27:18] [Warden#1062 @ Warden Official # testing] [Embed] 
+[2018-09-21 15:27:20] [Element Zero#3098 @ Discord Bots # general] <:HAhaa:360762192158654464> 
+[2018-09-21 15:27:32] [🌌Atlas#2473 @ Warden Official # testing] .mute 310391889675419650 testing 
+[2018-09-21 15:27:32] raw args,  310391889675419650,testing
+[2018-09-21 15:27:32] There was an error while executing the 'mute' command: Supplied parameter was neither a Role nor a Snowflake. 
+[2018-09-21 15:27:37] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:41] [Warden#1062 @ Warden Official # testing] [Embed] 
+[2018-09-21 15:27:47] [StaffBot#1862 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:50] [Inspector#8221 @ Warden Official # testing] [Embed] 
+[2018-09-21 15:27:55] [StaffBot#1862 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:55] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:57] [CraftSpider#0269 @ Discord Bot List # general] Yeah it's borked for me too right now 
+[2018-09-21 15:27:59] [LewisTehMinerz#1337 @ Discord Bot List # general] discord api is down 
+[2018-09-21 15:28:00] [StaffBot#1862 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:01] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:04] [LewisTehMinerz#1337 @ Discord Bot List # general] well 
+[2018-09-21 15:28:05] [LewisTehMinerz#1337 @ Discord Bot List # general] not down 
+[2018-09-21 15:28:06] [LewisTehMinerz#1337 @ Discord Bot List # general] but 
+[2018-09-21 15:28:07] [LewisTehMinerz#1337 @ Discord Bot List # general] broken 
+[2018-09-21 15:28:19] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:21] [Warden#1062 @ Warden Official # testing] [Embed] 
+[2018-09-21 15:28:22] [iWeeti#8031 @ Discord Bot List # testing-1] at least the gateway is working 
+[2018-09-21 15:28:23] [Telk#7197 @ Discord Bot List # testing-1] iWeeti it is legit 10:30 PM for me 
+[2018-09-21 15:28:25] [Elysium#3333 @ Discord Bot List # general] i wanna die 
+[2018-09-21 15:28:26] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:27] [LewisTehMinerz#1337 @ Discord Bot List # general] embed servers are broken 
+[2018-09-21 15:28:28] [Rexana#8430 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:30] [LewisTehMinerz#1337 @ Discord Bot List # general] search is broken 
+[2018-09-21 15:28:30] [iWeeti#8031 @ Discord Bot List # testing-1] well fuck 
+[2018-09-21 15:28:36] [iWeeti#8031 @ Discord Bot List # testing-1] it is always so late for you 
+[2018-09-21 15:28:36] [Elysium#3333 @ Discord Bot List # general] i need DAPI to work rn <:spongery:491204476716318720> 
+[2018-09-21 15:28:37] [LewisTehMinerz#1337 @ Discord Bot List # general] https://crypto.is-serious.business/893c17.png as mentioned 
+[2018-09-21 15:28:40] [Telk#7197 @ Discord Bot List # testing-1] eh... 
+[2018-09-21 15:28:42] [LewisTehMinerz#1337 @ Discord Bot List # general] discord dev portal is broken 
+[2018-09-21 15:28:45] [Kanori#3439 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:45] [stupid cat#8160 @ Discord Bots # general] man i love status.discordapp.com it's so heccin' informative 
+[2018-09-21 15:28:51] [Kanori#3439 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:29:03] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:29:03] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:29:03] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:29:03] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:29:03] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:29:03] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:29:03] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:29:03] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:29:03] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:29:03] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:29:03] [Bot.connect] Starting 
+[2018-09-21 15:29:03] [Bot.setup] Bot setup completed 
+[2018-09-21 15:30:21] Setting up mongodb database 
+[2018-09-21 15:30:21] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 15:30:21] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 15:30:21] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 15:30:21] [Bot.setupEvents] Ready | Took 78s 
+[2018-09-21 15:30:23] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 15:30:23] Mongodb database setup completed 
+[2018-09-21 15:30:47] raw args,  310391889675419650,testing
+[2018-09-21 15:31:04] There was an error while executing the 'warn' command: Missing Permissions 
+[2018-09-21 15:31:31] raw args,  310391889675419650,testing
+[2018-09-21 15:31:56] There was an error while executing the 'warn' command: Missing Permissions 
+[2018-09-21 15:32:32] raw args,  310391889675419650,testing
+[2018-09-21 15:33:52] raw args,  310391889675419650,testing
+[2018-09-21 15:34:28] [WardenAPI.executeAction] Expecting Case ID, embed footer and channels 
+[2018-09-21 15:35:25] [WardenAPI.executeAction] Expecting Case ID, embed footer and channels 
+[2018-09-21 15:36:37] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:36:37] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:36:37] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:36:37] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:36:37] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:36:37] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:36:37] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:36:37] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:36:37] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:36:37] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:36:37] [Bot.setup] Bot setup completed 
+[2018-09-21 15:36:37] [Bot.connect] Starting 
+[2018-09-21 15:42:51] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:42:51] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:42:51] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:42:51] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:42:51] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:42:51] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:42:51] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:42:51] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:42:51] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:42:51] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:42:51] [Bot.setup] Bot setup completed 
+[2018-09-21 15:42:51] [Bot.connect] Starting 
+[2018-09-21 15:49:34] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:49:34] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:49:34] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:49:34] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:49:34] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:49:34] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:49:34] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:49:34] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:49:34] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:49:34] [Bot.setup] Bot setup completed 
+[2018-09-21 15:49:34] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:49:34] [Bot.connect] Starting 
+[2018-09-21 15:54:42] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:54:42] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:54:42] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:54:42] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:54:42] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:54:42] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:54:42] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:54:42] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:54:42] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:54:42] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:54:42] [Bot.setup] Bot setup completed 
+[2018-09-21 15:54:42] [Bot.connect] Starting 
+[2018-09-21 15:59:52] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:59:52] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:59:52] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:59:52] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:59:52] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:59:52] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:59:52] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:59:52] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:59:52] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:59:52] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:59:52] [Bot.setup] Bot setup completed 
+[2018-09-21 15:59:52] [Bot.connect] Starting 
+[2018-09-21 16:03:17] Setting up mongodb database 
+[2018-09-21 16:03:17] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 16:03:17] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 16:03:17] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 16:03:17] [Bot.setupEvents] Ready | Took 205s 
+[2018-09-21 16:03:19] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 16:03:19] Mongodb database setup completed 
+[2018-09-21 16:10:55] raw args,  
+[2018-09-21 16:15:44] raw args,  
+[2018-09-21 16:17:02] raw args,  310391889675419650,testing
+[2018-09-21 16:17:02] [WardenAPI.executeAction] Expecting log message, embed footer and channels 
+[2018-09-21 16:17:55] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 16:17:55] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 16:17:55] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 16:17:55] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 16:17:56] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 16:17:56] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 16:17:56] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 16:17:56] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 16:17:56] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 16:17:56] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 16:17:56] [Bot.setup] Bot setup completed 
+[2018-09-21 16:17:56] [Bot.connect] Starting 
+[2018-09-21 16:17:57] Setting up mongodb database 
+[2018-09-21 16:17:57] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 16:17:57] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 16:17:57] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 16:17:57] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-21 16:17:59] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 16:17:59] Mongodb database setup completed 
+[2018-09-21 16:18:14] raw args,  310391889675419650,testing
+[2018-09-21 16:18:14] [WardenAPI.executeAction] Expecting log message, embed footer and channels 
+[2018-09-21 16:19:29] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 16:19:29] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 16:19:29] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 16:19:29] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 16:19:29] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 16:19:29] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 16:19:29] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 16:19:29] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 16:19:29] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 16:19:29] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 16:19:29] [Bot.setup] Bot setup completed 
+[2018-09-21 16:19:29] [Bot.connect] Starting 
+[2018-09-21 16:19:31] Setting up mongodb database 
+[2018-09-21 16:19:31] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 16:19:31] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 16:19:31] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 16:19:31] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-21 16:19:33] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 16:19:33] Mongodb database setup completed 
+[2018-09-21 16:19:53] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 16:19:53] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 16:19:53] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 16:19:53] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 16:19:53] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 16:19:53] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 16:19:53] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 16:19:53] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 16:19:53] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 16:19:53] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 16:19:53] [Bot.connect] Starting 
+[2018-09-21 16:19:53] [Bot.setup] Bot setup completed 
+[2018-09-21 16:19:55] Setting up mongodb database 
+[2018-09-21 16:19:55] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 16:19:55] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 16:19:55] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 16:19:55] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-21 16:19:56] raw args,  310391889675419650,testing
+[2018-09-21 16:19:56] There was an error while executing the 'warn' command: Cannot read property 'moderationActions' of undefined 
+[2018-09-21 16:19:57] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 16:19:57] Mongodb database setup completed 

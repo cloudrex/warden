@@ -29,15 +29,6 @@ const SuspectedViolation: any = {
     None: "None"
 };
 
-export interface CaseOptions {
-    readonly member: GuildMember;
-    readonly color: string;
-    readonly reason: string;
-    readonly moderator: User;
-    readonly title: string;
-    readonly evidence?: string;
-}
-
 export interface ConsumerApiChannels {
     readonly modLog: Snowflake;
     readonly suggestions: Snowflake;
@@ -133,16 +124,17 @@ export default class WardenAPI {
      * @return {Promise<void>}
      */
     public async executeAction(action: ModerationAction): Promise<void> {
+        let embed: RichEmbed | null = null;
+
         switch (action.type) {
             case ModerationActionType.Warn: {
-                const caseNum: number = 0; // TODO
                 const autoWarn: boolean = action.moderator.id === this.bot.client.user.id;
 
-                const embed: RichEmbed = new RichEmbed()
-                    .setTitle(`Warn | Case #${caseNum}`)
+                embed = new RichEmbed()
+                    .setTitle("Member Warned")
                     .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
                     .addField("Reason", action.reason)
-                    .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.username})`)
+                    .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.tag})`)
                     .setThumbnail(action.evidence ? action.evidence : "")
                     .setFooter(autoWarn ? "Automatically warned" : `Warned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
                     .setColor("GOLD");
@@ -158,8 +150,7 @@ export default class WardenAPI {
 
                 await (await action.member.createDM()).send(new RichEmbed()
                     .setDescription(warnDM)
-                    .setColor("GOLD")
-                    .setTitle(`Case #${caseNum}`));
+                    .setColor("GOLD"));
 
                 break;
             }
@@ -167,17 +158,15 @@ export default class WardenAPI {
             case ModerationActionType.Mute: {
                 await action.member.addRole(action.member.guild.roles.find("name", "Muted"), action.reason);
 
-                const caseNum: number = 0; // TODO
-
                 if (this.channels) {
-                    await this.channels.modLog.send(new RichEmbed()
-                        .setTitle(`Mute | Case #${caseNum}`)
+                    embed = new RichEmbed()
+                        .setTitle("Member Muted")
                         .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
                         .addField("Reason", action.reason)
-                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.username})`)
+                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.tag})`)
                         .setThumbnail(action.evidence ? action.evidence : "")
                         .setFooter(`Muted by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
-                        .setColor("BLUE"));
+                        .setColor("BLUE");
                 }
                 else {
                     Log.error("[WardenAPI.executeAction] Expecting channels");
@@ -185,8 +174,7 @@ export default class WardenAPI {
 
                 (await action.member.createDM()).send(new RichEmbed()
                     .setDescription(`You were muted by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                    .setColor("BLUE")
-                    .setTitle(`Case #${caseNum}`));
+                    .setColor("BLUE"));
 
                 break;
             }
@@ -197,17 +185,15 @@ export default class WardenAPI {
                     reason: action.reason
                 });
 
-                const caseNum: number = 0; // TODO
-
                 if (this.channels) {
-                    await this.channels.modLog.send(new RichEmbed()
-                        .setTitle(`Ban | Case #${caseNum}`)
+                    embed = new RichEmbed()
+                        .setTitle("Member Banned")
                         .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
                         .addField("Reason", action.reason)
-                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.username})`)
+                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.tag})`)
                         .setThumbnail(action.evidence ? action.evidence : "")
                         .setFooter(`Banned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
-                        .setColor("RED"));
+                        .setColor("RED");
                 }
                 else {
                     Log.error("[WardenAPI.executeAction] Expecting channels");
@@ -215,8 +201,7 @@ export default class WardenAPI {
 
                 await (await action.member.createDM()).send(new RichEmbed()
                     .setDescription(`You were banned from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                    .setColor("RED")
-                    .setTitle(`Case #${caseNum}`));
+                    .setColor("RED"));
 
                 break;
             }
@@ -228,15 +213,29 @@ export default class WardenAPI {
             }
         }
 
-        await WardenAPI.saveModerationAction(action);
+        if (embed === null || this.channels === undefined || embed.footer === undefined || embed.footer.text === undefined) {
+            console.log("channels ", this.channels);
+            //console.log("\n\n\nfooter ", embed.footer);
+
+            Log.error("[WardenAPI.executeAction] Expecting log message, embed footer and channels");
+
+            return;
+        }
+
+        const sent: Message = await this.channels.modLog.send(embed) as Message;
+
+        await sent.edit(embed.setFooter(`Case ID: ${sent.id} • ${embed.footer.text}`, embed.footer.icon_url));
+        await WardenAPI.saveModerationAction(action, sent.id);
     }
 
     /**
      * @param {ModerationAction} action
+     * @param {Snowflake} caseId
      * @return {Promise<void>}
      */
-    private static async saveModerationAction(action: ModerationAction): Promise<void> {
+    private static async saveModerationAction(action: ModerationAction, caseId: Snowflake): Promise<void> {
         await WardenAPI.saveDatabaseModerationAction({
+            id: caseId,
             type: action.type,
             reason: action.reason,
             memberId: action.member.id,
@@ -275,20 +274,12 @@ export default class WardenAPI {
         if (!channel) {
             Log.throw("[WardenAPI.getChannel] Expecting channel");
         }
+        // TODO: Verify that this check works
         else if (!(channel instanceof TextChannel)) {
             Log.throw("[WardenAPI.getChannel] Expecting channel type to be 'TextChannel'");
         }
 
         return <TextChannel>channel;
-    }
-
-    /**
-     * @return {number}
-     */
-    public getCase(): number {
-        this.caseCounter++;
-
-        return this.caseCounter - 1;
     }
 
     /**
@@ -325,35 +316,6 @@ export default class WardenAPI {
         }
 
         return false;
-    }
-
-    /**
-     * @param {CaseOptions} options
-     * @return {Promise<void>}
-     */
-    public async reportCase(options: CaseOptions): Promise<void> {
-        if (!this.channels) {
-            Log.throw("[WardenAPI.reportCase] Consumer API is not setup");
-
-            return;
-        }
-
-        const caseNum = this.getCase();
-
-        const embed = new RichEmbed()
-            .setColor(options.color)
-            .setAuthor(`Case #${caseNum} | ${options.title}`, options.member.user.avatarURL)
-            .addField("User", `<@${options.member.user.id}> (${options.member.user.tag})`)
-            .addField("Reason", options.reason)
-            .addField("Moderator", `<@${options.moderator.id}> (${options.moderator.tag})`)
-            .addField("Time", "*Permanent*")
-            .setFooter(`Requested by ${options.moderator.username}`, options.moderator.avatarURL);
-
-        if (options.evidence) {
-            embed.setThumbnail(options.evidence);
-        }
-
-        this.channels.modLog.send(embed);
     }
 
     /**

@@ -15,7 +15,7 @@ export default class WardenOfficial extends Service {
 
     @on("message")
     public handleMessage(message: Message): void {
-        console.log(`got message @ warden official => ${message.content}`)
+        //console.log(`got message @ warden official => ${message.content}`)
     }
 
     public start(): void {
