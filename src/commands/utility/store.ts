@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {Command, CommandContext, Utils} from "discord-anvil";
 import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
 import {DatabaseStoredMessage} from "../../database/mongo-database";
