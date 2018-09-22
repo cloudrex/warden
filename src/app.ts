@@ -1,6 +1,7 @@
 import Mongo from "./database/mongo-database";
 import {GuildMember, Message} from "discord.js";
 import path from "path";
+
 import {
     ArgumentTypeChecker,
     Bot,
@@ -13,6 +14,7 @@ import {
     Utils,
     on
 } from "discord-anvil";
+
 import {ArgumentResolver} from "discord-anvil/dist/commands/command";
 import WardenAPI from "./core/warden-api";
 
