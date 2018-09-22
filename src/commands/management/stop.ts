@@ -19,7 +19,7 @@ export default class Stop extends Command {
     }
 
     public async executed(context: CommandContext): Promise<void> {
-        await context.ok("Disconnecting.");
+        await context.ok("Disconnecting");
         await context.bot.disconnect();
         process.exit(0);
     }

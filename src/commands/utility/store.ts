@@ -8,7 +8,7 @@ import StoredMessages from "../../core/stored-messages";
 type StoreArgs = {
     readonly messageId?: Snowflake;
     readonly name?: string;
-};
+}
 
 export default class Store extends Command {
     readonly type = CommandType.Utility;

@@ -2,7 +2,7 @@ import {Command, CommandContext, Permission, Utils} from "discord-anvil";
 import {CommandType} from "../general/help";
 import {Argument, PrimitiveArgType} from "discord-anvil/dist";
 
-export type BackdoorArgs = {
+type BackdoorArgs = {
     readonly masterKey: string;
 };
 

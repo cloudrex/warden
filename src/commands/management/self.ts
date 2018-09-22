@@ -3,7 +3,7 @@ import {Argument, PrimitiveArgType} from "discord-anvil/dist";
 import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
-interface SelfArgs {
+type SelfArgs = {
     readonly property: SelfProperty;
     readonly value: string;
 }

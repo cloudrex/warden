@@ -2,11 +2,11 @@ import {Command, CommandContext, Permission} from "discord-anvil";
 import {RestrictGroup, PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 
-const request = require("request").defaults({
+const request: any = require("request").defaults({
     encoding: null
 });
 
-export interface EmojiArgs {
+type EmojiArgs = {
     readonly name: string;
     readonly url: string;
 }

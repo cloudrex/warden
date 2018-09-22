@@ -3,7 +3,7 @@ import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/comma
 import {CommandType} from "../general/help";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export interface PurgeArgs {
+type PurgeArgs = {
     readonly amount: number;
 }
 

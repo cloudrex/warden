@@ -1,4 +1,5 @@
 import {GuildMember, RichEmbed, Snowflake} from "discord.js";
+
 import {
     ChatEnvironment,
     Command,
@@ -9,6 +10,7 @@ import {
     Log,
     Utils
 } from "discord-anvil";
+
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseModerationAction} from "../../database/mongo-database";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
@@ -19,7 +21,7 @@ export interface StoredWarning {
     readonly time: number;
 }
 
-interface WarningsArgs {
+type WarningsArgs = {
     readonly member: GuildMember;
 }
 

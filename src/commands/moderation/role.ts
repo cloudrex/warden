@@ -3,7 +3,7 @@ import {Argument, ChatEnvironment, Command, Permission} from "discord-anvil";
 import {CommandType} from "../general/help";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export interface RoleArgs {
+type RoleArgs = {
     readonly role: Role;
     readonly member: GuildMember;
 }

@@ -3,7 +3,7 @@ import {ChatEnvironment, Command, Argument, CommandContext} from "discord-anvil"
 import {RestrictGroup, PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 
-interface RolesArgs {
+type RolesArgs = {
     readonly page: number;
 }
 

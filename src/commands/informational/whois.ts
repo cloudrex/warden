@@ -3,7 +3,7 @@ import {Command, Argument, CommandContext, Utils} from "discord-anvil";
 import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
-interface WhoisArgs {
+type WhoisArgs = {
     readonly member: GuildMember;
 }
 

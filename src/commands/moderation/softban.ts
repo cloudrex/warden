@@ -6,7 +6,7 @@ import {CommandType} from "../general/help";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 import {ModerationActionType} from "../../database/mongo-database";
 
-interface SoftbanArgs {
+type SoftbanArgs = {
     readonly member: GuildMember;
     readonly reason: string;
     readonly evidence?: string;
