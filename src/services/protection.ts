@@ -244,6 +244,7 @@ export default class Protection extends Service {
         }
 
         // Anti-Hoisting
+        // TODO: Load from guild config instead of being hardcoded
         const antiHoisting = true;
 
         if (!antiHoisting) {

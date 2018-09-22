@@ -1,6 +1,7 @@
 import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "./help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import { TextChannel, Permissions } from "discord.js";
 
 export default class Test extends Command {
     readonly type = CommandType.Utility;
@@ -19,7 +20,21 @@ export default class Test extends Command {
     public async executed(context: CommandContext): Promise<void> {
         // TODO: Check if the send message failed and display error, and check if embeds + files can be sent.
         if (context.message.channel.type === "text") {
-            await context.ok("I can send messages in this channel");
+            const channel: TextChannel = context.message.channel as TextChannel;
+            const permissions: Permissions | null = await channel.permissionsFor(context.message.guild.me);
+
+            let canEmbed: boolean = context.message.guild.me.hasPermission("EMBED_LINKS");
+
+            if (permissions !== null) {
+                canEmbed = permissions.hasPermission("EMBED_LINKS");
+            }
+
+            if (canEmbed) {
+                await context.ok("I can send messages in this channel");
+            }
+            else {
+                await channel.send("I require the `EMBED_LINKS` permission for embeds");
+            }
         }
     }
 };
