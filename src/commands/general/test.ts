@@ -1,7 +1,7 @@
 import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "./help";
+import {TextChannel, Permissions} from "discord.js";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
-import { TextChannel, Permissions } from "discord.js";
 
 export default class Test extends Command {
     readonly type = CommandType.Utility;
@@ -33,7 +33,7 @@ export default class Test extends Command {
                 await context.ok("I can send messages in this channel");
             }
             else {
-                await channel.send("I require the `EMBED_LINKS` permission for embeds");
+                await channel.send("I'm missing the `EMBED_LINKS` permission required for embeds");
             }
         }
     }

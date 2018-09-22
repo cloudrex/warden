@@ -9,20 +9,21 @@ export default class WardenOfficial extends Service {
         description: "Custom functionality for Warden's official server"
     };
 
-    @command("xtest")
+    @command("xtest", "Test decorator commands")
     public xtestCommand(): void {
         console.log("xtest command executed!");
     }
 
     @on("message")
     private async handleMessage(message: Message): Promise<void> {
-        if (message.channel.id === (this.api as WardenAPI).unresolvedChannels.suggestions) {
+        // TODO: this.api is undefined (decorator functions may been to be .bind())
+        /* if (message.channel.id === (this.api as WardenAPI).unresolvedChannels.suggestions) {
             await this.api.addSuggestion(message.content, message.member);
 
             if (message.deletable) {
                 await message.delete();
             }
-        }
+        } */
     }
 
     public start(): void {
