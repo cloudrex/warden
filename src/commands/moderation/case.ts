@@ -35,6 +35,7 @@ export default class Case extends Command {
     }
 
     public async executed(context: CommandContext, args: ClearWarnsArgs): Promise<void> {
-
+        // TODO
+        await context.fail("Not yet implemented");
     }
 };
