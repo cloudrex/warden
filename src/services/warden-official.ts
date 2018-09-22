@@ -1,6 +1,7 @@
 import {Message} from "discord.js";
 import {Bot, Service} from "discord-anvil";
 import {on, command} from "discord-anvil/dist";
+import WardenAPI from "../core/warden-api";
 
 export default class WardenOfficial extends Service {
     readonly meta = {
@@ -14,8 +15,14 @@ export default class WardenOfficial extends Service {
     }
 
     @on("message")
-    public handleMessage(message: Message): void {
-        //console.log(`got message @ warden official => ${message.content}`)
+    private async handleMessage(message: Message): Promise<void> {
+        if (message.channel.id === (this.api as WardenAPI).unresolvedChannels.suggestions) {
+            await this.api.addSuggestion(message.content, message.member);
+
+            if (message.deletable) {
+                await message.delete();
+            }
+        }
     }
 
     public start(): void {
