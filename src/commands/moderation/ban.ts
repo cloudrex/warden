@@ -47,26 +47,24 @@ export default class Ban extends Command {
         this.restrict.selfPermissions = [Permission.BanMembers];
     }
 
-    public executed(context: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
-        return new Promise<void>(async (resolve) => {
-            if (args.member.id === context.sender.id) {
-                await context.fail("You can't ban yourself.");
+    public async executed(context: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
+        if (args.member.id === context.sender.id) {
+            await context.fail("You can't ban yourself.");
+            
+            return;
+        }
+        else if (!args.member.bannable) {
+            await context.fail("Unable to ban that person.");
 
-                return;
-            }
-            else if (!args.member.bannable) {
-                await context.fail("Unable to ban that person.");
+            return;
+        }
 
-                return;
-            }
-
-            await api.executeAction({
-                type: ModerationActionType.Ban,
-                reason: args.reason,
-                member: args.member,
-                evidence: args.evidence,
-                moderator: context.message.member
-            });
+        await api.executeAction({
+            type: ModerationActionType.Ban,
+            reason: args.reason,
+            member: args.member,
+            evidence: args.evidence,
+            moderator: context.message.member
         });
     }
 };

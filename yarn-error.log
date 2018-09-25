@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/atlas/Desktop/projects/warden/node_modules/.yarn-integrity'
+  Error: EACCES: permission denied, mkdir '/home/atlas/Desktop/projects/warden/node_modules/@types/xml2js'
 
 npm manifest: 
   {
@@ -38,7 +38,7 @@ npm manifest:
           "@types/node": "^10.9.4",
           "@types/table": "^4.0.5",
           "brain.js": "^1.2.8",
-          "discord-anvil": "git+https://gitlab+deploy-token-16422:mgVuJqBjZnrux7Tnc8Tx@gitlab.com/cloudrex/anvil.git#master",
+          "discord-anvil": "git+https://gitlab+deploy-token-16422:mgVuJqBjZnrux7Tnc8Tx@gitlab.com/cloudrex/anvil.git#dev-2.0",
           "discord.js": "^11.4.2",
           "mongodb": "^3.1.4",
           "table": "^5.0.2",
@@ -124,6 +124,10 @@ Lockfile:
     dependencies:
       "@types/glob" "*"
       "@types/node" "*"
+  
+  "@types/table@^4.0.5":
+    version "4.0.5"
+    resolved "https://registry.yarnpkg.com/@types/table/-/table-4.0.5.tgz#68581401c23228c11d0870f5f8dfb4f92efb7a93"
   
   acorn@^5.1.1:
     version "5.7.3"

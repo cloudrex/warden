@@ -4,7 +4,7 @@ import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/comma
 import {CommandType} from "../general/help";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-interface UnbanArgs {
+type UnbanArgs = {
     readonly user: Snowflake;
     readonly reason: string;
 }

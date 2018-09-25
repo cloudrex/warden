@@ -3,7 +3,7 @@ import {PrimitiveArgType} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export interface SayArgs {
+type SayArgs = {
     readonly message: string;
 }
 

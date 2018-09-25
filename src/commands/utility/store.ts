@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {Command, CommandContext, Utils} from "discord-anvil";
 import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
 import {DatabaseStoredMessage} from "../../database/mongo-database";
@@ -8,7 +8,7 @@ import StoredMessages from "../../core/stored-messages";
 type StoreArgs = {
     readonly messageId?: Snowflake;
     readonly name?: string;
-};
+}
 
 export default class Store extends Command {
     readonly type = CommandType.Utility;

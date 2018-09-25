@@ -1,9 +1,10 @@
-import {ChatEnvironment, Command, Argument, CommandContext, Permission} from "discord-anvil";
-import {PrimitiveArgType} from "discord-anvil/dist/commands/command";
+import {Command, Argument, CommandContext} from "discord-anvil";
+import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/command";
 import {CommandType} from "../general/help";
 import {GuildMember, Message, RichEmbed} from "discord.js";
+import {ChatEnvironment} from "discord-anvil";
 
-export interface EmulateArgs {
+type EmulateArgs = {
     readonly member: GuildMember;
     readonly message: string;
 }
@@ -34,7 +35,8 @@ export default class Emulate extends Command {
     constructor() {
         super();
 
-        //this.restrict.ownerOnly = true;
+        this.restrict.environment = ChatEnvironment.Guild;
+        this.restrict.specific = [RestrictGroup.BotOwner];
     }
 
     public async executed(context: CommandContext, args: EmulateArgs): Promise<void> {

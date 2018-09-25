@@ -4,8 +4,9 @@ import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/comma
 import WardenAPI from "../../core/warden-api";
 import {CommandType} from "../general/help";
 import CommandContext from "discord-anvil/dist/commands/command-context";
+import {ModerationActionType} from "../../database/mongo-database";
 
-interface SoftbanArgs {
+type SoftbanArgs = {
     readonly member: GuildMember;
     readonly reason: string;
     readonly evidence?: string;
@@ -42,45 +43,30 @@ export default class Softban extends Command {
     constructor() {
         super();
 
-        this.restrict.specific = [RestrictGroup.BotOwner];
         this.restrict.selfPermissions = [Permission.BanMembers];
+        this.restrict.issuerPermissions = [Permission.BanMembers];
     }
 
-    public executed(context: CommandContext, args: SoftbanArgs, api: WardenAPI): Promise<void> {
-        return new Promise(async (resolve) => {
-            if (args.member.id === context.sender.id) {
-                context.fail("You can't ban yourself.");
+    public async executed(context: CommandContext, args: SoftbanArgs, api: WardenAPI): Promise<void> {
+        if (args.member.id === context.sender.id) {
+            await context.fail("You can't softban yourself.");
 
-                return;
-            }
-            else if (!args.member.bannable) {
-                context.fail("Unable to ban that person.");
+            return;
+        }
+        else if (!args.member.bannable) {
+            await context.fail("Unable to softban that person.");
 
-                return;
-            }
+            return;
+        }
 
-            args.member.ban({
-                days: 1,
-                reason: args.reason
-            }).then(async () => {
-                // TODO: Does it actually await this?
-                await api.reportCase({
-                    moderator: context.sender,
-                    color: "RED",
-                    reason: args.reason,
-                    evidence: args.evidence,
-                    title: "Ban",
-                    member: args.member
-                });
-
-                resolve();
-            }).catch(async (error: Error) => {
-                // TODO: Does it actually await this?
-                await context.fail(`Operation failed. (${error.message})`);
-            });
-
-            await context.message.guild.unban(args.member.id, "Softban");
-            resolve();
+        await api.executeAction({
+            member: args.member,
+            reason: args.reason,
+            evidence: args.evidence,
+            moderator: context.message.member,
+            type: ModerationActionType.Softban
         });
+
+        await context.message.guild.unban(args.member.id, "Softban");
     }
 };

@@ -5,7 +5,7 @@ import {RestrictGroup, PrimitiveArgType} from "discord-anvil/dist/commands/comma
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 
-export interface MuteArgs {
+type MuteArgs = {
     readonly member: GuildMember;
     readonly reason: string;
     readonly time?: number;

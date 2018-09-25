@@ -4,7 +4,7 @@ import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export interface MentionableArgs {
+type MentionableArgs = {
     readonly role: Role;
 }
 

@@ -3,7 +3,7 @@ import {GuildMember} from "discord.js";
 import Reputation from "../../core/reputation";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export type RepArgs = {
+type RepArgs = {
     readonly member?: GuildMember;
 }
 

@@ -21,7 +21,8 @@ export default class Help extends Command {
     };
 
     public async executed(context: CommandContext): Promise<void> {
-        let commands: string = context.bot.commandStore.commands
+        // TODO: Broken by decorator commands
+        /* let commands: string = context.bot.commandStore.commands
             .map((command: Command) => `${(command as any).type !== undefined ? `:${(command as any).type}:` : `:${CommandType.Unknown}:`} **${command.meta.name}**: ${command.meta.description}`)
             .join("\n");
 
@@ -43,6 +44,6 @@ export default class Help extends Command {
         }
         else {
             await context.ok(commands, "Help - Available Commands");
-        }
+        } */
     }
 };
