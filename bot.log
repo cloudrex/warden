@@ -18977,6 +18977,7 @@ returns the proper value based on the if statement
 [2018-09-19 03:08:17] [lukee#0420 @ Discord Bot List # testing-1] free sex 
 [2018-09-19 03:08:20] [acidic#9508 @ Discord Bots # general] [Mention] 
 [2018-09-19 03:08:24] [advaith#9121 @ Discord Bot List # development] when u console.log a buffer it looks like this 
+<<<<<<< HEAD
 [2018-09-19 21:35:11] [Bot.setup] Attempting to load internal fragments 
 [2018-09-19 21:35:11] [Bot.setup] Loaded 3 service(s) 
 [2018-09-19 21:35:11] [Bot.setup] Loading 6 internal fragments 
@@ -23541,3 +23542,2173 @@ limit: int value should be less than or equal to 100.
 ║ Mention Everyone │  Yes   ║
 ╚══════════════════╧════════╝
 ``` 
+=======
+[2018-09-20 21:27:48] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 21:27:48] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 21:27:48] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 21:27:48] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 21:27:48] [Bot.setup] Loaded 4 service(s) 
+[2018-09-20 21:27:48] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 21:27:50] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 21:27:50] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 21:27:50] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 21:27:50] [Bot.setup] Bot setup completed 
+[2018-09-20 21:27:50] [Bot.connect] Starting 
+[2018-09-20 21:27:51] Setting up mongodb database 
+[2018-09-20 21:27:51] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-20 21:27:51] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-20 21:27:51] [Bot.setupEvents] Logged in as Shield#8221 | 2 guild(s) 
+[2018-09-20 21:27:51] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-20 21:27:53] There was an error establishing connection to the MongoDB database. 
+[2018-09-20 21:27:53] Mongodb database setup completed 
+[2018-09-20 21:28:15] [🌌Atlas#2473 @ Warden Official # testing] .ping 
+[2018-09-20 21:28:15] raw args,  
+[2018-09-20 21:28:15] [Shield#8221 @ Warden Official # testing] [Embed] 
+[2018-09-20 21:28:15] [Shield#8221 @ Warden Official # testing] [Embed] [Edited] 
+[2018-09-20 21:29:35] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 21:29:35] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 21:29:35] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 21:29:35] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 21:29:35] [Bot.setup] Loaded 4 service(s) 
+[2018-09-20 21:29:35] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 21:29:36] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 21:29:36] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 21:29:36] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 21:29:36] [Bot.setup] Bot setup completed 
+[2018-09-20 21:29:36] [Bot.connect] Starting 
+[2018-09-20 21:29:36] Setting up mongodb database 
+[2018-09-20 21:29:36] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-20 21:29:36] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-20 21:29:36] [Bot.setupEvents] Logged in as Shield#8221 | 2 guild(s) 
+[2018-09-20 21:29:36] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-20 21:29:38] There was an error establishing connection to the MongoDB database. 
+[2018-09-20 21:29:38] Mongodb database setup completed 
+[2018-09-20 21:30:06] [🌌Atlas#2473 @ Warden Official # testing] .ping 
+[2018-09-20 21:30:06] raw args,  
+[2018-09-20 21:30:06] [Shield#8221 @ Warden Official # testing] [Embed] 
+[2018-09-20 21:30:07] [Shield#8221 @ Warden Official # testing] [Embed] [Edited] 
+[2018-09-20 21:30:17] [🌌Atlas#2473 @ Warden Official # testing] hello there 
+[2018-09-20 21:30:56] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 21:30:56] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 21:30:56] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 21:30:56] [Bot.setup] Loaded 4 service(s) 
+[2018-09-20 21:30:56] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 21:30:56] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 21:30:56] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 21:30:56] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 21:30:56] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 21:30:56] [Bot.setup] Bot setup completed 
+[2018-09-20 21:30:56] [Bot.connect] Starting 
+[2018-09-20 21:30:57] Setting up mongodb database 
+[2018-09-20 21:30:57] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-20 21:30:57] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-20 21:30:57] [Bot.setupEvents] Logged in as Shield#8221 | 2 guild(s) 
+[2018-09-20 21:30:57] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-20 21:30:59] There was an error establishing connection to the MongoDB database. 
+[2018-09-20 21:30:59] Mongodb database setup completed 
+[2018-09-20 21:31:00] [🌌Atlas#2473 @ Warden Official # testing] testing 
+[2018-09-20 21:31:03] [🌌Atlas#2473 @ Warden Official # testing] hello world 
+[2018-09-20 21:43:31] [GoldenVolcarona#2867 @ ✨Gaming Corner✨ #MAGA # 💬general] Add eyebrows and a frown 
+[2018-09-20 21:43:35] [GoldenVolcarona#2867 @ ✨Gaming Corner✨ #MAGA # 💬general] New emoji 
+[2018-09-20 21:45:56] [GoldenVolcarona#2867 @ Warden Official # testing] Hmm 
+[2018-09-20 21:46:04] [GoldenVolcarona#2867 @ Warden Official # testing] I CAN HMM 
+[2018-09-20 21:46:14] [GoldenVolcarona#2867 @ Warden Official # testing] Yey 
+[2018-09-20 21:46:22] [GoldenVolcarona#2867 @ Warden Official # testing] Let’s see 
+[2018-09-20 21:46:29] [GoldenVolcarona#2867 @ Warden Official # testing] Cookie cookie cookie 
+[2018-09-20 21:46:38] [GoldenVolcarona#2867 @ Warden Official # testing] Asffjvguhftygathvc jhb bh 
+[2018-09-20 21:46:40] [🌌Atlas#2473 @ Warden Official # testing] AI is disabled 
+[2018-09-20 21:46:44] [GoldenVolcarona#2867 @ Warden Official # testing] Awh 
+[2018-09-20 21:46:51] [🌌Atlas#2473 @ Warden Official # testing] and this isn't the channel for that anyway lol 
+[2018-09-20 21:47:08] [GoldenVolcarona#2867 @ Warden Official # testing] Well 
+[2018-09-20 21:47:10] [GoldenVolcarona#2867 @ Warden Official # testing] To trst 
+[2018-09-20 21:47:12] [GoldenVolcarona#2867 @ Warden Official # testing] Test 
+[2018-09-20 21:47:16] [GoldenVolcarona#2867 @ Warden Official # testing] Not to train 
+[2018-09-20 21:47:42] [GoldenVolcarona#2867 @ Warden Official # testing] Oh wait 
+[2018-09-20 21:47:44] [GoldenVolcarona#2867 @ Warden Official # testing] Lol 
+[2018-09-20 21:47:52] [🌌Atlas#2473 @ Warden Official # testing] I deleted the test channel 
+[2018-09-20 21:47:53] [🌌Atlas#2473 @ Warden Official # testing] lol 
+[2018-09-20 21:47:57] [GoldenVolcarona#2867 @ Warden Official # testing] Stupid channel names are too close 
+[2018-09-20 21:48:08] [GoldenVolcarona#2867 @ Warden Official # testing] <#489544749670203412> <#492138339223339016> 
+[2018-09-20 22:00:47] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 22:00:47] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 22:00:47] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 22:00:47] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 22:00:47] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-20 22:00:47] [Bot.setup] Loaded 3 service(s) 
+[2018-09-20 22:00:47] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 22:00:49] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 22:00:49] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 22:00:49] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 22:00:49] [Bot.setup] Bot setup completed 
+[2018-09-20 22:00:49] [Bot.connect] Starting 
+[2018-09-20 22:01:01] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 22:01:01] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 22:01:01] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 22:01:01] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 22:01:01] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-20 22:01:01] [Bot.setup] Loaded 3 service(s) 
+[2018-09-20 22:01:01] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 22:01:01] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 22:01:01] [Bot.setup] Bot setup completed 
+[2018-09-20 22:01:01] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 22:01:01] [Bot.connect] Starting 
+[2018-09-20 22:01:01] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 22:01:39] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 22:01:39] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 22:01:39] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 22:01:39] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 22:01:39] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-20 22:01:39] [Bot.setup] Loaded 3 service(s) 
+[2018-09-20 22:01:39] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 22:01:39] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 22:01:39] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 22:01:39] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 22:01:39] [Bot.setup] Bot setup completed 
+[2018-09-20 22:01:39] [Bot.connect] Starting 
+[2018-09-20 22:02:49] [Bot.setup] Attempting to load internal fragments 
+[2018-09-20 22:02:49] [Bot.setup] Loading 6 internal fragments 
+[2018-09-20 22:02:49] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-20 22:02:49] [Bot.setup] Loading 4 service(s) 
+[2018-09-20 22:02:49] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-20 22:02:49] [Bot.setup] Loaded 3 service(s) 
+[2018-09-20 22:02:49] [Bot.setup] Loading 40 command(s) 
+[2018-09-20 22:02:50] [Bot.setupEvents] Setting up Discord events 
+[2018-09-20 22:02:50] [Bot.setup] Loaded 40 command(s) 
+[2018-09-20 22:02:50] [Bot.setupEvents] Discord events setup completed 
+[2018-09-20 22:02:50] [Bot.setup] Bot setup completed 
+[2018-09-20 22:02:50] [Bot.connect] Starting 
+[2018-09-20 22:02:50] Setting up mongodb database 
+[2018-09-20 22:02:50] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'D:\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-20 22:02:50] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-20 22:02:50] [Bot.setupEvents] Logged in as Shield#8221 | 2 guild(s) 
+[2018-09-20 22:02:50] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-20 22:02:52] There was an error establishing connection to the MongoDB database. 
+[2018-09-20 22:02:52] Mongodb database setup completed 
+[2018-09-20 22:03:04] [🌌Atlas#2473 @ Warden Official # testing] .ping 
+[2018-09-20 22:03:04] raw args,  
+[2018-09-20 22:03:05] [Shield#8221 @ Warden Official # testing] [Embed] 
+[2018-09-20 22:03:05] [Shield#8221 @ Warden Official # testing] [Embed] [Edited] 
+[2018-09-20 23:39:03] [🌌Atlas#2473 @ Warden Official # general] I just added support for this in anvil:
+
+```ts
+@command("ping")
+function ping(message: Message) {
+    message.channel.send(`The ping is ${this.client.ping}ms`);
+}
+
+// or more advanced
+
+enum PingType {
+    API,
+    Message
+}
+
+type PingAdvArgs = {
+    readonly type: PingType;
+};
+
+@command({
+    name: "ping",
+    description: "View the bot's latency",
+    aliases: ["apiping", "ms"],
+
+    arguments: [
+        {
+            name: "typeOfPing",
+            description: "The type of ping, can either be api or message",
+            type: "ping_type",
+            required: true,
+            defaultValue: "api"
+        }
+    ],
+
+    restrict: {
+        cooldown: 5 // 5 seconds cooldown per user per use
+    }
+})
+function pingAdvanced(context: CommandContext, args: PingAdvArgs) {
+    // ...
+}
+``` 
+[2018-09-20 23:39:38] [🌌Atlas#2473 @ Warden Official # general] I just added support for this in anvil: (decorator commands)
+
+```ts
+@command("ping", "View the bot's latency")
+function ping(message: Message) {
+    message.channel.send(`The ping is ${this.client.ping}ms`);
+}
+
+// or more advanced
+
+enum PingType {
+    API,
+    Message
+}
+
+type PingAdvArgs = {
+    readonly type: PingType;
+};
+
+@command({
+    name: "ping",
+    description: "View the bot's latency",
+    aliases: ["apiping", "ms"],
+
+    arguments: [
+        {
+            name: "typeOfPing",
+            description: "The type of ping, can either be api or message",
+            type: "ping_type",
+            required: true,
+            defaultValue: "api"
+        }
+    ],
+
+    restrict: {
+        cooldown: 5 // 5 seconds cooldown per user per use
+    }
+})
+function pingAdvanced(context: CommandContext, args: PingAdvArgs) {
+    // ...
+}
+``` [Edited] 
+[2018-09-20 23:39:41] [draem#0001 @ Warden Official # general] intense 
+[2018-09-20 23:39:47] [draem#0001 @ Warden Official # general] how do you add the @xxxx in ts 
+[2018-09-20 23:40:10] [🌌Atlas#2473 @ Warden Official # general] like make your own? 
+[2018-09-20 23:40:15] [draem#0001 @ Warden Official # general] yes 
+[2018-09-20 23:40:22] [draem#0001 @ Warden Official # general] i didn't know js/ts had them 
+[2018-09-20 23:40:29] [🌌Atlas#2473 @ Warden Official # general] https://www.typescriptlang.org/docs/handbook/decorators.html 
+[2018-09-20 23:40:32] [🌌Atlas#2473 @ Warden Official # general] ts has them 
+[2018-09-20 23:41:58] [🌌Atlas#2473 @ Warden Official # general] ```ts
+// simple commands
+@command("ping", "View the bot's latency")
+function ping(message: Message) {
+    message.channel.send(`The ping is ${this.client.ping}ms`);
+}
+
+// or more advanced
+
+enum PingType {
+    API,
+    Message
+}
+
+type PingAdvArgs = {
+    readonly type: PingType;
+};
+
+@command({
+    name: "ping",
+    description: "View the bot's latency",
+    aliases: ["apiping", "ms"],
+
+    arguments: [
+        {
+            name: "typeOfPing",
+            description: "The type of ping, can either be api or message",
+            type: "ping_type",
+            required: true,
+            defaultValue: "api"
+        }
+    ],
+
+    restrict: {
+        cooldown: 5, // 5 seconds cooldown per user per use
+    groups: [RestrictGroup.ServerModerators] // only people with MANAGE_MESSAGES permission can use this command
+    }
+})
+function pingAdvanced(context: CommandContext, args: PingAdvArgs) {
+    // ...
+}
+``` [Edited] 
+[2018-09-21 15:19:14] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:19:14] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:19:14] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:19:14] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:19:14] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:19:14] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:19:14] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:19:15] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:19:15] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:19:15] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:19:15] [Bot.setup] Bot setup completed 
+[2018-09-21 15:19:15] [Bot.connect] Starting 
+[2018-09-21 15:23:45] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:23:45] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:23:45] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:23:45] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:23:45] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:23:45] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:23:45] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:23:45] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:23:45] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:23:45] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:23:45] [Bot.setup] Bot setup completed 
+[2018-09-21 15:23:45] [Bot.connect] Starting 
+[2018-09-21 15:26:05] Setting up mongodb database 
+[2018-09-21 15:26:05] [Rexana#8430 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:05] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 15:26:05] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 15:26:05] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 15:26:05] [Bot.setupEvents] Ready | Took 140s 
+[2018-09-21 15:26:06] [iWeeti#8031 @ Discord Bot List # testing-1] you thought i was lying? 
+[2018-09-21 15:26:07] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 15:26:07] Mongodb database setup completed 
+[2018-09-21 15:26:08] [Hexadecimal™#0910 @ Discord Bots # general] its already as broken as it is 
+[2018-09-21 15:26:10] [Telk#7197 @ Discord Bot List # testing-1] no 
+[2018-09-21 15:26:13] [LewisTehMinerz#1337 @ Discord Bots # general] steam can't reconnect 
+[2018-09-21 15:26:16] [LewisTehMinerz#1337 @ Discord Bots # general] shard's fucked 
+[2018-09-21 15:26:17] [69420#9999 @ Discord Bot List # testing-1] tb>ping 
+[2018-09-21 15:26:19] [Telk#7197 @ Discord Bot List # testing-1] just consider dapi stuff memez 
+[2018-09-21 15:26:20] [Prism#2332 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:20] [69420#9999 @ Discord Bot List # testing-1] god damn it 
+[2018-09-21 15:26:24] [TomBot#6419 @ Discord Bot List # testing-1] :ping_pong: ... 
+[2018-09-21 15:26:24] [iWeeti#8031 @ Discord Bot List # testing-1] wanna teach js now or learn python? 
+[2018-09-21 15:26:26] [TomBot#6419 @ Discord Bot List # testing-1] :ping_pong: WS: 34ms, Message: 7020ms [Edited] 
+[2018-09-21 15:26:26] [Logger#6278 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:29] [69420#9999 @ Discord Bot List # testing-1] holy yikes 
+[2018-09-21 15:26:30] [robot-nate#7547 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:33] [🌌Atlas#2473 @ Warden Official # testing] .ping 
+[2018-09-21 15:26:33] raw args,  
+[2018-09-21 15:26:34] [LewisTehMinerz#1337 @ Discord Bots # testing-[\]] crypto help 
+[2018-09-21 15:26:37] [ExoBot#4178 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:38] [69420#9999 @ Discord Bot List # testing-1] tb>reload np 
+[2018-09-21 15:26:41] [W.Bot#6709 @ Discord Bot List # testing-1] [Embed] 
+[2018-09-21 15:26:42] [Blade#1677 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:43] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:43] [[TG/LW] Tina the Cyclops#5861 @ Discord Bots # general] hi!ping 
+[2018-09-21 15:26:44] [jmeel#6186 @ Discord Bots # general] status page reports nothing unusual :hahaa: 
+[2018-09-21 15:26:44] [robot-nate#7547 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:26:45] [69420#9999 @ Discord Bot List # testing-1] cmonnnnnnn baby 
+[2018-09-21 15:26:46] [Enra#0080 @ Discord Bots # general] Discord RPC is failing 
+[2018-09-21 15:26:47] [TomBot#6419 @ Discord Bot List # testing-1] Reloaded `np` command. 
+[2018-09-21 15:26:49] [Enra#0080 @ Discord Bots # general] jesus 
+[2018-09-21 15:26:49] [69420#9999 @ Discord Bot List # testing-1] yas 
+[2018-09-21 15:26:50] [🌌Atlas#2473 @ Warden Official # testing] ?prefix 
+[2018-09-21 15:26:55] [iWeeti#8031 @ Discord Bot List # testing-1] finally a bit faster 
+[2018-09-21 15:26:59] [iWeeti#8031 @ Discord Bot List # testing-1] -.ping 
+[2018-09-21 15:27:02] [LewisTehMinerz#1337 @ Discord Bots # general] the discord staff team has fallen 
+[2018-09-21 15:27:03] [Pokécord#4503 @ POKECORD PRiME® # pokecord_lounge🌍⏪] [Embed] 
+[2018-09-21 15:27:03] [HitomiBot#4825 @ Discord Bots # general] <:peepoping:489185248479805451> 
+[2018-09-21 15:27:05] [W.Bot#6709 @ Discord Bot List # testing-1] Pong 
+[2018-09-21 15:27:07] [Kanori#3439 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:09] [A Pimp Named Savage#7260 @ POKECORD PRiME® # pokecord_lounge🌍⏪] Errrr 
+[2018-09-21 15:27:10] [Hexadecimal™#0910 @ Discord Bots # general] wat 
+[2018-09-21 15:27:12] [StaffBot#1862 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:12] [iWeeti#8031 @ Discord Bot List # testing-1] actually not 
+[2018-09-21 15:27:13] [robot-nate#7547 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:15] [Rexana#8430 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:15] [Hexadecimal™#0910 @ Discord Bots # general] oh 
+[2018-09-21 15:27:17] [iWeeti#8031 @ Discord Bot List # testing-1] :7 
+[2018-09-21 15:27:18] [Warden#1062 @ Warden Official # testing] [Embed] 
+[2018-09-21 15:27:20] [Element Zero#3098 @ Discord Bots # general] <:HAhaa:360762192158654464> 
+[2018-09-21 15:27:32] [🌌Atlas#2473 @ Warden Official # testing] .mute 310391889675419650 testing 
+[2018-09-21 15:27:32] raw args,  310391889675419650,testing
+[2018-09-21 15:27:32] There was an error while executing the 'mute' command: Supplied parameter was neither a Role nor a Snowflake. 
+[2018-09-21 15:27:37] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:41] [Warden#1062 @ Warden Official # testing] [Embed] 
+[2018-09-21 15:27:47] [StaffBot#1862 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:50] [Inspector#8221 @ Warden Official # testing] [Embed] 
+[2018-09-21 15:27:55] [StaffBot#1862 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:55] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:27:57] [CraftSpider#0269 @ Discord Bot List # general] Yeah it's borked for me too right now 
+[2018-09-21 15:27:59] [LewisTehMinerz#1337 @ Discord Bot List # general] discord api is down 
+[2018-09-21 15:28:00] [StaffBot#1862 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:01] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:04] [LewisTehMinerz#1337 @ Discord Bot List # general] well 
+[2018-09-21 15:28:05] [LewisTehMinerz#1337 @ Discord Bot List # general] not down 
+[2018-09-21 15:28:06] [LewisTehMinerz#1337 @ Discord Bot List # general] but 
+[2018-09-21 15:28:07] [LewisTehMinerz#1337 @ Discord Bot List # general] broken 
+[2018-09-21 15:28:19] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:21] [Warden#1062 @ Warden Official # testing] [Embed] 
+[2018-09-21 15:28:22] [iWeeti#8031 @ Discord Bot List # testing-1] at least the gateway is working 
+[2018-09-21 15:28:23] [Telk#7197 @ Discord Bot List # testing-1] iWeeti it is legit 10:30 PM for me 
+[2018-09-21 15:28:25] [Elysium#3333 @ Discord Bot List # general] i wanna die 
+[2018-09-21 15:28:26] [Anarchy Bot#2443 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:27] [LewisTehMinerz#1337 @ Discord Bot List # general] embed servers are broken 
+[2018-09-21 15:28:28] [Rexana#8430 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:30] [LewisTehMinerz#1337 @ Discord Bot List # general] search is broken 
+[2018-09-21 15:28:30] [iWeeti#8031 @ Discord Bot List # testing-1] well fuck 
+[2018-09-21 15:28:36] [iWeeti#8031 @ Discord Bot List # testing-1] it is always so late for you 
+[2018-09-21 15:28:36] [Elysium#3333 @ Discord Bot List # general] i need DAPI to work rn <:spongery:491204476716318720> 
+[2018-09-21 15:28:37] [LewisTehMinerz#1337 @ Discord Bot List # general] https://crypto.is-serious.business/893c17.png as mentioned 
+[2018-09-21 15:28:40] [Telk#7197 @ Discord Bot List # testing-1] eh... 
+[2018-09-21 15:28:42] [LewisTehMinerz#1337 @ Discord Bot List # general] discord dev portal is broken 
+[2018-09-21 15:28:45] [Kanori#3439 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:28:45] [stupid cat#8160 @ Discord Bots # general] man i love status.discordapp.com it's so heccin' informative 
+[2018-09-21 15:28:51] [Kanori#3439 @ Discord Bot List # bot-hell] [Embed] 
+[2018-09-21 15:29:03] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:29:03] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:29:03] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:29:03] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:29:03] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:29:03] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:29:03] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:29:03] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:29:03] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:29:03] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:29:03] [Bot.connect] Starting 
+[2018-09-21 15:29:03] [Bot.setup] Bot setup completed 
+[2018-09-21 15:30:21] Setting up mongodb database 
+[2018-09-21 15:30:21] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 15:30:21] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 15:30:21] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 15:30:21] [Bot.setupEvents] Ready | Took 78s 
+[2018-09-21 15:30:23] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 15:30:23] Mongodb database setup completed 
+[2018-09-21 15:30:47] raw args,  310391889675419650,testing
+[2018-09-21 15:31:04] There was an error while executing the 'warn' command: Missing Permissions 
+[2018-09-21 15:31:31] raw args,  310391889675419650,testing
+[2018-09-21 15:31:56] There was an error while executing the 'warn' command: Missing Permissions 
+[2018-09-21 15:32:32] raw args,  310391889675419650,testing
+[2018-09-21 15:33:52] raw args,  310391889675419650,testing
+[2018-09-21 15:34:28] [WardenAPI.executeAction] Expecting Case ID, embed footer and channels 
+[2018-09-21 15:35:25] [WardenAPI.executeAction] Expecting Case ID, embed footer and channels 
+[2018-09-21 15:36:37] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:36:37] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:36:37] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:36:37] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:36:37] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:36:37] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:36:37] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:36:37] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:36:37] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:36:37] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:36:37] [Bot.setup] Bot setup completed 
+[2018-09-21 15:36:37] [Bot.connect] Starting 
+[2018-09-21 15:42:51] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:42:51] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:42:51] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:42:51] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:42:51] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:42:51] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:42:51] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:42:51] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:42:51] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:42:51] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:42:51] [Bot.setup] Bot setup completed 
+[2018-09-21 15:42:51] [Bot.connect] Starting 
+[2018-09-21 15:49:34] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:49:34] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:49:34] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:49:34] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:49:34] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:49:34] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:49:34] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:49:34] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:49:34] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:49:34] [Bot.setup] Bot setup completed 
+[2018-09-21 15:49:34] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:49:34] [Bot.connect] Starting 
+[2018-09-21 15:54:42] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:54:42] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:54:42] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:54:42] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:54:42] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:54:42] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:54:42] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:54:42] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:54:42] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:54:42] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:54:42] [Bot.setup] Bot setup completed 
+[2018-09-21 15:54:42] [Bot.connect] Starting 
+[2018-09-21 15:59:52] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 15:59:52] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 15:59:52] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 15:59:52] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 15:59:52] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 15:59:52] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 15:59:52] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 15:59:52] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 15:59:52] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 15:59:52] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 15:59:52] [Bot.setup] Bot setup completed 
+[2018-09-21 15:59:52] [Bot.connect] Starting 
+[2018-09-21 16:03:17] Setting up mongodb database 
+[2018-09-21 16:03:17] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 16:03:17] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 16:03:17] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 16:03:17] [Bot.setupEvents] Ready | Took 205s 
+[2018-09-21 16:03:19] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 16:03:19] Mongodb database setup completed 
+[2018-09-21 16:10:55] raw args,  
+[2018-09-21 16:15:44] raw args,  
+[2018-09-21 16:17:02] raw args,  310391889675419650,testing
+[2018-09-21 16:17:02] [WardenAPI.executeAction] Expecting log message, embed footer and channels 
+[2018-09-21 16:17:55] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 16:17:55] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 16:17:55] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 16:17:55] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 16:17:56] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 16:17:56] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 16:17:56] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 16:17:56] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 16:17:56] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 16:17:56] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 16:17:56] [Bot.setup] Bot setup completed 
+[2018-09-21 16:17:56] [Bot.connect] Starting 
+[2018-09-21 16:17:57] Setting up mongodb database 
+[2018-09-21 16:17:57] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 16:17:57] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 16:17:57] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 16:17:57] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-21 16:17:59] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 16:17:59] Mongodb database setup completed 
+[2018-09-21 16:18:14] raw args,  310391889675419650,testing
+[2018-09-21 16:18:14] [WardenAPI.executeAction] Expecting log message, embed footer and channels 
+[2018-09-21 16:19:29] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 16:19:29] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 16:19:29] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 16:19:29] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 16:19:29] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 16:19:29] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 16:19:29] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 16:19:29] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 16:19:29] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 16:19:29] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 16:19:29] [Bot.setup] Bot setup completed 
+[2018-09-21 16:19:29] [Bot.connect] Starting 
+[2018-09-21 16:19:31] Setting up mongodb database 
+[2018-09-21 16:19:31] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 16:19:31] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 16:19:31] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 16:19:31] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-21 16:19:33] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 16:19:33] Mongodb database setup completed 
+[2018-09-21 16:19:53] [Bot.setup] Attempting to load internal fragments 
+[2018-09-21 16:19:53] [Bot.setup] Loading 6 internal fragments 
+[2018-09-21 16:19:53] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-21 16:19:53] [Bot.setup] Loading 4 service(s) 
+[2018-09-21 16:19:53] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-21 16:19:53] [Bot.setup] Loaded 3 service(s) 
+[2018-09-21 16:19:53] [Bot.setup] Loading 40 command(s) 
+[2018-09-21 16:19:53] [Bot.setupEvents] Setting up Discord events 
+[2018-09-21 16:19:53] [Bot.setup] Loaded 40 command(s) 
+[2018-09-21 16:19:53] [Bot.setupEvents] Discord events setup completed 
+[2018-09-21 16:19:53] [Bot.connect] Starting 
+[2018-09-21 16:19:53] [Bot.setup] Bot setup completed 
+[2018-09-21 16:19:55] Setting up mongodb database 
+[2018-09-21 16:19:55] There was an error creating the temp folder for the bot: 381949722157514752 (ENOENT: no such file or directory, mkdir 'D:\Projects\warden\dist\tmp\u381949722157514752') 
+[2018-09-21 16:19:55] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-21 16:19:55] [Bot.setupEvents] Logged in as Warden#1062 | 31 guild(s) 
+[2018-09-21 16:19:55] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-21 16:19:56] raw args,  310391889675419650,testing
+[2018-09-21 16:19:56] There was an error while executing the 'warn' command: Cannot read property 'moderationActions' of undefined 
+[2018-09-21 16:19:57] There was an error establishing connection to the MongoDB database. 
+[2018-09-21 16:19:57] Mongodb database setup completed 
+[2018-09-22 01:17:27] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 01:17:27] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 01:17:27] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 01:17:27] [Bot.setup] Loading 4 service(s) 
+[2018-09-22 01:17:27] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-22 01:17:27] [Bot.setup] Loaded 3 service(s) 
+[2018-09-22 01:17:27] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 01:17:28] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 01:17:28] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 01:17:28] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 01:17:28] [Bot.setup] Bot setup completed 
+[2018-09-22 01:17:28] [Bot.connect] Starting 
+[2018-09-22 01:19:26] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 01:19:26] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 01:19:26] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 01:19:26] [Bot.setup] Loading 4 service(s) 
+[2018-09-22 01:19:26] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-22 01:19:26] [Bot.setup] Loaded 3 service(s) 
+[2018-09-22 01:19:26] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 01:19:26] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 01:19:26] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 01:19:26] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 01:19:26] [Bot.setup] Bot setup completed 
+[2018-09-22 01:19:26] [Bot.connect] Starting 
+[2018-09-22 01:19:26] Setting up mongodb database 
+[2018-09-22 01:19:26] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'd:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-22 01:19:26] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 01:19:26] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 01:19:26] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 01:19:28] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 01:19:28] Mongodb database setup completed 
+[2018-09-22 01:20:57] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 01:20:57] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 01:20:57] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 01:20:57] [Bot.setup] Loading 4 service(s) 
+[2018-09-22 01:20:57] [FragmentLoader.load] There was an error while loading a fragment: ReferenceError: name is not defined 
+[2018-09-22 01:20:57] [Bot.setup] Loaded 3 service(s) 
+[2018-09-22 01:20:57] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 01:20:57] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 01:20:57] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 01:20:57] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 01:20:57] [Bot.connect] Starting 
+[2018-09-22 01:20:57] [Bot.setup] Bot setup completed 
+[2018-09-22 01:20:58] Setting up mongodb database 
+[2018-09-22 01:20:58] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'd:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-22 01:20:58] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 01:20:58] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 01:20:58] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 01:21:00] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 01:21:00] Mongodb database setup completed 
+[2018-09-22 01:21:16] raw args,  
+[2018-09-22 01:21:16] There was an error while executing the 'throw' command: Intentionally thrown error 
+[2018-09-22 01:23:48] raw args,  
+[2018-09-22 04:07:23] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:07:23] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:07:23] command name ping
+[2018-09-22 04:07:23] result is  false
+[2018-09-22 04:07:23] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:07:23] command name prefix
+[2018-09-22 04:07:23] result is  false
+[2018-09-22 04:07:23] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:07:23] command name usage
+[2018-09-22 04:07:23] result is  false
+[2018-09-22 04:07:23] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:07:23] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:07:23] result is  false
+[2018-09-22 04:07:23] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:07:23] command name throw
+[2018-09-22 04:07:23] [Decorators.command] Expecting command description 
+[2018-09-22 04:07:23] [Bot.setup] Loaded 5 service(s) 
+[2018-09-22 04:07:23] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:07:23] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:07:24] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:07:24] command name help
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:07:24] command name invite
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:07:24] command name opt
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:07:24] command name test
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:07:24] command name lastseen
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:07:24] command name record
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:07:24] command name roles
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:07:24] command name tip
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:07:24] command name whois
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:07:24] command name master
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:07:24] command name build
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:07:24] command name emulate
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:07:24] command name info
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:07:24] command name stop
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:07:24] command name self
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:07:24] command name suspend
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:07:24] command name update
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:07:24] command name ban
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:07:24] command name clearwarns
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] command name clearwarns
+[2018-09-22 04:07:24] command name lockdown
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:07:24] command name mute
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:07:24] command name purge
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:07:24] command name reason
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:07:24] command name role
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:07:24] command name roleall
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:07:24] command name snipe
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:07:24] command name softban
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:07:24] command name unban
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:07:24] command name unlock
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:07:24] command name warn
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:07:24] command name warnings
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:07:24] command name avatar
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:07:24] command name backup
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:07:24] command name embed
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:07:24] command name emoji
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:07:24] command name mentionable
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:07:24] command name nick
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:07:24] command name rep
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:07:24] command name say
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:07:24] command name store
+[2018-09-22 04:07:24] result is  false
+[2018-09-22 04:07:24] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:07:24] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:07:24] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:07:24] [Bot.setup] Bot setup completed 
+[2018-09-22 04:07:24] [Bot.connect] Starting 
+[2018-09-22 04:07:45] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:07:45] command name ping
+[2018-09-22 04:07:45] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:07:45] command name prefix
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:07:45] command name throw
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:07:45] command name usage
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:07:45] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:07:45] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:07:45] [Bot.setup] Loaded 5 service(s) 
+[2018-09-22 04:07:45] [Decorators.command] Expecting command description 
+[2018-09-22 04:07:45] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:07:45] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:07:45] command name help
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:07:45] command name invite
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:07:45] command name opt
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:07:45] command name test
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:07:45] command name info
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:07:45] command name lastseen
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:07:45] command name record
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:07:45] command name roles
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:07:45] command name tip
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:07:45] command name whois
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:07:45] command name master
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:07:45] command name build
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:07:45] command name emulate
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:07:45] command name self
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:07:45] command name stop
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:07:45] command name suspend
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:07:45] command name update
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:07:45] command name ban
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:07:45] command name clearwarns
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:07:45] command name clearwarns
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:07:45] command name lockdown
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:07:45] command name mute
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:07:45] command name purge
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:07:45] command name reason
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:07:45] command name role
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:07:45] command name roleall
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:07:45] command name snipe
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:07:45] command name softban
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:07:45] command name unban
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:07:45] command name unlock
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:07:45] command name warn
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:07:45] command name avatar
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] command name warnings
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] command name backup
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:07:45] command name embed
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:07:45] command name emoji
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:07:45] command name mentionable
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:07:45] command name nick
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:07:45] command name rep
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:07:45] command name say
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:07:45] command name store
+[2018-09-22 04:07:45] result is  false
+[2018-09-22 04:07:45] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:07:45] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:07:45] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:07:45] [Bot.setup] Bot setup completed 
+[2018-09-22 04:07:45] [Bot.connect] Starting 
+[2018-09-22 04:07:46] Setting up mongodb database 
+[2018-09-22 04:07:46] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-22 04:07:46] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:07:46] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:07:46] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:07:48] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:07:48] Mongodb database setup completed 
+[2018-09-22 04:09:37] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:09:37] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:09:37] command name ping
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:09:37] command name prefix
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:09:37] command name throw
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:09:37] command name usage
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:09:37] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:09:37] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:09:37] [Decorators.command] Expecting command description 
+[2018-09-22 04:09:37] [Bot.setup] Loaded 5 service(s) 
+[2018-09-22 04:09:37] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:09:37] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:09:37] command name help
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:09:37] command name invite
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:09:37] command name opt
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:09:37] command name info
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:09:37] command name lastseen
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:09:37] command name record
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:09:37] command name roles
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:09:37] command name tip
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:09:37] command name whois
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:09:37] command name master
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:09:37] command name build
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:09:37] command name emulate
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:09:37] command name self
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:09:37] command name suspend
+[2018-09-22 04:09:37] command name stop
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] command name update
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] command name ban
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] command name clearwarns
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] command name clearwarns
+[2018-09-22 04:09:37] command name lockdown
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] command name test
+[2018-09-22 04:09:37] command name mute
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:09:37] command name purge
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:09:37] command name reason
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:09:37] command name role
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:09:37] command name roleall
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:09:37] command name snipe
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:09:37] command name softban
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:09:37] command name unban
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:09:37] command name unlock
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:09:37] command name warn
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:09:37] command name warnings
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:09:37] command name avatar
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:09:37] command name backup
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:09:37] command name embed
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:09:37] command name emoji
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:09:37] command name mentionable
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:09:37] command name nick
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:09:37] command name rep
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:09:37] command name say
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:09:37] command name store
+[2018-09-22 04:09:37] result is  false
+[2018-09-22 04:09:37] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:09:37] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:09:37] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:09:37] [Bot.setup] Bot setup completed 
+[2018-09-22 04:09:37] [Bot.connect] Starting 
+[2018-09-22 04:09:38] Setting up mongodb database 
+[2018-09-22 04:09:38] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-22 04:09:38] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:09:38] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:09:38] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:09:40] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:09:40] Mongodb database setup completed 
+[2018-09-22 04:12:43] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:12:43] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:12:43] command name ping
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:12:43] command name prefix
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:12:43] command name throw
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:12:43] command name usage
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:12:43] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:12:43] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:12:43] [Decorators.command] Expecting command description 
+[2018-09-22 04:12:43] [Bot.setup] Loaded 5 service(s) 
+[2018-09-22 04:12:43] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:12:43] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:12:43] command name help
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:12:43] command name invite
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:12:43] command name opt
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:12:43] command name test
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:12:43] command name info
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:12:43] command name lastseen
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:12:43] command name record
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:12:43] command name roles
+[2018-09-22 04:12:43] command name tip
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:12:43] command name whois
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:12:43] command name master
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:12:43] command name build
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:12:43] command name emulate
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:12:43] command name self
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:12:43] command name stop
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:12:43] command name suspend
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:12:43] command name update
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:12:43] command name ban
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:12:43] command name clearwarns
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:12:43] command name clearwarns
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:12:43] command name lockdown
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:12:43] command name mute
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:12:43] command name purge
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:12:43] command name reason
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:12:43] command name role
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:12:43] command name roleall
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:12:43] command name snipe
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:12:43] command name softban
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:12:43] command name unban
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:12:43] command name unlock
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:12:43] command name warn
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:12:43] command name warnings
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:12:43] command name avatar
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:12:43] command name backup
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:12:43] command name embed
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:12:43] command name emoji
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:12:43] command name mentionable
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:12:43] command name nick
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:12:43] command name rep
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:12:43] command name say
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:12:43] command name store
+[2018-09-22 04:12:43] result is  false
+[2018-09-22 04:12:43] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:12:43] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:12:43] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:12:43] [Bot.setup] Bot setup completed 
+[2018-09-22 04:12:43] [Bot.connect] Starting 
+[2018-09-22 04:12:44] Setting up mongodb database 
+[2018-09-22 04:12:44] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-22 04:12:44] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:12:44] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:12:44] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:12:46] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:12:46] Mongodb database setup completed 
+[2018-09-22 04:13:56] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:13:56] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:13:56] command name ping
+[2018-09-22 04:13:56] result is  false
+[2018-09-22 04:13:56] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:13:56] command name throw
+[2018-09-22 04:13:56] result is  false
+[2018-09-22 04:13:56] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:13:56] command name usage
+[2018-09-22 04:13:56] result is  false
+[2018-09-22 04:13:56] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:13:56] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:13:56] result is  false
+[2018-09-22 04:13:56] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:13:56] command name prefix
+[2018-09-22 04:13:56] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:13:56] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-22 04:13:56] [Bot.setup] Loaded 4 service(s) 
+[2018-09-22 04:13:57] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:13:57] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:13:57] command name help
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:13:57] command name invite
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:13:57] command name test
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:13:57] command name info
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:13:57] command name lastseen
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:13:57] command name record
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:13:57] command name roles
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:13:57] command name tip
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:13:57] command name whois
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:13:57] command name master
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:13:57] command name build
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:13:57] command name emulate
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] command name opt
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:13:57] command name self
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:13:57] command name stop
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:13:57] command name suspend
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:13:57] command name update
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:13:57] command name ban
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:13:57] command name clearwarns
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:13:57] command name clearwarns
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:13:57] command name lockdown
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:13:57] command name mute
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:13:57] command name purge
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:13:57] command name reason
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:13:57] command name role
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:13:57] command name roleall
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:13:57] command name snipe
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:13:57] command name softban
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:13:57] command name unban
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:13:57] command name unlock
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:13:57] command name warn
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:13:57] command name warnings
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:13:57] command name avatar
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:13:57] command name backup
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:13:57] command name embed
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:13:57] command name emoji
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:13:57] command name mentionable
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:13:57] command name nick
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:13:57] command name rep
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:13:57] command name say
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:13:57] command name store
+[2018-09-22 04:13:57] result is  false
+[2018-09-22 04:13:57] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:13:57] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:13:57] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:13:57] [Bot.setup] Bot setup completed 
+[2018-09-22 04:13:57] [Bot.connect] Starting 
+[2018-09-22 04:13:58] Setting up mongodb database 
+[2018-09-22 04:13:58] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-22 04:13:58] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:13:58] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:13:58] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:14:00] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:14:00] Mongodb database setup completed 
+[2018-09-22 04:15:12] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:15:12] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:15:12] command name ping
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] command name prefix
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] command name throw
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:15:12] command name usage
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:15:12] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:15:12] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:15:12] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-22 04:15:12] [Bot.setup] Loaded 4 service(s) 
+[2018-09-22 04:15:12] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:15:12] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:15:12] command name help
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:15:12] command name invite
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:15:12] command name opt
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:15:12] command name test
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:15:12] command name info
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:15:12] command name lastseen
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:15:12] command name record
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:15:12] command name roles
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:15:12] command name tip
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:15:12] command name whois
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:15:12] command name master
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:15:12] command name build
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:15:12] command name emulate
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:15:12] command name self
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:15:12] command name stop
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:15:12] command name suspend
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:15:12] command name update
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:15:12] command name ban
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] command name clearwarns
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:15:12] command name clearwarns
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:15:12] command name lockdown
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:15:12] command name mute
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:15:12] command name purge
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:15:12] command name reason
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:15:12] command name role
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:15:12] command name roleall
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:15:12] command name snipe
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:15:12] command name softban
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:15:12] command name unban
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:15:12] command name unlock
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:15:12] command name warn
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:15:12] command name warnings
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:15:12] command name avatar
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:15:12] command name backup
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:15:12] command name embed
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:15:12] command name emoji
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:15:12] command name mentionable
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:15:12] command name nick
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:15:12] command name rep
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:15:12] command name say
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:15:12] command name store
+[2018-09-22 04:15:12] result is  false
+[2018-09-22 04:15:12] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:15:12] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:15:12] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:15:12] [Bot.setup] Bot setup completed 
+[2018-09-22 04:15:12] [Bot.connect] Starting 
+[2018-09-22 04:15:13] Setting up mongodb database 
+[2018-09-22 04:15:13] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'd:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-22 04:15:13] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:15:13] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:15:13] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:15:15] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:15:15] Mongodb database setup completed 
+[2018-09-22 04:34:21] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:34:21] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:34:21] command name ping
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:34:21] command name prefix
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:34:21] command name throw
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:34:21] command name usage
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:34:21] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:34:21] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:34:21] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-22 04:34:21] [Bot.setup] Loaded 4 service(s) 
+[2018-09-22 04:34:21] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:34:21] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] command name help
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:34:21] command name invite
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:34:21] command name opt
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:34:21] command name test
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:34:21] command name info
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:34:21] command name lastseen
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:34:21] command name record
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:34:21] command name roles
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:34:21] command name tip
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:34:21] command name whois
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:34:21] command name master
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] command name build
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:34:21] command name emulate
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:34:21] command name self
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:34:21] command name stop
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:34:21] command name suspend
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:34:21] command name update
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:34:21] command name ban
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:34:21] command name clearwarns
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:34:21] command name clearwarns
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:34:21] command name lockdown
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:34:21] command name mute
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:34:21] command name purge
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:34:21] command name reason
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:34:21] command name role
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:34:21] command name roleall
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:34:21] command name snipe
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:34:21] command name softban
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:34:21] command name unban
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:34:21] command name unlock
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:34:21] command name warn
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:34:21] command name warnings
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:34:21] command name avatar
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:34:21] command name backup
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:34:21] command name embed
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:34:21] command name emoji
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:34:21] command name mentionable
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:34:21] command name nick
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:34:21] command name rep
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:34:21] command name say
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:34:21] command name store
+[2018-09-22 04:34:21] result is  false
+[2018-09-22 04:34:21] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:34:21] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:34:21] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:34:21] [Bot.setup] Bot setup completed 
+[2018-09-22 04:34:21] [Bot.connect] Starting 
+[2018-09-22 04:34:21] Setting up mongodb database 
+[2018-09-22 04:34:21] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'd:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-22 04:34:21] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:34:21] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:34:21] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:34:23] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:34:23] Mongodb database setup completed 
+[2018-09-22 04:34:48] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:34:48] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:34:48] command name ping
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:34:48] command name prefix
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:34:48] command name throw
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:34:48] command name usage
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:34:48] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:34:48] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:34:48] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-22 04:34:48] [Bot.setup] Loaded 4 service(s) 
+[2018-09-22 04:34:48] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:34:48] command name help
+[2018-09-22 04:34:48] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] command name invite
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:34:48] command name opt
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:34:48] command name test
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:34:48] command name info
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:34:48] command name lastseen
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:34:48] command name record
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:34:48] command name roles
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:34:48] command name tip
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:34:48] command name whois
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:34:48] command name master
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:34:48] command name build
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:34:48] command name emulate
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:34:48] command name self
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:34:48] command name stop
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:34:48] command name suspend
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:34:48] command name update
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:34:48] command name ban
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:34:48] command name clearwarns
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:34:48] command name clearwarns
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:34:48] command name lockdown
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:34:48] command name mute
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:34:48] command name purge
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:34:48] command name reason
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:34:48] command name role
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:34:48] command name roleall
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:34:48] command name snipe
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] command name softban
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:34:48] command name unban
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:34:48] command name unlock
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:34:48] command name warn
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:34:48] command name warnings
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:34:48] command name avatar
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:34:48] command name backup
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:34:48] command name embed
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:34:48] command name emoji
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:34:48] command name mentionable
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:34:48] command name nick
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:34:48] command name rep
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:34:48] command name say
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:34:48] command name store
+[2018-09-22 04:34:48] result is  false
+[2018-09-22 04:34:48] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:34:48] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:34:48] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:34:48] [Bot.setup] Bot setup completed 
+[2018-09-22 04:34:48] [Bot.connect] Starting 
+[2018-09-22 04:34:49] Setting up mongodb database 
+[2018-09-22 04:34:49] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'd:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-22 04:34:49] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:34:49] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:34:49] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:34:51] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:34:51] Mongodb database setup completed 
+[2018-09-22 04:35:16] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:35:16] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:35:16] result is  false
+[2018-09-22 04:35:16] command name ping
+[2018-09-22 04:35:16] [CommandStore.register] Failed to register command 'ping' (Invalid name) 
+[2018-09-22 04:35:16] command name prefix
+[2018-09-22 04:35:16] result is  false
+[2018-09-22 04:35:16] [CommandStore.register] Failed to register command 'prefix' (Invalid name) 
+[2018-09-22 04:35:16] command name throw
+[2018-09-22 04:35:16] result is  false
+[2018-09-22 04:35:16] [CommandStore.register] Failed to register command 'throw' (Invalid name) 
+[2018-09-22 04:35:16] command name usage
+[2018-09-22 04:35:16] [CommandStore.register] Failed to register command 'usage' (Invalid name) 
+[2018-09-22 04:35:16] result is  false
+[2018-09-22 04:35:16] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:35:16] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:35:16] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-22 04:35:16] [Bot.setup] Loaded 4 service(s) 
+[2018-09-22 04:35:16] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:35:17] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:35:17] command name help
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'help' (Invalid name) 
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] command name invite
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'invite' (Invalid name) 
+[2018-09-22 04:35:17] command name opt
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'opt' (Invalid name) 
+[2018-09-22 04:35:17] command name test
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'test' (Invalid name) 
+[2018-09-22 04:35:17] command name info
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'info' (Invalid name) 
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] command name lastseen
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'lastseen' (Invalid name) 
+[2018-09-22 04:35:17] command name record
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'record' (Invalid name) 
+[2018-09-22 04:35:17] command name roles
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'roles' (Invalid name) 
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] command name tip
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'tip' (Invalid name) 
+[2018-09-22 04:35:17] command name whois
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'whois' (Invalid name) 
+[2018-09-22 04:35:17] command name master
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'master' (Invalid name) 
+[2018-09-22 04:35:17] command name build
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'build' (Invalid name) 
+[2018-09-22 04:35:17] command name emulate
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'emulate' (Invalid name) 
+[2018-09-22 04:35:17] command name self
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'self' (Invalid name) 
+[2018-09-22 04:35:17] command name stop
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'stop' (Invalid name) 
+[2018-09-22 04:35:17] command name suspend
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'suspend' (Invalid name) 
+[2018-09-22 04:35:17] command name update
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'update' (Invalid name) 
+[2018-09-22 04:35:17] command name ban
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'ban' (Invalid name) 
+[2018-09-22 04:35:17] command name clearwarns
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:35:17] command name clearwarns
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'clearwarns' (Invalid name) 
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] command name lockdown
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'lockdown' (Invalid name) 
+[2018-09-22 04:35:17] command name mute
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'mute' (Invalid name) 
+[2018-09-22 04:35:17] command name purge
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'purge' (Invalid name) 
+[2018-09-22 04:35:17] command name reason
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'reason' (Invalid name) 
+[2018-09-22 04:35:17] command name role
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'role' (Invalid name) 
+[2018-09-22 04:35:17] command name roleall
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'roleall' (Invalid name) 
+[2018-09-22 04:35:17] command name snipe
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'snipe' (Invalid name) 
+[2018-09-22 04:35:17] command name softban
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'softban' (Invalid name) 
+[2018-09-22 04:35:17] command name unban
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'unban' (Invalid name) 
+[2018-09-22 04:35:17] command name unlock
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'unlock' (Invalid name) 
+[2018-09-22 04:35:17] command name warn
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'warn' (Invalid name) 
+[2018-09-22 04:35:17] command name warnings
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'warnings' (Invalid name) 
+[2018-09-22 04:35:17] command name avatar
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'avatar' (Invalid name) 
+[2018-09-22 04:35:17] command name backup
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'backup' (Invalid name) 
+[2018-09-22 04:35:17] command name embed
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'embed' (Invalid name) 
+[2018-09-22 04:35:17] command name emoji
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'emoji' (Invalid name) 
+[2018-09-22 04:35:17] command name mentionable
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'mentionable' (Invalid name) 
+[2018-09-22 04:35:17] command name nick
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'nick' (Invalid name) 
+[2018-09-22 04:35:17] command name rep
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'rep' (Invalid name) 
+[2018-09-22 04:35:17] command name say
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'say' (Invalid name) 
+[2018-09-22 04:35:17] command name store
+[2018-09-22 04:35:17] result is  false
+[2018-09-22 04:35:17] [CommandStore.register] Failed to register command 'store' (Invalid name) 
+[2018-09-22 04:35:17] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:35:17] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:35:17] [Bot.setup] Bot setup completed 
+[2018-09-22 04:35:17] [Bot.connect] Starting 
+[2018-09-22 04:35:18] Setting up mongodb database 
+[2018-09-22 04:35:18] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'd:\Projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-22 04:35:18] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:35:18] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:35:18] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:35:20] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:35:20] Mongodb database setup completed 
+[2018-09-22 04:38:24] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:38:24] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:38:24] command name is  auth
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  true
+[2018-09-22 04:38:24] command name auth
+[2018-09-22 04:38:24] result is  false
+[2018-09-22 04:38:24] [CommandStore.register] Failed to register command 'auth' (Invalid name) 
+[2018-09-22 04:38:24] command name is  ping
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  prefix
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  throw
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  usage
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:38:24] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:38:24] [Bot.setup] Loaded 4 service(s) 
+[2018-09-22 04:38:24] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-22 04:38:24] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:38:24] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:38:24] command name is  help
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  opt
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  test
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  info
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  lastseen
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  record
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  roles
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  tip
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  whois
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  master
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  build
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  emulate
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  self
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] command name is  invite
+[2018-09-22 04:38:24] command name is  stop
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] command name is  suspend
+[2018-09-22 04:38:24] command name is  update
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  ban
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] command name is  clearwarns
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] command name is  clearwarns
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] command name is  lockdown
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] command name is  mute
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] command name is  purge
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] command name is  reason
+[2018-09-22 04:38:24] command name is  role
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  roleall
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  snipe
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  softban
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  unban
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  unlock
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  warn
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  warnings
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  avatar
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  backup
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  embed
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  emoji
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  mentionable
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  nick
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  rep
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  say
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] command name is  store
+[2018-09-22 04:38:24] pattern is  ^[a-z_0-9]{1,40}$
+[2018-09-22 04:38:24] test result is  false
+[2018-09-22 04:38:24] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:38:24] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:38:24] [Bot.setup] Bot setup completed 
+[2018-09-22 04:38:24] [Bot.connect] Starting 
+[2018-09-22 04:38:26] Setting up mongodb database 
+[2018-09-22 04:38:26] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-22 04:38:27] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:38:27] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:38:27] [Bot.setupEvents] Ready | Took 3s 
+[2018-09-22 04:38:29] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:38:29] Mongodb database setup completed 
+[2018-09-22 04:41:45] [Bot.setup] Attempting to load internal fragments 
+[2018-09-22 04:41:45] [Bot.setup] Loading 6 internal fragments 
+[2018-09-22 04:41:45] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-22 04:41:45] [Bot.setup] Loading 5 service(s) 
+[2018-09-22 04:41:45] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-22 04:41:45] [Bot.setup] Loaded 4 service(s) 
+[2018-09-22 04:41:45] [Bot.setup] Loading 41 command(s) 
+[2018-09-22 04:41:45] [Bot.setup] Loaded 41 command(s) 
+[2018-09-22 04:41:45] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-22 04:41:45] [Bot.setupEvents] Setting up Discord events 
+[2018-09-22 04:41:45] [Bot.setupEvents] Discord events setup completed 
+[2018-09-22 04:41:45] [Bot.setup] Bot setup completed 
+[2018-09-22 04:41:45] [Bot.connect] Starting 
+[2018-09-22 04:41:46] Setting up mongodb database 
+[2018-09-22 04:41:46] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/mnt/d/Projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-22 04:41:46] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-22 04:41:46] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-22 04:41:46] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-22 04:41:48] There was an error establishing connection to the MongoDB database. 
+[2018-09-22 04:41:48] Mongodb database setup completed 
+[2018-09-22 04:42:35] raw args,  
+[2018-09-22 04:42:48] raw args,  
+>>>>>>> ff606c27c5c085893a2dfcb23b7a33c90fd20a01
