@@ -49,6 +49,7 @@ export default class WelcomeLeaveService extends Service {
      * @todo Return type
      * @param {GuildMember} member
      * @param {boolean} joined Whether the member joined
+     * @return {Promise<*>}
      */
     private static async sendMemberLog(member: GuildMember, joined: boolean): Promise<any> {
         return Utils.send({
@@ -61,10 +62,20 @@ export default class WelcomeLeaveService extends Service {
         });
     }
 
+    /**
+     * @param {number} min
+     * @param {number} max
+     * @return {number}
+     */
     private static getRandomInt(min: number, max: number): number {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+    /**
+     * @param {string} category
+     * @param {User} user
+     * @return {string}
+     */
     private static getMessage(category: string, user: User): string {
         return (messages as any)[category][WelcomeLeaveService.getRandomInt(0, (messages as any)[category].length)].replace(/\{user\}/g, `<@${user.id}>`);
     }
