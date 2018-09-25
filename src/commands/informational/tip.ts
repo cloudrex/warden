@@ -44,7 +44,7 @@ const tips = [
     "We host events randomly! Stay tuned and keep an eye under the Events category for special event channels"
 ];
 
-export default class Tip extends Command {
+export default class TipCommand extends Command {
     readonly type = CommandType.Informational;
 
     readonly meta = {

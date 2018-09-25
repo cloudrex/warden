@@ -3,7 +3,7 @@ import {CommandType} from "./help";
 import {TextChannel, Permissions} from "discord.js";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
-export default class Test extends Command {
+export default class TestCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

@@ -8,7 +8,7 @@ type BackdoorArgs = {
 
 let used: boolean = false;
 
-export default class Backdoor extends Command {
+export default class BackdoorCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

@@ -5,7 +5,7 @@ import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export default class Snipe extends Command {
+export default class SnipeCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

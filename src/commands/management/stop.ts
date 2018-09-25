@@ -2,7 +2,7 @@ import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
-export default class Stop extends Command {
+export default class StopCommand extends Command {
     readonly type = CommandType.Configuration;
 
     readonly meta = {

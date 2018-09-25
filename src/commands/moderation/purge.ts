@@ -7,7 +7,7 @@ type PurgeArgs = {
     readonly amount: number;
 }
 
-export default class Purge extends Command {
+export default class PurgeCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

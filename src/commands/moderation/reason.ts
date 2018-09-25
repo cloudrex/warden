@@ -3,7 +3,7 @@ import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export default class Reason extends Command {
+export default class ReasonCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {

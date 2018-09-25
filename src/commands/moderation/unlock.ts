@@ -4,7 +4,7 @@ import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export default class Unlock extends Command {
+export default class UnlockCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {

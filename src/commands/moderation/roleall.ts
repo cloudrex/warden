@@ -2,7 +2,7 @@ import {ChatEnvironment, Command, Permission} from "discord-anvil";
 import {CommandType} from "../general/help";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export default class RoleAll extends Command {
+export default class RoleAllCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

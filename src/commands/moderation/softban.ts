@@ -12,7 +12,7 @@ type SoftbanArgs = {
     readonly evidence?: string;
 }
 
-export default class Softban extends Command {
+export default class SoftbanCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {

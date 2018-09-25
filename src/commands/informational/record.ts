@@ -11,7 +11,7 @@ type RecordArgs = {
     readonly member: GuildMember;
 };
 
-export default class Record extends Command {
+export default class RecordCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

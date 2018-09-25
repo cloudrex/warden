@@ -12,7 +12,7 @@ type WarnArgs = {
     readonly evidence?: string;
 }
 
-export default class Warn extends Command {
+export default class WarnCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {

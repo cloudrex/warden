@@ -12,7 +12,7 @@ export enum CommandType {
     Informational = "information_source"
 }
 
-export default class Help extends Command {
+export default class HelpCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

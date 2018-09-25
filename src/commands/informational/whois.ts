@@ -7,7 +7,7 @@ type WhoisArgs = {
     readonly member: GuildMember;
 }
 
-export default class Whois extends Command {
+export default class WhoisCommand extends Command {
     readonly type = CommandType.Informational;
 
     readonly meta = {

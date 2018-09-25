@@ -1,7 +1,7 @@
-import {ChatEnvironment, Command, CommandContext, Permission} from "discord-anvil";
+import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "./help";
 
-export default class Invite extends Command {
+export default class InviteCommand extends Command {
     readonly type = CommandType.Informational;
 
     readonly meta = {

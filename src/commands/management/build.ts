@@ -3,7 +3,7 @@ import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
-export default class Build extends Command {
+export default class BuildCommand extends Command {
     readonly type = CommandType.Configuration;
 
     readonly meta = {

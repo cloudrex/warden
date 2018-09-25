@@ -3,7 +3,7 @@ import {CommandType} from "../general/help";
 import {Emoji, RichEmbed} from "discord.js";
 
 // TODO: Bot should have a command to display info of itself, ex. uptime.
-export default class Info extends Command {
+export default class InfoCommand extends Command {
     readonly type = CommandType.Informational;
 
     readonly meta = {

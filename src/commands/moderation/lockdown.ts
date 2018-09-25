@@ -3,7 +3,7 @@ import {Command, CommandContext, Permission} from "discord-anvil";
 import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
-export default class Lockdown extends Command {
+export default class LockdownCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {

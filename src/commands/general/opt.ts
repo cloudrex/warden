@@ -13,7 +13,7 @@ export type OptArgs = {
     readonly value?: string;
 };
 
-export default class Opt extends Command {
+export default class OptCommand extends Command {
     readonly type = CommandType.Configuration;
 
     readonly meta = {
