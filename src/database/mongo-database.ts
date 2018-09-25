@@ -1,7 +1,7 @@
 import {Collection, Db, MongoClient} from "mongodb";
 import Log from "discord-anvil/dist/core/log";
 import {ChannelResolvable, GuildMember, Snowflake} from "discord.js";
-import {UserConfigType} from "../core/warden-api";
+import {MemberConfigType} from "../core/warden-api";
 
 const url: string = process.env.db_url || `mongodb://${process.env.db_host || "localhost"}:${process.env.db_port || 27017}/${process.env.db_name || ""}`;
 const dbName: string = "warden";
@@ -90,7 +90,7 @@ export type DatabaseBackup = {
 
 export type DatabaseUserConfig = {
     readonly userId: Snowflake;
-    readonly type: UserConfigType;
+    readonly type: MemberConfigType;
     readonly value: string | boolean;
 };
 

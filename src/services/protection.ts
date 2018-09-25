@@ -13,7 +13,7 @@ const conflictingBots: Array<Snowflake> = [
 
 const muteLeavers: Array<Snowflake> = [];
 
-export default class Protection extends Service {
+export default class ProtectionService extends Service {
     readonly meta = {
         name: "protection",
         description: "Autonomous server protection and moderation"

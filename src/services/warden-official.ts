@@ -3,7 +3,7 @@ import {Bot, Service} from "discord-anvil";
 import {on, command} from "discord-anvil/dist";
 import WardenAPI from "../core/warden-api";
 
-export default class WardenOfficial extends Service {
+export default class WardenOfficialService extends Service {
     readonly meta = {
         name: "warden official",
         description: "Custom functionality for Warden's official server"
