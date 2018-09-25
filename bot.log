@@ -23541,3 +23541,56 @@ limit: int value should be less than or equal to 100.
 ║ Mention Everyone │  Yes   ║
 ╚══════════════════╧════════╝
 ``` 
+[2018-09-25 03:10:04] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 03:10:04] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 03:10:04] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 03:10:04] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 03:10:04] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 03:10:04] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 03:10:04] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 03:10:04] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 03:10:04] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 03:10:04] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 03:10:04] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 03:10:04] [Bot.setup] Bot setup completed 
+[2018-09-25 03:10:04] [Bot.connect] Starting 
+[2018-09-25 03:10:26] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 03:10:26] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 03:10:26] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 03:10:26] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 03:10:26] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 03:10:26] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 03:10:26] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 03:10:26] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 03:10:26] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 03:10:26] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 03:10:26] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 03:10:26] [Bot.setup] Bot setup completed 
+[2018-09-25 03:10:26] [Bot.connect] Starting 
+[2018-09-25 03:10:26] Setting up mongodb database 
+[2018-09-25 03:10:26] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 03:10:26] Successfully connected to the MongoDB database. 
+[2018-09-25 03:10:26] Mongodb database setup completed 
+[2018-09-25 03:10:26] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 03:10:26] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-25 03:10:26] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 03:11:27] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 03:11:27] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 03:11:27] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 03:11:27] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 03:11:27] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 03:11:27] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 03:11:27] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 03:11:27] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 03:11:27] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 03:11:27] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 03:11:27] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 03:11:27] [Bot.setup] Bot setup completed 
+[2018-09-25 03:11:27] [Bot.connect] Starting 
+[2018-09-25 03:11:28] Setting up mongodb database 
+[2018-09-25 03:11:28] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 03:11:28] Successfully connected to the MongoDB database. 
+[2018-09-25 03:11:28] Mongodb database setup completed 
+[2018-09-25 03:11:28] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 03:11:28] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-09-25 03:11:28] [Bot.setupEvents] Ready | Took 1s 
