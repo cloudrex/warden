@@ -1,12 +1,14 @@
-import {Command, CommandContext} from "discord-anvil";
+import {Command, CommandContext, FormattedMessage} from "discord-anvil";
 import {CommandType} from "./help";
 import {Argument, PrimitiveArgType} from "discord-anvil/dist";
 import WardenAPI from "../../core/warden-api";
+import Mongo, {DatabaseUserConfig} from "../../database/mongo-database";
+import MemberConfig, {MemberConfigIterator} from "../../core/member-config";
 
 export type OptSubCommand = "tracking";
 
 export type OptArgs = {
-    readonly subCommand: OptSubCommand;
+    readonly subCommand?: OptSubCommand;
     readonly value?: string;
 };
 
@@ -22,7 +24,7 @@ export default class Opt extends Command {
         {
             name: "subCommand",
             type: PrimitiveArgType.String,
-            required: true
+            required: false
         },
         {
             name: "value",
@@ -34,6 +36,22 @@ export default class Opt extends Command {
     readonly aliases = ["config", "cfg"];
 
     public async executed(context: CommandContext, args: OptArgs): Promise<void> {
+        if (!args.subCommand) {
+            const options: Array<DatabaseUserConfig> = await MemberConfig.getAll(context.sender.id);
+            const iterator: MemberConfigIterator = new MemberConfigIterator(options);
+
+            const tableData: Array<Array<string>> = [
+                ["Option", "Value"],
+                ["Tracking", iterator.findValue("tracking", "true")] // TODO: Use default values instead of hard coded
+            ];
+
+            await context.message.channel.send(new FormattedMessage()
+                .codeBlock("", "scala")
+                .build());
+
+            return;
+        }
+
         switch (args.subCommand) {
             case "tracking": {
                 if (!args.value) {
@@ -46,7 +64,7 @@ export default class Opt extends Command {
                 }
 
                 if (args.value === "on") {
-                    await WardenAPI.setUserConfig({
+                    await MemberConfig.set({
                         type: "tracking",
                         userId: context.sender.id,
                         value: true
@@ -55,7 +73,7 @@ export default class Opt extends Command {
                     await context.ok(`Now tracking <@${context.sender.id}>`);
                 }
                 else if (args.value === "off") {
-                    await WardenAPI.setUserConfig({
+                    await MemberConfig.set({
                         type: "tracking",
                         userId: context.sender.id,
                         value: false

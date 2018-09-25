@@ -8,7 +8,7 @@ import Mongo, {
 } from "../database/mongo-database";
 import {BadWords, RacialSlurs} from "./constants";
 
-export type UserConfigType = "tracking";
+export type MemberConfigType = "tracking";
 
 export enum CaseType {
     Warn,
@@ -97,26 +97,6 @@ export default class WardenAPI {
         };
 
         this.caseCounter = 0;// TODO await this.getCaseCounter();
-    }
-
-    public static async getUserConfig(userId: Snowflake, type: UserConfigType): Promise<string | boolean | null> {
-        const result: DatabaseUserConfig | null = await Mongo.collections.memberConfig.findOne({
-            userId: userId,
-            type: type
-        });
-
-        return result !== null ? result.value : null;
-    }
-
-    public static async setUserConfig(config: DatabaseUserConfig): Promise<void> {
-        await Mongo.collections.memberConfig.updateOne({
-            userId: config.userId,
-            type: config.type
-        }, {
-            $set: config
-        }, {
-            upsert: true
-        });
     }
 
     /**
