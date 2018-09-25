@@ -2,8 +2,9 @@ import {Command, CommandContext, FormattedMessage} from "discord-anvil";
 import {CommandType} from "./help";
 import {Argument, PrimitiveArgType} from "discord-anvil/dist";
 import WardenAPI from "../../core/warden-api";
-import Mongo, {DatabaseUserConfig} from "../../database/mongo-database";
+import {DatabaseUserConfig} from "../../database/mongo-database";
 import MemberConfig, {MemberConfigIterator} from "../../core/member-config";
+import {table} from "table";
 
 export type OptSubCommand = "tracking";
 
@@ -46,7 +47,7 @@ export default class Opt extends Command {
             ];
 
             await context.message.channel.send(new FormattedMessage()
-                .codeBlock("", "scala")
+                .codeBlock(table(tableData), "scala")
                 .build());
 
             return;
