@@ -17,10 +17,12 @@
         "@types/knex": "^0.14.18",
         "@types/mongodb": "^3.1.4",
         "@types/node": "^10.9.4",
+        "@types/table": "^4.0.5",
         "brain.js": "^1.2.8",
         "discord-anvil": "git+https://gitlab+deploy-token-16422:mgVuJqBjZnrux7Tnc8Tx@gitlab.com/cloudrex/anvil.git#master",
         "discord.js": "^11.4.2",
         "mongodb": "^3.1.4",
+        "table": "^5.0.2",
         "typescript": "^2.9.2"
     }
 }
