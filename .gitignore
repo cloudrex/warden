@@ -6,3 +6,4 @@ bot.log
 build/
 yarn.lock
 package-lock.json
+.vscode/
