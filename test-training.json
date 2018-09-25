@@ -1,0 +1,394 @@
+[
+    {
+        "input": "parse and process HTML",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "implement unit testing",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "the error said that pointers were undefined",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "the variable was undefined",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "you're missing the validation",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "try clearing the cache",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "where did you find that framework",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "how do I use this library",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "implement the interface",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "code the program",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "there's a bug",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "execute the method",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "run the code first",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "call the function",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "declare the variable",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "the value is undefined",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "the value was null",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "accepts no parameters",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "pass more arguments to the function",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "the function requires more arguments",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "you need to fix the error",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "create a new class",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "what naming convention do you use",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "the variable is not defined",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "javascript",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "python",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "programming language",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "variable",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "syntax",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "code",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "logical error",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "throw an exception",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "return",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "method",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "function",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "modules",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "require",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "the program ended",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "the api is slow",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "create an http request",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "what framework",
+        "output": {"programming": 1}
+    },
+    {
+        "input": "I'm hungry right now",
+        "output": {"food": 1}
+    },
+    {
+        "input": "I love banana pudding",
+        "output": {"food": 1}
+    },
+    {
+        "input": "time for a snack",
+        "output": {"food": 1}
+    },
+    {
+        "input": "my favorites are cookies",
+        "output": {"food": 1}
+    },
+    {
+        "input": "I love cookies",
+        "output": {"food": 1}
+    },
+    {
+        "input": "I'm eating a beef steak",
+        "output": {"food": 1}
+    },
+    {
+        "input": "beef steak is the best",
+        "output": {"food": 1}
+    },
+    {
+        "input": "some milk and cookies",
+        "output": {"food": 1}
+    },
+    {
+        "input": "I'm thirsty need some water",
+        "output": {"food": 1}
+    },
+    {
+        "input": "wish I had water right now",
+        "output": {"food": 1}
+    },
+    {
+        "input": "I want to eat some cookies",
+        "output": {"food": 1}
+    },
+    {
+        "input": "I love those vegetables",
+        "output": {"food": 1}
+    },
+    {
+        "input": "that meat is my favorite",
+        "output": {"food": 1}
+    },
+    {
+        "input": "is the meat grilled or fried",
+        "output": {"food": 1}
+    },
+    {
+        "input": "you need to learn to properly cook",
+        "output": {"food": 1}
+    },
+    {
+        "input": "the food is raw",
+        "output": {"food": 1}
+    },
+    {
+        "input": "I need some food",
+        "output": {"food": 1}
+    },
+    {
+        "input": "cook the food first",
+        "output": {"food": 1}
+    },
+    {
+        "input": "waiting for dinner to be served",
+        "output": {"food": 1}
+    },
+    {
+        "input": "they have long green legs",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "very bright in nature",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "they hunt in packs",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "they form a group to hunt",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "they're extremely rare in nature",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "very shy and timid animal",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "the man's best friend",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "what is your favorite pet",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "do you have a pet",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "you need to get yourself a pet",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "I love puppies",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "I have a lazy cat",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "cats are the best pets",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "show me your pet",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "cats are lazy",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "cows are black and white",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "cows give milk",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "horses are fast",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "I love their fur",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "the animal died",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "it escaped from the zoo",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "there's gorillas in the zoo",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "saw a squirrel in the park",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "the squirrel wanted nuts",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "lizards are cool",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "they are exotic pets",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "those pets cost a fortune",
+        "output": {"animals": 1}
+    },
+    {
+        "input": "roses are red violets are blue",
+        "output": {"plants": 1}
+    },
+    {
+        "input": "nature's trees",
+        "output": {"plants": 1}
+    },
+    {
+        "input": "trees grow large",
+        "output": {"plants": 1}
+    },
+    {
+        "input": "plants need sun to survive",
+        "output": {"plants": 1}
+    },
+    {
+        "input": "medicinal plants",
+        "output": {"plants": 1}
+    },
+    {
+        "input": "star wars",
+        "output": {"movies": 1}
+    },
+    {
+        "input": "clone wars",
+        "output": {"movies": 1}
+    },
+    {
+        "input": "harry potter",
+        "output": {"movies": 1}
+    },
+    {
+        "input": "the terminator",
+        "output": {"movies": 1}
+    },
+    {
+        "input": "i'll be back",
+        "output": {"movies": 1}
+    },
+    {
+        "input": "the shinning",
+        "output": {"movies": 1}
+    }
+]
