@@ -3,7 +3,7 @@ import {Bot, CommandParser, Log, Service} from "discord-anvil";
 import {loaded, ne} from "../commands/ai/spam-train";
 import {NeuralNetwork} from "brain.js";
 
-export default class Protection extends Service {
+export default class ArtificialIntelligenceService extends Service {
     readonly meta = {
         name: "ai",
         description: "Unattended AI protection system"
