@@ -10,7 +10,7 @@ type ClearWarnsArgs = {
     readonly member: GuildMember;
 };
 
-export default class Case extends Command {
+export default class CaseCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {
@@ -27,12 +27,10 @@ export default class Case extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext, args: ClearWarnsArgs): Promise<void> {
         // TODO

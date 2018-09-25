@@ -5,7 +5,8 @@ import Patterns from "discord-anvil/dist/core/patterns";
 import Utils from "discord-anvil/dist/core/utils";
 import Mongo, {DatabaseMessage, ModerationActionType} from "../database/mongo-database";
 import Messages from "../core/messages";
-import { DiscordEvent } from "discord-anvil/dist/decorators/decorators";
+import {DiscordEvent} from "discord-anvil/dist/decorators/decorators";
+import MemberConfig from "../core/member-config";
 
 const conflictingBots: Array<Snowflake> = [
     "155149108183695360" // Dyno#3861
@@ -21,132 +22,132 @@ export default class ProtectionService extends Service {
 
     @on(DiscordEvent.Message)
     private async handleMessage(message: Message): Promise<void> {
-        let tracking: boolean | null = await WardenAPI.getUserConfig(message.author.id, "tracking") as boolean | null;
+        let tracking: boolean | null = await MemberConfig.get(message.author.id, "tracking") as boolean | null;
 
-            tracking = tracking === null ? true : tracking;
+        tracking = tracking === null ? true : tracking;
 
-            // Log the message into the database
-            if (tracking) {
-                await Messages.add({
-                    authorTag: message.author.tag,
-                    authorId: message.author.id,
-                    channelId: message.channel.id,
-                    message: message.content,
-                    messageId: message.id,
-                    time: message.createdTimestamp,
-                    guildId: message.guild.id
-                });
-            }
+        // Log the message into the database
+        if (tracking) {
+            await Messages.add({
+                authorTag: message.author.tag,
+                authorId: message.author.id,
+                channelId: message.channel.id,
+                message: message.content,
+                messageId: message.id,
+                time: message.createdTimestamp,
+                guildId: message.guild.id
+            });
+        }
 
-            const api: WardenAPI = this.api;
+        const api: WardenAPI = this.api;
 
-            if (Patterns.invite.test(message.content)) {
-                const matches = message.content.match(Patterns.invite);
+        if (Patterns.invite.test(message.content)) {
+            const matches = message.content.match(Patterns.invite);
 
-                if (matches !== null) {
-                    for (let i = 0; i < matches.length; i++) {
-                        try {
-                            const invite: Invite = await this.bot.client.fetchInvite(matches[i]);
+            if (matches !== null) {
+                for (let i = 0; i < matches.length; i++) {
+                    try {
+                        const invite: Invite = await this.bot.client.fetchInvite(matches[i]);
 
-                            if (invite) {
-                                if (invite.guild.id !== message.guild.id) {
-                                    if (message.deletable) {
-                                        // TODO: Will it affect future checks/actions if the message is deleted?
-                                        // TODO: What is if ALSO triggers other actions?
-                                        await message.delete();
-                                    }
-
-                                    message.reply("Invites to different guilds are not allowed.");
-
-                                    let evidence: string = `*${message.content}*`;
-
-                                    if (evidence.length > 200) {
-                                        evidence = evidence.substring(0, 200) + " ...";
-                                    }
-
-                                    await api.executeAction({
-                                        type: ModerationActionType.Warn,
-                                        moderator: message.guild.me,
-                                        reason: "Posted an invite link to a different server",
-                                        member: message.member,
-                                        evidence: evidence
-                                    });
-
-                                    break;
+                        if (invite) {
+                            if (invite.guild.id !== message.guild.id) {
+                                if (message.deletable) {
+                                    // TODO: Will it affect future checks/actions if the message is deleted?
+                                    // TODO: What is if ALSO triggers other actions?
+                                    await message.delete();
                                 }
+
+                                message.reply("Invites to different guilds are not allowed.");
+
+                                let evidence: string = `*${message.content}*`;
+
+                                if (evidence.length > 200) {
+                                    evidence = evidence.substring(0, 200) + " ...";
+                                }
+
+                                await api.executeAction({
+                                    type: ModerationActionType.Warn,
+                                    moderator: message.guild.me,
+                                    reason: "Posted an invite link to a different server",
+                                    member: message.member,
+                                    evidence: evidence
+                                });
+
+                                break;
                             }
                         }
-                        catch (error) {
-                            if (error.message !== "Unknown Invite") {
-                                Log.warn(`[Protection:message] Unexpected error while fetching invite: ${error.message}`);
-                            }
+                    }
+                    catch (error) {
+                        if (error.message !== "Unknown Invite") {
+                            Log.warn(`[Protection:message] Unexpected error while fetching invite: ${error.message}`);
                         }
                     }
                 }
             }
+        }
 
-            // Ignore owner and self
-            if (message.author.id === this.bot.owner || message.author.id === this.bot.client.user.id) {
-                return;
-            }
+        // Ignore owner and self
+        if (message.author.id === this.bot.owner || message.author.id === this.bot.client.user.id) {
+            return;
+        }
 
-            if (message.content.length > 300 && message.content.split(" ").length < 15 && message.deletable) {
-                await message.reply("Your message is too large.");
-                await message.delete();
-            }
-            else if (message.member.roles.has(this.api.roles.muted) && message.deletable) {
-                await message.delete();
-            }
-            else {
-                const mentions: Collection<Snowflake, GuildMember> = message.mentions.members;
+        if (message.content.length > 300 && message.content.split(" ").length < 15 && message.deletable) {
+            await message.reply("Your message is too large.");
+            await message.delete();
+        }
+        else if (message.member.roles.has(this.api.roles.muted) && message.deletable) {
+            await message.delete();
+        }
+        else {
+            const mentions: Collection<Snowflake, GuildMember> = message.mentions.members;
 
-                if (mentions && mentions.size > 0) {
-                    const mentionedUsers: Array<GuildMember> = mentions.array();
+            if (mentions && mentions.size > 0) {
+                const mentionedUsers: Array<GuildMember> = mentions.array();
 
-                    if (mentionedUsers.length > 4 || mentionedUsers.length > 4 || mentionedUsers.length > 4) {
-                        if (message.deletable) {
-                            await message.delete();
-                        }
+                if (mentionedUsers.length > 4 || mentionedUsers.length > 4 || mentionedUsers.length > 4) {
+                    if (message.deletable) {
+                        await message.delete();
+                    }
 
-                        // Mute the user
-                        // TODO: Use/implement in Consumer API v2
-                        Protection.mute(message.member);
+                    // Mute the user
+                    // TODO: Use/implement in Consumer API v2
+                    ProtectionService.mute(message.member);
 
-                        const response: Message = await message.reply("You have been automatically muted until further notice for mass pinging.") as Message;
+                    const response: Message = await message.reply("You have been automatically muted until further notice for mass pinging.") as Message;
 
-                        if (response) {
-                            response.delete(8000);
-                        }
+                    if (response) {
+                        response.delete(8000);
                     }
                 }
             }
+        }
 
-            // TODO: What about if it has been taken action against?
-            // TODO: Something around posting suspected violations giving uncaught missing permissions error
-            const suspectedViolation: string = WardenAPI.isMessageSuspicious(message);
+        // TODO: What about if it has been taken action against?
+        // TODO: Something around posting suspected violations giving uncaught missing permissions error
+        const suspectedViolation: string = WardenAPI.isMessageSuspicious(message);
 
-            if (suspectedViolation !== "None") {
-                await this.api.flagMessage(message, suspectedViolation);
-            }
+        if (suspectedViolation !== "None") {
+            await this.api.flagMessage(message, suspectedViolation);
+        }
 
-            if (message && message.mentions && message.mentions.members) {
-                message.mentions.members.array().map(async (member: GuildMember) => {
-                    if (!message.author.bot && member.id !== message.author.id && member.roles.map((role) => role.id).includes("458827341196427265")) {
-                        const response: Message = await message.reply("Please refrain from pinging this person under any circumstances. He/she is either a partner or special guest and should not be pinged.") as Message;
+        if (message && message.mentions && message.mentions.members) {
+            message.mentions.members.array().map(async (member: GuildMember) => {
+                if (!message.author.bot && member.id !== message.author.id && member.roles.map((role) => role.id).includes("458827341196427265")) {
+                    const response: Message = await message.reply("Please refrain from pinging this person under any circumstances. He/she is either a partner or special guest and should not be pinged.") as Message;
 
-                        if (response) {
-                            response.delete(8000);
-                        }
-
-                        await this.api.warn({
-                            user: message.member,
-                            reason: "Pinging a 'Dont Ping' member",
-                            moderator: this.bot.client.user,
-                            message: message
-                        });
+                    if (response) {
+                        response.delete(8000);
                     }
-                });
-            }
+
+                    await this.api.warn({
+                        user: message.member,
+                        reason: "Pinging a 'Dont Ping' member",
+                        moderator: this.bot.client.user,
+                        message: message
+                    });
+                }
+            });
+        }
     }
 
     @on(DiscordEvent.MessageDeleted)

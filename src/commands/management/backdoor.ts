@@ -27,11 +27,9 @@ export default class Backdoor extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.cooldown = 3600;
-    }
+    readonly restrict: any = {
+        cooldown: 3600
+    };
 
     public async executed(context: CommandContext, args: BackdoorArgs): Promise<void> {
         if (used) {

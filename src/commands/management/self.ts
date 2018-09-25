@@ -33,11 +33,9 @@ export default class Self extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.BotOwner];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner]
+    };
 
     public async executed(context: CommandContext, args: SelfArgs): Promise<void> {
         let failed: boolean = false;

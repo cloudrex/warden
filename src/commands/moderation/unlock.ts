@@ -12,12 +12,10 @@ export default class Unlock extends Command {
         description: "Unlock the guild from lockdown"
     };
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.BotOwner];
-        this.restrict.selfPermissions = [Permission.ManageRoles];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner],
+        selfPermissions: [Permission.ManageRoles]
+    };
 
     public async executed(context: CommandContext): Promise<void> {
         const everyone: Role = context.message.guild.roles.find("name", "@everyone");

@@ -22,15 +22,9 @@ export default class PermissionsCommand extends Command {
     readonly aliases = ["perms"];
 
     readonly restrict: any = {
-        cooldown: 6
+        cooldown: 6,
+        environment: ChatEnvironment.Guild
     };
-
-    constructor() {
-        super();
-
-        /* this.restrict.cooldown = 5;
-        this.restrict.environment = ChatEnvironment.Guild; */
-    }
 
     private hasPermission(name: PermissionResolvable, permissions: Permissions): string {
         return permissions.hasPermission(name) ? "Yes" : "";

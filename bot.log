@@ -23594,3 +23594,57 @@ limit: int value should be less than or equal to 100.
 [2018-09-25 03:11:28] [Bot.setupAuthStore] Auth store setup completed 
 [2018-09-25 03:11:28] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
 [2018-09-25 03:11:28] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 19:19:59] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 19:19:59] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 19:19:59] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 19:19:59] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 19:20:00] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 19:20:00] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 19:20:00] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 19:20:00] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 19:20:00] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 19:20:00] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 19:20:00] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 19:20:00] [Bot.setup] Bot setup completed 
+[2018-09-25 19:20:00] [Bot.connect] Starting 
+[2018-09-25 19:26:22] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 19:26:22] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 19:26:22] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 19:26:22] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 19:26:22] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 19:26:22] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 19:26:22] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 19:26:22] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 19:26:22] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 19:26:22] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 19:26:22] [Bot.setup] Bot setup completed 
+[2018-09-25 19:26:22] [Bot.connect] Starting 
+[2018-09-25 19:26:22] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 19:26:24] Setting up mongodb database 
+[2018-09-25 19:26:24] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 19:26:24] Successfully connected to the MongoDB database. 
+[2018-09-25 19:26:24] Mongodb database setup completed 
+[2018-09-25 19:26:24] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 19:26:24] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 19:26:24] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-25 19:41:33] raw args,  
+[2018-09-25 19:41:55] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 19:41:55] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 19:41:55] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 19:41:55] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 19:41:55] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 19:41:55] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 19:41:55] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 19:41:56] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 19:41:56] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 19:41:56] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 19:41:56] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 19:41:56] [Bot.setup] Bot setup completed 
+[2018-09-25 19:41:56] [Bot.connect] Starting 
+[2018-09-25 19:41:56] Setting up mongodb database 
+[2018-09-25 19:41:56] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 19:41:56] Successfully connected to the MongoDB database. 
+[2018-09-25 19:41:56] Mongodb database setup completed 
+[2018-09-25 19:41:56] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 19:41:56] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 19:41:56] [Bot.setupEvents] Ready | Took 1s 

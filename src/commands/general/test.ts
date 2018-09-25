@@ -1,4 +1,4 @@
-import {Command, CommandContext} from "discord-anvil";
+import {Command, CommandContext, ChatEnvironment} from "discord-anvil";
 import {CommandType} from "./help";
 import {TextChannel, Permissions} from "discord.js";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
@@ -11,11 +11,9 @@ export default class Test extends Command {
         description: "Test whether I can send messages in this channel"
     };
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator]
+    };
 
     public async executed(context: CommandContext): Promise<void> {
         // TODO: Check if the send message failed and display error, and check if embeds + files can be sent.

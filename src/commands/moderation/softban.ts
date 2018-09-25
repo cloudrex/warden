@@ -40,12 +40,10 @@ export default class Softban extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.selfPermissions = [Permission.BanMembers];
-        this.restrict.issuerPermissions = [Permission.BanMembers];
-    }
+    readonly restrict: any = {
+        issuerPermissions: [Permission.BanMembers],
+        selfPermissions: [Permission.BanMembers]
+    };
 
     public async executed(context: CommandContext, args: SoftbanArgs, api: WardenAPI): Promise<void> {
         if (args.member.id === context.sender.id) {

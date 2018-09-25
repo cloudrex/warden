@@ -11,7 +11,7 @@ export interface BanArgs {
     readonly evidence?: string;
 }
 
-export default class Ban extends Command {
+export default class BanCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {
@@ -40,12 +40,10 @@ export default class Ban extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.issuerPermissions = [Permission.BanMembers];
-        this.restrict.selfPermissions = [Permission.BanMembers];
-    }
+    readonly restrict: any = {
+        issuerPermissions: [Permission.BanMembers],
+        selfPermissions: [Permission.BanMembers]
+    };
 
     public async executed(context: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
         if (args.member.id === context.sender.id) {

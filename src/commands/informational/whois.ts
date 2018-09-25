@@ -25,11 +25,9 @@ export default class Whois extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator]
+    };
 
     public async executed(context: CommandContext, args: WhoisArgs): Promise<void> {
         const roles = args.member.roles.array();

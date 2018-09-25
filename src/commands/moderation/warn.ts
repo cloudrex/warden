@@ -41,12 +41,10 @@ export default class Warn extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
+    };
 
     // TODO: Throws unknown message
     public async executed(context: CommandContext, args: WarnArgs, api: WardenAPI): Promise<void> { // TODO: api type not working for some reason

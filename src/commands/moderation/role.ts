@@ -31,12 +31,10 @@ export default class RoleCommand extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.issuerPermissions = [Permission.ManageRoles, Permission.ManageGuild];
-    }
+    readonly restrict: any = {
+        issuerPermissions: [Permission.ManageRoles, Permission.ManageGuild],
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext, args: RoleArgs): Promise<void> {
         // TODO: Async await

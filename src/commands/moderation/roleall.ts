@@ -14,14 +14,12 @@ export default class RoleAll extends Command {
         role: "!string"
     };
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.issuerPermissions = [Permission.ManageGuild];
-        this.restrict.selfPermissions = [Permission.ManageRoles];
-        this.restrict.cooldown = 60;
-    }
+    readonly restrict: any = {
+        issuerPermissions: [Permission.ManageGuild],
+        selfPermissions: [Permission.ManageRoles],
+        cooldown: 60,
+        environment: ChatEnvironment.Guild
+    };
 
     public executed(context: CommandContext): void {
         // const role: Role = context.arguments[0];

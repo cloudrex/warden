@@ -3,7 +3,7 @@ import {Command, CommandContext} from "discord-anvil";
 import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 
-export default class Update extends Command {
+export default class UpdateCommand extends Command {
     readonly type = CommandType.Configuration;
 
     readonly meta = {
@@ -13,11 +13,9 @@ export default class Update extends Command {
 
     readonly aliases = ["pull"];
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.BotOwner];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner]
+    };
 
     public executed(context: CommandContext): Promise<void> {
         return new Promise((resolve) => {

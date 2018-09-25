@@ -11,12 +11,10 @@ export default class Lockdown extends Command {
         description: "Lockdown the guild"
     };
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-        this.restrict.selfPermissions = [Permission.ManageRoles, Permission.Admin];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        selfPermissions: [Permission.ManageRoles, Permission.Admin]
+    };
 
     public async executed(context: CommandContext): Promise<void> {
         const everyone: Role = context.message.guild.roles.find("name", "@everyone");

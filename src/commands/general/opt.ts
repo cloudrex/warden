@@ -34,6 +34,10 @@ export default class Opt extends Command {
         }
     ];
 
+    readonly restrict: any = {
+        cooldown: 3
+    };
+
     readonly aliases = ["config", "cfg"];
 
     public async executed(context: CommandContext, args: OptArgs): Promise<void> {
@@ -56,7 +60,7 @@ export default class Opt extends Command {
         switch (args.subCommand) {
             case "tracking": {
                 if (!args.value) {
-                    const result: string | boolean | null = await WardenAPI.getUserConfig(context.sender.id, "tracking");
+                    const result: string | boolean | null = await MemberConfig.get(context.sender.id, "tracking");
                     const value: boolean = (result === null ? true : result) as boolean;
 
                     await context.ok(value ? "You're currently being tracked" : "You're not being tracked");

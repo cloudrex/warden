@@ -16,12 +16,10 @@ export default class Reason extends Command {
         reason: "!string"
     };
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext): Promise<void> {
         // TODO

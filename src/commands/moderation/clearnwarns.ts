@@ -10,7 +10,7 @@ type ClearWarnsArgs = {
     readonly member: GuildMember;
 };
 
-export default class ClearWarns extends Command {
+export default class ClearWarnsCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly aliases = ["clearwarnings"];
@@ -29,12 +29,10 @@ export default class ClearWarns extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext, args: ClearWarnsArgs): Promise<void> {
         await Mongo.collections.moderationActions.deleteMany({

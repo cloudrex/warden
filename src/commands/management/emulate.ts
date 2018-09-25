@@ -32,12 +32,10 @@ export default class Emulate extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.BotOwner];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner],
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext, args: EmulateArgs): Promise<void> {
         await context.message.channel.send(new RichEmbed()

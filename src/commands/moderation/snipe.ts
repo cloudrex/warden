@@ -13,12 +13,10 @@ export default class Snipe extends Command {
         description: "View the last deleted message in this channel"
     };
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext, args: Array<string>, api: WardenAPI): Promise<void> {
         const lastDeletedChannelMessage: Message | null = api.deletedMessages.get(context.message.channel.id) || null;

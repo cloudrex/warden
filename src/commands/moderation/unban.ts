@@ -32,13 +32,11 @@ export default class Unban extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.selfPermissions = [Permission.BanMembers];
-        this.restrict.specific = [RestrictGroup.BotOwner];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner],
+        selfPermissions: [Permission.BanMembers],
+        environment: ChatEnvironment.Guild
+    };
 
     // TODO: Untested
     public async executed(context: CommandContext, args: UnbanArgs): Promise<void> {

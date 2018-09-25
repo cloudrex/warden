@@ -29,11 +29,9 @@ export default class Record extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.cooldown = 120;
-    }
+    readonly restrict: any = {
+        cooldown: 120
+    };
 
     // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages
     public async executed(context: CommandContext, args: RecordArgs): Promise<void> {

@@ -23,12 +23,10 @@ export default class Roles extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
+    };
 
     public executed(context: CommandContext, args: RolesArgs): void {
         context.ok(context.message.guild.roles.array()

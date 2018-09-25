@@ -24,13 +24,11 @@ export default class Purge extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.BotOwner];
-    }
-
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner],
+        environment: ChatEnvironment.Guild
+    };
+    
     // TODO: Return type, should be void
     public async executed(context: CommandContext, args: PurgeArgs): Promise<any> {
         return new Promise(async (resolve) => {

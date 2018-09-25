@@ -12,11 +12,9 @@ export default class Stop extends Command {
 
     readonly aliases = ["disconnect", "quit"];
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.BotOwner];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner]
+    };
 
     public async executed(context: CommandContext): Promise<void> {
         await context.ok("Disconnecting");

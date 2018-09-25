@@ -12,7 +12,7 @@ type MuteArgs = {
     readonly evidence?: string;
 }
 
-export default class Mute extends Command {
+export default class MuteCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {
@@ -47,13 +47,11 @@ export default class Mute extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.selfPermissions = [Permission.ManageRoles];
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-        this.restrict.environment = ChatEnvironment.Guild;
-    }
+    readonly restrict: any = {
+        selfPermissions: [Permission.ManageRoles],
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {
         await api.executeAction({

@@ -25,7 +25,7 @@ type WarningsArgs = {
     readonly member: GuildMember;
 }
 
-export default class Warnings extends Command {
+export default class WarningsCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {
@@ -44,12 +44,10 @@ export default class Warnings extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
+    };
 
     private static getDate(warning: DatabaseModerationAction): string {
         const date: Date = new Date(warning.time);
@@ -62,7 +60,7 @@ export default class Warnings extends Command {
             memberId: args.member.id
         }).toArray();
 
-        const warningsMessage: string = warnings.length > 0 ? warnings.map((warning: DatabaseModerationAction) => `**${Warnings.getDate(warning)}** ${warning.reason}`).join("\n") : "*This user has no recorded warnings*";
+        const warningsMessage: string = warnings.length > 0 ? warnings.map((warning: DatabaseModerationAction) => `**${WarningsCommand.getDate(warning)}** ${warning.reason}`).join("\n") : "*This user has no recorded warnings*";
 
         const embed: RichEmbed = new RichEmbed()
             .addField("Warnings", warningsMessage)
