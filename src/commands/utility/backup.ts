@@ -5,7 +5,7 @@ import Mongo, {ChannelType, DatabaseChannel} from "../../database/mongo-database
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export default class Backup extends Command {
+export default class BackupCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

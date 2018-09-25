@@ -8,7 +8,7 @@ type MentionableArgs = {
     readonly role: Role;
 }
 
-export default class Mentionable extends Command {
+export default class MentionableCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

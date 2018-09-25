@@ -11,7 +11,7 @@ type EmojiArgs = {
     readonly url: string;
 }
 
-export default class Emoji extends Command {
+export default class EmojiCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

@@ -10,7 +10,7 @@ type StoreArgs = {
     readonly name?: string;
 }
 
-export default class Store extends Command {
+export default class StoreCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

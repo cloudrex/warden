@@ -6,7 +6,7 @@ import {RestrictGroup} from "discord-anvil/dist/commands/command";
 import Utils from "discord-anvil/dist/core/utils";
 import CommandContext from "discord-anvil/dist/commands/command-context";
 
-export default class Embed extends Command {
+export default class EmbedCommand extends Command {
     readonly type = CommandType.Utility;
 
     readonly meta = {

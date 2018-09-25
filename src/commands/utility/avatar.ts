@@ -8,7 +8,7 @@ type AvatarArgs = {
     readonly member: GuildMember;
 };
 
-export default class Avatar extends Command {
+export default class AvatarCommand extends Command {
     readonly type = CommandType.Configuration;
 
     readonly meta = {
