@@ -14,8 +14,8 @@ export default class CaseCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {
-        name: "clearwarns",
-        description: "Clear all warnings from an user"
+        name: "case",
+        description: "Grab a moderation case"
     };
 
     readonly arguments: Array<Argument> = [

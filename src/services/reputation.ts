@@ -12,12 +12,11 @@ export default class ReputationService extends Service {
         description: "Reputation system"
     };
 
-    @on(DiscordEvent.MessageReactionAdded)
-    private handleReaction(message: Message): void {
-
+    private handleReactionAdded(message: Message): void {
+        //
     }
 
     public start(): void {
-
+        this.bot.client.on(DiscordEvent.MessageReactionAdded, this.handleReactionAdded);
     }
 }

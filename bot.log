@@ -23648,3 +23648,283 @@ limit: int value should be less than or equal to 100.
 [2018-09-25 19:41:56] [Bot.setupAuthStore] Auth store setup completed 
 [2018-09-25 19:41:56] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
 [2018-09-25 19:41:56] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 15:09:34] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 15:09:34] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 15:09:34] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 15:09:34] [Bot.setup] Loading 7 service(s) 
+[2018-09-26 15:09:35] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-26 15:09:35] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 15:09:35] [Bot.enableFragments] Unknown fragment instance, ignoring 
+[2018-09-26 15:09:35] [Bot.setup] Loading 44 command(s) 
+[2018-09-26 15:09:37] [Bot.setup] Loaded 44 command(s) 
+[2018-09-26 15:09:37] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-26 15:09:37] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 15:09:37] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 15:09:37] [Bot.setup] Bot setup completed 
+[2018-09-26 15:09:37] [Bot.connect] Starting 
+[2018-09-26 15:09:39] Setting up mongodb database 
+[2018-09-26 15:09:39] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 15:09:39] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 15:09:39] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 15:09:39] [Bot.setupEvents] Ready | Took 5s 
+[2018-09-26 15:09:41] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 15:09:41] Mongodb database setup completed 
+[2018-09-26 15:16:35] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 15:16:35] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 15:16:35] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 15:16:35] [Bot.setup] Loading 7 service(s) 
+[2018-09-26 15:16:35] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-26 15:16:35] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 15:16:35] [Bot.enableFragments] Unknown fragment instance, ignoring 
+[2018-09-26 15:16:35] [Bot.setup] Loading 44 command(s) 
+[2018-09-26 15:16:35] [Bot.setup] Loaded 44 command(s) 
+[2018-09-26 15:16:35] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 15:16:35] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-26 15:16:35] [Bot.setup] Bot setup completed 
+[2018-09-26 15:16:35] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 15:16:35] [Bot.connect] Starting 
+[2018-09-26 15:16:36] Setting up mongodb database 
+[2018-09-26 15:16:36] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 15:16:36] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 15:16:36] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 15:16:36] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-26 15:16:38] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 15:16:38] Mongodb database setup completed 
+[2018-09-26 15:17:34] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 15:17:34] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 15:17:34] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 15:17:34] [Bot.setup] Loading 7 service(s) 
+[2018-09-26 15:17:34] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-26 15:17:34] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 15:17:34] [Bot.enableFragments] Unknown fragment instance, ignoring 
+[2018-09-26 15:17:34] [Bot.setup] Loading 44 command(s) 
+[2018-09-26 15:17:35] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 15:17:35] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 15:17:35] [Bot.setup] Bot setup completed 
+[2018-09-26 15:17:35] [Bot.setup] Loaded 44 command(s) 
+[2018-09-26 15:17:35] [Bot.connect] Starting 
+[2018-09-26 15:17:35] Setting up mongodb database 
+[2018-09-26 15:17:35] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 15:17:35] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 15:17:35] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 15:17:35] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 15:17:37] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 15:17:37] Mongodb database setup completed 
+[2018-09-26 15:18:25] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 15:18:25] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 15:18:25] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 15:18:25] [Bot.setup] Loading 7 service(s) 
+[2018-09-26 15:18:25] [Bot.setup] Loaded 7 service(s) 
+[2018-09-26 15:18:25] [Bot.enableFragments] Unknown fragment instance, ignoring 
+[2018-09-26 15:18:25] [Bot.setup] Loading 44 command(s) 
+[2018-09-26 15:18:25] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 15:18:25] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 15:18:25] [Bot.setup] Loaded 44 command(s) 
+[2018-09-26 15:18:25] [Bot.connect] Starting 
+[2018-09-26 15:18:25] [Bot.setup] Bot setup completed 
+[2018-09-26 15:18:26] Setting up mongodb database 
+[2018-09-26 15:18:26] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 15:18:26] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 15:18:26] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 15:18:26] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 15:18:28] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 15:18:28] Mongodb database setup completed 
+[2018-09-26 16:06:31] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:06:31] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:06:31] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:06:31] [Bot.setup] Loading 7 service(s) 
+[2018-09-26 16:06:32] [Bot.setup] Loaded 7 service(s) 
+[2018-09-26 16:06:32] [Bot.enableFragments] Unknown fragment instance, ignoring 
+[2018-09-26 16:06:32] [Bot.setup] Loading 44 command(s) 
+[2018-09-26 16:06:34] [Bot.setup] Loaded 44 command(s) 
+[2018-09-26 16:06:34] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:06:34] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:06:34] [Bot.setup] Bot setup completed 
+[2018-09-26 16:06:34] [Bot.connect] Starting 
+[2018-09-26 16:06:35] Setting up mongodb database 
+[2018-09-26 16:06:35] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:06:35] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:06:35] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:06:35] [Bot.setupEvents] Ready | Took 3s 
+[2018-09-26 16:06:37] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:06:37] Mongodb database setup completed 
+[2018-09-26 16:07:26] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:07:26] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:07:26] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:07:26] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:07:26] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:07:26] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:07:26] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:07:26] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:07:26] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:07:26] [Bot.setup] Bot setup completed 
+[2018-09-26 16:07:26] [Bot.connect] Starting 
+[2018-09-26 16:07:27] Setting up mongodb database 
+[2018-09-26 16:07:27] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:07:27] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:07:27] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:07:27] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 16:07:29] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:07:29] Mongodb database setup completed 
+[2018-09-26 16:09:31] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:09:31] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:09:31] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:09:31] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:09:31] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:09:31] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:09:31] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:09:31] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:09:31] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:09:31] [Bot.setup] Bot setup completed 
+[2018-09-26 16:09:31] [Bot.connect] Starting 
+[2018-09-26 16:09:32] Setting up mongodb database 
+[2018-09-26 16:09:32] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:09:32] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:09:32] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:09:32] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 16:09:34] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:09:34] Mongodb database setup completed 
+[2018-09-26 16:11:10] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:11:10] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:11:10] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:11:10] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:11:10] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:11:10] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:11:10] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:11:10] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:11:10] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:11:10] [Bot.setup] Bot setup completed 
+[2018-09-26 16:11:10] [Bot.connect] Starting 
+[2018-09-26 16:11:11] Setting up mongodb database 
+[2018-09-26 16:11:11] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:11:11] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:11:11] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:11:11] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 16:11:13] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:11:13] Mongodb database setup completed 
+[2018-09-26 16:16:00] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:16:00] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:16:00] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:16:00] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:16:00] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:16:00] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:16:00] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:16:00] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:16:00] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:16:00] [Bot.setup] Bot setup completed 
+[2018-09-26 16:16:00] [Bot.connect] Starting 
+[2018-09-26 16:16:01] Setting up mongodb database 
+[2018-09-26 16:16:01] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:16:01] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:16:01] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:16:01] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 16:16:03] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:16:03] Mongodb database setup completed 
+[2018-09-26 16:16:52] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:16:52] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:16:52] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:16:52] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:16:52] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:16:52] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:16:52] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:16:52] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:16:52] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:16:52] [Bot.connect] Starting 
+[2018-09-26 16:16:52] [Bot.setup] Bot setup completed 
+[2018-09-26 16:16:53] Setting up mongodb database 
+[2018-09-26 16:16:53] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:16:53] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:16:53] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:16:53] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 16:16:55] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:16:55] Mongodb database setup completed 
+[2018-09-26 16:17:47] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:17:47] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:17:47] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:17:47] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:17:47] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:17:47] [:ProtectionService.canStart] Database not available, Protection service not starting 
+[2018-09-26 16:17:47] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:17:47] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:17:47] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:17:47] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:17:47] [Bot.setup] Bot setup completed 
+[2018-09-26 16:17:47] [Bot.connect] Starting 
+[2018-09-26 16:17:48] Setting up mongodb database 
+[2018-09-26 16:17:48] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:17:48] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:17:48] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:17:48] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 16:17:50] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:17:50] Mongodb database setup completed 
+[2018-09-26 16:18:27] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:18:27] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:18:27] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:18:27] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:18:27] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:18:27] [:ProtectionService.canStart] Database not available, Protection service not starting 
+[2018-09-26 16:18:27] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:18:28] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:18:28] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:18:28] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:18:28] [Bot.setup] Bot setup completed 
+[2018-09-26 16:18:28] [Bot.connect] Starting 
+[2018-09-26 16:18:28] Setting up mongodb database 
+[2018-09-26 16:18:28] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:18:28] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:18:29] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:18:29] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 16:18:31] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:18:31] Mongodb database setup completed 
+[2018-09-26 16:19:47] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:19:47] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:19:47] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:19:47] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:19:47] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:19:47] [:ProtectionService.canStart] Database not available, Protection service not starting 
+[2018-09-26 16:19:47] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:19:48] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 16:19:48] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:19:48] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 16:19:48] [Bot.connect] Starting 
+[2018-09-26 16:19:48] [Bot.setup] Bot setup completed 
+[2018-09-26 16:19:49] Setting up mongodb database 
+[2018-09-26 16:19:49] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir 'C:\Users\Y15707110\Documents\projects\warden\dist\tmp\u434432910947385354') 
+[2018-09-26 16:19:49] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 16:19:49] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 16:19:49] [Bot.setupEvents] Ready | Took 2s 
+[2018-09-26 16:19:51] There was an error establishing connection to the MongoDB database. 
+[2018-09-26 16:19:51] Mongodb database setup completed 
+[2018-09-26 16:21:39] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:21:39] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:21:39] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:21:39] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:24:07] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:24:07] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:24:07] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:24:07] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:27:40] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:27:40] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:27:40] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:27:40] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:30:57] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:30:57] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:30:57] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:30:57] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:42:13] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:42:13] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:42:13] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:42:13] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:42:26] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:42:26] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:42:26] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:42:26] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:47:41] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 16:47:41] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 16:47:41] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 16:47:41] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 16:47:41] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 16:47:41] [:ProtectionService.canStart] Database not available, Protection service not starting 
+[2018-09-26 16:47:41] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 16:47:41] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 16:47:41] [Bot.setupEvents] Setting up Discord events 

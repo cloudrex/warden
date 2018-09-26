@@ -9,12 +9,11 @@ export default class WardenOfficialService extends Service {
         description: "Custom functionality for Warden's official server"
     };
 
-    @command("xtest", "Test decorator commands")
+    /* @command("xtest", "Test decorator commands")
     public xtestCommand(): void {
         console.log("xtest command executed!");
-    }
+    } */
 
-    @on("message")
     private async handleMessage(message: Message): Promise<void> {
         // TODO: this.api is undefined (decorator functions may been to be .bind())
         /* if (message.channel.id === (this.api as WardenAPI).unresolvedChannels.suggestions) {

@@ -1,4 +1,4 @@
-import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel} from "discord.js";
+import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel, Role} from "discord.js";
 import WardenAPI from "../core/warden-api";
 import {Bot, CommandParser, Log, Service, on} from "discord-anvil";
 import Patterns from "discord-anvil/dist/core/patterns";
@@ -20,7 +20,6 @@ export default class ProtectionService extends Service {
         description: "Autonomous server protection and moderation"
     };
 
-    @on(DiscordEvent.Message)
     private async handleMessage(message: Message): Promise<void> {
         let tracking: boolean | null = await MemberConfig.get(message.author.id, "tracking") as boolean | null;
 
@@ -150,8 +149,7 @@ export default class ProtectionService extends Service {
         }
     }
 
-    @on(DiscordEvent.MessageDeleted)
-    private handleMessageDelete(message: Message): void {
+    private handleMessageDeleted(message: Message): void {
         // Save deleted messages for snipe command
         // TODO: Temporary hotfix
         if (CommandParser.getCommandBase(message.content, this.bot.settings.general.prefixes) === "snipe") {
@@ -166,16 +164,14 @@ export default class ProtectionService extends Service {
         }, 1800000);
     }
 
-    @on(DiscordEvent.GuildMemberLeft)
-    private handleGuildMemberRemove(member: GuildMember): void {
+    private handleGuildMemberLeft(member: GuildMember): void {
         // Prevent members from avoiding roles
         if (member.roles.has(this.api.roles.muted)) {
             muteLeavers.push(member.id);
         }
     }
 
-    @on(DiscordEvent.GuildMemberLeft)
-    private async handleGuildMemberAdd(member: GuildMember): Promise<void> {
+    private async handleGuildMemberJoined(member: GuildMember): Promise<void> {
         if (muteLeavers.includes(member.id)) {
             const dm: DMChannel = await member.createDM();
 
@@ -207,8 +203,7 @@ export default class ProtectionService extends Service {
         }
     }
 
-    @on(DiscordEvent.GuildMemberUpdated)
-    private async handleGuildMemberUpdate(old: GuildMember, updated: GuildMember): Promise<void> {
+    private async handleGuildMemberUpdated(old: GuildMember, updated: GuildMember): Promise<void> {
         // Conflicting Bots
         if (updated.user.id === this.bot.client.user.id) {
             if (Utils.hasModerationPowers(updated) && !Utils.hasModerationPowers(old)) {
@@ -284,9 +279,39 @@ export default class ProtectionService extends Service {
         if (this.bot.options.autoDeleteCommands) {
             Log.warn("[Protection.start] The autoDeleteCommands option is updatedly incompatible with the snipe command");
         }
+
+        // Register listeners
+        this.bot.client.on(DiscordEvent.Message, this.handleMessage);
+        this.bot.client.on(DiscordEvent.MessageDeleted, this.handleMessageDeleted);
+        this.bot.client.on(DiscordEvent.GuildMemberLeft, this.handleGuildMemberLeft);
+        this.bot.client.on(DiscordEvent.GuildMemberJoined, this.handleGuildMemberJoined);
+        this.bot.client.on(DiscordEvent.GuildMemberUpdated, this.handleGuildMemberUpdated);
     }
 
-    private static mute(member: GuildMember): void {
-        member.addRole(member.guild.roles.find("name", "Muted"));
+    readonly canStart = (): boolean => {
+        const databaseAvailable: boolean = Mongo.available;
+
+        if (!databaseAvailable) {
+            Log.warn("[:ProtectionService.canStart] Database not available, Protection service not starting");
+        }
+
+        return databaseAvailable;
+    }
+
+    /**
+     * @param {GuildMember} member
+     * @return {boolean} Whether the member was muted (if member was already muted, returns false)
+     */
+    private static mute(member: GuildMember): boolean {
+        // TODO: Add error checking/catching
+        const role: Role = member.guild.roles.find("name", "Muted");
+
+        if (!member.roles.has(role.id)) {
+            member.addRole(role);
+
+            return true;
+        }
+
+        return false;
     }
 }
