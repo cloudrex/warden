@@ -118,6 +118,10 @@ export default abstract class Mongo {
 
     public static collections: MongoCollections;
 
+    public static get available(): boolean {
+        return Mongo.db !== undefined;
+    }
+
     public static connect(): Promise<boolean> {
         return new Promise((resolve) => {
             MongoClient.connect(url, {

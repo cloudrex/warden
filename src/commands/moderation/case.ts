@@ -10,7 +10,7 @@ export default class CaseCommand extends Command {
 
     readonly meta = {
         name: "case",
-        description: "Grab data of a case"
+        description: "Grab a moderation case"
     };
 
     readonly arguments: Array<Argument> = [
