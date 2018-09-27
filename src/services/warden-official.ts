@@ -21,8 +21,8 @@ export default class WardenOfficialService extends Service {
             if (message.deletable) {
                 await message.delete();
             }
-        }
-    } */
+        } */
+    }
 
     public start(): void {
         console.log("message from warden official");
