@@ -23648,3 +23648,417 @@ limit: int value should be less than or equal to 100.
 [2018-09-25 19:41:56] [Bot.setupAuthStore] Auth store setup completed 
 [2018-09-25 19:41:56] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
 [2018-09-25 19:41:56] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:12:47] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:12:47] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:12:47] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:12:47] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 23:12:47] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:12:47] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 23:12:47] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 23:12:48] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 23:12:48] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:12:48] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:12:48] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:12:48] [Bot.setup] Bot setup completed 
+[2018-09-25 23:12:48] [Bot.connect] Starting 
+[2018-09-25 23:12:48] Setting up mongodb database 
+[2018-09-25 23:12:48] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:12:48] Successfully connected to the MongoDB database. 
+[2018-09-25 23:12:48] Mongodb database setup completed 
+[2018-09-25 23:12:48] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:12:48] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:12:48] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:13:19] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:13:19] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:13:19] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:13:19] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 23:13:19] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:13:19] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 23:13:19] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 23:13:20] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 23:13:20] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:13:20] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:13:20] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:13:20] [Bot.setup] Bot setup completed 
+[2018-09-25 23:13:20] [Bot.connect] Starting 
+[2018-09-25 23:13:20] Setting up mongodb database 
+[2018-09-25 23:13:20] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:13:20] Successfully connected to the MongoDB database. 
+[2018-09-25 23:13:20] Mongodb database setup completed 
+[2018-09-25 23:13:20] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:13:20] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:13:20] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:15:01] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:15:01] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:15:01] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:15:01] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 23:15:01] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:15:01] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 23:15:01] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 23:15:02] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 23:15:02] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:15:02] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:15:02] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:15:02] [Bot.setup] Bot setup completed 
+[2018-09-25 23:15:02] [Bot.connect] Starting 
+[2018-09-25 23:15:02] Setting up mongodb database 
+[2018-09-25 23:15:02] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:15:02] Successfully connected to the MongoDB database. 
+[2018-09-25 23:15:02] Mongodb database setup completed 
+[2018-09-25 23:15:02] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:15:02] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:15:02] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:15:55] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:15:55] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:15:55] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:15:55] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 23:15:55] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:15:55] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 23:15:55] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 23:15:55] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 23:15:55] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:15:55] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:15:55] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:15:55] [Bot.setup] Bot setup completed 
+[2018-09-25 23:15:55] [Bot.connect] Starting 
+[2018-09-25 23:15:55] Setting up mongodb database 
+[2018-09-25 23:15:55] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:15:55] Successfully connected to the MongoDB database. 
+[2018-09-25 23:15:55] Mongodb database setup completed 
+[2018-09-25 23:15:55] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:15:55] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:15:55] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:17:08] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:17:08] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:17:08] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:17:08] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 23:17:08] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:17:08] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 23:17:08] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 23:17:08] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 23:17:08] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:17:08] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:17:08] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:17:08] [Bot.setup] Bot setup completed 
+[2018-09-25 23:17:08] [Bot.connect] Starting 
+[2018-09-25 23:17:08] Setting up mongodb database 
+[2018-09-25 23:17:08] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:17:08] Successfully connected to the MongoDB database. 
+[2018-09-25 23:17:08] Mongodb database setup completed 
+[2018-09-25 23:17:08] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:17:08] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:17:08] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:18:06] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:18:06] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:18:06] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:18:06] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 23:18:06] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 23:18:06] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:18:06] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 23:18:06] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 23:18:06] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:18:06] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:18:06] [Bot.setup] Bot setup completed 
+[2018-09-25 23:18:06] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:18:06] [Bot.connect] Starting 
+[2018-09-25 23:18:07] Setting up mongodb database 
+[2018-09-25 23:18:07] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:18:07] Successfully connected to the MongoDB database. 
+[2018-09-25 23:18:07] Mongodb database setup completed 
+[2018-09-25 23:18:07] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:18:07] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:18:07] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:36:32] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:36:32] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:36:32] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:36:32] [Bot.setup] Loading 8 service(s) 
+[2018-09-25 23:36:32] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:36:32] [Bot.setup] Loaded 7 service(s) 
+[2018-09-25 23:36:32] [Bot.setup] Loading 44 command(s) 
+[2018-09-25 23:36:32] [Bot.setup] Loaded 44 command(s) 
+[2018-09-25 23:36:32] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:36:32] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:36:32] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:36:32] [Bot.setup] Bot setup completed 
+[2018-09-25 23:36:32] [Bot.connect] Starting 
+[2018-09-25 23:36:33] Setting up mongodb database 
+[2018-09-25 23:36:33] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:36:33] Successfully connected to the MongoDB database. 
+[2018-09-25 23:36:33] Mongodb database setup completed 
+[2018-09-25 23:36:33] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:36:33] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:36:33] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:36:47] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:36:47] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:36:47] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:36:47] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 23:36:47] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:36:47] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 23:36:47] [Bot.setup] Loading 43 command(s) 
+[2018-09-25 23:36:47] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:36:47] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:36:47] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:36:47] [Bot.setup] Bot setup completed 
+[2018-09-25 23:36:47] [Bot.connect] Starting 
+[2018-09-25 23:36:47] [Bot.setup] Loaded 43 command(s) 
+[2018-09-25 23:36:48] Setting up mongodb database 
+[2018-09-25 23:36:48] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:36:48] Successfully connected to the MongoDB database. 
+[2018-09-25 23:36:48] Mongodb database setup completed 
+[2018-09-25 23:36:48] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:36:48] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:36:48] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:44:18] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:44:18] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:44:18] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:44:18] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 23:44:18] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:44:18] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 23:44:18] [Bot.setup] Loading 43 command(s) 
+[2018-09-25 23:44:18] [Bot.setup] Loaded 43 command(s) 
+[2018-09-25 23:44:18] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:44:18] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:44:18] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:44:18] [Bot.setup] Bot setup completed 
+[2018-09-25 23:44:18] [Bot.connect] Starting 
+[2018-09-25 23:44:19] Setting up mongodb database 
+[2018-09-25 23:44:19] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:44:19] Successfully connected to the MongoDB database. 
+[2018-09-25 23:44:19] Mongodb database setup completed 
+[2018-09-25 23:44:19] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:44:19] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:44:19] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:44:52] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:44:52] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:44:52] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:44:52] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 23:44:52] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:44:52] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 23:44:53] [Bot.setup] Loaded 43 command(s) 
+[2018-09-25 23:44:52] [Bot.setup] Loading 43 command(s) 
+[2018-09-25 23:44:53] [CommandStore.register] Failed to register command 'clearwarns' (Already exists) 
+[2018-09-25 23:44:53] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:44:53] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:44:53] [Bot.setup] Bot setup completed 
+[2018-09-25 23:44:53] [Bot.connect] Starting 
+[2018-09-25 23:44:53] Setting up mongodb database 
+[2018-09-25 23:44:53] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:44:53] Successfully connected to the MongoDB database. 
+[2018-09-25 23:44:53] Mongodb database setup completed 
+[2018-09-25 23:44:53] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:44:53] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:44:53] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:46:21] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:46:21] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:46:21] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:46:21] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 23:46:21] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:46:21] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 23:46:21] [Bot.setup] Loading 43 command(s) 
+[2018-09-25 23:46:21] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:46:21] [Bot.setup] Loaded 43 command(s) 
+[2018-09-25 23:46:21] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:46:21] [Bot.setup] Bot setup completed 
+[2018-09-25 23:46:21] [Bot.connect] Starting 
+[2018-09-25 23:46:22] Setting up mongodb database 
+[2018-09-25 23:46:22] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:46:22] Successfully connected to the MongoDB database. 
+[2018-09-25 23:46:22] Mongodb database setup completed 
+[2018-09-25 23:46:22] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:46:22] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:46:22] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:50:11] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:50:11] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:50:11] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:50:11] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 23:50:11] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:50:11] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 23:50:11] [Bot.setup] Loading 43 command(s) 
+[2018-09-25 23:50:12] [Bot.setup] Loaded 43 command(s) 
+[2018-09-25 23:50:12] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:50:12] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:50:12] [Bot.setup] Bot setup completed 
+[2018-09-25 23:50:12] [Bot.connect] Starting 
+[2018-09-25 23:50:12] Setting up mongodb database 
+[2018-09-25 23:50:12] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:50:12] Successfully connected to the MongoDB database. 
+[2018-09-25 23:50:12] Mongodb database setup completed 
+[2018-09-25 23:50:12] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:50:12] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:50:12] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:52:57] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:52:57] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:52:57] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:52:57] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 23:52:57] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:52:57] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 23:52:57] [Bot.setup] Loading 43 command(s) 
+[2018-09-25 23:52:57] [Bot.setup] Loaded 43 command(s) 
+[2018-09-25 23:52:57] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:52:57] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:52:57] [Bot.setup] Bot setup completed 
+[2018-09-25 23:52:57] [Bot.connect] Starting 
+[2018-09-25 23:52:58] Setting up mongodb database 
+[2018-09-25 23:52:58] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:52:58] Successfully connected to the MongoDB database. 
+[2018-09-25 23:52:58] Mongodb database setup completed 
+[2018-09-25 23:52:58] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:52:58] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:52:58] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-25 23:53:27] [Bot.setup] Attempting to load internal fragments 
+[2018-09-25 23:53:27] [Bot.setup] Loading 6 internal fragments 
+[2018-09-25 23:53:27] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-25 23:53:27] [Bot.setup] Loading 6 service(s) 
+[2018-09-25 23:53:27] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-25 23:53:27] [Bot.setup] Loaded 5 service(s) 
+[2018-09-25 23:53:27] [Bot.setup] Loading 43 command(s) 
+[2018-09-25 23:53:27] [Bot.setup] Loaded 43 command(s) 
+[2018-09-25 23:53:27] [Bot.setupEvents] Setting up Discord events 
+[2018-09-25 23:53:27] [Bot.setup] Bot setup completed 
+[2018-09-25 23:53:27] [Bot.connect] Starting 
+[2018-09-25 23:53:27] [Bot.setupEvents] Discord events setup completed 
+[2018-09-25 23:53:28] Setting up mongodb database 
+[2018-09-25 23:53:28] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-25 23:53:28] Mongodb database setup completed 
+[2018-09-25 23:53:28] Successfully connected to the MongoDB database. 
+[2018-09-25 23:53:28] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-25 23:53:28] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-25 23:53:28] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 00:02:54] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 00:02:54] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 00:02:54] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 00:02:54] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-26 00:02:54] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 00:02:54] [Bot.setup] Loaded 5 service(s) 
+[2018-09-26 00:02:54] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 00:02:54] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 00:02:54] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 00:02:54] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 00:02:54] [Bot.setup] Bot setup completed 
+[2018-09-26 00:02:54] [Bot.connect] Starting 
+[2018-09-26 00:02:55] Setting up mongodb database 
+[2018-09-26 00:02:55] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-26 00:02:55] Successfully connected to the MongoDB database. 
+[2018-09-26 00:02:55] Mongodb database setup completed 
+[2018-09-26 00:02:55] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 00:02:55] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 00:02:55] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 00:04:12] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 00:04:12] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 00:04:12] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 00:04:12] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 00:04:12] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-26 00:04:12] [Bot.setup] Loaded 5 service(s) 
+[2018-09-26 00:04:12] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 00:04:12] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 00:04:12] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 00:04:12] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 00:04:12] [Bot.setup] Bot setup completed 
+[2018-09-26 00:04:12] [Bot.connect] Starting 
+[2018-09-26 00:04:13] Setting up mongodb database 
+[2018-09-26 00:04:13] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-26 00:04:13] Successfully connected to the MongoDB database. 
+[2018-09-26 00:04:13] Mongodb database setup completed 
+[2018-09-26 00:04:13] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 00:04:13] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 00:04:13] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 00:44:06] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 00:44:06] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 00:44:06] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 00:44:06] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 00:44:06] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-26 00:44:06] [Bot.setup] Loaded 5 service(s) 
+[2018-09-26 00:44:06] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 00:44:06] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 00:44:06] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 00:44:06] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 00:44:06] [Bot.setup] Bot setup completed 
+[2018-09-26 00:44:06] [Bot.connect] Starting 
+[2018-09-26 00:44:06] Setting up mongodb database 
+[2018-09-26 00:44:06] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-26 00:44:06] Successfully connected to the MongoDB database. 
+[2018-09-26 00:44:06] Mongodb database setup completed 
+[2018-09-26 00:44:06] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 00:44:06] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 00:44:06] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 00:53:39] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 00:53:39] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 00:53:39] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 00:53:39] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 00:53:39] [FragmentLoader.load] There was an error while loading a fragment: TypeError: Cannot set property 'meta' of null 
+[2018-09-26 00:53:39] [Bot.setup] Loaded 5 service(s) 
+[2018-09-26 00:53:39] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 00:53:39] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 00:53:39] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 00:53:39] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 00:53:39] [Bot.setup] Bot setup completed 
+[2018-09-26 00:53:39] [Bot.connect] Starting 
+[2018-09-26 00:53:39] Setting up mongodb database 
+[2018-09-26 00:53:39] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-26 00:53:39] Successfully connected to the MongoDB database. 
+[2018-09-26 00:53:39] Mongodb database setup completed 
+[2018-09-26 00:53:39] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 00:53:39] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 00:53:39] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 01:22:51] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 01:22:51] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 01:22:51] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 01:22:51] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 01:30:16] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 01:30:16] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 01:30:16] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 01:30:16] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 01:30:16] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 01:30:16] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 01:30:16] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 01:30:16] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 01:30:16] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 01:30:16] [Bot.setup] Bot setup completed 
+[2018-09-26 01:30:16] [Bot.connect] Starting 
+[2018-09-26 01:30:16] Setting up mongodb database 
+[2018-09-26 01:30:16] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-26 01:30:16] Successfully connected to the MongoDB database. 
+[2018-09-26 01:30:16] Mongodb database setup completed 
+[2018-09-26 01:30:16] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 01:30:16] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 01:30:16] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 01:33:20] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 01:33:20] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 01:33:20] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 01:33:20] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 01:33:20] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 01:33:20] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 01:33:20] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 01:33:20] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 01:33:20] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 01:33:20] [Bot.setup] Bot setup completed 
+[2018-09-26 01:33:20] [Bot.connect] Starting 
+[2018-09-26 01:33:20] Setting up mongodb database 
+[2018-09-26 01:33:20] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-26 01:33:20] Successfully connected to the MongoDB database. 
+[2018-09-26 01:33:20] Mongodb database setup completed 
+[2018-09-26 01:33:20] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 01:33:20] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 01:33:20] [Bot.setupEvents] Ready | Took 1s 
+[2018-09-26 01:35:09] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 01:35:09] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 01:35:09] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 01:35:09] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 01:36:51] [Bot.setup] Attempting to load internal fragments 
+[2018-09-26 01:36:51] [Bot.setup] Loading 6 internal fragments 
+[2018-09-26 01:36:51] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-09-26 01:36:51] [Bot.setup] Loading 6 service(s) 
+[2018-09-26 01:36:51] [Bot.setup] Loaded 6 service(s) 
+[2018-09-26 01:36:51] [Bot.setup] Loading 43 command(s) 
+[2018-09-26 01:36:51] [Bot.setup] Loaded 43 command(s) 
+[2018-09-26 01:36:51] [Bot.setupEvents] Setting up Discord events 
+[2018-09-26 01:36:51] [Bot.setupEvents] Discord events setup completed 
+[2018-09-26 01:36:51] [Bot.setup] Bot setup completed 
+[2018-09-26 01:36:51] [Bot.connect] Starting 
+[2018-09-26 01:36:52] Setting up mongodb database 
+[2018-09-26 01:36:52] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-09-26 01:36:52] Successfully connected to the MongoDB database. 
+[2018-09-26 01:36:52] Mongodb database setup completed 
+[2018-09-26 01:36:52] [Bot.setupAuthStore] Auth store setup completed 
+[2018-09-26 01:36:52] [Bot.setupEvents] Logged in as Inspector#8221 | 1 guild(s) 
+[2018-09-26 01:36:52] [Bot.setupEvents] Ready | Took 1s 

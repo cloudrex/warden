@@ -13,11 +13,12 @@ export default class ReputationService extends Service {
     };
 
     @on(DiscordEvent.MessageReactionAdded)
-    private handleReaction(message: Message): void {
-
+    public handleReaction(message: Message): void {
+        // TODO
+        console.log("REACTION ADDED!");
     }
 
     public start(): void {
-
+        //
     }
 }

@@ -21,7 +21,11 @@ export default class ProtectionService extends Service {
     };
 
     @on(DiscordEvent.Message)
-    private async handleMessage(message: Message): Promise<void> {
+    public async handleMessage(message: Message): Promise<void> {
+        console.log(!this.bot ? "BOT -> NULL" : "BOT -> ok");
+
+        console.log(this);
+
         let tracking: boolean | null = await MemberConfig.get(message.author.id, "tracking") as boolean | null;
 
         tracking = tracking === null ? true : tracking;
@@ -281,6 +285,8 @@ export default class ProtectionService extends Service {
     }
 
     public start(): void {
+        console.log(!this.bot ? "[--------------------------------------START] BOT -> NULL" : "BOT -> ok");
+
         if (this.bot.options.autoDeleteCommands) {
             Log.warn("[Protection.start] The autoDeleteCommands option is updatedly incompatible with the snipe command");
         }
