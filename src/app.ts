@@ -1,3 +1,6 @@
+// .env
+require("dotenv").config();
+
 import Mongo from "./database/mongo-database";
 import {GuildMember, Message} from "discord.js";
 import path from "path";
