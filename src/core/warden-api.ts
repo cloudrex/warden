@@ -123,7 +123,8 @@ export default class WardenAPI {
 
                 await (await action.member.createDM()).send(new RichEmbed()
                     .setDescription(warnDM)
-                    .setColor("GOLD"));
+                    .setColor("GOLD"))
+                    .catch();
 
                 break;
             }
@@ -147,7 +148,8 @@ export default class WardenAPI {
 
                 (await action.member.createDM()).send(new RichEmbed()
                     .setDescription(`You were muted by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                    .setColor("BLUE"));
+                    .setColor("BLUE"))
+                    .catch();
 
                 break;
             }
@@ -174,7 +176,8 @@ export default class WardenAPI {
 
                 await (await action.member.createDM()).send(new RichEmbed()
                     .setDescription(`You were banned from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                    .setColor("RED"));
+                    .setColor("RED"))
+                    .catch();
 
                 break;
             }
