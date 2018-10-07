@@ -18,15 +18,6 @@ import {
 import {ArgumentResolver} from "discord-anvil/dist/commands/command";
 import WardenAPI from "./core/warden-api";
 
-export abstract class Warden {
-    @on("ready")
-    ready() {
-        console.log("I'm ready!");
-    }
-}
-
-Warden;
-
 const baseDir: string = "./src";
 
 Log.level = LogLevel.Debug;
@@ -89,7 +80,7 @@ async function start() {
 
         options: {
             logMessages: false,
-            consoleInterface: false,
+            consoleInterface: true,
             updateOnMessageEdit: true,
 
             emojis: {
