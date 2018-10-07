@@ -15,7 +15,7 @@ export default class RoleAllCommand extends Command {
     };
 
     readonly restrict: any = {
-        issuerPermissions: [Permission.ManageGuild],
+        issuerPermissions: [Permission.ManageGuild, Permission.ManageRoles],
         selfPermissions: [Permission.ManageRoles],
         cooldown: 60,
         environment: ChatEnvironment.Guild
