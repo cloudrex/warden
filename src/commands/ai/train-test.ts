@@ -41,6 +41,7 @@ export default class TrainTest extends Command {
     constructor() {
         super();
 
+        this.restrict.specific = [RestrictGroup.BotOwner];
         this.restrict.cooldown = 5;
     }
 

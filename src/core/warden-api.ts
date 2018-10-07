@@ -119,13 +119,6 @@ export default class WardenAPI {
                     .setFooter(autoWarn ? "Automatically warned" : `Warned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
                     .setColor("GOLD");
 
-                if (this.channels) {
-                    await this.channels.modLog.send(embed);
-                }
-                else {
-                    Log.error("[WardenAPI.executeAction] Expecting channels");
-                }
-
                 const warnDM: string = autoWarn ? `You were automatically warned for **${action.reason}**` : `You were warned by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`;
 
                 await (await action.member.createDM()).send(new RichEmbed()
