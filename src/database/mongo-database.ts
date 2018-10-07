@@ -1,5 +1,5 @@
 import {Collection, Db, MongoClient} from "mongodb";
-import Log from "discord-anvil/dist/core/log";
+import Log from "forge/dist/core/log";
 import {ChannelResolvable, GuildMember, Snowflake} from "discord.js";
 import {MemberConfigType} from "../core/warden-api";
 
