@@ -1,4 +1,4 @@
-import {ChatEnvironment, Command, CommandContext, Permission} from "dforge";
+import {ChatEnvironment, Command, CommandContext, Permission} from "forge";
 import {CommandType} from "../general/help";
 import {Message, Snowflake, TextChannel} from "discord.js";
 import {Argument, PrimitiveArgType, RestrictGroup} from "forge/dist/commands/command";
