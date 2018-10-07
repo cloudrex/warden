@@ -13,7 +13,7 @@ export default class UnlockCommand extends Command {
     };
 
     readonly restrict: any = {
-        specific: [RestrictGroup.BotOwner],
+        specific: [RestrictGroup.ServerModerator],
         selfPermissions: [Permission.ManageRoles]
     };
 
