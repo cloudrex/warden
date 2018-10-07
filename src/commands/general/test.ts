@@ -1,4 +1,4 @@
-import {Command, CommandContext, ChatEnvironment} from "discord-anvil";
+import {Command, CommandContext} from "forge";
 import {CommandType} from "./help";
 import {TextChannel, Permissions} from "discord.js";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";

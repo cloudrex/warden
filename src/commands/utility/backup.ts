@@ -1,9 +1,9 @@
-import {Command, Permission, Utils} from "discord-anvil";
+import {Command, Permission, Utils} from "forge";
 import {Channel, GuildChannel, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {ChannelType, DatabaseChannel} from "../../database/mongo-database";
-import {RestrictGroup} from "discord-anvil/dist/commands/command";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import {RestrictGroup} from "forge/dist/commands/command";
+import CommandContext from "forge/dist/commands/command-context";
 
 export default class BackupCommand extends Command {
     readonly type = CommandType.Utility;

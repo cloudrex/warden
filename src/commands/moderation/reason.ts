@@ -1,7 +1,7 @@
-import {ChatEnvironment, Command} from "discord-anvil";
+import {ChatEnvironment, Command} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "discord-anvil/dist/commands/command";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import {RestrictGroup} from "forge/dist/commands/command";
+import CommandContext from "forge/dist/commands/command-context";
 
 export default class ReasonCommand extends Command {
     readonly type = CommandType.Moderation;

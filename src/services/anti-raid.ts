@@ -1,6 +1,6 @@
-import {Service, ServiceOptions, on, Utils} from "discord-anvil";
+import {Service, ServiceOptions, on, Utils} from "forge";
 import {Snowflake, Message} from "discord.js";
-import {DiscordEvent} from "discord-anvil/dist/decorators/decorators";
+import {DiscordEvent} from "forge/dist/decorators/decorators";
 import {compareTwoStrings} from "string-similarity";
 
 const threshold: number = 70;

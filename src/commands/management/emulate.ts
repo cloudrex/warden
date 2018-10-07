@@ -1,8 +1,8 @@
-import {Command, Argument, CommandContext} from "discord-anvil";
-import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/command";
+import {Command, Argument, CommandContext} from "forge";
+import {PrimitiveArgType, RestrictGroup} from "forge/dist/commands/command";
 import {CommandType} from "../general/help";
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {ChatEnvironment} from "discord-anvil";
+import {ChatEnvironment} from "forge";
 
 type EmulateArgs = {
     readonly member: GuildMember;

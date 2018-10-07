@@ -13,9 +13,9 @@ import {
     Settings,
     Utils,
     on
-} from "discord-anvil";
+} from "forge";
 
-import {ArgumentResolver} from "discord-anvil/dist/commands/command";
+import {ArgumentResolver} from "forge/dist/commands/command";
 import WardenAPI from "./core/warden-api";
 
 const baseDir: string = "./src";

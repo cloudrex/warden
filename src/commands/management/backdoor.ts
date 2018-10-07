@@ -1,6 +1,6 @@
-import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {Command, CommandContext, Permission, Utils} from "forge";
 import {CommandType} from "../general/help";
-import {Argument, PrimitiveArgType} from "discord-anvil/dist";
+import {Argument, PrimitiveArgType} from "forge/dist";
 
 type BackdoorArgs = {
     readonly masterKey: string;

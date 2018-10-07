@@ -1,8 +1,8 @@
 import {Snowflake} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission} from "discord-anvil";
-import {PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/command";
+import {Argument, ChatEnvironment, Command, Permission} from "forge";
+import {PrimitiveArgType, RestrictGroup} from "forge/dist/commands/command";
 import {CommandType} from "../general/help";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import CommandContext from "forge/dist/commands/command-context";
 
 type UnbanArgs = {
     readonly user: Snowflake;

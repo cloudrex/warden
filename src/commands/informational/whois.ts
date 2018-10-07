@@ -1,5 +1,5 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {Command, Argument, CommandContext, Utils} from "discord-anvil";
+import {Command, Argument, CommandContext, Utils} from "forge";
 import {CommandType} from "../general/help";
 import {RestrictGroup} from "discord-anvil/dist/commands/command";
 

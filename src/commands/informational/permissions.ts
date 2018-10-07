@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, Utils, ChatEnvironment} from "discord-anvil";
+import {Command, CommandContext, Permission, Utils, ChatEnvironment} from "forge";
 import {CommandType} from "../general/help";
 import {table, TableUserConfig} from "table";
 import {Permissions, PermissionResolvable} from "discord.js";

@@ -1,8 +1,8 @@
-import {Command} from "discord-anvil";
+import {Command} from "forge";
 import {CommandType} from "../general/help";
-import {Argument} from "discord-anvil/dist/commands/command";
+import {Argument} from "forge/dist/commands/command";
 import {GuildMember, RichEmbed} from "discord.js";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import CommandContext from "forge/dist/commands/command-context";
 
 type AvatarArgs = {
     readonly member: GuildMember;

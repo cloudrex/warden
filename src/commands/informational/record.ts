@@ -1,9 +1,9 @@
-import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {Command, CommandContext, Permission, Utils} from "forge";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
-import Patterns from "discord-anvil/dist/core/patterns";
-import {Argument} from "discord-anvil/dist";
+import Patterns from "forge/dist/core/patterns";
+import {Argument} from "forge/dist";
 
 const max: number = 1000;
 

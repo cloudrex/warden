@@ -1,10 +1,10 @@
 import WardenAPI from "../../core/warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
-import {Command, SetupHelper, SetupHelperResult} from "discord-anvil";
+import {Command, SetupHelper, SetupHelperResult} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "discord-anvil/dist/commands/command";
-import Utils from "discord-anvil/dist/core/utils";
-import CommandContext from "discord-anvil/dist/commands/command-context";
+import {RestrictGroup} from "forge/dist/commands/command";
+import Utils from "forge/dist/core/utils";
+import CommandContext from "forge/dist/commands/command-context";
 
 export default class EmbedCommand extends Command {
     readonly type = CommandType.Utility;

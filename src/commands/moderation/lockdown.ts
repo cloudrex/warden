@@ -1,7 +1,7 @@
 import {Role} from "discord.js";
-import {Command, CommandContext, Permission} from "discord-anvil";
+import {Command, CommandContext, Permission} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "forge/dist/commands/command";
 
 export default class LockdownCommand extends Command {
     readonly type = CommandType.Moderation;

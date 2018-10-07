@@ -1,5 +1,5 @@
 import {Message, Snowflake} from "discord.js";
-import {Bot, CommandParser, Log, Service} from "discord-anvil";
+import {Bot, CommandParser, Log, Service} from "forge";
 import {loaded, ne} from "../commands/ai/spam-train";
 import {NeuralNetwork} from "brain.js";
 

@@ -1,6 +1,6 @@
-import {Command, CommandContext, FormattedMessage} from "discord-anvil";
+import {Command, CommandContext, FormattedMessage} from "forge";
 import {CommandType} from "./help";
-import {Argument, PrimitiveArgType} from "discord-anvil/dist";
+import {Argument, PrimitiveArgType} from "forge/dist";
 import WardenAPI from "../../core/warden-api";
 import {DatabaseUserConfig} from "../../database/mongo-database";
 import MemberConfig, {MemberConfigIterator} from "../../core/member-config";

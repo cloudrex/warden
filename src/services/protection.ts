@@ -1,11 +1,11 @@
 import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel, Role} from "discord.js";
 import WardenAPI from "../core/warden-api";
-import {Bot, CommandParser, Log, Service, on} from "discord-anvil";
-import Patterns from "discord-anvil/dist/core/patterns";
-import Utils from "discord-anvil/dist/core/utils";
+import {Bot, CommandParser, Log, Service, on} from "forge";
+import Patterns from "forge/dist/core/patterns";
+import Utils from "forge/dist/core/utils";
 import Mongo, {DatabaseMessage, ModerationActionType} from "../database/mongo-database";
 import Messages from "../core/messages";
-import {DiscordEvent} from "discord-anvil/dist/decorators/decorators";
+import {DiscordEvent} from "forge/dist/decorators/decorators";
 import MemberConfig from "../core/member-config";
 
 const conflictingBots: Array<Snowflake> = [

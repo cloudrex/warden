@@ -1,8 +1,8 @@
-import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {Command, CommandContext, Permission, Utils} from "forge";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
-import {Argument} from "discord-anvil/dist";
+import {Argument} from "forge/dist";
 
 type LastSeenArgs = {
     readonly member: GuildMember;

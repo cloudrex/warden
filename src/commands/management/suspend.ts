@@ -1,6 +1,6 @@
-import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {Command, CommandContext, Permission, Utils} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "forge/dist/commands/command";
 
 export default class SuspendCommand extends Command {
     readonly type = CommandType.Utility;

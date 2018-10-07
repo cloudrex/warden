@@ -1,7 +1,7 @@
 import {exec} from "child_process";
-import {Command, CommandContext} from "discord-anvil";
+import {Command, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "forge/dist/commands/command";
 
 export default class BuildCommand extends Command {
     readonly type = CommandType.Configuration;

@@ -1,5 +1,5 @@
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
-import {Bot, DataProvider, JsonProvider, Log} from "discord-anvil";
+import {Bot, DataProvider, JsonProvider, Log} from "forge";
 import Mongo, {
     DatabaseModerationAction,
     DatabaseUserConfig,

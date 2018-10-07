@@ -1,7 +1,7 @@
-import {ChatEnvironment, Command, CommandContext, Permission} from "discord-anvil";
+import {ChatEnvironment, Command, CommandContext, Permission} from "forge";
 import {CommandType} from "../general/help";
 import {Message, Snowflake, TextChannel} from "discord.js";
-import {Argument, PrimitiveArgType, RestrictGroup} from "discord-anvil/dist/commands/command";
+import {Argument, PrimitiveArgType, RestrictGroup} from "forge/dist/commands/command";
 import brain, {NeuralNetwork} from "brain.js";
 import fs from "fs";
 

@@ -1,6 +1,6 @@
-import {Command, CommandContext} from "discord-anvil";
+import {Command, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import Utils from "discord-anvil/dist/core/utils";
+import Utils from "forge/dist/core/utils";
 
 const channels = {
     media: "382054707029475348",

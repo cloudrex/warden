@@ -1,10 +1,10 @@
-import {Command, CommandContext} from "discord-anvil";
+import {Command, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import {Argument} from "discord-anvil/dist";
-import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import {Argument} from "forge/dist";
+import {RestrictGroup} from "forge/dist/commands/command";
 import Mongo from "../../database/mongo-database";
 import {GuildMember} from "discord.js";
-import ChatEnvironment from "discord-anvil/dist/core/chat-environment";
+import ChatEnvironment from "forge/dist/core/chat-environment";
 
 type ClearWarnsArgs = {
     readonly member: GuildMember;

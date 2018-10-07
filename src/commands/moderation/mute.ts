@@ -1,7 +1,7 @@
 import WardenAPI from "../../core/warden-api";
-import {ChatEnvironment, Command, Argument, CommandContext, Permission} from "discord-anvil";
+import {ChatEnvironment, Command, Argument, CommandContext, Permission} from "forge";
 import {GuildMember} from "discord.js";
-import {RestrictGroup, PrimitiveArgType} from "discord-anvil/dist/commands/command";
+import {RestrictGroup, PrimitiveArgType} from "forge/dist/commands/command";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 

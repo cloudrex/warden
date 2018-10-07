@@ -9,11 +9,11 @@ import {
     JsonProvider,
     Log,
     Utils
-} from "discord-anvil";
+} from "forge";
 
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseModerationAction} from "../../database/mongo-database";
-import {RestrictGroup} from "discord-anvil/dist/commands/command";
+import {RestrictGroup} from "forge/dist/commands/command";
 
 export interface StoredWarning {
     readonly reason: string;

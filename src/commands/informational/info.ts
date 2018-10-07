@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, Utils} from "discord-anvil";
+import {Command, CommandContext, Permission, Utils} from "forge";
 import {CommandType} from "../general/help";
 import {Emoji, RichEmbed} from "discord.js";
 

@@ -1,5 +1,5 @@
 import {Message} from "discord.js";
-import {Bot, Service, on, command} from "discord-anvil";
+import {Bot, Service, on, command} from "forge";
 import WardenAPI from "../core/warden-api";
 
 export default class WardenOfficialService extends Service {
