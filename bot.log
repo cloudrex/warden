@@ -24692,3 +24692,90 @@ limit: int value should be less than or equal to 100.
 [2018-10-07 22:49:52] [Bot.setupEvents] Discord events setup completed 
 [2018-10-07 22:49:52] [Bot.setup] Bot setup completed 
 [2018-10-07 22:49:52] [Bot.connect] Starting 
+[2018-10-07 22:52:34] [Bot.setup] Attempting to load internal fragments 
+[2018-10-07 22:52:34] [Bot.setup] Loading 6 internal fragments 
+[2018-10-07 22:52:34] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-10-07 22:52:34] [Bot.setup] Loading 6 service(s) 
+[2018-10-07 22:52:34] [Bot.setup] Loaded 6 service(s) 
+[2018-10-07 22:52:34] [:ProtectionService.canStart] Database not available, Protection service not starting 
+[2018-10-07 22:52:34] [Bot.setup] Loading 43 command(s) 
+[2018-10-07 22:52:34] [Bot.setup] Loaded 43 command(s) 
+[2018-10-07 22:52:34] [Bot.setupEvents] Setting up Discord events 
+[2018-10-07 22:52:34] [Bot.setupEvents] Discord events setup completed 
+[2018-10-07 22:52:34] [Bot.setup] Bot setup completed 
+[2018-10-07 22:52:34] [Bot.connect] Starting 
+[2018-10-07 22:52:35] Setting up mongodb database 
+[2018-10-07 22:52:35] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-10-07 22:52:35] [ConsoleInterface.setup] Console interface setup completed 
+[2018-10-07 22:52:35] [ConsoleInterface] Setting up console interface 
+[2018-10-07 22:52:35] There was an error establishing connection to the MongoDB database. 
+[2018-10-07 22:52:35] Mongodb database setup completed 
+[2018-10-07 22:52:35] [Bot.setupAuthStore] Added a total of 1 new auth store entries 
+[2018-10-07 22:52:35] [Bot.setupAuthStore] Auth store setup completed 
+[2018-10-07 22:52:35] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-10-07 22:52:35] [Bot.setupEvents] Ready | Took 1s 
+[2018-10-07 22:54:54] raw args,  438710666438639616,testing
+[2018-10-07 22:54:55] There was an error while executing the 'warn' command: Cannot send messages to this user 
+[2018-10-07 22:55:08] [Bot.setup] Attempting to load internal fragments 
+[2018-10-07 22:55:08] [Bot.setup] Loading 6 internal fragments 
+[2018-10-07 22:55:08] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-10-07 22:55:08] [Bot.setup] Loading 6 service(s) 
+[2018-10-07 22:55:08] [Bot.setup] Loaded 6 service(s) 
+[2018-10-07 22:55:08] [:ProtectionService.canStart] Database not available, Protection service not starting 
+[2018-10-07 22:55:08] [Bot.setup] Loaded 43 command(s) 
+[2018-10-07 22:55:08] [Bot.setup] Loading 43 command(s) 
+[2018-10-07 22:55:08] [Bot.setupEvents] Setting up Discord events 
+[2018-10-07 22:55:08] [Bot.setupEvents] Discord events setup completed 
+[2018-10-07 22:55:08] [Bot.setup] Bot setup completed 
+[2018-10-07 22:55:08] [Bot.connect] Starting 
+[2018-10-07 22:55:09] Setting up mongodb database 
+[2018-10-07 22:55:09] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-10-07 22:55:09] [ConsoleInterface] Setting up console interface 
+[2018-10-07 22:55:09] [ConsoleInterface.setup] Console interface setup completed 
+[2018-10-07 22:55:09] There was an error establishing connection to the MongoDB database. 
+[2018-10-07 22:55:09] Mongodb database setup completed 
+[2018-10-07 22:55:09] [Bot.setupAuthStore] Auth store setup completed 
+[2018-10-07 22:55:09] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-10-07 22:55:09] [Bot.setupEvents] Ready | Took 1s 
+[2018-10-07 22:55:46] [Bot.setup] Attempting to load internal fragments 
+[2018-10-07 22:55:46] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-10-07 22:55:46] [Bot.setup] Loading 6 internal fragments 
+[2018-10-07 22:55:46] [Bot.setup] Loading 6 service(s) 
+[2018-10-07 22:55:46] [Bot.setup] Loaded 6 service(s) 
+[2018-10-07 22:55:46] [:ProtectionService.canStart] Database not available, Protection service not starting 
+[2018-10-07 22:55:46] [Bot.setup] Loading 43 command(s) 
+[2018-10-07 22:55:46] [Bot.setup] Loaded 43 command(s) 
+[2018-10-07 22:55:46] [Bot.setupEvents] Setting up Discord events 
+[2018-10-07 22:55:46] [Bot.setupEvents] Discord events setup completed 
+[2018-10-07 22:55:46] [Bot.setup] Bot setup completed 
+[2018-10-07 22:55:46] [Bot.connect] Starting 
+[2018-10-07 22:55:46] Setting up mongodb database 
+[2018-10-07 22:55:46] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-10-07 22:55:46] [ConsoleInterface] Setting up console interface 
+[2018-10-07 22:55:46] [ConsoleInterface.setup] Console interface setup completed 
+[2018-10-07 22:55:46] There was an error establishing connection to the MongoDB database. 
+[2018-10-07 22:55:46] Mongodb database setup completed 
+[2018-10-07 22:55:46] [Bot.setupAuthStore] Auth store setup completed 
+[2018-10-07 22:55:46] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-10-07 22:55:46] [Bot.setupEvents] Ready | Took 1s 
+[2018-10-07 22:56:21] [Bot.setup] Attempting to load internal fragments 
+[2018-10-07 22:56:21] [Bot.setup] Loading 6 internal fragments 
+[2018-10-07 22:56:21] [Bot.setup] Enabled 5/6 internal fragments 
+[2018-10-07 22:56:21] [Bot.setup] Loading 6 service(s) 
+[2018-10-07 22:56:21] [Bot.setup] Loaded 6 service(s) 
+[2018-10-07 22:56:21] [:ProtectionService.canStart] Database not available, Protection service not starting 
+[2018-10-07 22:56:21] [Bot.setup] Loading 43 command(s) 
+[2018-10-07 22:56:21] [Bot.setup] Loaded 43 command(s) 
+[2018-10-07 22:56:21] [Bot.setupEvents] Setting up Discord events 
+[2018-10-07 22:56:21] [Bot.setupEvents] Discord events setup completed 
+[2018-10-07 22:56:21] [Bot.connect] Starting 
+[2018-10-07 22:56:21] [Bot.setup] Bot setup completed 
+[2018-10-07 22:56:22] Setting up mongodb database 
+[2018-10-07 22:56:22] [ConsoleInterface] Setting up console interface 
+[2018-10-07 22:56:22] There was an error creating the temp folder for the bot: 434432910947385354 (ENOENT: no such file or directory, mkdir '/home/atlas/Desktop/projects/warden/dist/tmp/u434432910947385354') 
+[2018-10-07 22:56:22] [ConsoleInterface.setup] Console interface setup completed 
+[2018-10-07 22:56:22] There was an error establishing connection to the MongoDB database. 
+[2018-10-07 22:56:22] Mongodb database setup completed 
+[2018-10-07 22:56:22] [Bot.setupAuthStore] Auth store setup completed 
+[2018-10-07 22:56:22] [Bot.setupEvents] Logged in as Inspector#8221 | 2 guild(s) 
+[2018-10-07 22:56:22] [Bot.setupEvents] Ready | Took 1s 

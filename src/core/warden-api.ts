@@ -121,10 +121,12 @@ export default class WardenAPI {
 
                 const warnDM: string = autoWarn ? `You were automatically warned for **${action.reason}**` : `You were warned by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`;
 
-                await (await action.member.createDM()).send(new RichEmbed()
-                    .setDescription(warnDM)
-                    .setColor("GOLD"))
-                    .catch();
+                try {
+                    await (await action.member.createDM()).send(new RichEmbed()
+                        .setDescription(warnDM)
+                        .setColor("GOLD"));
+                    }
+                catch (e) {}
 
                 break;
             }
@@ -146,10 +148,12 @@ export default class WardenAPI {
                     Log.error("[WardenAPI.executeAction] Expecting channels");
                 }
 
-                (await action.member.createDM()).send(new RichEmbed()
-                    .setDescription(`You were muted by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                    .setColor("BLUE"))
-                    .catch();
+                try {
+                    (await action.member.createDM()).send(new RichEmbed()
+                        .setDescription(`You were muted by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
+                        .setColor("BLUE"));
+                }
+                catch (e) {}
 
                 break;
             }
@@ -174,10 +178,12 @@ export default class WardenAPI {
                     Log.error("[WardenAPI.executeAction] Expecting channels");
                 }
 
-                await (await action.member.createDM()).send(new RichEmbed()
-                    .setDescription(`You were banned from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                    .setColor("RED"))
-                    .catch();
+                try {
+                    await (await action.member.createDM()).send(new RichEmbed()
+                        .setDescription(`You were banned from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
+                        .setColor("RED"))
+                }
+                catch (e) {}
 
                 break;
             }
