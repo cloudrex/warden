@@ -7,6 +7,7 @@ import Mongo, {DatabaseMessage, ModerationActionType} from "../database/mongo-da
 import Messages from "../core/messages";
 import {DiscordEvent} from "forge/dist/decorators/decorators";
 import MemberConfig from "../core/member-config";
+import {config} from "../app";
 
 const conflictingBots: Array<Snowflake> = [
     "155149108183695360" // Dyno#3861
@@ -26,7 +27,7 @@ export default class ProtectionService extends Service {
         tracking = tracking === null ? true : tracking;
 
         // Log the message into the database
-        if (tracking) {
+        if (config.globalTracking && tracking) {
             await Messages.add({
                 authorTag: message.author.tag,
                 authorId: message.author.id,
@@ -40,7 +41,7 @@ export default class ProtectionService extends Service {
 
         const api: WardenAPI = this.api;
 
-        if (Patterns.invite.test(message.content)) {
+        if (config.inviteProtection && Patterns.invite.test(message.content)) {
             const matches = message.content.match(Patterns.invite);
 
             if (matches !== null) {
@@ -172,7 +173,7 @@ export default class ProtectionService extends Service {
     }
 
     private async handleGuildMemberJoined(member: GuildMember): Promise<void> {
-        if (muteLeavers.includes(member.id)) {
+        if (config.persistentRoles && muteLeavers.includes(member.id)) {
             const dm: DMChannel = await member.createDM();
 
             dm.send(new RichEmbed()
@@ -241,7 +242,7 @@ export default class ProtectionService extends Service {
 
         // Anti-Hoisting
         // TODO: Load from guild config instead of being hardcoded
-        const antiHoisting = true;
+        const antiHoisting = config.antiHoisting;
 
         if (!antiHoisting) {
             return;
@@ -276,6 +277,7 @@ export default class ProtectionService extends Service {
     }
 
     public start(): void {
+        // TODO: Debugging
         console.log(!this.bot ? "[--------------------------------------START] BOT -> NULL" : "BOT -> ok");
 
         if (this.bot.options.autoDeleteCommands) {
@@ -306,6 +308,7 @@ export default class ProtectionService extends Service {
      */
     private static mute(member: GuildMember): boolean {
         // TODO: Add error checking/catching
+        // TODO: Shouldn't this be done from config?
         const role: Role = member.guild.roles.find("name", "Muted");
 
         if (!member.roles.has(role.id)) {

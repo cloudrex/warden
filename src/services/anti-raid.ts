@@ -2,6 +2,7 @@ import {Service, ServiceOptions, on, Utils} from "forge";
 import {Snowflake, Message} from "discord.js";
 import {DiscordEvent} from "forge/dist/decorators/decorators";
 import {compareTwoStrings} from "string-similarity";
+import {config} from "../app";
 
 const threshold: number = 70;
 
@@ -20,7 +21,7 @@ export default class AntiRaidService extends Service {
     }
 
     private async handleMessage(message: Message): Promise<void> {
-        if (message.author.bot || message.channel.type !== "text" || Utils.hasModerationPowers(message.member)) {
+        if (!config.antiSpam || message.author.bot || message.channel.type !== "text" || Utils.hasModerationPowers(message.member)) {
             return;
         }
         else if (this.memory.has(message.author.id)) {
@@ -42,10 +43,10 @@ export default class AntiRaidService extends Service {
         if (similarity >= threshold / 100 && message.deletable) {
             await message.delete();
 
-            const response: Message = await message.reply("Please refrain from spamming") as Message;
+            const response: Message = await message.reply("Please refrain from spamming.") as Message;
 
             if (response) {
-                await response.delete(3500);
+                await response.delete(4000);
             }
         }
     }

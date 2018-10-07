@@ -2,7 +2,7 @@
 require("dotenv").config();
 
 import Mongo from "./database/mongo-database";
-import {GuildMember, Message} from "discord.js";
+import {GuildMember, Message, Snowflake} from "discord.js";
 import path from "path";
 
 import {
@@ -24,6 +24,55 @@ import WardenAPI from "./core/warden-api";
 const baseDir: string = "./src";
 
 Log.level = LogLevel.Debug;
+
+type BotConfig = {
+    readonly channelModLog: Snowflake;
+    readonly channelSuggestions: Snowflake;
+    readonly roleMuted: Snowflake;
+    readonly globalTracking: boolean;
+    readonly inviteProtection: boolean;
+    readonly persistentRoles: boolean;
+    readonly antiHoisting: boolean;
+    readonly logMembers: boolean;
+    readonly announceJoins: boolean;
+    readonly antiSpam: boolean;
+}
+
+const requiredConfig: string[] = [
+    "channelModLog",
+    "channelSuggestions",
+    "roleMuted",
+    "globalTracking",
+    "inviteProtection",
+    "persistentRoles",
+    "antiHoisting",
+    "logMembers",
+    "announceJoins",
+    "antiSpam"
+];
+
+export const config: BotConfig = {
+    channelModLog: process.env.channel_mod_log as Snowflake,
+    roleMuted: process.env.role_muted as Snowflake,
+    channelSuggestions: process.env.channel_suggestions as Snowflake,
+    globalTracking: process.env.global_tracking === "true" ? true : false,
+    inviteProtection: process.env.invite_protection === "true" ? true : false,
+    persistentRoles: process.env.persistent_roles === "true" ? true : false,
+    antiHoisting: process.env.anti_hoisting === "true" ? true : false,
+    logMembers: process.env.log_members === "true" ? true : false,
+    announceJoins: process.env.announce_joins === "true" ? true : false,
+    antiSpam: process.env.anti_spam === "true" ? true : false
+};
+
+function checkConfig(): void {
+    for (let i = 0; i < requiredConfig.length; i++) {
+        if (config[requiredConfig[i]] === undefined || config[requiredConfig[i]] === null || config[requiredConfig[i]] === "") {
+            throw new Error(`[checkConfig] Required configuration property missing: ${requiredConfig[i]}`);
+        }
+    }
+}
+
+checkConfig();
 
 const settings = new Settings({
     general: {

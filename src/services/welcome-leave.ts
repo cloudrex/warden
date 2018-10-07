@@ -1,5 +1,6 @@
 import {GuildMember, User} from "discord.js";
 import {Utils, Bot, Service} from "forge";
+import {config} from "../app";
 
 type WelcomeLeaveMessages = {
     readonly welcome: Array<string>;
@@ -21,13 +22,20 @@ export default class WelcomeLeaveService extends Service {
         messages = await Utils.readJson("./src/data/welcome-leave-messages.json");
 
         this.bot.client.on("guildMemberAdd", async (member: GuildMember) => {
-            await WelcomeLeaveService.sendMemberLog(member, true);
-            WelcomeLeaveService.sendGeneral(`${WelcomeLeaveService.getMessage("welcome", member.user)}\n\n*Make sure to read the <#458708940809699368>!*`, "Joined", member);
+            if (config.logMembers) {
+                await WelcomeLeaveService.sendMemberLog(member, true);
+            }
+
+            if (config.announceJoins) {
+                WelcomeLeaveService.sendGeneral(`${WelcomeLeaveService.getMessage("welcome", member.user)}\n\n*Make sure to read the <#458708940809699368>!*`, "Joined", member);
+            }
         });
 
 
         this.bot.client.on("guildMemberRemove", async (member: GuildMember) => {
-            await WelcomeLeaveService.sendMemberLog(member, false);
+            if (config.logMembers) {
+                await WelcomeLeaveService.sendMemberLog(member, false);
+            }
 
             // No longer announce leaves
             //WelcomeLeaveService.sendGeneral(WelcomeLeaveService.getMessage("goodbye", member.user), "Left", member);
