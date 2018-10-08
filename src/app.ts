@@ -1,4 +1,4 @@
-// .env
+// Environment variables
 require("dotenv").config();
 
 import Mongo from "./database/mongo-database";
@@ -36,6 +36,8 @@ type BotConfig = {
     readonly logMembers: boolean;
     readonly announceJoins: boolean;
     readonly antiSpam: boolean;
+    readonly channelReview: Snowflake;
+    readonly guild: Snowflake;
 }
 
 const requiredConfig: string[] = [
@@ -48,7 +50,9 @@ const requiredConfig: string[] = [
     "antiHoisting",
     "logMembers",
     "announceJoins",
-    "antiSpam"
+    "antiSpam",
+    "channelReview",
+    "guild"
 ];
 
 export const config: BotConfig = {
@@ -61,7 +65,9 @@ export const config: BotConfig = {
     antiHoisting: process.env.anti_hoisting === "true" ? true : false,
     logMembers: process.env.log_members === "true" ? true : false,
     announceJoins: process.env.announce_joins === "true" ? true : false,
-    antiSpam: process.env.anti_spam === "true" ? true : false
+    antiSpam: process.env.anti_spam === "true" ? true : false,
+    channelReview: process.env.channel_review as Snowflake,
+    guild: process.env.guild as Snowflake
 };
 
 function checkConfig(): void {
@@ -150,27 +156,9 @@ async function start() {
         ]
     });
 
-    const api: WardenAPI = new WardenAPI({
-        guild: "286352649610199052",
-        bot: bot,
-
-        // Gaming corner
-        channels: {
-            suggestions: "458337067299242004",
-            modLog: "458794765308395521",
-            review: "464911303291699210",
-            votes: "471067993158451210",
-            decisions: "471068005959467011",
-            changes: "471068072141389824"
-        },
-
-        roles: {
-            muted: "463500384812531715"
-        }
-    });
+    const api: WardenAPI = new WardenAPI(bot);
 
     await (await bot.setup(api)).connect();
-    await api.setup();
 
     // Database Setup
     Log.debug("Setting up mongodb database");

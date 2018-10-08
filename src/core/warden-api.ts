@@ -7,6 +7,7 @@ import Mongo, {
     ModerationActionType
 } from "../database/mongo-database";
 import {BadWords, RacialSlurs} from "./constants";
+import {config} from "../app";
 
 export type MemberConfigType = "tracking";
 
@@ -42,9 +43,6 @@ export interface ConsumerApiResolvedChannels {
     readonly modLog: TextChannel;
     readonly suggestions: TextChannel;
     readonly review: TextChannel;
-    readonly votes: TextChannel;
-    readonly decisions: TextChannel;
-    readonly changes: TextChannel;
 }
 
 export interface ConsumerAPIRoles {
@@ -59,41 +57,28 @@ export interface WardenApiOptions {
 }
 
 export default class WardenAPI {
-    public readonly unresolvedChannels: ConsumerApiChannels;
-    public readonly roles: ConsumerAPIRoles;
     public readonly deletedMessages: Map<Snowflake, Message>;
 
     private readonly bot: Bot;
-    private readonly guild: Snowflake;
 
     public caseCounter: number;
 
     // TODO: Type
-    private channels?: ConsumerApiResolvedChannels;
+    private channels: ConsumerApiResolvedChannels;
 
     /**
      * @param {WardenApiOptions} options
      */
-    constructor(options: WardenApiOptions) {
-        this.bot = options.bot;
-        this.guild = options.guild;
-        this.roles = options.roles;
-        this.unresolvedChannels = options.channels;
+    constructor(bot: Bot) {
+        this.bot = bot;
         this.deletedMessages = new Map<Snowflake, Message>();
         this.caseCounter = 0;
-    }
 
-    /**
-     * @return {Promise<void>}
-     */
-    public async setup(): Promise<void> {
+        // Setup channels
         this.channels = {
-            modLog: this.getChannel(this.unresolvedChannels.modLog),
-            suggestions: this.getChannel(this.unresolvedChannels.suggestions),
-            review: this.getChannel(this.unresolvedChannels.review),
-            votes: this.getChannel(this.unresolvedChannels.votes),
-            decisions: this.getChannel(this.unresolvedChannels.decisions),
-            changes: this.getChannel(this.unresolvedChannels.changes)
+            modLog: this.getChannel(config.channelModLog),
+            suggestions: this.getChannel(config.channelSuggestions),
+            review: this.getChannel(config.channelReview)
         };
 
         this.caseCounter = 0;// TODO await this.getCaseCounter();
@@ -237,7 +222,7 @@ export default class WardenAPI {
      * @return {Guild}
      */
     public getGuild(): Guild {
-        const guild: Guild | undefined = this.bot.client.guilds.get(this.guild);
+        const guild: Guild | undefined = this.bot.client.guilds.get(config.guild);
 
         if (!guild) {
             throw new Error("[WardenAPI.getGuild] Expecting guild");
