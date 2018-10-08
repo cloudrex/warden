@@ -80,6 +80,8 @@ function checkConfig(): void {
 
 checkConfig();
 
+console.log(`\nUsing configuration\n\n`, config, "\n");
+
 const settings = new Settings({
     general: {
         token: process.env.token || "",
@@ -159,6 +161,7 @@ async function start() {
     const api: WardenAPI = new WardenAPI(bot);
 
     await (await bot.setup(api)).connect();
+    api.setup();
 
     // Database Setup
     Log.debug("Setting up mongodb database");

@@ -1,11 +1,11 @@
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
-import {Bot, DataProvider, JsonProvider, Log} from "forge";
+import {Bot, Log} from "forge";
 import Mongo, {
     DatabaseModerationAction,
-    DatabaseUserConfig,
     ModerationAction,
     ModerationActionType
 } from "../database/mongo-database";
+
 import {BadWords, RacialSlurs} from "./constants";
 import {config} from "../app";
 
@@ -64,7 +64,7 @@ export default class WardenAPI {
     public caseCounter: number;
 
     // TODO: Type
-    private channels: ConsumerApiResolvedChannels;
+    private channels?: ConsumerApiResolvedChannels;
 
     /**
      * @param {WardenApiOptions} options
@@ -73,7 +73,9 @@ export default class WardenAPI {
         this.bot = bot;
         this.deletedMessages = new Map<Snowflake, Message>();
         this.caseCounter = 0;
+    }
 
+    public setup(): this {
         // Setup channels
         this.channels = {
             modLog: this.getChannel(config.channelModLog),
@@ -82,6 +84,8 @@ export default class WardenAPI {
         };
 
         this.caseCounter = 0;// TODO await this.getCaseCounter();
+
+        return this;
     }
 
     /**
@@ -181,9 +185,6 @@ export default class WardenAPI {
         }
 
         if (embed === null || this.channels === undefined || embed.footer === undefined || embed.footer.text === undefined) {
-            console.log("channels ", this.channels);
-            //console.log("\n\n\nfooter ", embed.footer);
-
             Log.error("[WardenAPI.executeAction] Expecting log message, embed footer and channels");
 
             return;
