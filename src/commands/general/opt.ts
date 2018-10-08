@@ -44,7 +44,7 @@ export default class OptCommand extends Command {
             const options: Array<DatabaseUserConfig> = await MemberConfig.getAll(context.sender.id);
             const iterator: MemberConfigIterator = new MemberConfigIterator(options);
 
-            const tableData: Array<Array<string>> = [
+            const tableData: Array<string[]> = [
                 ["Option", "Value"],
                 ["Tracking", iterator.findValue("tracking", "true")] // TODO: Use default values instead of hard coded
             ];

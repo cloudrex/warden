@@ -33,7 +33,7 @@ export default class PermissionsCommand extends Command {
     public async executed(context: CommandContext): Promise<void> {
         const perms: Permissions = context.message.member.permissions;
 
-        const data: Array<Array<string>> = [
+        const data: Array<string[]> = [
             ["Permission", "Yes/No"],
             ["Administrator", this.hasPermission("ADMINISTRATOR", perms)],
             ["View Audit Log", this.hasPermission("VIEW_AUDIT_LOG", perms)],

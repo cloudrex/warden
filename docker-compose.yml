@@ -26,6 +26,5 @@ services:
     restart: on-failure
     depends_on:
       - mongo
-    environment:
-      token: "${token}"
-      prefix: "${prefix}"
+    env_file:
+      - .env

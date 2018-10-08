@@ -45,12 +45,12 @@ export default class TrainTest extends Command {
         this.restrict.cooldown = 5;
     }
 
-    public async gatherMessageData(channel: TextChannel, excluded: Array<Snowflake> = []): Promise<Array<string>> {
+    public async gatherMessageData(channel: TextChannel, excluded: Array<Snowflake> = []): Promise<string[]> {
         const messages: Array<Message> = (await channel.fetchMessages({
             limit: 100
         })).array();
 
-        const totalData: Array<string> = [];
+        const totalData: string[] = [];
 
         for (let i = 0; i < messages.length; i++) {
             // Ignore excluded messages (by id)
@@ -64,7 +64,7 @@ export default class TrainTest extends Command {
         return totalData;
     }
 
-    private static toTrainDataInputOutput(messages: Array<string>, spammy: boolean = false): any {
+    private static toTrainDataInputOutput(messages: string[], spammy: boolean = false): any {
         return messages.map((message: string) => {
             return {
                 input: message,

@@ -1,10 +1,10 @@
 import {GuildMember, User} from "discord.js";
-import {Utils, Bot, Service} from "forge";
+import {Utils, Service} from "forge";
 import {config} from "../app";
 
 type WelcomeLeaveMessages = {
-    readonly welcome: Array<string>;
-    readonly goodbye: Array<string>;
+    readonly welcome: string[];
+    readonly goodbye: string[];
 };
 
 let messages: WelcomeLeaveMessages | null = null;

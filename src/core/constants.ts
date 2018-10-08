@@ -1,4 +1,4 @@
-export const BadWords: Array<string> = [
+export const BadWords: string[] = [
     "asshole",
     "fuck",
     "bitch",
@@ -13,7 +13,7 @@ export const BadWords: Array<string> = [
     "cock"
 ];
 
-export const RacialSlurs: Array<string> = [
+export const RacialSlurs: string[] = [
     "nigg",
     "blaxican",
     "faggot",

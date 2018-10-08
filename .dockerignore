@@ -5,5 +5,4 @@ node_modules/
 build/
 yarn.lock
 package-lock.json
-.env
 bot.log

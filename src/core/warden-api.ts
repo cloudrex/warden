@@ -1,5 +1,6 @@
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
 import {Bot, Log} from "forge";
+
 import Mongo, {
     DatabaseModerationAction,
     ModerationAction,
@@ -349,6 +350,7 @@ export default class WardenAPI {
         let count = 0;
 
         for (let i = 0; i < BadWords.length; i++) {
+            // TODO: Might need to clean regex to avoid Regexddos
             const matches = message.match(new RegExp(BadWords[i], "gi"));
 
             if (matches) {

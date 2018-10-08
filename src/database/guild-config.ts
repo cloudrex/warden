@@ -76,9 +76,9 @@ export interface DatabaseGuildConfig extends PartialDatabaseGuildConfig {
 export type PartialDatabaseGuildConfig = {
     readonly customPrefix?: string;
     readonly protectionOptions: AutonomousProtectionOptions;
-    readonly bannedWords?: Array<string>; // swearFilter must be TRUE
-    readonly domainWhitelist?: Array<string>; // useWhitelist must be TRUE
-    readonly domainBlacklist?: Array<string>; // useWhitelist must be FALSE
+    readonly bannedWords?: string[]; // swearFilter must be TRUE
+    readonly domainWhitelist?: string[]; // useWhitelist must be TRUE
+    readonly domainBlacklist?: string[]; // useWhitelist must be FALSE
     readonly useWhitelist?: boolean; // true -> whitelist, false -> blacklist, undefined -> none
     readonly customCommands?: Array<GuildCustomCommand>;
     readonly slowModeChannels?: Array<Snowflake>; // slowMode must be TRUE

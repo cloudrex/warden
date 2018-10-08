@@ -18,7 +18,7 @@ export default class SnipeCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: Array<string>, api: WardenAPI): Promise<void> {
+    public async executed(context: CommandContext, args: string[], api: WardenAPI): Promise<void> {
         const lastDeletedChannelMessage: Message | null = api.deletedMessages.get(context.message.channel.id) || null;
 
         if (lastDeletedChannelMessage) {

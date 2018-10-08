@@ -255,7 +255,7 @@ export default class ProtectionService extends Service {
         }
 
         let name: string = updated.nickname || updated.user.username;
-        let newName: Array<string> | string = [];
+        let newName: string[] | string = [];
 
         for (let i = 0; i < name.length; i++) {
             if (/[a-z]/i.test(name[i])) {
