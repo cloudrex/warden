@@ -13,8 +13,7 @@ import {
     Log,
     LogLevel,
     Settings,
-    Utils,
-    on
+    Utils
 } from "forge";
 
 import {ArgumentResolver} from "forge/dist/commands/command";
@@ -42,6 +41,7 @@ type BotConfig = {
     readonly dbUrl?: string;
     readonly dbPort?: number;
     readonly dbName?: string;
+    readonly token: string;
 }
 
 const requiredConfig: string[] = [
@@ -55,8 +55,10 @@ const requiredConfig: string[] = [
     "logMembers",
     "announceJoins",
     "antiSpam",
+    "antiSpamThreshold",
     "channelReview",
-    "guild"
+    "guild",
+    "token"
 ];
 
 export const config: BotConfig = {
@@ -76,12 +78,15 @@ export const config: BotConfig = {
     dbHost: process.env.DB_HOST,
     dbUrl: process.env.DB_URL,
     dbPort: parseInt(process.env.DB_PORT as string),
-    dbName: process.env.DB_NAME
+    dbName: process.env.DB_NAME,
+    token: process.env.TOKEN as string
 };
 
+console.log(config.token);
+
 function checkConfig(): void {
-    for (let i = 0; i < requiredConfig.length; i++) {
-        if (config[requiredConfig[i]] === undefined || config[requiredConfig[i]] === null || config[requiredConfig[i]] === "" || isNaN(config[requiredConfig[i]])) {
+    for (let i: number = 0; i < requiredConfig.length; i++) {
+        if (config[requiredConfig[i]] === undefined || config[requiredConfig[i]] === null || config[requiredConfig[i]] === "" || (typeof config[requiredConfig[i]] !== "string" && isNaN(config[requiredConfig[i]]))) {
             throw new Error(`[checkConfig] Required configuration property missing: ${requiredConfig[i]}`);
         }
     }
@@ -93,7 +98,7 @@ console.log(`\nUsing configuration\n\n`, config, "\n");
 
 const settings = new Settings({
     general: {
-        token: process.env.token || "",
+        token: config.token,
         prefixes: process.env.prefix ? process.env.prefix.split(",") : ["."]
     },
 
