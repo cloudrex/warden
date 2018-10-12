@@ -99,7 +99,7 @@ console.log(`\nUsing configuration\n\n`, config, "\n");
 const settings = new Settings({
     general: {
         token: config.token,
-        prefixes: process.env.prefix ? process.env.prefix.split(",") : ["."]
+        prefixes: process.env.PREFIX ? process.env.PREFIX.split(",") : ["."]
     },
 
     paths: {
