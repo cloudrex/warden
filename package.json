@@ -22,7 +22,7 @@
         "brain.js": "^1.2.8",
         "discord.js": "^11.4.2",
         "dotenv": "^6.0.0",
-        "forge": "git+https://gitlab+deploy-token-20231:rnYLu7MWxah7s3Bosig5@gitlab.com/cloudrex/forge.git#dev-2.0",
+        "forge": "git://github.com/cloudrex/forge.git#master",
         "mongodb": "^3.1.4",
         "string-similarity": "^1.2.2",
         "table": "^5.0.2",
