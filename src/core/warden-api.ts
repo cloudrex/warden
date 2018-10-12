@@ -251,6 +251,11 @@ export default class WardenAPI {
         return <TextChannel>channel;
     }
 
+    public getChannels(): ConsumerApiResolvedChannels {
+        // TODO: Forcing
+        return this.channels as ConsumerApiResolvedChannels;
+    }
+
     /**
      * @return {GuildMember | null}
      */
