@@ -1,9 +1,9 @@
 import {Collection, Db, MongoClient} from "mongodb";
 import Log from "forge/dist/core/log";
-import {ChannelResolvable, GuildMember, Snowflake} from "discord.js";
+import {GuildMember, Snowflake} from "discord.js";
 import {MemberConfigType} from "../core/warden-api";
 
-const url: string = process.env.db_url || `mongodb://${process.env.db_host || "localhost"}:${process.env.db_port || 27017}/${process.env.db_name || ""}`;
+const url: string = process.env.DB_URL || `mongodb://${process.env.DB_HOST || "localhost"}:${process.env.DB_PORT || 27017}/${process.env.DB_NAME || ""}`;
 const dbName: string = "warden";
 
 export type MongoCollections = {

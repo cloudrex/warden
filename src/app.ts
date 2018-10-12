@@ -35,8 +35,13 @@ type BotConfig = {
     readonly logMembers: boolean;
     readonly announceJoins: boolean;
     readonly antiSpam: boolean;
+    readonly antiSpamThreshold: number;
     readonly channelReview: Snowflake;
     readonly guild: Snowflake;
+    readonly dbHost?: string;
+    readonly dbUrl?: string;
+    readonly dbPort?: number;
+    readonly dbName?: string;
 }
 
 const requiredConfig: string[] = [
@@ -65,9 +70,13 @@ export const config: BotConfig = {
     logMembers: process.env.LOG_MEMBERS === "true" ? true : false,
     announceJoins: process.env.ANNOUNCE_JOINS === "true" ? true : false,
     antiSpam: process.env.ANTI_SPAM === "true" ? true : false,
-    antiSpamThreshold: parseInt(process.env.ANTI_SPAM_THRESHOLD),
+    antiSpamThreshold: parseInt(process.env.ANTI_SPAM_THRESHOLD as string),
     channelReview: process.env.CHANNEL_REVIEW as Snowflake,
-    guild: process.env.GUILD as Snowflake
+    guild: process.env.GUILD as Snowflake,
+    dbHost: process.env.DB_HOST,
+    dbUrl: process.env.DB_URL,
+    dbPort: parseInt(process.env.DB_PORT as string),
+    dbName: process.env.DB_NAME
 };
 
 function checkConfig(): void {
