@@ -51,7 +51,7 @@ export default class PermissionsCommand extends Command {
             ["Attach Files", this.hasPermission("ATTACH_FILES", perms)],
             ["Mention Everyone", this.hasPermission("MENTION_EVERYONE", perms)],
 
-            // TODO: Add missing permissions
+            // TODO: Add missing permissions?
         ];
 
         await context.message.channel.send(`\`\`\`scala\n${table(data, tableConfig)}\`\`\``);

@@ -6,7 +6,6 @@ import {GuildMember, Message, Snowflake} from "discord.js";
 import path from "path";
 
 import {
-    ArgumentTypeChecker,
     Bot,
     CustomArgType,
     JsonAuthStore,
@@ -56,23 +55,24 @@ const requiredConfig: string[] = [
 ];
 
 export const config: BotConfig = {
-    channelModLog: process.env.channel_mod_log as Snowflake,
-    roleMuted: process.env.role_muted as Snowflake,
-    channelSuggestions: process.env.channel_suggestions as Snowflake,
-    globalTracking: process.env.global_tracking === "true" ? true : false,
-    inviteProtection: process.env.invite_protection === "true" ? true : false,
-    persistentRoles: process.env.persistent_roles === "true" ? true : false,
-    antiHoisting: process.env.anti_hoisting === "true" ? true : false,
-    logMembers: process.env.log_members === "true" ? true : false,
-    announceJoins: process.env.announce_joins === "true" ? true : false,
-    antiSpam: process.env.anti_spam === "true" ? true : false,
-    channelReview: process.env.channel_review as Snowflake,
-    guild: process.env.guild as Snowflake
+    channelModLog: process.env.CHANNEL_MOD_LOG as Snowflake,
+    roleMuted: process.env.ROLE_MUTED as Snowflake,
+    channelSuggestions: process.env.CHANNEL_SUGGESTIONS as Snowflake,
+    globalTracking: process.env.GLOBAL_TRACKING === "true" ? true : false,
+    inviteProtection: process.env.INVITE_PROTECTION === "true" ? true : false,
+    persistentRoles: process.env.PERSISTENT_ROLES === "true" ? true : false,
+    antiHoisting: process.env.ANTI_HOISTING === "true" ? true : false,
+    logMembers: process.env.LOG_MEMBERS === "true" ? true : false,
+    announceJoins: process.env.ANNOUNCE_JOINS === "true" ? true : false,
+    antiSpam: process.env.ANTI_SPAM === "true" ? true : false,
+    antiSpamThreshold: parseInt(process.env.ANTI_SPAM_THRESHOLD),
+    channelReview: process.env.CHANNEL_REVIEW as Snowflake,
+    guild: process.env.GUILD as Snowflake
 };
 
 function checkConfig(): void {
     for (let i = 0; i < requiredConfig.length; i++) {
-        if (config[requiredConfig[i]] === undefined || config[requiredConfig[i]] === null || config[requiredConfig[i]] === "") {
+        if (config[requiredConfig[i]] === undefined || config[requiredConfig[i]] === null || config[requiredConfig[i]] === "" || isNaN(config[requiredConfig[i]])) {
             throw new Error(`[checkConfig] Required configuration property missing: ${requiredConfig[i]}`);
         }
     }
