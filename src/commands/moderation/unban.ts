@@ -17,7 +17,7 @@ export default class UnbanCommand extends Command {
         description: "Unban a user"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "user",
             type: "snowflake",

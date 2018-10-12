@@ -16,7 +16,7 @@ export default class RoleCommand extends Command {
         description: "Manage member roles"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "role",
             description: "The role to add or remove",

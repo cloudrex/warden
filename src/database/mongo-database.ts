@@ -85,7 +85,7 @@ export type DatabaseChannel = {
 export type DatabaseBackup = {
     readonly time: number,
     readonly guildId: Snowflake;
-    readonly channels: Array<DatabaseChannel>;
+    readonly channels: DatabaseChannel[];
 };
 
 export type DatabaseUserConfig = {

@@ -15,7 +15,7 @@ export default class RolesCommand extends Command {
         description: "Display the server's roles",
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "page",
             type: PrimitiveArgType.UnsignedInteger,

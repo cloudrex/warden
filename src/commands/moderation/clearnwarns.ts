@@ -20,7 +20,7 @@ export default class ClearWarnsCommand extends Command {
         description: "Clear all warnings from an user"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             description: "The target user",

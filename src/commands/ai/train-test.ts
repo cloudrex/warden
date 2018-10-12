@@ -29,7 +29,7 @@ export default class TrainTest extends Command {
         description: "Train artificial intelligence for spam detection"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "spamTest",
             description: "The message to determine if it's a spam",
@@ -45,8 +45,8 @@ export default class TrainTest extends Command {
         this.restrict.cooldown = 5;
     }
 
-    public async gatherMessageData(channel: TextChannel, excluded: Array<Snowflake> = []): Promise<string[]> {
-        const messages: Array<Message> = (await channel.fetchMessages({
+    public async gatherMessageData(channel: TextChannel, excluded: Snowflake[] = []): Promise<string[]> {
+        const messages: Message[] = (await channel.fetchMessages({
             limit: 100
         })).array();
 
@@ -73,7 +73,7 @@ export default class TrainTest extends Command {
         });
     }
 
-    private async getTrainData(channel: TextChannel, excluded: Array<Snowflake> = [], spammy: boolean): Promise<Array<any>> {
+    private async getTrainData(channel: TextChannel, excluded: Snowflake[] = [], spammy: boolean): Promise<any[]> {
         return TrainTest.toTrainDataInputOutput(await this.gatherMessageData(channel, excluded), spammy);
     }
 

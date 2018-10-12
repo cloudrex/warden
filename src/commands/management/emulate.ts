@@ -17,7 +17,7 @@ export default class EmulateCommand extends Command {
         description: "Emulate a message"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             description: "The author of the emulated message",

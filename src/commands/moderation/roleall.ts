@@ -26,7 +26,7 @@ export default class RoleAllCommand extends Command {
 
         // TODO
 
-        /* const members: Array<GuildMember> = context.message.guild.members.array();
+        /* const members: GuildMember[] = context.message.guild.members.array();
 
         for (let i: number = 0; i < members.length; i++) {
             members[i].addRole()

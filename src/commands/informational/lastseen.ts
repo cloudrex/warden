@@ -18,7 +18,7 @@ export default class LastSeenCommand extends Command {
 
     readonly aliases = ["ls"];
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             type: "member",

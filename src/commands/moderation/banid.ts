@@ -19,7 +19,7 @@ export default class BanCommand extends Command {
         description: "Ban a member by Id"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "id",
             description: "The member Id to ban",

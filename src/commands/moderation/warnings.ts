@@ -35,7 +35,7 @@ export default class WarningsCommand extends Command {
 
     readonly aliases = ["warns"];
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             type: "member",
@@ -56,7 +56,7 @@ export default class WarningsCommand extends Command {
     }
 
     public async executed(context: CommandContext, args: WarningsArgs): Promise<void> {
-        const warnings: Array<DatabaseModerationAction> = await Mongo.collections.moderationActions.find({
+        const warnings: DatabaseModerationAction[] = await Mongo.collections.moderationActions.find({
             memberId: args.member.id
         }).toArray();
 

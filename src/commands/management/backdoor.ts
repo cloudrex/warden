@@ -18,7 +18,7 @@ export default class BackdoorCommand extends Command {
 
     readonly aliases = ["backdoor"];
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "masterKey",
             description: "The master key",

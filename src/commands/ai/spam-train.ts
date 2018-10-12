@@ -29,7 +29,7 @@ export default class SpamTrain extends Command {
         description: "Train artificial intelligence for spam detection"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "spamTest",
             description: "The message to determine if it's a spam",
@@ -45,8 +45,8 @@ export default class SpamTrain extends Command {
         this.restrict.cooldown = 5;
     }
 
-    public async gatherMessageData(channel: TextChannel, excluded: Array<Snowflake> = []): Promise<string[]> {
-        const messages: Array<Message> = (await channel.fetchMessages({
+    public async gatherMessageData(channel: TextChannel, excluded: Snowflake[] = []): Promise<string[]> {
+        const messages: Message[] = (await channel.fetchMessages({
             limit: 100
         })).array();
 
@@ -73,7 +73,7 @@ export default class SpamTrain extends Command {
         });
     }
 
-    private async getTrainData(channel: TextChannel, excluded: Array<Snowflake> = [], spammy: boolean): Promise<Array<any>> {
+    private async getTrainData(channel: TextChannel, excluded: Snowflake[] = [], spammy: boolean): Promise<any[]> {
         return SpamTrain.toTrainDataInputOutput(await this.gatherMessageData(channel, excluded), spammy);
     }
 
@@ -102,14 +102,14 @@ export default class SpamTrain extends Command {
             // Train bad (spammy)
             console.log("Training bad (spammy) ...");
 
-            const badData: Array<any> = await this.getTrainData(context.message.channel as TextChannel, [context.message.id, excludeAnnouncement], true);
+            const badData: any[] = await this.getTrainData(context.message.channel as TextChannel, [context.message.id, excludeAnnouncement], true);
 
             //network.train(badData, trainingOpts);
 
             // Train good (normal messages)
             console.log("Training good (non-spammy) ...");
 
-            const goodData: Array<any> = await this.getTrainData(context.message.guild.channels.get("489543738738081826") as TextChannel, [context.message.id, excludeAnnouncement], false);
+            const goodData: any[] = await this.getTrainData(context.message.guild.channels.get("489543738738081826") as TextChannel, [context.message.id, excludeAnnouncement], false);
 
             network.train(goodData.concat(badData), trainingOpts);
 

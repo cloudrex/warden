@@ -26,8 +26,8 @@ export default abstract class StoredMessages {
         return false;
     }
 
-    public static async getAllByUser(userId: Snowflake): Promise<Array<DatabaseStoredMessage> | null> {
-        const result: Array<DatabaseStoredMessage> = await Mongo.collections.storedMessages.find({
+    public static async getAllByUser(userId: Snowflake): Promise<DatabaseStoredMessage[] | null> {
+        const result: DatabaseStoredMessage[] = await Mongo.collections.storedMessages.find({
             ownerId: userId
         }).toArray();
 
@@ -46,7 +46,7 @@ export default abstract class StoredMessages {
     }
 
     public static async existsByUserId(userId: Snowflake, name: string): Promise<boolean> {
-        const storedMessages: Array<DatabaseStoredMessage> | null = await StoredMessages.getAllByUser(userId);
+        const storedMessages: DatabaseStoredMessage[] | null = await StoredMessages.getAllByUser(userId);
 
         if (storedMessages === null) {
             return false;

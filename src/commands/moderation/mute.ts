@@ -20,7 +20,7 @@ export default class MuteCommand extends Command {
         description: "Mute a user"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             description: "The member to mute",

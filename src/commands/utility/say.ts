@@ -19,7 +19,7 @@ export default class EmulateCommand extends Command {
 
     readonly aliases = ["echo"];
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "message",
             description: "The message to send",

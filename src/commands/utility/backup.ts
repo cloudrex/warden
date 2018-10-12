@@ -23,7 +23,7 @@ export default class BackupCommand extends Command {
     public async executed(context: CommandContext): Promise<void> {
         // TODO: Missing channel permissions and guild settings
 
-        const channels: Array<DatabaseChannel> = context.message.guild.channels.filter((channel) => channel.type === "text" || channel.type === "voice").map((channel: Channel) => {
+        const channels: DatabaseChannel[] = context.message.guild.channels.filter((channel) => channel.type === "text" || channel.type === "voice").map((channel: Channel) => {
             return {
                 id: channel.id,
                 name: (channel as GuildChannel).name,

@@ -13,7 +13,7 @@ export default class CaseCommand extends Command {
         description: "Grab a moderation case"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         // TODO
     ];
 

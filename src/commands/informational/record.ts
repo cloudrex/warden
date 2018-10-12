@@ -19,7 +19,7 @@ export default class RecordCommand extends Command {
         description: "View your recorded information"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             description: "The user to inspect",
@@ -35,7 +35,7 @@ export default class RecordCommand extends Command {
 
     // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages
     public async executed(context: CommandContext, args: RecordArgs): Promise<void> {
-        const messages: Array<DatabaseMessage> = await Mongo.collections.messages.find({
+        const messages: DatabaseMessage[] = await Mongo.collections.messages.find({
             authorId: args.member.id
         }).limit(max + 1).toArray();
 

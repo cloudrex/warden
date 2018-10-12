@@ -12,7 +12,7 @@ export default class AntiRaidService extends Service {
         description: "Unattended raid protection system"
     };
 
-    readonly memory: Map<Snowflake, Array<Message>> = new Map();
+    readonly memory: Map<Snowflake, Message[]> = new Map();
 
     constructor(options: ServiceOptions) {
         super(options);

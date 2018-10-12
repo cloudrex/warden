@@ -15,7 +15,7 @@ export default class WhoisCommand extends Command {
         description: "View information about a user",
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             description: "The member to inspect",

@@ -80,10 +80,10 @@ export type PartialDatabaseGuildConfig = {
     readonly domainWhitelist?: string[]; // useWhitelist must be TRUE
     readonly domainBlacklist?: string[]; // useWhitelist must be FALSE
     readonly useWhitelist?: boolean; // true -> whitelist, false -> blacklist, undefined -> none
-    readonly customCommands?: Array<GuildCustomCommand>;
-    readonly slowModeChannels?: Array<Snowflake>; // slowMode must be TRUE
+    readonly customCommands?: GuildCustomCommand[];
+    readonly slowModeChannels?: Snowflake[]; // slowMode must be TRUE
     readonly slowMode: boolean; // Whether slow-mode features are enabled
-    readonly ignoredChannels?: Array<Snowflake>;
+    readonly ignoredChannels?: Snowflake[];
     readonly reports: DatabaseGuildReports;
     readonly dataCollection: boolean; // Allow collection of data such as messages, members and server configuration to help improve Warden's development
 };

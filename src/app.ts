@@ -112,7 +112,7 @@ async function start() {
     const userMentionRegex = /(^[0-9]{17,18}$|^<@!?[0-9]{17,18}>$)/;
 
     const bot: Bot = new Bot({
-        argumentTypes: <Array<CustomArgType>>[
+        argumentTypes: <CustomArgType[]>[
             {
                 name: "user",
                 check: userMentionRegex,
@@ -137,7 +137,7 @@ async function start() {
             }
         ],
 
-        argumentResolvers: <Array<ArgumentResolver>>[
+        argumentResolvers: <ArgumentResolver[]>[
             {
                 name: "member",
 

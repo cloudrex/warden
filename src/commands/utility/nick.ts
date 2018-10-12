@@ -17,7 +17,7 @@ export default class NickCommand extends Command {
 
     readonly aliases = ["nickname"];
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "nickname",
             description: "The desired nickname",

@@ -16,7 +16,7 @@ export default class MentionableCommand extends Command {
         description: "Toggle a role mentionable"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "role",
             description: "The role to toggle mentionable",

@@ -9,11 +9,11 @@ import {DiscordEvent} from "forge/dist/decorators/decorators";
 import MemberConfig from "../core/member-config";
 import {config} from "../app";
 
-const conflictingBots: Array<Snowflake> = [
+const conflictingBots: Snowflake[] = [
     "155149108183695360" // Dyno#3861
 ];
 
-const muteLeavers: Array<Snowflake> = [];
+const muteLeavers: Snowflake[] = [];
 
 export default class ProtectionService extends Service {
     readonly meta = {
@@ -102,7 +102,7 @@ export default class ProtectionService extends Service {
             const mentions: Collection<Snowflake, GuildMember> = message.mentions.members;
 
             if (mentions && mentions.size > 0) {
-                const mentionedUsers: Array<GuildMember> = mentions.array();
+                const mentionedUsers: GuildMember[] = mentions.array();
 
                 if (mentionedUsers.length > 4 || mentionedUsers.length > 4 || mentionedUsers.length > 4) {
                     if (message.deletable) {
@@ -208,7 +208,7 @@ export default class ProtectionService extends Service {
         // Conflicting Bots
         if (updated.user.id === this.bot.client.user.id) {
             if (Utils.hasModerationPowers(updated) && !Utils.hasModerationPowers(old)) {
-                const conflictsFound: Array<GuildMember> = [];
+                const conflictsFound: GuildMember[] = [];
 
                 for (let i = 0; i < conflictingBots.length; i++) {
                     if (updated.guild.members.has(conflictingBots[i]) && Utils.hasModerationPowers(updated.guild.member(conflictingBots[i]))) {

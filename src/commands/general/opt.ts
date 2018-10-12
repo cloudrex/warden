@@ -20,7 +20,7 @@ export default class OptCommand extends Command {
         description: "Configure the bot"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "subCommand",
             type: PrimitiveArgType.String,
@@ -41,7 +41,7 @@ export default class OptCommand extends Command {
 
     public async executed(context: CommandContext, args: OptArgs): Promise<void> {
         if (!args.subCommand) {
-            const options: Array<DatabaseUserConfig> = await MemberConfig.getAll(context.sender.id);
+            const options: DatabaseUserConfig[] = await MemberConfig.getAll(context.sender.id);
             const iterator: MemberConfigIterator = new MemberConfigIterator(options);
 
             const tableData: Array<string[]> = [

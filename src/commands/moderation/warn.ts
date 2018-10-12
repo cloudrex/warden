@@ -20,7 +20,7 @@ export default class WarnCommand extends Command {
         description: "Warn an user"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             description: "The member to warn",

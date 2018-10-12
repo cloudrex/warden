@@ -20,7 +20,7 @@ export default class StoreCommand extends Command {
 
     readonly aliases = ["save"];
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "name",
             required: false,
@@ -43,7 +43,7 @@ export default class StoreCommand extends Command {
     public async executed(context: CommandContext, args: StoreArgs): Promise<void> {
         if (args.messageId === undefined || args.name === undefined) {
             if (args.messageId === undefined && args.name === undefined) {
-                const storedMessages: Array<DatabaseStoredMessage> | null = await StoredMessages.getAllByUser(context.sender.id);
+                const storedMessages: DatabaseStoredMessage[] | null = await StoredMessages.getAllByUser(context.sender.id);
 
                 let response: string = "";
 

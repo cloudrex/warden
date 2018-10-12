@@ -18,7 +18,7 @@ export default class SelfCommand extends Command {
         description: "Manage the bot's details"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "property",
             description: "The property to change",

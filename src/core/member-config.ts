@@ -4,14 +4,14 @@ import {MemberConfigType} from "./warden-api";
 import {Log} from "forge";
 
 export class MemberConfigIterator {
-    private resource: Array<DatabaseUserConfig>;
+    private resource: DatabaseUserConfig[];
 
-    constructor(resource: Array<DatabaseUserConfig>) {
+    constructor(resource: DatabaseUserConfig[]) {
         this.resource = resource;
     }
 
     public find(property: MemberConfigType): DatabaseUserConfig | null {
-        const result: Array<DatabaseUserConfig> = this.resource.filter((config: DatabaseUserConfig) => config.type === property);
+        const result: DatabaseUserConfig[] = this.resource.filter((config: DatabaseUserConfig) => config.type === property);
 
         if (result.length === 0) {
             return null;
@@ -37,7 +37,7 @@ export class MemberConfigIterator {
 }
 
 export default abstract class MemberConfig {
-    public static getAll(userId: Snowflake): Promise<Array<DatabaseUserConfig>> {
+    public static getAll(userId: Snowflake): Promise<DatabaseUserConfig[]> {
         return Mongo.collections.memberConfig.find({
             userId: userId
         }).toArray();

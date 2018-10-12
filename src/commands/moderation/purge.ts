@@ -15,7 +15,7 @@ export default class PurgeCommand extends Command {
         description: "Delete messages in bulk"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "amount",
             type: PrimitiveArgType.NonZeroInteger,

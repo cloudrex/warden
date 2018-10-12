@@ -20,7 +20,7 @@ export default class SoftbanCommand extends Command {
         description: "Softban a user"
     };
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             type: "member",

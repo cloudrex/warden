@@ -18,7 +18,7 @@ export default class AvatarCommand extends Command {
 
     readonly aliases = ["pfp"];
 
-    readonly arguments: Array<Argument> = [
+    readonly arguments: Argument[] = [
         {
             name: "member",
             description: "The member to inspect",
