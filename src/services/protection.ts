@@ -62,7 +62,7 @@ export default class ProtectionService extends Service {
                                     evidence = evidence.substring(0, 200) + " ...";
                                 }
 
-                                await api.executeAction({
+                                await api.executeAction(message.channel as TextChannel, {
                                     type: ModerationActionType.Warn,
                                     moderator: message.guild.me,
                                     reason: "Posted an invite link to a different server",

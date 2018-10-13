@@ -1,4 +1,4 @@
-import {GuildMember} from "discord.js";
+import {GuildMember, TextChannel} from "discord.js";
 import WardenAPI from "../../core/warden-api";
 import {Command, Argument, CommandContext, Permission, PrimitiveArgType} from "forge";
 import {CommandType} from "../general/help";
@@ -56,7 +56,7 @@ export default class BanCommand extends Command {
             return;
         }
 
-        await api.executeAction({
+        await api.executeAction(context.message.channel as TextChannel, {
             type: ModerationActionType.Ban,
             reason: args.reason,
             member: args.member,

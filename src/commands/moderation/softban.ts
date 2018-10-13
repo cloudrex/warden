@@ -1,4 +1,4 @@
-import {GuildMember} from "discord.js";
+import {GuildMember, TextChannel} from "discord.js";
 import {Argument, Command, Permission, PrimitiveArgType, CommandContext} from "forge";
 import WardenAPI from "../../core/warden-api";
 import {CommandType} from "../general/help";
@@ -55,7 +55,7 @@ export default class SoftbanCommand extends Command {
             return;
         }
 
-        await api.executeAction({
+        await api.executeAction(context.message.channel as TextChannel, {
             member: args.member,
             reason: args.reason,
             evidence: args.evidence,

@@ -1,6 +1,6 @@
 import WardenAPI from "../../core/warden-api";
 import {ChatEnvironment, Command, Argument, CommandContext, Permission, RestrictGroup, PrimitiveArgType} from "forge";
-import {GuildMember} from "discord.js";
+import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 
@@ -53,7 +53,7 @@ export default class MuteCommand extends Command {
     };
 
     public async executed(context: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {
-        await api.executeAction({
+        await api.executeAction(context.message.channel as TextChannel, {
             member: args.member,
             type: ModerationActionType.Mute,
             evidence: args.evidence,

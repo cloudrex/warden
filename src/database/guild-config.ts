@@ -1,89 +1,64 @@
 import {Snowflake} from "discord.js";
+import Mongo from "./mongo-database";
 
-export type ThresholdFeature = {
-    readonly enabled: boolean;
-    readonly threshold: number;
+const defaultGuildConfig: Partial<GuildConfig> = {
+    //
 };
 
-export const DefaultAutonomousProtectionOptions: AutonomousProtectionOptions = {
-    antiAds: true,
-    antiHoisting: false,
-    antiRaid: false,
-    antiSpam: false,
-    antiZalgo: false,
-    autoBackups: false,
-    swearFilter: false,
-
-    globalBans: {
-        enabled: false,
-        threshold: 10
-    }
-};
-
-export type AutonomousProtectionOptions = {
-    readonly antiSpam: boolean; // Anti-spam is prevention of repetitive, similar messages
-    readonly swearFilter: boolean;
-    readonly antiAds: boolean;
-    readonly antiHoisting: boolean;
-    readonly antiZalgo: boolean; // Anti-zalgo is for messages, not usernames/nicknames
-    readonly antiRaid: boolean;
-    readonly autoBackups: boolean;
-    readonly globalBans: ThresholdFeature; // Auto-bans users who have been banned in (>= threshold) servers
-};
-
-export type GuildCustomCommand = {
-    readonly command: string;
-    readonly response: string;
-};
-
-export type DatabaseGuildChannels = {
-    readonly modLog: Snowflake;
-    readonly welcome: Snowflake;
-    readonly memberLog: Snowflake; // When members leave/join
-};
-
-export const DefaultDatabaseGuildReports: DatabaseGuildReports = {
-    dailyReports: false,
-
-    moderationReports: {
-        enabled: false,
-        threshold: 1
-    },
-
-    raidReports: true,
-    weeklyReports: false
-};
-
-export type DatabaseGuildReports = {
-    readonly raidReports: boolean; // Generates a report and sends it to the guild owner if he was offline during a raid
-    readonly weeklyReports: boolean; // Generates a weekly report of the moderation actions carried in the guild + guild statistics (sent to guild owners only)
-    readonly dailyReports: boolean; // Same as weeklyReports, but in a daily basis (sent to guild owners only)
-    readonly moderationReports: ThresholdFeature; // Generates a report of moderation actions if the moderator/owner was gone for a long time
-};
-
-export const DefaultDatabaseGuildConfig: PartialDatabaseGuildConfig = {
-    dataCollection: true,
-    protectionOptions: DefaultAutonomousProtectionOptions,
-    slowMode: false,
-    reports: DefaultDatabaseGuildReports
-};
-
-export interface DatabaseGuildConfig extends PartialDatabaseGuildConfig {
-    readonly guildId: Snowflake;
-    readonly channels: DatabaseGuildChannels;
+export enum GuildConfigChannelType {
+    "mod-log" = "modLogChannel",
+    welcome = "welcomeChannel"
 }
 
-export type PartialDatabaseGuildConfig = {
-    readonly customPrefix?: string;
-    readonly protectionOptions: AutonomousProtectionOptions;
-    readonly bannedWords?: string[]; // swearFilter must be TRUE
-    readonly domainWhitelist?: string[]; // useWhitelist must be TRUE
-    readonly domainBlacklist?: string[]; // useWhitelist must be FALSE
-    readonly useWhitelist?: boolean; // true -> whitelist, false -> blacklist, undefined -> none
-    readonly customCommands?: GuildCustomCommand[];
-    readonly slowModeChannels?: Snowflake[]; // slowMode must be TRUE
-    readonly slowMode: boolean; // Whether slow-mode features are enabled
-    readonly ignoredChannels?: Snowflake[];
-    readonly reports: DatabaseGuildReports;
-    readonly dataCollection: boolean; // Allow collection of data such as messages, members and server configuration to help improve Warden's development
-};
+export type GuildConfig = {
+    readonly id: Snowflake;
+    readonly modLogChannel?: Snowflake;
+    readonly welcomeChannel?: Snowflake;
+}
+
+export class DatabaseGuildConfig {
+    public static async getOrDefault(guildId: Snowflake): Promise<GuildConfig> {
+        return await DatabaseGuildConfig.get(guildId) || defaultGuildConfig as GuildConfig;
+    }
+
+    public static async get(guildId: Snowflake): Promise<GuildConfig | null> {
+        return await Mongo.collections.guildConfig.findOne({
+            id: guildId
+        }) || null;
+    }
+
+    public static async exists(guildId: Snowflake): Promise<boolean> {
+        return await DatabaseGuildConfig.get(guildId) !== null;
+    }
+
+    public static create(guildId: Snowflake, overwrites: Partial<GuildConfig>): GuildConfig {
+        return {
+            ...(defaultGuildConfig as GuildConfig),
+            ...overwrites,
+            id: guildId
+        };
+    }
+
+    public static async update(guildId: Snowflake, guildConfig: Partial<GuildConfig>): Promise<void> {
+        if (await DatabaseGuildConfig.exists(guildId)) {
+            await Mongo.collections.guildConfig.updateOne({
+                id: guildId
+            }, {
+                $set: guildConfig
+            });
+        }
+        else {
+            await Mongo.collections.guildConfig.insertOne(DatabaseGuildConfig.create(guildId, guildConfig));
+        }
+    }
+
+    public static async setChannel(type: GuildConfigChannelType, channelId: Snowflake, guildId: Snowflake): Promise<void> {
+        if (!Object.keys(GuildConfigChannelType).includes(type)) {
+            throw new Error(`[DatabaseGuildConfig.setChannel] Invalid channel type: ${type}`);
+        }
+
+        await DatabaseGuildConfig.update(guildId, {
+            [GuildConfigChannelType[type]]: channelId
+        });
+    }
+}

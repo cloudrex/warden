@@ -128,7 +128,7 @@ export default abstract class Mongo {
                 useNewUrlParser: true
             }, async (error: Error, client: MongoClient) => {
                 if (error) {
-                    Log.debug("There was an error establishing connection to the MongoDB database.");
+                    // Log.debug("There was an error establishing connection to the MongoDB database.");
                     console.log(error.message);
 
                     resolve(false);
@@ -136,7 +136,7 @@ export default abstract class Mongo {
                     return;
                 }
 
-                Log.debug("Successfully connected to the MongoDB database.");
+                // Log.debug("Successfully connected to the MongoDB database.");
 
                 // Store Database
                 Mongo.db = client.db(dbName);

@@ -1,6 +1,5 @@
 import {ChatEnvironment, Command, Permission, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import  from "forge/dist/commands/command-context";
 
 export default class RoleAllCommand extends Command {
     readonly type = CommandType.Utility;

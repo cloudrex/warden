@@ -9,6 +9,7 @@ import Mongo, {
 
 import {BadWords, RacialSlurs} from "./constants";
 import {config} from "../app";
+import {DatabaseGuildConfig} from "../database/guild-config";
 
 export type MemberConfigType = "tracking";
 
@@ -93,7 +94,7 @@ export default class WardenAPI {
      * @param {ModerationAction} action
      * @return {Promise<void>}
      */
-    public async executeAction(action: ModerationAction): Promise<void> {
+    public async executeAction(channel: TextChannel, action: ModerationAction): Promise<void> {
         let embed: RichEmbed | null = null;
 
         switch (action.type) {
@@ -191,7 +192,15 @@ export default class WardenAPI {
             return;
         }
 
-        const sent: Message = await this.channels.modLog.send(embed) as Message;
+        const modLogChannel: Snowflake | null = (await DatabaseGuildConfig.getOrDefault(channel.guild.id)).modLogChannel || null;
+
+        if (!modLogChannel) {
+            await channel.send("No channel is configured for modLog, use the `setchannel` command to set it");
+
+            return;
+        }
+
+        const sent: Message = await (await channel.guild.channels.get(modLogChannel) as TextChannel).send(embed) as Message;
 
         await sent.edit(embed.setFooter(`Case ID: ${sent.id} • ${embed.footer.text}`, embed.footer.icon_url));
         await WardenAPI.saveModerationAction(action, sent.id);
