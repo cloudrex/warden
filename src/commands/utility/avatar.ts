@@ -1,8 +1,6 @@
-import {Command} from "forge";
+import {Command, Argument, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import {Argument} from "forge/dist/commands/command";
 import {GuildMember, RichEmbed} from "discord.js";
-import CommandContext from "forge/dist/commands/command-context";
 
 type AvatarArgs = {
     readonly member: GuildMember;

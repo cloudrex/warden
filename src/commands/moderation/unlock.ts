@@ -1,8 +1,6 @@
 import {Role} from "discord.js";
-import {Command, Permission} from "forge";
+import {Command, Permission, RestrictGroup, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "forge/dist/commands/command";
-import CommandContext from "forge/dist/commands/command-context";
 
 export default class UnlockCommand extends Command {
     readonly type = CommandType.Moderation;

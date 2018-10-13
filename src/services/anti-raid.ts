@@ -1,6 +1,5 @@
-import {Service, ServiceOptions, on, Utils} from "forge";
+import {Service, ServiceOptions, Utils, DiscordEvent} from "forge";
 import {Snowflake, Message} from "discord.js";
-import {DiscordEvent} from "forge/dist/decorators/decorators";
 import {compareTwoStrings} from "string-similarity";
 import {config} from "../app";
 

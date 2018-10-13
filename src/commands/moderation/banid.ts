@@ -1,9 +1,7 @@
-import {GuildMember, RichEmbed, Snowflake, TextBasedChannel, Message} from "discord.js";
+import {GuildMember, RichEmbed, Snowflake, Message} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, Argument, CommandContext, Permission, Log} from "forge";
-import {PrimitiveArgType} from "forge/dist/commands/command";
+import {Command, Argument, CommandContext, Permission, Log, PrimitiveArgType} from "forge";
 import {CommandType} from "../general/help";
-import {ModerationActionType, ModerationAction} from "../../database/mongo-database";
 
 export interface BanIdArgs {
     readonly id: Snowflake;

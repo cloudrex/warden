@@ -1,6 +1,5 @@
 import {Role} from "discord.js";
-import {ChatEnvironment, Command, Argument, CommandContext} from "forge";
-import {RestrictGroup, PrimitiveArgType} from "forge/dist/commands/command";
+import {ChatEnvironment, Command, Argument, CommandContext, RestrictGroup, PrimitiveArgType} from "forge";
 import {CommandType} from "../general/help";
 
 type RolesArgs = {

@@ -1,7 +1,6 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {Command, Argument, CommandContext, Utils} from "forge";
+import {Command, Argument, CommandContext, Utils, RestrictGroup} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "forge/dist/commands/command";
 
 type WhoisArgs = {
     readonly member: GuildMember;

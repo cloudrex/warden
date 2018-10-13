@@ -7,7 +7,6 @@ import path from "path";
 
 import {
     Bot,
-    CustomArgType,
     JsonAuthStore,
     JsonProvider,
     Log,
@@ -16,7 +15,7 @@ import {
     Utils
 } from "forge";
 
-import {ArgumentResolver} from "forge/dist/commands/command";
+import {ArgumentResolver} from "forge";
 import WardenAPI from "./core/warden-api";
 
 const baseDir: string = "./src";

@@ -1,9 +1,7 @@
 import {GuildMember} from "discord.js";
-import {Argument, Command, Permission} from "forge";
-import {PrimitiveArgType, RestrictGroup} from "forge/dist/commands/command";
+import {Argument, Command, Permission, PrimitiveArgType, CommandContext} from "forge";
 import WardenAPI from "../../core/warden-api";
 import {CommandType} from "../general/help";
-import CommandContext from "forge/dist/commands/command-context";
 import {ModerationActionType} from "../../database/mongo-database";
 
 type SoftbanArgs = {

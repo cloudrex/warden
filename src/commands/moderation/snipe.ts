@@ -1,9 +1,7 @@
 import {Message, RichEmbed} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {ChatEnvironment, Command, Utils} from "forge";
+import {ChatEnvironment, Command, Utils, CommandContext, RestrictGroup} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "forge/dist/commands/command";
-import CommandContext from "forge/dist/commands/command-context";
 
 export default class SnipeCommand extends Command {
     readonly type = CommandType.Utility;

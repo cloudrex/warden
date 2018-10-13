@@ -1,7 +1,5 @@
-import {Argument, ChatEnvironment, Command, Permission} from "forge";
-import {PrimitiveArgType} from "forge/dist/commands/command";
+import {Argument, ChatEnvironment, Command, Permission, PrimitiveArgType, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import CommandContext from "forge/dist/commands/command-context";
 
 type NickArgs = {
     readonly nickname: string;

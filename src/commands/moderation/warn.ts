@@ -1,10 +1,8 @@
-import {Argument, ChatEnvironment, Command, Utils} from "forge";
-import {PrimitiveArgType, RestrictGroup} from "forge/dist/commands/command";
+import {Argument, ChatEnvironment, Command, PrimitiveArgType, RestrictGroup, CommandContext} from "forge";
 import {GuildMember} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 import WardenAPI from "../../core/warden-api";
-import CommandContext from "forge/dist/commands/command-context";
 
 type WarnArgs = {
     readonly member: GuildMember;

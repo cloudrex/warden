@@ -1,5 +1,4 @@
-import {Command, CommandContext, Permission} from "forge";
-import {RestrictGroup, PrimitiveArgType} from "forge/dist/commands/command";
+import {Command, CommandContext, Permission, RestrictGroup, PrimitiveArgType} from "forge";
 import {CommandType} from "../general/help";
 
 const request: any = require("request").defaults({

@@ -1,7 +1,5 @@
-import {Argument, ChatEnvironment, Command, Permission} from "forge";
-import {PrimitiveArgType} from "forge/dist/commands/command";
+import {Argument, Command, PrimitiveArgType, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import CommandContext from "forge/dist/commands/command-context";
 
 type SayArgs = {
     readonly message: string;

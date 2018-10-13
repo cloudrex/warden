@@ -1,10 +1,7 @@
-import {Command, CommandContext} from "forge";
+import {Command, CommandContext, Argument, RestrictGroup, ChatEnvironment} from "forge";
 import {CommandType} from "../general/help";
-import {Argument} from "forge/dist";
-import {RestrictGroup} from "forge/dist/commands/command";
 import Mongo from "../../database/mongo-database";
 import {GuildMember} from "discord.js";
-import ChatEnvironment from "forge/dist/core/chat-environment";
 
 type ClearWarnsArgs = {
     readonly member: GuildMember;

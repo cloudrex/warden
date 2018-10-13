@@ -5,15 +5,12 @@ import {
     Command,
     Argument,
     CommandContext,
-    DataProvider,
-    JsonProvider,
-    Log,
-    Utils
+    Utils,
+    RestrictGroup
 } from "forge";
 
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseModerationAction} from "../../database/mongo-database";
-import {RestrictGroup} from "forge/dist/commands/command";
 
 export interface StoredWarning {
     readonly reason: string;

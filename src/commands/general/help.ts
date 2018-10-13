@@ -1,6 +1,4 @@
-import {Command, Permission, Utils} from "forge";
-import {RichEmbed} from "discord.js";
-import CommandContext from "forge/dist/commands/command-context";
+import {Command, CommandContext} from "forge";
 
 export enum CommandType {
     Utility = "tools",

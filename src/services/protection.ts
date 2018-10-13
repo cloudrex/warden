@@ -1,11 +1,8 @@
 import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel, Role} from "discord.js";
 import WardenAPI from "../core/warden-api";
-import {Bot, CommandParser, Log, Service, on} from "forge";
-import Patterns from "forge/dist/core/patterns";
-import Utils from "forge/dist/core/utils";
-import Mongo, {DatabaseMessage, ModerationActionType} from "../database/mongo-database";
+import {CommandParser, Log, Service, DiscordEvent, Utils, Patterns} from "forge";
+import Mongo, {ModerationActionType} from "../database/mongo-database";
 import Messages from "../core/messages";
-import {DiscordEvent} from "forge/dist/decorators/decorators";
 import MemberConfig from "../core/member-config";
 import {config} from "../app";
 

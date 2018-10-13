@@ -1,9 +1,7 @@
-import {Command, CommandContext, Permission, Utils} from "forge";
+import {Command, CommandContext, Patterns, Argument} from "forge";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
-import Patterns from "forge/dist/core/patterns";
-import {Argument} from "forge/dist";
 
 const max: number = 1000;
 

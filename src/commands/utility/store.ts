@@ -1,8 +1,7 @@
-import {Command, CommandContext, Utils} from "forge";
+import {Command, CommandContext, Utils, Argument, PrimitiveArgType} from "forge";
 import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
 import {DatabaseStoredMessage} from "../../database/mongo-database";
-import {Argument, PrimitiveArgType} from "forge/dist/commands/command";
 import StoredMessages from "../../core/stored-messages";
 
 type StoreArgs = {

@@ -1,6 +1,5 @@
-import {Command, CommandContext} from "forge";
+import {Command, CommandContext, RestrictGroup} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "forge/dist/commands/command";
 
 export default class StopCommand extends Command {
     readonly type = CommandType.Configuration;

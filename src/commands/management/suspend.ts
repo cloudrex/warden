@@ -1,6 +1,5 @@
-import {Command, CommandContext, Permission, Utils} from "forge";
+import {Command, CommandContext, RestrictGroup} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "forge/dist/commands/command";
 
 export default class SuspendCommand extends Command {
     readonly type = CommandType.Utility;

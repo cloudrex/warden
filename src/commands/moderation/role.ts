@@ -1,7 +1,6 @@
 import {GuildMember, Role} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission} from "forge";
+import {Argument, ChatEnvironment, Command, Permission, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import CommandContext from "forge/dist/commands/command-context";
 
 type RoleArgs = {
     readonly role: Role;

@@ -1,7 +1,6 @@
-import {Command, CommandContext} from "forge";
+import {Command, CommandContext, RestrictGroup} from "forge";
 import {CommandType} from "./help";
 import {TextChannel, Permissions} from "discord.js";
-import {RestrictGroup} from "forge/dist/commands/command";
 
 export default class TestCommand extends Command {
     readonly type = CommandType.Utility;

@@ -1,7 +1,6 @@
-import {Command, CommandContext} from "forge";
+import {Command, CommandContext, RestrictGroup} from "forge";
 import {Argument, PrimitiveArgType} from "forge/dist";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "forge/dist/commands/command";
 
 type SelfArgs = {
     readonly property: SelfProperty;

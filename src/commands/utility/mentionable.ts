@@ -1,8 +1,6 @@
 import {Role} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission} from "forge";
+import {Argument, ChatEnvironment, Command, Permission, RestrictGroup, CommandContext} from "forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "forge/dist/commands/command";
-import CommandContext from "forge/dist/commands/command-context";
 
 type MentionableArgs = {
     readonly role: Role;
