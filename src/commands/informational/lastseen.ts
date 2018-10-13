@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, Utils} from "forge";
+import {Command, CommandContext, Permission, Utils, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
@@ -21,7 +21,7 @@ export default class LastSeenCommand extends Command {
     readonly arguments: Argument[] = [
         {
             name: "member",
-            type: "member",
+            type: InternalArgType.Member,
             required: true
         }
     ];

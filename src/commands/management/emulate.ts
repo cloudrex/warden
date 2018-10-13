@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, PrimitiveArgType, RestrictGroup, ChatEnvironment} from "forge";
+import {Command, Argument, CommandContext, PrimitiveArgType, RestrictGroup, ChatEnvironment, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 
@@ -19,7 +19,7 @@ export default class EmulateCommand extends Command {
         {
             name: "member",
             description: "The author of the emulated message",
-            type: "member",
+            type: InternalArgType.Member,
             required: true
         },
         {

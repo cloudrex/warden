@@ -1,4 +1,4 @@
-import {Argument, ChatEnvironment, Command, PrimitiveArgType, RestrictGroup, CommandContext} from "forge";
+import {Argument, ChatEnvironment, Command, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
@@ -22,7 +22,7 @@ export default class WarnCommand extends Command {
         {
             name: "member",
             description: "The member to warn",
-            type: "member",
+            type: InternalArgType.Member,
             required: true
         },
         {

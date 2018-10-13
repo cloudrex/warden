@@ -1,4 +1,4 @@
-import {Command, CommandContext, Argument, RestrictGroup, ChatEnvironment} from "forge";
+import {Command, CommandContext, Argument, RestrictGroup, ChatEnvironment, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 import Mongo from "../../database/mongo-database";
 import {GuildMember} from "discord.js";
@@ -21,7 +21,7 @@ export default class ClearWarnsCommand extends Command {
         {
             name: "member",
             description: "The target user",
-            type: "member",
+            type: InternalArgType.Member,
             required: true
         }
     ];

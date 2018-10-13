@@ -1,5 +1,5 @@
 import {Role} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission, RestrictGroup, CommandContext} from "forge";
+import {Argument, ChatEnvironment, Command, Permission, RestrictGroup, CommandContext, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 
 type MentionableArgs = {
@@ -18,7 +18,7 @@ export default class MentionableCommand extends Command {
         {
             name: "role",
             description: "The role to toggle mentionable",
-            type: "role",
+            type: InternalArgType.Role,
             required: true
         }
     ];

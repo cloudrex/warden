@@ -6,7 +6,8 @@ import {
     Argument,
     CommandContext,
     Utils,
-    RestrictGroup
+    RestrictGroup,
+    InternalArgType
 } from "forge";
 
 import {CommandType} from "../general/help";
@@ -35,7 +36,7 @@ export default class WarningsCommand extends Command {
     readonly arguments: Argument[] = [
         {
             name: "member",
-            type: "member",
+            type: InternalArgType.Member,
             description: "The member to inspect",
             required: true
         }

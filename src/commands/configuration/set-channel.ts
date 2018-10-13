@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, ChatEnvironment, PrimitiveArgType, Utils} from "forge";
+import {Command, Argument, CommandContext, ChatEnvironment, PrimitiveArgType, Utils, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 import {Snowflake} from "discord.js";
 import {DatabaseGuildConfig, GuildConfigChannelType} from "../../database/guild-config";
@@ -28,7 +28,7 @@ export default class AvatarCommand extends Command {
         {
             name: "channel",
             description: "The channel",
-            type: "channel",
+            type: InternalArgType.Channel,
             required: true
         }
     ];

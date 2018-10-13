@@ -1,6 +1,7 @@
 import {ChatEnvironment, Command, RestrictGroup, CommandContext} from "forge";
 import {CommandType} from "../general/help";
 
+// TODO: Update
 export default class ReasonCommand extends Command {
     readonly type = CommandType.Moderation;
 

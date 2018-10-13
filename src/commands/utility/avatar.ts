@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext} from "forge";
+import {Command, Argument, CommandContext, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 import {GuildMember, RichEmbed} from "discord.js";
 
@@ -20,7 +20,7 @@ export default class AvatarCommand extends Command {
         {
             name: "member",
             description: "The member to inspect",
-            type: "member",
+            type: InternalArgType.Member,
             required: true
         }
     ];

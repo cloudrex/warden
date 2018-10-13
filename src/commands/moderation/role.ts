@@ -1,5 +1,5 @@
 import {GuildMember, Role} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission, CommandContext} from "forge";
+import {Argument, ChatEnvironment, Command, Permission, CommandContext, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 
 type RoleArgs = {
@@ -19,13 +19,13 @@ export default class RoleCommand extends Command {
         {
             name: "role",
             description: "The role to add or remove",
-            type: "role",
+            type: InternalArgType.Role,
             required: true
         },
         {
             name: "member",
             description: "The member to add or remove the role from",
-            type: "member",
+            type: InternalArgType.Member,
             required: true
         }
     ];

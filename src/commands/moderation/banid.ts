@@ -1,6 +1,6 @@
 import {GuildMember, RichEmbed, Snowflake, Message} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, Argument, CommandContext, Permission, Log, PrimitiveArgType} from "forge";
+import {Command, Argument, CommandContext, Permission, Log, PrimitiveArgType, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 
 export interface BanIdArgs {
@@ -21,7 +21,7 @@ export default class BanCommand extends Command {
         {
             name: "id",
             description: "The member Id to ban",
-            type: PrimitiveArgType.String,
+            type: InternalArgType.Snowflake,
             required: true
         },
         {

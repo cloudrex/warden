@@ -1,5 +1,5 @@
 import {GuildMember, TextChannel} from "discord.js";
-import {Argument, Command, Permission, PrimitiveArgType, CommandContext} from "forge";
+import {Argument, Command, Permission, PrimitiveArgType, CommandContext, InternalArgType} from "forge";
 import WardenAPI from "../../core/warden-api";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
@@ -21,7 +21,7 @@ export default class SoftbanCommand extends Command {
     readonly arguments: Argument[] = [
         {
             name: "member",
-            type: "member",
+            type: InternalArgType.Member,
             description: "The member to softban",
             required: true
         },

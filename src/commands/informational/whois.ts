@@ -1,5 +1,5 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {Command, Argument, CommandContext, Utils, RestrictGroup} from "forge";
+import {Command, Argument, CommandContext, Utils, RestrictGroup, InternalArgType} from "forge";
 import {CommandType} from "../general/help";
 
 type WhoisArgs = {
@@ -18,7 +18,7 @@ export default class WhoisCommand extends Command {
         {
             name: "member",
             description: "The member to inspect",
-            type: "member",
+            type: InternalArgType.Member,
             required: false,
             defaultValue: (message: Message) => message.author.id
         }

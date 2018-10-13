@@ -1,4 +1,4 @@
-import {Command, CommandContext, Patterns, Argument} from "forge";
+import {Command, CommandContext, Patterns, Argument, InternalArgType} from "forge";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
@@ -21,7 +21,7 @@ export default class RecordCommand extends Command {
         {
             name: "member",
             description: "The user to inspect",
-            type: "member",
+            type: InternalArgType.Member,
             required: false,
             defaultValue: (message: Message) => message.member.id
         }
