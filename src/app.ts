@@ -91,6 +91,9 @@ function checkConfig(): void {
     }
 }
 
+// TODO: Debugging
+// testing for deployment
+
 checkConfig();
 
 console.log(`\nUsing configuration\n\n`, config, "\n");
