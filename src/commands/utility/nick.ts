@@ -1,4 +1,4 @@
-import {Argument, ChatEnvironment, Command, Permission, PrimitiveArgType, CommandContext} from "forge";
+import {Argument, ChatEnvironment, Command, Permission, PrimitiveArgType, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type NickArgs = {

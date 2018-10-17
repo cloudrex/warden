@@ -13,9 +13,9 @@ import {
     LogLevel,
     Settings,
     Utils
-} from "forge";
+} from "@cloudrex/forge";
 
-import {ArgumentResolver} from "forge";
+import {ArgumentResolver} from "@cloudrex/forge";
 import WardenAPI from "./core/warden-api";
 
 const baseDir: string = "./src";

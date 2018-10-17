@@ -1,4 +1,4 @@
-import {Service, ServiceOptions, Utils, DiscordEvent} from "forge";
+import {Service, ServiceOptions, Utils, DiscordEvent} from "@cloudrex/forge";
 import {Snowflake, Message} from "discord.js";
 import {compareTwoStrings} from "string-similarity";
 import {config} from "../app";

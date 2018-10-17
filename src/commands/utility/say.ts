@@ -1,4 +1,4 @@
-import {Argument, Command, PrimitiveArgType, CommandContext} from "forge";
+import {Argument, Command, PrimitiveArgType, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type SayArgs = {

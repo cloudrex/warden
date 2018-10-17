@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, Utils, InternalArgType} from "forge";
+import {Command, CommandContext, Utils, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";

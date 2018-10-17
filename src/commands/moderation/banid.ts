@@ -1,6 +1,6 @@
 import {GuildMember, RichEmbed, Snowflake, Message} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, Argument, CommandContext, Permission, Log, PrimitiveArgType, InternalArgType} from "forge";
+import {Command, Argument, CommandContext, Permission, Log, PrimitiveArgType, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 export interface BanIdArgs {

@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, PrimitiveArgType, RestrictGroup, ChatEnvironment, InternalArgType} from "forge";
+import {Command, Argument, CommandContext, PrimitiveArgType, RestrictGroup, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 

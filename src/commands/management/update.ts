@@ -1,5 +1,5 @@
 import {exec} from "child_process";
-import {Command, CommandContext, RestrictGroup} from "forge";
+import {Command, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 export default class UpdateCommand extends Command {

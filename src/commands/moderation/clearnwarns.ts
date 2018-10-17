@@ -1,4 +1,4 @@
-import {Command, CommandContext, Argument, RestrictGroup, ChatEnvironment, InternalArgType} from "forge";
+import {Command, CommandContext, Argument, RestrictGroup, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import Mongo from "../../database/mongo-database";
 import {GuildMember} from "discord.js";

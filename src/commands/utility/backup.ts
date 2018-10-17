@@ -1,4 +1,4 @@
-import {Command, RestrictGroup, CommandContext} from "forge";
+import {Command, RestrictGroup, CommandContext} from "@cloudrex/forge";
 import {Channel, GuildChannel, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {ChannelType, DatabaseChannel} from "../../database/mongo-database";

@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, ChatEnvironment, PrimitiveArgType, Utils, InternalArgType} from "forge";
+import {Command, Argument, CommandContext, ChatEnvironment, PrimitiveArgType, Utils, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Snowflake} from "discord.js";
 import {DatabaseGuildConfig, GuildConfigChannelType} from "../../database/guild-config";

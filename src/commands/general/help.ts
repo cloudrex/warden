@@ -1,4 +1,4 @@
-import {Command, CommandContext} from "forge";
+import {Command, CommandContext} from "@cloudrex/forge";
 
 export enum CommandType {
     Utility = "tools",

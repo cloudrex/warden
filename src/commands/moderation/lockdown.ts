@@ -1,5 +1,5 @@
 import {Role} from "discord.js";
-import {Command, CommandContext, Permission, RestrictGroup} from "forge";
+import {Command, CommandContext, Permission, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 export default class LockdownCommand extends Command {

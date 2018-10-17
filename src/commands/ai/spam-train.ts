@@ -1,4 +1,4 @@
-import {Command, CommandContext, Argument, PrimitiveArgType, RestrictGroup} from "forge";
+import {Command, CommandContext, Argument, PrimitiveArgType, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Message, Snowflake, TextChannel} from "discord.js";
 import brain, {NeuralNetwork} from "brain.js";

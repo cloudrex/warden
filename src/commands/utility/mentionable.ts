@@ -1,5 +1,5 @@
 import {Role} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission, RestrictGroup, CommandContext, InternalArgType} from "forge";
+import {Argument, ChatEnvironment, Command, Permission, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type MentionableArgs = {

@@ -1,4 +1,4 @@
-import {ChatEnvironment, Command, Permission, CommandContext} from "forge";
+import {ChatEnvironment, Command, Permission, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 export default class RoleAllCommand extends Command {

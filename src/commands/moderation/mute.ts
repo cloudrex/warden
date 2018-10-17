@@ -1,5 +1,5 @@
 import WardenAPI from "../../core/warden-api";
-import {ChatEnvironment, Command, Argument, CommandContext, Permission, RestrictGroup, PrimitiveArgType, InternalArgType} from "forge";
+import {ChatEnvironment, Command, Argument, CommandContext, Permission, RestrictGroup, PrimitiveArgType, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";

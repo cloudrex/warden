@@ -1,6 +1,6 @@
 import {GuildMember, TextChannel} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, Argument, CommandContext, Permission, PrimitiveArgType} from "forge";
+import {Command, Argument, CommandContext, Permission, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 

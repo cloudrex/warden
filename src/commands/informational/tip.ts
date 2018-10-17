@@ -1,4 +1,4 @@
-import {Command, CommandContext, Utils} from "forge";
+import {Command, CommandContext, Utils} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 const channels = {

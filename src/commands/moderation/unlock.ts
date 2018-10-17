@@ -1,5 +1,5 @@
 import {Role} from "discord.js";
-import {Command, Permission, RestrictGroup, CommandContext} from "forge";
+import {Command, Permission, RestrictGroup, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 export default class UnlockCommand extends Command {

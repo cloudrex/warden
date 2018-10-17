@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, InternalArgType} from "forge";
+import {Command, Argument, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember, RichEmbed} from "discord.js";
 

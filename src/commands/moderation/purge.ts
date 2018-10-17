@@ -1,4 +1,4 @@
-import {Argument, ChatEnvironment, Command, CommandContext, PrimitiveArgType, RestrictGroup} from "forge";
+import {Argument, ChatEnvironment, Command, CommandContext, PrimitiveArgType, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type PurgeArgs = {

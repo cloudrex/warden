@@ -1,5 +1,5 @@
-import {Message, Snowflake} from "discord.js";
-import {Bot, CommandParser, Log, Service} from "forge";
+import {Message} from "discord.js";
+import {Service} from "@cloudrex/forge";
 import {loaded, ne} from "../commands/ai/spam-train";
 import {NeuralNetwork} from "brain.js";
 

@@ -1,4 +1,4 @@
-import {Command, CommandContext} from "forge";
+import {Command, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "./help";
 
 export default class InviteCommand extends Command {

@@ -8,7 +8,7 @@ import {
     Utils,
     RestrictGroup,
     InternalArgType
-} from "forge";
+} from "@cloudrex/forge";
 
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseModerationAction} from "../../database/mongo-database";

@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, RestrictGroup, PrimitiveArgType} from "forge";
+import {Command, CommandContext, Permission, RestrictGroup, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 const request: any = require("request").defaults({
