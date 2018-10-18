@@ -16,7 +16,7 @@ export default class AvatarCommand extends Command {
         description: "Configure channels"
     };
 
-    //readonly aliases = ["setchannel"];
+    readonly aliases = ["setchannel"];
 
     readonly arguments: Argument[] = [
         {
