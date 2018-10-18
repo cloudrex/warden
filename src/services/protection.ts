@@ -165,7 +165,7 @@ export default class ProtectionService extends Service {
 
         // Delete the saved message after 30 minutes
         setTimeout(() => {
-            delete this.api.deletedMessages[message.channel.id];
+            this.api.deletedMessages.delete(message.channel.id);
         }, 1800000);
     }
 
