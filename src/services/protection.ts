@@ -19,6 +19,11 @@ export default class ProtectionService extends Service {
     };
 
     private async handleMessage(message: Message): Promise<void> {
+        // Ignore DMs
+        if (!message.guild || message.channel.type !== "text") {
+            return;
+        }
+
         let tracking: boolean | null = await MemberConfig.get(message.author.id, "tracking") as boolean | null;
 
         tracking = tracking === null ? true : tracking;
@@ -45,10 +50,10 @@ export default class ProtectionService extends Service {
         const api: WardenAPI = this.api as WardenAPI;
 
         if (config.inviteProtection && Patterns.invite.test(message.content)) {
-            const matches = message.content.match(Patterns.invite);
+            const matches: RegExpMatchArray | null = message.content.match(Patterns.invite);
 
             if (matches !== null) {
-                for (let i = 0; i < matches.length; i++) {
+                for (let i: number = 0; i < matches.length; i++) {
                     try {
                         const invite: Invite = await this.bot.client.fetchInvite(matches[i]);
 
