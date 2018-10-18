@@ -152,6 +152,13 @@ export default class WardenAPI {
             }
 
             case ModerationActionType.Ban: {
+                try {
+                    await (await action.member.createDM()).send(new RichEmbed()
+                        .setDescription(`You were banned from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
+                        .setColor("RED"))
+                }
+                catch (e) {}
+                
                 await action.member.ban({
                     days: 1,
                     reason
@@ -170,13 +177,6 @@ export default class WardenAPI {
                 else {
                     Log.error("[WardenAPI.executeAction] Expecting channels");
                 }
-
-                try {
-                    await (await action.member.createDM()).send(new RichEmbed()
-                        .setDescription(`You were banned from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                        .setColor("RED"))
-                }
-                catch (e) {}
 
                 break;
             }
