@@ -22,14 +22,16 @@ export default class BuildCommand extends Command {
         return new Promise<void>(async (resolve) => {
             const platform: string = os.platform();
 
-            if (platform !== "win32") {
+            if (platform !== "linux") {
                 await context.fail(`That command may only be executed in a linux platform; Currently '${platform}' based`);
                 resolve();
 
                 return;
             }
 
+            await context.bot.triggerCommand("update", context.message);
             await context.bot.triggerCommand("build", context.message);
+            await context.ok("Running rebuild script ...");
 
             exec("bash tasks/rebuild.sh", async (error: ExecException | null, stdout: string) => {
                 if (error) {
