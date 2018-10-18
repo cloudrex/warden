@@ -163,9 +163,9 @@ async function start() {
         primitiveCommands: [
             "usage",
             "ping",
-            "auth",
             "prefix",
-            "throw"
+            "throw",
+            "cli"
         ]
     });
 
