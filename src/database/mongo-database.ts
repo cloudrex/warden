@@ -62,6 +62,7 @@ export type DatabaseModerationAction = {
     readonly evidence?: string;
     readonly time: number;
     readonly end?: number;
+    readonly automatic: boolean;
 };
 
 export type DatabaseMessage = {

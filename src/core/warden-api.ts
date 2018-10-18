@@ -97,6 +97,8 @@ export default class WardenAPI {
     public async executeAction(channel: TextChannel, action: ModerationAction): Promise<void> {
         let embed: RichEmbed | null = null;
 
+        const reason: string = `${action.moderator.user.tag} => ${action.reason}`;
+
         switch (action.type) {
             case ModerationActionType.Warn: {
                 const autoWarn: boolean = action.moderator.id === this.bot.client.user.id;
@@ -123,7 +125,7 @@ export default class WardenAPI {
             }
 
             case ModerationActionType.Mute: {
-                await action.member.addRole(action.member.guild.roles.find("name", "Muted"), action.reason);
+                await action.member.addRole(action.member.guild.roles.find("name", "Muted"), reason);
 
                 if (this.channels) {
                     embed = new RichEmbed()
@@ -152,7 +154,7 @@ export default class WardenAPI {
             case ModerationActionType.Ban: {
                 await action.member.ban({
                     days: 1,
-                    reason: action.reason
+                    reason
                 });
 
                 if (this.channels) {
@@ -194,6 +196,7 @@ export default class WardenAPI {
 
         const modLogChannel: Snowflake | null = (await DatabaseGuildConfig.getOrDefault(channel.guild.id)).modLogChannel || null;
 
+        // TODO: Should be auto set for in case of emergencies, maybe auto-search for "mod-log" channel?
         if (!modLogChannel) {
             await channel.send("No channel is configured for modLog, use the `setchannel` command to set it");
 
@@ -203,7 +206,7 @@ export default class WardenAPI {
         const sent: Message = await (await channel.guild.channels.get(modLogChannel) as TextChannel).send(embed) as Message;
 
         await sent.edit(embed.setFooter(`Case ID: ${sent.id} • ${embed.footer.text}`, embed.footer.icon_url));
-        await WardenAPI.saveModerationAction(action, sent.id);
+        await WardenAPI.saveModerationAction(action, sent.id, this.bot && action.moderator.id === this.bot.client.user.id);
     }
 
     /**
@@ -211,7 +214,7 @@ export default class WardenAPI {
      * @param {Snowflake} caseId
      * @return {Promise<void>}
      */
-    private static async saveModerationAction(action: ModerationAction, caseId: Snowflake): Promise<void> {
+    private static async saveModerationAction(action: ModerationAction, caseId: Snowflake, automatic: boolean): Promise<void> {
         await WardenAPI.saveDatabaseModerationAction({
             id: caseId,
             type: action.type,
@@ -221,7 +224,8 @@ export default class WardenAPI {
             moderatorId: action.moderator.id,
             end: action.end,
             time: Date.now(),
-            evidence: action.evidence
+            evidence: action.evidence,
+            automatic
         });
     }
 
