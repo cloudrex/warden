@@ -1,9 +1,11 @@
-import {Role} from "discord.js";
+import {Role, Message} from "discord.js";
 import {Command, CommandContext, Permission, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 export default class LockdownCommand extends Command {
     readonly type = CommandType.Moderation;
+
+    readonly undoable: boolean = true;
 
     readonly meta = {
         name: "lockdown",
@@ -14,6 +16,13 @@ export default class LockdownCommand extends Command {
         specific: [RestrictGroup.ServerModerator],
         selfPermissions: [Permission.ManageRoles, Permission.Admin]
     };
+
+    public async undo(oldContext: CommandContext, message: Message): Promise<boolean> {
+        // TODO: Can't trust oldContext
+        await oldContext.bot.triggerCommand("unlock", message);
+
+        return true;
+    }
 
     public async executed(context: CommandContext): Promise<void> {
         const everyone: Role = context.message.guild.roles.find("name", "@everyone");
