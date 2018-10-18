@@ -22,6 +22,8 @@ export default class BuildCommand extends Command {
             exec("npm run build", (error: any, stdOut: string) => {
                 if (error) {
                     context.fail(`There was an error while building. (${error.message})`, false);
+
+                    return;
                 }
 
                 context.ok(`\`\`\`${stdOut.toString()}\`\`\``);
