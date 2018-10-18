@@ -1,7 +1,9 @@
 import {Command, CommandContext, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {table, TableUserConfig} from "table";
-import {Permissions, PermissionResolvable} from "discord.js";
+import {Permissions, PermissionResolvable, Message, GuildMember, Snowflake} from "discord.js";
+import {Argument} from "@cloudrex/forge";
+import {InternalArgType} from "@cloudrex/forge";
 
 const tableConfig: TableUserConfig = {
     columns: {
@@ -10,6 +12,10 @@ const tableConfig: TableUserConfig = {
         }
     }
 };
+
+type PermissionsArgs = {
+    readonly member: GuildMember;
+}
 
 export default class PermissionsCommand extends Command {
     readonly type = CommandType.Informational;
@@ -26,12 +32,22 @@ export default class PermissionsCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
+    readonly arguments: Argument[] = [
+        {
+            name: "member",
+            type: InternalArgType.Member,
+            description: "The member to inspect",
+            required: false,
+            defaultValue: (message: Message): Snowflake => message.author.id
+        }
+    ];
+
     private hasPermission(name: PermissionResolvable, permissions: Permissions): string {
         return permissions.hasPermission(name) ? "Yes" : "";
     }
 
-    public async executed(context: CommandContext): Promise<void> {
-        const perms: Permissions = context.message.member.permissions;
+    public async executed(context: CommandContext, args: PermissionsArgs): Promise<void> {
+        const perms: Permissions = args.member.permissions;
 
         const data: Array<string[]> = [
             ["Permission", "Yes/No"],
