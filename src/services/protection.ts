@@ -160,6 +160,11 @@ export default class ProtectionService extends Service {
     }
 
     private handleMessageDeleted(message: Message): void {
+        // Ignore DMs
+        if (!message.guild || message.channel.type !== "text") {
+            return;
+        }
+
         // Save deleted messages for snipe command
         // TODO: Temporary hotfix
         if (CommandParser.getCommandBase(message.content, this.bot.settings.general.prefixes) === "snipe") {
@@ -176,7 +181,7 @@ export default class ProtectionService extends Service {
 
     private handleGuildMemberLeft(member: GuildMember): void {
         // Prevent members from avoiding roles
-        if (member.roles.has(this.api.roles.muted)) {
+        if (member.roles.has(config.roleMuted)) {
             muteLeavers.push(member.id);
         }
     }
