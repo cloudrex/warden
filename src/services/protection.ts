@@ -323,11 +323,11 @@ export default class ProtectionService extends Service {
         }
 
         // Register listeners
-        this.bot.client.on(DiscordEvent.Message, this.handleMessage);
-        this.bot.client.on(DiscordEvent.MessageDeleted, this.handleMessageDeleted);
-        this.bot.client.on(DiscordEvent.GuildMemberLeft, this.handleGuildMemberLeft);
-        this.bot.client.on(DiscordEvent.GuildMemberJoined, this.handleGuildMemberJoined);
-        this.bot.client.on(DiscordEvent.GuildMemberUpdated, this.handleGuildMemberUpdated);
+        this.bot.client.on(DiscordEvent.Message, this.handleMessage.bind(this));
+        this.bot.client.on(DiscordEvent.MessageDeleted, this.handleMessageDeleted.bind(this));
+        this.bot.client.on(DiscordEvent.GuildMemberLeft, this.handleGuildMemberLeft.bind(this));
+        this.bot.client.on(DiscordEvent.GuildMemberJoined, this.handleGuildMemberJoined.bind(this));
+        this.bot.client.on(DiscordEvent.GuildMemberUpdated, this.handleGuildMemberUpdated.bind(this));
     }
 
     readonly canStart = (): boolean => {
