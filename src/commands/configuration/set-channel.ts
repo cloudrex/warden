@@ -8,7 +8,7 @@ type SetChannelArgs = {
     readonly channel: Snowflake;
 };
 
-export default class AvatarCommand extends Command {
+export default class SetChannelCommand extends Command<SetChannelArgs> {
     readonly type = CommandType.Configuration;
 
     readonly meta = {
