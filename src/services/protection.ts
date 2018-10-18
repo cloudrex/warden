@@ -169,7 +169,7 @@ export default class ProtectionService extends Service {
         }
     }
 
-    private async handleGuildMemberJoined(member: GuildMember): Promise<void> {
+    private async handleAdsOnName(member: GuildMember): Promise<boolean> {
         if (config.banAdsOnName && Patterns.invite.test(member.user.username)) {
             await this.api.executeAction(Utils.findDefaultChannel(member.guild), {
                 type: ModerationActionType.Ban,
@@ -177,8 +177,15 @@ export default class ProtectionService extends Service {
                 member,
                 moderator: member.guild.me
             });
+
+            return false;
         }
-        else if (config.persistentRoles && muteLeavers.includes(member.id)) {
+
+        return false;
+    }
+
+    private async handlePersistentRoles(member: GuildMember): Promise<boolean> {
+        if (config.persistentRoles && muteLeavers.includes(member.id)) {
             const dm: DMChannel = await member.createDM();
 
             dm.send(new RichEmbed()
@@ -202,61 +209,76 @@ export default class ProtectionService extends Service {
             if (member.roles.has(this.api.roles.muted)) {
                 Log.warn("[Protection:guildMemberAdd] Looks like someone got there before me! Another bot provides moderation dodging protection, which may cause problems. You can identify the bot by checking audit logs.");
 
-                return;
+                return false;
             }
 
+            // TODO: Use a central resource for getting reasons, (because include "Automatic" prefix)
             await member.addRole(this.api.roles.muted, "Possible attempt to avoid moderation by rejoining");
+
+            return true;
+        }
+
+        return false;
+    }
+
+    private async handleGuildMemberJoined(member: GuildMember): Promise<void> {
+        if (!await this.handleAdsOnName(member)) {
+            await this.handlePersistentRoles(member);
         }
     }
 
-    private async handleGuildMemberUpdated(old: GuildMember, updated: GuildMember): Promise<void> {
+    private async handleConflictingBots(old: GuildMember, updated: GuildMember): Promise<boolean> {
         // Conflicting Bots
-        if (updated.user.id === this.bot.client.user.id) {
-            if (Utils.hasModerationPowers(updated) && !Utils.hasModerationPowers(old)) {
-                const conflictsFound: GuildMember[] = [];
+        if (updated.user.id === this.bot.client.user.id && Utils.hasModerationPowers(updated) && !Utils.hasModerationPowers(old)) {
+            const conflictsFound: GuildMember[] = [];
 
-                for (let i = 0; i < conflictingBots.length; i++) {
-                    if (updated.guild.members.has(conflictingBots[i]) && Utils.hasModerationPowers(updated.guild.member(conflictingBots[i]))) {
-                        conflictsFound.push(updated.guild.member(conflictingBots[i]));
+            for (let i = 0; i < conflictingBots.length; i++) {
+                if (updated.guild.members.has(conflictingBots[i]) && Utils.hasModerationPowers(updated.guild.member(conflictingBots[i]))) {
+                    conflictsFound.push(updated.guild.member(conflictingBots[i]));
+                }
+            }
+
+            if (conflictsFound.length > 0) {
+                const channel: TextChannel | null = Utils.findDefaultChannel(updated.guild);
+
+                if (channel) {
+                    let description = ":white_check_mark: I've been granted moderation powers but there's a problem -- I've detected conflicting bot(s) which may present problems.\n";
+
+                    for (let i = 0; i < conflictsFound.length; i++) {
+                        description += `\n:warning: <@${conflictsFound[i].id}> (${conflictsFound[i].user.tag})`;
                     }
+
+                    channel.send(new RichEmbed()
+                        .setColor("GREEN")
+                        .setDescription(description)
+                        .setFooter("This message won't be shown again"));
+                }
+                else {
+                    Log.warn("[Protection:guildMemberUpdate] Could not find a default/general channel");
+
+                    // TODO: Last resort: DM guild owner
                 }
 
-                if (conflictsFound.length > 0) {
-                    const channel: TextChannel | null = Utils.findDefaultChannel(updated.guild);
-
-                    if (channel) {
-                        let description = ":white_check_mark: I've been granted moderation powers but there's a problem -- I've detected conflicting bot(s) which may present problems.\n";
-
-                        for (let i = 0; i < conflictsFound.length; i++) {
-                            description += `\n:warning: <@${conflictsFound[i].id}> (${conflictsFound[i].user.tag})`;
-                        }
-
-                        channel.send(new RichEmbed()
-                            .setColor("GREEN")
-                            .setDescription(description)
-                            .setFooter("This message won't be shown again"));
-                    }
-                    else {
-                        Log.warn("[Protection:guildMemberUpdate] Could not find a default/general channel");
-
-                        // TODO: Last resort: DM guild owner
-                    }
-                }
+                return true;
             }
         }
 
+        return false;
+    }
+
+    private async handleAntiHoisting(old: GuildMember, updated: GuildMember): Promise<boolean> {
         // Anti-Hoisting
         // TODO: Load from guild config instead of being hardcoded
         const antiHoisting = config.antiHoisting;
 
         if (!antiHoisting) {
-            return;
+            return false;
         }
 
         if (!this.api.getGuild().me.hasPermission("MANAGE_NICKNAMES")) {
             Log.warn("[Protection:guildMemberUpdate] Cannot perform anti-hoisting protection without MANAGE_NICKNAMES permission");
 
-            return;
+            return false;
         }
 
         let name: string = updated.nickname || updated.user.username;
@@ -279,12 +301,16 @@ export default class ProtectionService extends Service {
                 Log.error(`[Protection:guildMemberUpdate] Unable to perform anti-hoisting on member ${updated.user.tag}: ${error.message}`);
             });
         }
+
+        return true;
+    }
+
+    private async handleGuildMemberUpdated(old: GuildMember, updated: GuildMember): Promise<void> {
+        await this.handleConflictingBots(old, updated);
+        await this.handleAntiHoisting(old, updated);
     }
 
     public start(): void {
-        // TODO: Debugging
-        console.log(!this.bot ? "[--------------------------------------START] BOT -> NULL" : "BOT -> ok");
-
         if (this.bot.options.autoDeleteCommands) {
             Log.warn("[Protection.start] The autoDeleteCommands option is updatedly incompatible with the snipe command");
         }

@@ -19,8 +19,8 @@ export default class SnipeCommand extends Command {
     public async executed(context: CommandContext, args: string[], api: WardenAPI): Promise<void> {
         const lastDeletedChannelMessage: Message | null = api.deletedMessages.get(context.message.channel.id) || null;
 
-        if (lastDeletedChannelMessage) {
-            const embed = lastDeletedChannelMessage.content.length === 0 && lastDeletedChannelMessage.embeds.length > 0;
+        if (lastDeletedChannelMessage !== null) {
+            const embed: boolean = lastDeletedChannelMessage.content.length === 0 && lastDeletedChannelMessage.embeds.length > 0;
 
             context.message.channel.send(new RichEmbed()
                 .addField("Message", embed ? "*Embedded Message*" : lastDeletedChannelMessage.content)
