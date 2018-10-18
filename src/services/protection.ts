@@ -170,7 +170,7 @@ export default class ProtectionService extends Service {
     }
 
     private async handleGuildMemberJoined(member: GuildMember): Promise<void> {
-        if (Patterns.invite.test(member.user.username)) {
+        if (config.banAdsOnName && Patterns.invite.test(member.user.username)) {
             await this.api.executeAction(Utils.findDefaultChannel(member.guild), {
                 type: ModerationActionType.Ban,
                 reason: "Advertising on username",

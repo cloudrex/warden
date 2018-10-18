@@ -41,6 +41,7 @@ type BotConfig = {
     readonly dbPort?: number;
     readonly dbName?: string;
     readonly token: string;
+    readonly banAdsOnName: boolean;
 }
 
 const requiredConfig: string[] = [
@@ -78,7 +79,8 @@ export const config: BotConfig = {
     dbUrl: process.env.DB_URL,
     dbPort: parseInt(process.env.DB_PORT as string),
     dbName: process.env.DB_NAME,
-    token: process.env.TOKEN as string
+    token: process.env.TOKEN as string,
+    banAdsOnName: process.env.BAN_ADS_ON_NAME === "true" ? true : false
 };
 
 console.log(config.token);
