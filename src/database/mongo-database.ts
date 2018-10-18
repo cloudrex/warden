@@ -1,5 +1,4 @@
 import {Collection, Db, MongoClient} from "mongodb";
-import Log from "forge";
 import {GuildMember, Snowflake} from "discord.js";
 import {MemberConfigType} from "../core/warden-api";
 

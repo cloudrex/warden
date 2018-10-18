@@ -1,7 +1,7 @@
 import {Snowflake} from "discord.js";
 import Mongo, {DatabaseUserConfig} from "../database/mongo-database";
 import {MemberConfigType} from "./warden-api";
-import {Log} from "forge";
+import {Log} from "@cloudrex/forge";
 
 export class MemberConfigIterator {
     private resource: DatabaseUserConfig[];

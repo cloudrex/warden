@@ -1,6 +1,5 @@
 import {Message} from "discord.js";
-import {Bot, Service, on, command} from "forge";
-import WardenAPI from "../core/warden-api";
+import {Service} from "@cloudrex/forge";
 
 export default class WardenOfficialService extends Service {
     readonly meta = {

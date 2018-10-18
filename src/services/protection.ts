@@ -1,6 +1,6 @@
 import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel, Role} from "discord.js";
 import WardenAPI from "../core/warden-api";
-import {CommandParser, Log, Service, DiscordEvent, Utils, Patterns} from "forge";
+import {CommandParser, Log, Service, DiscordEvent, Utils, Patterns} from "@cloudrex/forge";
 import Mongo, {ModerationActionType} from "../database/mongo-database";
 import Messages from "../core/messages";
 import MemberConfig from "../core/member-config";

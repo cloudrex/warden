@@ -1,5 +1,5 @@
 import {GuildMember, User} from "discord.js";
-import {Utils, Service} from "forge";
+import {Utils, Service} from "@cloudrex/forge";
 import {config} from "../app";
 
 type WelcomeLeaveMessages = {

@@ -1,4 +1,4 @@
-import {Command, CommandContext, Utils, Argument, PrimitiveArgType} from "forge";
+import {Command, CommandContext, Utils, Argument, PrimitiveArgType} from "@cloudrex/forge";
 import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
 import {DatabaseStoredMessage} from "../../database/mongo-database";

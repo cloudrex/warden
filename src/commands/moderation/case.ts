@@ -1,4 +1,4 @@
-import {Command, CommandContext, RestrictGroup, ChatEnvironment, Argument} from "forge";
+import {Command, CommandContext, RestrictGroup, ChatEnvironment, Argument} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 

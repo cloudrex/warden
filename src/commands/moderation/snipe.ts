@@ -1,6 +1,6 @@
 import {Message, RichEmbed} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {ChatEnvironment, Command, Utils, CommandContext, RestrictGroup} from "forge";
+import {ChatEnvironment, Command, Utils, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 export default class SnipeCommand extends Command {

@@ -1,6 +1,6 @@
 import WardenAPI from "../../core/warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
-import {Command, SetupHelper, SetupHelperResult, RestrictGroup, CommandContext, Utils} from "forge";
+import {Command, SetupHelper, SetupHelperResult, RestrictGroup, CommandContext, Utils} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 export default class EmbedCommand extends Command {

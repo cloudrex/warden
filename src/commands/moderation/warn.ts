@@ -1,4 +1,4 @@
-import {Argument, ChatEnvironment, Command, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "forge";
+import {Argument, ChatEnvironment, Command, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";

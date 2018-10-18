@@ -1,5 +1,5 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {Command, Argument, CommandContext, Utils, RestrictGroup, InternalArgType} from "forge";
+import {Command, Argument, CommandContext, Utils, RestrictGroup, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type WhoisArgs = {

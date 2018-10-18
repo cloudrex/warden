@@ -1,6 +1,5 @@
-import {Command, CommandContext, FormattedMessage} from "forge";
+import {Command, CommandContext, FormattedMessage, Argument, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "./help";
-import {Argument, PrimitiveArgType} from "forge/dist";
 import {DatabaseUserConfig} from "../../database/mongo-database";
 import MemberConfig, {MemberConfigIterator} from "../../core/member-config";
 import {table} from "table";

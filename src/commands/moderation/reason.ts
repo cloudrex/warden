@@ -1,4 +1,4 @@
-import {ChatEnvironment, Command, RestrictGroup, CommandContext} from "forge";
+import {ChatEnvironment, Command, RestrictGroup, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 // TODO: Update

@@ -1,5 +1,5 @@
 import WardenAPI from "../../core/warden-api";
-import {ChatEnvironment, Command, Argument, CommandContext, Permission, RestrictGroup, PrimitiveArgType, InternalArgType} from "forge";
+import {ChatEnvironment, Command, Argument, CommandContext, Permission, RestrictGroup, PrimitiveArgType, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
@@ -53,6 +53,12 @@ export default class MuteCommand extends Command {
     };
 
     public async executed(context: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {
+        if (args.member.id === context.sender.id) {
+            await context.fail("You can't mute yourself.");
+            
+            return;
+        }
+
         await api.executeAction(context.message.channel as TextChannel, {
             member: args.member,
             type: ModerationActionType.Mute,

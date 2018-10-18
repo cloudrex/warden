@@ -1,5 +1,5 @@
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
-import {Bot, Log} from "forge";
+import {Bot, Log} from "@cloudrex/forge";
 
 import Mongo, {
     DatabaseModerationAction,
