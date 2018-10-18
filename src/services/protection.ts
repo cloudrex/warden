@@ -36,7 +36,13 @@ export default class ProtectionService extends Service {
             });
         }
 
-        const api: WardenAPI = this.api;
+        if (!this.api) {
+            Log.warn("[Service:Protection] API provided is undefined or missing; Refusing to handle message");
+
+            return;
+        }
+
+        const api: WardenAPI = this.api as WardenAPI;
 
         if (config.inviteProtection && Patterns.invite.test(message.content)) {
             const matches = message.content.match(Patterns.invite);
@@ -92,9 +98,10 @@ export default class ProtectionService extends Service {
             await message.reply("Your message is too large.");
             await message.delete();
         }
-        else if (message.member.roles.has(this.api.roles.muted) && message.deletable) {
+        // TODO:
+        /* else if (message.member.roles.has(this.api.roles.muted) && message.deletable) {
             await message.delete();
-        }
+        } */
         else {
             const mentions: Collection<Snowflake, GuildMember> = message.mentions.members;
 
