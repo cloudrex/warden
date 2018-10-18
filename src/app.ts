@@ -166,15 +166,16 @@ async function start() {
         ]
     });
 
-    const api: WardenAPI = new WardenAPI(bot);
-
-    await (await bot.setup(api)).connect();
-    api.setup();
-
     // Database Setup
     Log.debug("Setting up mongodb database");
     await Mongo.connect();
     Log.debug("Mongodb database setup completed");
+
+    // Bot setup & connect
+    const api: WardenAPI = new WardenAPI(bot);
+
+    await (await bot.setup(api)).connect();
+    api.setup();
 }
 
 start();
