@@ -33,12 +33,11 @@ export default class EmojiCommand extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.ServerModerator];
-        this.restrict.selfPermissions = [Permission.ManageEmojis];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerModerator],
+        selfPermissions: [Permission.ManageEmojis],
+        issuerPermissions: [Permission.ManageEmojis]
+    };
 
     public executed(context: CommandContext, args: EmojiArgs): Promise<void> {
         return new Promise((resolve) => {
