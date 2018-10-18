@@ -181,6 +181,33 @@ export default class WardenAPI {
                 break;
             }
 
+            case ModerationActionType.Unban: {
+                await action.member.guild.unban(action.member.id, reason);
+
+                if (this.channels) {
+                    embed = new RichEmbed()
+                        .setTitle("Member Pardoned")
+                        .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
+                        .addField("Reason", action.reason)
+                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.tag})`)
+                        .setThumbnail(action.evidence ? action.evidence : "")
+                        .setFooter(`Pardoned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
+                        .setColor("GREEN");
+                }
+                else {
+                    Log.error("[WardenAPI.executeAction] Expecting channels");
+                }
+
+                try {
+                    await (await action.member.createDM()).send(new RichEmbed()
+                        .setDescription(`You have been pardoned in **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) because **${action.reason}**`)
+                        .setColor("GREEN"))
+                }
+                catch (e) {}
+
+                break;
+            }
+
             default: {
                 Log.error(`[WardenAPI.executeAction] Unexpected action type: '${action.type}'`);
 

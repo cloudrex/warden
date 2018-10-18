@@ -1,4 +1,4 @@
-import {GuildMember, TextChannel} from "discord.js";
+import {GuildMember, TextChannel, Message} from "discord.js";
 import WardenAPI from "../../core/warden-api";
 import {Command, Argument, CommandContext, Permission, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
@@ -10,8 +10,10 @@ export interface BanArgs {
     readonly evidence?: string;
 }
 
-export default class BanCommand extends Command {
+export default class BanCommand extends Command<BanArgs> {
     readonly type = CommandType.Moderation;
+
+    readonly undoable: boolean = true;
 
     readonly meta = {
         name: "ban",
@@ -43,6 +45,18 @@ export default class BanCommand extends Command {
         issuerPermissions: [Permission.BanMembers],
         selfPermissions: [Permission.BanMembers]
     };
+
+    public async undo(oldContext: CommandContext, message: Message, args: BanArgs): Promise<boolean> {
+        // TODO: Can't trust stored context to retrieve API
+        await oldContext.bot.getAPI().executeAction(message.channel as TextChannel, {
+            member: args.member,
+            moderator: message.member,
+            reason: "Action undone",
+            type: ModerationActionType.Unban
+        });
+
+        return true;
+    }
 
     public async executed(context: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
         if (args.member.id === context.sender.id) {
