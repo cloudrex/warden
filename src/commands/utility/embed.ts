@@ -15,7 +15,7 @@ export default class EmbedCommand extends Command {
         super();
 
         this.restrict.cooldown = 5;
-        this.restrict.specific = [RestrictGroup.ServerModerator];
+        this.restrict.specific = [RestrictGroup.ServerOwner];
     }
 
     public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
