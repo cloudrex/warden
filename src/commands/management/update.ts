@@ -1,5 +1,5 @@
 import {exec} from "child_process";
-import {Command, CommandContext, RestrictGroup} from "forge";
+import {Command, CommandContext, RestrictGroup, FormattedMessage} from "forge";
 import {CommandType} from "../general/help";
 
 export default class UpdateCommand extends Command {
@@ -25,7 +25,7 @@ export default class UpdateCommand extends Command {
                     return;
                 }
 
-                context.ok(`\`\`\`css\n${stdOut}\`\`\``);
+                context.ok(new FormattedMessage().codeBlock(stdOut.toString(), "css"));
                 resolve();
             });
         });
