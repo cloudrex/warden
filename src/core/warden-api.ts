@@ -158,7 +158,7 @@ export default class WardenAPI {
                         .setColor("RED"))
                 }
                 catch (e) {}
-                
+
                 await action.member.ban({
                     days: 1,
                     reason
@@ -258,6 +258,12 @@ export default class WardenAPI {
 
     private static async saveDatabaseModerationAction(action: DatabaseModerationAction): Promise<void> {
         await Mongo.collections.moderationActions.insertOne(action);
+    }
+
+    public static async retrieveModerationAction(caseId: Snowflake): Promise<DatabaseModerationAction | null> {
+        return await Mongo.collections.moderationActions.findOne({
+            id: caseId
+        }) || null;
     }
 
     /**
