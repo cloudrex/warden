@@ -302,7 +302,7 @@ export default class ProtectionService extends Service {
         let newName: string[] | string = [];
 
         for (let i = 0; i < name.length; i++) {
-            if (/[a-z]/i.test(name[i])) {
+            if (/[a-z\s]/i.test(name[i])) {
                 newName.push(name[i]);
             }
         }
