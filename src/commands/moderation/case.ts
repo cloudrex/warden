@@ -39,6 +39,6 @@ export default class CaseCommand extends Command<CaseArgs> {
             return;
         }
 
-        await context.ok(action.reason);
+        await context.message.channel.send(WardenAPI.createModerationActionEmbed(action, action.automatic));
     }
 };

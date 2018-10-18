@@ -57,8 +57,12 @@ export type DatabaseModerationAction = {
     readonly id: Snowflake;
     readonly type: ModerationActionType;
     readonly memberId: Snowflake;
+    readonly memberTag: string;
     readonly reason: string;
     readonly moderatorId: Snowflake;
+    readonly moderatorTag: string;
+    readonly moderatorUsername: string;
+    readonly moderatorAvatarUrl: string;
     readonly guildId: Snowflake;
     readonly evidence?: string;
     readonly time: number;

@@ -10,6 +10,7 @@ import Mongo, {
 import {BadWords, RacialSlurs} from "./constants";
 import {config} from "../app";
 import {DatabaseGuildConfig} from "../database/guild-config";
+import Convert from "./convert";
 
 export type MemberConfigType = "tracking";
 
@@ -95,24 +96,14 @@ export default class WardenAPI {
      * @return {Promise<void>}
      */
     public async executeAction(channel: TextChannel, action: ModerationAction): Promise<void> {
-        let embed: RichEmbed | null = null;
-
         const reason: string = `${action.moderator.user.tag} => ${action.reason}`;
+        const automatic: boolean = action.moderator.id === this.bot.client.user.id;
+
+        const embed: RichEmbed | null = WardenAPI.createModerationActionEmbed(Convert.toDatabaseModerationAction(null, action, automatic), automatic);
 
         switch (action.type) {
             case ModerationActionType.Warn: {
-                const autoWarn: boolean = action.moderator.id === this.bot.client.user.id;
-
-                embed = new RichEmbed()
-                    .setTitle("Member Warned")
-                    .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
-                    .addField("Reason", action.reason)
-                    .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.tag})`)
-                    .setThumbnail(action.evidence ? action.evidence : "")
-                    .setFooter(autoWarn ? "Automatically warned" : `Warned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
-                    .setColor("GOLD");
-
-                const warnDM: string = autoWarn ? `You were automatically warned for **${action.reason}**` : `You were warned by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`;
+                const warnDM: string = automatic ? `You were automatically warned for **${action.reason}**` : `You were warned by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`;
 
                 try {
                     await (await action.member.createDM()).send(new RichEmbed()
@@ -126,20 +117,6 @@ export default class WardenAPI {
 
             case ModerationActionType.Mute: {
                 await action.member.addRole(action.member.guild.roles.find("name", "Muted"), reason);
-
-                if (this.channels) {
-                    embed = new RichEmbed()
-                        .setTitle("Member Muted")
-                        .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
-                        .addField("Reason", action.reason)
-                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.tag})`)
-                        .setThumbnail(action.evidence ? action.evidence : "")
-                        .setFooter(`Muted by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
-                        .setColor("BLUE");
-                }
-                else {
-                    Log.error("[WardenAPI.executeAction] Expecting channels");
-                }
 
                 try {
                     (await action.member.createDM()).send(new RichEmbed()
@@ -164,39 +141,11 @@ export default class WardenAPI {
                     reason
                 });
 
-                if (this.channels) {
-                    embed = new RichEmbed()
-                        .setTitle("Member Banned")
-                        .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
-                        .addField("Reason", action.reason)
-                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.tag})`)
-                        .setThumbnail(action.evidence ? action.evidence : "")
-                        .setFooter(`Banned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
-                        .setColor("RED");
-                }
-                else {
-                    Log.error("[WardenAPI.executeAction] Expecting channels");
-                }
-
                 break;
             }
 
             case ModerationActionType.Unban: {
                 await action.member.guild.unban(action.member.id, reason);
-
-                if (this.channels) {
-                    embed = new RichEmbed()
-                        .setTitle("Member Pardoned")
-                        .addField("Member", `<@${action.member.id}> (${action.member.user.username})`)
-                        .addField("Reason", action.reason)
-                        .addField("Moderator", `<@${action.moderator.id}> (${action.moderator.user.tag})`)
-                        .setThumbnail(action.evidence ? action.evidence : "")
-                        .setFooter(`Pardoned by ${action.moderator.user.username}`, action.moderator.user.avatarURL)
-                        .setColor("GREEN");
-                }
-                else {
-                    Log.error("[WardenAPI.executeAction] Expecting channels");
-                }
 
                 try {
                     await (await action.member.createDM()).send(new RichEmbed()
@@ -217,6 +166,12 @@ export default class WardenAPI {
 
         if (embed === null || this.channels === undefined || embed.footer === undefined || embed.footer.text === undefined) {
             Log.error("[WardenAPI.executeAction] Expecting log message, embed footer and channels");
+
+            return;
+        }
+
+        if (!this.channels) {
+            Log.error("[WardenAPI.executeAction] Expecting channels");
 
             return;
         }
@@ -242,18 +197,7 @@ export default class WardenAPI {
      * @return {Promise<void>}
      */
     private static async saveModerationAction(action: ModerationAction, caseId: Snowflake, automatic: boolean): Promise<void> {
-        await WardenAPI.saveDatabaseModerationAction({
-            id: caseId,
-            type: action.type,
-            reason: action.reason,
-            memberId: action.member.id,
-            guildId: action.member.guild.id,
-            moderatorId: action.moderator.id,
-            end: action.end,
-            time: Date.now(),
-            evidence: action.evidence,
-            automatic
-        });
+        await WardenAPI.saveDatabaseModerationAction(Convert.toDatabaseModerationAction(caseId, action, automatic));
     }
 
     private static async saveDatabaseModerationAction(action: DatabaseModerationAction): Promise<void> {
@@ -264,6 +208,57 @@ export default class WardenAPI {
         return await Mongo.collections.moderationActions.findOne({
             id: caseId
         }) || null;
+    }
+
+    // TODO: Isn't automatic already determined & contained in 'action'?
+    public static createModerationActionEmbed(action: DatabaseModerationAction, automatic: boolean): RichEmbed | null {
+        switch (action.type) {
+            case ModerationActionType.Ban: {
+                return new RichEmbed()
+                    .setTitle("Member Banned")
+                    .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
+                    .addField("Reason", action.reason)
+                    .addField("Moderator", `<@${action.moderatorId}> (${action.moderatorTag})`)
+                    .setThumbnail(action.evidence ? action.evidence : "")
+                    .setFooter(`Banned by ${action.moderatorUsername}`, action.moderatorAvatarUrl)
+                    .setColor("RED");
+            }
+
+            case ModerationActionType.Warn: {
+                return new RichEmbed()
+                    .setTitle("Member Warned")
+                    .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
+                    .addField("Reason", action.reason)
+                    .addField("Moderator", `<@${action.moderatorId}> (${action.moderatorTag})`)
+                    .setThumbnail(action.evidence ? action.evidence : "")
+                    .setFooter(automatic ? "Automatically warned" : `Warned by ${action.moderatorUsername}`, action.moderatorAvatarUrl)
+                    .setColor("GOLD");
+            }
+
+            case ModerationActionType.Mute: {
+                return new RichEmbed()
+                        .setTitle("Member Muted")
+                        .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
+                        .addField("Reason", action.reason)
+                        .addField("Moderator", `<@${action.moderatorId}> (${action.moderatorTag})`)
+                        .setThumbnail(action.evidence ? action.evidence : "")
+                        .setFooter(`Muted by ${action.moderatorUsername}`, action.moderatorAvatarUrl)
+                        .setColor("BLUE");
+            }
+
+            case ModerationActionType.Unban: {
+                return new RichEmbed()
+                    .setTitle("Member Pardoned")
+                    .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
+                    .addField("Reason", action.reason)
+                    .addField("Moderator", `<@${action.moderatorId}> (${action.moderatorTag})`)
+                    .setThumbnail(action.evidence ? action.evidence : "")
+                    .setFooter(`Pardoned by ${action.moderatorUsername}`, action.moderatorAvatarUrl)
+                    .setColor("GREEN");
+            }
+        }
+
+        return null;
     }
 
     /**
