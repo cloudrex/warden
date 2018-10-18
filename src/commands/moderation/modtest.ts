@@ -2,7 +2,7 @@ import WardenAPI from "../../core/warden-api";
 import {ChatEnvironment, Command, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
-export default class MuteCommand extends Command {
+export default class ModTestCommand extends Command {
     readonly type = CommandType.Moderation;
 
     readonly meta = {
