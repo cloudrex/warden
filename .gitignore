@@ -2,7 +2,7 @@ dist/
 tmp/
 node_modules/
 .idea/
-bot.log
+*.log
 build/
 yarn.lock
 package-lock.json
