@@ -34,7 +34,7 @@ export default class CaseCommand extends Command<CaseArgs> {
         const action: DatabaseModerationAction | null = await WardenAPI.retrieveModerationAction(args.caseId);
 
         if (action === null) {
-            await context.fail("The specific case is not registered in the database");
+            await context.fail("The specified case is not registered in the database");
 
             return;
         }
