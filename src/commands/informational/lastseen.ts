@@ -2,7 +2,7 @@ import {Command, CommandContext, Utils, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
-import {Argument} from "forge/dist";
+import {Argument} from "@cloudrex/forge";
 
 type LastSeenArgs = {
     readonly member: GuildMember;

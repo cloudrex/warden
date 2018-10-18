@@ -157,12 +157,7 @@ async function start() {
         options: {
             logMessages: false,
             consoleInterface: true,
-            updateOnMessageEdit: true,
-
-            emojis: {
-                success: "<:success:490723457898643456>",
-                error: "<:error:490723363329671222>"
-            }
+            updateOnMessageEdit: true
         },
 
         primitiveCommands: [
