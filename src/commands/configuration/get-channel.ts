@@ -45,6 +45,6 @@ export default class GetChannelCommand extends Command<GetChannelArgs> {
             return;
         }
 
-        await context.ok(`<@${guildConfig.modLogChannel}>`);
+        await context.ok(`<#${guildConfig.modLogChannel}>`, undefined, false);
     }
 };
