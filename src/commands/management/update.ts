@@ -1,6 +1,7 @@
 import {exec} from "child_process";
 import {Command, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import {FormattedMessage} from "@cloudrex/forge";
 
 export default class UpdateCommand extends Command {
     readonly type = CommandType.Configuration;
