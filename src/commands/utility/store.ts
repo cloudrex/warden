@@ -9,6 +9,7 @@ type StoreArgs = {
     readonly name?: string;
 }
 
+// TODO: Limit amount of messages to 50?
 export default class StoreCommand extends Command {
     readonly type = CommandType.Utility;
 

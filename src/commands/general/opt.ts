@@ -11,6 +11,7 @@ export type OptArgs = {
     readonly value?: string;
 };
 
+// TODO: Mentions getting filtered
 export default class OptCommand extends Command {
     readonly type = CommandType.Configuration;
 
