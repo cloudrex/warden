@@ -15,7 +15,7 @@
     "author": "CloudRex <cloudrex@outlook.com>",
     "license": "MIT",
     "dependencies": {
-        "@cloudrex/forge": "discord-forge/forge.git#dev-2.0",
+        "@cloudrex/forge": "^1.0.6",
         "@types/knex": "^0.14.18",
         "@types/mongodb": "^3.1.4",
         "@types/node": "^10.9.4",
