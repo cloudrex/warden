@@ -83,8 +83,6 @@ export const config: BotConfig = {
     banAdsOnName: process.env.BAN_ADS_ON_NAME === "true"
 };
 
-console.log(config.token);
-
 function checkConfig(): void {
     for (let i: number = 0; i < requiredConfig.length; i++) {
         if (config[requiredConfig[i]] === undefined || config[requiredConfig[i]] === null || config[requiredConfig[i]] === "" || (typeof config[requiredConfig[i]] !== "string" && isNaN(config[requiredConfig[i]]))) {
@@ -92,9 +90,6 @@ function checkConfig(): void {
         }
     }
 }
-
-// TODO: Debugging
-// testing for deployment
 
 checkConfig();
 
