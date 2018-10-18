@@ -1,1 +1,3 @@
 * When a command with cooldown throws an error, the cooldown is ignored.
+
+* Commands with a '-' on their name are getting ignored? Maybe a check failed.
