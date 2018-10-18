@@ -170,7 +170,16 @@ export default class ProtectionService extends Service {
     }
 
     private async handleGuildMemberJoined(member: GuildMember): Promise<void> {
-        if (config.persistentRoles && muteLeavers.includes(member.id)) {
+        if (Patterns.invite.test(member.user.username)) {
+            await this.api.executeAction(context.message.channel as TextChannel, {
+                type: ModerationActionType.Ban,
+                reason: args.reason,
+                member: args.member,
+                evidence: args.evidence,
+                moderator: context.message.member
+            });
+        }
+        else if (config.persistentRoles && muteLeavers.includes(member.id)) {
             const dm: DMChannel = await member.createDM();
 
             dm.send(new RichEmbed()
