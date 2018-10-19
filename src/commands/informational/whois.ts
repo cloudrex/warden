@@ -31,7 +31,7 @@ export default class WhoisCommand extends Command {
     public async executed(context: CommandContext, args: WhoisArgs): Promise<void> {
         const roles = args.member.roles.array();
 
-        let finalRoles = roles.slice(1, 10).map((role) => `<@&${role.id}>`).join(" ");
+        let finalRoles: string = roles.slice(1, 10).map((role) => `<@&${role.id}>`).join(" ");
 
         if (roles.length > 10) {
             finalRoles += ` **+ ${roles.length - 10} more**`;

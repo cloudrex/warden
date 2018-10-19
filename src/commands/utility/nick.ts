@@ -24,13 +24,11 @@ export default class NickCommand extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.environment = ChatEnvironment.Guild;
-        this.restrict.selfPermissions = [Permission.ManageNicknames];
-        this.restrict.issuerPermissions = [Permission.ChangeNickname];
-    }
+    readonly restrict: any = {
+        environment: ChatEnvironment.Guild,
+        selfPermissions: [Permission.ManageNicknames],
+        issuerPermissions: [Permission.ChangeNickname]
+    };
 
     public async executed(context: CommandContext, args: NickArgs): Promise<void> {
         await context.message.member.setNickname(args.nickname);

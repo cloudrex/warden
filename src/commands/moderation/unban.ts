@@ -39,7 +39,7 @@ export default class UnbanCommand extends Command {
     // TODO: Untested
     public async executed(context: CommandContext, args: UnbanArgs): Promise<void> {
         if (args.user === context.sender.id) {
-            context.fail("You can't unban yourself.");
+            await context.fail("You can't unban yourself.");
 
             return;
         }

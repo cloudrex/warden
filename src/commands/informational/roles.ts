@@ -27,8 +27,8 @@ export default class RolesCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public executed(context: CommandContext, args: RolesArgs): void {
-        context.ok(context.message.guild.roles.array()
+    public async executed(context: CommandContext, args: RolesArgs): Promise<void> {
+        await context.ok(context.message.guild.roles.array()
             .map((role: Role) => `<@&${role.id}> => ${role.id}`)
             .join("\n")
             .substring(args.page * 2048)

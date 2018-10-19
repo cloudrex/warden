@@ -1,5 +1,6 @@
 import {Argument, Command, PrimitiveArgType, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import {RestrictGroup} from "@cloudrex/forge/dist";
 
 type SayArgs = {
     readonly message: string;
@@ -26,11 +27,9 @@ export default class EmulateCommand extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        //this.restrict.ownerOnly = true;
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner]
+    };
 
     public async executed(context: CommandContext, args: SayArgs): Promise<void> {
         let filteredMessage: string = args.message;

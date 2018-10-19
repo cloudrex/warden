@@ -11,12 +11,10 @@ export default class BackupCommand extends Command {
         description: "Perform a backup of the server's channels and settings"
     };
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.ServerOwner];
-        this.restrict.cooldown = 3600;
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerOwner],
+        cooldown: 3600
+    };
 
     public async executed(context: CommandContext): Promise<void> {
         // TODO: Missing channel permissions and guild settings

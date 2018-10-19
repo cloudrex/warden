@@ -37,12 +37,10 @@ export default class TrainTest extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.specific = [RestrictGroup.BotOwner];
-        this.restrict.cooldown = 5;
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.BotOwner],
+        cooldown: 5
+    };
 
     public async gatherMessageData(channel: TextChannel, excluded: Snowflake[] = []): Promise<string[]> {
         const messages: Message[] = (await channel.fetchMessages({

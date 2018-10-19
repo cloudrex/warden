@@ -34,11 +34,9 @@ export default class StoreCommand extends Command {
         }
     ];
 
-    constructor() {
-        super();
-
-        this.restrict.cooldown = 5;
-    }
+    readonly restrict: any = {
+        cooldown: 5
+    };
 
     public async executed(context: CommandContext, args: StoreArgs): Promise<void> {
         if (args.messageId === undefined || args.name === undefined) {

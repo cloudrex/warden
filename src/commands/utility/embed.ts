@@ -11,12 +11,10 @@ export default class EmbedCommand extends Command {
         description: "Create an embed"
     };
 
-    constructor() {
-        super();
-
-        this.restrict.cooldown = 5;
-        this.restrict.specific = [RestrictGroup.ServerOwner];
-    }
+    readonly restrict: any = {
+        specific: [RestrictGroup.ServerOwner],
+        cooldown: 5
+    };
 
     public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
         const setup: SetupHelper | null = SetupHelper.fromContext({

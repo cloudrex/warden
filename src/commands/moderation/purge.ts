@@ -26,7 +26,7 @@ export default class PurgeCommand extends Command {
         specific: [RestrictGroup.BotOwner],
         environment: ChatEnvironment.Guild
     };
-    
+
     // TODO: Return type, should be void
     public async executed(context: CommandContext, args: PurgeArgs): Promise<any> {
         return new Promise(async (resolve) => {

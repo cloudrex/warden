@@ -22,7 +22,7 @@ export default class SnipeCommand extends Command {
         if (lastDeletedChannelMessage !== null) {
             const embed: boolean = lastDeletedChannelMessage.content.length === 0 && lastDeletedChannelMessage.embeds.length > 0;
 
-            context.message.channel.send(new RichEmbed()
+            await context.message.channel.send(new RichEmbed()
                 .addField("Message", embed ? "*Embedded Message*" : lastDeletedChannelMessage.content)
                 .addField("Author", `<@${lastDeletedChannelMessage.author.id}> (${lastDeletedChannelMessage.author.tag})`)
                 .addField("Time", Utils.timeAgo(lastDeletedChannelMessage.createdTimestamp))
