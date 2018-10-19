@@ -6,7 +6,8 @@
     "scripts": {
         "build": "tsc",
         "start": "npm run build && node dist/app.js",
-        "postinstall": "npm run build"
+        "postinstall": "npm run build",
+        "linst": "sudo bash tasks/linst.sh"
     },
     "repository": {
         "type": "git",
