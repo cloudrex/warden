@@ -1,6 +1,5 @@
-import {Argument, Command, PrimitiveArgType, CommandContext} from "@cloudrex/forge";
+import {Argument, Command, PrimitiveArgType, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import {RestrictGroup} from "@cloudrex/forge/dist";
 
 type SayArgs = {
     readonly message: string;

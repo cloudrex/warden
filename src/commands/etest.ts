@@ -21,7 +21,17 @@ export default class TestECommand extends Command {
 
             async clicked(reaction: MessageReaction, user: User): Promise<void> {
                 await reaction.message.channel.send(`${user.username} clicked`);
-            }
+            },
+
+            async removed(reaction: MessageReaction, user: User): Promise<void> {
+                console.log("removed");
+
+                await reaction.message.channel.send(`${user.username} removed`);
+            },
+
+            async added(reaction: MessageReaction, user: User): Promise<void> {
+                await reaction.message.channel.send(`${user.username} added`);
+            },
         }).attach(context);
     }
 };

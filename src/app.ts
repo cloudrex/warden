@@ -174,7 +174,7 @@ async function start() {
     // Bot setup & connect
     const api: WardenAPI = new WardenAPI(bot);
 
-    await (await bot.setup(api)).connect();
+    await bot.connect(api);
     api.setup();
 }
 
