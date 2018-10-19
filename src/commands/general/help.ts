@@ -43,5 +43,7 @@ export default class HelpCommand extends Command {
         else {
             await context.ok(commands, "Help - Available Commands");
         } */
+
+        await context.fail("Command is currently broken");
     }
 };

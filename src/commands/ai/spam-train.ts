@@ -51,7 +51,7 @@ export default class SpamTrain extends Command {
 
         const totalData: string[] = [];
 
-        for (let i = 0; i < messages.length; i++) {
+        for (let i: number = 0; i < messages.length; i++) {
             // Ignore excluded messages (by id)
             if (excluded.includes(messages[i].id)) {
                 continue;
