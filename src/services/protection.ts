@@ -10,7 +10,7 @@ const conflictingBots: Snowflake[] = [
     "155149108183695360" // Dyno#3861
 ];
 
-const muteLeavers: Snowflake[] = [];
+let muteLeavers: Snowflake[] = [];
 
 export default class ProtectionService extends Service {
     readonly meta = {
@@ -348,7 +348,7 @@ export default class ProtectionService extends Service {
         }
 
         return databaseAvailable;
-    }
+    };
 
     /**
      * @param {GuildMember} member
@@ -366,5 +366,16 @@ export default class ProtectionService extends Service {
         }
 
         return false;
+    }
+
+    public dispose(): void {
+        muteLeavers = [];
+
+        // Remove listeners
+        this.bot.client.removeListener(DiscordEvent.Message, this.handleMessage);
+        this.bot.client.removeListener(DiscordEvent.MessageDeleted, this.handleMessageDeleted);
+        this.bot.client.removeListener(DiscordEvent.GuildMemberLeft, this.handleGuildMemberLeft);
+        this.bot.client.removeListener(DiscordEvent.GuildMemberJoined, this.handleGuildMemberJoined);
+        this.bot.client.removeListener(DiscordEvent.GuildMemberUpdated, this.handleGuildMemberUpdated);
     }
 }

@@ -37,7 +37,7 @@ export default class AntiRaidService extends Service {
         }
 
         const previousMessage: Message = messages[messages.length - 2];
-        const similarity = compareTwoStrings(message.content, previousMessage.content);
+        const similarity: number = compareTwoStrings(message.content, previousMessage.content);
 
         if (similarity >= threshold / 100 && message.deletable) {
             await message.delete();
@@ -53,5 +53,10 @@ export default class AntiRaidService extends Service {
     public start(): void {
         // Register listeners
         this.bot.client.on(DiscordEvent.Message, this.handleMessage.bind(this));
+    }
+
+    public dispose(): void {
+        this.bot.client.removeListener(DiscordEvent.Message, this.handleMessage);
+        this.memory.clear();
     }
 }
