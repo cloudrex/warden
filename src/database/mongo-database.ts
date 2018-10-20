@@ -23,7 +23,8 @@ export enum ModerationActionType {
     Ban,
     Unban,
     Softban,
-    Test
+    Test,
+    BanId
 }
 
 export enum ChannelType {

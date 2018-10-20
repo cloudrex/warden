@@ -16,8 +16,6 @@ import {
 
 import WardenAPI from "./core/warden-api";
 
-const baseDir: string = "./src";
-
 Log.level = LogLevel.Debug;
 
 type BotConfig = {

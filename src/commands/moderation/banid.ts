@@ -1,7 +1,8 @@
-import {GuildMember, RichEmbed, Snowflake, Message} from "discord.js";
+import {GuildMember, Message, RichEmbed, Snowflake} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, IArgument, CommandContext, Permission, Log, PrimitiveArgType, InternalArgType} from "@cloudrex/forge";
+import {Command, CommandContext, IArgument, InternalArgType, Log, Permission, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import {ModerationActionType} from "../../database/mongo-database";
 
 export interface BanIdArgs {
     readonly id: Snowflake;
@@ -79,7 +80,22 @@ export default class BanCommand extends Command {
 
         await sent.edit(embed.setFooter(`Case ID: ${sent.id} • ${embed.footer.text}`, embed.footer.icon_url));
 
-        // TODO
-        // await WardenAPI.saveModerationAction(action, sent.id);
+        // TODO: Fetch data from Discord
+        await WardenAPI.saveDatabaseModerationAction({
+            time: Date.now(),
+            automatic: false,
+            guildId: context.message.id,
+            memberId: args.id,
+            memberTag: "Unknown",
+            moderatorAvatarUrl: context.sender.avatarURL,
+            moderatorId: context.sender.id,
+            moderatorTag: context.sender.tag,
+            moderatorUsername: context.sender.username,
+            type: ModerationActionType.BanId,
+            reason: args.reason,
+            evidence: args.evidence,
+            id: "",
+            end: undefined
+        });
     }
 };

@@ -200,7 +200,7 @@ export default class WardenAPI {
         await WardenAPI.saveDatabaseModerationAction(Convert.toDatabaseModerationAction(caseId, action, automatic));
     }
 
-    private static async saveDatabaseModerationAction(action: DatabaseModerationAction): Promise<void> {
+    public static async saveDatabaseModerationAction(action: DatabaseModerationAction): Promise<void> {
         await Mongo.collections.moderationActions.insertOne(action);
     }
 
