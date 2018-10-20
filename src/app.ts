@@ -7,7 +7,6 @@ import path from "path";
 
 import {
     Bot,
-    JsonAuthStore,
     JsonProvider,
     Log,
     LogLevel,
@@ -147,7 +146,6 @@ async function start() {
         ],
 
         settings: settings,
-        authStore: new JsonAuthStore(path.resolve(path.join(baseDir, "auth/schema.json")), path.resolve(path.join(baseDir, "auth/store.json"))),
         dataStore: new JsonProvider(path.resolve(path.join(__dirname, "data.json"))),
         owner: "285578743324606482",
 

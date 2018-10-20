@@ -1,4 +1,4 @@
-import {Service, ServiceOptions, Utils, DiscordEvent} from "@cloudrex/forge";
+import {Service, IServiceOptions, Utils, DiscordEvent} from "@cloudrex/forge";
 import {Snowflake, Message} from "discord.js";
 import {compareTwoStrings} from "string-similarity";
 import {config} from "../app";
@@ -13,7 +13,7 @@ export default class AntiRaidService extends Service {
 
     readonly memory: Map<Snowflake, Message[]> = new Map();
 
-    constructor(options: ServiceOptions) {
+    constructor(options: IServiceOptions) {
         super(options);
 
         this.memory = new Map();
@@ -31,7 +31,7 @@ export default class AntiRaidService extends Service {
         }
 
         const messages: Message[] = this.memory.get(message.author.id) as Message[];
-        
+
         if (messages.length < 2) {
             return;
         }
