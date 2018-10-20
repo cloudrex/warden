@@ -159,7 +159,8 @@ async function start() {
             "ping",
             "prefix",
             "throw",
-            "cli"
+            "cli",
+            "restart"
         ]
     });
 
