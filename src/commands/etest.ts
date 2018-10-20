@@ -16,15 +16,13 @@ export default class TestECommand extends Command {
         const menu: EmojiMenuV2 = new EmojiMenuV2(sent.id, context.sender.id);
 
         menu.add({
-            emoji: "500365648883351552",
+            emoji: "464988615207026698",
 
             async clicked(reaction: MessageReaction, user: User): Promise<void> {
                 await reaction.message.channel.send(`${user.username} clicked`);
             },
 
             async removed(reaction: MessageReaction, user: User): Promise<void> {
-                console.log("removed");
-
                 await reaction.message.channel.send(`${user.username} removed`);
             },
 
