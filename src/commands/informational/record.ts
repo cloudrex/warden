@@ -2,6 +2,7 @@ import {Command, CommandContext, Patterns, IArgument, InternalArgType} from "@cl
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 const max: number = 1000;
 
@@ -28,7 +29,8 @@ export default class RecordCommand extends Command {
     ];
 
     readonly restrict: any = {
-        cooldown: 120
+        cooldown: 120,
+        environment: ChatEnvironment.Guild
     };
 
     // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages

@@ -1,6 +1,7 @@
 import {Role, Message} from "discord.js";
 import {Command, Permission, RestrictGroup, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export default class UnlockCommand extends Command {
     readonly type = CommandType.Moderation;
@@ -14,7 +15,8 @@ export default class UnlockCommand extends Command {
 
     readonly restrict: any = {
         specific: [RestrictGroup.ServerModerator],
-        selfPermissions: [Permission.ManageRoles]
+        selfPermissions: [Permission.ManageRoles],
+        environment: ChatEnvironment.Guild
     };
 
     public async undo(oldContext: CommandContext, message: Message): Promise<boolean> {

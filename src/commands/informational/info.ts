@@ -1,6 +1,7 @@
 import {Command, CommandContext, Utils} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Emoji, RichEmbed} from "discord.js";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 // TODO: Bot should have a command to display info of itself, ex. uptime.
 export default class InfoCommand extends Command {
@@ -12,6 +13,10 @@ export default class InfoCommand extends Command {
     };
 
     readonly aliases = ["uptime"];
+
+    readonly restrict: any = {
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext): Promise<void> {
         await context.message.channel.send(new RichEmbed()

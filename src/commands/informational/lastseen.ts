@@ -2,6 +2,7 @@ import {Command, CommandContext, Utils, InternalArgType, IArgument} from "@cloud
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type LastSeenArgs = {
     readonly member: GuildMember;
@@ -24,6 +25,11 @@ export default class LastSeenCommand extends Command {
             required: true
         }
     ];
+
+    readonly restrict: any = {
+        environment: ChatEnvironment.Guild,
+        cooldown: 2
+    };
 
     public async executed(context: CommandContext, args: LastSeenArgs): Promise<void> {
         if (args.member.id === context.bot.client.user.id) {

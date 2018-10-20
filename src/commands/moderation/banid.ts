@@ -3,6 +3,7 @@ import WardenAPI from "../../core/warden-api";
 import {Command, CommandContext, IArgument, InternalArgType, Log, Permission, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export interface BanIdArgs {
     readonly id: Snowflake;
@@ -41,7 +42,8 @@ export default class BanCommand extends Command {
 
     readonly restrict: any = {
         issuerPermissions: [Permission.BanMembers],
-        selfPermissions: [Permission.BanMembers]
+        selfPermissions: [Permission.BanMembers],
+        environment: ChatEnvironment.Guild
     };
 
     public async executed(context: CommandContext, args: BanIdArgs, api: WardenAPI): Promise<void> {

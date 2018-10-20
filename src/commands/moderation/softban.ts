@@ -3,6 +3,7 @@ import {IArgument, Command, Permission, PrimitiveArgType, CommandContext, Intern
 import WardenAPI from "../../core/warden-api";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type SoftbanArgs = {
     readonly member: GuildMember;
@@ -40,7 +41,8 @@ export default class SoftbanCommand extends Command {
 
     readonly restrict: any = {
         issuerPermissions: [Permission.BanMembers],
-        selfPermissions: [Permission.BanMembers]
+        selfPermissions: [Permission.BanMembers],
+        environment: ChatEnvironment.Guild
     };
 
     public async executed(context: CommandContext, args: SoftbanArgs, api: WardenAPI): Promise<void> {

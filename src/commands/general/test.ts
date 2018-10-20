@@ -33,5 +33,8 @@ export default class TestCommand extends Command {
                 await channel.send("I'm missing the `EMBED_LINKS` permission required for embeds");
             }
         }
+        else if (context.message.channel.type === "dm") {
+            await context.message.channel.send("I can send messages to you");
+        }
     }
 };

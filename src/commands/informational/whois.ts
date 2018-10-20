@@ -1,6 +1,7 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {Command, IArgument, CommandContext, Utils, RestrictGroup, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type WhoisArgs = {
     readonly member: GuildMember;
@@ -25,7 +26,8 @@ export default class WhoisCommand extends Command {
     ];
 
     readonly restrict: any = {
-        specific: [RestrictGroup.ServerModerator]
+        specific: [RestrictGroup.ServerModerator],
+        environment: ChatEnvironment.Guild
     };
 
     public async executed(context: CommandContext, args: WhoisArgs): Promise<void> {

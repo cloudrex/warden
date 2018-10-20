@@ -32,7 +32,8 @@ export default class SelfCommand extends Command {
     ];
 
     readonly restrict: any = {
-        specific: [RestrictGroup.BotOwner]
+        specific: [RestrictGroup.BotOwner],
+        cooldown: 3
     };
 
     public async executed(context: CommandContext, args: SelfArgs): Promise<void> {
