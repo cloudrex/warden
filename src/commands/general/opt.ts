@@ -1,4 +1,4 @@
-import {Command, CommandContext, FormattedMessage, Argument, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, CommandContext, FormattedMessage, IArgument, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "./help";
 import {DatabaseUserConfig} from "../../database/mongo-database";
 import MemberConfig, {MemberConfigIterator} from "../../core/member-config";
@@ -20,7 +20,7 @@ export default class OptCommand extends Command {
         description: "Configure the bot"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "subCommand",
             type: PrimitiveArgType.String,

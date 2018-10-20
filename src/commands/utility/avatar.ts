@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember, RichEmbed} from "discord.js";
 
@@ -16,7 +16,7 @@ export default class AvatarCommand extends Command {
 
     readonly aliases = ["pfp"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             description: "The member to inspect",

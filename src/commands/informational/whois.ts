@@ -1,5 +1,5 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {Command, Argument, CommandContext, Utils, RestrictGroup, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, Utils, RestrictGroup, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type WhoisArgs = {
@@ -14,7 +14,7 @@ export default class WhoisCommand extends Command {
         description: "View information about a user",
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             description: "The member to inspect",

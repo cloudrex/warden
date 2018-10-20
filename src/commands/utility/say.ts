@@ -1,4 +1,4 @@
-import {Argument, Command, PrimitiveArgType, CommandContext, RestrictGroup} from "@cloudrex/forge";
+import {IArgument, Command, PrimitiveArgType, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type SayArgs = {
@@ -17,7 +17,7 @@ export default class EmulateCommand extends Command {
 
     readonly aliases = ["echo"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "message",
             description: "The message to send",

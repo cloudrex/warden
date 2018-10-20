@@ -1,8 +1,7 @@
-import {Command, CommandContext, Utils, InternalArgType} from "@cloudrex/forge";
+import {Command, CommandContext, Utils, InternalArgType, IArgument} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
-import {Argument} from "@cloudrex/forge";
 
 type LastSeenArgs = {
     readonly member: GuildMember;
@@ -18,7 +17,7 @@ export default class LastSeenCommand extends Command {
 
     readonly aliases = ["ls"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             type: InternalArgType.Member,

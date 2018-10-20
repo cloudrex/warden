@@ -3,7 +3,7 @@ import {GuildMember, RichEmbed, Snowflake} from "discord.js";
 import {
     ChatEnvironment,
     Command,
-    Argument,
+    IArgument,
     CommandContext,
     Utils,
     RestrictGroup,
@@ -33,7 +33,7 @@ export default class WarningsCommand extends Command {
 
     readonly aliases = ["warns"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             type: InternalArgType.Member,

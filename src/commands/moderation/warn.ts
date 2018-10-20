@@ -1,4 +1,4 @@
-import {Argument, ChatEnvironment, Command, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
@@ -18,7 +18,7 @@ export default class WarnCommand extends Command {
         description: "Warn an user"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             description: "The member to warn",

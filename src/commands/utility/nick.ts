@@ -1,4 +1,4 @@
-import {Argument, ChatEnvironment, Command, Permission, PrimitiveArgType, CommandContext} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, Permission, PrimitiveArgType, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type NickArgs = {
@@ -15,7 +15,7 @@ export default class NickCommand extends Command {
 
     readonly aliases = ["nickname"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "nickname",
             description: "The desired nickname",

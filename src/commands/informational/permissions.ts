@@ -1,9 +1,7 @@
-import {Command, CommandContext, ChatEnvironment} from "@cloudrex/forge";
+import {Command, CommandContext, ChatEnvironment, InternalArgType, IArgument} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {table, TableUserConfig} from "table";
 import {Permissions, PermissionResolvable, Message, GuildMember, Snowflake} from "discord.js";
-import {Argument} from "@cloudrex/forge";
-import {InternalArgType} from "@cloudrex/forge";
 
 const tableConfig: TableUserConfig = {
     columns: {
@@ -32,7 +30,7 @@ export default class PermissionsCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             type: InternalArgType.Member,

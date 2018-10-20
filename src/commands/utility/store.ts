@@ -1,4 +1,4 @@
-import {Command, CommandContext, Utils, Argument, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, CommandContext, Utils, IArgument, PrimitiveArgType} from "@cloudrex/forge";
 import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
 import {DatabaseStoredMessage} from "../../database/mongo-database";
@@ -20,7 +20,7 @@ export default class StoreCommand extends Command {
 
     readonly aliases = ["save"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "name",
             required: false,

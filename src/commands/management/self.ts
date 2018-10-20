@@ -1,4 +1,4 @@
-import {Command, CommandContext, RestrictGroup, Argument, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, CommandContext, RestrictGroup, IArgument, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type SelfArgs = {
@@ -16,7 +16,7 @@ export default class SelfCommand extends Command {
         description: "Manage the bot's details"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "property",
             description: "The property to change",

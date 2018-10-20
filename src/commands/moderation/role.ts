@@ -1,5 +1,5 @@
 import {GuildMember, Role} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, Permission, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type RoleArgs = {
@@ -15,7 +15,7 @@ export default class RoleCommand extends Command {
         description: "Manage member roles"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "role",
             description: "The role to add or remove",

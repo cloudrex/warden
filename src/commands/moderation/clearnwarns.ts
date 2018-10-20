@@ -1,4 +1,4 @@
-import {Command, CommandContext, Argument, RestrictGroup, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
+import {Command, CommandContext, IArgument, RestrictGroup, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import Mongo from "../../database/mongo-database";
 import {GuildMember} from "discord.js";
@@ -17,7 +17,7 @@ export default class ClearWarnsCommand extends Command {
         description: "Clear all warnings from an user"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             description: "The target user",

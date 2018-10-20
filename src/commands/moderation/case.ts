@@ -1,4 +1,4 @@
-import {Command, CommandContext, RestrictGroup, ChatEnvironment, Argument, InternalArgType} from "@cloudrex/forge";
+import {Command, CommandContext, RestrictGroup, ChatEnvironment, IArgument, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Snowflake} from "discord.js";
 import WardenAPI from "../../core/warden-api";
@@ -16,7 +16,7 @@ export default class CaseCommand extends Command<CaseArgs> {
         description: "Grab a moderation case"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "caseId",
             type: InternalArgType.Snowflake,

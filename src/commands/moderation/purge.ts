@@ -1,4 +1,4 @@
-import {Argument, ChatEnvironment, Command, CommandContext, PrimitiveArgType, RestrictGroup} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, CommandContext, PrimitiveArgType, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type PurgeArgs = {
@@ -13,7 +13,7 @@ export default class PurgeCommand extends Command {
         description: "Delete messages in bulk"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "amount",
             type: PrimitiveArgType.NonZeroInteger,

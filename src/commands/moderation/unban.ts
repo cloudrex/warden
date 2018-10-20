@@ -1,5 +1,5 @@
 import {Snowflake} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, Permission, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type UnbanArgs = {
@@ -15,7 +15,7 @@ export default class UnbanCommand extends Command {
         description: "Unban a user"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "user",
             type: InternalArgType.Snowflake,

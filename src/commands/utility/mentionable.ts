@@ -1,5 +1,5 @@
 import {Role} from "discord.js";
-import {Argument, ChatEnvironment, Command, Permission, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, Permission, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type MentionableArgs = {
@@ -14,7 +14,7 @@ export default class MentionableCommand extends Command {
         description: "Toggle a role mentionable"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "role",
             description: "The role to toggle mentionable",

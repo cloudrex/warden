@@ -10,6 +10,7 @@ export default class ReasonCommand extends Command {
         description: "Manage moderation reasons"
     };
 
+    // TODO: Update arg system
     readonly args = {
         caseNum: "!number",
         reason: "!string"

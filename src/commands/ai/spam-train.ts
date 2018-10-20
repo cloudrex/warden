@@ -1,4 +1,4 @@
-import {Command, CommandContext, Argument, PrimitiveArgType, RestrictGroup} from "@cloudrex/forge";
+import {Command, CommandContext, IArgument, PrimitiveArgType, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Message, Snowflake, TextChannel} from "discord.js";
 import brain, {NeuralNetwork} from "brain.js";
@@ -30,7 +30,7 @@ export default class SpamTrain extends Command {
 
     readonly aliases = ["spam-train"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "spamTest",
             description: "The message to determine if it's a spam",

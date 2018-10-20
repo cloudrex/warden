@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, PrimitiveArgType, RestrictGroup, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, PrimitiveArgType, RestrictGroup, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 
@@ -15,7 +15,7 @@ export default class EmulateCommand extends Command {
         description: "Emulate a message"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             description: "The author of the emulated message",

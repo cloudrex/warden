@@ -6,7 +6,7 @@ import {GuildMember, Message, Snowflake} from "discord.js";
 import path from "path";
 
 import {
-    Bot,
+    Bot, IArgumentResolver,
     JsonProvider,
     Log,
     LogLevel,
@@ -14,7 +14,6 @@ import {
     Utils
 } from "@cloudrex/forge";
 
-import {ArgumentResolver} from "@cloudrex/forge";
 import WardenAPI from "./core/warden-api";
 
 const baseDir: string = "./src";
@@ -135,7 +134,7 @@ async function start() {
             }
         ],
 
-        argumentResolvers: <ArgumentResolver[]>[
+        argumentResolvers: <IArgumentResolver[]>[
             {
                 name: "member",
 

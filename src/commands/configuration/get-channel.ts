@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, ChatEnvironment, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, ChatEnvironment, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {DatabaseGuildConfig, GuildConfigChannelType, GuildConfig} from "../../database/guild-config";
 
@@ -16,7 +16,7 @@ export default class GetChannelCommand extends Command<GetChannelArgs> {
 
     readonly aliases = ["getchannel"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "type",
             description: "The type of channel to retrieve",

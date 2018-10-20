@@ -1,4 +1,4 @@
-import {Command, CommandContext, Patterns, Argument, InternalArgType} from "@cloudrex/forge";
+import {Command, CommandContext, Patterns, IArgument, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
@@ -17,7 +17,7 @@ export default class RecordCommand extends Command {
         description: "View your recorded information"
     };
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "member",
             description: "The user to inspect",

@@ -1,4 +1,4 @@
-import {Command, Argument, CommandContext, ChatEnvironment, PrimitiveArgType, Utils, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, ChatEnvironment, PrimitiveArgType, Utils, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Snowflake} from "discord.js";
 import {DatabaseGuildConfig, GuildConfigChannelType} from "../../database/guild-config";
@@ -18,7 +18,7 @@ export default class SetChannelCommand extends Command<SetChannelArgs> {
 
     readonly aliases = ["setchannel"];
 
-    readonly arguments: Argument[] = [
+    readonly arguments: IArgument[] = [
         {
             name: "type",
             description: "The type of channel to set",
