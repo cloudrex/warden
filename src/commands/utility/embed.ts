@@ -2,6 +2,7 @@ import WardenAPI from "../../core/warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
 import {Command, SetupHelper, SetupHelperResult, RestrictGroup, CommandContext, Utils} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export default class EmbedCommand extends Command {
     readonly type = CommandType.Utility;
@@ -13,7 +14,8 @@ export default class EmbedCommand extends Command {
 
     readonly restrict: any = {
         specific: [RestrictGroup.ServerOwner],
-        cooldown: 5
+        cooldown: 5,
+        environment: ChatEnvironment.Guild
     };
 
     public async executed(context: CommandContext, api: WardenAPI): Promise<void> {

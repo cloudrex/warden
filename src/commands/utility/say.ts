@@ -38,6 +38,6 @@ export default class EmulateCommand extends Command {
         }
 
         // TODO: Debugging
-        await context.message.channel.send(`${context.sender.tag} <:announcement:490726045880811531> ` + filteredMessage);
+        await context.message.channel.send(`${context.sender.tag} said ${filteredMessage}`);
     }
 };

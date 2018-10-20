@@ -1,6 +1,7 @@
 import {Command, IArgument, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember, RichEmbed} from "discord.js";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type AvatarArgs = {
     readonly member: GuildMember;
@@ -24,6 +25,10 @@ export default class AvatarCommand extends Command {
             required: true
         }
     ];
+
+    readonly restrict: any = {
+        environment: ChatEnvironment.Guild
+    };
 
     public async executed(context: CommandContext, args: AvatarArgs): Promise<void> {
         await context.message.channel.send(new RichEmbed()

@@ -2,6 +2,7 @@ import {Command, RestrictGroup, CommandContext} from "@cloudrex/forge";
 import {Channel, GuildChannel, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {ChannelType, DatabaseChannel} from "../../database/mongo-database";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export default class BackupCommand extends Command {
     readonly type = CommandType.Utility;
@@ -13,7 +14,8 @@ export default class BackupCommand extends Command {
 
     readonly restrict: any = {
         specific: [RestrictGroup.ServerOwner],
-        cooldown: 3600
+        cooldown: 3600,
+        environment: ChatEnvironment.Guild
     };
 
     public async executed(context: CommandContext): Promise<void> {

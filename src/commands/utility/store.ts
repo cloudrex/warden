@@ -3,6 +3,7 @@ import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
 import {DatabaseStoredMessage} from "../../database/mongo-database";
 import StoredMessages from "../../core/stored-messages";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type StoreArgs = {
     readonly messageId?: Snowflake;
@@ -35,7 +36,8 @@ export default class StoreCommand extends Command {
     ];
 
     readonly restrict: any = {
-        cooldown: 5
+        cooldown: 5,
+        environment: ChatEnvironment.Guild
     };
 
     public async executed(context: CommandContext, args: StoreArgs): Promise<void> {

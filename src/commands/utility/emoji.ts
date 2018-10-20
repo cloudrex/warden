@@ -1,5 +1,6 @@
 import {Command, CommandContext, Permission, RestrictGroup, PrimitiveArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 const request: any = require("request").defaults({
     encoding: null
@@ -36,7 +37,8 @@ export default class EmojiCommand extends Command {
     readonly restrict: any = {
         specific: [RestrictGroup.ServerModerator],
         selfPermissions: [Permission.ManageEmojis],
-        issuerPermissions: [Permission.ManageEmojis]
+        issuerPermissions: [Permission.ManageEmojis],
+        environment: ChatEnvironment.Guild
     };
 
     public executed(context: CommandContext, args: EmojiArgs): Promise<void> {
