@@ -13,7 +13,6 @@ export default class TestECommand extends Command {
 
     public async executed(context: CommandContext): Promise<void> {
         const sent: Message = await context.message.channel.send("Hello world") as Message;
-
         const menu: EmojiMenuV2 = new EmojiMenuV2(sent.id, context.sender.id);
 
         menu.add({

@@ -5,7 +5,7 @@ type SayArgs = {
     readonly message: string;
 }
 
-const mentionPattern: RegExp = /<@!?[0-9]+>|@everyone|@here/gm;
+const mentionPattern: RegExp = /<@!?[0-9]+>@(?:everyone|here)/gm;
 
 export default class EmulateCommand extends Command {
     readonly type = CommandType.Utility;
