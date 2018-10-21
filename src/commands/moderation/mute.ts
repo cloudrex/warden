@@ -54,7 +54,7 @@ export default class MuteCommand extends Command {
 
     public async executed(context: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {
         if (args.member.id === context.sender.id) {
-            await context.fail("You can't mute yourself.");
+            await context.fail("You can't mute yourself silly.");
 
             return;
         }
