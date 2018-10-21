@@ -24,6 +24,11 @@ export default class ProtectionService extends Service {
             return;
         }
 
+        // Ignore if bot doesn't have moderation powers
+        if (!Utils.hasModerationPowers(message.guild.me)) {
+            return;
+        }
+
         let tracking: boolean | null = await MemberConfig.get(message.author.id, "tracking") as boolean | null;
 
         tracking = tracking === null ? true : tracking;
@@ -49,50 +54,7 @@ export default class ProtectionService extends Service {
 
         const api: WardenAPI = this.api as WardenAPI;
 
-        if (config.inviteProtection && Patterns.invite.test(message.content)) {
-            const matches: RegExpMatchArray | null = message.content.match(Patterns.invite);
-
-            if (matches !== null) {
-                for (let i: number = 0; i < matches.length; i++) {
-                    try {
-                        const invite: Invite = await this.bot.client.fetchInvite(matches[i]);
-
-                        if (invite) {
-                            if (invite.guild.id !== message.guild.id) {
-                                if (message.deletable) {
-                                    // TODO: Will it affect future checks/actions if the message is deleted?
-                                    // TODO: What is if ALSO triggers other actions?
-                                    await message.delete();
-                                }
-
-                                message.reply("Invites to different guilds are not allowed.");
-
-                                let evidence: string = `*${message.content}*`;
-
-                                if (evidence.length > 200) {
-                                    evidence = evidence.substring(0, 200) + " ...";
-                                }
-
-                                await api.executeAction(message.channel as TextChannel, {
-                                    type: ModerationActionType.Warn,
-                                    moderator: message.guild.me,
-                                    reason: "Posted an invite link to a different server",
-                                    member: message.member,
-                                    evidence: evidence
-                                });
-
-                                break;
-                            }
-                        }
-                    }
-                    catch (error) {
-                        if (error.message !== "Unknown Invite") {
-                            Log.warn(`[Protection:message] Unexpected error while fetching invite: ${error.message}`);
-                        }
-                    }
-                }
-            }
-        }
+        await this.handleInviteProtection(message, api);
 
         // Ignore owner and self
         if (message.author.id === this.bot.owner || message.author.id === this.bot.client.user.id) {
@@ -156,6 +118,48 @@ export default class ProtectionService extends Service {
                     });
                 }
             });
+        }
+    }
+
+    private async handleInviteProtection(message: Message, api: WardenAPI): Promise<void> {
+        if (config.inviteProtection && Patterns.invite.test(message.content)) {
+            const matches: RegExpMatchArray | null = message.content.match(Patterns.invite);
+
+            if (matches !== null) {
+                for (let i: number = 0; i < matches.length; i++) {
+                    try {
+                        const invite: Invite = await this.bot.client.fetchInvite(matches[i]);
+
+                        if (invite) {
+                            if (invite.guild.id !== message.guild.id) {
+                                // TODO: Disabled because somehow it's interfering
+                                if (message.deletable) {
+                                    // TODO: Will it affect future checks/actions if the message is deleted?
+                                    // TODO: What is if ALSO triggers other actions?
+                                    await message.delete();
+                                }
+
+                                await message.reply("Invites to different guilds are not allowed.");
+
+                                // TODO: As evidence maybe just provide the invite code?
+                                await api.executeAction(message.channel as TextChannel, {
+                                    type: ModerationActionType.Warn,
+                                    moderator: message.guild.me,
+                                    reason: "Posted an invite link to a different server",
+                                    member: message.member
+                                });
+
+                                break;
+                            }
+                        }
+                    }
+                    catch (error) {
+                        if (error.message !== "Unknown Invite") {
+                            Log.warn(`[Protection:message] Unexpected error while fetching invite: ${error.message}`);
+                        }
+                    }
+                }
+            }
         }
     }
 
