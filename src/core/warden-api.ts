@@ -174,10 +174,6 @@ export default class WardenAPI {
             }
         }
 
-        console.log("embed is", embed);
-
-        console.log(embed, (embed as RichEmbed).footer as any, ((embed as RichEmbed).footer as any).text as any);
-
         if (embed === null || embed.footer === undefined || embed.footer.text === undefined) {
             Log.error("[WardenAPI.executeAction] Expecting embed and footer");
 
