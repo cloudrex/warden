@@ -1,8 +1,7 @@
-import {Command, CommandContext, Patterns, IArgument, InternalArgType} from "@cloudrex/forge";
+import {Command, CommandContext, Patterns, IArgument, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 const max: number = 1000;
 

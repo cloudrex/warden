@@ -1,9 +1,8 @@
-import {GuildMember, TextChannel, Message} from "discord.js";
+import {GuildMember, TextChannel} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, IArgument, CommandContext, Permission, PrimitiveArgType, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, Permission, PrimitiveArgType, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export type KickArgs = {
     readonly member: GuildMember;

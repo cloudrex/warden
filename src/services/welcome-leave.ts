@@ -1,4 +1,4 @@
-import {GuildMember, User} from "discord.js";
+import {GuildMember, TextChannel, User} from "discord.js";
 import {Utils, Service} from "@cloudrex/forge";
 import {config} from "../app";
 
@@ -48,7 +48,7 @@ export default class WelcomeLeaveService extends Service {
             color: color,
             footer: `${member.guild.memberCount} members`,
             user: member.user,
-            channel: member.guild.channels.get("286352649610199052"), // General
+            channel: member.guild.channels.get("286352649610199052") as TextChannel, // General
             message: text
         });
     }
@@ -62,7 +62,7 @@ export default class WelcomeLeaveService extends Service {
     private static async sendMemberLog(member: GuildMember, joined: boolean): Promise<any> {
         return Utils.send({
             title: `Member ${joined ? "Joined" : "Left"}`,
-            channel: member.guild.channels.get("463486605861191700"), // Member Log
+            channel: member.guild.channels.get("463486605861191700") as TextChannel, // Member Log
             footer: `${member.guild.memberCount} members`,
             color: joined ? "GREEN" : "RED",
             message: `<@${member.id}> (${member.user.tag}) ${joined ? "joined" : "left"}`,

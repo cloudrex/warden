@@ -1,4 +1,4 @@
-import {Command, CommandContext, RestrictGroup, EmojiMenuV2} from "@cloudrex/forge";
+import {Command, CommandContext, RestrictGroup, EmojiMenu} from "@cloudrex/forge";
 import {Message, MessageReaction, User} from "discord.js";
 
 export default class TestECommand extends Command {
@@ -13,7 +13,7 @@ export default class TestECommand extends Command {
 
     public async executed(context: CommandContext): Promise<void> {
         const sent: Message = await context.message.channel.send("Hello world") as Message;
-        const menu: EmojiMenuV2 = new EmojiMenuV2(sent.id, context.sender.id);
+        const menu: EmojiMenu = new EmojiMenu(sent.id, context.sender.id);
 
         menu.add({
             emoji: "464988615207026698",

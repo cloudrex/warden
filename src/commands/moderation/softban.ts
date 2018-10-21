@@ -1,9 +1,8 @@
 import {GuildMember, TextChannel} from "discord.js";
-import {IArgument, Command, Permission, PrimitiveArgType, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {IArgument, Command, Permission, PrimitiveArgType, CommandContext, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import WardenAPI from "../../core/warden-api";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type SoftbanArgs = {
     readonly member: GuildMember;

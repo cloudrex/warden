@@ -1,8 +1,7 @@
 import WardenAPI from "../../core/warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
-import {Command, SetupHelper, SetupHelperResult, RestrictGroup, CommandContext, Utils} from "@cloudrex/forge";
+import {Command, SetupHelper, ISetupHelperResult, RestrictGroup, CommandContext, Utils, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export default class EmbedCommand extends Command {
     readonly type = CommandType.Utility;
@@ -30,7 +29,7 @@ export default class EmbedCommand extends Command {
             return;
         }
 
-        const result: SetupHelperResult = await setup
+        const result: ISetupHelperResult = await setup
             .input("Where would you like to post the embed?")
             .input("What will the embed contain?")
             .input("What color will the embed be?")

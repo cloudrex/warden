@@ -1,8 +1,7 @@
-import {Command, CommandContext, Utils, InternalArgType, IArgument} from "@cloudrex/forge";
+import {Command, CommandContext, Utils, InternalArgType, IArgument, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {DatabaseMessage} from "../../database/mongo-database";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type LastSeenArgs = {
     readonly member: GuildMember;

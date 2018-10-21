@@ -1,9 +1,8 @@
-import {Command, CommandContext, Utils, IArgument, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, CommandContext, Utils, IArgument, PrimitiveArgType, ChatEnvironment} from "@cloudrex/forge";
 import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
 import {DatabaseStoredMessage} from "../../database/mongo-database";
 import StoredMessages from "../../core/stored-messages";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type StoreArgs = {
     readonly messageId?: Snowflake;

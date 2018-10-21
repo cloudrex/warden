@@ -1,7 +1,6 @@
 import {Role, Message} from "discord.js";
-import {Command, Permission, RestrictGroup, CommandContext} from "@cloudrex/forge";
+import {Command, Permission, RestrictGroup, CommandContext, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export default class UnlockCommand extends Command {
     readonly type = CommandType.Moderation;

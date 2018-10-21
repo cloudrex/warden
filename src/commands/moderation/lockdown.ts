@@ -1,7 +1,6 @@
 import {Role, Message} from "discord.js";
-import {Command, CommandContext, Permission, RestrictGroup} from "@cloudrex/forge";
+import {Command, CommandContext, Permission, RestrictGroup, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export default class LockdownCommand extends Command {
     readonly type = CommandType.Moderation;

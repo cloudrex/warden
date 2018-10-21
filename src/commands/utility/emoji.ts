@@ -1,6 +1,5 @@
-import {Command, CommandContext, Permission, RestrictGroup, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, CommandContext, Permission, RestrictGroup, PrimitiveArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 const request: any = require("request").defaults({
     encoding: null

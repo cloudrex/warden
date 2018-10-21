@@ -1,7 +1,6 @@
-import {Command, IArgument, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember, RichEmbed} from "discord.js";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type AvatarArgs = {
     readonly member: GuildMember;

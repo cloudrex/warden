@@ -1,9 +1,8 @@
 import {GuildMember, Message, RichEmbed, Snowflake} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, CommandContext, IArgument, InternalArgType, Log, Permission, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, CommandContext, IArgument, InternalArgType, Log, Permission, PrimitiveArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export interface BanIdArgs {
     readonly id: Snowflake;

@@ -1,8 +1,7 @@
-import {Command, RestrictGroup, CommandContext} from "@cloudrex/forge";
+import {Command, RestrictGroup, CommandContext, ChatEnvironment} from "@cloudrex/forge";
 import {Channel, GuildChannel, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {ChannelType, DatabaseChannel} from "../../database/mongo-database";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 export default class BackupCommand extends Command {
     readonly type = CommandType.Utility;

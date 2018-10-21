@@ -1,9 +1,9 @@
 import {GuildMember, TextChannel, Message} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, IArgument, CommandContext, Permission, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, Permission, PrimitiveArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
+import {InternalArgType} from "@cloudrex/forge/dist";
 
 export interface BanArgs {
     readonly member: GuildMember;
@@ -25,7 +25,7 @@ export default class BanCommand extends Command<BanArgs> {
         {
             name: "member",
             description: "The member to ban",
-            type: "member",
+            type: InternalArgType.Member,
             required: true
         },
         {

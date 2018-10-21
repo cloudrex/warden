@@ -1,7 +1,6 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {Command, IArgument, CommandContext, Utils, RestrictGroup, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, Utils, RestrictGroup, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
 type WhoisArgs = {
     readonly member: GuildMember;
