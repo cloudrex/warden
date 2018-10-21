@@ -7,7 +7,10 @@ import MemberConfig from "../core/member-config";
 import {config} from "../app";
 
 const conflictingBots: Snowflake[] = [
-    "155149108183695360" // Dyno#3861
+    "155149108183695360", // Dyno#3861,
+    "268597426619809802", // Link#7233
+    "159985870458322944", // MEE6#4876,
+    "240254129333731328", // Vortex#8540
 ];
 
 let muteLeavers: Snowflake[] = [];
