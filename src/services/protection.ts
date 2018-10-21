@@ -1,6 +1,6 @@
-import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Snowflake, TextChannel, Role} from "discord.js";
+import {Collection, DMChannel, GuildMember, Invite, Message, RichEmbed, Role, Snowflake, TextChannel} from "discord.js";
 import WardenAPI from "../core/warden-api";
-import {CommandParser, Log, Service, DiscordEvent, Utils, Patterns} from "@cloudrex/forge";
+import {CommandParser, DiscordEvent, Log, Patterns, Service, Utils} from "@cloudrex/forge";
 import Mongo, {ModerationActionType} from "../database/mongo-database";
 import Messages from "../core/messages";
 import MemberConfig from "../core/member-config";
@@ -78,19 +78,24 @@ export default class ProtectionService extends Service {
             if (mentions && mentions.size > 0) {
                 const mentionedUsers: GuildMember[] = mentions.array();
 
-                if (mentionedUsers.length > 4 || mentionedUsers.length > 4 || mentionedUsers.length > 4) {
+                if (mentionedUsers.length > 4) {
+                    // Mute the user
+                    // TODO: Use/implement in Consumer API v2
+                    await api.executeAction(message.channel as TextChannel, {
+                        member: message.member,
+                        moderator: message.guild.me,
+                        reason: "Mass mentions",
+                        type: ModerationActionType.Mute
+                    });
+
                     if (message.deletable) {
                         await message.delete();
                     }
 
-                    // Mute the user
-                    // TODO: Use/implement in Consumer API v2
-                    ProtectionService.mute(message.member);
-
                     const response: Message = await message.reply("You have been automatically muted until further notice for mass pinging.") as Message;
 
                     if (response) {
-                        response.delete(8000);
+                        await response.delete(8000);
                     }
                 }
             }
