@@ -24,6 +24,7 @@ export default class PurgeCommand extends Command {
 
     readonly restrict: any = {
         specific: [RestrictGroup.BotOwner],
+        cooldown: 3,
         environment: ChatEnvironment.Guild
     };
 
