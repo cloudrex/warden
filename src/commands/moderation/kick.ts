@@ -1,31 +1,29 @@
 import {GuildMember, TextChannel, Message} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, IArgument, CommandContext, Permission, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, Permission, PrimitiveArgType, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 import ChatEnvironment from "@cloudrex/forge/core/chat-environment";
 
-export interface BanArgs {
+export type KickArgs = {
     readonly member: GuildMember;
     readonly reason: string;
     readonly evidence?: string;
 }
 
-export default class BanCommand extends Command<BanArgs> {
+export default class KickCommand extends Command<KickArgs> {
     readonly type = CommandType.Moderation;
 
-    readonly undoable: boolean = true;
-
     readonly meta = {
-        name: "ban",
-        description: "Ban a member"
+        name: "kick",
+        description: "Kick a member"
     };
 
     readonly arguments: IArgument[] = [
         {
             name: "member",
-            description: "The member to ban",
-            type: "member",
+            description: "The member to kick",
+            type: InternalArgType.Member,
             required: true
         },
         {
@@ -43,37 +41,25 @@ export default class BanCommand extends Command<BanArgs> {
     ];
 
     readonly restrict: any = {
-        issuerPermissions: [Permission.BanMembers],
-        selfPermissions: [Permission.BanMembers],
+        issuerPermissions: [Permission.KickMembers],
+        selfPermissions: [Permission.KickMembers],
         environment: ChatEnvironment.Guild
     };
 
-    public async undo(oldContext: CommandContext, message: Message, args: BanArgs): Promise<boolean> {
-        // TODO: Can't trust stored context to retrieve API
-        await oldContext.bot.getAPI().executeAction(message.channel as TextChannel, {
-            member: args.member,
-            moderator: message.member,
-            reason: "Action undone",
-            type: ModerationActionType.Unban
-        });
-
-        return true;
-    }
-
-    public async executed(context: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
+    public async executed(context: CommandContext, args: KickArgs, api: WardenAPI): Promise<void> {
         if (args.member.id === context.sender.id) {
-            await context.fail("You can't ban yourself silly.");
+            await context.fail("You can't kick yourself silly.");
 
             return;
         }
-        else if (!args.member.bannable) {
-            await context.fail("Unable to ban that person.");
+        else if (!args.member.kickable) {
+            await context.fail("Unable to kick that person.");
 
             return;
         }
 
         await api.executeAction(context.message.channel as TextChannel, {
-            type: ModerationActionType.Ban,
+            type: ModerationActionType.Kick,
             reason: args.reason,
             member: args.member,
             evidence: args.evidence,

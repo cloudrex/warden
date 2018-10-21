@@ -1,11 +1,7 @@
-import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel, User} from "discord.js";
+import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel} from "discord.js";
 import {Bot, Log} from "@cloudrex/forge";
 
-import Mongo, {
-    DatabaseModerationAction,
-    ModerationAction,
-    ModerationActionType
-} from "../database/mongo-database";
+import Mongo, {DatabaseModerationAction, ModerationAction, ModerationActionType} from "../database/mongo-database";
 
 import {BadWords, RacialSlurs} from "./constants";
 import {config} from "../app";
@@ -140,6 +136,19 @@ export default class WardenAPI {
                     days: 1,
                     reason
                 });
+
+                break;
+            }
+
+            case ModerationActionType.Kick: {
+                try {
+                    await (await action.member.createDM()).send(new RichEmbed()
+                        .setDescription(`You were kicked from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
+                        .setColor("GOLD"))
+                }
+                catch (e) {}
+
+                await action.member.kick(reason);
 
                 break;
             }
