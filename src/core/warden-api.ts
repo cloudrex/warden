@@ -88,6 +88,7 @@ export default class WardenAPI {
     }
 
     /**
+     * @param {TextChannel} channel
      * @param {ModerationAction} action
      * @return {Promise<void>}
      */
@@ -104,7 +105,7 @@ export default class WardenAPI {
                 try {
                     await (await action.member.createDM()).send(new RichEmbed()
                         .setDescription(warnDM)
-                        .setColor("GOLD"));
+                        .setColor("PURPLE"));
                     }
                 catch (e) {}
 
@@ -173,14 +174,12 @@ export default class WardenAPI {
             }
         }
 
-        if (embed === null || this.channels === undefined || embed.footer === undefined || embed.footer.text === undefined) {
-            Log.error("[WardenAPI.executeAction] Expecting log message, embed footer and channels");
+        console.log("embed is", embed);
 
-            return;
-        }
+        console.log(embed, (embed as RichEmbed).footer as any, ((embed as RichEmbed).footer as any).text as any);
 
-        if (!this.channels) {
-            Log.error("[WardenAPI.executeAction] Expecting channels");
+        if (embed === null || embed.footer === undefined || embed.footer.text === undefined) {
+            Log.error("[WardenAPI.executeAction] Expecting embed and footer");
 
             return;
         }
@@ -241,6 +240,17 @@ export default class WardenAPI {
                     .addField("Moderator", `<@${action.moderatorId}> (${action.moderatorTag})`)
                     .setThumbnail(action.evidence ? action.evidence : "")
                     .setFooter(automatic ? "Automatically warned" : `Warned by ${action.moderatorUsername}`, action.moderatorAvatarUrl)
+                    .setColor("PURPLE");
+            }
+
+            case ModerationActionType.Kick: {
+                return new RichEmbed()
+                    .setTitle("Member Kicked")
+                    .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
+                    .addField("Reason", action.reason)
+                    .addField("Moderator", `<@${action.moderatorId}> (${action.moderatorTag})`)
+                    .setThumbnail(action.evidence ? action.evidence : "")
+                    .setFooter(`Kicked by ${action.moderatorUsername}`, action.moderatorAvatarUrl)
                     .setColor("GOLD");
             }
 
