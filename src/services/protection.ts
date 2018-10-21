@@ -75,6 +75,7 @@ export default class ProtectionService extends Service {
         /* else if (message.member.roles.has(this.api.roles.muted) && message.deletable) {
             await message.delete();
         } */
+        // Mass mentions
         else {
             const mentions: Collection<Snowflake, GuildMember> = message.mentions.members;
 
