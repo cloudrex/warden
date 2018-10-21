@@ -6,7 +6,7 @@ type RolesArgs = {
     readonly page: number;
 }
 
-export default class RolesCommand extends Command {
+export default class RolesCommand extends Command<RolesArgs> {
     readonly type = CommandType.Utility;
 
     readonly meta = {

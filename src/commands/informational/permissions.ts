@@ -15,7 +15,7 @@ type PermissionsArgs = {
     readonly member: GuildMember;
 }
 
-export default class PermissionsCommand extends Command {
+export default class PermissionsCommand extends Command<PermissionsArgs> {
     readonly type = CommandType.Informational;
 
     readonly meta = {

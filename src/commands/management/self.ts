@@ -8,7 +8,7 @@ type SelfArgs = {
 
 type SelfProperty = "username" | "avatar" | "status" | "state";
 
-export default class SelfCommand extends Command {
+export default class SelfCommand extends Command<SelfArgs> {
     readonly type = CommandType.Configuration;
 
     readonly meta = {

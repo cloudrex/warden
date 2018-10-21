@@ -7,7 +7,7 @@ type LastSeenArgs = {
     readonly member: GuildMember;
 };
 
-export default class LastSeenCommand extends Command {
+export default class LastSeenCommand extends Command<LastSeenArgs> {
     readonly type = CommandType.Informational;
 
     readonly meta = {

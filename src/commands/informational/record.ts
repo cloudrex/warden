@@ -9,7 +9,7 @@ type RecordArgs = {
     readonly member: GuildMember;
 };
 
-export default class RecordCommand extends Command {
+export default class RecordCommand extends Command<RecordArgs> {
     readonly type = CommandType.Utility;
 
     readonly meta = {

@@ -10,7 +10,7 @@ type StoreArgs = {
 }
 
 // TODO: Limit amount of messages to 50?
-export default class StoreCommand extends Command {
+export default class StoreCommand extends Command<StoreArgs> {
     readonly type = CommandType.Utility;
 
     readonly meta = {

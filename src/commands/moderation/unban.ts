@@ -7,7 +7,7 @@ type UnbanArgs = {
     readonly reason: string;
 }
 
-export default class UnbanCommand extends Command {
+export default class UnbanCommand extends Command<UnbanArgs> {
     readonly type = CommandType.Moderation;
 
     readonly meta = {

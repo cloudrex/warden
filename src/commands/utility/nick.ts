@@ -5,7 +5,7 @@ type NickArgs = {
     readonly nickname: string;
 }
 
-export default class NickCommand extends Command {
+export default class NickCommand extends Command<NickArgs> {
     readonly type = CommandType.Moderation;
 
     readonly meta = {

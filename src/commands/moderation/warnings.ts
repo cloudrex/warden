@@ -23,7 +23,7 @@ type WarningsArgs = {
     readonly member: GuildMember;
 }
 
-export default class WarningsCommand extends Command {
+export default class WarningsCommand extends Command<WarningsArgs> {
     readonly type = CommandType.Moderation;
 
     readonly meta = {

@@ -7,7 +7,7 @@ type RoleArgs = {
     readonly member: GuildMember;
 }
 
-export default class RoleCommand extends Command {
+export default class RoleCommand extends Command<RoleArgs> {
     readonly type = CommandType.Utility;
 
     readonly meta = {

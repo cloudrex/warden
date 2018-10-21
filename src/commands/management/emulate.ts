@@ -7,7 +7,7 @@ type EmulateArgs = {
     readonly message: string;
 }
 
-export default class EmulateCommand extends Command {
+export default class EmulateCommand extends Command<EmulateArgs> {
     readonly type = CommandType.Utility;
 
     readonly meta = {

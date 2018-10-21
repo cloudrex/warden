@@ -15,7 +15,7 @@ export default class TestECommand extends Command {
         const sent: Message = await context.message.channel.send("Hello world") as Message;
         const menu: EmojiMenu = new EmojiMenu(sent.id, context.sender.id);
 
-        menu.add({
+        await menu.add({
             emoji: "464988615207026698",
 
             async clicked(reaction: MessageReaction, user: User): Promise<void> {

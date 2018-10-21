@@ -12,7 +12,7 @@ export type OptArgs = {
 };
 
 // TODO: Mentions getting filtered
-export default class OptCommand extends Command {
+export default class OptCommand extends Command<OptArgs> {
     readonly type = CommandType.Configuration;
 
     readonly meta = {

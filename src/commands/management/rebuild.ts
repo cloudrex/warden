@@ -3,7 +3,7 @@ import {CommandType} from "../general/help";
 import {exec, ExecException} from "child_process";
 import os from "os";
 
-export default class BuildCommand extends Command {
+export default class RebuildCommand extends Command {
     readonly type = CommandType.Configuration;
 
     readonly peerCommands: string[] = ["cloudrex@outlook.com/build:^1.0.0"];

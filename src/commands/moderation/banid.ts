@@ -10,7 +10,7 @@ export interface BanIdArgs {
     readonly evidence?: string;
 }
 
-export default class BanCommand extends Command {
+export default class BanIdCommand extends Command<BanIdArgs> {
     readonly type = CommandType.Moderation;
 
     readonly meta = {
@@ -47,7 +47,7 @@ export default class BanCommand extends Command {
 
     public async executed(context: CommandContext, args: BanIdArgs, api: WardenAPI): Promise<void> {
         if (args.id === context.sender.id) {
-            await context.fail("You can't ban yourself.");
+            await context.fail("You can't ban yourself silly.");
 
             return;
         }
