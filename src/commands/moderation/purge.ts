@@ -1,4 +1,4 @@
-import {IArgument, ChatEnvironment, Command, CommandContext, PrimitiveArgType, RestrictGroup} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, CommandContext, TrivialArgType, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type PurgeArgs = {
@@ -16,7 +16,7 @@ export default class PurgeCommand extends Command<PurgeArgs> {
     readonly arguments: IArgument[] = [
         {
             name: "amount",
-            type: PrimitiveArgType.NonZeroInteger,
+            type: TrivialArgType.NonZeroInteger,
             description: "The amount of messages to purge",
             required: true
         }

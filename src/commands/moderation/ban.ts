@@ -1,6 +1,6 @@
 import {GuildMember, TextChannel, Message} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, IArgument, CommandContext, Permission, PrimitiveArgType, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, Permission, TrivialArgType, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 
@@ -30,13 +30,13 @@ export default class BanCommand extends Command<BanArgs> {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "Evidence for the reason",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: false
         }
     ];

@@ -1,4 +1,4 @@
-import {Command, CommandContext, Permission, RestrictGroup, PrimitiveArgType, ChatEnvironment} from "@cloudrex/forge";
+import {Command, CommandContext, Permission, RestrictGroup, TrivialArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 const request: any = require("request").defaults({
@@ -22,13 +22,13 @@ export default class EmojiCommand extends Command<EmojiArgs> {
         {
             name: "name",
             description: "The name of the emoji to add",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         },
         {
             name: "url",
             description: "The URL to the emoji image",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         }
     ];

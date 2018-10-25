@@ -1,5 +1,5 @@
 import {Snowflake} from "discord.js";
-import {IArgument, ChatEnvironment, Command, Permission, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, Permission, TrivialArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type UnbanArgs = {
@@ -25,7 +25,7 @@ export default class UnbanCommand extends Command<UnbanArgs> {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         }
     ];
@@ -44,6 +44,7 @@ export default class UnbanCommand extends Command<UnbanArgs> {
             return;
         }
 
+        // TODO: Current executeAction() needs GuildMember
         await context.message.guild.unban(args.user);
     }
 };

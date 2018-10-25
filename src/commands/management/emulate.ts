@@ -1,4 +1,4 @@
-import {Command, IArgument, CommandContext, PrimitiveArgType, RestrictGroup, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, TrivialArgType, RestrictGroup, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 
@@ -25,7 +25,7 @@ export default class EmulateCommand extends Command<EmulateArgs> {
         {
             name: "message",
             description: "The emulated message",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         }
     ];

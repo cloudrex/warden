@@ -1,4 +1,4 @@
-import {Command, IArgument, CommandContext, ChatEnvironment, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, IArgument, CommandContext, ChatEnvironment, TrivialArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {DatabaseGuildConfig, GuildConfigChannelType, GuildConfig} from "../../database/guild-config";
 
@@ -20,7 +20,7 @@ export default class GetChannelCommand extends Command<GetChannelArgs> {
         {
             name: "type",
             description: "The type of channel to retrieve",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         },
     ];

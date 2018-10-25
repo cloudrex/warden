@@ -1,4 +1,4 @@
-import {Command, CommandContext, RestrictGroup, IArgument, PrimitiveArgType} from "@cloudrex/forge";
+import {Command, CommandContext, RestrictGroup, IArgument, TrivialArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type SelfArgs = {
@@ -20,13 +20,13 @@ export default class SelfCommand extends Command<SelfArgs> {
         {
             name: "property",
             description: "The property to change",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         },
         {
             name: "value",
             description: "The value to apply",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         }
     ];

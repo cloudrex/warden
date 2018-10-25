@@ -152,7 +152,7 @@ async function start() {
             updateOnMessageEdit: true
         },
 
-        primitiveCommands: [
+        internalCommands: [
             "usage",
             "ping",
             "prefix",

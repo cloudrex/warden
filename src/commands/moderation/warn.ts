@@ -1,4 +1,4 @@
-import {IArgument, ChatEnvironment, Command, PrimitiveArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, TrivialArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
@@ -28,13 +28,13 @@ export default class WarnCommand extends Command<WarnArgs> {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "The evidence of the reason",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: false
         }
     ];

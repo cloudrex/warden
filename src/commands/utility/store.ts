@@ -1,4 +1,4 @@
-import {Command, CommandContext, Utils, IArgument, PrimitiveArgType, ChatEnvironment} from "@cloudrex/forge";
+import {Command, CommandContext, Utils, IArgument, TrivialArgType, ChatEnvironment} from "@cloudrex/forge";
 import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
 import {DatabaseStoredMessage} from "../../database/mongo-database";
@@ -24,11 +24,11 @@ export default class StoreCommand extends Command<StoreArgs> {
         {
             name: "name",
             required: false,
-            type: PrimitiveArgType.String
+            type: TrivialArgType.String
         },
         {
             name: "messageId",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             description: "The Id of the message to save",
             required: false
         }

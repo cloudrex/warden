@@ -1,4 +1,4 @@
-import {IArgument, Command, PrimitiveArgType, CommandContext, RestrictGroup} from "@cloudrex/forge";
+import {IArgument, Command, TrivialArgType, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type SayArgs = {
@@ -21,7 +21,7 @@ export default class EmulateCommand extends Command<SayArgs> {
         {
             name: "message",
             description: "The message to send",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         }
     ];

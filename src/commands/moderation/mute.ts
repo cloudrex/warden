@@ -1,5 +1,5 @@
 import WardenAPI from "../../core/warden-api";
-import {ChatEnvironment, Command, IArgument, CommandContext, Permission, RestrictGroup, PrimitiveArgType, InternalArgType} from "@cloudrex/forge";
+import {ChatEnvironment, Command, IArgument, CommandContext, Permission, RestrictGroup, TrivialArgType, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
@@ -29,19 +29,19 @@ export default class MuteCommand extends Command {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         },
         {
             name: "time",
             description: "The time to mute the user",
-            type: PrimitiveArgType.NonZeroInteger,
+            type: TrivialArgType.NonZeroInteger,
             required: false,
         },
         {
             name: "evidence",
             description: "The evidence of the reason",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: false
         }
     ];

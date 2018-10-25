@@ -1,4 +1,4 @@
-import {IArgument, ChatEnvironment, Command, Permission, PrimitiveArgType, CommandContext} from "@cloudrex/forge";
+import {IArgument, ChatEnvironment, Command, Permission, TrivialArgType, CommandContext} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type NickArgs = {
@@ -19,7 +19,7 @@ export default class NickCommand extends Command<NickArgs> {
         {
             name: "nickname",
             description: "The desired nickname",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         }
     ];

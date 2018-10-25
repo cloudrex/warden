@@ -1,6 +1,6 @@
 import {GuildMember, Message, RichEmbed, Snowflake} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {Command, CommandContext, IArgument, InternalArgType, Log, Permission, PrimitiveArgType, ChatEnvironment} from "@cloudrex/forge";
+import {Command, CommandContext, IArgument, InternalArgType, Log, Permission, TrivialArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {ModerationActionType} from "../../database/mongo-database";
 
@@ -28,13 +28,13 @@ export default class BanIdCommand extends Command<BanIdArgs> {
         {
             name: "reason",
             description: "The reason for this moderation action",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "Evidence for the reason",
-            type: PrimitiveArgType.String,
+            type: TrivialArgType.String,
             required: false
         }
     ];

@@ -1,5 +1,5 @@
 import {Role} from "discord.js";
-import {ChatEnvironment, Command, IArgument, CommandContext, RestrictGroup, PrimitiveArgType} from "@cloudrex/forge";
+import {ChatEnvironment, Command, IArgument, CommandContext, RestrictGroup, TrivialArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 
 type RolesArgs = {
@@ -17,7 +17,7 @@ export default class RolesCommand extends Command<RolesArgs> {
     readonly arguments: IArgument[] = [
         {
             name: "page",
-            type: PrimitiveArgType.UnsignedInteger,
+            type: TrivialArgType.UnsignedInteger,
             defaultValue: 0
         }
     ];
