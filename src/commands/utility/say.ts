@@ -22,7 +22,8 @@ export default class EmulateCommand extends Command<SayArgs> {
             name: "message",
             description: "The message to send",
             type: TrivialArgType.String,
-            required: true
+            required: true,
+            switchShortName: "m"
         }
     ];
 
