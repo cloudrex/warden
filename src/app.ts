@@ -38,6 +38,7 @@ type BotConfig = {
     readonly dbName?: string;
     readonly token: string;
     readonly banAdsOnName: boolean;
+    readonly owner: Snowflake;
 }
 
 const requiredConfig: string[] = [
@@ -54,7 +55,8 @@ const requiredConfig: string[] = [
     "antiSpamThreshold",
     "channelReview",
     "guild",
-    "token"
+    "token",
+    "owner"
 ];
 
 export const config: BotConfig = {
@@ -76,7 +78,8 @@ export const config: BotConfig = {
     dbPort: parseInt(process.env.DB_PORT as string) || undefined,
     dbName: process.env.DB_NAME || undefined,
     token: process.env.TOKEN as string,
-    banAdsOnName: process.env.BAN_ADS_ON_NAME === "true"
+    banAdsOnName: process.env.BAN_ADS_ON_NAME === "true",
+    owner: process.env.OWNER_ID as Snowflake
 };
 
 function checkConfig(): void {
@@ -144,7 +147,7 @@ async function start() {
 
         settings: settings,
         dataStore: new JsonProvider(path.resolve(path.join(__dirname, "data.json"))),
-        owner: "285578743324606482",
+        owner: config.owner,
 
         options: {
             logMessages: false,
