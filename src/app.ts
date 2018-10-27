@@ -15,7 +15,6 @@ import {
 } from "@cloudrex/forge";
 
 import WardenAPI from "./core/warden-api";
-import {ArgumentStyle} from "@cloudrex/forge/commands/command";
 
 Log.level = LogLevel.Debug;
 
@@ -150,8 +149,7 @@ async function start() {
         options: {
             logMessages: false,
             consoleInterface: true,
-            updateOnMessageEdit: true,
-            commandArgumentStyle: ArgumentStyle.Flags
+            updateOnMessageEdit: true
         },
 
         internalCommands: [
