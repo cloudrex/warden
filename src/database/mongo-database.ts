@@ -1,5 +1,5 @@
 import {Collection, Db, MongoClient} from "mongodb";
-import {GuildMember, Snowflake} from "discord.js";
+import {GuildMember, Snowflake, Collection} from "discord.js";
 import {MemberConfigType} from "../core/warden-api";
 
 const url: string = process.env.DB_URL || `mongodb://${process.env.DB_HOST || "localhost"}:${process.env.DB_PORT || 27017}/${process.env.DB_NAME || ""}`;
@@ -11,8 +11,8 @@ export type MongoCollections = {
     readonly backups: Collection;
     readonly memberConfig: Collection;
     readonly guildConfig: Collection;
-    readonly reputation: Collection;
     readonly storedMessages: Collection;
+    readonly reports: Collection;
 };
 
 export enum ModerationActionType {
@@ -119,6 +119,16 @@ export type DatabaseReputation = {
     readonly amount: number;
 };
 
+export enum CollectionType {
+    Messages = "messages",
+    ModerationActions = "moderation-actions",
+    Backups = "backups",
+    MemberConfig = "member-config",
+    GuildConfig = "guild-config",
+    StoredMessages = "stored-messages",
+    Reports = "reports"
+}
+
 export default abstract class Mongo {
     public static db: Db;
 
@@ -149,13 +159,13 @@ export default abstract class Mongo {
 
                 // Setup Collections
                 Mongo.collections = {
-                    messages: Mongo.db.collection("messages"),
-                    moderationActions: Mongo.db.collection("moderation-actions"),
-                    backups: Mongo.db.collection("backups"),
-                    memberConfig: Mongo.db.collection("member-config"),
-                    guildConfig: Mongo.db.collection("guild-config"),
-                    reputation: Mongo.db.collection("reputation"),
-                    storedMessages: Mongo.db.collection("stored-messages")
+                    messages: Mongo.db.collection(CollectionType.Messages),
+                    moderationActions: Mongo.db.collection(CollectionType.ModerationActions),
+                    backups: Mongo.db.collection(CollectionType.Backups),
+                    memberConfig: Mongo.db.collection(CollectionType.MemberConfig),
+                    guildConfig: Mongo.db.collection(CollectionType.GuildConfig),
+                    storedMessages: Mongo.db.collection(CollectionType.StoredMessages),
+                    reports: Mongo.db.collection(CollectionType.Reports)
                 };
 
                 resolve(true);
@@ -163,5 +173,9 @@ export default abstract class Mongo {
                 return;
             });
         });
+    }
+
+    public static async insertRow(collection: CollectionType, row: any): Promise<void> {
+        await Mongo.collections[collection].insertOne(row);
     }
 }
