@@ -2,7 +2,7 @@ import {Command, CommandContext, RestrictGroup, ChatEnvironment, IArgument, Inte
 import {CommandType} from "../general/help";
 import {Snowflake} from "discord.js";
 import WardenAPI from "../../core/warden-api";
-import {DatabaseModerationAction} from "../../database/mongo-database";
+import {IDatabaseModerationAction} from "../../database/mongo-database";
 
 type CaseArgs = {
     readonly caseId: Snowflake;
@@ -31,7 +31,7 @@ export default class CaseCommand extends Command<CaseArgs> {
     };
 
     public async executed(context: CommandContext, args: CaseArgs): Promise<void> {
-        const action: DatabaseModerationAction | null = await WardenAPI.retrieveModerationAction(args.caseId);
+        const action: IDatabaseModerationAction | null = await WardenAPI.retrieveModerationAction(args.caseId);
 
         if (action === null) {
             await context.fail("The specified case is not registered in the database");

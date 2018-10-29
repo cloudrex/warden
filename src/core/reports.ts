@@ -25,13 +25,13 @@ export default class Reports {
 }
 
 export type IReportField = {
-    readonly name: string;
+    readonly title: string;
     readonly message: string;
 }
 
 export type IReport = {
     readonly recipients: Snowflake[];
-    readonly fields: any;
+    readonly fields: IReportField[];
 }
 
 export interface ITimedReport extends IReport {

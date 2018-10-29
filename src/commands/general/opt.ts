@@ -1,6 +1,6 @@
 import {Command, CommandContext, FormattedMessage, IArgument, TrivialArgType} from "@cloudrex/forge";
 import {CommandType} from "./help";
-import {DatabaseUserConfig} from "../../database/mongo-database";
+import {IDatabaseUserConfig} from "../../database/mongo-database";
 import MemberConfig, {MemberConfigIterator} from "../../core/member-config";
 import {table} from "table";
 
@@ -41,7 +41,7 @@ export default class OptCommand extends Command<OptArgs> {
 
     public async executed(context: CommandContext, args: OptArgs): Promise<void> {
         if (!args.subCommand) {
-            const options: DatabaseUserConfig[] = await MemberConfig.getAll(context.sender.id);
+            const options: IDatabaseUserConfig[] = await MemberConfig.getAll(context.sender.id);
             const iterator: MemberConfigIterator = new MemberConfigIterator(options);
 
             const tableData: Array<string[]> = [

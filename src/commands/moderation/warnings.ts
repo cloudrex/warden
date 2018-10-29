@@ -11,7 +11,7 @@ import {
 } from "@cloudrex/forge";
 
 import {CommandType} from "../general/help";
-import Mongo, {DatabaseModerationAction} from "../../database/mongo-database";
+import Mongo, {IDatabaseModerationAction} from "../../database/mongo-database";
 
 export interface StoredWarning {
     readonly reason: string;
@@ -47,18 +47,18 @@ export default class WarningsCommand extends Command<WarningsArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    private static getDate(warning: DatabaseModerationAction): string {
+    private static getDate(warning: IDatabaseModerationAction): string {
         const date: Date = new Date(warning.time);
 
         return `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
     }
 
     public async executed(context: CommandContext, args: WarningsArgs): Promise<void> {
-        const warnings: DatabaseModerationAction[] = await Mongo.collections.moderationActions.find({
+        const warnings: IDatabaseModerationAction[] = await Mongo.collections.moderationActions.find({
             memberId: args.member.id
         }).toArray();
 
-        const warningsMessage: string = warnings.length > 0 ? warnings.map((warning: DatabaseModerationAction) => `**${WarningsCommand.getDate(warning)}** ${warning.reason}`).join("\n") : "*This user has no recorded warnings*";
+        const warningsMessage: string = warnings.length > 0 ? warnings.map((warning: IDatabaseModerationAction) => `**${WarningsCommand.getDate(warning)}** ${warning.reason}`).join("\n") : "*This user has no recorded warnings*";
 
         const embed: RichEmbed = new RichEmbed()
             .addField("Warnings", warningsMessage)

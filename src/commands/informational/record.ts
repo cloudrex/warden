@@ -1,7 +1,7 @@
 import {Command, CommandContext, Patterns, IArgument, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
-import Mongo, {DatabaseMessage} from "../../database/mongo-database";
+import Mongo, {IDatabaseMessage} from "../../database/mongo-database";
 
 const max: number = 1000;
 
@@ -34,7 +34,7 @@ export default class RecordCommand extends Command<RecordArgs> {
 
     // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages
     public async executed(context: CommandContext, args: RecordArgs): Promise<void> {
-        const messages: DatabaseMessage[] = await Mongo.collections.messages.find({
+        const messages: IDatabaseMessage[] = await Mongo.collections.messages.find({
             authorId: args.member.id
         }).limit(max + 1).toArray();
 

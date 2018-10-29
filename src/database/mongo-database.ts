@@ -45,7 +45,7 @@ export enum ChannelType {
         });
  */
 
-export type ModerationAction = {
+export type IModerationAction = {
     readonly type: ModerationActionType;
     readonly member: GuildMember;
     readonly reason: string;
@@ -54,7 +54,7 @@ export type ModerationAction = {
     readonly end?: number;
 };
 
-export type DatabaseModerationAction = {
+export type IDatabaseModerationAction = {
     readonly id: Snowflake;
     readonly type: ModerationActionType;
     readonly memberId: Snowflake;
@@ -71,7 +71,7 @@ export type DatabaseModerationAction = {
     readonly automatic: boolean;
 };
 
-export type DatabaseMessage = {
+export type IDatabaseMessage = {
     readonly authorTag: string;
     readonly authorId: Snowflake;
     readonly messageId: Snowflake;
@@ -81,26 +81,26 @@ export type DatabaseMessage = {
     readonly channelId: Snowflake;
 };
 
-export type DatabaseChannel = {
+export type IDatabaseChannel = {
     readonly id: Snowflake;
     readonly name: string;
     readonly topic?: string;
     readonly type: ChannelType;
 }
 
-export type DatabaseBackup = {
+export type IDatabaseBackup = {
     readonly time: number,
     readonly guildId: Snowflake;
-    readonly channels: DatabaseChannel[];
+    readonly channels: IDatabaseChannel[];
 };
 
-export type DatabaseUserConfig = {
+export type IDatabaseUserConfig = {
     readonly userId: Snowflake;
     readonly type: MemberConfigType;
     readonly value: string | boolean;
 };
 
-export type DatabaseStoredMessage = {
+export type IDatabaseStoredMessage = {
     readonly ownerId: Snowflake;
     readonly authorId: Snowflake;
     readonly authorTag: string;
@@ -113,7 +113,7 @@ export type DatabaseWhitelist = {
     // TODO
 };
 
-export type DatabaseReputation = {
+export type IDatabaseReputation = {
     readonly tag: string;
     readonly userId: Snowflake;
     readonly amount: number;
@@ -131,7 +131,6 @@ export enum CollectionType {
 
 export default abstract class Mongo {
     public static db: Db;
-
     public static collections: MongoCollections;
 
     public static get available(): boolean {

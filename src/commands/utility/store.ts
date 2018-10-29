@@ -1,7 +1,7 @@
 import {Command, CommandContext, Utils, IArgument, TrivialArgType, ChatEnvironment} from "@cloudrex/forge";
 import {Snowflake} from "discord.js";
 import {CommandType} from "../general/help";
-import {DatabaseStoredMessage} from "../../database/mongo-database";
+import {IDatabaseStoredMessage} from "../../database/mongo-database";
 import StoredMessages from "../../core/stored-messages";
 
 type StoreArgs = {
@@ -42,7 +42,7 @@ export default class StoreCommand extends Command<StoreArgs> {
     public async executed(context: CommandContext, args: StoreArgs): Promise<void> {
         if (args.messageId === undefined || args.name === undefined) {
             if (args.messageId === undefined && args.name === undefined) {
-                const storedMessages: DatabaseStoredMessage[] | null = await StoredMessages.getAllByUser(context.sender.id);
+                const storedMessages: IDatabaseStoredMessage[] | null = await StoredMessages.getAllByUser(context.sender.id);
 
                 let response: string = "";
 
@@ -62,7 +62,7 @@ export default class StoreCommand extends Command<StoreArgs> {
                 await context.ok(response);
             }
             else if (args.messageId === undefined && args.name !== undefined) {
-                const storedMessage: DatabaseStoredMessage | null = await StoredMessages.getByName(context.sender.id, args.name);
+                const storedMessage: IDatabaseStoredMessage | null = await StoredMessages.getByName(context.sender.id, args.name);
 
                 if (storedMessage !== null) {
                     await context.ok(`(${Utils.timeAgo(storedMessage.time)}) **${storedMessage.authorTag}** <:announcement:490726045880811531> ${storedMessage.message}`)
