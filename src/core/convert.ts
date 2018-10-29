@@ -1,8 +1,8 @@
-import {IModerationAction, IDatabaseModerationAction} from "../database/mongo-database";
+import {IModAction, IDbModAction} from "../database/mongo-database";
 import {Snowflake} from "discord.js";
 
 export default abstract class Convert {
-    public static toDatabaseModerationAction(caseId: Snowflake | null, action: IModerationAction, automatic: boolean): IDatabaseModerationAction {
+    public static toDatabaseModerationAction(caseId: Snowflake | null, action: IModAction, automatic: boolean): IDbModAction {
         return {
             id: caseId as Snowflake,
             type: action.type,
@@ -14,7 +14,10 @@ export default abstract class Convert {
             moderatorUsername: action.moderator.user.username,
             guildId: action.member.guild.id,
             moderatorId: action.moderator.id,
-            end: action.end,
+            
+            // TODO: What if it's an IDbTimedModAction?
+            //end: action.end,
+            
             time: Date.now(),
             evidence: action.evidence,
             automatic

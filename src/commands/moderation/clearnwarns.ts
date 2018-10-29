@@ -21,6 +21,7 @@ export default class ClearWarnsCommand extends Command {
         {
             name: "member",
             description: "The target user",
+            switchShortName: "u",
             type: InternalArgType.Member,
             required: true
         }

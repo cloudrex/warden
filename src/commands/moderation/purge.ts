@@ -17,6 +17,7 @@ export default class PurgeCommand extends Command<PurgeArgs> {
         {
             name: "amount",
             type: TrivialArgType.NonZeroInteger,
+            switchShortName: "a",
             description: "The amount of messages to purge",
             required: true
         }

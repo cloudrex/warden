@@ -22,18 +22,21 @@ export default class SoftbanCommand extends Command<SoftbanArgs> {
         {
             name: "member",
             type: InternalArgType.Member,
+            switchShortName: "u",
             description: "The member to softban",
             required: true
         },
         {
             name: "reason",
             description: "The reason for this moderation action",
+            switchShortName: "r",
             type: TrivialArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "The evidence of the reason",
+            switchShortName: "e",
             type: TrivialArgType.String
         }
     ];

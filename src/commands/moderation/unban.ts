@@ -19,12 +19,14 @@ export default class UnbanCommand extends Command<UnbanArgs> {
         {
             name: "user",
             type: InternalArgType.Snowflake,
+            switchShortName: "i",
             description: "The ID (Snowflake) of the user to unban",
             required: true
         },
         {
             name: "reason",
             description: "The reason for this moderation action",
+            switchShortName: "r",
             type: TrivialArgType.String,
             required: true
         }

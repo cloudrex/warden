@@ -22,18 +22,21 @@ export default class KickCommand extends Command<KickArgs> {
         {
             name: "member",
             description: "The member to kick",
+            switchShortName: "u",
             type: InternalArgType.Member,
             required: true
         },
         {
             name: "reason",
             description: "The reason for this moderation action",
+            switchShortName: "r",
             type: TrivialArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "Evidence for the reason",
+            switchShortName: "e",
             type: TrivialArgType.String,
             required: false
         }

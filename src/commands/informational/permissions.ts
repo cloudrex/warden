@@ -33,6 +33,7 @@ export default class PermissionsCommand extends Command<PermissionsArgs> {
     readonly arguments: IArgument[] = [
         {
             name: "member",
+            switchShortName: "m",
             type: InternalArgType.Member,
             description: "The member to inspect",
             required: false,

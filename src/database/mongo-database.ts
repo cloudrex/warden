@@ -1,5 +1,5 @@
 import {Collection, Db, MongoClient} from "mongodb";
-import {GuildMember, Snowflake, Collection} from "discord.js";
+import {GuildMember, Snowflake} from "discord.js";
 import {MemberConfigType} from "../core/warden-api";
 
 const url: string = process.env.DB_URL || `mongodb://${process.env.DB_HOST || "localhost"}:${process.env.DB_PORT || 27017}/${process.env.DB_NAME || ""}`;
@@ -45,16 +45,19 @@ export enum ChannelType {
         });
  */
 
-export type IModerationAction = {
+export type IModAction = {
     readonly type: ModerationActionType;
     readonly member: GuildMember;
     readonly reason: string;
     readonly moderator: GuildMember;
     readonly evidence?: string;
-    readonly end?: number;
 };
 
-export type IDatabaseModerationAction = {
+export interface ITimedModAction extends IModAction {
+    readonly end: number;
+}
+
+export type IDbModAction = {
     readonly id: Snowflake;
     readonly type: ModerationActionType;
     readonly memberId: Snowflake;
@@ -67,11 +70,14 @@ export type IDatabaseModerationAction = {
     readonly guildId: Snowflake;
     readonly evidence?: string;
     readonly time: number;
-    readonly end?: number;
     readonly automatic: boolean;
 };
 
-export type IDatabaseMessage = {
+export interface IDbTimedModAction extends IDbModAction {
+    readonly end: number;
+}
+
+export type IDbMessage = {
     readonly authorTag: string;
     readonly authorId: Snowflake;
     readonly messageId: Snowflake;
@@ -81,26 +87,26 @@ export type IDatabaseMessage = {
     readonly channelId: Snowflake;
 };
 
-export type IDatabaseChannel = {
+export type IDbChannel = {
     readonly id: Snowflake;
     readonly name: string;
     readonly topic?: string;
     readonly type: ChannelType;
 }
 
-export type IDatabaseBackup = {
+export type IDbBackup = {
     readonly time: number,
     readonly guildId: Snowflake;
-    readonly channels: IDatabaseChannel[];
+    readonly channels: IDbChannel[];
 };
 
-export type IDatabaseUserConfig = {
+export type IDbUserConfig = {
     readonly userId: Snowflake;
     readonly type: MemberConfigType;
     readonly value: string | boolean;
 };
 
-export type IDatabaseStoredMessage = {
+export type IDbStoredMessage = {
     readonly ownerId: Snowflake;
     readonly authorId: Snowflake;
     readonly authorTag: string;
@@ -113,7 +119,7 @@ export type DatabaseWhitelist = {
     // TODO
 };
 
-export type IDatabaseReputation = {
+export type IDbReputation = {
     readonly tag: string;
     readonly userId: Snowflake;
     readonly amount: number;

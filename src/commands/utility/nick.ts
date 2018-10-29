@@ -19,6 +19,7 @@ export default class NickCommand extends Command<NickArgs> {
         {
             name: "nickname",
             description: "The desired nickname",
+            switchShortName: "n",
             type: TrivialArgType.String,
             required: true
         }

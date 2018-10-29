@@ -17,6 +17,7 @@ export default class RolesCommand extends Command<RolesArgs> {
     readonly arguments: IArgument[] = [
         {
             name: "page",
+            switchShortName: "p",
             type: TrivialArgType.UnsignedInteger,
             defaultValue: 0
         }

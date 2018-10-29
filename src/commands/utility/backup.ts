@@ -1,7 +1,7 @@
 import {Command, RestrictGroup, CommandContext, ChatEnvironment} from "@cloudrex/forge";
 import {Channel, GuildChannel, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
-import Mongo, {ChannelType, IDatabaseChannel} from "../../database/mongo-database";
+import Mongo, {ChannelType, IDbChannel} from "../../database/mongo-database";
 
 export default class BackupCommand extends Command {
     readonly type = CommandType.Utility;
@@ -20,7 +20,7 @@ export default class BackupCommand extends Command {
     public async executed(context: CommandContext): Promise<void> {
         // TODO: Missing channel permissions and guild settings
 
-        const channels: IDatabaseChannel[] = context.message.guild.channels.filter((channel) => channel.type === "text" || channel.type === "voice").map((channel: Channel) => {
+        const channels: IDbChannel[] = context.message.guild.channels.filter((channel) => channel.type === "text" || channel.type === "voice").map((channel: Channel) => {
             return {
                 id: channel.id,
                 name: (channel as GuildChannel).name,

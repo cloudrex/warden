@@ -22,18 +22,21 @@ export default class WarnCommand extends Command<WarnArgs> {
         {
             name: "member",
             description: "The member to warn",
+            switchShortName: "u",
             type: InternalArgType.Member,
             required: true
         },
         {
             name: "reason",
             description: "The reason for this moderation action",
+            switchShortName: "r",
             type: TrivialArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "The evidence of the reason",
+            switchShortName: "e",
             type: TrivialArgType.String,
             required: false
         }

@@ -1,7 +1,7 @@
 import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel} from "discord.js";
 import {Bot, Log} from "@cloudrex/forge";
 
-import Mongo, {IDatabaseModerationAction, IModerationAction, ModerationActionType} from "../database/mongo-database";
+import Mongo, {IDbModAction, IModAction, ModerationActionType} from "../database/mongo-database";
 
 import {BadWords, RacialSlurs} from "./constants";
 import {config} from "../app";
@@ -89,10 +89,10 @@ export default class WardenAPI {
 
     /**
      * @param {TextChannel} channel
-     * @param {IModerationAction} action
+     * @param {IModAction} action
      * @return {Promise<void>}
      */
-    public async executeAction(channel: TextChannel, action: IModerationAction): Promise<void> {
+    public async executeAction(channel: TextChannel, action: IModAction): Promise<void> {
         const reason: string = `${action.moderator.user.tag} => ${action.reason}`;
         const automatic: boolean = action.moderator.id === this.bot.client.user.id;
 
@@ -196,26 +196,26 @@ export default class WardenAPI {
     }
 
     /**
-     * @param {IModerationAction} action
+     * @param {IModAction} action
      * @param {Snowflake} caseId
      * @return {Promise<void>}
      */
-    private static async saveModerationAction(action: IModerationAction, caseId: Snowflake, automatic: boolean): Promise<void> {
+    private static async saveModerationAction(action: IModAction, caseId: Snowflake, automatic: boolean): Promise<void> {
         await WardenAPI.saveDatabaseModerationAction(Convert.toDatabaseModerationAction(caseId, action, automatic));
     }
 
-    public static async saveDatabaseModerationAction(action: IDatabaseModerationAction): Promise<void> {
+    public static async saveDatabaseModerationAction(action: IDbModAction): Promise<void> {
         await Mongo.collections.moderationActions.insertOne(action);
     }
 
-    public static async retrieveModerationAction(caseId: Snowflake): Promise<IDatabaseModerationAction | null> {
+    public static async retrieveModerationAction(caseId: Snowflake): Promise<IDbModAction | null> {
         return await Mongo.collections.moderationActions.findOne({
             id: caseId
         }) || null;
     }
 
     // TODO: Isn't automatic already determined & contained in 'action'?
-    public static createModerationActionEmbed(action: IDatabaseModerationAction, automatic: boolean): RichEmbed | null {
+    public static createModerationActionEmbed(action: IDbModAction, automatic: boolean): RichEmbed | null {
         switch (action.type) {
             case ModerationActionType.Ban: {
                 return new RichEmbed()

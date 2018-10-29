@@ -20,12 +20,14 @@ export default class SelfCommand extends Command<SelfArgs> {
         {
             name: "property",
             description: "The property to change",
+            switchShortName: "p",
             type: TrivialArgType.String,
             required: true
         },
         {
             name: "value",
             description: "The value to apply",
+            switchShortName: "v",
             type: TrivialArgType.String,
             required: true
         }

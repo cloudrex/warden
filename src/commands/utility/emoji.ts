@@ -22,12 +22,14 @@ export default class EmojiCommand extends Command<EmojiArgs> {
         {
             name: "name",
             description: "The name of the emoji to add",
+            switchShortName: "n",
             type: TrivialArgType.String,
             required: true
         },
         {
             name: "url",
             description: "The URL to the emoji image",
+            switchShortName: "u",
             type: TrivialArgType.String,
             required: true
         }

@@ -18,6 +18,7 @@ export default class WhoisCommand extends Command<WhoisArgs> {
         {
             name: "member",
             description: "The member to inspect",
+            switchShortName: "m",
             type: InternalArgType.Member,
             required: false,
             defaultValue: (message: Message) => message.author.id

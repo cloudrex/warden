@@ -1,14 +1,14 @@
-import Mongo, {IDatabaseMessage, IDatabaseStoredMessage} from "../database/mongo-database";
+import Mongo, {IDbMessage, IDbStoredMessage} from "../database/mongo-database";
 import {Snowflake, User} from "discord.js";
 import Messages from "./messages";
 
 export default abstract class StoredMessages {
-    public static async add(message: IDatabaseStoredMessage): Promise<void> {
+    public static async add(message: IDbStoredMessage): Promise<void> {
         await Mongo.collections.storedMessages.insertOne(message);
     }
 
     public static async addByMessageId(user: User, name: string, messageId: Snowflake): Promise<boolean> {
-        const message: IDatabaseMessage | null = await Messages.getById(messageId);
+        const message: IDbMessage | null = await Messages.getById(messageId);
 
         if (message !== null) {
             await StoredMessages.add({
@@ -26,8 +26,8 @@ export default abstract class StoredMessages {
         return false;
     }
 
-    public static async getAllByUser(userId: Snowflake): Promise<IDatabaseStoredMessage[] | null> {
-        const result: IDatabaseStoredMessage[] = await Mongo.collections.storedMessages.find({
+    public static async getAllByUser(userId: Snowflake): Promise<IDbStoredMessage[] | null> {
+        const result: IDbStoredMessage[] = await Mongo.collections.storedMessages.find({
             ownerId: userId
         }).toArray();
 
@@ -38,7 +38,7 @@ export default abstract class StoredMessages {
         return result;
     }
 
-    public static async getByName(userId: Snowflake, name: string): Promise<IDatabaseStoredMessage | null> {
+    public static async getByName(userId: Snowflake, name: string): Promise<IDbStoredMessage | null> {
         return await Mongo.collections.storedMessages.findOne({
             ownerId: userId,
             name: name
@@ -46,12 +46,12 @@ export default abstract class StoredMessages {
     }
 
     public static async existsByUserId(userId: Snowflake, name: string): Promise<boolean> {
-        const storedMessages: IDatabaseStoredMessage[] | null = await StoredMessages.getAllByUser(userId);
+        const storedMessages: IDbStoredMessage[] | null = await StoredMessages.getAllByUser(userId);
 
         if (storedMessages === null) {
             return false;
         }
 
-        return storedMessages.filter((storedMessage: IDatabaseStoredMessage) => storedMessage.name === name).length > 0;
+        return storedMessages.filter((storedMessage: IDbStoredMessage) => storedMessage.name === name).length > 0;
     }
 }
