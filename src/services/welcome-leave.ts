@@ -47,7 +47,7 @@ export default class WelcomeLeaveService extends Service {
             title: `Member ${titleSuffix}`,
             color: color,
             footer: `${member.guild.memberCount} members`,
-            user: member.user,
+            avatarUrl: member.user.avatarURL,
             channel: member.guild.channels.get("286352649610199052") as TextChannel, // General
             message: text
         });
@@ -66,7 +66,7 @@ export default class WelcomeLeaveService extends Service {
             footer: `${member.guild.memberCount} members`,
             color: joined ? "GREEN" : "RED",
             message: `<@${member.id}> (${member.user.tag}) ${joined ? "joined" : "left"}`,
-            user: member.user
+            avatarUrl: member.user.avatarURL
         });
     }
 

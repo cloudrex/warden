@@ -69,7 +69,9 @@ export default class MuteCommand extends Command {
             evidence: args.evidence,
             moderator: context.message.member,
             reason: args.reason,
-            end: args.time ? Date.now() + (args.time * 60000) : undefined
+
+            // TODO:
+            // end: args.time ? Date.now() + (args.time * 60000) : undefined
         });
     }
 };

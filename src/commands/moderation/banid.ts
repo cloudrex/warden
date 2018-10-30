@@ -99,7 +99,9 @@ export default class BanIdCommand extends Command<BanIdArgs> {
             reason: args.reason,
             evidence: args.evidence,
             id: "",
-            end: undefined
+
+            // TODO:
+            //end: undefined
         });
     }
 };

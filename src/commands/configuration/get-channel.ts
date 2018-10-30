@@ -1,6 +1,8 @@
 import {Command, IArgument, CommandContext, ChatEnvironment, TrivialArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {DatabaseGuildConfig, GuildConfigChannelType, GuildConfig} from "../../database/guild-config";
+import {IAction, ActionType} from "@cloudrex/forge/actions/action";
+import {IRequestActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 type GetChannelArgs = {
     readonly type: GuildConfigChannelType;
@@ -30,21 +32,44 @@ export default class GetChannelCommand extends Command<GetChannelArgs> {
         cooldown: 3
     };
 
-    public async executed(context: CommandContext, args: GetChannelArgs): Promise<void> {
+    public async executed(context: CommandContext, args: GetChannelArgs): Promise<IAction<IRequestActionArgs>> {
         if (!Object.keys(GuildConfigChannelType).includes(args.type)) {
-            await context.fail("Invalid channel type");
+            return {
+                type: ActionType.FailEmbed,
 
-            return;
+                args: {
+                    message: "Invalid channel arg type",
+                    channelId: context.message.channel.id,
+                    requester: context.sender.username,
+                    avatarUrl: context.sender.avatarURL
+                }
+            };
         }
 
         const guildConfig: GuildConfig | null = await DatabaseGuildConfig.get(context.message.guild.id);
 
         if (guildConfig === null || !guildConfig.modLogChannel) {
-            await context.fail("That channel has not been configured yet");
+            return {
+                type: ActionType.FailEmbed,
 
-            return;
+                args: {
+                    message: "That channel has not been configured yet",
+                    channelId: context.message.channel.id,
+                    requester: context.sender.username,
+                    avatarUrl: context.sender.avatarURL
+                }
+            };
         }
 
-        await context.ok(`<#${guildConfig.modLogChannel}>`, undefined, false);
+        return {
+            type: ActionType.OkEmbed,
+
+            args: {
+                message: `<#${guildConfig.modLogChannel}>`,
+                channelId: context.message.channel.id,
+                requester: context.sender.username,
+                avatarUrl: context.sender.avatarURL
+            }
+        };
     }
 };
