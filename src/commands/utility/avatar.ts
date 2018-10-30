@@ -20,6 +20,7 @@ export default class AvatarCommand extends Command<AvatarArgs> {
         {
             name: "member",
             description: "The member to inspect",
+            switchShortName: "u",
             type: InternalArgType.Member,
             required: true
         }

@@ -1,13 +1,13 @@
 import {Command, CommandContext, FormattedMessage, IArgument, TrivialArgType} from "@cloudrex/forge";
 import {CommandType} from "./help";
-import {DatabaseUserConfig} from "../../database/mongo-database";
+import {IDbUserConfig} from "../../database/mongo-database";
 import MemberConfig, {MemberConfigIterator} from "../../core/member-config";
 import {table} from "table";
 
 export type OptSubCommand = "tracking";
 
 export type OptArgs = {
-    readonly subCommand?: OptSubCommand;
+    readonly option?: OptSubCommand;
     readonly value?: string;
 };
 
@@ -22,12 +22,14 @@ export default class OptCommand extends Command<OptArgs> {
 
     readonly arguments: IArgument[] = [
         {
-            name: "subCommand",
+            name: "option",
+            switchShortName: "o",
             type: TrivialArgType.String,
             required: false
         },
         {
             name: "value",
+            switchShortName: "v",
             type: TrivialArgType.String,
             required: false
         }
@@ -40,8 +42,8 @@ export default class OptCommand extends Command<OptArgs> {
     readonly aliases = ["config", "cfg"];
 
     public async executed(context: CommandContext, args: OptArgs): Promise<void> {
-        if (!args.subCommand) {
-            const options: DatabaseUserConfig[] = await MemberConfig.getAll(context.sender.id);
+        if (!args.option) {
+            const options: IDbUserConfig[] = await MemberConfig.getAll(context.sender.id);
             const iterator: MemberConfigIterator = new MemberConfigIterator(options);
 
             const tableData: Array<string[]> = [
@@ -56,7 +58,7 @@ export default class OptCommand extends Command<OptArgs> {
             return;
         }
 
-        switch (args.subCommand) {
+        switch (args.option) {
             case "tracking": {
                 if (!args.value) {
                     const result: string | boolean | null = await MemberConfig.get(context.sender.id, "tracking");

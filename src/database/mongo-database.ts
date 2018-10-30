@@ -11,8 +11,8 @@ export type MongoCollections = {
     readonly backups: Collection;
     readonly memberConfig: Collection;
     readonly guildConfig: Collection;
-    readonly reputation: Collection;
     readonly storedMessages: Collection;
+    readonly reports: Collection;
 };
 
 export enum ModerationActionType {
@@ -45,16 +45,19 @@ export enum ChannelType {
         });
  */
 
-export type ModerationAction = {
+export type IModAction = {
     readonly type: ModerationActionType;
     readonly member: GuildMember;
     readonly reason: string;
     readonly moderator: GuildMember;
     readonly evidence?: string;
-    readonly end?: number;
 };
 
-export type DatabaseModerationAction = {
+export interface ITimedModAction extends IModAction {
+    readonly end: number;
+}
+
+export type IDbModAction = {
     readonly id: Snowflake;
     readonly type: ModerationActionType;
     readonly memberId: Snowflake;
@@ -67,11 +70,14 @@ export type DatabaseModerationAction = {
     readonly guildId: Snowflake;
     readonly evidence?: string;
     readonly time: number;
-    readonly end?: number;
     readonly automatic: boolean;
 };
 
-export type DatabaseMessage = {
+export interface IDbTimedModAction extends IDbModAction {
+    readonly end: number;
+}
+
+export type IDbMessage = {
     readonly authorTag: string;
     readonly authorId: Snowflake;
     readonly messageId: Snowflake;
@@ -81,26 +87,26 @@ export type DatabaseMessage = {
     readonly channelId: Snowflake;
 };
 
-export type DatabaseChannel = {
+export type IDbChannel = {
     readonly id: Snowflake;
     readonly name: string;
     readonly topic?: string;
     readonly type: ChannelType;
 }
 
-export type DatabaseBackup = {
+export type IDbBackup = {
     readonly time: number,
     readonly guildId: Snowflake;
-    readonly channels: DatabaseChannel[];
+    readonly channels: IDbChannel[];
 };
 
-export type DatabaseUserConfig = {
+export type IDbUserConfig = {
     readonly userId: Snowflake;
     readonly type: MemberConfigType;
     readonly value: string | boolean;
 };
 
-export type DatabaseStoredMessage = {
+export type IDbStoredMessage = {
     readonly ownerId: Snowflake;
     readonly authorId: Snowflake;
     readonly authorTag: string;
@@ -113,15 +119,24 @@ export type DatabaseWhitelist = {
     // TODO
 };
 
-export type DatabaseReputation = {
+export type IDbReputation = {
     readonly tag: string;
     readonly userId: Snowflake;
     readonly amount: number;
 };
 
+export enum CollectionType {
+    Messages = "messages",
+    ModerationActions = "moderation-actions",
+    Backups = "backups",
+    MemberConfig = "member-config",
+    GuildConfig = "guild-config",
+    StoredMessages = "stored-messages",
+    Reports = "reports"
+}
+
 export default abstract class Mongo {
     public static db: Db;
-
     public static collections: MongoCollections;
 
     public static get available(): boolean {
@@ -149,13 +164,13 @@ export default abstract class Mongo {
 
                 // Setup Collections
                 Mongo.collections = {
-                    messages: Mongo.db.collection("messages"),
-                    moderationActions: Mongo.db.collection("moderation-actions"),
-                    backups: Mongo.db.collection("backups"),
-                    memberConfig: Mongo.db.collection("member-config"),
-                    guildConfig: Mongo.db.collection("guild-config"),
-                    reputation: Mongo.db.collection("reputation"),
-                    storedMessages: Mongo.db.collection("stored-messages")
+                    messages: Mongo.db.collection(CollectionType.Messages),
+                    moderationActions: Mongo.db.collection(CollectionType.ModerationActions),
+                    backups: Mongo.db.collection(CollectionType.Backups),
+                    memberConfig: Mongo.db.collection(CollectionType.MemberConfig),
+                    guildConfig: Mongo.db.collection(CollectionType.GuildConfig),
+                    storedMessages: Mongo.db.collection(CollectionType.StoredMessages),
+                    reports: Mongo.db.collection(CollectionType.Reports)
                 };
 
                 resolve(true);
@@ -163,5 +178,9 @@ export default abstract class Mongo {
                 return;
             });
         });
+    }
+
+    public static async insertRow(collection: CollectionType, row: any): Promise<void> {
+        await Mongo.collections[collection].insertOne(row);
     }
 }

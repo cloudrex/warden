@@ -19,12 +19,14 @@ export default class EmulateCommand extends Command<EmulateArgs> {
         {
             name: "member",
             description: "The author of the emulated message",
+            switchShortName: "u",
             type: InternalArgType.Member,
             required: true
         },
         {
             name: "message",
             description: "The emulated message",
+            switchShortName: "m",
             type: TrivialArgType.String,
             required: true
         }

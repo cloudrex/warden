@@ -1,7 +1,7 @@
 import {Command, CommandContext, Utils, InternalArgType, IArgument, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
-import Mongo, {DatabaseMessage} from "../../database/mongo-database";
+import Mongo, {IDbMessage} from "../../database/mongo-database";
 
 type LastSeenArgs = {
     readonly member: GuildMember;
@@ -20,6 +20,7 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
     readonly arguments: IArgument[] = [
         {
             name: "member",
+            switchShortName: "m",
             type: InternalArgType.Member,
             required: true
         }
@@ -37,7 +38,7 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
             return;
         }
 
-        const result: DatabaseMessage | undefined = (await Mongo.collections.messages.find({
+        const result: IDbMessage | undefined = (await Mongo.collections.messages.find({
             authorId: args.member.id
         }).sort({
             _id: -1

@@ -18,6 +18,7 @@ export default class MentionableCommand extends Command<MentionableArgs> {
         {
             name: "role",
             description: "The role to toggle mentionable",
+            switchShortName: "r",
             type: InternalArgType.Role,
             required: true
         }

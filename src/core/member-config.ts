@@ -1,17 +1,17 @@
 import {Snowflake} from "discord.js";
-import Mongo, {DatabaseUserConfig} from "../database/mongo-database";
+import Mongo, {IDbUserConfig} from "../database/mongo-database";
 import {MemberConfigType} from "./warden-api";
 import {Log} from "@cloudrex/forge";
 
 export class MemberConfigIterator {
-    private resource: DatabaseUserConfig[];
+    private resource: IDbUserConfig[];
 
-    constructor(resource: DatabaseUserConfig[]) {
+    constructor(resource: IDbUserConfig[]) {
         this.resource = resource;
     }
 
-    public find(property: MemberConfigType): DatabaseUserConfig | null {
-        const result: DatabaseUserConfig[] = this.resource.filter((config: DatabaseUserConfig) => config.type === property);
+    public find(property: MemberConfigType): IDbUserConfig | null {
+        const result: IDbUserConfig[] = this.resource.filter((config: IDbUserConfig) => config.type === property);
 
         if (result.length === 0) {
             return null;
@@ -26,7 +26,7 @@ export class MemberConfigIterator {
     }
 
     public findValue(property: MemberConfigType, defaultValue: string = "Undefined"): string {
-        const result: DatabaseUserConfig | null = this.find(property);
+        const result: IDbUserConfig | null = this.find(property);
 
         if (result !== null) {
             return result.value.toString();
@@ -37,13 +37,13 @@ export class MemberConfigIterator {
 }
 
 export default abstract class MemberConfig {
-    public static getAll(userId: Snowflake): Promise<DatabaseUserConfig[]> {
+    public static getAll(userId: Snowflake): Promise<IDbUserConfig[]> {
         return Mongo.collections.memberConfig.find({
             userId: userId
         }).toArray();
     }
 
-    public static async set(config: DatabaseUserConfig): Promise<void> {
+    public static async set(config: IDbUserConfig): Promise<void> {
         await Mongo.collections.memberConfig.updateOne({
             userId: config.userId,
             type: config.type
@@ -55,7 +55,7 @@ export default abstract class MemberConfig {
     }
 
     public static async get(userId: Snowflake, type: MemberConfigType): Promise<string | boolean | null> {
-        const result: DatabaseUserConfig | null = await Mongo.collections.memberConfig.findOne({
+        const result: IDbUserConfig | null = await Mongo.collections.memberConfig.findOne({
             userId: userId,
             type: type
         });

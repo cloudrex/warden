@@ -23,24 +23,28 @@ export default class MuteCommand extends Command {
         {
             name: "member",
             description: "The member to mute",
+            switchShortName: "u",
             type: InternalArgType.Member,
             required: true
         },
         {
             name: "reason",
             description: "The reason for this moderation action",
+            switchShortName: "r",
             type: TrivialArgType.String,
             required: true
         },
         {
             name: "time",
             description: "The time to mute the user",
+            switchShortName: "t",
             type: TrivialArgType.NonZeroInteger,
             required: false,
         },
         {
             name: "evidence",
             description: "The evidence of the reason",
+            switchShortName: "e",
             type: TrivialArgType.String,
             required: false
         }

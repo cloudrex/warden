@@ -19,12 +19,14 @@ export default class RoleCommand extends Command<RoleArgs> {
         {
             name: "role",
             description: "The role to add or remove",
+            switchShortName: "r",
             type: InternalArgType.Role,
             required: true
         },
         {
             name: "member",
             description: "The member to add or remove the role from",
+            switchShortName: "u",
             type: InternalArgType.Member,
             required: true
         }

@@ -22,18 +22,21 @@ export default class BanIdCommand extends Command<BanIdArgs> {
         {
             name: "id",
             description: "The member Id to ban",
+            switchShortName: "i",
             type: InternalArgType.Snowflake,
             required: true
         },
         {
             name: "reason",
             description: "The reason for this moderation action",
+            switchShortName: "r",
             type: TrivialArgType.String,
             required: true
         },
         {
             name: "evidence",
             description: "Evidence for the reason",
+            switchShortName: "e",
             type: TrivialArgType.String,
             required: false
         }
