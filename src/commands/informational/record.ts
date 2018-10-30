@@ -2,6 +2,8 @@ import {Command, CommandContext, Patterns, IArgument, InternalArgType, ChatEnvir
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {IDbMessage} from "../../database/mongo-database";
+import {ActionType, IAction} from "@cloudrex/forge/actions/action";
+import {IEmbedActionArgs, IRequestActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 const max: number = 1000;
 
@@ -34,15 +36,22 @@ export default class RecordCommand extends Command<RecordArgs> {
     };
 
     // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages
-    public async executed(context: CommandContext, args: RecordArgs): Promise<void> {
+    public async executed(context: CommandContext, args: RecordArgs): Promise<IAction<any>> {
         const messages: IDbMessage[] = await Mongo.collections.messages.find({
             authorId: args.member.id
         }).limit(max + 1).toArray();
 
         if (messages.length === 0) {
-            await context.fail(`No data on record for <@${args.member.id}>`);
+            return {
+                type: ActionType.FailEmbed,
 
-            return;
+                args: {
+                    message: `No data on record for <@${args.member.id}>`,
+                    avatarUrl: context.sender.avatarURL,
+                    channelId: context.message.channel.id,
+                    requester: context.sender.username
+                } as IRequestActionArgs
+            };
         }
 
         let mentions: number = 0;
@@ -66,12 +75,17 @@ export default class RecordCommand extends Command<RecordArgs> {
             }
         }
 
-        const embed: RichEmbed = new RichEmbed().setColor("GREEN")
-            .addField("Messages Logged", messages.length > max ? `${max}+` : messages.length)
-            .addField("Total Mentions", mentions === 0 ? "*None*" : (throttled ? `${max}+` : mentions))
-            .addField("First Message Intercepted", messages[0].message.length > 50 ? messages[0].message.substr(0, 46) + " ..." : messages[0].message)
-            .addField("Words Written", `${words} (${characters} characters)`);
+        return {
+            type: ActionType.RichEmbed,
 
-        await context.message.channel.send(embed);
+            args: {
+                embed: new RichEmbed()
+                    .setColor("GREEN")
+                    .addField("Messages Logged", messages.length > max ? `${max}+` : messages.length)
+                    .addField("Total Mentions", mentions === 0 ? "*None*" : (throttled ? `${max}+` : mentions))
+                    .addField("First Message Intercepted", messages[0].message.length > 50 ? messages[0].message.substr(0, 46) + " ..." : messages[0].message)
+                    .addField("Words Written", `${words} (${characters} characters)`)
+            }
+        };
     }
 };

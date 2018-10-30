@@ -2,6 +2,8 @@ import {Command, IArgument, CommandContext, ChatEnvironment, TrivialArgType, Uti
 import {CommandType} from "../general/help";
 import {Snowflake} from "discord.js";
 import {DatabaseGuildConfig, GuildConfigChannelType} from "../../database/guild-config";
+import {IAction, ActionType} from "@cloudrex/forge/actions/action";
+import {IRequestActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 type SetChannelArgs = {
     readonly type: GuildConfigChannelType;
@@ -38,21 +40,37 @@ export default class SetChannelCommand extends Command<SetChannelArgs> {
         cooldown: 3
     };
 
-    public async executed(context: CommandContext, args: SetChannelArgs): Promise<void> {
+    public async executed(context: CommandContext, args: SetChannelArgs): Promise<IAction<IRequestActionArgs> | null> {
         if (!Object.keys(GuildConfigChannelType).includes(args.type)) {
-            await context.fail("Invalid channel type");
+            return {
+                type: ActionType.FailEmbed,
 
-            return;
+                args: {
+                    message: "Invalid channel type",
+                    avatarUrl: context.sender.avatarURL,
+                    channelId: context.message.channel.id,
+                    requester: context.sender.username
+                }
+            };
         }
 
         const channel: Snowflake = Utils.resolveId(args.channel);
 
         if (!context.message.guild.channels.has(channel)) {
-            await context.fail("That channel does not exist");
+            return {
+                type: ActionType.FailEmbed,
 
-            return;
+                args: {
+                    message: "That channel does not exist",
+                    avatarUrl: context.sender.avatarURL,
+                    channelId: context.message.channel.id,
+                    requester: context.sender.username
+                }
+            };
         }
 
         await DatabaseGuildConfig.setChannel(args.type, channel, context.message.guild.id);
+
+        return null;
     }
 };

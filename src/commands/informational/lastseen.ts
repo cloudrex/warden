@@ -2,6 +2,8 @@ import {Command, CommandContext, Utils, InternalArgType, IArgument, ChatEnvironm
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {IDbMessage} from "../../database/mongo-database";
+import {IAction, ActionType} from "@cloudrex/forge/actions/action";
+import {IMessageActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 type LastSeenArgs = {
     readonly member: GuildMember;
@@ -31,11 +33,16 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
         cooldown: 2
     };
 
-    public async executed(context: CommandContext, args: LastSeenArgs): Promise<void> {
+    public async executed(context: CommandContext, args: LastSeenArgs): Promise<IAction<IMessageActionArgs>> {
         if (args.member.id === context.bot.client.user.id) {
-            await context.ok("I was last seen **just now**");
+            return {
+                type: ActionType.OkEmbed,
 
-            return;
+                args: {
+                    channelId: context.message.channel.id,
+                    message: "Nice try"
+                }
+            };
         }
 
         const result: IDbMessage | undefined = (await Mongo.collections.messages.find({
@@ -45,10 +52,24 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
         }).limit(1).toArray())[0];
 
         if (result !== undefined) {
-            await context.ok(`<:binoculars:490726532784979980> <@${args.member.id}> was last seen **${Utils.timeAgo(result.time, false)}**`);
+            return {
+                type: ActionType.OkEmbed,
+
+                args: {
+                    channelId: context.message.channel.id,
+                    message: `:eyes: <@${args.member.id}> was last seen **${Utils.timeAgo(result.time, false)}**`
+                }
+            };
         }
         else {
-            await context.fail(`No recorded data for <@${args.member.id}>`);
+            return {
+                type: ActionType.FailEmbed,
+
+                args: {
+                    channelId: context.message.channel.id,
+                    message: `No recorded data for <@${args.member.id}>`
+                }
+            };
         }
     }
 };

@@ -2,6 +2,8 @@ import {Command, CommandContext, ChatEnvironment, InternalArgType, IArgument} fr
 import {CommandType} from "../general/help";
 import {table, TableUserConfig} from "table";
 import {Permissions, PermissionResolvable, Message, GuildMember, Snowflake} from "discord.js";
+import {IAction, ActionType} from "@cloudrex/forge/actions/action";
+import {IMessageActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 const tableConfig: TableUserConfig = {
     columns: {
@@ -45,7 +47,7 @@ export default class PermissionsCommand extends Command<PermissionsArgs> {
         return permissions.hasPermission(name) ? "Yes" : "";
     }
 
-    public async executed(context: CommandContext, args: PermissionsArgs): Promise<void> {
+    public async executed(context: CommandContext, args: PermissionsArgs): Promise<IAction<IMessageActionArgs>> {
         const perms: Permissions = args.member.permissions;
 
         const data: Array<string[]> = [
@@ -69,6 +71,13 @@ export default class PermissionsCommand extends Command<PermissionsArgs> {
             // TODO: Add missing permissions?
         ];
 
-        await context.message.channel.send(`\`\`\`scala\n${table(data, tableConfig)}\`\`\``);
+        return {
+            type: ActionType.Message,
+
+            args: {
+                channelId: context.message.channel.id,
+                message: `\`\`\`scala\n${table(data, tableConfig)}\`\`\``
+            }
+        };
     }
 };
