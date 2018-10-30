@@ -1,5 +1,7 @@
 import {Command, CommandContext, RestrictGroup, EmojiMenu} from "@cloudrex/forge";
 import {Message, MessageReaction, User} from "discord.js";
+import {IAction, ActionType} from "@cloudrex/forge/actions/action";
+import {IMessageActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 export default class TestECommand extends Command {
     readonly meta = {
@@ -11,8 +13,8 @@ export default class TestECommand extends Command {
         specific: [RestrictGroup.BotOwner]
     };
 
-    public async executed(context: CommandContext): Promise<void> {
-        const sent: Message = await context.message.channel.send("Hello world") as Message;
+    public async executed(context: CommandContext): Promise<IAction<IMessageActionArgs>> {
+        /* const sent: Message = await context.message.channel.send("Hello world") as Message;
         const menu: EmojiMenu = new EmojiMenu(sent.id, context.sender.id);
 
         await menu.add({
@@ -29,6 +31,15 @@ export default class TestECommand extends Command {
             async added(reaction: MessageReaction, user: User): Promise<void> {
                 await reaction.message.channel.send(`${user.username} added`);
             },
-        }).attach(context);
+        }).attach(context); */
+
+        return {
+            type: ActionType.Message,
+
+            args: {
+                channelId: context.message.channel.id,
+                message: "hello world!"
+            }
+        };
     }
 };
