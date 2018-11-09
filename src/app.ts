@@ -108,7 +108,7 @@ const settings = new Settings({
 });
 
 async function start() {
-    const userMentionRegex = /(^[0-9]{17,18}$|^<@!?[0-9]{17,18}>$)/;
+    const userMentionRegex: RegExp = /(^[0-9]{17,18}$|^<@!?[0-9]{17,18}>$)/;
 
     const bot: Bot = new Bot({
         argumentTypes: [
