@@ -101,8 +101,9 @@ const settings = new Settings({
     },
 
     paths: {
-        commands: path.resolve(path.join(__dirname, "./commands")),
-        services: path.resolve(path.join(__dirname, "./services"))
+        commands: path.resolve(path.join(__dirname, "commands")),
+        services: path.resolve(path.join(__dirname, "services")),
+        tasks: path.resolve(path.join(__dirname, "tasks"))
     }
 });
 
