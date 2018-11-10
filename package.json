@@ -6,6 +6,8 @@
     "scripts": {
         "build": "tsc",
         "start": "npm run build && node dist/app.js",
+        "inspect": "npm run build && node --inspect dist/app.js",
+        "inspect-break": "npm run build && node --inspect-brk dist/app.js",
         "postinstall": "npm run build",
         "linst": "sudo bash tasks/linst.sh"
     },
