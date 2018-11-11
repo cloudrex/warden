@@ -64,14 +64,34 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.ChannelUpdated, (channel: GuildChannel) => {
-            const logChannel: TextChannel | null = LogService.getLogChannel(channel.guild);
+        this.bot.client.on(DiscordEvent.ChannelUpdated, (old: GuildChannel, updated: GuildChannel) => {
+            const logChannel: TextChannel | null = LogService.getLogChannel(old.guild);
 
+            //⇒
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                const embed: RichEmbed = new RichEmbed()
                     .setColor("BLUE")
                     .setTitle("Channel Updated")
-                    .setDescription(`Channel '${channel.name}' ${channel.type === "text" ? `(<#${channel.id}>)` : ""} was updated`));
+                    .setDescription(`Channel '${old.name}' ${old.type === "text" ? `(<#${old.id}>)` : ""} was updated`);
+
+                if (old.name !== updated.name) {
+                    embed.addField("Name", `${old.name} ⇒ ${updated.name}`);
+                }
+
+                if (old.type === "text" && updated.type === "text") {
+                    const textOld: TextChannel = old as TextChannel;
+                    const textUpdated: TextChannel = updated as TextChannel;
+
+                    if (textOld.nsfw !== textUpdated.nsfw) {
+                        embed.addField("NSFW", `${textOld.nsfw} ⇒ ${textUpdated.nsfw}`);
+                    }
+
+                    if (textOld.topic !== textUpdated.topic) {
+                        embed.addField("Topic", `${textOld.topic} ⇒ ${textUpdated.topic}`);
+                    }
+                }
+
+                logChannel.send(embed);
             }
         });
 
@@ -155,6 +175,8 @@ export default class LogService extends Service {
 
     // TODO: Use a better method to find the channel
     private static getLogChannel(guild: Guild): TextChannel | null {
-        return guild.channels.find("name", "server-log") as TextChannel || null;
+        return guild.channels.find((channel: GuildChannel) => {
+            return channel.name === "server-log" && channel.type === "text";
+        }) as TextChannel || null;
     }
 }

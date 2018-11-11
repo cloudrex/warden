@@ -55,7 +55,7 @@ export default class BanCommand extends Command<BanArgs> {
         await oldContext.bot.getAPI().executeAction(message.channel as TextChannel, {
             member: args.member,
             moderator: message.member,
-            reason: "Automatic => Action undone",
+            reason: "Automatic ⇒ Action undone",
             type: ModerationActionType.Unban
         });
 
