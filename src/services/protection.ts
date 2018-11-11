@@ -67,8 +67,11 @@ export default class ProtectionService extends Service {
             return;
         }
 
+        // Delete messages containing specific links/domains/websites
+        await this.handleLinkProtection(message, api);
+
         if (message.content.length > 300 && message.content.split(" ").length < 15 && message.deletable) {
-            await message.reply("Your message is too large.");
+            await message.reply("Sorry pal, your message is way too large");
             await message.delete();
         }
         // TODO:
@@ -112,25 +115,16 @@ export default class ProtectionService extends Service {
         if (suspectedViolation !== "None") {
             await this.api.flagMessage(message, suspectedViolation);
         }
+    }
 
-        if (message && message.mentions && message.mentions.members) {
-            message.mentions.members.array().map(async (member: GuildMember) => {
-                if (!message.author.bot && member.id !== message.author.id && member.roles.map((role) => role.id).includes("458827341196427265")) {
-                    const response: Message = await message.reply("Please refrain from pinging this person under any circumstances. He/she is either a partner or special guest and should not be pinged.") as Message;
+    private async handleLinkProtection(msg: Message, api: WardenAPI): Promise<boolean> {
+        if (/https?:\/\/twitch.tv/gm.test(msg.content) && msg.deletable) {
+            await msg.delete();
 
-                    if (response) {
-                        response.delete(8000);
-                    }
-
-                    await this.api.warn({
-                        user: message.member,
-                        reason: "Pinging a 'Dont Ping' member",
-                        moderator: this.bot.client.user,
-                        message: message
-                    });
-                }
-            });
+            return true;
         }
+
+        return false;
     }
 
     private async handleInviteProtection(message: Message, api: WardenAPI): Promise<void> {
