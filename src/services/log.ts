@@ -9,7 +9,7 @@ export default class LogService extends Service {
     };
 
     public start(): void {
-        this.bot.client.on(DiscordEvent.RoleCreated, (role: Role) => {
+        this.on(DiscordEvent.RoleCreated, (role: Role) => {
             const channel: TextChannel | null = LogService.getLogChannel(role.guild);
 
             if (channel) {
@@ -20,7 +20,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.RoleDeleted, (role: Role) => {
+        this.on(DiscordEvent.RoleDeleted, (role: Role) => {
             const channel: TextChannel | null = LogService.getLogChannel(role.guild);
 
             if (channel) {
@@ -31,7 +31,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.RoleUpdated, (old: Role, updated: Role) => {
+        this.on(DiscordEvent.RoleUpdated, (old: Role, updated: Role) => {
             const channel: TextChannel | null = LogService.getLogChannel(old.guild);
 
             if (channel) {
@@ -68,7 +68,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.ChannelCreated, (channel: GuildChannel) => {
+        this.on(DiscordEvent.ChannelCreated, (channel: GuildChannel) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(channel.guild);
 
             if (logChannel) {
@@ -79,7 +79,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.ChannelDeleted, (channel: GuildChannel) => {
+        this.on(DiscordEvent.ChannelDeleted, (channel: GuildChannel) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(channel.guild);
 
             if (logChannel) {
@@ -90,7 +90,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.ChannelUpdated, (old: GuildChannel, updated: GuildChannel) => {
+        this.on(DiscordEvent.ChannelUpdated, (old: GuildChannel, updated: GuildChannel) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(old.guild);
 
             if (logChannel) {
@@ -120,7 +120,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.EmojiCreated, (emoji: Emoji) => {
+        this.on(DiscordEvent.EmojiCreated, (emoji: Emoji) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(emoji.guild);
 
             if (logChannel) {
@@ -131,7 +131,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.EmojiDeleted, (emoji: Emoji) => {
+        this.on(DiscordEvent.EmojiDeleted, (emoji: Emoji) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(emoji.guild);
 
             if (logChannel) {
@@ -142,7 +142,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.EmojiUpdated, (old: Emoji, updated: Emoji) => {
+        this.on(DiscordEvent.EmojiUpdated, (old: Emoji, updated: Emoji) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(old.guild);
 
             if (logChannel) {
@@ -159,7 +159,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.GuildBanAdded, (guild: Guild, user: User) => {
+        this.on(DiscordEvent.GuildBanAdded, (guild: Guild, user: User) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(guild);
 
             if (logChannel) {
@@ -170,7 +170,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.GuildBanRemoved, (guild: Guild, user: User) => {
+        this.on(DiscordEvent.GuildBanRemoved, (guild: Guild, user: User) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(guild);
 
             if (logChannel) {
@@ -181,7 +181,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.GuildMemberJoined, (member: GuildMember) => {
+        this.on(DiscordEvent.GuildMemberJoined, (member: GuildMember) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(member.guild);
 
             if (logChannel) {
@@ -192,7 +192,7 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.GuildMemberLeft, (member: GuildMember) => {
+        this.on(DiscordEvent.GuildMemberLeft, (member: GuildMember) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(member.guild);
 
             if (logChannel) {
