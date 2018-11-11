@@ -201,7 +201,8 @@ export default class ProtectionService extends Service<WardenAPI> {
 
     private async handleAdsOnName(member: GuildMember): Promise<boolean> {
         if (config.banAdsOnName && Patterns.invite.test(member.user.username)) {
-            await this.api.executeAction(Utils.findDefaultChannel(member.guild), {
+            // TODO: Channel could be null
+            await this.api.executeAction(Utils.findDefaultChannelOrAny(member.guild) as TextChannel, {
                 type: ModerationActionType.Ban,
                 reason: "Advertising on username",
                 member,
@@ -236,14 +237,20 @@ export default class ProtectionService extends Service<WardenAPI> {
                 Log.warn("[Protection:guildMemberAdd] Owner member was not found in the guild");
             }
 
+            // TODO: api.roles no longer exists (deprecated)
+            /*
             if (member.roles.has(this.api.roles.muted)) {
                 Log.warn("[Protection:guildMemberAdd] Looks like someone got there before me! Another bot provides moderation dodging protection, which may cause problems. You can identify the bot by checking audit logs.");
 
                 return false;
             }
+            */
 
+            // TODO: api.roles no longer exists (deprecated)
+            /*
             // TODO: Use a central resource for getting reasons, (because include "Automatic" prefix)
             await member.addRole(this.api.roles.muted, "Possible attempt to avoid moderation by rejoining");
+            */
 
             return true;
         }
