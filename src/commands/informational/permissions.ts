@@ -1,9 +1,7 @@
-import {Command, CommandContext, ChatEnvironment, InternalArgType, IArgument} from "@cloudrex/forge";
+import {IMessageActionArgs, IAction, ActionType, Command, CommandContext, ChatEnvironment, InternalArgType, IArgument} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {table, TableUserConfig} from "table";
 import {Permissions, PermissionResolvable, Message, GuildMember, Snowflake} from "discord.js";
-import {IAction, ActionType} from "@cloudrex/forge/actions/action";
-import {IMessageActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 const tableConfig: TableUserConfig = {
     columns: {

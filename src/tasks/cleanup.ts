@@ -1,5 +1,4 @@
-import {Task, Bot, Log} from "@cloudrex/forge";
-import {IFragmentMeta} from "@cloudrex/forge/fragments/fragment";
+import {Task, Bot, Log, IFragmentMeta} from "@cloudrex/forge";
 import AntiRaidService from "../services/anti-raid";
 
 export default class CleanupTask extends Task {

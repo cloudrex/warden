@@ -1,8 +1,6 @@
-import {Command, CommandContext, RestrictGroup} from "@cloudrex/forge";
+import {IAction, ActionType, IPrivateMessageActionArgs, Command, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "./help";
 import {TextChannel, Permissions} from "discord.js";
-import {IAction, ActionType} from "@cloudrex/forge/actions/action";
-import {IRequestActionArgs, IMessageActionArgs, IPrivateMessageActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 export default class TestCommand extends Command {
     readonly type = CommandType.Utility;

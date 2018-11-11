@@ -1,8 +1,6 @@
 import {Role} from "discord.js";
-import {ChatEnvironment, Command, IArgument, CommandContext, RestrictGroup, TrivialArgType} from "@cloudrex/forge";
+import {IPaginatedActionArgs, IAction, ActionType, ChatEnvironment, Command, IArgument, CommandContext, RestrictGroup, TrivialArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import {IAction, ActionType} from "@cloudrex/forge/actions/action";
-import {IPaginatedActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 type RolesArgs = {
     readonly page: number;

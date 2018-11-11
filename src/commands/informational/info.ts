@@ -1,8 +1,6 @@
-import {Command, CommandContext, Utils, ChatEnvironment} from "@cloudrex/forge";
+import {IEmbedActionArgs, ActionType, IAction, Command, CommandContext, Utils, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Emoji, RichEmbed} from "discord.js";
-import {ActionType, IAction} from "@cloudrex/forge/actions/action";
-import {IEmbedActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 // TODO: Bot should have a command to display info of itself, ex. uptime.
 export default class InfoCommand extends Command {

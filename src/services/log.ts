@@ -1,5 +1,4 @@
-import {Service, DiscordEvent, Utils} from "@cloudrex/forge";
-import {IFragmentMeta} from "@cloudrex/forge/fragments/fragment";
+import {Service, DiscordEvent, Utils, IFragmentMeta} from "@cloudrex/forge";
 import {Role, TextChannel, Guild, RichEmbed, GuildChannel, Emoji, GuildMember, User} from "discord.js";
 
 export default class LogService extends Service {

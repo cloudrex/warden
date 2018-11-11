@@ -6,7 +6,8 @@ import {GuildMember, Message, Snowflake} from "discord.js";
 import path from "path";
 
 import {
-    Bot, IArgumentResolver,
+    Bot,
+    IArgumentResolver,
     JsonProvider,
     Log,
     LogLevel,

@@ -1,9 +1,7 @@
-import {Command, IArgument, CommandContext, ChatEnvironment, TrivialArgType, Utils, InternalArgType} from "@cloudrex/forge";
+import {IAction, ActionType, IRequestActionArgs, Command, IArgument, CommandContext, ChatEnvironment, TrivialArgType, Utils, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Snowflake} from "discord.js";
 import {DatabaseGuildConfig, GuildConfigChannelType} from "../../database/guild-config";
-import {IAction, ActionType} from "@cloudrex/forge/actions/action";
-import {IRequestActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 type SetChannelArgs = {
     readonly type: GuildConfigChannelType;

@@ -1,8 +1,6 @@
-import {Command, IArgument, CommandContext, ChatEnvironment, TrivialArgType} from "@cloudrex/forge";
+import {IRequestActionArgs, IAction, ActionType, Command, IArgument, CommandContext, ChatEnvironment, TrivialArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {DatabaseGuildConfig, GuildConfigChannelType, GuildConfig} from "../../database/guild-config";
-import {IAction, ActionType} from "@cloudrex/forge/actions/action";
-import {IRequestActionArgs} from "@cloudrex/forge/actions/action-interpreter";
 
 type GetChannelArgs = {
     readonly type: GuildConfigChannelType;

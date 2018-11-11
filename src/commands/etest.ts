@@ -1,7 +1,4 @@
-import {Command, CommandContext, RestrictGroup, EmojiMenu} from "@cloudrex/forge";
-import {Message, MessageReaction, User} from "discord.js";
-import {IAction, ActionType} from "@cloudrex/forge/actions/action";
-import {IMessageActionArgs} from "@cloudrex/forge/actions/action-interpreter";
+import {IAction, ActionType, IMessageActionArgs, Command, CommandContext, RestrictGroup, EmojiMenu} from "@cloudrex/forge";
 
 export default class TestECommand extends Command {
     readonly meta = {
