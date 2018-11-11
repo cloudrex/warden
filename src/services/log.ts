@@ -1,4 +1,4 @@
-import {Service, DiscordEvent} from "@cloudrex/forge";
+import {Service, DiscordEvent, Utils} from "@cloudrex/forge";
 import {IFragmentMeta} from "@cloudrex/forge/fragments/fragment";
 import {Role, TextChannel, Guild, RichEmbed, GuildChannel, Emoji, GuildMember} from "discord.js";
 
@@ -31,14 +31,40 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.RoleUpdated, (role: Role) => {
-            const channel: TextChannel | null = LogService.getLogChannel(role.guild);
+        this.bot.client.on(DiscordEvent.RoleUpdated, (old: Role, updated: Role) => {
+            const channel: TextChannel | null = LogService.getLogChannel(old.guild);
 
             if (channel) {
-                channel.send(new RichEmbed()
+                const embed: RichEmbed = new RichEmbed()
                     .setColor("BLUE")
                     .setTitle("Role Updated")
-                    .setDescription(`Role <@${role.id}> was updated`));
+                    .setDescription(`Role <@${old.id}> was updated`);
+
+                if (old.name !== updated.name) {
+                    embed.addField("Name", `${old.name} ⇒ ${updated.name}`);
+                }
+
+                if (old.hoist !== updated.hoist) {
+                    embed.addField("Hoisted", `${old.hoist} ⇒ ${updated.hoist}`);
+                }
+
+                if (old.hexColor !== updated.hexColor) {
+                    embed.addField("Color", `${old.hexColor} ⇒ ${updated.hexColor}`);
+                }
+
+                if (old.permissions !== updated.permissions) {
+                    embed.addField("Permissions", `${old.permissions} ⇒ ${updated.permissions}`);
+                }
+
+                if (old.mentionable !== updated.mentionable) {
+                    embed.addField("Mentionable", `${old.mentionable} ⇒ ${updated.mentionable}`);
+                }
+
+                if (old.position !== updated.position) {
+                    embed.addField("Position", `${old.position} ⇒ ${updated.position}`);
+                }
+
+                channel.send(embed);
             }
         });
 
@@ -67,7 +93,6 @@ export default class LogService extends Service {
         this.bot.client.on(DiscordEvent.ChannelUpdated, (old: GuildChannel, updated: GuildChannel) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(old.guild);
 
-            //⇒
             if (logChannel) {
                 const embed: RichEmbed = new RichEmbed()
                     .setColor("BLUE")
@@ -87,7 +112,7 @@ export default class LogService extends Service {
                     }
 
                     if (textOld.topic !== textUpdated.topic) {
-                        embed.addField("Topic", `${textOld.topic} ⇒ ${textUpdated.topic}`);
+                        embed.addField("Topic", `${Utils.trim(textOld.topic)} ⇒ ${Utils.trim(textUpdated.topic)}`);
                     }
                 }
 
@@ -117,14 +142,20 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.EmojiUpdated, (emoji: Emoji) => {
-            const logChannel: TextChannel | null = LogService.getLogChannel(emoji.guild);
+        this.bot.client.on(DiscordEvent.EmojiUpdated, (old: Emoji, updated: Emoji) => {
+            const logChannel: TextChannel | null = LogService.getLogChannel(old.guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                const embed: RichEmbed = new RichEmbed()
                     .setColor("BLUE")
                     .setTitle("Emoji Updated")
-                    .setDescription(`Emoji '${emoji.name}' was updated`));
+                    .setDescription(`Emoji '${old.name}' was updated`);
+
+                if (old.name !== updated.name) {
+                    embed.addField("Name", `${old.name} ⇒ ${updated.name}`);
+                }
+
+                logChannel.send(embed);
             }
         });
 
