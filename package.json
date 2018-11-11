@@ -18,7 +18,7 @@
     "author": "CloudRex <cloudrex@outlook.com>",
     "license": "MIT",
     "dependencies": {
-        "@cloudrex/forge": "^1.1.6",
+        "@cloudrex/forge": "^1.1.9",
         "@types/knex": "^0.14.18",
         "@types/mongodb": "^3.1.4",
         "@types/node": "^10.9.4",
