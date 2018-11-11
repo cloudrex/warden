@@ -13,12 +13,15 @@ const conflictingBots: Snowflake[] = [
     "240254129333731328", // Vortex#8540,
     "434432910947385354", // Inspector#8221,
     "381949722157514752", // Warden#1062,
-    "465148198403571722" // peepoCop#8395
+    "465148198403571722", // peepoCop#8395
+    "264811613708746752", // Luca#0393
+    "134133271750639616", // blargbot#0128
+    "170254782546575360", // Nadeko#6685
 ];
 
 let muteLeavers: Snowflake[] = [];
 
-export default class ProtectionService extends Service {
+export default class ProtectionService extends Service<WardenAPI> {
     readonly meta = {
         name: "protection",
         description: "Autonomous server protection and moderation"

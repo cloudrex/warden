@@ -11,26 +11,26 @@ export default class AntiRaidService extends Service {
         description: "Unattended raid protection system"
     };
 
-    readonly memory: Map<Snowflake, Message[]> = new Map();
+    public static readonly memory: Map<Snowflake, Message[]> = new Map();
 
     constructor(options: IServiceOptions) {
         super(options);
 
-        this.memory = new Map();
+        AntiRaidService.memory.clear();
     }
 
     private async handleMessage(message: Message): Promise<void> {
         if (!config.antiSpam || message.author.bot || message.channel.type !== "text" || Utils.hasModerationPowers(message.member)) {
             return;
         }
-        else if (this.memory.has(message.author.id)) {
-            (this.memory.get(message.author.id) as Message[]).push(message);
+        else if (AntiRaidService.memory.has(message.author.id)) {
+            (AntiRaidService.memory.get(message.author.id) as Message[]).push(message);
         }
         else {
-            this.memory.set(message.author.id, [message]);
+            AntiRaidService.memory.set(message.author.id, [message]);
         }
 
-        const messages: Message[] = this.memory.get(message.author.id) as Message[];
+        const messages: Message[] = AntiRaidService.memory.get(message.author.id) as Message[];
 
         if (messages.length < 2) {
             return;
@@ -42,7 +42,7 @@ export default class AntiRaidService extends Service {
         if (similarity >= threshold / 100 && message.deletable) {
             await message.delete();
 
-            const response: Message = await message.reply("Please refrain from spamming.") as Message;
+            const response: Message = await message.reply("Please refrain from spamming") as Message;
 
             if (response) {
                 await response.delete(4000);
@@ -57,6 +57,6 @@ export default class AntiRaidService extends Service {
 
     public dispose(): void {
         this.bot.client.removeListener(DiscordEvent.Message, this.handleMessage);
-        this.memory.clear();
+        AntiRaidService.memory.clear();
     }
 }
