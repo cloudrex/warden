@@ -1,6 +1,6 @@
 import {Service, DiscordEvent, Utils} from "@cloudrex/forge";
 import {IFragmentMeta} from "@cloudrex/forge/fragments/fragment";
-import {Role, TextChannel, Guild, RichEmbed, GuildChannel, Emoji, GuildMember} from "discord.js";
+import {Role, TextChannel, Guild, RichEmbed, GuildChannel, Emoji, GuildMember, User} from "discord.js";
 
 export default class LogService extends Service {
     readonly meta: IFragmentMeta = {
@@ -112,7 +112,7 @@ export default class LogService extends Service {
                     }
 
                     if (textOld.topic !== textUpdated.topic) {
-                        embed.addField("Topic", `${Utils.trim(textOld.topic)} ⇒ ${Utils.trim(textUpdated.topic)}`);
+                        embed.addField("Topic", `${Utils.trim(textOld.topic, 60)} ⇒ ${Utils.trim(textUpdated.topic, 60)}`);
                     }
                 }
 
@@ -159,25 +159,25 @@ export default class LogService extends Service {
             }
         });
 
-        this.bot.client.on(DiscordEvent.GuildBanAdded, (member: GuildMember) => {
-            const logChannel: TextChannel | null = LogService.getLogChannel(member.guild);
+        this.bot.client.on(DiscordEvent.GuildBanAdded, (guild: Guild, user: User) => {
+            const logChannel: TextChannel | null = LogService.getLogChannel(guild);
 
             if (logChannel) {
                 logChannel.send(new RichEmbed()
                     .setColor("RED")
                     .setTitle("Member Banned")
-                    .setDescription(`Member '${member.user.tag}' (${member.id}) was banned`));
+                    .setDescription(`Member '${user.tag}' (${user.id}) was banned`));
             }
         });
 
-        this.bot.client.on(DiscordEvent.GuildBanRemoved, (member: GuildMember) => {
-            const logChannel: TextChannel | null = LogService.getLogChannel(member.guild);
+        this.bot.client.on(DiscordEvent.GuildBanRemoved, (guild: Guild, user: User) => {
+            const logChannel: TextChannel | null = LogService.getLogChannel(guild);
 
             if (logChannel) {
                 logChannel.send(new RichEmbed()
                     .setColor("GREEN")
                     .setTitle("Member Unbanned")
-                    .setDescription(`Member '${member.user.tag}' (${member.id}) was unbanned`));
+                    .setDescription(`Member '${user.tag}' (${user.id}) was unbanned`));
             }
         });
 
