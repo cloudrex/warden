@@ -29,7 +29,9 @@ export default class InfoCommand extends Command {
                     .addField("Created", Utils.timeAgo(context.message.guild.createdTimestamp))
                     .addField(`Emojis [${context.message.guild.emojis.size}]`, context.message.guild.emojis.map((emoji: Emoji) => `<:${emoji.name}:${emoji.id}>`).join(" ").substr(0, 1024))
                     .setThumbnail(context.message.guild.iconURL)
-                    .setColor("GREEN")
+                    .setColor("GREEN"),
+
+                channelId: context.message.channel.id
             }
         };
     }

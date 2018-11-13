@@ -44,6 +44,8 @@ export default class BanCommand extends Command<BanArgs> {
         }
     ];
 
+    readonly aliases: string[] = ["banana", "beam", "poof", "bend", "bean"];
+
     readonly restrict: any = {
         issuerPermissions: [Permission.BanMembers],
         selfPermissions: [Permission.BanMembers],
