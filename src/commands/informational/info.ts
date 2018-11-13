@@ -18,6 +18,18 @@ export default class InfoCommand extends Command {
     };
 
     public async executed(context: CommandContext): Promise<IAction<IEmbedActionArgs>> {
+        let emojisString: string = context.message.guild.emojis.map((emoji: Emoji) => emoji.toString())
+            .join(" ")
+            .substr(0, 1024);
+
+        const splitEmojis: string[] = emojisString.split(" ");
+
+        emojisString = splitEmojis.slice(0, 15).join(" ");
+
+        if (context.message.guild.emojis.size > 15) {
+            emojisString += `**+ ${splitEmojis.length - 15} more**`;
+        }
+
         return {
             type: ActionType.RichEmbed,
 
@@ -27,7 +39,7 @@ export default class InfoCommand extends Command {
                     .addField("Uptime", Utils.timeAgoFromNow(context.bot.client.uptime))
                     .addField("Members", context.message.guild.large ? `${context.message.guild.memberCount} (Large)` : context.message.guild.memberCount)
                     .addField("Created", Utils.timeAgo(context.message.guild.createdTimestamp))
-                    .addField(`Emojis [${context.message.guild.emojis.size}]`, context.message.guild.emojis.map((emoji: Emoji) => `<:${emoji.name}:${emoji.id}>`).join(" ").substr(0, 1024))
+                    .addField(`Emojis [${context.message.guild.emojis.size}]`, emojisString)
                     .setThumbnail(context.message.guild.iconURL)
                     .setColor("GREEN"),
 
