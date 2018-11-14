@@ -26,7 +26,7 @@ export default class LogService extends Service {
                 channel.send(new RichEmbed()
                     .setColor("RED")
                     .setTitle("Role Deleted")
-                    .setDescription(`Role <@${role.id}> was deleted`));
+                    .setDescription(`Role <@&${role.id}> was deleted`));
             }
         });
 
@@ -37,7 +37,7 @@ export default class LogService extends Service {
                 const embed: RichEmbed = new RichEmbed()
                     .setColor("BLUE")
                     .setTitle("Role Updated")
-                    .setDescription(`Role <@${old.id}> was updated`);
+                    .setDescription(`Role <@&${old.id}> was updated`);
 
                 if (old.name !== updated.name) {
                     embed.addField("Name", `${old.name} ⇒ ${updated.name}`);
