@@ -17,16 +17,16 @@ export default class UpdateCommand extends Command {
         specific: [RestrictGroup.BotOwner]
     };
 
-    public executed(context: CommandContext): Promise<void> {
+    public executed(x: CommandContext): Promise<void> {
         return new Promise((resolve) => {
             exec("git pull", async (error: any, stdOut: string | Buffer) => {
                 if (error) {
-                    context.fail(`There was an error while pulling changes (${error.message})`, false);
+                    x.fail(`There was an error while pulling changes (${error.message})`, false);
 
                     return;
                 }
 
-                context.ok(new FormattedMessage().codeBlock(stdOut.toString(), "css"));
+                x.ok(new FormattedMessage().codeBlock(stdOut.toString(), "css"));
                 resolve();
             });
         });

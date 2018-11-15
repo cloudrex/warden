@@ -17,14 +17,14 @@ export default class EmbedCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, api: WardenAPI): Promise<void> {
+    public async executed(x: CommandContext, api: WardenAPI): Promise<void> {
         const setup: SetupHelper | null = SetupHelper.fromContext({
-            context: context,
+            context: x,
             title: "Create Embed"
         });
 
         if (setup === null) {
-            await context.fail("Operation failed. (Unable to create SetupHelper instance)");
+            await x.fail("Operation failed. (Unable to create SetupHelper instance)");
 
             return;
         }
@@ -35,10 +35,10 @@ export default class EmbedCommand extends Command {
             .input("What color will the embed be?")
             .finish();
 
-        const channel: TextChannel | null = (context.message.guild.channels.get(Utils.resolveId(result.responses[0])) as TextChannel | undefined) || null;
+        const channel: TextChannel | null = (x.msg.guild.channels.get(Utils.resolveId(result.responses[0])) as TextChannel | undefined) || null;
 
         if (channel === null) {
-            await context.fail("Channel does not exist or it is not a text channel");
+            await x.fail("Channel does not exist or it is not a text channel");
 
             return;
         }

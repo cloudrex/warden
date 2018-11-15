@@ -29,16 +29,16 @@ export default class RolesCommand extends Command<RolesArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: RolesArgs): Promise<IAction<IPaginatedActionArgs>> {
+    public executed(x: CommandContext, args: RolesArgs): IAction<IPaginatedActionArgs> {
         return {
             type: ActionType.PaginatedOkEmbed,
             
             args: {
-                bot: context.bot,
-                context,
-                inputMessage: context.message,
+                bot: x.bot,
+                context: x,
+                inputMessage: x.msg,
 
-                message: context.message.guild.roles
+                message: x.msg.guild.roles
                     .array()
                     .map((role: Role) => `<@&${role.id}> => ${role.id}`)
                     .join("\n")

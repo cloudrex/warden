@@ -32,12 +32,12 @@ export default class ClearWarnsCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: ClearWarnsArgs): Promise<void> {
+    public async executed(x: CommandContext, args: ClearWarnsArgs): Promise<void> {
         await Mongo.collections.moderationActions.deleteMany({
             memberId: args.member.id,
-            guildId: context.message.guild.id
+            guildId: x.msg.guild.id
         });
 
-        await context.ok(`Cleared all warnings of <@${args.member.id}> (${args.member.user.tag}:${args.member.id})`);
+        await x.ok(`Cleared all warnings of <@${args.member.id}> (${args.member.user.tag}:${args.member.id})`);
     }
 };

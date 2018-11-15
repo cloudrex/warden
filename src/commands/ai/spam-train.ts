@@ -76,7 +76,7 @@ export default class SpamTrain extends Command {
         return SpamTrain.toTrainDataInputOutput(await this.gatherMessageData(channel, excluded), spammy);
     }
 
-    public async executed(context: CommandContext, args: SpamTrainArgs): Promise<void> {
+    public async executed(x: CommandContext, args: SpamTrainArgs): Promise<void> {
         let result: any = "[Unknown]";
 
         if (!fs.existsSync("./trains/main.json")) {
@@ -101,14 +101,14 @@ export default class SpamTrain extends Command {
             // Train bad (spammy)
             console.log("Training bad (spammy) ...");
 
-            const badData: any[] = await this.getTrainData(context.message.channel as TextChannel, [context.message.id, excludeAnnouncement], true);
+            const badData: any[] = await this.getTrainData(x.msg.channel as TextChannel, [x.msg.id, excludeAnnouncement], true);
 
             //network.train(badData, trainingOpts);
 
             // Train good (normal messages)
             console.log("Training good (non-spammy) ...");
 
-            const goodData: any[] = await this.getTrainData(context.message.guild.channels.get("489543738738081826") as TextChannel, [context.message.id, excludeAnnouncement], false);
+            const goodData: any[] = await this.getTrainData(x.msg.guild.channels.get("489543738738081826") as TextChannel, [x.msg.id, excludeAnnouncement], false);
 
             network.train(goodData.concat(badData), trainingOpts);
 
@@ -143,6 +143,6 @@ export default class SpamTrain extends Command {
             result = ne.run(args.spamTest);
         }
 
-        await context.ok(`Probability of spam is '${result}'`);
+        await x.ok(`Probability of spam is '${result}'`);
     }
 };

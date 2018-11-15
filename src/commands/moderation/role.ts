@@ -37,20 +37,20 @@ export default class RoleCommand extends Command<RoleArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: RoleArgs): Promise<void> {
+    public async executed(x: CommandContext, args: RoleArgs): Promise<void> {
         // TODO: Async await
         if (!args.member.roles.exists("name", args.role.name)) {
             args.member.addRole(args.role).catch((error: Error) => {
-                context.fail(`Operation failed. (${error.message})`);
+                x.fail(`Operation failed. (${error.message})`);
             }).then(() => {
-                context.ok(`Role <@&${args.role.id}> was successfully **added** to <@${args.member.id}>.`);
+                x.ok(`Role <@&${args.role.id}> was successfully **added** to <@${args.member.id}>.`);
             });
         }
         else {
             args.member.removeRole(args.role).catch((error: Error) => {
-                context.fail(`Operation failed. (${error.message})`);
+                x.fail(`Operation failed. (${error.message})`);
             }).then(() => {
-                context.ok(`Role <@&${args.role.id}> was successfully **removed** from <@${args.member.id}>.`);
+                x.ok(`Role <@&${args.role.id}> was successfully **removed** from <@${args.member.id}>.`);
             });
         }
 

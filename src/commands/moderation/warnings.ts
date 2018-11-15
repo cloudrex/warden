@@ -54,7 +54,7 @@ export default class WarningsCommand extends Command<WarningsArgs> {
         return `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`;
     }
 
-    public async executed(context: CommandContext, args: WarningsArgs): Promise<void> {
+    public async executed(x: CommandContext, args: WarningsArgs): Promise<void> {
         const warnings: IDbModAction[] = await Mongo.collections.moderationActions.find({
             memberId: args.member.id
         }).toArray();
@@ -63,7 +63,7 @@ export default class WarningsCommand extends Command<WarningsArgs> {
 
         const embed: RichEmbed = new RichEmbed()
             .addField("Warnings", warningsMessage)
-            .setFooter(`Requested by ${context.sender.tag}`, context.sender.avatarURL)
+            .setFooter(`Requested by ${x.sender.tag}`, x.sender.avatarURL)
             .setThumbnail(args.member.user.avatarURL);
 
         if (warnings.length > 0) {
@@ -85,6 +85,6 @@ export default class WarningsCommand extends Command<WarningsArgs> {
             embed.setColor("RED");
         }
 
-        await context.message.channel.send(embed);
+        await x.msg.channel.send(embed);
     }
 };

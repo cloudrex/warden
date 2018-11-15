@@ -41,9 +41,9 @@ export default class OptCommand extends Command<OptArgs> {
 
     readonly aliases = ["config", "cfg"];
 
-    public async executed(context: CommandContext, args: OptArgs): Promise<void> {
+    public async executed(x: CommandContext, args: OptArgs): Promise<void> {
         if (!args.option) {
-            const options: IDbUserConfig[] = await MemberConfig.getAll(context.sender.id);
+            const options: IDbUserConfig[] = await MemberConfig.getAll(x.sender.id);
             const iterator: MemberConfigIterator = new MemberConfigIterator(options);
 
             const tableData: Array<string[]> = [
@@ -51,7 +51,7 @@ export default class OptCommand extends Command<OptArgs> {
                 ["Tracking", iterator.findValue("tracking", "true")] // TODO: Use default values instead of hard coded
             ];
 
-            await context.message.channel.send(new FormattedMessage()
+            await x.msg.channel.send(new FormattedMessage()
                 .codeBlock(table(tableData), "scala")
                 .build());
 
@@ -61,10 +61,10 @@ export default class OptCommand extends Command<OptArgs> {
         switch (args.option) {
             case "tracking": {
                 if (!args.value) {
-                    const result: string | boolean | null = await MemberConfig.get(context.sender.id, "tracking");
+                    const result: string | boolean | null = await MemberConfig.get(x.sender.id, "tracking");
                     const value: boolean = (result === null ? true : result) as boolean;
 
-                    await context.ok(value ? "You're currently being tracked" : "You're not being tracked");
+                    await x.ok(value ? "You're currently being tracked" : "You're not being tracked");
 
                     return;
                 }
@@ -72,30 +72,30 @@ export default class OptCommand extends Command<OptArgs> {
                 if (args.value === "on") {
                     await MemberConfig.set({
                         type: "tracking",
-                        userId: context.sender.id,
+                        userId: x.sender.id,
                         value: true
                     });
 
-                    await context.ok(`Now tracking <@${context.sender.id}>`);
+                    await x.ok(`Now tracking <@${x.sender.id}>`);
                 }
                 else if (args.value === "off") {
                     await MemberConfig.set({
                         type: "tracking",
-                        userId: context.sender.id,
+                        userId: x.sender.id,
                         value: false
                     });
 
-                    await context.ok(`No longer tracking <@${context.sender.id}>`);
+                    await x.ok(`No longer tracking <@${x.sender.id}>`);
                 }
                 else {
-                    await context.fail("Invalid tracking state, expecting *on* or *off*");
+                    await x.fail("Invalid tracking state, expecting *on* or *off*");
                 }
 
                 break;
             }
 
             default: {
-                context.fail("Invalid subcommand, expecting *tracking*");
+                x.fail("Invalid subcommand, expecting *tracking*");
 
                 return;
             }

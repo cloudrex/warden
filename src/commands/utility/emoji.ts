@@ -42,11 +42,11 @@ export default class EmojiCommand extends Command<EmojiArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public executed(context: CommandContext, args: EmojiArgs): Promise<void> {
+    public executed(x: CommandContext, args: EmojiArgs): Promise<void> {
         return new Promise((resolve) => {
             request.get(args.url, async (error: Error, response: any, body: any) => {
-                await context.message.guild.createEmoji(body, args.name, undefined, `Requested by ${context.sender.tag} (${context.sender.id})`);
-                await context.ok(`Emoji **${args.name}** successfully created.`);
+                await x.msg.guild.createEmoji(body, args.name, undefined, `Requested by ${x.sender.tag} (${x.sender.id})`);
+                await x.ok(`Emoji **${args.name}** successfully created.`);
                 resolve();
             });
         });

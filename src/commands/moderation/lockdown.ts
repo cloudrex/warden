@@ -25,8 +25,8 @@ export default class LockdownCommand extends Command {
         return true;
     }
 
-    public async executed(context: CommandContext): Promise<void> {
-        const everyone: Role = context.message.guild.roles.find("name", "@everyone");
+    public async executed(x: CommandContext): Promise<void> {
+        const everyone: Role = x.msg.guild.roles.find("name", "@everyone");
 
         await everyone.setPermissions([
             "VIEW_CHANNEL",
@@ -34,6 +34,6 @@ export default class LockdownCommand extends Command {
             "READ_MESSAGE_HISTORY"
         ]);
 
-        await context.ok(":lock: Guild is now under lockdown.");
+        await x.ok(":lock: Guild is now under lockdown.");
     }
 };

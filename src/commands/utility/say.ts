@@ -40,7 +40,7 @@ export default class EmulateCommand extends Command<SayArgs> {
         specific: [RestrictGroup.BotOwner]
     };
 
-    public async executed(context: CommandContext, args: SayArgs): Promise<void> {
+    public async executed(x: CommandContext, args: SayArgs): Promise<void> {
         if ((args.silent as any) === "true" || args.silent === true) {
             console.log(typeof(args.silent));
 
@@ -54,6 +54,6 @@ export default class EmulateCommand extends Command<SayArgs> {
         }
 
         // TODO: Debugging
-        await context.message.channel.send(`${context.sender.tag} said ${filteredMessage}`);
+        await x.msg.channel.send(`${x.sender.tag} said ${filteredMessage}`);
     }
 };

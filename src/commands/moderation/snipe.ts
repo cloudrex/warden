@@ -16,13 +16,13 @@ export default class SnipeCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: string[], api: WardenAPI): Promise<void> {
-        const lastDeletedChannelMessage: Message | null = api.deletedMessages.get(context.message.channel.id) || null;
+    public async executed(x: CommandContext, args: string[], api: WardenAPI): Promise<void> {
+        const lastDeletedChannelMessage: Message | null = api.deletedMessages.get(x.msg.channel.id) || null;
 
         if (lastDeletedChannelMessage !== null) {
             const embed: boolean = lastDeletedChannelMessage.content.length === 0 && lastDeletedChannelMessage.embeds.length > 0;
 
-            await context.message.channel.send(new RichEmbed()
+            await x.msg.channel.send(new RichEmbed()
                 .addField("Message", embed ? "*Embedded Message*" : lastDeletedChannelMessage.content)
                 .addField("Author", `<@${lastDeletedChannelMessage.author.id}> (${lastDeletedChannelMessage.author.tag})`)
                 .addField("Time", Utils.timeAgo(lastDeletedChannelMessage.createdTimestamp))
@@ -30,7 +30,7 @@ export default class SnipeCommand extends Command {
                 .setColor("GREEN"));
         }
         else {
-            await context.fail("No message has been deleted in this channel within the last 30 minutes.");
+            await x.fail("No message has been deleted in this channel within the last 30 minutes.");
         }
     }
 };

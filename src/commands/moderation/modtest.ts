@@ -15,8 +15,8 @@ export default class ModTestCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: any, api: WardenAPI): Promise<void> {
+    public async executed(x: CommandContext, args: any, api: WardenAPI): Promise<void> {
         // TODO
-        await context.fail("Not yet implemented");
+        await x.fail("Not yet implemented");
     }
 };

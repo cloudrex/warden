@@ -18,30 +18,30 @@ export default class RebuildCommand extends Command {
         cooldown: 5
     };
 
-    public async executed(context: CommandContext): Promise<void> {
+    public async executed(x: CommandContext): Promise<void> {
         return new Promise<void>(async (resolve) => {
             const platform: string = os.platform();
 
             if (platform !== "linux") {
-                await context.fail(`That command may only be executed in a linux platform; Currently '${platform}' based`);
+                await x.fail(`That command may only be executed in a linux platform; Currently '${platform}' based`);
                 resolve();
 
                 return;
             }
 
-            await context.bot.triggerCommand("update", context.message);
-            await context.bot.triggerCommand("build", context.message);
-            await context.ok("Running rebuild script ...");
+            await x.bot.triggerCommand("update", x.msg);
+            await x.bot.triggerCommand("build", x.msg);
+            await x.ok("Running rebuild script ...");
 
             exec("bash tasks/rebuild.sh", async (error: ExecException | null, stdout: string) => {
                 if (error) {
-                    await context.fail(`Rebuild failed (${error.message})`);
+                    await x.fail(`Rebuild failed (${error.message})`);
                     resolve();
 
                     return;
                 }
 
-                await context.ok("Rebuild completed");
+                await x.ok("Rebuild completed");
                 resolve();
             });
         });

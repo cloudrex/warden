@@ -21,8 +21,8 @@ export default class ReasonCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext): Promise<void> {
+    public async executed(x: CommandContext): Promise<void> {
         // TODO
-        await context.fail("Not implemented yet");
+        await x.fail("Not implemented yet");
     }
 };

@@ -30,20 +30,20 @@ export default class PurgeCommand extends Command<PurgeArgs> {
     };
 
     // TODO: Return type, should be void
-    public async executed(context: CommandContext, args: PurgeArgs): Promise<any> {
+    public async executed(x: CommandContext, args: PurgeArgs): Promise<any> {
         return new Promise(async (resolve) => {
             if (args.amount > 20) {
-                await context.fail("Amount must be lower than 20");
+                await x.fail("Amount must be lower than 20");
                 resolve();
 
                 return;
             }
 
             // TODO: Fix incompatibility with autoDeleteCommand? Something's wrong
-            context.message.channel.bulkDelete(args.amount + 1).then(() => {
+            x.msg.channel.bulkDelete(args.amount + 1).then(() => {
                 resolve();
             }).catch(async (error: Error) => {
-                await context.fail(`Operation failed (${error.message})`, false);
+                await x.fail(`Operation failed (${error.message})`, false);
 
                 resolve();
             });

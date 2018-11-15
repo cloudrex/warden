@@ -31,15 +31,15 @@ export default class CaseCommand extends Command<CaseArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: CaseArgs): Promise<void> {
+    public async executed(x: CommandContext, args: CaseArgs): Promise<void> {
         const action: IDbModAction | null = await WardenAPI.retrieveModerationAction(args.caseId);
 
         if (action === null) {
-            await context.fail("The specified case is not registered in the database");
+            await x.fail("The specified case is not registered in the database");
 
             return;
         }
 
-        await context.message.channel.send(WardenAPI.createModerationActionEmbed(action, action.automatic));
+        await x.msg.channel.send(WardenAPI.createModerationActionEmbed(action, action.automatic));
     }
 };

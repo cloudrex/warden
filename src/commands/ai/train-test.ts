@@ -74,7 +74,7 @@ export default class TrainTest extends Command {
         return TrainTest.toTrainDataInputOutput(await this.gatherMessageData(channel, excluded), spammy);
     }
 
-    public async executed(context: CommandContext, args: TrainTestArgs): Promise<void> {
+    public async executed(x: CommandContext, args: TrainTestArgs): Promise<void> {
         if (!_loaded) {
             _ne = new brain.NeuralNetwork();
 
@@ -106,6 +106,6 @@ export default class TrainTest extends Command {
 
         console.log("result is ", result);
 
-        await context.ok(`I guess that your message is about **${result}**`);
+        await x.ok(`I guess that your message is about **${result}**`);
     }
 };

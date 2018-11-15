@@ -48,21 +48,21 @@ export default class WarnCommand extends Command<WarnArgs> {
     };
 
     // TODO: Throws unknown message
-    public async executed(context: CommandContext, args: WarnArgs, api: WardenAPI): Promise<void> { // TODO: api type not working for some reason
-        if (context.sender.id === args.member.id) {
-            await context.fail("You can't warn yourself");
+    public async executed(x: CommandContext, args: WarnArgs, api: WardenAPI): Promise<void> { // TODO: api type not working for some reason
+        if (x.sender.id === args.member.id) {
+            await x.fail("You can't warn yourself");
 
             return;
         }
         else if (args.member.user.bot) {
-            await context.fail("You can't warn a bot");
+            await x.fail("You can't warn a bot");
 
             return;
         }
 
-        await api.executeAction(context.message.channel as TextChannel, {
+        await api.executeAction(x.msg.channel as TextChannel, {
             type: ModerationActionType.Warn,
-            moderator: context.message.member,
+            moderator: x.msg.member,
             reason: args.reason,
             member: args.member,
             evidence: args.evidence

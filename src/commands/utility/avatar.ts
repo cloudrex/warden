@@ -30,8 +30,8 @@ export default class AvatarCommand extends Command<AvatarArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: AvatarArgs): Promise<void> {
-        await context.message.channel.send(new RichEmbed()
+    public async executed(x: CommandContext, args: AvatarArgs): Promise<void> {
+        await x.msg.channel.send(new RichEmbed()
             .setColor("GREEN")
             .setImage(args.member.user.avatarURL));
     }

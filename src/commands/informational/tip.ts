@@ -55,14 +55,14 @@ export default class TipCommand extends Command {
         cooldown: 5
     };
 
-    public async executed(context: CommandContext): Promise<void> {
+    public async executed(x: CommandContext): Promise<void> {
         let tipIndex: number = lastTipIndex;
 
         while (tipIndex === lastTipIndex) {
             tipIndex = Utils.getRandomInt(0, tips.length);
         }
 
-        await context.ok(tips[tipIndex].replace("{atlas}", "<@285578743324606482>"), `Tip #${tipIndex + 1}`);
+        await x.ok(tips[tipIndex].replace("{atlas}", "<@285578743324606482>"), `Tip #${tipIndex + 1}`);
         lastTipIndex = tipIndex;
     }
 };

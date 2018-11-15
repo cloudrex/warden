@@ -21,7 +21,7 @@ export default class WhoisCommand extends Command<WhoisArgs> {
             switchShortName: "m",
             type: InternalArgType.Member,
             required: false,
-            defaultValue: (message: Message) => message.author.id
+            defaultValue: (msg: Message) => msg.author.id
         }
     ];
 
@@ -30,7 +30,7 @@ export default class WhoisCommand extends Command<WhoisArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: WhoisArgs): Promise<void> {
+    public async executed(x: CommandContext, args: WhoisArgs): Promise<void> {
         const roles = args.member.roles.array();
 
         let finalRoles: string = roles.slice(1, 10).map((role) => `<@&${role.id}>`).join(" ");
@@ -39,18 +39,42 @@ export default class WhoisCommand extends Command<WhoisArgs> {
             finalRoles += ` **+ ${roles.length - 10} more**`;
         }
 
-        await context.message.channel.send(new RichEmbed()
+        const embed: RichEmbed = new RichEmbed()
             .setColor("GREEN")
-            .setFooter(`Requested by ${context.sender.username}`, context.sender.avatarURL)
+            .setFooter(`Requested by ${x.sender.username}`, x.sender.avatarURL)
             .setThumbnail(args.member.user.avatarURL)
-            .addField("User", `<@${args.member.user.id}>`)
-            .addField("Tag", args.member.user.tag || "*Unknown*")
-            .addField("Nickname", args.member.nickname || "*None*")
-            .addField("Type", args.member.user.bot ? ":robot: Bot" : ":raising_hand: Human")
+            .addField("User", `<@${args.member.user.id}> (${args.member.user.tag || "*Unknown*"})`)
+            .addField("User ID", args.member.id);
+
+        if (args.member.nickname) {
+            embed.addField("Nickname", args.member.nickname);
+        }
+
+        embed.addField("Type", args.member.user.bot ? ":robot: Bot" : ":raising_hand: Human")
             .addField("Joined Server", Utils.timeAgo(args.member.joinedTimestamp))
             .addField("Account Created", Utils.timeAgo(args.member.user.createdTimestamp))
             .addField("Last Message", args.member.lastMessage ? args.member.lastMessage.content : "*None*")
             .addField(roles.length - 1 > 0 ? `Roles [${roles.length - 1}]` : "Roles", finalRoles || "*None*")
-            .addField("User ID", args.member.id));
+            .addField("Highest Role", args.member.highestRole.toString());
+
+        if (args.member.serverDeaf || args.member.serverMute || args.member.id === args.member.guild.ownerID) {
+            const extra: string[] = [];
+
+            if (args.member.serverDeaf) {
+                extra.push("Deaf");
+            }
+
+            if (args.member.serverMute) {
+                extra.push("Mute");
+            }
+
+            if (args.member.id === args.member.guild.ownerID) {
+                extra.push("Owner");
+            }
+
+            embed.addField("Other", extra.join(", "));
+        }
+
+        await x.msg.channel.send(embed);
     }
 };

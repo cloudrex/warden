@@ -11,14 +11,12 @@ export default class InfoCommand extends Command {
         description: "View information about the server"
     };
 
-    readonly aliases = ["uptime"];
-
     readonly restrict: any = {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext): Promise<IAction<IEmbedActionArgs>> {
-        let emojisString: string = context.message.guild.emojis.map((emoji: Emoji) => emoji.toString())
+    public async executed(x: CommandContext): Promise<IAction<IEmbedActionArgs>> {
+        let emojisString: string = x.msg.guild.emojis.map((emoji: Emoji) => emoji.toString())
             .join(" ")
             .substr(0, 1024);
 
@@ -26,7 +24,7 @@ export default class InfoCommand extends Command {
 
         emojisString = splitEmojis.slice(0, 15).join(" ");
 
-        if (context.message.guild.emojis.size > 15) {
+        if (x.msg.guild.emojis.size > 15) {
             emojisString += `**+ ${splitEmojis.length - 15} more**`;
         }
 
@@ -35,15 +33,17 @@ export default class InfoCommand extends Command {
 
             args: {
                 embed: new RichEmbed()
-                    .addField("Guild", `${context.message.guild.name} (${context.message.guild.nameAcronym}) <${context.message.guild.id}>`)
-                    .addField("Uptime", Utils.timeAgoFromNow(context.bot.client.uptime))
-                    .addField("Members", context.message.guild.large ? `${context.message.guild.memberCount} (Large)` : context.message.guild.memberCount)
-                    .addField("Created", Utils.timeAgo(context.message.guild.createdTimestamp))
-                    .addField(`Emojis [${context.message.guild.emojis.size}]`, emojisString)
-                    .setThumbnail(context.message.guild.iconURL)
+                    .addField("Guild", `${x.msg.guild.name} (${x.msg.guild.nameAcronym}) <${x.msg.guild.id}>`)
+                    .addField("Owner", `<@${x.msg.guild.ownerID}>`)
+                    .addField("Region", x.msg.guild.region)
+                    .addField("Verification Level", x.msg.guild.verificationLevel)
+                    .addField("Members", x.msg.guild.large ? `${x.msg.guild.memberCount} (Large)` : x.msg.guild.memberCount)
+                    .addField("Created", Utils.timeAgo(x.msg.guild.createdTimestamp))
+                    .addField(`Emojis [${x.msg.guild.emojis.size}]`, emojisString)
+                    .setThumbnail(x.msg.guild.iconURL)
                     .setColor("GREEN"),
 
-                channelId: context.message.channel.id
+                channelId: x.msg.channel.id
             }
         };
     }

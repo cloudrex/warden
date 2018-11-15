@@ -13,8 +13,8 @@ export default class SuspendCommand extends Command {
         specific: [RestrictGroup.BotOwner]
     };
 
-    public async executed(context: CommandContext): Promise<void> {
-        await context.ok(":zzz: Entering suspension state");
-        context.bot.suspend(true);
+    public async executed(x: CommandContext): Promise<void> {
+        await x.ok(":zzz: Entering suspension state");
+        x.bot.suspend(true);
     }
 };

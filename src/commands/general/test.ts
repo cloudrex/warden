@@ -16,11 +16,11 @@ export default class TestCommand extends Command {
 
     public async executed(x: CommandContext): Promise<IAction<any> | null> {
         // TODO: Check if the send message failed and display error, and check if embeds + files can be sent.
-        if (x.message.channel.type === "text") {
-            const channel: TextChannel = x.message.channel as TextChannel;
-            const permissions: Permissions | null = await channel.permissionsFor(x.message.guild.me);
+        if (x.msg.channel.type === "text") {
+            const channel: TextChannel = x.msg.channel as TextChannel;
+            const permissions: Permissions | null = await channel.permissionsFor(x.msg.guild.me);
 
-            let canEmbed: boolean = x.message.guild.me.hasPermission("EMBED_LINKS");
+            let canEmbed: boolean = x.msg.guild.me.hasPermission("EMBED_LINKS");
 
             if (permissions !== null) {
                 canEmbed = permissions.hasPermission("EMBED_LINKS");
@@ -32,7 +32,7 @@ export default class TestCommand extends Command {
     
                     args: {
                         message: "I can send messages in this channel",
-                        channelId: x.message.channel.id,
+                        channelId: x.msg.channel.id,
                         requester: x.sender.username,
                         avatarUrl: x.sender.avatarURL
                     }
@@ -44,12 +44,12 @@ export default class TestCommand extends Command {
     
                     args: {
                         message: "I'm missing the `EMBED_LINKS` permission required for embeds",
-                        channelId: x.message.channel.id
+                        channelId: x.msg.channel.id
                     }
                 };
             }
         }
-        else if (x.message.channel.type === "dm") {
+        else if (x.msg.channel.type === "dm") {
             return {
                 type: ActionType.Message,
 

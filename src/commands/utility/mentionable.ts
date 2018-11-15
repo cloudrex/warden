@@ -31,14 +31,14 @@ export default class MentionableCommand extends Command<MentionableArgs> {
     };
 
     // TODO: Add support by id
-    public async executed(context: CommandContext, args: MentionableArgs): Promise<void> {
+    public async executed(x: CommandContext, args: MentionableArgs): Promise<void> {
         await args.role.setMentionable(!args.role.mentionable);
 
         if (args.role.mentionable) {
-            await context.ok(`Role <@${args.role.id}> is now mentionable.`);
+            await x.ok(`Role <@${args.role.id}> is now mentionable.`);
         }
         else {
-            await context.ok(`Role <@${args.role.id}> is no longer mentionable.`);
+            await x.ok(`Role <@${args.role.id}> is no longer mentionable.`);
         }
     }
 };

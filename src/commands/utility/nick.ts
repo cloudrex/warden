@@ -31,7 +31,7 @@ export default class NickCommand extends Command<NickArgs> {
         issuerPermissions: [Permission.ChangeNickname]
     };
 
-    public async executed(context: CommandContext, args: NickArgs): Promise<void> {
-        await context.message.member.setNickname(args.nickname);
+    public async executed(x: CommandContext, args: NickArgs): Promise<void> {
+        await x.msg.member.setNickname(args.nickname);
     }
 };

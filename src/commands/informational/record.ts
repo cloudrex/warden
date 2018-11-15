@@ -34,7 +34,7 @@ export default class RecordCommand extends Command<RecordArgs> {
     };
 
     // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages
-    public async executed(context: CommandContext, args: RecordArgs): Promise<IAction<any>> {
+    public async executed(x: CommandContext, args: RecordArgs): Promise<IAction<any>> {
         const messages: IDbMessage[] = await Mongo.collections.messages.find({
             authorId: args.member.id
         }).limit(max + 1).toArray();
@@ -45,9 +45,9 @@ export default class RecordCommand extends Command<RecordArgs> {
 
                 args: {
                     message: `No data on record for <@${args.member.id}>`,
-                    avatarUrl: context.sender.avatarURL,
-                    channelId: context.message.channel.id,
-                    requester: context.sender.username
+                    avatarUrl: x.sender.avatarURL,
+                    channelId: x.msg.channel.id,
+                    requester: x.sender.username
                 } as IRequestActionArgs
             };
         }

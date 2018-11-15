@@ -15,9 +15,9 @@ export default class StopCommand extends Command {
         specific: [RestrictGroup.BotOwner]
     };
 
-    public async executed(context: CommandContext): Promise<void> {
-        await context.ok("Disconnecting");
-        await context.bot.disconnect();
+    public async executed(x: CommandContext): Promise<void> {
+        await x.ok("Disconnecting");
+        await x.bot.disconnect();
         process.exit(0);
     }
 };

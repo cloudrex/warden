@@ -56,18 +56,18 @@ export default class MuteCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {
-        if (args.member.id === context.sender.id) {
-            await context.fail("You can't mute yourself silly.");
+    public async executed(x: CommandContext, args: MuteArgs, api: WardenAPI): Promise<void> {
+        if (args.member.id === x.sender.id) {
+            await x.fail("You can't mute yourself silly.");
 
             return;
         }
 
-        await api.executeAction(context.message.channel as TextChannel, {
+        await api.executeAction(x.msg.channel as TextChannel, {
             member: args.member,
             type: ModerationActionType.Mute,
             evidence: args.evidence,
-            moderator: context.message.member,
+            moderator: x.msg.member,
             reason: args.reason,
 
             // TODO:

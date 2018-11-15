@@ -39,14 +39,14 @@ export default class UnbanCommand extends Command<UnbanArgs> {
     };
 
     // TODO: Untested
-    public async executed(context: CommandContext, args: UnbanArgs): Promise<void> {
-        if (args.user === context.sender.id) {
-            await context.fail("You can't unban yourself.");
+    public async executed(x: CommandContext, args: UnbanArgs): Promise<void> {
+        if (args.user === x.sender.id) {
+            await x.fail("You can't unban yourself.");
 
             return;
         }
 
         // TODO: Current executeAction() needs GuildMember
-        await context.message.guild.unban(args.user);
+        await x.msg.guild.unban(args.user);
     }
 };

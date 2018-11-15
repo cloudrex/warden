@@ -45,7 +45,7 @@ export default class PermissionsCommand extends Command<PermissionsArgs> {
         return permissions.hasPermission(name) ? "Yes" : "";
     }
 
-    public async executed(context: CommandContext, args: PermissionsArgs): Promise<IAction<IMessageActionArgs>> {
+    public async executed(x: CommandContext, args: PermissionsArgs): Promise<IAction<IMessageActionArgs>> {
         const perms: Permissions = args.member.permissions;
 
         const data: Array<string[]> = [
@@ -73,7 +73,7 @@ export default class PermissionsCommand extends Command<PermissionsArgs> {
             type: ActionType.Message,
 
             args: {
-                channelId: context.message.channel.id,
+                channelId: x.msg.channel.id,
                 message: `\`\`\`scala\n${table(data, tableConfig)}\`\`\``
             }
         };

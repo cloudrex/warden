@@ -10,7 +10,7 @@ export default class TestECommand extends Command {
         specific: [RestrictGroup.BotOwner]
     };
 
-    public async executed(context: CommandContext): Promise<IAction<IMessageActionArgs>> {
+    public async executed(x: CommandContext): Promise<IAction<IMessageActionArgs>> {
         /* const sent: Message = await context.message.channel.send("Hello world") as Message;
         const menu: EmojiMenu = new EmojiMenu(sent.id, context.sender.id);
 
@@ -34,7 +34,7 @@ export default class TestECommand extends Command {
             type: ActionType.Message,
 
             args: {
-                channelId: context.message.channel.id,
+                channelId: x.msg.channel.id,
                 message: "hello world!"
             }
         };

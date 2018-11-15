@@ -47,26 +47,26 @@ export default class SoftbanCommand extends Command<SoftbanArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: SoftbanArgs, api: WardenAPI): Promise<void> {
-        if (args.member.id === context.sender.id) {
-            await context.fail("You can't softban yourself.");
+    public async executed(x: CommandContext, args: SoftbanArgs, api: WardenAPI): Promise<void> {
+        if (args.member.id === x.sender.id) {
+            await x.fail("You can't softban yourself.");
 
             return;
         }
         else if (!args.member.bannable) {
-            await context.fail("Unable to softban that person.");
+            await x.fail("Unable to softban that person.");
 
             return;
         }
 
-        await api.executeAction(context.message.channel as TextChannel, {
+        await api.executeAction(x.msg.channel as TextChannel, {
             member: args.member,
             reason: args.reason,
             evidence: args.evidence,
-            moderator: context.message.member,
+            moderator: x.msg.member,
             type: ModerationActionType.Softban
         });
 
-        await context.message.guild.unban(args.member.id, "Softban");
+        await x.msg.guild.unban(args.member.id, "Softban");
     }
 };

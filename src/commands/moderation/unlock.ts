@@ -25,8 +25,8 @@ export default class UnlockCommand extends Command {
         return true;
     }
 
-    public async executed(context: CommandContext): Promise<void> {
-        const everyone: Role = context.message.guild.roles.find("name", "@everyone");
+    public async executed(x: CommandContext): Promise<void> {
+        const everyone: Role = x.msg.guild.roles.find("name", "@everyone");
 
         await everyone.setPermissions([
             "CREATE_INSTANT_INVITE",
@@ -40,6 +40,6 @@ export default class UnlockCommand extends Command {
             "READ_MESSAGES"
         ]);
 
-        await context.ok(":unlock: Guild is no longer under lockdown.");
+        await x.ok(":unlock: Guild is no longer under lockdown.");
     }
 };

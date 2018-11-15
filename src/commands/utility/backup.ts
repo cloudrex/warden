@@ -17,10 +17,10 @@ export default class BackupCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext): Promise<void> {
+    public async executed(x: CommandContext): Promise<void> {
         // TODO: Missing channel permissions and guild settings
 
-        const channels: IDbChannel[] = context.message.guild.channels.filter((channel) => channel.type === "text" || channel.type === "voice").map((channel: Channel) => {
+        const channels: IDbChannel[] = x.msg.guild.channels.filter((channel) => channel.type === "text" || channel.type === "voice").map((channel: Channel) => {
             return {
                 id: channel.id,
                 name: (channel as GuildChannel).name,
@@ -31,10 +31,10 @@ export default class BackupCommand extends Command {
 
         await Mongo.collections.backups.insertOne({
             time: Date.now(),
-            guildId: context.message.guild.id,
+            guildId: x.msg.guild.id,
             channels: channels
         });
 
-        await context.ok("Backup completed");
+        await x.ok("Backup completed");
     }
 };

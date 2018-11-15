@@ -48,24 +48,24 @@ export default class KickCommand extends Command<KickArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: KickArgs, api: WardenAPI): Promise<void> {
-        if (args.member.id === context.sender.id) {
-            await context.fail("You can't kick yourself silly.");
+    public async executed(x: CommandContext, args: KickArgs, api: WardenAPI): Promise<void> {
+        if (args.member.id === x.sender.id) {
+            await x.fail("You can't kick yourself silly.");
 
             return;
         }
         else if (!args.member.kickable) {
-            await context.fail("Unable to kick that person.");
+            await x.fail("Unable to kick that person.");
 
             return;
         }
 
-        await api.executeAction(context.message.channel as TextChannel, {
+        await api.executeAction(x.msg.channel as TextChannel, {
             type: ModerationActionType.Kick,
             reason: args.reason,
             member: args.member,
             evidence: args.evidence,
-            moderator: context.message.member
+            moderator: x.msg.member
         });
     }
 };

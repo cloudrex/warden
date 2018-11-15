@@ -37,14 +37,14 @@ export default class EmulateCommand extends Command<EmulateArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: EmulateArgs): Promise<void> {
-        await context.message.channel.send(new RichEmbed()
+    public async executed(x: CommandContext, args: EmulateArgs): Promise<void> {
+        await x.msg.channel.send(new RichEmbed()
             .setTitle(`Emulation for ${args.member.user.username}`)
             .setColor("GREEN")
-            .setFooter(`Requested by ${context.sender.tag}`, context.sender.avatarURL)
+            .setFooter(`Requested by ${x.sender.tag}`, x.sender.avatarURL)
             .setDescription(`Emulating message from **${args.member.user.username}** containing *${args.message.length > 70 ? args.message.substring(0, 66) + " ..." : args.message}*`));
 
-        const modifiedMessage: Message = Object.assign({}, context.message);
+        const modifiedMessage: Message = Object.assign({}, x.msg);
 
         modifiedMessage.content = args.message;
     }

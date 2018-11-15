@@ -31,13 +31,13 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
         cooldown: 2
     };
 
-    public async executed(context: CommandContext, args: LastSeenArgs): Promise<IAction<IMessageActionArgs>> {
-        if (args.member.id === context.bot.client.user.id) {
+    public async executed(x: CommandContext, args: LastSeenArgs): Promise<IAction<IMessageActionArgs>> {
+        if (args.member.id === x.bot.client.user.id) {
             return {
                 type: ActionType.OkEmbed,
 
                 args: {
-                    channelId: context.message.channel.id,
+                    channelId: x.msg.channel.id,
                     message: "Nice try"
                 }
             };
@@ -54,7 +54,7 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
                 type: ActionType.OkEmbed,
 
                 args: {
-                    channelId: context.message.channel.id,
+                    channelId: x.msg.channel.id,
                     message: `:eyes: <@${args.member.id}> was last seen **${Utils.timeAgo(result.time, false)}**`
                 }
             };
@@ -64,7 +64,7 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
                 type: ActionType.FailEmbed,
 
                 args: {
-                    channelId: context.message.channel.id,
+                    channelId: x.msg.channel.id,
                     message: `No recorded data for <@${args.member.id}>`
                 }
             };

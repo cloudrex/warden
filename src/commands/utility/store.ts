@@ -42,10 +42,10 @@ export default class StoreCommand extends Command<StoreArgs> {
         environment: ChatEnvironment.Guild
     };
 
-    public async executed(context: CommandContext, args: StoreArgs): Promise<void> {
+    public async executed(x: CommandContext, args: StoreArgs): Promise<void> {
         if (args.messageId === undefined || args.name === undefined) {
             if (args.messageId === undefined && args.name === undefined) {
-                const storedMessages: IDbStoredMessage[] | null = await StoredMessages.getAllByUser(context.sender.id);
+                const storedMessages: IDbStoredMessage[] | null = await StoredMessages.getAllByUser(x.sender.id);
 
                 let response: string = "";
 
@@ -62,37 +62,37 @@ export default class StoreCommand extends Command<StoreArgs> {
                     }
                 }
 
-                await context.ok(response);
+                await x.ok(response);
             }
             else if (args.messageId === undefined && args.name !== undefined) {
-                const storedMessage: IDbStoredMessage | null = await StoredMessages.getByName(context.sender.id, args.name);
+                const storedMessage: IDbStoredMessage | null = await StoredMessages.getByName(x.sender.id, args.name);
 
                 if (storedMessage !== null) {
-                    await context.ok(`(${Utils.timeAgo(storedMessage.time)}) **${storedMessage.authorTag}** <:announcement:490726045880811531> ${storedMessage.message}`)
+                    await x.ok(`(${Utils.timeAgo(storedMessage.time)}) **${storedMessage.authorTag}** <:announcement:490726045880811531> ${storedMessage.message}`)
                 }
                 else {
-                    await context.fail("There's no stored message assosiated with that name");
+                    await x.fail("There's no stored message assosiated with that name");
                 }
             }
             else {
-                await context.fail("Unknown error, this shouldn't happen (432)");
+                await x.fail("Unknown error, this shouldn't happen (432)");
             }
 
             return;
         }
 
-        if (await StoredMessages.existsByUserId(context.sender.id, args.name)) {
-            await context.fail("You've already saved a message using that identifier, please use a different one");
+        if (await StoredMessages.existsByUserId(x.sender.id, args.name)) {
+            await x.fail("You've already saved a message using that identifier, please use a different one");
 
             return;
         }
 
-        if (await StoredMessages.addByMessageId(context.sender, args.name, args.messageId) === false) {
-            await context.fail("The specified message does not exist or was not recorded");
+        if (await StoredMessages.addByMessageId(x.sender, args.name, args.messageId) === false) {
+            await x.fail("The specified message does not exist or was not recorded");
 
             return;
         }
 
-        await context.ok("Successfully saved message into the database");
+        await x.ok("Successfully saved message into the database");
     }
 };

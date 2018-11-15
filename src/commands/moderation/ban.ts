@@ -64,24 +64,24 @@ export default class BanCommand extends Command<BanArgs> {
         return true;
     }
 
-    public async executed(context: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
-        if (args.member.id === context.sender.id) {
-            await context.fail("You can't ban yourself silly.");
+    public async executed(x: CommandContext, args: BanArgs, api: WardenAPI): Promise<void> {
+        if (args.member.id === x.sender.id) {
+            await x.fail("You can't ban yourself silly.");
 
             return;
         }
         else if (!args.member.bannable) {
-            await context.fail("Unable to ban that person.");
+            await x.fail("Unable to ban that person.");
 
             return;
         }
 
-        await api.executeAction(context.message.channel as TextChannel, {
+        await api.executeAction(x.msg.channel as TextChannel, {
             type: ModerationActionType.Ban,
             reason: args.reason,
             member: args.member,
             evidence: args.evidence,
-            moderator: context.message.member
+            moderator: x.msg.member
         });
     }
 };

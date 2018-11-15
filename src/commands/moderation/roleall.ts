@@ -20,7 +20,7 @@ export default class RoleAllCommand extends Command {
         environment: ChatEnvironment.Guild
     };
 
-    public executed(context: CommandContext): void {
+    public executed(x: CommandContext): void {
         // const role: Role = context.arguments[0];
 
         // TODO

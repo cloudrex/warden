@@ -18,7 +18,7 @@ export default class HelpCommand extends Command {
         description: "View all available commands"
     };
 
-    public async executed(context: CommandContext): Promise<void> {
+    public async executed(x: CommandContext): Promise<void> {
         // TODO: Broken by decorator commands
         /* let commands: string = context.bot.commandStore.commands
             .map((command: Command) => `${(command as any).type !== undefined ? `:${(command as any).type}:` : `:${CommandType.Unknown}:`} **${command.meta.name}**: ${command.meta.description}`)
@@ -44,6 +44,6 @@ export default class HelpCommand extends Command {
             await context.ok(commands, "Help - Available Commands");
         } */
 
-        await context.fail("Command is currently broken");
+        await x.fail("Command is currently broken");
     }
 };
