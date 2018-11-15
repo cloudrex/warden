@@ -9,13 +9,11 @@ export default class WatchdogService extends ForkedService {
     readonly fork: boolean = true;
 
     public start(): void {
-        //
         Log.debug("Watchdog service started!");
+        // TODO:
     }
 
     public onMessage(msg: IProcessMsg, sender: any): void {
         Log.debug("Got a message @ watchdog service!");
-
-        // TODO:
     }
 }

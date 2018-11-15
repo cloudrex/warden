@@ -9,7 +9,8 @@
         "inspect": "npm run build && node --inspect dist/app.js",
         "inspect-break": "npm run build && node --inspect-brk dist/app.js",
         "postinstall": "npm run build",
-        "linst": "sudo bash tasks/linst.sh"
+        "local-copy-forge:linux": "sudo bash tasks/local-copy-forge.sh",
+        "local-copy-forge:windows": "start tasks/local-copy-forge.bat"
     },
     "repository": {
         "type": "git",
@@ -31,5 +32,8 @@
         "string-similarity": "^1.2.2",
         "table": "^5.0.2",
         "typescript": "^2.9.2"
+    },
+    "devDependencies": {
+        "grunt": "^1.0.3"
     }
 }
