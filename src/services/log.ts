@@ -26,7 +26,7 @@ export default class LogService extends Service {
                 channel.send(new RichEmbed()
                     .setColor("RED")
                     .setTitle("Role Deleted")
-                    .setDescription(`Role <@&${role.id}> was deleted`));
+                    .setDescription(`Role '${role.name}' (${role.id}) was deleted`));
             }
         });
 
@@ -37,7 +37,7 @@ export default class LogService extends Service {
                 const embed: RichEmbed = new RichEmbed()
                     .setColor("BLUE")
                     .setTitle("Role Updated")
-                    .setDescription(`Role <@&${old.id}> was updated`);
+                    .setDescription(`Role '${old.name}' (<@&${old.id}>) was updated`);
 
                 if (old.name !== updated.name) {
                     embed.addField("Name", `${old.name} ⇒ ${updated.name}`);
@@ -126,7 +126,7 @@ export default class LogService extends Service {
                 logChannel.send(new RichEmbed()
                     .setColor("GREEN")
                     .setTitle("Emoji Created")
-                    .setDescription(`Emoji '${emoji.name}' was created`));
+                    .setDescription(`Emoji '${emoji.name}' (${emoji.toString()}) was created`));
             }
         });
 
@@ -137,7 +137,7 @@ export default class LogService extends Service {
                 logChannel.send(new RichEmbed()
                     .setColor("RED")
                     .setTitle("Emoji Deleted")
-                    .setDescription(`Emoji '${emoji.name}' was deleted`));
+                    .setDescription(`Emoji '${emoji.name}' (${emoji.id}) was deleted`));
             }
         });
 
@@ -148,7 +148,7 @@ export default class LogService extends Service {
                 const embed: RichEmbed = new RichEmbed()
                     .setColor("BLUE")
                     .setTitle("Emoji Updated")
-                    .setDescription(`Emoji '${old.name}' was updated`);
+                    .setDescription(`Emoji '${old.name}' (${old.toString()}) was updated`);
 
                 if (old.name !== updated.name) {
                     embed.addField("Name", `${old.name} ⇒ ${updated.name}`);
