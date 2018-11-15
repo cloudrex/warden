@@ -9,10 +9,10 @@ export default class LogService extends Service {
 
     public start(): void {
         this.on(DiscordEvent.RoleCreated, (role: Role) => {
-            const channel: TextChannel | null = LogService.getLogChannel(role.guild);
+            const logChannel: TextChannel | null = LogService.getLogChannel(role.guild);
 
-            if (channel) {
-                channel.send(new RichEmbed()
+            if (logChannel) {
+                this.send(logChannel, new RichEmbed()
                     .setColor("GREEN")
                     .setTitle("Role Created")
                     .setDescription(`Role <@${role.id}> was created`));
@@ -20,10 +20,10 @@ export default class LogService extends Service {
         });
 
         this.on(DiscordEvent.RoleDeleted, (role: Role) => {
-            const channel: TextChannel | null = LogService.getLogChannel(role.guild);
+            const logChannel: TextChannel | null = LogService.getLogChannel(role.guild);
 
-            if (channel) {
-                channel.send(new RichEmbed()
+            if (logChannel) {
+                this.send(logChannel, new RichEmbed()
                     .setColor("RED")
                     .setTitle("Role Deleted")
                     .setDescription(`Role '${role.name}' (${role.id}) was deleted`));
@@ -31,9 +31,9 @@ export default class LogService extends Service {
         });
 
         this.on(DiscordEvent.RoleUpdated, (old: Role, updated: Role) => {
-            const channel: TextChannel | null = LogService.getLogChannel(old.guild);
+            const logChannel: TextChannel | null = LogService.getLogChannel(old.guild);
 
-            if (channel) {
+            if (logChannel) {
                 const embed: RichEmbed = new RichEmbed()
                     .setColor("BLUE")
                     .setTitle("Role Updated")
@@ -63,7 +63,7 @@ export default class LogService extends Service {
                     embed.addField("Position", `${old.position} ⇒ ${updated.position}`);
                 }
 
-                channel.send(embed);
+                this.send(logChannel, embed);
             }
         });
 
@@ -71,7 +71,7 @@ export default class LogService extends Service {
             const logChannel: TextChannel | null = LogService.getLogChannel(channel.guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                this.send(logChannel, new RichEmbed()
                     .setColor("GREEN")
                     .setTitle("Channel Created")
                     .setDescription(`Channel '${channel.name}' ${channel.type === "text" ? `(<#${channel.id}>)` : ""} was created`));
@@ -82,14 +82,14 @@ export default class LogService extends Service {
             const logChannel: TextChannel | null = LogService.getLogChannel(channel.guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                this.send(logChannel, new RichEmbed()
                     .setColor("RED")
                     .setTitle("Channel Deleted")
                     .setDescription(`Channel '${channel.name}' (${channel.id}) was deleted`));
             }
         });
 
-        this.on(DiscordEvent.ChannelUpdated, (old: GuildChannel, updated: GuildChannel) => {
+        /* this.on(DiscordEvent.ChannelUpdated, (old: GuildChannel, updated: GuildChannel) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(old.guild);
 
             if (logChannel) {
@@ -115,15 +115,15 @@ export default class LogService extends Service {
                     }
                 }
 
-                logChannel.send(embed);
+                this.send(logChannel, embed);
             }
-        });
+        }); */
 
         this.on(DiscordEvent.EmojiCreated, (emoji: Emoji) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(emoji.guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                this.send(logChannel, new RichEmbed()
                     .setColor("GREEN")
                     .setTitle("Emoji Created")
                     .setDescription(`Emoji '${emoji.name}' (${emoji.toString()}) was created`));
@@ -134,7 +134,7 @@ export default class LogService extends Service {
             const logChannel: TextChannel | null = LogService.getLogChannel(emoji.guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                this.send(logChannel, new RichEmbed()
                     .setColor("RED")
                     .setTitle("Emoji Deleted")
                     .setDescription(`Emoji '${emoji.name}' (${emoji.id}) was deleted`));
@@ -154,7 +154,7 @@ export default class LogService extends Service {
                     embed.addField("Name", `${old.name} ⇒ ${updated.name}`);
                 }
 
-                logChannel.send(embed);
+                this.send(logChannel, embed);
             }
         });
 
@@ -162,7 +162,7 @@ export default class LogService extends Service {
             const logChannel: TextChannel | null = LogService.getLogChannel(guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                this.send(logChannel, new RichEmbed()
                     .setColor("RED")
                     .setTitle("Member Banned")
                     .setDescription(`Member '${user.tag}' (${user.id}) was banned`));
@@ -173,7 +173,7 @@ export default class LogService extends Service {
             const logChannel: TextChannel | null = LogService.getLogChannel(guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                this.send(logChannel, new RichEmbed()
                     .setColor("GREEN")
                     .setTitle("Member Unbanned")
                     .setDescription(`Member '${user.tag}' (${user.id}) was unbanned`));
@@ -184,7 +184,7 @@ export default class LogService extends Service {
             const logChannel: TextChannel | null = LogService.getLogChannel(member.guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                this.send(logChannel, new RichEmbed()
                     .setColor("GREEN")
                     .setTitle("Member Joined")
                     .setDescription(`Member '${member.user.tag}' (<@${member.id}>) joined`));
@@ -195,12 +195,16 @@ export default class LogService extends Service {
             const logChannel: TextChannel | null = LogService.getLogChannel(member.guild);
 
             if (logChannel) {
-                logChannel.send(new RichEmbed()
+                this.send(logChannel, new RichEmbed()
                     .setColor("RED")
                     .setTitle("Member Left")
                     .setDescription(`Member '${member.user.tag}' (${member.id}) left`));
             }
         });
+    }
+
+    private send(logChannel: TextChannel, embed: RichEmbed): void {
+        logChannel.send(embed).catch(() => {});
     }
 
     // TODO: Use a better method to find the channel
