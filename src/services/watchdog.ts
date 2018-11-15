@@ -9,7 +9,7 @@ export default class WatchdogService extends ForkedService {
     readonly fork: boolean = true;
 
     public start(): void {
-        Log.debug("Watchdog service started!");
+        Log.debug("Watchdog service started! Hello from watchdog!");
         // TODO:
     }
 
