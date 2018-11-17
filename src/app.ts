@@ -163,7 +163,8 @@ async function start(): Promise<void> {
             "prefix",
             "throw",
             "cli",
-            "restart"
+            "restart",
+            "reflect"
         ]
     });
 

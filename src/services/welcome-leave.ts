@@ -11,7 +11,7 @@ let messages: WelcomeLeaveMessages | null = null;
 
 export default class WelcomeLeaveService extends Service {
     readonly meta = {
-        name: "welcome & leave",
+        name: "welcome-leave",
         description: "Greet and wave goodbye to users who join and leave"
     };
 
