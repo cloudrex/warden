@@ -1,15 +1,6 @@
-import {IMessageActionArgs, IAction, ActionType, Command, CommandContext, ChatEnvironment, InternalArgType, IArgument} from "@cloudrex/forge";
+import {IMessageActionArgs, FormattedMessage, IAction, ActionType, Command, CommandContext, ChatEnvironment, InternalArgType, IArgument} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import {table, TableUserConfig} from "table";
 import {Permissions, PermissionResolvable, Message, GuildMember, Snowflake} from "discord.js";
-
-const tableConfig: TableUserConfig = {
-    columns: {
-        1: {
-            alignment: "center"
-        }
-    }
-};
 
 type PermissionsArgs = {
     readonly member: GuildMember;
@@ -41,40 +32,38 @@ export default class PermissionsCommand extends Command<PermissionsArgs> {
         }
     ];
 
-    private hasPermission(name: PermissionResolvable, permissions: Permissions): string {
-        return permissions.hasPermission(name) ? "Yes" : "";
+    private hasPermission(name: PermissionResolvable, permissions: Permissions): boolean {
+        return permissions.hasPermission(name);
     }
 
     public async executed(x: CommandContext, args: PermissionsArgs): Promise<IAction<IMessageActionArgs>> {
         const perms: Permissions = args.member.permissions;
 
-        const data: Array<string[]> = [
-            ["Permission", "Yes/No"],
-            ["Administrator", this.hasPermission("ADMINISTRATOR", perms)],
-            ["View Audit Log", this.hasPermission("VIEW_AUDIT_LOG", perms)],
-            ["Manage Server", this.hasPermission("MANAGE_GUILD", perms)],
-            ["Manage Roles", this.hasPermission("MANAGE_ROLES", perms)],
-            ["Manage Channels", this.hasPermission("MANAGE_CHANNELS", perms)],
-            ["Kick Members", this.hasPermission("KICK_MEMBERS", perms)],
-            ["Ban Members", this.hasPermission("BAN_MEMBERS", perms)],
-            ["Create Invite", this.hasPermission("CREATE_INSTANT_INVITE", perms)],
-            ["Manage Nicknames", this.hasPermission("MANAGE_NICKNAMES", perms)],
-            ["Manage Emojis", this.hasPermission("MANAGE_EMOJIS", perms)],
-            ["Send Messages", this.hasPermission("SEND_MESSAGES", perms)],
-            ["Manage Messages", this.hasPermission("MANAGE_MESSAGES", perms)],
-            ["Embed Links", this.hasPermission("EMBED_LINKS", perms)],
-            ["Attach Files", this.hasPermission("ATTACH_FILES", perms)],
-            ["Mention Everyone", this.hasPermission("MENTION_EVERYONE", perms)],
+        let message: string = `Permissions of ${args.member.user.tag}\n\n`;
 
-            // TODO: Add missing permissions?
-        ];
+        // TODO: Use a loop instead
+        message += `${this.hasPermission("ADMINISTRATOR", perms) ? "+" : "-"} Administrator\n`;
+        message += `${this.hasPermission("VIEW_AUDIT_LOG", perms) ? "+" : "-"} View Audit Log\n`;
+        message += `${this.hasPermission("MANAGE_GUILD", perms) ? "+" : "-"} Manage Server\n`;
+        message += `${this.hasPermission("MANAGE_ROLES", perms) ? "+" : "-"} Manage Roles\n`;
+        message += `${this.hasPermission("MANAGE_CHANNELS", perms) ? "+" : "-"} Manage Channels\n`;
+        message += `${this.hasPermission("KICK_MEMBERS", perms) ? "+" : "-"} Kick Members\n`;
+        message += `${this.hasPermission("BAN_MEMBERS", perms) ? "+" : "-"} Ban Members\n`;
+        message += `${this.hasPermission("CREATE_INSTANT_INVITE", perms) ? "+" : "-"} Create Invite\n`;
+        message += `${this.hasPermission("MANAGE_NICKNAMES", perms) ? "+" : "-"} Manage Nicknames\n`;
+        message += `${this.hasPermission("MANAGE_EMOJIS", perms) ? "+" : "-"} Manage Emojis\n`;
+        message += `${this.hasPermission("SEND_MESSAGES", perms) ? "+" : "-"} Send Messages\n`;
+        message += `${this.hasPermission("MANAGE_MESSAGES", perms) ? "+" : "-"} Manage Messages\n`;
+        message += `${this.hasPermission("EMBED_LINKS", perms) ? "+" : "-"} Embed Links\n`;
+        message += `${this.hasPermission("ATTACH_FILES", perms) ? "+" : "-"} Attach Files\n`;
+        message += `${this.hasPermission("MENTION_EVERYONE", perms) ? "+" : "-"} Mention Everyone\n`;
 
         return {
             type: ActionType.Message,
 
             args: {
                 channelId: x.msg.channel.id,
-                message: `\`\`\`scala\n${table(data, tableConfig)}\`\`\``
+                message: new FormattedMessage().codeBlock(message, "diff").build()
             }
         };
     }
