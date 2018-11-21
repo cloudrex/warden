@@ -177,7 +177,6 @@ async function start(): Promise<void> {
     const api: WardenAPI = new WardenAPI(bot);
 
     await bot.connect(api);
-    api.setup();
 }
 
 start();

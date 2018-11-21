@@ -213,4 +213,9 @@ export default class LogService extends Service {
             return channel.name === "server-log" && channel.type === "text";
         }) as TextChannel || null;
     }
+
+    // TODO:
+    readonly canStart = (): boolean => {
+        return false;
+    }
 }

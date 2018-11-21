@@ -2,7 +2,7 @@ import {GuildMember, TextChannel} from "discord.js";
 import WardenAPI from "../../core/warden-api";
 import {Command, IArgument, CommandContext, Permission, TrivialArgType, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import {ModerationActionType} from "../../database/mongo-database";
+import {ModActionType} from "../../database/mongo-database";
 
 export type KickArgs = {
     readonly member: GuildMember;
@@ -61,7 +61,7 @@ export default class KickCommand extends Command<KickArgs> {
         }
 
         await api.executeAction(x.msg.channel as TextChannel, {
-            type: ModerationActionType.Kick,
+            type: ModActionType.Kick,
             reason: args.reason,
             member: args.member,
             evidence: args.evidence,

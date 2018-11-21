@@ -2,7 +2,7 @@ import {GuildMember, TextChannel} from "discord.js";
 import {IArgument, Command, Permission, TrivialArgType, CommandContext, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import WardenAPI from "../../core/warden-api";
 import {CommandType} from "../general/help";
-import {ModerationActionType} from "../../database/mongo-database";
+import {ModActionType} from "../../database/mongo-database";
 
 type SoftbanArgs = {
     readonly member: GuildMember;
@@ -64,7 +64,7 @@ export default class SoftbanCommand extends Command<SoftbanArgs> {
             reason: args.reason,
             evidence: args.evidence,
             moderator: x.msg.member,
-            type: ModerationActionType.Softban
+            type: ModActionType.Softban
         });
 
         await x.msg.guild.unban(args.member.id, "Softban");

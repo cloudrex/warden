@@ -1,7 +1,7 @@
 import {IArgument, ChatEnvironment, Command, TrivialArgType, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
-import {ModerationActionType} from "../../database/mongo-database";
+import {ModActionType} from "../../database/mongo-database";
 import WardenAPI from "../../core/warden-api";
 
 type WarnArgs = {
@@ -61,7 +61,7 @@ export default class WarnCommand extends Command<WarnArgs> {
         }
 
         await api.executeAction(x.msg.channel as TextChannel, {
-            type: ModerationActionType.Warn,
+            type: ModActionType.Warn,
             moderator: x.msg.member,
             reason: args.reason,
             member: args.member,

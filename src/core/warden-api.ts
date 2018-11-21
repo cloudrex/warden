@@ -1,14 +1,24 @@
-import {Guild, GuildMember, Message, RichEmbed, Snowflake, TextChannel} from "discord.js";
-import {Bot, Log} from "@cloudrex/forge";
-
-import Mongo, {IDbModAction, IModAction, ModerationActionType} from "../database/mongo-database";
-
+import {Guild, Message, RichEmbed, Snowflake, TextChannel, ColorResolvable, User} from "discord.js";
+import {Bot, Log, Utils, CommandContext} from "@cloudrex/forge";
+import Mongo, {IDbModAction, IModAction, ModActionType} from "../database/mongo-database";
 import {BadWords, RacialSlurs} from "./constants";
 import {config} from "../app";
 import {DatabaseGuildConfig} from "../database/guild-config";
 import Convert from "./convert";
 
 export type MemberConfigType = "tracking";
+
+const modActionTypeStrings: any = {
+    [ModActionType.Ban]: "Banned",
+    [ModActionType.BanId]: "Banned",
+    [ModActionType.Kick]: "Kicked",
+    [ModActionType.Mute]: "Muted",
+    [ModActionType.Softban]: "Softbanned",
+    [ModActionType.Test]: "Test",
+    [ModActionType.Unban]: "Unbanned",
+    [ModActionType.Unmute]: "Unmuted",
+    [ModActionType.Warn]: "Warned"
+};
 
 export enum CaseType {
     Warn,
@@ -29,30 +39,13 @@ const SuspectedViolation: any = {
     None: "None"
 };
 
-export interface ConsumerApiChannels {
-    readonly modLog: Snowflake;
-    readonly suggestions: Snowflake;
-    readonly review: Snowflake;
-    readonly votes: Snowflake;
-    readonly decisions: Snowflake;
-    readonly changes: Snowflake;
-}
-
-export interface ConsumerApiResolvedChannels {
-    readonly modLog: TextChannel;
-    readonly suggestions: TextChannel;
-    readonly review: TextChannel;
-}
-
-export interface ConsumerAPIRoles {
-    readonly muted: Snowflake;
-}
-
-export interface WardenApiOptions {
-    readonly bot: Bot;
-    readonly guild: Snowflake;
-    readonly roles: ConsumerAPIRoles;
-    readonly channels: ConsumerApiChannels;
+export type IDmReportOptions = {
+    readonly type: ModActionType;
+    readonly reason: string;
+    readonly color: ColorResolvable;
+    readonly time: number;
+    readonly end?: number;
+    readonly guildName: string;
 }
 
 export default class WardenAPI {
@@ -60,117 +53,69 @@ export default class WardenAPI {
 
     private readonly bot: Bot;
 
-    public caseCounter: number;
-
-    // TODO: Type
-    private channels?: ConsumerApiResolvedChannels;
-
     /**
      * @param {WardenApiOptions} options
      */
     constructor(bot: Bot) {
         this.bot = bot;
         this.deletedMessages = new Map<Snowflake, Message>();
-        this.caseCounter = 0;
-    }
-
-    public setup(): this {
-        // Setup channels
-        this.channels = {
-            modLog: this.getChannel(config.channelModLog),
-            suggestions: this.getChannel(config.channelSuggestions),
-            review: this.getChannel(config.channelReview)
-        };
-
-        this.caseCounter = 0;// TODO await this.getCaseCounter();
-
-        return this;
     }
 
     /**
      * @param {TextChannel} channel
-     * @param {IModAction} action
+     * @param {IModAction} rawAction
      * @return {Promise<void>}
      */
-    public async executeAction(channel: TextChannel, action: IModAction): Promise<void> {
-        const reason: string = `${action.moderator.user.tag} => ${action.reason}`;
+    public async executeAction(channel: TextChannel, rawAction: IModAction): Promise<void> {
+        const action: IModAction = Object.assign({}, rawAction);
         const automatic: boolean = action.moderator.id === this.bot.client.user.id;
+
+        (action.time as any) = Date.now();
 
         const embed: RichEmbed | null = WardenAPI.createModerationActionEmbed(Convert.toDatabaseModerationAction(null, action, automatic), automatic);
 
+        let reportOptions: Partial<IDmReportOptions> | null = null;
+
         switch (action.type) {
-            case ModerationActionType.Warn: {
-                const warnDM: string = automatic ? `You were automatically warned for **${action.reason}**` : `You were warned by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`;
+            case ModActionType.Warn: {
+                reportOptions = {
+                    color: "GOLD"
+                };
 
-                try {
-                    await (await action.member.createDM()).send(new RichEmbed()
-                        .setDescription(warnDM)
-                        .setColor("PURPLE"));
-                    }
-                catch (e) {}
+                // TODO
 
                 break;
             }
 
-            case ModerationActionType.Mute: {
-                await action.member.addRole(action.member.guild.roles.find("name", "Muted"), reason);
+            case ModActionType.Mute: {
+                reportOptions = {
+                    color: "PURPLE"
+                };
 
-                try {
-                    (await action.member.createDM()).send(new RichEmbed()
-                        .setDescription(`You were muted by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                        .setColor("BLUE"));
-                }
-                catch (e) {}
+                // TODO
 
                 break;
             }
 
-            case ModerationActionType.Ban: {
-                try {
-                    await (await action.member.createDM()).send(new RichEmbed()
-                        .setDescription(`You were banned from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                        .setColor("RED"))
+            case ModActionType.Ban: {
+                reportOptions = {
+                    color: "RED"
+                };
+
+                if (action.member.bannable) {
+                    await action.member.ban({
+                        reason: `${action.moderator.user.tag}: ${action.reason}`
+                    });
                 }
-                catch (e) {}
-
-                await action.member.ban({
-                    days: 1,
-                    reason
-                });
-
-                break;
-            }
-
-            case ModerationActionType.Kick: {
-                try {
-                    await (await action.member.createDM()).send(new RichEmbed()
-                        .setDescription(`You were kicked from **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) for **${action.reason}**`)
-                        .setColor("GOLD"))
+                else {
+                    Log.warn("[WardenAPI.executeAction] Expecting member to be bannable");
                 }
-                catch (e) {}
-
-                await action.member.kick(reason);
-
-                break;
-            }
-
-            case ModerationActionType.Unban: {
-                await action.member.guild.unban(action.member.id, reason);
-
-                try {
-                    await (await action.member.createDM()).send(new RichEmbed()
-                        .setDescription(`You have been pardoned in **${action.member.guild.name}** by <@${action.moderator.id}> (${action.moderator.user.username}) because **${action.reason}**`)
-                        .setColor("GREEN"))
-                }
-                catch (e) {}
 
                 break;
             }
 
             default: {
-                Log.error(`[WardenAPI.executeAction] Unexpected action type: '${action.type}'`);
-
-                return;
+                throw new Error(`[WardenAPI.executeAction] Invalid or unknown moderation action type: ${rawAction.type}`);
             }
         }
 
@@ -189,10 +134,27 @@ export default class WardenAPI {
             return;
         }
 
+        reportOptions = {
+            ...reportOptions,
+            type: action.type,
+            time: Date.now(),
+            guildName: action.moderator.guild.name,
+            reason: action.reason,
+            end: action.end
+        };
+
+        // Report to the violator
+        await this.sendDmReport(action.member.user, WardenAPI.createDmReport(reportOptions as IDmReportOptions));
+
+        // Send action log message
         const sent: Message = await (await channel.guild.channels.get(modLogChannel) as TextChannel).send(embed) as Message;
 
         await sent.edit(embed.setFooter(`Case ID: ${sent.id} • ${embed.footer.text}`, embed.footer.icon_url));
         await WardenAPI.saveModerationAction(action, sent.id, this.bot && action.moderator.id === this.bot.client.user.id);
+    }
+
+    private async sendDmReport(user: User, report: RichEmbed): Promise<void> {
+        await (await user.createDM()).send(report);
     }
 
     /**
@@ -217,7 +179,7 @@ export default class WardenAPI {
     // TODO: Isn't automatic already determined & contained in 'action'?
     public static createModerationActionEmbed(action: IDbModAction, automatic: boolean): RichEmbed | null {
         switch (action.type) {
-            case ModerationActionType.Ban: {
+            case ModActionType.Ban: {
                 return new RichEmbed()
                     .setTitle("Member Banned")
                     .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
@@ -228,7 +190,7 @@ export default class WardenAPI {
                     .setColor("RED");
             }
 
-            case ModerationActionType.Warn: {
+            case ModActionType.Warn: {
                 return new RichEmbed()
                     .setTitle("Member Warned")
                     .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
@@ -239,7 +201,7 @@ export default class WardenAPI {
                     .setColor("PURPLE");
             }
 
-            case ModerationActionType.Kick: {
+            case ModActionType.Kick: {
                 return new RichEmbed()
                     .setTitle("Member Kicked")
                     .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
@@ -250,7 +212,7 @@ export default class WardenAPI {
                     .setColor("GOLD");
             }
 
-            case ModerationActionType.Mute: {
+            case ModActionType.Mute: {
                 return new RichEmbed()
                         .setTitle("Member Muted")
                         .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
@@ -261,7 +223,7 @@ export default class WardenAPI {
                         .setColor("BLUE");
             }
 
-            case ModerationActionType.Unban: {
+            case ModActionType.Unban: {
                 return new RichEmbed()
                     .setTitle("Member Pardoned")
                     .addField("Member", `<@${action.memberId}> (${action.memberTag})`)
@@ -307,47 +269,6 @@ export default class WardenAPI {
         return <TextChannel>channel;
     }
 
-    public getChannels(): ConsumerApiResolvedChannels {
-        // TODO: Forcing
-        return this.channels as ConsumerApiResolvedChannels;
-    }
-
-    /**
-     * @return {GuildMember | null}
-     */
-    public getOwner(): GuildMember | null {
-        if (!this.bot.owner) {
-            return null;
-        }
-
-        return this.getGuild().member(this.bot.owner) || null;
-    }
-
-    /**
-     * @param {string} suggestion
-     * @param {GuildMember} author
-     * @return {Promise<boolean>}
-     */
-    public async addSuggestion(suggestion: string, author: GuildMember): Promise<boolean> {
-        if (!this.channels) {
-            Log.throw("[WardenAPI.addSuggestion] Consumer API is not setup");
-
-            return false;
-        }
-
-        const suggestionMessage: Message = <Message>(await this.channels.suggestions.send(new RichEmbed()
-            .setFooter(`Suggested by ${author.user.username}`, author.user.avatarURL)
-            .setDescription(suggestion)
-            .setColor("GREEN")));
-
-        if (suggestionMessage) {
-            await suggestionMessage.react("⬆");
-            await suggestionMessage.react("⬇");
-        }
-
-        return false;
-    }
-
     /**
      * @todo Using ConsumerAPI
      * @param {Message} message
@@ -373,34 +294,6 @@ export default class WardenAPI {
         // TODO: Add missing checks
 
         return SuspectedViolation.None;
-    }
-
-    /**
-     * @param {Message} message
-     * @param {string} suspectedViolation
-     * @return {Promise<void>}
-     */
-    public async flagMessage(message: Message, suspectedViolation: string): Promise<void> {
-        if (!this.channels) {
-            Log.error("[WardenAPI.flagMessage] Expecting channels");
-
-            return;
-        }
-        else if (!this.channels.review) {
-            Log.error("[WardenAPI.flagMessage] Review channel does not exist, failed to flag message");
-
-            return;
-        }
-
-        await this.channels.review.send(new RichEmbed()
-            .setTitle("Suspicious Message")
-            .addField("Sender", `<@${message.author.id}> (${message.author.username})`)
-            .addField("Message", message.content)
-            .addField("Channel", `<#${message.channel.id}>`)
-            .addField("Reason", suspectedViolation)
-            .addField("Message ID", message.id));
-
-        return;
     }
 
     /**
@@ -434,5 +327,35 @@ export default class WardenAPI {
         }
 
         return false;
+    }
+
+    public static createDmReport(options: IDmReportOptions): RichEmbed {
+        const result: RichEmbed = new RichEmbed()
+            .setColor(options.color)
+            .setFooter("If you think this is wrong, please contact a staff member")
+            .addField("Guild", options.guildName)
+            .addField("Action", WardenAPI.getModActionString(options.type))
+            .addField("Reason", options.reason)
+            .setDescription("A moderation action has been applied to you");
+
+        if (options.end !== undefined) {
+            result.addField("Time", Utils.timeAgo(options.time + options.end));
+        }
+
+        return result;
+    }
+    
+    public static getModActionString(type: ModActionType): string {
+        if (!Object.keys(modActionTypeStrings).includes(type.toString())) {
+            throw new Error(`[WardenAPI.getModActionString] Moderation action string is not set for type '${type}'`);
+        }
+
+        return modActionTypeStrings[type];
+    }
+
+    public static extractActionFromContext(context: CommandContext): IModAction {
+        // TODO:
+
+        return {} as any;
     }
 }

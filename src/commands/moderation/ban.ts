@@ -2,7 +2,7 @@ import {GuildMember, TextChannel, Message} from "discord.js";
 import WardenAPI from "../../core/warden-api";
 import {Command, IArgument, CommandContext, Permission, TrivialArgType, ChatEnvironment, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
-import {ModerationActionType} from "../../database/mongo-database";
+import {ModActionType} from "../../database/mongo-database";
 
 export interface BanArgs {
     readonly member: GuildMember;
@@ -58,7 +58,7 @@ export default class BanCommand extends Command<BanArgs> {
             member: args.member,
             moderator: message.member,
             reason: "Automatic ⇒ Action undone",
-            type: ModerationActionType.Unban
+            type: ModActionType.Unban
         });
 
         return true;
@@ -77,7 +77,7 @@ export default class BanCommand extends Command<BanArgs> {
         }
 
         await api.executeAction(x.msg.channel as TextChannel, {
-            type: ModerationActionType.Ban,
+            type: ModActionType.Ban,
             reason: args.reason,
             member: args.member,
             evidence: args.evidence,

@@ -2,7 +2,7 @@ import WardenAPI from "../../core/warden-api";
 import {ChatEnvironment, Command, IArgument, CommandContext, Permission, RestrictGroup, TrivialArgType, InternalArgType} from "@cloudrex/forge";
 import {GuildMember, TextChannel} from "discord.js";
 import {CommandType} from "../general/help";
-import {ModerationActionType} from "../../database/mongo-database";
+import {ModActionType} from "../../database/mongo-database";
 
 type MuteArgs = {
     readonly member: GuildMember;
@@ -65,7 +65,7 @@ export default class MuteCommand extends Command {
 
         await api.executeAction(x.msg.channel as TextChannel, {
             member: args.member,
-            type: ModerationActionType.Mute,
+            type: ModActionType.Mute,
             evidence: args.evidence,
             moderator: x.msg.member,
             reason: args.reason,

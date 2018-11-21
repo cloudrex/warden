@@ -15,7 +15,7 @@ export type MongoCollections = {
     readonly reports: Collection;
 };
 
-export enum ModerationActionType {
+export enum ModActionType {
     Warn,
     Mute,
     Unmute,
@@ -46,20 +46,18 @@ export enum ChannelType {
  */
 
 export type IModAction = {
-    readonly type: ModerationActionType;
+    readonly type: ModActionType;
     readonly member: GuildMember;
     readonly reason: string;
     readonly moderator: GuildMember;
     readonly evidence?: string;
+    readonly time?: number;
+    readonly end?: number;
 };
-
-export interface ITimedModAction extends IModAction {
-    readonly end: number;
-}
 
 export type IDbModAction = {
     readonly id: Snowflake;
-    readonly type: ModerationActionType;
+    readonly type: ModActionType;
     readonly memberId: Snowflake;
     readonly memberTag: string;
     readonly reason: string;
