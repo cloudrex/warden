@@ -1,6 +1,7 @@
 import {GuildMember, TextChannel, User} from "discord.js";
 import {Utils, Service} from "@cloudrex/forge";
 import {config} from "../app";
+import {Name, Description} from "d.mix";
 
 type WelcomeLeaveMessages = {
     readonly welcome: string[];
@@ -9,13 +10,10 @@ type WelcomeLeaveMessages = {
 
 let messages: WelcomeLeaveMessages | null = null;
 
+@Name("welcome-leave")
+@Description("Greet and wave goodbye to users who join and leave servers")
 export default class WelcomeLeaveService extends Service {
-    readonly meta = {
-        name: "welcome-leave",
-        description: "Greet and wave goodbye to users who join and leave"
-    };
-
-    public async start(): Promise<void> {
+    public async start() {
         // TODO: Disabled, using Tux's token.
         return;
 

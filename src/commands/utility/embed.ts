@@ -1,8 +1,15 @@
 import WardenAPI from "../../core/warden-api";
 import {RichEmbed, TextChannel} from "discord.js";
-import {Command, SetupHelper, ISetupHelperResult, RestrictGroup, CommandContext, Utils, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import {Name, Description, Constraints, ChatEnv, Context, SetupHelper, Command, RestrictGroup, ISetupHelperResult, Utils} from "d.mix";
 
+@Name("embed")
+@Description("Create an embed message")
+@Constraints({
+    specific: [RestrictGroup.ServerOwner],
+    cooldown: 5,
+    environment: ChatEnv.Guild
+})
 export default class EmbedCommand extends Command {
     readonly type = CommandType.Utility;
 
@@ -12,19 +19,17 @@ export default class EmbedCommand extends Command {
     };
 
     readonly restrict: any = {
-        specific: [RestrictGroup.ServerOwner],
-        cooldown: 5,
-        environment: ChatEnvironment.Guild
+
     };
 
-    public async executed(x: CommandContext, api: WardenAPI): Promise<void> {
+    public async run($: Context, api: WardenAPI) {
         const setup: SetupHelper | null = SetupHelper.fromContext({
-            context: x,
+            context: $,
             title: "Create Embed"
         });
 
         if (setup === null) {
-            await x.fail("Operation failed. (Unable to create SetupHelper instance)");
+            await $.fail("Operation failed. (Unable to create SetupHelper instance)");
 
             return;
         }
@@ -35,10 +40,10 @@ export default class EmbedCommand extends Command {
             .input("What color will the embed be?")
             .finish();
 
-        const channel: TextChannel | null = (x.msg.guild.channels.get(Utils.resolveId(result.responses[0])) as TextChannel | undefined) || null;
+        const channel: TextChannel | null = ($.msg.guild.channels.get(Utils.resolveId(result.responses[0])) as TextChannel | undefined) || null;
 
         if (channel === null) {
-            await x.fail("Channel does not exist or it is not a text channel");
+            await $.fail("Channel does not exist or it is not a text channel");
 
             return;
         }

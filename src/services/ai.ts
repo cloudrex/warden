@@ -1,14 +1,10 @@
 import {Message} from "discord.js";
-import {Service} from "@cloudrex/forge";
 import {loaded, ne} from "../commands/ai/spam-train";
-import {NeuralNetwork} from "brain.js";
+import {Name, Description, Service} from "d.mix";
 
-export default class ArtificialIntelligenceService extends Service {
-    readonly meta = {
-        name: "ai",
-        description: "Unattended AI protection system"
-    };
-
+@Name("ai")
+@Description("Autonomous AI protection system")
+export default class extends Service {
     public start(): void {
         this.bot.client.on("message", async (message: Message) => {
             if (!message.author.bot && message.channel.id === "492138339223339016") {

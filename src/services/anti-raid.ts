@@ -2,15 +2,13 @@ import {Service, IServiceOptions, Utils, DiscordEvent} from "@cloudrex/forge";
 import {Snowflake, Message} from "discord.js";
 import {compareTwoStrings} from "string-similarity";
 import {config} from "../app";
+import {Name, Description} from "d.mix";
 
 const threshold: number = 70;
 
+@Name("anti-raid")
+@Description("Autonomous raid protection system")
 export default class AntiRaidService extends Service {
-    readonly meta = {
-        name: "anti-raid",
-        description: "Unattended raid protection system"
-    };
-
     public static readonly memory: Map<Snowflake, Message[]> = new Map();
 
     constructor(options: IServiceOptions) {

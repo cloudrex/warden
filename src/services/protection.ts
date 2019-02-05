@@ -5,6 +5,7 @@ import Mongo, {ModActionType} from "../database/mongo-database";
 import Messages from "../core/messages";
 import MemberConfig from "../core/member-config";
 import {config} from "../app";
+import {Description, Name} from "d.mix";
 
 const conflictingBots: Snowflake[] = [
     "155149108183695360", // Dyno#3861,
@@ -21,12 +22,9 @@ const conflictingBots: Snowflake[] = [
 
 let muteLeavers: Snowflake[] = [];
 
+@Name("protection")
+@Description("Autonomous server protection and moderation system")
 export default class ProtectionService extends Service<WardenAPI> {
-    readonly meta = {
-        name: "protection",
-        description: "Autonomous server protection and moderation"
-    };
-
     private async handleMessage(message: Message): Promise<void> {
         // Ignore DMs
         if (!message.guild || message.channel.type !== "text") {

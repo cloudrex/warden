@@ -1,44 +1,37 @@
 import {Role} from "discord.js";
-import {IArgument, ChatEnvironment, Command, Permission, RestrictGroup, CommandContext, InternalArgType} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import {Name, Description, Arguments, Constraints, ChatEnv, Context, Command, RestrictGroup, Permission, Type} from "d.mix";
 
-type MentionableArgs = {
+interface ILocalArgs {
     readonly role: Role;
 }
 
-export default class MentionableCommand extends Command<MentionableArgs> {
+@Name("mentionable")
+@Description("Toggle a role mentionable")
+@Arguments({
+    name: "role",
+    description: "The role to toggle mentionable",
+    switchShortName: "r",
+    type: Type.Role,
+    required: true
+})
+@Constraints({
+    environment: ChatEnv.Guild,
+    specific: [RestrictGroup.ServerOwner],
+    selfPermissions: [Permission.ManageRoles]
+})
+export default class extends Command {
     readonly type = CommandType.Utility;
 
-    readonly meta = {
-        name: "mentionable",
-        description: "Toggle a role mentionable"
-    };
-
-    readonly arguments: IArgument[] = [
-        {
-            name: "role",
-            description: "The role to toggle mentionable",
-            switchShortName: "r",
-            type: InternalArgType.Role,
-            required: true
-        }
-    ];
-
-    readonly restrict: any = {
-        environment: ChatEnvironment.Guild,
-        specific: [RestrictGroup.ServerOwner],
-        selfPermissions: [Permission.ManageRoles]
-    };
-
-    // TODO: Add support by id
-    public async executed(x: CommandContext, args: MentionableArgs): Promise<void> {
+    // TODO: Add support by id.
+    public async executed($: Context, args: ILocalArgs) {
         await args.role.setMentionable(!args.role.mentionable);
 
         if (args.role.mentionable) {
-            await x.ok(`Role <@${args.role.id}> is now mentionable.`);
+            await $.ok(`Role <@${args.role.id}> is now mentionable.`);
         }
         else {
-            await x.ok(`Role <@${args.role.id}> is no longer mentionable.`);
+            await $.ok(`Role <@${args.role.id}> is no longer mentionable.`);
         }
     }
 };

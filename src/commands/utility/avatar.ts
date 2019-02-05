@@ -1,38 +1,28 @@
 import {Command, IArgument, CommandContext, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember, RichEmbed} from "discord.js";
+import {Name, Description, Aliases, Arguments, Constraint, ChatEnv} from "d.mix";
 
-type AvatarArgs = {
+interface ILocalArgs {
     readonly member: GuildMember;
 };
 
-export default class AvatarCommand extends Command<AvatarArgs> {
+@Name("avatar")
+@Description("Retrieve the avatar image of an user")
+@Aliases("pfp")
+@Arguments({
+    name: "member",
+    description: "The member to inspect",
+    switchShortName: "u",
+    type: InternalArgType.Member,
+    required: true
+})
+@Constraint.Env(ChatEnv.Guild)
+export default class AvatarCommand extends Command {
     readonly type = CommandType.Configuration;
 
-    readonly meta = {
-        name: "avatar",
-        description: "Retrieve the avatar image of an user"
-    };
-
-    readonly aliases = ["pfp"];
-
-    readonly arguments: IArgument[] = [
-        {
-            name: "member",
-            description: "The member to inspect",
-            switchShortName: "u",
-            type: InternalArgType.Member,
-            required: true
-        }
-    ];
-
-    readonly restrict: any = {
-        environment: ChatEnvironment.Guild
-    };
-
-    public async executed(x: CommandContext, args: AvatarArgs): Promise<void> {
-        await x.msg.channel.send(new RichEmbed()
-            .setColor("GREEN")
+    public async run($: CommandContext, args: ILocalArgs) {
+        await $.msg.channel.send(new RichEmbed().setColor("GREEN")
             .setImage(args.member.user.avatarURL));
     }
 };

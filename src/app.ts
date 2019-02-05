@@ -5,18 +5,10 @@ import Mongo from "./database/mongo-database";
 import {GuildMember, Message, Snowflake} from "discord.js";
 import path from "path";
 
-import {
-    Bot,
-    IArgumentResolver,
-    JsonProvider,
-    Log,
-    LogLevel,
-    Settings,
-    Utils
-} from "@cloudrex/forge";
-
 import WardenAPI from "./core/warden-api";
+import {Settings, Bot, IArgumentResolver, Utils, Log, LogLevel} from "d.mix";
 
+// Show all log messages, including debugging ones.
 Log.level = LogLevel.Debug;
 
 type BotConfig = {
@@ -98,7 +90,7 @@ console.log(`\nUsing configuration\n\n`, config, "\n");
 const settings = new Settings({
     general: {
         token: config.token,
-        prefixes: process.env.PREFIX ? process.env.PREFIX.split(",") : ["."]
+        prefix: process.env.PREFIX ? process.env.PREFIX.split(",") : ["."]
     },
 
     paths: {
@@ -148,7 +140,6 @@ async function start(): Promise<void> {
         ],
 
         settings: settings,
-        dataStore: new JsonProvider(path.resolve(path.join(__dirname, "data.json"))),
         owner: config.owner,
 
         options: {

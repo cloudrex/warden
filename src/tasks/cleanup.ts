@@ -1,12 +1,9 @@
-import {Task, Bot, Log, IFragmentMeta} from "@cloudrex/forge";
 import AntiRaidService from "../services/anti-raid";
+import {Name, Description, Bot, Log} from "d.mix";
 
+@Name("cleanup")
+@Description("Cleanup junk")
 export default class CleanupTask extends Task {
-    readonly meta: IFragmentMeta = {
-        name: "cleanup",
-        description: "Cleanup junk"
-    };
-
     public constructor(bot: Bot) {
         super(bot);
 

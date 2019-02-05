@@ -1,12 +1,10 @@
 import {Service, DiscordEvent, Utils, IFragmentMeta} from "@cloudrex/forge";
 import {Role, TextChannel, Guild, RichEmbed, GuildChannel, Emoji, GuildMember, User} from "discord.js";
+import {Name, Description} from "d.mix";
 
+@Name("log")
+@Description("Log server events and actions")
 export default class LogService extends Service {
-    readonly meta: IFragmentMeta = {
-        name: "log",
-        description: "Log server events and actions"
-    };
-
     public start(): void {
         this.on(DiscordEvent.RoleCreated, (role: Role) => {
             const logChannel: TextChannel | null = LogService.getLogChannel(role.guild);
