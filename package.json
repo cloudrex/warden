@@ -18,11 +18,7 @@
     "author": "CloudRex <cloudrex@outlook.com>",
     "license": "MIT",
     "dependencies": {
-        "@cloudrex/forge": "^1.2.4",
-        "@types/mongodb": "^3.1.4",
-        "@types/node": "^10.9.4",
-        "@types/string-similarity": "^1.2.0",
-        "brain.js": "^1.2.8",
+        "d.mix": "^1.2.5",
         "discord.js": "^11.4.2",
         "dotenv": "^6.0.0",
         "mongodb": "^3.1.4",
@@ -30,6 +26,9 @@
         "typescript": "^2.9.2"
     },
     "devDependencies": {
+        "@types/mongodb": "^3.1.4",
+        "@types/node": "^10.9.4",
+        "@types/string-similarity": "^1.2.0",
         "grunt": "^1.0.3"
     }
 }

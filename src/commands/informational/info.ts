@@ -1,22 +1,16 @@
-import {IEmbedActionArgs, ActionType, IAction, Command, CommandContext, Utils, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Emoji, RichEmbed} from "discord.js";
+import {ChatEnv, Command, Name, Description, Constraint, Context, IAction, IEmbedActionArgs, ActionType, Utils} from "d.mix";
 
 // TODO: Bot should have a command to display info of itself, ex. uptime.
-export default class InfoCommand extends Command {
+@Name("info")
+@Description("View information about the server")
+@Constraint.Env(ChatEnv.Guild)
+export default class extends Command {
     readonly type = CommandType.Informational;
 
-    readonly meta = {
-        name: "info",
-        description: "View information about the server"
-    };
-
-    readonly restrict: any = {
-        environment: ChatEnvironment.Guild
-    };
-
-    public async executed(x: CommandContext): Promise<IAction<IEmbedActionArgs>> {
-        let emojisString: string = x.msg.guild.emojis.map((emoji: Emoji) => emoji.toString())
+    public async run($: Context): Promise<IAction<IEmbedActionArgs>> {
+        let emojisString: string = $.msg.guild.emojis.map((emoji: Emoji) => emoji.toString())
             .join(" ")
             .substr(0, 1024);
 
@@ -24,7 +18,7 @@ export default class InfoCommand extends Command {
 
         emojisString = splitEmojis.slice(0, 15).join(" ");
 
-        if (x.msg.guild.emojis.size > 15) {
+        if ($.msg.guild.emojis.size > 15) {
             emojisString += `**+ ${splitEmojis.length - 15} more**`;
         }
 
@@ -33,17 +27,17 @@ export default class InfoCommand extends Command {
 
             args: {
                 embed: new RichEmbed()
-                    .addField("Guild", `${x.msg.guild.name} (${x.msg.guild.nameAcronym}) <${x.msg.guild.id}>`)
-                    .addField("Owner", `<@${x.msg.guild.ownerID}>`)
-                    .addField("Region", x.msg.guild.region)
-                    .addField("Verification Level", x.msg.guild.verificationLevel)
-                    .addField("Members", x.msg.guild.large ? `${x.msg.guild.memberCount} (Large)` : x.msg.guild.memberCount)
-                    .addField("Created", Utils.timeAgo(x.msg.guild.createdTimestamp))
-                    .addField(`Emojis [${x.msg.guild.emojis.size}]`, emojisString)
-                    .setThumbnail(x.msg.guild.iconURL)
+                    .addField("Guild", `${$.msg.guild.name} (${$.msg.guild.nameAcronym}) <${$.msg.guild.id}>`)
+                    .addField("Owner", `<@${$.msg.guild.ownerID}>`)
+                    .addField("Region", $.msg.guild.region)
+                    .addField("Verification Level", $.msg.guild.verificationLevel)
+                    .addField("Members", $.msg.guild.large ? `${$.msg.guild.memberCount} (Large)` : $.msg.guild.memberCount)
+                    .addField("Created", Utils.timeAgo($.msg.guild.createdTimestamp))
+                    .addField(`Emojis [${$.msg.guild.emojis.size}]`, emojisString)
+                    .setThumbnail($.msg.guild.iconURL)
                     .setColor("GREEN"),
 
-                channelId: x.msg.channel.id
+                channelId: $.msg.channel.id
             }
         };
     }

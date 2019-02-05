@@ -1,8 +1,14 @@
 import {exec} from "child_process";
-import {Command, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import {Name, Description, Constraints, Context} from "d.mix";
 
-export default class BuildCommand extends Command {
+@Name("build")
+@Description("Build the project")
+@Constraints({
+    specific: [RestrictGroup.BotOwner],
+    cooldown: 5
+})
+export default class extends Command {
     readonly type = CommandType.Configuration;
 
     readonly meta = {
@@ -10,23 +16,18 @@ export default class BuildCommand extends Command {
         description: "Build the project"
     };
 
-    readonly restrict: any = {
-        specific: [RestrictGroup.BotOwner],
-        cooldown: 5
-    };
-
-    public executed(x: CommandContext): Promise<void> {
+    public run($: Context) {
         return new Promise(async (resolve) => {
-            await x.ok("Building the project. This may take a while.");
+            await $.ok("Building the project. This may take a while.");
 
             exec("npm run build", (error: any, stdOut: string) => {
                 if (error) {
-                    x.fail(`There was an error while building. (${error.message})`, false);
+                    $.fail(`There was an error while building. (${error.message})`, false);
 
                     return;
                 }
 
-                x.ok(`\`\`\`${stdOut.toString()}\`\`\``);
+                $.ok(`\`\`\`${stdOut.toString()}\`\`\``);
                 resolve();
             });
         });

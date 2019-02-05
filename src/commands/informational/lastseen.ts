@@ -1,43 +1,37 @@
-import {IMessageActionArgs, IAction, ActionType, Command, CommandContext, Utils, InternalArgType, IArgument, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {GuildMember} from "discord.js";
 import Mongo, {IDbMessage} from "../../database/mongo-database";
+import {Name, Description, Aliases, Arguments, Type, Constraints, ChatEnv, Context} from "d.mix";
 
-type LastSeenArgs = {
+type ILocalArgs = {
     readonly member: GuildMember;
 };
 
-export default class LastSeenCommand extends Command<LastSeenArgs> {
+@Name("lastseen")
+@Description("Display the last time a user was seen")
+@Aliases("ls")
+@Arguments(
+    {
+        name: "member",
+        switchShortName: "m",
+        type: Type.Member,
+        required: true
+    }
+)
+@Constraints({
+    environment: ChatEnv.Guild,
+    cooldown: 2
+})
+export default class extends Command<ILocalArgs> {
     readonly type = CommandType.Informational;
 
-    readonly meta = {
-        name: "lastseen",
-        description: "Display the last time a user was seen"
-    };
-
-    readonly aliases = ["ls"];
-
-    readonly arguments: IArgument[] = [
-        {
-            name: "member",
-            switchShortName: "m",
-            type: InternalArgType.Member,
-            required: true
-        }
-    ];
-
-    readonly restrict: any = {
-        environment: ChatEnvironment.Guild,
-        cooldown: 2
-    };
-
-    public async executed(x: CommandContext, args: LastSeenArgs): Promise<IAction<IMessageActionArgs>> {
-        if (args.member.id === x.bot.client.user.id) {
+    public async run($: Context, args: ILocalArgs): Promise<IAction<IMessageActionArgs>> {
+        if (args.member.id === $.bot.client.user.id) {
             return {
                 type: ActionType.OkEmbed,
 
                 args: {
-                    channelId: x.msg.channel.id,
+                    channelId: $.msg.channel.id,
                     message: "Nice try"
                 }
             };
@@ -54,7 +48,7 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
                 type: ActionType.OkEmbed,
 
                 args: {
-                    channelId: x.msg.channel.id,
+                    channelId: $.msg.channel.id,
                     message: `:eyes: <@${args.member.id}> was last seen **${Utils.timeAgo(result.time, false)}**`
                 }
             };
@@ -64,7 +58,7 @@ export default class LastSeenCommand extends Command<LastSeenArgs> {
                 type: ActionType.FailEmbed,
 
                 args: {
-                    channelId: x.msg.channel.id,
+                    channelId: $.msg.channel.id,
                     message: `No recorded data for <@${args.member.id}>`
                 }
             };

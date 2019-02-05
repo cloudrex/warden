@@ -1,20 +1,13 @@
-import {Command, IFragmentMeta, IAction, IEmbedActionArgs, CommandContext, ActionType, RestrictGroup, Utils} from "@cloudrex/forge";
 import {RichEmbed} from "discord.js";
 import os from "os";
+import {Name, Description, Constraint, Aliases, RestrictGroup, IAction, Command, IEmbedActionArgs, Context, ActionType, Utils} from "d.mix";
 
+@Name("status")
+@Description("View the bot's status")
+@Aliases("uptime")
+@Constraint.Specific([RestrictGroup.BotOwner])
 export default class StatusCommand extends Command {
-    readonly meta: IFragmentMeta = {
-        name: "status",
-        description: "View the bot's status"
-    };
-
-    readonly restrict: any = {
-        specific: [RestrictGroup.BotOwner]
-    };
-
-    readonly aliases: string[] = ["uptime"];
-
-    public executed(x: CommandContext): IAction<IEmbedActionArgs> {
+    public run($: Context): IAction<IEmbedActionArgs> {
         const totalMemory: number = (os.totalmem() / 1E+9).toFixed(2) as any;
         const freeMemory: number = (os.freemem() / 1E+9).toFixed(2) as any;
         const usedMemory: number = (totalMemory - freeMemory).toFixed(2) as any;
@@ -31,9 +24,9 @@ export default class StatusCommand extends Command {
                     .addField("Platform", os.platform())
                     .addField("Release", os.release())
                     .addField("Type", os.type())
-                    .addField("Uptime", Utils.timeAgoFromNow(x.bot.client.uptime)),
+                    .addField("Uptime", Utils.timeAgoFromNow($.bot.client.uptime)),
 
-                channelId: x.channel.id
+                channelId: $.channel.id
             }
         };
     }

@@ -1,7 +1,7 @@
-import {Command, CommandContext, RestrictGroup} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {exec, ExecException} from "child_process";
 import os from "os";
+import {RestrictGroup, Context} from "d.mix";
 
 export default class RebuildCommand extends Command {
     readonly type = CommandType.Configuration;
@@ -18,30 +18,30 @@ export default class RebuildCommand extends Command {
         cooldown: 5
     };
 
-    public async executed(x: CommandContext): Promise<void> {
+    public async executed($: Context) {
         return new Promise<void>(async (resolve) => {
             const platform: string = os.platform();
 
             if (platform !== "linux") {
-                await x.fail(`That command may only be executed in a linux platform; Currently '${platform}' based`);
+                await $.fail(`That command may only be executed in a linux platform; Currently '${platform}' based`);
                 resolve();
 
                 return;
             }
 
-            await x.bot.triggerCommand("update", x.msg);
-            await x.bot.triggerCommand("build", x.msg);
-            await x.ok("Running rebuild script ...");
+            await $.bot.triggerCommand("update", $.msg);
+            await $.bot.triggerCommand("build", $.msg);
+            await $.ok("Running rebuild script ...");
 
             exec("bash tasks/rebuild.sh", async (error: ExecException | null, stdout: string) => {
                 if (error) {
-                    await x.fail(`Rebuild failed (${error.message})`);
+                    await $.fail(`Rebuild failed (${error.message})`);
                     resolve();
 
                     return;
                 }
 
-                await x.ok("Rebuild completed");
+                await $.ok("Rebuild completed");
                 resolve();
             });
         });

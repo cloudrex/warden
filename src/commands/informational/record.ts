@@ -2,6 +2,7 @@ import {IAction, ActionType, IRequestActionArgs, Command, CommandContext, Patter
 import {GuildMember, Message, RichEmbed} from "discord.js";
 import {CommandType} from "../general/help";
 import Mongo, {IDbMessage} from "../../database/mongo-database";
+import {Name, Description, Arguments, Constraints, ChatEnv, Context} from "d.mix";
 
 const max: number = 1000;
 
@@ -9,32 +10,27 @@ type RecordArgs = {
     readonly member: GuildMember;
 };
 
+@Name("record")
+@Description("View your recorded information")
+@Arguments(
+    {
+        name: "member",
+        description: "The user to inspect",
+        switchShortName: "m",
+        type: InternalArgType.Member,
+        required: false,
+        defaultValue: (message: Message) => message.member.id
+    }
+)
+@Constraints({
+    environment: ChatEnv.Guild,
+    cooldown: 60
+})
 export default class RecordCommand extends Command<RecordArgs> {
     readonly type = CommandType.Utility;
 
-    readonly meta = {
-        name: "record",
-        description: "View your recorded information"
-    };
-
-    readonly arguments: IArgument[] = [
-        {
-            name: "member",
-            description: "The user to inspect",
-            switchShortName: "m",
-            type: InternalArgType.Member,
-            required: false,
-            defaultValue: (message: Message) => message.member.id
-        }
-    ];
-
-    readonly restrict: any = {
-        cooldown: 120,
-        environment: ChatEnvironment.Guild
-    };
-
     // TODO: Only retrieves FIRST 100 messages instead of LAST 100 messages
-    public async executed(x: CommandContext, args: RecordArgs): Promise<IAction<any>> {
+    public async run($: Context, args: RecordArgs): Promise<IAction<any>> {
         const messages: IDbMessage[] = await Mongo.collections.messages.find({
             authorId: args.member.id
         }).limit(max + 1).toArray();
@@ -45,9 +41,9 @@ export default class RecordCommand extends Command<RecordArgs> {
 
                 args: {
                     message: `No data on record for <@${args.member.id}>`,
-                    avatarUrl: x.sender.avatarURL,
-                    channelId: x.msg.channel.id,
-                    requester: x.sender.username
+                    avatarUrl: $.sender.avatarURL,
+                    channelId: $.msg.channel.id,
+                    requester: $.sender.username
                 } as IRequestActionArgs
             };
         }
@@ -77,8 +73,7 @@ export default class RecordCommand extends Command<RecordArgs> {
             type: ActionType.RichEmbed,
 
             args: {
-                embed: new RichEmbed()
-                    .setColor("GREEN")
+                embed: new RichEmbed().setColor("GREEN")
                     .addField("Messages Logged", messages.length > max ? `${max}+` : messages.length)
                     .addField("Total Mentions", mentions === 0 ? "*None*" : (throttled ? `${max}+` : mentions))
                     .addField("First Message Intercepted", messages[0].message.length > 50 ? messages[0].message.substr(0, 46) + " ..." : messages[0].message)

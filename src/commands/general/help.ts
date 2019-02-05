@@ -1,4 +1,4 @@
-import {Command, CommandContext} from "@cloudrex/forge";
+import {Command, Name, Description, Context} from "d.mix";
 
 export enum CommandType {
     Utility = "tools",
@@ -10,15 +10,12 @@ export enum CommandType {
     Informational = "information_source"
 }
 
-export default class HelpCommand extends Command {
+@Name("help")
+@Description("View all available commands")
+export default class extends Command {
     readonly type = CommandType.Utility;
 
-    readonly meta = {
-        name: "help",
-        description: "View all available commands"
-    };
-
-    public async executed(x: CommandContext): Promise<void> {
+    public async run($: Context): Promise<void> {
         // TODO: Broken by decorator commands
         /* let commands: string = context.bot.commandStore.commands
             .map((command: Command) => `${(command as any).type !== undefined ? `:${(command as any).type}:` : `:${CommandType.Unknown}:`} **${command.meta.name}**: ${command.meta.description}`)
@@ -44,6 +41,6 @@ export default class HelpCommand extends Command {
             await context.ok(commands, "Help - Available Commands");
         } */
 
-        await x.fail("Command is currently broken");
+        await $.fail("Command is currently broken");
     }
 };

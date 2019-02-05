@@ -1,36 +1,31 @@
 import {GuildMember, Message, RichEmbed} from "discord.js";
-import {Command, IArgument, CommandContext, Utils, RestrictGroup, InternalArgType, ChatEnvironment} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import {Name, Description, Arguments, Constraints, ChatEnv, Context} from "d.mix";
 
-type WhoisArgs = {
+interface ILocalArgs {
     readonly member: GuildMember;
 }
 
-export default class WhoisCommand extends Command<WhoisArgs> {
+@Name("whois")
+@Description("View information about a user")
+@Arguments(
+    {
+        name: "member",
+        description: "The member to inspect",
+        switchShortName: "m",
+        type: InternalArgType.Member,
+        required: false,
+        defaultValue: (msg: Message) => msg.author.id
+    }
+)
+@Constraints({
+    specific: [RestrictGroup.ServerModerator],
+    environment: ChatEnv.Guild
+})
+export default class extends Command {
     readonly type = CommandType.Informational;
 
-    readonly meta = {
-        name: "whois",
-        description: "View information about a user",
-    };
-
-    readonly arguments: IArgument[] = [
-        {
-            name: "member",
-            description: "The member to inspect",
-            switchShortName: "m",
-            type: InternalArgType.Member,
-            required: false,
-            defaultValue: (msg: Message) => msg.author.id
-        }
-    ];
-
-    readonly restrict: any = {
-        specific: [RestrictGroup.ServerModerator],
-        environment: ChatEnvironment.Guild
-    };
-
-    public async executed(x: CommandContext, args: WhoisArgs): Promise<void> {
+    public async run($: Context, args: ILocalArgs) {
         const roles = args.member.roles.array();
 
         let finalRoles: string = roles.slice(1, 10).map((role) => `<@&${role.id}>`).join(" ");
@@ -41,7 +36,7 @@ export default class WhoisCommand extends Command<WhoisArgs> {
 
         const embed: RichEmbed = new RichEmbed()
             .setColor("GREEN")
-            .setFooter(`Requested by ${x.sender.username}`, x.sender.avatarURL)
+            .setFooter(`Requested by ${$.sender.username}`, $.sender.avatarURL)
             .setThumbnail(args.member.user.avatarURL)
             .addField("User", `<@${args.member.user.id}> (${args.member.user.tag || "*Unknown*"})`)
             .addField("User ID", args.member.id);
@@ -75,6 +70,6 @@ export default class WhoisCommand extends Command<WhoisArgs> {
             embed.addField("Other", extra.join(", "));
         }
 
-        await x.msg.channel.send(embed);
+        await $.msg.channel.send(embed);
     }
 };

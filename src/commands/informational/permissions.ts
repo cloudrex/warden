@@ -1,42 +1,36 @@
-import {IMessageActionArgs, FormattedMessage, IAction, ActionType, Command, CommandContext, ChatEnvironment, InternalArgType, IArgument} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
 import {Permissions, PermissionResolvable, Message, GuildMember, Snowflake} from "discord.js";
+import {Command, Name, Description, Aliases, Constraints, ChatEnv, Arguments, Context, IAction, IMessageActionArgs, ActionType, MsgBuilder, Type} from "d.mix";
 
-type PermissionsArgs = {
+type ILocalArgs = {
     readonly member: GuildMember;
 }
 
-export default class PermissionsCommand extends Command<PermissionsArgs> {
+@Name("permissions")
+@Description("View your permissions")
+@Aliases("perms")
+@Constraints({
+    environment: ChatEnv.Guild,
+    cooldown: 6
+})
+@Arguments(
+    {
+        name: "member",
+        switchShortName: "m",
+        type: Type.Member,
+        description: "The member to inspect",
+        required: false,
+        defaultValue: (message: Message): Snowflake => message.author.id
+    }
+)
+export default class extends Command<ILocalArgs> {
     readonly type = CommandType.Informational;
-
-    readonly meta = {
-        name: "permissions",
-        description: "View your permissions"
-    };
-
-    readonly aliases = ["perms"];
-
-    readonly restrict: any = {
-        cooldown: 6,
-        environment: ChatEnvironment.Guild
-    };
-
-    readonly arguments: IArgument[] = [
-        {
-            name: "member",
-            switchShortName: "m",
-            type: InternalArgType.Member,
-            description: "The member to inspect",
-            required: false,
-            defaultValue: (message: Message): Snowflake => message.author.id
-        }
-    ];
 
     private hasPermission(name: PermissionResolvable, permissions: Permissions): boolean {
         return permissions.hasPermission(name);
     }
 
-    public async executed(x: CommandContext, args: PermissionsArgs): Promise<IAction<IMessageActionArgs>> {
+    public async run($: Context, args: ILocalArgs): Promise<IAction<IMessageActionArgs>> {
         const perms: Permissions = args.member.permissions;
 
         let message: string = `Permissions of ${args.member.user.tag}\n\n`;
@@ -62,8 +56,8 @@ export default class PermissionsCommand extends Command<PermissionsArgs> {
             type: ActionType.Message,
 
             args: {
-                channelId: x.msg.channel.id,
-                message: new FormattedMessage().codeBlock(message, "diff").build()
+                channelId: $.msg.channel.id,
+                message: new MsgBuilder().codeBlock(message, "diff").build()
             }
         };
     }

@@ -1,5 +1,5 @@
-import {Command, CommandContext, Utils} from "@cloudrex/forge";
 import {CommandType} from "../general/help";
+import {Command, Name, Description, Constraint, Context, Utils} from "d.mix";
 
 const channels = {
     media: "382054707029475348",
@@ -43,26 +43,20 @@ const tips = [
     "We host events randomly! Stay tuned and keep an eye under the Events category for special event channels"
 ];
 
-export default class TipCommand extends Command {
+@Name("tip")
+@Description("View a random tip")
+@Constraint.Cooldown(5)
+export default class extends Command {
     readonly type = CommandType.Informational;
 
-    readonly meta = {
-        name: "tip",
-        description: "View a random tip"
-    };
-
-    readonly restrict: any = {
-        cooldown: 5
-    };
-
-    public async executed(x: CommandContext): Promise<void> {
+    public async run($: Context): Promise<void> {
         let tipIndex: number = lastTipIndex;
 
         while (tipIndex === lastTipIndex) {
             tipIndex = Utils.getRandomInt(0, tips.length);
         }
 
-        await x.ok(tips[tipIndex].replace("{atlas}", "<@285578743324606482>"), `Tip #${tipIndex + 1}`);
+        await $.ok(tips[tipIndex].replace("{atlas}", "<@285578743324606482>"), `Tip #${tipIndex + 1}`);
         lastTipIndex = tipIndex;
     }
 };
