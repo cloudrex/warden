@@ -29,8 +29,8 @@ export default class RebuildCommand extends Command {
                 return;
             }
 
-            await $.bot.triggerCommand("update", $.msg);
-            await $.bot.triggerCommand("build", $.msg);
+            await $.bot.invokeCommand("update", $.msg);
+            await $.bot.invokeCommand("build", $.msg);
             await $.ok("Running rebuild script ...");
 
             exec("bash tasks/rebuild.sh", async (error: ExecException | null, stdout: string) => {
