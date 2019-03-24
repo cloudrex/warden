@@ -21,7 +21,7 @@
         "@cloudrex/forge": "^1.2.4",
         "@types/mongodb": "^3.1.4",
         "@types/node": "^10.9.4",
-        "@types/string-similarity": "^1.2.0",
+        "@types/string-similarity": "^3.0.0",
         "brain.js": "^1.2.8",
         "discord.js": "^11.4.2",
         "dotenv": "^6.0.0",
